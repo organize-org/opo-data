@@ -1,13 +1,18 @@
 import React from "react"
+import Image from "react-bootstrap/Image"
+import Map from "../images/state_opo_performance.png"
 import { graphql } from "gatsby"
+
 import Layout from "../components/layout"
 
-export default function MyFiles({ data }) {
+export default function Table({ data }) {
   console.log(data)
   return (
     <Layout>
       <div>
-        <h1>Dashboard Chart</h1>
+        <Image id="tier-map" src={Map} style={{ marginBottom: "60px" }} />
+
+        <h1>Dashboard Table</h1>
         <table>
           <thead>
             <tr>
