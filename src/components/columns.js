@@ -32,3 +32,5 @@ export const COLUMNS = [
     accessor: "Notes",
   },
 ]
+
+export default COLUMNS

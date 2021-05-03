@@ -2,17 +2,21 @@ import React from "react"
 import Image from "react-bootstrap/Image"
 import Map from "../images/state_opo_performance.png"
 import { graphql } from "gatsby"
+// import { useTable } from "react-table"
 
+// import Columns from "../components/columns"
 import Layout from "../components/layout"
+import { Table } from "../components/table"
 
-export default function Table({ data }) {
-  console.log(data)
+export default function Dashboard({ data }) {
+  //   console.log(data)
   return (
     <Layout>
       <div>
         <Image id="tier-map" src={Map} style={{ marginBottom: "60px" }} />
+        <Table data={data} />
 
-        <h1>Dashboard Table</h1>
+        {/* <h1>Dashboard Table</h1>
         <table>
           <thead>
             <tr>
@@ -38,7 +42,7 @@ export default function Table({ data }) {
               </tr>
             ))}
           </tbody>
-        </table>
+        </table> */}
       </div>
     </Layout>
   )
