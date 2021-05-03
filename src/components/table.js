@@ -9,7 +9,7 @@ export const Table = ({ data }) => {
 
   const tableInstance = useTable({
     columns,
-    data,
+    data: data.allExampledataCsv.edges.map(({ node }) => ({ ...node })),
   })
 
   const {
@@ -34,6 +34,7 @@ export const Table = ({ data }) => {
       <tbody {...getTableBodyProps()}>
         {rows.map(row => {
           prepareRow(row)
+          console.log(row)
           return (
             <tr {...row.getRowProps()}>
               {row.cells.map(cell => {
