@@ -10,7 +10,11 @@ export default function Dashboard({ data }) {
   return (
     <Layout>
       <div>
-        <Image id="tier-map" src={Map} style={{ marginBottom: "60px" }} />
+        <Image
+          id="tier-map"
+          src={Map}
+          style={{ height: "600px", marginBottom: "60px" }}
+        />
         <Table data={data} />
       </div>
     </Layout>
