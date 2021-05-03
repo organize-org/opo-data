@@ -3,8 +3,6 @@ import { useTable } from "react-table"
 import { COLUMNS } from "./columns"
 
 export const Table = ({ data }) => {
-  //   console.log("table component", data)
-
   const columns = useMemo(() => COLUMNS, [])
 
   const tableInstance = useTable({
