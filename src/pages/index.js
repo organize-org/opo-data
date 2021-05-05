@@ -13,9 +13,11 @@ export default function Dashboard({ data }) {
         <Image
           id="tier-map"
           src={Map}
-          style={{ height: "600px", marginBottom: "60px" }}
+          style={{ width: "600px", height: "600px", marginBottom: "60px" }}
         />
-        <Table data={data} />
+        <Table
+          data={data.allExampledataCsv.edges.map(({ node }) => ({ ...node }))}
+        />
       </div>
     </Layout>
   )

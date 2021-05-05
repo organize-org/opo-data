@@ -7,7 +7,7 @@ export const Table = ({ data }) => {
 
   const tableInstance = useTable({
     columns,
-    data: data.allExampledataCsv.edges.map(({ node }) => ({ ...node })),
+    data,
   })
 
   const {
