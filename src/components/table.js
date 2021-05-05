@@ -33,18 +33,16 @@ export const Table = ({ data }) => {
     },
   ]
 
-  const tableInstance = useTable({
-    columns,
-    data,
-  })
-
   const {
     getTableProps,
     getTableBodyProps,
     headerGroups,
     rows,
     prepareRow,
-  } = tableInstance
+  } = useTable({
+    columns,
+    data,
+  })
 
   return (
     <div>
