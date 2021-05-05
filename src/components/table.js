@@ -1,9 +1,37 @@
-import React, { useMemo } from "react"
+import React from "react"
 import { useTable } from "react-table"
-import { COLUMNS } from "./columns"
 
 export const Table = ({ data }) => {
-  const columns = useMemo(() => COLUMNS, [])
+  const columns = [
+    {
+      Header: "OPO",
+      accessor: "OPO",
+    },
+    {
+      Header: "Tier",
+      accessor: "Tier",
+    },
+    {
+      Header: "State(s)",
+      accessor: "State_s_",
+    },
+    {
+      Header: "Patients on waitlist",
+      accessor: "Patients_on_waitlist",
+    },
+    {
+      Header: "Donors needed",
+      accessor: "Donors_needed",
+    },
+    {
+      Header: "Organs needed",
+      accessor: "Organs_needed",
+    },
+    {
+      Header: "Notes",
+      accessor: "Notes",
+    },
+  ]
 
   const tableInstance = useTable({
     columns,
