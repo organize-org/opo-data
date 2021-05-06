@@ -4,41 +4,20 @@ import Map from "../images/state_opo_performance.png"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
+import { Table } from "../components/table"
 
-export default function Table({ data }) {
-  console.log(data)
+export default function Dashboard({ data }) {
   return (
     <Layout>
       <div>
-        <Image id="tier-map" src={Map} style={{ marginBottom: "60px" }} />
-
-        <h1>Dashboard Table</h1>
-        <table>
-          <thead>
-            <tr>
-              <th>OPO</th>
-              <th>Tier </th>
-              <th>State(s)</th>
-              <th>Patients on waitlist</th>
-              <th>Donors needed</th>
-              <th>Organs needed</th>
-              <th>Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.allExampledataCsv.edges.map(({ node }, index) => (
-              <tr key={index}>
-                <td>{node.OPO}</td>
-                <td>{node.Tier}</td>
-                <td>{node.State_s_}</td>
-                <td>{node.Patients_on_waitlist}</td>
-                <td>{node.Donors_needed}</td>
-                <td>{node.Organs_needed}</td>
-                <td>{node.Notes}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <Image
+          id="tier-map"
+          src={Map}
+          style={{ width: "600px", height: "600px", marginBottom: "60px" }}
+        />
+        <Table
+          data={data.allExampledataCsv.edges.map(({ node }) => ({ ...node }))}
+        />
       </div>
     </Layout>
   )
