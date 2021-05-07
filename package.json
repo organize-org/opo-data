@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "name": "opo-dashboard",
+  "private": false,
+  "description": "A tabular and geospatial dashboard for Organ Procurement Organization (OPO) metrics",
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
@@ -11,33 +11,33 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests!\" && exit 1"
   },
   "dependencies": {
-    "@emotion/react": "^11.1.5",
     "bootstrap": "^4.6.0",
     "gatsby": "^3.3.1",
-    "gatsby-plugin-emotion": "^6.3.0",
-    "gatsby-plugin-typography": "^3.3.0",
     "gatsby-source-filesystem": "^3.3.0",
     "gatsby-transformer-csv": "^3.3.0",
-    "gatsby-transformer-remark": "^4.0.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.2",
     "react-dom": "^17.0.1",
-    "react-table": "^7.7.0",
-    "react-typography": "^0.16.19",
-    "typography": "^0.16.19",
-    "typography-theme-kirkham": "^0.16.19"
+    "react-table": "^7.7.0"
   },
   "devDependencies": {
-    "prettier": "2.2.1"
+    "husky": "^6.0.0",
+    "prettier": "2.2.1",
+    "pretty-quick": "^3.1.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/Bloom-Works/opo-dashboard"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/Bloom-Works/opo-dashboard"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }

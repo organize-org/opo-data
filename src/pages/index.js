@@ -1,42 +1,43 @@
-import React from "react"
-import Image from "react-bootstrap/Image"
-import Map from "../images/state_opo_performance.png"
-import { graphql } from "gatsby"
+import React from "react";
+import { Image } from "react-bootstrap";
+import { graphql } from "gatsby";
 
-import Layout from "../components/layout"
-import { Table } from "../components/table"
+import Layout from "../components/layout";
+import Table from "../components/table";
+
+import Map from "../images/state_opo_performance.png";
 
 export default function Dashboard({ data }) {
   return (
     <Layout>
-      <div>
+      <>
+        <h2>Highest and Lowest Performing OPOs by Location</h2>
         <Image
-          id="tier-map"
           src={Map}
-          style={{ width: "600px", height: "600px", marginBottom: "60px" }}
+          style={{ height: "auto", maxWidth: "100%", marginBottom: "60px" }}
         />
-        <Table
-          data={data.allExampledataCsv.edges.map(({ node }) => ({ ...node }))}
-        />
-      </div>
+      </>
+      <Table data={data.allMetricsCsv.edges.map(({ node }) => ({ ...node }))} />
     </Layout>
-  )
+  );
 }
 
 export const query = graphql`
   query {
-    allExampledataCsv {
+    allMetricsCsv {
       edges {
         node {
-          Donors_needed
+          Board
+          CEO
+          Donors
           Notes
           OPO
-          Organs_needed
-          Patients_on_waitlist
-          State_s_
+          Organs
+          States
           Tier
+          Waitlist
         }
       }
     }
   }
-`
+`;
