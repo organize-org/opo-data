@@ -1,9 +1,3 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
-
 module.exports = {
   siteMetadata: {
     title: `OPO Dashboard`,
@@ -24,13 +18,5 @@ module.exports = {
       },
     },
     `gatsby-transformer-csv`,
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-emotion`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
   ],
-}
+};

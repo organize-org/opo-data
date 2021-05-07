@@ -1,8 +1,8 @@
-import React from "react"
-import { css } from "@emotion/react"
-import { useStaticQuery, Link, graphql } from "gatsby"
+import "bootstrap/dist/css/bootstrap.min.css";
 
-import { rhythm } from "../utils/typography"
+import React from "react";
+import { Container } from "react-bootstrap";
+import { useStaticQuery, graphql } from "gatsby";
 
 export default function Layout({ children }) {
   const data = useStaticQuery(
@@ -15,28 +15,12 @@ export default function Layout({ children }) {
         }
       }
     `
-  )
+  );
+
   return (
-    <div
-      style={css`
-        margin: 0 auto;
-        max-width: 700px;
-        padding: ${rhythm(2)};
-        padding-top: ${rhythm(1.5)};
-      `}
-    >
-      <Link to={`/`}>
-        <h3
-          style={css`
-            margin-bottom: ${rhythm(2)};
-            display: inline-block;
-            font-style: normal;
-          `}
-        >
-          {data.site.siteMetadata.title}
-        </h3>
-      </Link>
+    <Container fluid>
+      <h1>{data.site.siteMetadata.title}</h1>
       {children}
-    </div>
-  )
+    </Container>
+  );
 }
