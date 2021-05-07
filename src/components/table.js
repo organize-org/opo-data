@@ -56,7 +56,7 @@ export default function Table({ data }) {
   return (
     <div>
       <h2>OPO Performance Ratings Based on Final Rule</h2>
-      <BootstrapTable responsive {...getTableProps()}>
+      <BootstrapTable responsive striped bordered hover {...getTableProps()}>
         <thead>
           {headerGroups.map(headerGroup => (
             <tr {...headerGroup.getHeaderGroupProps()}>
