@@ -1,6 +1,7 @@
 import React from "react";
 import { Table as BootstrapTable } from "react-bootstrap";
 import { useTable } from "react-table";
+import NotesMarkdown from "./notes";
 
 export default function Table({ data }) {
   const columns = [
@@ -38,7 +39,6 @@ export default function Table({ data }) {
     },
     {
       Header: "Notes",
-      accessor: "Notes",
     },
   ];
 

@@ -3,13 +3,7 @@ import ReactMarkdown from "react-markdown";
 import gfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 
-export default function NotesMarkdown({ data }) {
-  // console.log(data);
-
-  const markdown = `OPO executives sentenced to 
-  <a href= 'https://archives.fbi.gov/archives/birmingham/press-releases/2012/former-alabama-organ-center-executive-sentenced-for-fraud'> Federal prison </a>
-   in 2012 for fraud; included in <a href='https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and'> House Committee on Oversight and Reform investigation </a>`;
-
+export default function NotesMarkdown() {
   const notes = [
     //////Legacy of Hope - Alabama///////
     `OPO executives sentenced to <a href= 'https://archives.fbi.gov/archives/birmingham/press-releases/2012/former-alabama-organ-center-executive-sentenced-for-fraud'> Federal prison </a> in 2012 for fraud; included in <a href='https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and'> House Committee on Oversight and Reform investigation </a>`,
@@ -129,9 +123,16 @@ export default function NotesMarkdown({ data }) {
     ` N/A`,
   ];
 
-  console.log("notes", notes);
-
   const notesstring = notes.toString(" ");
+
+  const notesaccessor = {
+    notesstring,
+
+    get allNotes() {
+      return notesstring;
+    },
+  };
+  console.log("notes", notesaccessor);
 
   return (
     <div>
