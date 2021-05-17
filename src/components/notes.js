@@ -142,7 +142,6 @@ export default function NotesMarkdown() {
         remarkPlugins={[gfm]}
         rehypePlugins={[rehypeRaw]}
         children={notesstring}
-        className="markdown"
       />
     </div>
   );
