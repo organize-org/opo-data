@@ -4,15 +4,12 @@ import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import Table from "../components/table";
-import NotesMarkdown from "../components/notes";
 
 import Map from "../images/state_opo_performance.png";
 
 export default function Dashboard({ data }) {
   return (
     <Layout>
-      <NotesMarkdown />
-
       <div>
         <h2>Highest and Lowest Performing OPOs by Location</h2>
 
