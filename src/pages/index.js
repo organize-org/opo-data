@@ -21,14 +21,16 @@ export default function Dashboard({ data }) {
           style={{ height: "auto", maxWidth: "70%", marginBottom: "60px" }}
         />
       </div>
-      <Table data={data.allMetricsCsv.edges.map(({ node }) => ({ ...node }))} />
+      <Table
+        data={data.allMetrics2Csv.edges.map(({ node }) => ({ ...node }))}
+      />
     </Layout>
   );
 }
 
 export const query = graphql`
   query {
-    allMetricsCsv {
+    allMetrics2Csv {
       edges {
         node {
           Board

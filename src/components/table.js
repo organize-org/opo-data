@@ -2,6 +2,10 @@ import React from "react";
 import { Table as BootstrapTable } from "react-bootstrap";
 import { useTable } from "react-table";
 import NotesMarkdown from "./notes";
+import { markdown } from "markdown";
+import ReactMarkdown from "react-markdown";
+import gfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 
 export default function Table({ data }) {
   const columns = [
@@ -39,6 +43,15 @@ export default function Table({ data }) {
     },
     {
       Header: "Notes",
+      accessor: "Notes",
+      Cell: ({ value }) => (
+        // <div dangerouslySetInnerHTML={{ __html: markdown.toHTML(value) }} />
+        <ReactMarkdown
+          remarkPlugins={[gfm]}
+          rehypePlugins={[rehypeRaw]}
+          children={value}
+        />
+      ),
     },
   ];
 
