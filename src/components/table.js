@@ -44,7 +44,6 @@ export default function Table({ data }) {
       Header: "Notes",
       accessor: "Notes",
       Cell: ({ value }) => (
-        // <div dangerouslySetInnerHTML={{ __html: markdown.toHTML(value) }} />
         <ReactMarkdown
           remarkPlugins={[gfm]}
           rehypePlugins={[rehypeRaw]}
