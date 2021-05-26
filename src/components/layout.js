@@ -20,7 +20,6 @@ export default function Layout({ children }) {
   return (
     <Container fluid className="text-center">
       <h1>{data.site.siteMetadata.title}</h1>
-      <br />
       {children}
     </Container>
   );

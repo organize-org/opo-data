@@ -2,6 +2,10 @@ import React from "react";
 import { Table as BootstrapTable } from "react-bootstrap";
 import { useTable } from "react-table";
 
+import ReactMarkdown from "react-markdown";
+import gfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
+
 export default function Table({ data }) {
   const columns = [
     {
@@ -39,6 +43,13 @@ export default function Table({ data }) {
     {
       Header: "Notes",
       accessor: "Notes",
+      Cell: ({ value }) => (
+        <ReactMarkdown
+          remarkPlugins={[gfm]}
+          rehypePlugins={[rehypeRaw]}
+          children={value}
+        />
+      ),
     },
   ];
 
@@ -56,7 +67,6 @@ export default function Table({ data }) {
   return (
     <div>
       <h2>OPO Performance Ratings Based on Final Rule</h2>
-      <br />
       <BootstrapTable responsive striped bordered hover {...getTableProps()}>
         <thead>
           {headerGroups.map(headerGroup => (

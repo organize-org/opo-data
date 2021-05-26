@@ -12,7 +12,6 @@ export default function Dashboard({ data }) {
     <Layout>
       <div>
         <h2>Highest and Lowest Performing OPOs by Location</h2>
-
         <Image
           src={Map}
           style={{ height: "auto", maxWidth: "70%", marginBottom: "60px" }}
