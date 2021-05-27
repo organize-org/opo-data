@@ -10,17 +10,18 @@ import Map from "../components/map";
 
 export default function Dashboard({ data }) {
   return (
-    <Layout>
-      <div>
-        <h2>Highest and Lowest Performing OPOs by Location</h2>
-        <Map />
-        {/* <Image
-          src={Map}
-          style={{ height: "auto", maxWidth: "70%", marginBottom: "60px" }}
-        /> */}
-      </div>
-      <Table data={data.allMetricsCsv.edges.map(({ node }) => ({ ...node }))} />
-    </Layout>
+    // <Layout>
+    <Map />
+    // <div>
+    //   {/* <h2>Highest and Lowest Performing OPOs by Location</h2> */}
+
+    //   {/* <Image
+    //       src={Map}
+    //       style={{ height: "auto", maxWidth: "70%", marginBottom: "60px" }}
+    //     /> */}
+    // </div>
+    /* <Table data={data.allMetricsCsv.edges.map(({ node }) => ({ ...node }))} />
+    </Layout> */
   );
 }
 
