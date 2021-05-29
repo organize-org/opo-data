@@ -1,8 +1,8 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-
 import React from "react";
 import { Container } from "react-bootstrap";
 import { useStaticQuery, graphql } from "gatsby";
+
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Layout({ children }) {
   const data = useStaticQuery(

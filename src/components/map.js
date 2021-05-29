@@ -5,9 +5,9 @@ import "leaflet/dist/leaflet.css";
 export default function Map() {
   return (
     <MapContainer
-      style={{ height: "100vh", width: "100wh" }}
-      center={[33.80803098599847, -84.41417689102799]}
-      zoom={5}
+      style={{ height: "60vh", width: "100%" }}
+      center={[37.09024, -95.712891]}
+      zoom={4}
       scrollWheelZoom={false}
     >
       <TileLayer
