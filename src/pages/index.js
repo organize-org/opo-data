@@ -7,14 +7,10 @@ import Map from "../components/map";
 
 export default function Dashboard({ data }) {
   return (
-    <div>
-      <Layout>
-        <Map />
-        <Table
-          data={data.allMetricsCsv.edges.map(({ node }) => ({ ...node }))}
-        />
-      </Layout>
-    </div>
+    <Layout>
+      <Map />
+      <Table data={data.allMetricsCsv.edges.map(({ node }) => ({ ...node }))} />
+    </Layout>
   );
 }
 
