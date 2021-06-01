@@ -3,7 +3,8 @@ import { MapContainer, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
 export default function Map() {
-  return (
+  // Hack: [`window` dependency for Leaflet](https://www.gatsbyjs.com/docs/debugging-html-builds/#fixing-third-party-modules)
+  return typeof window !== "undefined" ? (
     <MapContainer
       style={{ height: "60vh", width: "100%" }}
       center={[37.09024, -95.712891]}
@@ -15,5 +16,5 @@ export default function Map() {
         url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
       />
     </MapContainer>
-  );
+  ) : null;
 }
