@@ -1,22 +1,14 @@
 import React from "react";
-import { Image } from "react-bootstrap";
 import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import Table from "../components/table";
-
-import Map from "../images/state_opo_performance.png";
+import Map from "../components/map";
 
 export default function Dashboard({ data }) {
   return (
     <Layout>
-      <div>
-        <h2>Highest and Lowest Performing OPOs by Location</h2>
-        <Image
-          src={Map}
-          style={{ height: "auto", maxWidth: "70%", marginBottom: "60px" }}
-        />
-      </div>
+      <Map />
       <Table data={data.allMetricsCsv.edges.map(({ node }) => ({ ...node }))} />
     </Layout>
   );
