@@ -5,6 +5,8 @@ import { MapContainer, TileLayer } from "react-leaflet";
 const mapContainerDimensions = { height: "60vh", width: "100%" };
 
 export default function Map() {
+  console.log(DSALayer);
+
   return (
     <Row>
       <div style={mapContainerDimensions}>
