@@ -1,5 +1,5 @@
 import React from "react";
-import { Table as BootstrapTable } from "react-bootstrap";
+import { Table as BootstrapTable, Row } from "react-bootstrap";
 import { useTable } from "react-table";
 
 import ReactMarkdown from "react-markdown";
@@ -65,7 +65,7 @@ export default function Table({ data }) {
   });
 
   return (
-    <div>
+    <Row className="justify-content-center">
       <h2>OPO Performance Ratings Based on Final Rule</h2>
       <BootstrapTable responsive striped bordered hover {...getTableProps()}>
         <thead>
@@ -90,6 +90,6 @@ export default function Table({ data }) {
           })}
         </tbody>
       </BootstrapTable>
-    </div>
+    </Row>
   );
 }

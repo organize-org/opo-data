@@ -18,5 +18,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-csv`,
+    `gatsby-plugin-react-leaflet`,
   ],
 };
