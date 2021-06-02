@@ -4,6 +4,9 @@
   "description": "A tabular and geospatial dashboard for Organ Procurement Organization (OPO) metrics",
   "version": "0.1.0",
   "license": "0BSD",
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -16,6 +19,7 @@
   "dependencies": {
     "bootstrap": "^4.6.0",
     "gatsby": "^3.3.1",
+    "gatsby-plugin-react-leaflet": "^3.0.2",
     "gatsby-source-filesystem": "^3.3.0",
     "gatsby-transformer-csv": "^3.3.0",
     "leaflet": "^1.7.1",
