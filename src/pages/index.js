@@ -6,6 +6,8 @@ import Table from "../components/table";
 import Map from "../components/map";
 
 export default function Dashboard({ data }) {
+  console.log("query", data);
+
   return (
     <Layout>
       <Map />
@@ -31,5 +33,57 @@ export const query = graphql`
         }
       }
     }
+    allGeoJson {
+      edges {
+        node {
+          features {
+            geometry {
+              type
+              coordinates
+            }
+            properties {
+              name
+            }
+            type
+          }
+        }
+      }
+    }
   }
 `;
+
+// export const query = graphql`
+//   query {
+//     allMetricsCsv {
+//       edges {
+//         node {
+//           Board
+//           CEO
+//           Donors
+//           Notes
+//           OPO
+//           Organs
+//           States
+//           Tier
+//           Waitlist
+//         }
+//       }
+//     }
+//   }
+// `;
+
+// export const jsonQuery = graphql`
+//   query {
+//     allDataJson {
+//       edges {
+//         node {
+//           features {
+//             properties {
+//               name
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
