@@ -10,7 +10,7 @@ export default function Dashboard({ data }) {
 
   return (
     <Layout>
-      <Map />
+      <Map data={data.allGeoJson.edges.map(({ node }) => ({ ...node }))} />
       <Table data={data.allMetricsCsv.edges.map(({ node }) => ({ ...node }))} />
     </Layout>
   );
@@ -51,39 +51,3 @@ export const query = graphql`
     }
   }
 `;
-
-// export const query = graphql`
-//   query {
-//     allMetricsCsv {
-//       edges {
-//         node {
-//           Board
-//           CEO
-//           Donors
-//           Notes
-//           OPO
-//           Organs
-//           States
-//           Tier
-//           Waitlist
-//         }
-//       }
-//     }
-//   }
-// `;
-
-// export const jsonQuery = graphql`
-//   query {
-//     allDataJson {
-//       edges {
-//         node {
-//           features {
-//             properties {
-//               name
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
