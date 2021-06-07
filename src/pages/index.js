@@ -6,11 +6,14 @@ import Table from "../components/table";
 import Map from "../components/map";
 
 export default function Dashboard({ data }) {
-  console.log("query", data);
+  console.log("query", query);
 
   return (
     <Layout>
-      <Map data={data.allGeoJson.edges.map(({ node }) => ({ ...node }))} />
+      <Map
+        data={data.allGeoJson.edges.map(({ node }) => ({ ...node }))}
+        tableData={data.allMetricsCsv.edges.map(({ node }) => ({ ...node }))}
+      />
       <Table data={data.allMetricsCsv.edges.map(({ node }) => ({ ...node }))} />
     </Layout>
   );
