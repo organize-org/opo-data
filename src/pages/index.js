@@ -17,7 +17,7 @@ export default function Dashboard({ data }) {
     {}
   );
 
-  const transformed = {
+  const transformedGeoData = {
     ...geoData[0],
     features: geoData[0].features.map(feature => ({
       ...feature,
@@ -28,25 +28,9 @@ export default function Dashboard({ data }) {
     })),
   };
 
-  const getColor = tier => {
-    switch (tier) {
-      case "3 Failing":
-        return "#D43C37";
-      case "2 Underperforming":
-        return "#FFB042";
-      default:
-        return "#C4C4C4";
-    }
-  };
-
   return (
     <Layout>
-      <Map
-        geoData={geoData}
-        tableData={tableData}
-        transformed={transformed}
-        getColor={getColor}
-      />
+      <Map transformedGeoData={transformedGeoData} />
       <Table data={tableData} />
     </Layout>
   );
