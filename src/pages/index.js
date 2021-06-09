@@ -34,10 +34,8 @@ export default function Dashboard({ data }) {
         return "#D43C37";
       case "2 Underperforming":
         return "#FFB042";
-      case "1 Passing":
-        return "#C4C4C4";
       default:
-        return "green";
+        return "#C4C4C4";
     }
   };
 
