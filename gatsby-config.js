@@ -17,6 +17,7 @@ module.exports = {
         path: `${__dirname}/src/data/`,
       },
     },
+    `gatsby-transformer-geojson`,
     `gatsby-transformer-csv`,
     `gatsby-plugin-react-leaflet`,
   ],

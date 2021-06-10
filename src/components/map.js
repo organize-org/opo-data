@@ -1,10 +1,22 @@
 import React from "react";
 import { Row } from "react-bootstrap";
-import { MapContainer, TileLayer } from "react-leaflet";
+import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
 
 const mapContainerDimensions = { height: "60vh", width: "100%" };
 
-export default function Map() {
+const getColor = tier => {
+  switch (tier) {
+    case "3 Failing":
+      return "#D43C37";
+    case "2 Underperforming":
+      return "#FFB042";
+    default:
+      return "#C4C4C4";
+  }
+};
+
+export default function Map({ geoData }) {
   return (
     <Row>
       <div style={mapContainerDimensions}>
@@ -20,6 +32,17 @@ export default function Map() {
               <TileLayer
                 attribution='&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
                 url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
+              />
+              <GeoJSON
+                data={geoData}
+                style={feature => ({
+                  weight: 2,
+                  opacity: 1,
+                  color: "white",
+                  dashArray: "3",
+                  fillColor: getColor(feature.properties.tier),
+                  fillOpacity: 0.7,
+                })}
               />
             </MapContainer>
           )
