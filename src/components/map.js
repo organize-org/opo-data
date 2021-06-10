@@ -1,9 +1,7 @@
 import React from "react";
 import { Row } from "react-bootstrap";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
-
 import "leaflet/dist/leaflet.css";
-import { Table } from "react-bootstrap";
 
 const mapContainerDimensions = { height: "60vh", width: "100%" };
 
