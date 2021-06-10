@@ -10,9 +10,9 @@ export default function Dashboard({ data }) {
   const tableData = data.allMetricsCsv.edges.map(({ node }) => ({ ...node }));
 
   const tierData = tableData.reduce(
-    (tableDataMap, tableRow) => ({
+    (tableDataMap, { Tier, OPO }) => ({
       ...tableDataMap,
-      [tableRow.OPO]: tableRow,
+      [OPO]: Tier,
     }),
     {}
   );
@@ -23,14 +23,14 @@ export default function Dashboard({ data }) {
       ...feature,
       properties: {
         ...feature.properties,
-        tier: tierData[feature.properties.name]?.Tier,
+        tier: tierData[feature.properties.name],
       },
     })),
   };
 
   return (
     <Layout>
-      <Map transformedGeoData={transformedGeoData} />
+      <Map geoData={transformedGeoData} />
       <Table data={tableData} />
     </Layout>
   );

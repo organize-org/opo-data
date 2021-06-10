@@ -7,18 +7,18 @@ import { Table } from "react-bootstrap";
 
 const mapContainerDimensions = { height: "60vh", width: "100%" };
 
-export default function Map({ transformedGeoData }) {
-  const getColor = tier => {
-    switch (tier) {
-      case "3 Failing":
-        return "#D43C37";
-      case "2 Underperforming":
-        return "#FFB042";
-      default:
-        return "#C4C4C4";
-    }
-  };
+const getColor = tier => {
+  switch (tier) {
+    case "3 Failing":
+      return "#D43C37";
+    case "2 Underperforming":
+      return "#FFB042";
+    default:
+      return "#C4C4C4";
+  }
+};
 
+export default function Map({ geoData }) {
   return (
     <Row>
       <div style={mapContainerDimensions}>
@@ -36,7 +36,7 @@ export default function Map({ transformedGeoData }) {
                 url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
               />
               <GeoJSON
-                data={transformedGeoData}
+                data={geoData}
                 style={feature => ({
                   weight: 2,
                   opacity: 1,
