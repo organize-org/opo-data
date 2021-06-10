@@ -24,7 +24,7 @@ export default function Map({ geoData }) {
           // Hack: [`window` dependency for Leaflet](https://www.gatsbyjs.com/docs/debugging-html-builds/#fixing-third-party-modules)
           typeof window !== "undefined" && (
             <MapContainer
-              style={{ mapContainerDimensions }}
+              style={mapContainerDimensions}
               center={[37.09024, -95.712891]}
               zoom={4}
               scrollWheelZoom={false}
