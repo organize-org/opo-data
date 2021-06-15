@@ -2,8 +2,8 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
-
 import Map from "../components/map";
+import Home from "../components/homepage/home";
 
 export default function Dashboard({ data }) {
   const geoData = data.allGeoJson.edges.map(({ node }) => ({ ...node }));
@@ -31,6 +31,7 @@ export default function Dashboard({ data }) {
   return (
     <Layout>
       <Map geoData={transformedGeoData} />
+      <Home />
     </Layout>
   );
 }

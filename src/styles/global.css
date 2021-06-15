@@ -8,11 +8,47 @@
 }
 
 h1 {
-  color: var(--yellow);
-  transition: 300ms color;
+  font-size: 3.4rem;
+  font-weight: bold;
+  color: var(--black);
+  line-height: 1.15;
 }
 
-h1:hover {
-  text-decoration: none;
-  color: red;
+h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: var(--black);
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--black);
+  line-height: 1.4;
+}
+
+h4 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--red);
+  line-height: 1.4;
+}
+
+p {
+  font-size: 1.3rem;
+  color: var(--black);
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: var(--black);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #d43c37;
+  text-decoration: underline;
 }

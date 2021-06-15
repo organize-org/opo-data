@@ -1,0 +1,31 @@
+/* .background {
+  background-color: var(--yellow);
+} */
+
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--red);
+  line-height: 1.15;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--black);
+  line-height: 1.4;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--black);
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: underline;
+}
