@@ -1,0 +1,18 @@
+:root {
+  --red: #d43c37;
+  --yellow: #ffb042;
+  --black: #373737;
+  --darkgray: #c4c4c4;
+  --lightgray: #f3f3f3;
+  --teal: #00768f;
+}
+
+h1 {
+  color: var(--yellow);
+  transition: 300ms color;
+}
+
+h1:hover {
+  text-decoration: none;
+  color: red;
+}

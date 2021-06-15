@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
-import Table from "../components/table";
+
 import Map from "../components/map";
 
 export default function Dashboard({ data }) {
@@ -31,7 +31,6 @@ export default function Dashboard({ data }) {
   return (
     <Layout>
       <Map geoData={transformedGeoData} />
-      <Table data={tableData} />
     </Layout>
   );
 }
