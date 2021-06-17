@@ -27,5 +27,7 @@ module.exports = {
     `gatsby-transformer-geojson`,
     `gatsby-transformer-csv`,
     `gatsby-plugin-react-leaflet`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
   ],
 };

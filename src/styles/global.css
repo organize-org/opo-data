@@ -7,6 +7,10 @@
   --teal: #00768f;
 }
 
+* {
+  font-family: "Barlow", sans-serif;
+}
+
 h1 {
   font-size: 3.4rem;
   font-weight: bold;
