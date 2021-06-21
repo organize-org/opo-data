@@ -15,12 +15,12 @@ export default function Home() {
             National Waitlist as of June 1, 2021
           </h3>
           <h1 className={homeStyles.headerOne}>107,419</h1>
-          <Link to="/">
+          {/* TODO: https://trello.com/c/fIOy4kiM/24-add-learn-more-content <Link to="/">
             <h4 className={homeStyles.headerFour}>
               Learn more about this projection
               <ArrowRight className={homeStyles.rightArrow} />
             </h4>
-          </Link>
+          </Link> */}
         </Col>
         <Col>
           <h3 className={homeStyles.headerThree}>
@@ -28,24 +28,24 @@ export default function Home() {
             contract
           </h3>
           <h1 className={homeStyles.headerOne}>60,000</h1>
-          <Link to="/">
+          {/* TODO: https://trello.com/c/fIOy4kiM/24-add-learn-more-content <Link to="/">
             <h4 className={homeStyles.headerFour}>
               Learn more about this projection
               <ArrowRight className={homeStyles.rightArrow} />
             </h4>
-          </Link>
+          </Link> */}
         </Col>
         <Col>
           <h3 className={homeStyles.headerThree}>
             Average reported CEO Compensation for failing OPOs (2019)
           </h3>
           <h1 className={homeStyles.headerOne}>$535,630</h1>
-          <Link to="/">
+          {/* TODO: https://trello.com/c/fIOy4kiM/24-add-learn-more-content <Link to="/">
             <h4 className={homeStyles.headerFour}>
               Learn more about this projection
               <ArrowRight className={homeStyles.rightArrow} />
             </h4>
-          </Link>
+          </Link> */}
         </Col>
       </Row>
     </div>

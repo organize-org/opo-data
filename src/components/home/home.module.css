@@ -30,6 +30,14 @@
   text-decoration: underline;
 }
 
+.quote {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1.4;
+}
+
 .rightArrow {
   margin-left: 5px;
 }
@@ -39,4 +47,5 @@
   background-repeat: no-repeat;
   margin-top: 3rem;
   margin-bottom: 3rem;
+  height: 14rem;
 }

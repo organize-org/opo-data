@@ -1,12 +1,55 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
 
+import { graphql, useStaticQuery } from "gatsby";
+import { getImage } from "gatsby-plugin-image";
+import { BgImage } from "gbimage-bridge";
+
+import { Row, Col } from "react-bootstrap";
 import * as homeStyles from "../components/home/home.module.css";
+import { auto } from "@popperjs/core";
 
-export default function HomeImage() {
+export default function BridgeTest() {
+  const { placeholderImage } = useStaticQuery(
+    graphql`
+      query {
+        placeholderImage: file(relativePath: { eq: "images/home-img.png" }) {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+          }
+        }
+      }
+    `
+  );
+
+  const pluginImage = getImage(placeholderImage);
+
   return (
-    <div className={homeStyles.imgBackground}>
-      <StaticImage src="../images/home-img.png" alt="sick man" />
+    <div>
+      <Row>
+        <BgImage
+          className={homeStyles.imgBackground}
+          image={pluginImage}
+          style={{
+            backgroundSize: "contain",
+            backgroundPosition: "",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <div>
+            <Col md={{ span: 5, offset: 6 }}>
+              <p className={homeStyles.quote}>
+                <q>
+                  An astounding lack of accountability and oversight in the
+                  nation’s creaking, monopolistic organ transplant system is
+                  allowing hundreds of thousands of potential organ donations to
+                  fall through the cracks.
+                </q>
+                <br />— NYT editorial board
+              </p>
+            </Col>
+          </div>
+        </BgImage>
+      </Row>
     </div>
   );
 }

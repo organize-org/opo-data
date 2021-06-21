@@ -18,6 +18,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [`sans-serif`, `Barlow\:400,600,700`],
@@ -26,8 +33,9 @@ module.exports = {
     },
     `gatsby-transformer-geojson`,
     `gatsby-transformer-csv`,
-    `gatsby-plugin-react-leaflet`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-react-leaflet`,
   ],
 };
