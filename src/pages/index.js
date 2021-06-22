@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 import Map from "../components/map";
 import Home from "../components/home/home";
 
-import HomeImage from "../components/homeImage";
+import HomeImage from "../components/home/homeImage";
 
 export default function Dashboard({ data }) {
   const geoData = data.allGeoJson.edges.map(({ node }) => ({ ...node }));

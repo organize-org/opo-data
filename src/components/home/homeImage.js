@@ -5,8 +5,7 @@ import { getImage } from "gatsby-plugin-image";
 import { BgImage } from "gbimage-bridge";
 
 import { Row, Col } from "react-bootstrap";
-import * as homeStyles from "../components/home/home.module.css";
-import { auto } from "@popperjs/core";
+import * as homeStyles from "./home.module.css";
 
 export default function BridgeTest() {
   const { placeholderImage } = useStaticQuery(
