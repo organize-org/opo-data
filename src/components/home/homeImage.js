@@ -32,6 +32,7 @@ export default function BridgeTest() {
             backgroundSize: "contain",
             backgroundPosition: "",
             backgroundRepeat: "no-repeat",
+            backgroundColor: "#b00e0c",
           }}
         >
           <div>
@@ -43,8 +44,8 @@ export default function BridgeTest() {
                   allowing hundreds of thousands of potential organ donations to
                   fall through the cracks.
                 </q>
-                <br />— NYT editorial board
               </p>
+              <p className={homeStyles.quoteSource}>— NYT editorial board</p>
             </Col>
           </div>
         </BgImage>

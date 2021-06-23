@@ -6,6 +6,7 @@ import Map from "../components/map";
 import Home from "../components/home/home";
 
 import HomeImage from "../components/home/homeImage";
+import Editorial from "../components/home/editorial";
 
 export default function Dashboard({ data }) {
   const geoData = data.allGeoJson.edges.map(({ node }) => ({ ...node }));
@@ -35,6 +36,7 @@ export default function Dashboard({ data }) {
       <Map geoData={transformedGeoData} />
       <Home />
       <HomeImage />
+      <Editorial />
     </Layout>
   );
 }
