@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Link } from "gatsby";
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import { ArrowRight } from "react-bootstrap-icons";
 import ReactPlayer from "react-player";
 

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `OPO Dashboard`,
+    title: `Organ Procurement Organization (OPO)`,
   },
   plugins: [
     {

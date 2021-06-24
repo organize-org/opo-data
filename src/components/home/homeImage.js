@@ -7,7 +7,7 @@ import { BgImage } from "gbimage-bridge";
 import { Row, Col } from "react-bootstrap";
 import * as homeStyles from "./home.module.css";
 
-export default function BridgeTest() {
+export default function HomeImage() {
   const { placeholderImage } = useStaticQuery(
     graphql`
       query {
@@ -30,22 +30,23 @@ export default function BridgeTest() {
           image={pluginImage}
           style={{
             backgroundSize: "contain",
-            backgroundPosition: "",
             backgroundRepeat: "no-repeat",
             backgroundColor: "#b00e0c",
           }}
         >
           <div>
             <Col md={{ span: 5, offset: 6 }}>
-              <p className={homeStyles.quote}>
-                <q>
+              <figure className={homeStyles.quote}>
+                <blockquote>
                   An astounding lack of accountability and oversight in the
                   nation’s creaking, monopolistic organ transplant system is
                   allowing hundreds of thousands of potential organ donations to
                   fall through the cracks.
-                </q>
-              </p>
-              <p className={homeStyles.quoteSource}>— NYT editorial board</p>
+                </blockquote>
+              </figure>
+              <figcaption className={homeStyles.quoteSource}>
+                &mdash; <cite>NYT editorial board</cite>
+              </figcaption>
             </Col>
           </div>
         </BgImage>

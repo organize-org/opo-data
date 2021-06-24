@@ -4,9 +4,9 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import Map from "../components/map";
 import Home from "../components/home/home";
-
 import HomeImage from "../components/home/homeImage";
 import Editorial from "../components/home/editorial";
+import Articles from "../components/home/articles";
 
 export default function Dashboard({ data }) {
   const geoData = data.allGeoJson.edges.map(({ node }) => ({ ...node }));
@@ -37,6 +37,7 @@ export default function Dashboard({ data }) {
       <Home />
       <HomeImage />
       <Editorial />
+      <Articles />
     </Layout>
   );
 }
