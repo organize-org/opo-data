@@ -25,7 +25,7 @@ export default function Layout({ children }) {
         <Col>
           <StaticImage
             className="headerImg"
-            src="../images/Frame.png"
+            src="../images/logo.png"
             alt="logo"
           />
         </Col>
