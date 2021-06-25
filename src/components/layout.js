@@ -21,15 +21,14 @@ export default function Layout({ children }) {
 
   return (
     <Container fluid>
-      <Row className="justify-content-center siteHeader">
-        <Col>
-          <StaticImage
-            className="headerImg"
-            src="../images/logo.png"
-            alt="logo"
-          />
-        </Col>
-        <Col>
+      <Row className=" d-flex justify-content-center siteHeader">
+        <StaticImage
+          className="headerImg  "
+          src="../images/logo.png"
+          alt="logo"
+        />
+
+        <Col className="column">
           <div className="header">{data.site.siteMetadata.title}</div>
           <div className="subHeader">Performance Comparison</div>
         </Col>

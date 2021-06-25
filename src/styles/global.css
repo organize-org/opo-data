@@ -68,6 +68,10 @@ a:hover {
   height: 2.5rem;
 }
 
+.column {
+  flex-grow: 0 !important;
+}
+
 .header {
   color: var(--white);
   font-size: 1.156rem;
