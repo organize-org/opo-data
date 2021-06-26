@@ -11,22 +11,20 @@ import Map from "../components/map";
 
 import * as styles from "./index.module.css";
 
-export default function Dashboard({ data }) {
-  const geoData = data.allGeoJson.edges.map(({ node }) => node);
-  const tableData = data.allMetricsCsv.edges.map(({ node }) => node);
-  const quoteImage = getImage(data.quoteImage);
-
-  const tierData = tableData.reduce(
-    (tableDataMap, { Tier, OPO }) => ({
-      ...tableDataMap,
+export default function Dashboard({
+  data: { dsaGeoData, statesGeoData, opoData, quoteImage },
+}) {
+  const tierData = opoData?.nodes?.reduce(
+    (opoDataMap, { Tier, OPO }) => ({
+      ...opoDataMap,
       [OPO]: Tier,
     }),
     {}
   );
 
-  const transformedGeoData = {
-    ...geoData[0],
-    features: geoData[0].features.map(feature => ({
+  const transformedDSAData = {
+    ...dsaGeoData?.childGeoJson,
+    features: dsaGeoData?.childGeoJson?.features?.map(feature => ({
       ...feature,
       properties: {
         ...feature.properties,
@@ -37,7 +35,11 @@ export default function Dashboard({ data }) {
 
   return (
     <Layout>
-      <Map geoData={transformedGeoData} />
+      <Map
+        dsaGeoJSON={transformedDSAData}
+        interactive={true}
+        statesGeoJSON={statesGeoData.childGeoJson}
+      />
       <Row className={styles.statsSection}>
         <Col className="mx-5">
           <Row className="h-50">
@@ -68,7 +70,10 @@ export default function Dashboard({ data }) {
         </Col>
       </Row>
       <Row>
-        <BgImage className={styles.quoteImgBackground} image={quoteImage}>
+        <BgImage
+          className={styles.quoteImgBackground}
+          image={getImage(quoteImage)}
+        >
           <Col className={styles.quoteSection} md={{ span: 5, offset: 6 }}>
             <figure>
               <blockquote>
@@ -202,35 +207,46 @@ export const query = graphql`
         gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
     }
-    allMetricsCsv {
-      edges {
-        node {
-          Board
-          CEO
-          Donors
-          Notes
-          OPO
-          Organs
-          States
-          Tier
-          Waitlist
+    dsaGeoData: file(relativePath: { eq: "data/dsas.geojson" }) {
+      childGeoJson {
+        features {
+          geometry {
+            type
+            coordinates
+          }
+          properties {
+            name
+            opo
+          }
+          type
         }
       }
     }
-    allGeoJson {
-      edges {
-        node {
-          features {
-            geometry {
-              type
-              coordinates
-            }
-            properties {
-              name
-            }
+    statesGeoData: file(relativePath: { eq: "data/states.geojson" }) {
+      childGeoJson {
+        features {
+          geometry {
             type
+            coordinates
           }
+          properties {
+            name
+          }
+          type
         }
+      }
+    }
+    opoData: allMetricsCsv {
+      nodes {
+        Board
+        CEO
+        Donors
+        Notes
+        OPO
+        Organs
+        States
+        Tier
+        Waitlist
       }
     }
   }

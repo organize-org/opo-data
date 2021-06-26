@@ -21,7 +21,7 @@ export default function Layout({ children }) {
       <Row className="header">
         <Col md="auto">
           <StaticImage
-            className="headerImg  "
+            className="headerImg"
             src="../images/logo.png"
             alt="logo"
           />
