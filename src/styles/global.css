@@ -1,10 +1,10 @@
 :root {
-  --red: #d43c37 !important;
-  --yellow: #ffb042 !important;
-  --black: #373737 !important;
-  --darkgray: #c4c4c4 !important;
-  --lightgray: #f3f3f3 !important;
-  --teal: #00768f !important;
+  --opoRed: #d43c37;
+  --opoYellow: #ffb042;
+  --opoBlack: #373737;
+  --opoDarkgray: #c4c4c4;
+  --opoLightgray: #f3f3f3;
+  --opoTeal: #00768f;
 }
 
 * {
@@ -14,14 +14,14 @@
 h1 {
   font-size: 3.4rem;
   font-weight: bold;
-  color: var(--black);
+  color: var(--opoBlack);
   line-height: 1.15;
 }
 
 h2 {
   font-size: 1.75rem;
   font-weight: bold;
-  color: var(--black);
+  color: var(--opoBlack);
   line-height: 1.35;
   text-transform: uppercase;
 }
@@ -29,36 +29,36 @@ h2 {
 h3 {
   font-size: 1.3rem;
   font-weight: 700;
-  color: var(--black);
+  color: var(--opoBlack);
   line-height: 1.4;
 }
 
 h4 {
   font-size: 1.1rem;
   font-weight: bold;
-  color: var(--red);
+  color: var(--opoRed);
   line-height: 1.4;
 }
 
 p {
   font-size: 1.3rem;
-  color: var(--black);
+  color: var(--opoBlack);
   line-height: 1.4;
   margin-bottom: 0.5rem;
 }
 
 a {
-  color: var(--black);
+  color: var(--opoBlack);
   text-decoration: underline;
 }
 
 a:hover {
-  color: var(--red);
+  color: var(--opoRed);
   text-decoration: underline;
 }
 
 .siteHeader {
-  background-color: var(--black);
+  background-color: var(--opoBlack);
   background-size: cover;
 }
 

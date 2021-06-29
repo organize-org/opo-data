@@ -1,7 +1,7 @@
 .headerOne {
   font-size: 4.688rem;
   font-weight: bold;
-  color: var(--red);
+  color: var(--opoRed);
   line-height: 1.15;
   text-align: center;
   margin-bottom: 1rem;
@@ -10,7 +10,7 @@
 .headerThree {
   font-size: 1.75rem;
   font-weight: 700;
-  color: var(--black);
+  color: var(--opoBlack);
   line-height: 1.4;
   text-transform: uppercase;
   text-align: center;
@@ -20,7 +20,7 @@
 .headerFour {
   font-size: 1.1rem;
   font-weight: 400;
-  color: var(--black);
+  color: var(--opoBlack);
   line-height: 1.4;
   text-align: center;
   text-decoration: underline;
@@ -35,12 +35,13 @@
 }
 
 blockquote {
-  quotes: "“" "”" "‘" "’";
+  quotes: "\201C""\301E""\2018""\2019";
 }
 
 blockquote::before {
   content: open-quote;
   font-size: 4em;
+  font-family: Georgia, "Times New Roman", Times, serif;
   line-height: 0.1em;
   margin-right: 0.25em;
   vertical-align: -0.4em;
@@ -71,34 +72,45 @@ blockquote::after {
   margin-top: 8.188rem;
   font-size: 1.75rem;
   font-weight: 700;
-  color: var(--black);
+  color: var(--opoBlack);
   line-height: 2rem;
-}
-
-.staticImageOne {
-  margin-top: 4.875rem;
+  text-transform: uppercase;
 }
 
 .staticImage {
   margin-top: 4.875rem;
-  width: 467px;
-  height: 299px;
 }
 .editorialHeadingTwo {
   margin-top: 3.313rem;
-  margin-left: auto;
-  margin-right: auto;
   font-size: 1.75rem;
   font-weight: 700;
-  color: var(--black);
+  color: var(--opoBlack);
   line-height: 2rem;
+  text-transform: uppercase;
+  height: 12%;
+}
+
+.articleHeading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--opoBlack);
+  line-height: 2rem;
+  text-transform: uppercase;
 }
 
 .editorialText {
   margin-top: 1rem;
   font-size: 1.5rem;
   font-weight: 400;
-  color: var(--black);
+  color: var(--opoBlack);
+  line-height: 2.125rem;
+  height: 24%;
+}
+
+.articleText {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--opoBlack);
   line-height: 2.125rem;
 }
 
@@ -106,7 +118,7 @@ blockquote::after {
   margin-top: 2rem;
   font-size: 1.313rem;
   font-weight: 600;
-  color: var(--black);
+  color: var(--opoBlack);
   line-height: 1.5;
   text-decoration: underline;
 }
@@ -120,7 +132,17 @@ blockquote::after {
 .youtubeLink {
   font-size: 1.313rem;
   font-weight: 600;
-  color: var(--black);
+  color: var(--opoBlack);
   line-height: 1.5;
   text-decoration: underline;
+}
+
+.row h4 {
+  margin-top: 3.313rem !important;
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  color: var(--opoBlack) !important;
+  line-height: 2rem !important;
+  text-transform: uppercase !important;
+  height: 15% !important;
 }
