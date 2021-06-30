@@ -4,8 +4,6 @@ import { useStaticQuery, graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { Container, Row, Col } from "react-bootstrap";
 
-import "bootstrap/dist/css/bootstrap.min.css";
-
 export default function Layout({ children }) {
   const data = useStaticQuery(
     graphql`
