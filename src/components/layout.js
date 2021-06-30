@@ -22,12 +22,14 @@ export default function Layout({ children }) {
   return (
     <Container fluid>
       <Row className=" d-flex justify-content-center siteHeader">
-        <StaticImage
-          className="headerImg  "
-          src="../images/logo.png"
-          alt="logo"
-        />
-        <Col className="column">
+        <Col className="noFlex">
+          <StaticImage
+            className="headerImg  "
+            src="../images/logo.png"
+            alt="logo"
+          />
+        </Col>
+        <Col className="noFlex">
           <div className="header">{data.site.siteMetadata.title}</div>
           <div className="subHeader">Performance Comparison</div>
         </Col>

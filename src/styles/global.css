@@ -3,52 +3,43 @@
   --opoYellow: #ffb042;
   --opoBlack: #373737;
   --opoDarkgray: #c4c4c4;
-  --opoLightgray: #f3f3f3;
+  --opoWhiteSmoke: #f3f3f3;
   --opoTeal: #00768f;
 }
 
 * {
   font-family: "Barlow", sans-serif;
+  font-weight: 700;
+  color: var(--opoBlack);
+  line-height: 1.4;
 }
 
 h1 {
   font-size: 3.4rem;
-  font-weight: bold;
-  color: var(--opoBlack);
   line-height: 1.15;
 }
 
 h2 {
   font-size: 1.75rem;
-  font-weight: bold;
-  color: var(--opoBlack);
   line-height: 1.35;
   text-transform: uppercase;
 }
 
 h3 {
   font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--opoBlack);
-  line-height: 1.4;
 }
 
 h4 {
   font-size: 1.1rem;
-  font-weight: bold;
   color: var(--opoRed);
-  line-height: 1.4;
 }
 
 p {
   font-size: 1.3rem;
-  color: var(--opoBlack);
-  line-height: 1.4;
   margin-bottom: 0.5rem;
 }
 
 a {
-  color: var(--opoBlack);
   text-decoration: underline;
 }
 
@@ -68,25 +59,29 @@ a:hover {
   height: 2.5rem;
 }
 
-.column {
+.noFlex {
   flex-grow: 0 !important;
 }
 
 .header {
-  color: var(--white);
+  color: var(--opoWhiteSmoke);
   font-size: 1.156rem;
   line-height: 1.5rem;
   align-items: center;
-  font-weight: 700;
   margin-top: 1.375rem;
   width: 19.875rem;
 }
 
 .subHeader {
-  color: var(--white);
+  color: var(--opoWhiteSmoke);
   font-size: 1.5rem;
   line-height: 1.5rem;
   align-items: center;
-  font-weight: 700;
   margin-bottom: 1.375rem;
+}
+
+.mapContainerDimensions {
+  height: 60vh;
+  width: 100%;
+  margin-bottom: 5rem;
 }

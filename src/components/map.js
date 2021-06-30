@@ -3,12 +3,6 @@ import { Row } from "react-bootstrap";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-const mapContainerDimensions = {
-  height: "60vh",
-  width: "100%",
-  marginBottom: "5rem",
-};
-
 const getColor = tier => {
   switch (tier) {
     case "3 Failing":
@@ -23,12 +17,12 @@ const getColor = tier => {
 export default function Map({ geoData }) {
   return (
     <Row>
-      <div style={mapContainerDimensions}>
+      <div className="mapContainerDimensions">
         {
           // Hack: [`window` dependency for Leaflet](https://www.gatsbyjs.com/docs/debugging-html-builds/#fixing-third-party-modules)
           typeof window !== "undefined" && (
             <MapContainer
-              style={mapContainerDimensions}
+              className="mapContainerDimensions"
               center={[37.09024, -95.712891]}
               zoom={4}
               scrollWheelZoom={false}

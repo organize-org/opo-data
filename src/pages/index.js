@@ -15,7 +15,7 @@ import * as homeStyles from "../styles/home.module.css";
 export default function Dashboard({ data }) {
   const geoData = data.allGeoJson.edges.map(({ node }) => ({ ...node }));
   const tableData = data.allMetricsCsv.edges.map(({ node }) => ({ ...node }));
-  const pluginImage = getImage(data.placeholderImage);
+  const quoteImage = getImage(data.homeImage);
 
   const tierData = tableData.reduce(
     (tableDataMap, { Tier, OPO }) => ({
@@ -46,13 +46,6 @@ export default function Dashboard({ data }) {
           </Row>
           <Row className="justify-content-center">
             <p>107,419</p>
-            {/* TODO: https://trello.com/c/fIOy4kiM/24-add-learn-more-content{" "}
-            <Link to="/">
-              <h5 className={homeStyles.headerFour}>
-                Learn more about this projection
-                <ArrowRight className={homeStyles.rightArrow} />
-              </h5>
-            </Link> */}
           </Row>
         </Col>
         <Col className="mx-5">
@@ -64,12 +57,6 @@ export default function Dashboard({ data }) {
           </Row>
           <Row className="justify-content-center">
             <p>60,000</p>
-            {/* TODO: https://trello.com/c/fIOy4kiM/24-add-learn-more-content <Link to="/">
-            <h5 className={homeStyles.headerFour}>
-              Learn more about this projection
-              <ArrowRight className={homeStyles.rightArrow} />
-            </h5>
-          </Link> */}
           </Row>
         </Col>
         <Col className="mx-5">
@@ -78,28 +65,13 @@ export default function Dashboard({ data }) {
           </Row>
           <Row className="justify-content-center">
             <p>$535,630</p>
-            {/* TODO: https://trello.com/c/fIOy4kiM/24-add-learn-more-content <Link to="/">
-            <h5 className={homeStyles.headerFour}>
-              Learn more about this projection
-              <ArrowRight className={homeStyles.rightArrow} />
-            </h5>
-          </Link> */}
           </Row>
         </Col>
       </Row>
       <Row>
-        <BgImage
-          className={homeStyles.imgBackground}
-          image={pluginImage}
-          style={{
-            backgroundPosition: "left center",
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-            backgroundColor: "#b00e0c",
-          }}
-        >
-          <Col md={{ span: 5, offset: 6 }}>
-            <figure className={homeStyles.quoteSection}>
+        <BgImage className={homeStyles.quoteImgBackground} image={quoteImage}>
+          <Col className={homeStyles.quoteSection} md={{ span: 5, offset: 6 }}>
+            <figure>
               <blockquote>
                 An astounding lack of accountability and oversight in the
                 nation’s creaking, monopolistic organ transplant system is
@@ -107,7 +79,7 @@ export default function Dashboard({ data }) {
                 fall through the cracks.
               </blockquote>
             </figure>
-            <figcaption className={homeStyles.quoteSource}>
+            <figcaption>
               &mdash; <cite>NYT editorial board</cite>
             </figcaption>
           </Col>
@@ -242,7 +214,7 @@ export default function Dashboard({ data }) {
 
 export const query = graphql`
   query {
-    placeholderImage: file(relativePath: { eq: "images/home-img.png" }) {
+    homeImage: file(relativePath: { eq: "images/quoteImage.png" }) {
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }

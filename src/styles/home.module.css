@@ -30,19 +30,26 @@
   text-decoration: underline;
 }
 
-.imgBackground {
+.quoteSection figure {
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.quoteImgBackground {
   background-blend-mode: multiply;
   margin-top: 3rem;
   margin-bottom: 3rem;
   height: 29.688rem;
+  background-position: left center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #b00e0c;
 }
 
-.quoteSection {
+.quoteSection blockquote {
+  color: var(--opoWhiteSmoke);
   margin-top: 7.75rem;
   font-size: 2.188rem;
-  font-weight: 600;
-  color: var(--white);
-  line-height: 1.4;
 }
 
 blockquote {
@@ -62,10 +69,13 @@ blockquote::after {
   content: close-quote;
 }
 
-.quoteSource {
+.quoteSection figcaption {
+  color: var(--opoWhiteSmoke);
   font-size: 1.625rem;
-  font-weight: 600;
-  color: var(--white);
+}
+
+.quoteSection cite {
+  color: var(--opoWhiteSmoke);
 }
 
 .videoSection h4 {
