@@ -1,32 +1,43 @@
-.headerOne {
+.rightArrow {
+  margin-left: 5px;
+}
+
+.statsSection {
+  font-weight: 700 !important;
+  text-align: center !important;
+}
+
+.statsSection p {
   font-size: 4.688rem;
-  font-weight: bold;
   color: var(--opoRed);
   line-height: 1.15;
-  text-align: center;
   margin-bottom: 1rem;
 }
 
-.headerThree {
+.statsSection h3 {
   font-size: 1.75rem;
   font-weight: 700;
-  color: var(--opoBlack);
   line-height: 1.4;
   text-transform: uppercase;
-  text-align: center;
   margin-bottom: 1rem;
 }
 
-.headerFour {
+.statsSection h5 {
+  color: var(--opoBlack);
   font-size: 1.1rem;
   font-weight: 400;
-  color: var(--opoBlack);
   line-height: 1.4;
-  text-align: center;
   text-decoration: underline;
 }
 
-.quote {
+.imgBackground {
+  background-blend-mode: multiply;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  height: 29.688rem;
+}
+
+.quoteSection {
   margin-top: 7.75rem;
   font-size: 2.188rem;
   font-weight: 600;
@@ -57,18 +68,7 @@ blockquote::after {
   color: var(--white);
 }
 
-.rightArrow {
-  margin-left: 5px;
-}
-
-.imgBackground {
-  background-blend-mode: multiply;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  height: 29.688rem;
-}
-
-.editorialHeading {
+.videoSection h4 {
   margin-top: 8.188rem;
   font-size: 1.75rem;
   font-weight: 700;
@@ -77,72 +77,62 @@ blockquote::after {
   text-transform: uppercase;
 }
 
-.staticImage {
-  margin-top: 4.875rem;
-}
-.editorialHeadingTwo {
-  margin-top: 3.313rem;
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: var(--opoBlack);
-  line-height: 2rem;
-  text-transform: uppercase;
-  height: 12%;
-}
-
-.articleHeading {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: var(--opoBlack);
-  line-height: 2rem;
-  text-transform: uppercase;
-}
-
-.editorialText {
+.videoText p {
   margin-top: 1rem;
   font-size: 1.5rem;
   font-weight: 400;
   color: var(--opoBlack);
   line-height: 2.125rem;
+}
+
+.videoLink {
+  font-size: 1.313rem;
+  font-weight: 600;
+  color: var(--opoBlack);
+  line-height: 1.5;
+  text-decoration: underline;
+}
+
+.videoMargins {
+  margin-top: 7.188rem;
+  margin-left: 5.438rem;
+  margin-bottom: 3rem;
+}
+
+.staticImage {
+  margin-top: 4.875rem;
+}
+
+.articleRowHeading {
+  margin-top: 3.313rem;
+  height: 12%;
+}
+
+.articleRowHeading h4 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--opoBlack);
+  line-height: 2rem;
+  text-transform: uppercase;
+}
+
+.articleRowText {
+  margin-top: 1rem;
   height: 24%;
 }
 
-.articleText {
+.articleRowText p {
   font-size: 1.5rem;
   font-weight: 400;
   color: var(--opoBlack);
   line-height: 2.125rem;
 }
 
-.editorialLink {
+.articleLink {
   margin-top: 2rem;
   font-size: 1.313rem;
   font-weight: 600;
   color: var(--opoBlack);
   line-height: 1.5;
   text-decoration: underline;
-}
-
-.iframeMargin {
-  margin-top: 7.188rem;
-  margin-left: 5.438rem;
-  margin-bottom: 3rem;
-}
-
-.youtubeLink {
-  font-size: 1.313rem;
-  font-weight: 600;
-  color: var(--opoBlack);
-  line-height: 1.5;
-  text-decoration: underline;
-}
-
-.row h4 {
-  margin-top: 3.313rem !important;
-  font-size: 1.75rem !important;
-  font-weight: 700 !important;
-  color: var(--opoBlack) !important;
-  line-height: 2rem !important;
-  text-transform: uppercase !important;
-  height: 15% !important;
 }

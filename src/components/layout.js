@@ -27,7 +27,6 @@ export default function Layout({ children }) {
           src="../images/logo.png"
           alt="logo"
         />
-
         <Col className="column">
           <div className="header">{data.site.siteMetadata.title}</div>
           <div className="subHeader">Performance Comparison</div>

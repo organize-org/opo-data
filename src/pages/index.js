@@ -39,59 +39,54 @@ export default function Dashboard({ data }) {
   return (
     <Layout>
       <Map geoData={transformedGeoData} />
-      {/* HOME Stats Section */}
-      <Row>
+      <Row className={homeStyles.statsSection}>
         <Col className="mx-5">
           <Row className="h-50">
-            <h3 className={homeStyles.headerThree}>
-              National Waitlist as of June 1, 2021
-            </h3>
+            <h3>National Waitlist as of June 1, 2021</h3>
           </Row>
           <Row className="justify-content-center">
-            <h1 className={homeStyles.headerOne}>107,419</h1>
-            {/* TODO: https://trello.com/c/fIOy4kiM/24-add-learn-more-content <Link to="/">
-            <h4 className={homeStyles.headerFour}>
-              Learn more about this projection
-              <ArrowRight className={homeStyles.rightArrow} />
-            </h4>
-          </Link> */}
+            <p>107,419</p>
+            {/* TODO: https://trello.com/c/fIOy4kiM/24-add-learn-more-content{" "}
+            <Link to="/">
+              <h5 className={homeStyles.headerFour}>
+                Learn more about this projection
+                <ArrowRight className={homeStyles.rightArrow} />
+              </h5>
+            </Link> */}
           </Row>
         </Col>
         <Col className="mx-5">
           <Row className="h-50">
-            <h3 className={homeStyles.headerThree}>
+            <h3>
               Number of Americans projected to die before an OPO loses it’s
               contract
             </h3>
           </Row>
           <Row className="justify-content-center">
-            <h1 className={homeStyles.headerOne}>60,000</h1>
+            <p>60,000</p>
             {/* TODO: https://trello.com/c/fIOy4kiM/24-add-learn-more-content <Link to="/">
-            <h4 className={homeStyles.headerFour}>
+            <h5 className={homeStyles.headerFour}>
               Learn more about this projection
               <ArrowRight className={homeStyles.rightArrow} />
-            </h4>
+            </h5>
           </Link> */}
           </Row>
         </Col>
         <Col className="mx-5">
           <Row className="h-50">
-            <h3 className={homeStyles.headerThree}>
-              Average reported CEO Compensation for failing OPOs (2019)
-            </h3>
+            <h3>Average reported CEO Compensation for failing OPOs (2019)</h3>
           </Row>
           <Row className="justify-content-center">
-            <h1 className={homeStyles.headerOne}>$535,630</h1>
+            <p>$535,630</p>
             {/* TODO: https://trello.com/c/fIOy4kiM/24-add-learn-more-content <Link to="/">
-            <h4 className={homeStyles.headerFour}>
+            <h5 className={homeStyles.headerFour}>
               Learn more about this projection
               <ArrowRight className={homeStyles.rightArrow} />
-            </h4>
+            </h5>
           </Link> */}
           </Row>
         </Col>
       </Row>
-      {/* Home Image Section */}
       <Row>
         <BgImage
           className={homeStyles.imgBackground}
@@ -103,67 +98,54 @@ export default function Dashboard({ data }) {
             backgroundColor: "#b00e0c",
           }}
         >
-          <div>
-            <Col md={{ span: 5, offset: 6 }}>
-              <figure className={homeStyles.quote}>
-                <blockquote>
-                  An astounding lack of accountability and oversight in the
-                  nation’s creaking, monopolistic organ transplant system is
-                  allowing hundreds of thousands of potential organ donations to
-                  fall through the cracks.
-                </blockquote>
-              </figure>
-              <figcaption className={homeStyles.quoteSource}>
-                &mdash; <cite>NYT editorial board</cite>
-              </figcaption>
-            </Col>
-          </div>
+          <Col md={{ span: 5, offset: 6 }}>
+            <figure className={homeStyles.quoteSection}>
+              <blockquote>
+                An astounding lack of accountability and oversight in the
+                nation’s creaking, monopolistic organ transplant system is
+                allowing hundreds of thousands of potential organ donations to
+                fall through the cracks.
+              </blockquote>
+            </figure>
+            <figcaption className={homeStyles.quoteSource}>
+              &mdash; <cite>NYT editorial board</cite>
+            </figcaption>
+          </Col>
         </BgImage>
       </Row>
-
-      {/* Editorial section */}
-
       <Row className="mx-5">
         <Col className="mx-5">
-          <Row>
-            <h4 className={homeStyles.editorialHeading}>
-              Rep. Katie Porter speaks about OPO Reform
-            </h4>
+          <Row className={homeStyles.videoSection}>
+            <h4>Rep. Katie Porter speaks about OPO Reform</h4>
           </Row>
-          <Row>
-            <p className={homeStyles.editorialText}>
+          <Row className={homeStyles.videoText}>
+            <p>
               Organ Procurement Organizations (OPOs) are supposed to swiftly
               retrieve organs from donors. Yet, they're often havens for waste
               and abuse, in part because they can manipulate data to escape
               accountability, while vacationing on private jets—literally.
             </p>
-            <p className={homeStyles.editorialText}>
+            <p>
               Congresswoman Katie Porter (CA-45) called out an industry lobbyist
               for this during a recent Oversight Committee hearing.
             </p>
           </Row>
           <Row>
             <Link to="https://www.youtube.com/watch?v=siDYyRClKKk">
-              <h4 className={homeStyles.youtubeLink}>
+              <h4 className={homeStyles.videoLink}>
                 See the full video on YouTube
                 <ArrowRight className={homeStyles.rightArrow} />
               </h4>
             </Link>
           </Row>
         </Col>
-
         <Col className="align-self-end">
           <ReactPlayer
             url="https://www.youtube.com/embed/siDYyRClKKk"
-            className={homeStyles.iframeMargin}
-            // width="760px"
-            // height="428px"
+            className={homeStyles.videoMargins}
           />
         </Col>
       </Row>
-
-      {/* Articles Section */}
-
       <Row className="mx-5">
         <Col className="mx-5 ">
           <Row>
@@ -173,13 +155,11 @@ export default function Dashboard({ data }) {
               alt="news-article"
             />
           </Row>
-          <Row className={homeStyles.editorialHeadingTwo}>
-            <h4 className={homeStyles.articleHeading}>
-              They Survived Covid. Now They Need New Lungs.
-            </h4>
+          <Row className={homeStyles.articleRowHeading}>
+            <h4>They Survived Covid. Now They Need New Lungs.</h4>
           </Row>
-          <Row className={homeStyles.editorialText}>
-            <p className={homeStyles.articleText}>
+          <Row className={homeStyles.articleRowText}>
+            <p>
               He survived Covid-19, but his lungs were ravaged. After months of
               deep sedation, he is delirious, his muscles atrophied. And this
               61-year-old still cannot breathe on his own.
@@ -187,10 +167,10 @@ export default function Dashboard({ data }) {
           </Row>
           <Row>
             <Link to="https://www.nytimes.com/2021/04/29/opinion/covid-19-lung-transplants.html">
-              <h4 className={homeStyles.editorialLink}>
+              <h5 className={homeStyles.articleLink}>
                 Read this article on NYTimes.com
                 <ArrowRight className={homeStyles.rightArrow} />
-              </h4>
+              </h5>
             </Link>
           </Row>
         </Col>
@@ -202,14 +182,14 @@ export default function Dashboard({ data }) {
               alt="news-article"
             />
           </Row>
-          <Row className={homeStyles.editorialHeadingTwo}>
-            <h4 className={homeStyles.articleHeading}>
+          <Row className={homeStyles.articleRowHeading}>
+            <h4>
               New Organ Donation Rule Is A Win For Black Patients And Health
               Equity
             </h4>
           </Row>
-          <Row className={homeStyles.editorialText}>
-            <p className={homeStyles.articleText}>
+          <Row className={homeStyles.articleRowText}>
+            <p>
               In an important win for patients, and health equity, the
               Department of Health and Human Services (HHS) recently finalized
               reforms targeted at the government contractors that run the organ
@@ -218,10 +198,10 @@ export default function Dashboard({ data }) {
           </Row>
           <Row>
             <Link to="https://www.healthaffairs.org/do/10.1377/hblog20201211.229975/full/">
-              <h4 className={homeStyles.editorialLink}>
+              <h5 className={homeStyles.articleLink}>
                 Read this article on Health Affairs Blog
                 <ArrowRight className={homeStyles.rightArrow} />
-              </h4>
+              </h5>
             </Link>
           </Row>
         </Col>
@@ -233,14 +213,14 @@ export default function Dashboard({ data }) {
               alt="news-article"
             />
           </Row>
-          <Row className={homeStyles.editorialHeadingTwo}>
-            <h4 className={homeStyles.articleHeading}>
+          <Row className={homeStyles.articleRowHeading}>
+            <h4>
               Organ collection agencies told to improve performance or face
               tighter rules
             </h4>
           </Row>
-          <Row className={homeStyles.editorialText}>
-            <p className={homeStyles.articleText}>
+          <Row className={homeStyles.articleRowText}>
+            <p>
               With 107,000 people waiting for kidneys, hearts, livers and other
               organs, a congressional subcommittee renewed efforts to force
               organ procurement organizations to improve.
@@ -248,10 +228,10 @@ export default function Dashboard({ data }) {
           </Row>
           <Row>
             <Link to="https://www.washingtonpost.com/health/organ-collection-agencies-told-to-improve-performance-or-face-tighter-rules/2021/05/04/68847bce-ad06-11eb-acd3-24b44a57093a_story.html">
-              <h4 className={homeStyles.editorialLink}>
+              <h5 className={homeStyles.articleLink}>
                 Read this article on Washington Post
                 <ArrowRight className={homeStyles.rightArrow} />
-              </h4>
+              </h5>
             </Link>
           </Row>
         </Col>
