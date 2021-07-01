@@ -32,6 +32,45 @@ export default function Layout({ children }) {
         </Col>
       </Row>
       {children}
+      <Row className="footer">
+        <Col xs={6}>
+          <p>
+            Research supported by Arnold Ventures and Schmidt Futures in
+            partnership with Organize and the Federation of American Scientists.
+          </p>
+        </Col>
+        <Col>
+          <StaticImage
+            src="../images/logos/av.png"
+            alt="Arnold Ventures"
+            height="35"
+          />
+        </Col>
+        <Col>
+          <StaticImage
+            src="../images/logos/schmidt.png"
+            alt="Schmidt Futures"
+            height="35"
+          />
+        </Col>
+        <Col>
+          <StaticImage
+            src="../images/logos/bloomworks.png"
+            alt="Bloomworks"
+            height="35"
+          />
+        </Col>
+        <Col>
+          <StaticImage
+            src="../images/logos/organize.png"
+            alt="Organize"
+            height="35"
+          />
+        </Col>
+        <Col>
+          <StaticImage src="../images/logos/fas.png" alt="FAS" height="35" />
+        </Col>
+      </Row>
     </Container>
   );
 }
