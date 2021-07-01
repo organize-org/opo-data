@@ -1,8 +1,7 @@
 import React from "react";
-import { Container, Row } from "react-bootstrap";
 import { useStaticQuery, graphql } from "gatsby";
-
-import "bootstrap/dist/css/bootstrap.min.css";
+import { StaticImage } from "gatsby-plugin-image";
+import { Container, Row, Col } from "react-bootstrap";
 
 export default function Layout({ children }) {
   const data = useStaticQuery(
@@ -19,8 +18,18 @@ export default function Layout({ children }) {
 
   return (
     <Container fluid>
-      <Row className="justify-content-center">
-        <h1>{data.site.siteMetadata.title}</h1>
+      <Row className="header">
+        <Col md="auto">
+          <StaticImage
+            className="headerImg  "
+            src="../images/logo.png"
+            alt="logo"
+          />
+        </Col>
+        <Col md="auto">
+          <h1>{data.site.siteMetadata.title}</h1>
+          <h2>Performance Comparison</h2>
+        </Col>
       </Row>
       {children}
     </Container>
