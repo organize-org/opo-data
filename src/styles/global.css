@@ -67,6 +67,16 @@ a:hover {
   height: 2.5rem;
 }
 
+.footer {
+  align-items: center;
+  background-color: #f7fafc;
+  padding: 2rem;
+}
+
+.footer p {
+  font-size: 0.9rem;
+}
+
 .mapContainerDimensions {
   height: 65vh;
   width: 100%;
