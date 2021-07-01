@@ -4,12 +4,14 @@ import { getImage, StaticImage } from "gatsby-plugin-image";
 import { BgImage } from "gbimage-bridge";
 import { Row, Col } from "react-bootstrap";
 import { ArrowRight } from "react-bootstrap-icons";
+import ReactMarkdown from "react-markdown";
 import ReactPlayer from "react-player";
 
 import Layout from "../components/layout";
 import Map from "../components/map";
 
 import * as styles from "./index.module.css";
+import { stat1, stat2, stat3, quote, video } from "./index.content.yml";
 
 export default function Dashboard({
   data: { dsaGeoData, statesGeoData, opoData, quoteImage },
@@ -41,33 +43,16 @@ export default function Dashboard({
         statesGeoJSON={statesGeoData.childGeoJson}
       />
       <Row className={styles.statsSection}>
-        <Col className="mx-5">
-          <Row className="h-50">
-            <h3>National Waitlist as of June 1, 2021</h3>
-          </Row>
-          <Row className="justify-content-center">
-            <p>107,419</p>
-          </Row>
-        </Col>
-        <Col className="mx-5">
-          <Row className="h-50">
-            <h3>
-              Number of Americans projected to die before an OPO loses it’s
-              contract
-            </h3>
-          </Row>
-          <Row className="justify-content-center">
-            <p>60,000</p>
-          </Row>
-        </Col>
-        <Col className="mx-5">
-          <Row className="h-50">
-            <h3>Average reported CEO Compensation for failing OPOs (2019)</h3>
-          </Row>
-          <Row className="justify-content-center">
-            <p>$535,630</p>
-          </Row>
-        </Col>
+        {[stat1, stat2, stat3].map(({ title, value }) => (
+          <Col className="mx-5">
+            <Row className="h-50">
+              <h3>{title}</h3>
+            </Row>
+            <Row className="justify-content-center">
+              <p>{value}</p>
+            </Row>
+          </Col>
+        ))}
       </Row>
       <Row>
         <BgImage
@@ -76,15 +61,10 @@ export default function Dashboard({
         >
           <Col className={styles.quoteSection} md={{ span: 5, offset: 6 }}>
             <figure>
-              <blockquote>
-                An astounding lack of accountability and oversight in the
-                nation’s creaking, monopolistic organ transplant system is
-                allowing hundreds of thousands of potential organ donations to
-                fall through the cracks.
-              </blockquote>
+              <blockquote>{quote.quote}</blockquote>
             </figure>
             <figcaption>
-              &mdash; <cite>NYT editorial board</cite>
+              &mdash; <cite>{quote.attribution}</cite>
             </figcaption>
           </Col>
         </BgImage>
@@ -92,22 +72,13 @@ export default function Dashboard({
       <Row className={`mx-5 ${styles.videoSection}`}>
         <Col className="mx-5">
           <Row>
-            <h3>Rep. Katie Porter speaks about OPO Reform</h3>
+            <h3>{video.title}</h3>
           </Row>
           <Row>
-            <p>
-              Organ Procurement Organizations (OPOs) are supposed to swiftly
-              retrieve organs from donors. Yet, they're often havens for waste
-              and abuse, in part because they can manipulate data to escape
-              accountability, while vacationing on private jets—literally.
-            </p>
-            <p>
-              Congresswoman Katie Porter (CA-45) called out an industry lobbyist
-              for this during a recent Oversight Committee hearing.
-            </p>
+            <ReactMarkdown>{video.description}</ReactMarkdown>
           </Row>
           <Row>
-            <Link to="https://www.youtube.com/watch?v=siDYyRClKKk">
+            <Link to={video.link}>
               <h4>
                 See the full video on YouTube
                 <ArrowRight className={styles.rightArrow} />
@@ -116,7 +87,7 @@ export default function Dashboard({
           </Row>
         </Col>
         <Col className="align-items-center">
-          <ReactPlayer url="https://www.youtube.com/embed/siDYyRClKKk" />
+          <ReactPlayer url={video.link} />
         </Col>
       </Row>
       <Row className={`mx-4 ${styles.articlesSection}`}>

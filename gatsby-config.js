@@ -37,5 +37,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-leaflet`,
+    `gatsby-plugin-netlify-cms`,
   ],
 };
