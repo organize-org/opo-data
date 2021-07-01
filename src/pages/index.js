@@ -1,8 +1,7 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { getImage, StaticImage } from "gatsby-plugin-image";
 import { BgImage } from "gbimage-bridge";
-import { Link } from "gatsby";
 import { Row, Col } from "react-bootstrap";
 import { ArrowRight } from "react-bootstrap-icons";
 import ReactPlayer from "react-player";
@@ -10,12 +9,12 @@ import ReactPlayer from "react-player";
 import Layout from "../components/layout";
 import Map from "../components/map";
 
-import * as homeStyles from "../styles/home.module.css";
+import * as styles from "./index.module.css";
 
 export default function Dashboard({ data }) {
-  const geoData = data.allGeoJson.edges.map(({ node }) => ({ ...node }));
-  const tableData = data.allMetricsCsv.edges.map(({ node }) => ({ ...node }));
-  const quoteImage = getImage(data.homeImage);
+  const geoData = data.allGeoJson.edges.map(({ node }) => node);
+  const tableData = data.allMetricsCsv.edges.map(({ node }) => node);
+  const quoteImage = getImage(data.quoteImage);
 
   const tierData = tableData.reduce(
     (tableDataMap, { Tier, OPO }) => ({
@@ -39,7 +38,7 @@ export default function Dashboard({ data }) {
   return (
     <Layout>
       <Map geoData={transformedGeoData} />
-      <Row className={homeStyles.statsSection}>
+      <Row className={styles.statsSection}>
         <Col className="mx-5">
           <Row className="h-50">
             <h3>National Waitlist as of June 1, 2021</h3>
@@ -69,8 +68,8 @@ export default function Dashboard({ data }) {
         </Col>
       </Row>
       <Row>
-        <BgImage className={homeStyles.quoteImgBackground} image={quoteImage}>
-          <Col className={homeStyles.quoteSection} md={{ span: 5, offset: 6 }}>
+        <BgImage className={styles.quoteImgBackground} image={quoteImage}>
+          <Col className={styles.quoteSection} md={{ span: 5, offset: 6 }}>
             <figure>
               <blockquote>
                 An astounding lack of accountability and oversight in the
@@ -85,12 +84,12 @@ export default function Dashboard({ data }) {
           </Col>
         </BgImage>
       </Row>
-      <Row className="mx-5">
+      <Row className={`mx-5 ${styles.videoSection}`}>
         <Col className="mx-5">
-          <Row className={homeStyles.videoSection}>
-            <h4>Rep. Katie Porter speaks about OPO Reform</h4>
+          <Row>
+            <h3>Rep. Katie Porter speaks about OPO Reform</h3>
           </Row>
-          <Row className={homeStyles.videoText}>
+          <Row>
             <p>
               Organ Procurement Organizations (OPOs) are supposed to swiftly
               retrieve organs from donors. Yet, they're often havens for waste
@@ -104,33 +103,26 @@ export default function Dashboard({ data }) {
           </Row>
           <Row>
             <Link to="https://www.youtube.com/watch?v=siDYyRClKKk">
-              <h4 className={homeStyles.videoLink}>
+              <h4>
                 See the full video on YouTube
-                <ArrowRight className={homeStyles.rightArrow} />
+                <ArrowRight className={styles.rightArrow} />
               </h4>
             </Link>
           </Row>
         </Col>
-        <Col className="align-self-end">
-          <ReactPlayer
-            url="https://www.youtube.com/embed/siDYyRClKKk"
-            className={homeStyles.videoMargins}
-          />
+        <Col className="align-items-center">
+          <ReactPlayer url="https://www.youtube.com/embed/siDYyRClKKk" />
         </Col>
       </Row>
-      <Row className="mx-5">
-        <Col className="mx-5 ">
+      <Row className={`mx-4 ${styles.articlesSection}`}>
+        <Col className="mx-4">
           <Row>
-            <StaticImage
-              className={homeStyles.staticImage}
-              src="../images/editorial1.png"
-              alt="news-article"
-            />
+            <StaticImage src="../images/editorial1.png" alt="news-article" />
           </Row>
-          <Row className={homeStyles.articleRowHeading}>
-            <h4>They Survived Covid. Now They Need New Lungs.</h4>
+          <Row className="h-25">
+            <h3>They Survived Covid. Now They Need New Lungs.</h3>
           </Row>
-          <Row className={homeStyles.articleRowText}>
+          <Row className="h-25">
             <p>
               He survived Covid-19, but his lungs were ravaged. After months of
               deep sedation, he is delirious, his muscles atrophied. And this
@@ -139,59 +131,50 @@ export default function Dashboard({ data }) {
           </Row>
           <Row>
             <Link to="https://www.nytimes.com/2021/04/29/opinion/covid-19-lung-transplants.html">
-              <h5 className={homeStyles.articleLink}>
+              <h4>
                 Read this article on NYTimes.com
-                <ArrowRight className={homeStyles.rightArrow} />
-              </h5>
+                <ArrowRight className={styles.rightArrow} />
+              </h4>
             </Link>
           </Row>
         </Col>
-        <Col className="mx-5">
+        <Col className="mx-4">
           <Row>
-            <StaticImage
-              className={homeStyles.staticImage}
-              src="../images/editorial2.png"
-              alt="news-article"
-            />
+            <StaticImage src="../images/editorial2.png" alt="news-article" />
           </Row>
-          <Row className={homeStyles.articleRowHeading}>
-            <h4>
+          <Row className="h-25">
+            <h3>
               New Organ Donation Rule Is A Win For Black Patients And Health
               Equity
-            </h4>
+            </h3>
           </Row>
-          <Row className={homeStyles.articleRowText}>
+          <Row className="h-25">
             <p>
-              In an important win for patients, and health equity, the
-              Department of Health and Human Services (HHS) recently finalized
-              reforms targeted at the government contractors that run the organ
-              donation system.
+              The Department of Health and Human Services (HHS) recently
+              finalized reforms targeted at the government contractors that run
+              the organ donation system.
             </p>
           </Row>
           <Row>
             <Link to="https://www.healthaffairs.org/do/10.1377/hblog20201211.229975/full/">
-              <h5 className={homeStyles.articleLink}>
+              <h4>
                 Read this article on Health Affairs Blog
-                <ArrowRight className={homeStyles.rightArrow} />
-              </h5>
+                <ArrowRight className={styles.rightArrow} />
+              </h4>
             </Link>
           </Row>
         </Col>
-        <Col className="mx-5 ">
+        <Col className="mx-4">
           <Row>
-            <StaticImage
-              className={homeStyles.staticImage}
-              src="../images/editorial3.png"
-              alt="news-article"
-            />
+            <StaticImage src="../images/editorial3.png" alt="news-article" />
           </Row>
-          <Row className={homeStyles.articleRowHeading}>
-            <h4>
+          <Row className="h-25">
+            <h3>
               Organ collection agencies told to improve performance or face
               tighter rules
-            </h4>
+            </h3>
           </Row>
-          <Row className={homeStyles.articleRowText}>
+          <Row className="h-25">
             <p>
               With 107,000 people waiting for kidneys, hearts, livers and other
               organs, a congressional subcommittee renewed efforts to force
@@ -200,10 +183,10 @@ export default function Dashboard({ data }) {
           </Row>
           <Row>
             <Link to="https://www.washingtonpost.com/health/organ-collection-agencies-told-to-improve-performance-or-face-tighter-rules/2021/05/04/68847bce-ad06-11eb-acd3-24b44a57093a_story.html">
-              <h5 className={homeStyles.articleLink}>
+              <h4>
                 Read this article on Washington Post
-                <ArrowRight className={homeStyles.rightArrow} />
-              </h5>
+                <ArrowRight className={styles.rightArrow} />
+              </h4>
             </Link>
           </Row>
         </Col>
@@ -214,7 +197,7 @@ export default function Dashboard({ data }) {
 
 export const query = graphql`
   query {
-    homeImage: file(relativePath: { eq: "images/quoteImage.png" }) {
+    quoteImage: file(relativePath: { eq: "images/quoteImage.png" }) {
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }

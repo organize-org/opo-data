@@ -1,0 +1,70 @@
+.rightArrow {
+  margin-left: 5px;
+}
+
+.statsSection {
+  font-weight: 700;
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.statsSection p {
+  color: var(--opoRed);
+  font-size: 4rem;
+  line-height: 1.15;
+  margin-top: 1rem;
+}
+
+.quoteSection {
+  color: var(--opoWhiteSmoke);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+  padding: 4rem 0;
+}
+
+.quoteSection blockquote {
+  text-indent: -3em;
+  quotes: "\201C""\301E""\2018""\2019";
+}
+
+.quoteSection blockquote::before {
+  content: open-quote;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 4em;
+  line-height: 0.005em;
+  margin-right: 0.25em;
+  vertical-align: -0.45em;
+}
+
+.quoteSection blockquote::after {
+  content: close-quote;
+}
+
+.quoteImgBackground {
+  background-blend-mode: multiply;
+  background-position: left center;
+  background-size: contain;
+  background-color: #b00e0c;
+}
+
+.videoSection {
+  margin-top: 4rem;
+}
+
+.videoSection h3 {
+  margin-bottom: 1.5rem;
+}
+
+.articlesSection {
+  line-height: 2rem;
+  margin: 4rem 0;
+}
+
+.articlesSection h3 {
+  margin-top: 2rem;
+}
+
+.articlesSection p {
+  margin: 1rem 0;
+}
