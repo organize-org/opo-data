@@ -17,6 +17,8 @@
     "test": "echo \"Write tests!\" && exit 1"
   },
   "dependencies": {
+    "@turf/boolean-intersects": "^6.4.0",
+    "@turf/center": "^6.4.0",
     "bootstrap": "^4.6.0",
     "gatsby": "^3.3.1",
     "gatsby-background-image": "^1.5.3",
@@ -37,7 +39,6 @@
     "react-leaflet": "^3.2.0",
     "react-markdown": "^6.0.2",
     "react-player": "^2.9.0",
-    "react-table": "^7.7.0",
     "rehype-raw": "^5.1.0",
     "remark-gfm": "^1.0.0"
   },
