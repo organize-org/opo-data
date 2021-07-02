@@ -1,12 +1,13 @@
-stat1:
-  title: NATIONAL WAITLIST AS OF JUNE 1, 2021
-  value: 107,419
-stat2:
-  title: NUMBER OF AMERICANS PROJECTED TO DIE BEFORE AN OPO LOSES IT’S CONTRACT
-  value: 60,000
-stat3:
-  title: AVERAGE REPORTED CEO COMPENSATION FOR FAILING OPOS (2019)
-  value: $535,630
+stats:
+  stat1:
+    title: NATIONAL WAITLIST AS OF JUNE 1, 2021
+    value: 107,419
+  stat2:
+    title: NUMBER OF AMERICANS PROJECTED TO DIE BEFORE AN OPO LOSES IT’S CONTRACT
+    value: 60,000
+  stat3:
+    title: AVERAGE REPORTED CEO COMPENSATION FOR FAILING OPOS (2019)
+    value: $535,630
 quote:
   quote: An astounding lack of accountability and oversight in the nation’s
     creaking, monopolistic organ transplant system is allowing hundreds of
