@@ -209,15 +209,8 @@ export const query = graphql`
     }
     opoData: allMetricsCsv {
       nodes {
-        Board
-        CEO
-        Donors
-        Notes
         OPO
-        Organs
-        States
         Tier
-        Waitlist
       }
     }
   }

@@ -11,7 +11,8 @@ export default function Dashboard({
   state = "DC",
 }) {
   const stateFeature = statesGeoData?.childGeoJson?.features?.find(
-    ({ properties }) => properties.abbreviation === state
+    ({ properties }) =>
+      properties.abbreviation.toLowerCase() === state.toLocaleLowerCase()
   );
   const dsaFeatures = dsaGeoData?.childGeoJson?.features?.filter(dsaFeature =>
     booleanInersects(dsaFeature, stateFeature)
