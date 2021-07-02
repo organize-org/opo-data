@@ -11,7 +11,7 @@ import Layout from "../components/layout";
 import Map from "../components/map";
 
 import * as styles from "./index.module.css";
-import { stat1, stat2, stat3, quote, video } from "./index.content.yml";
+import { stats, quote, video } from "./index.content.yml";
 
 export default function Dashboard({
   data: { dsaGeoData, statesGeoData, opoData, quoteImage },
@@ -43,7 +43,7 @@ export default function Dashboard({
         statesGeoJSON={statesGeoData.childGeoJson}
       />
       <Row className={styles.statsSection}>
-        {[stat1, stat2, stat3].map(({ title, value }) => (
+        {Object.values(stats).map(({ title, value }) => (
           <Col className="mx-5">
             <Row className="h-50">
               <h3>{title}</h3>
