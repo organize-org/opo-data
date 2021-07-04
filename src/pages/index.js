@@ -11,40 +11,55 @@ import Layout from "../components/layout";
 import Map from "../components/map";
 
 import * as styles from "./index.module.css";
-import { stats, quote, video } from "./index.content.yml";
+import content from "./index.content.yml";
 
 export default function Dashboard({
-  data: { dsaGeoData, statesGeoData, opoData, quoteImage },
+  data: { dsaGeoData, statesGeoData, opoData, statesData, quoteImage },
 }) {
+  const { stats, quote, video } = content;
   const tierData = opoData?.nodes?.reduce(
-    (opoDataMap, { Tier, OPO }) => ({
+    (opoDataMap, { opo, tier }) => ({
       ...opoDataMap,
-      [OPO]: Tier,
+      [opo]: tier,
+    }),
+    {}
+  );
+  const stateNameData = statesData?.nodes?.reduce(
+    (stateNameMap, { abbreviation, name }) => ({
+      ...stateNameMap,
+      [abbreviation]: name,
     }),
     {}
   );
 
-  const transformedDSAData = {
-    ...dsaGeoData?.childGeoJson,
-    features: dsaGeoData?.childGeoJson?.features?.map(feature => ({
-      ...feature,
-      properties: {
-        ...feature.properties,
-        tier: tierData[feature.properties.name],
-      },
-    })),
-  };
-
   return (
     <Layout>
       <Map
-        dsaGeoJSON={transformedDSAData}
+        dsaGeoJSON={{
+          ...dsaGeoData?.childGeoJson,
+          features: dsaGeoData?.childGeoJson?.features?.map(feature => ({
+            ...feature,
+            properties: {
+              ...feature.properties,
+              tier: tierData[feature.properties.opo],
+            },
+          })),
+        }}
         interactive={true}
-        statesGeoJSON={statesGeoData.childGeoJson}
+        statesGeoJSON={{
+          ...statesGeoData?.childGeoJson,
+          features: statesGeoData?.childGeoJson?.features?.map(feature => ({
+            ...feature,
+            properties: {
+              ...feature.properties,
+              name: stateNameData[feature.properties.abbreviation],
+            },
+          })),
+        }}
       />
       <Row className={styles.statsSection}>
         {Object.values(stats).map(({ title, value }) => (
-          <Col className="mx-5">
+          <Col className="mx-5" key={title}>
             <Row className="h-50">
               <h3>{title}</h3>
             </Row>
@@ -80,7 +95,7 @@ export default function Dashboard({
           <Row>
             <Link to={video.link}>
               <h4>
-                See the full video on YouTube
+                See the full video
                 <ArrowRight className={styles.rightArrow} />
               </h4>
             </Link>
@@ -108,7 +123,7 @@ export default function Dashboard({
           <Row>
             <Link to="https://www.nytimes.com/2021/04/29/opinion/covid-19-lung-transplants.html">
               <h4>
-                Read this article on NYTimes.com
+                Read more
                 <ArrowRight className={styles.rightArrow} />
               </h4>
             </Link>
@@ -134,7 +149,7 @@ export default function Dashboard({
           <Row>
             <Link to="https://www.healthaffairs.org/do/10.1377/hblog20201211.229975/full/">
               <h4>
-                Read this article on Health Affairs Blog
+                Read more
                 <ArrowRight className={styles.rightArrow} />
               </h4>
             </Link>
@@ -160,7 +175,7 @@ export default function Dashboard({
           <Row>
             <Link to="https://www.washingtonpost.com/health/organ-collection-agencies-told-to-improve-performance-or-face-tighter-rules/2021/05/04/68847bce-ad06-11eb-acd3-24b44a57093a_story.html">
               <h4>
-                Read this article on Washington Post
+                Read more
                 <ArrowRight className={styles.rightArrow} />
               </h4>
             </Link>
@@ -186,7 +201,6 @@ export const query = graphql`
             coordinates
           }
           properties {
-            name
             opo
           }
           type
@@ -201,16 +215,22 @@ export const query = graphql`
             coordinates
           }
           properties {
-            name
+            abbreviation
           }
           type
         }
       }
     }
-    opoData: allMetricsCsv {
+    opoData: allOposCsv {
       nodes {
-        OPO
-        Tier
+        opo
+        tier
+      }
+    }
+    statesData: allStatesCsv {
+      nodes {
+        abbreviation
+        name
       }
     }
   }
