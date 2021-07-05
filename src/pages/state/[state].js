@@ -6,10 +6,23 @@ import center from "@turf/center";
 import Layout from "../../components/layout";
 import Map from "../../components/map";
 
+import content from "./[state].content.yml";
+
 export default function Dashboard({
   data: { dsaGeoData, statesGeoData, opoData, statesData },
   state = "DC",
 }) {
+  const notesByOpo = content?.notes?.reduce(
+    (notesMap, { note, tags }) => ({
+      ...notesMap,
+      ...tags.reduce(
+        (_, tag) => ({ [tag]: [...(notesMap[tag] ?? []), note] }),
+        {}
+      ),
+    }),
+    {}
+  );
+
   // Find associated state data and feature by abbreviation
   const stateData = statesData?.nodes?.find(
     ({ abbreviation }) => abbreviation === state.toLocaleUpperCase()
@@ -24,40 +37,43 @@ export default function Dashboard({
     ?.filter(feature => booleanIntersects(stateFeature, feature))
     ?.map(({ properties: { abbreviation } }) => abbreviation);
 
-  // Filter into in- and out-of-state (or neither), add formatted states or region
+  // Filter into in- and out-of-state (or neither); add region and notes (in), or formatted state list (out)
   const { inStateOpos, outOfStateOpos } = opoData?.nodes.reduce(
     (filter, opo) => {
-      // `states` field: newline-delineated state(s) with an optional `-`-delineated region,
-      // e.g. `states: 'PA\nOH - Northeast'`. Transform -> Array<{ state, region }>
-      const statesWithRegion = opo.states.split("\n").map(swr => {
-        const [state, region] = swr.split("-").map(sor => sor.trim());
-        return { state, region };
-      });
+      // `states` field: newline-delineated state(s) with an optional `-`-delineated region.
+      // Transform -> Array<Array<state, region>>. e.g. `states: 'OH - West\n'` -> `states: [['OH', 'West']]`.
+      const statesWithRegion = opo.states
+        .split("\n")
+        .map(swr => swr.split("-").map(sor => sor.trim()));
 
       const inState = statesWithRegion.find(
-        ({ state }) => state === stateData.abbreviation
+        ([state]) => state === stateData.abbreviation
       );
       if (inState) {
-        // In state: pull region
+        // In state: pull region and tagged notes
         return {
           ...filter,
           inStateOpos: [
             ...filter.inStateOpos,
-            { ...opo, region: inState.region },
+            {
+              ...opo,
+              notes: notesByOpo[opo.opo],
+              region: inState[1],
+            },
           ],
         };
       } else if (
-        statesWithRegion.filter(({ state }) => borderingStates.includes(state))
+        statesWithRegion.filter(([state]) => borderingStates.includes(state))
           .length
       ) {
-        // Out of state (but nearby): pull and format state(s)
+        // Out of state (but nearby): pull and format state list
         return {
           ...filter,
           outOfStateOpos: [
             ...filter.outOfStateOpos,
             {
               ...opo,
-              states: statesWithRegion.map(({ state }) => state).join(", "),
+              states: statesWithRegion.map(([state]) => state).join(", "),
             },
           ],
         };
