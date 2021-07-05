@@ -1,6 +1,6 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
-import { getImage, StaticImage } from "gatsby-plugin-image";
+import { graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { BgImage } from "gbimage-bridge";
 import { Row, Col } from "react-bootstrap";
 import { ArrowRight } from "react-bootstrap-icons";
@@ -11,40 +11,69 @@ import Layout from "../components/layout";
 import Map from "../components/map";
 
 import * as styles from "./index.module.css";
-import { stats, quote, video } from "./index.content.yml";
+import content from "./index.content.yml";
 
 export default function Dashboard({
-  data: { dsaGeoData, statesGeoData, opoData, quoteImage },
+  data: {
+    articleImages,
+    dsaGeoData,
+    statesGeoData,
+    opoData,
+    statesData,
+    quoteImage,
+  },
 }) {
+  const { articles, stats, quote, video } = content;
+  const articleImgsByPath = articleImages?.edges?.reduce(
+    (imgMap, { node }) => ({
+      ...imgMap,
+      [`../${node.relativePath}`]: node,
+    }),
+    {}
+  );
   const tierData = opoData?.nodes?.reduce(
-    (opoDataMap, { Tier, OPO }) => ({
+    (opoDataMap, { opo, tier }) => ({
       ...opoDataMap,
-      [OPO]: Tier,
+      [opo]: tier,
+    }),
+    {}
+  );
+  const stateNameData = statesData?.nodes?.reduce(
+    (stateNameMap, { abbreviation, name }) => ({
+      ...stateNameMap,
+      [abbreviation]: name,
     }),
     {}
   );
 
-  const transformedDSAData = {
-    ...dsaGeoData?.childGeoJson,
-    features: dsaGeoData?.childGeoJson?.features?.map(feature => ({
-      ...feature,
-      properties: {
-        ...feature.properties,
-        tier: tierData[feature.properties.name],
-      },
-    })),
-  };
-
   return (
     <Layout>
       <Map
-        dsaGeoJSON={transformedDSAData}
+        dsaGeoJSON={{
+          ...dsaGeoData?.childGeoJson,
+          features: dsaGeoData?.childGeoJson?.features?.map(feature => ({
+            ...feature,
+            properties: {
+              ...feature.properties,
+              tier: tierData[feature.properties.opo],
+            },
+          })),
+        }}
         interactive={true}
-        statesGeoJSON={statesGeoData.childGeoJson}
+        statesGeoJSON={{
+          ...statesGeoData?.childGeoJson,
+          features: statesGeoData?.childGeoJson?.features?.map(feature => ({
+            ...feature,
+            properties: {
+              ...feature.properties,
+              name: stateNameData[feature.properties.abbreviation],
+            },
+          })),
+        }}
       />
       <Row className={styles.statsSection}>
         {Object.values(stats).map(({ title, value }) => (
-          <Col className="mx-5">
+          <Col className="mx-5" key={title}>
             <Row className="h-50">
               <h3>{title}</h3>
             </Row>
@@ -78,94 +107,49 @@ export default function Dashboard({
             <ReactMarkdown>{video.description}</ReactMarkdown>
           </Row>
           <Row>
-            <Link to={video.link}>
+            <a
+              href={`https://www.youtube.com/watch?v=${video.youtube}`}
+              target="_blank"
+              rel="noreferrer"
+            >
               <h4>
-                See the full video on YouTube
+                See the full video
                 <ArrowRight className={styles.rightArrow} />
               </h4>
-            </Link>
+            </a>
           </Row>
         </Col>
         <Col className="align-items-center">
-          <ReactPlayer url={video.link} />
+          <ReactPlayer
+            url={`https://www.youtube.com/watch?v=${video.youtube}`}
+          />
         </Col>
       </Row>
       <Row className={`mx-4 ${styles.articlesSection}`}>
-        <Col className="mx-4">
-          <Row>
-            <StaticImage src="../images/editorial1.png" alt="news-article" />
-          </Row>
-          <Row className="h-25">
-            <h3>They Survived Covid. Now They Need New Lungs.</h3>
-          </Row>
-          <Row className="h-25">
-            <p>
-              He survived Covid-19, but his lungs were ravaged. After months of
-              deep sedation, he is delirious, his muscles atrophied. And this
-              61-year-old still cannot breathe on his own.
-            </p>
-          </Row>
-          <Row>
-            <Link to="https://www.nytimes.com/2021/04/29/opinion/covid-19-lung-transplants.html">
-              <h4>
-                Read this article on NYTimes.com
-                <ArrowRight className={styles.rightArrow} />
-              </h4>
-            </Link>
-          </Row>
-        </Col>
-        <Col className="mx-4">
-          <Row>
-            <StaticImage src="../images/editorial2.png" alt="news-article" />
-          </Row>
-          <Row className="h-25">
-            <h3>
-              New Organ Donation Rule Is A Win For Black Patients And Health
-              Equity
-            </h3>
-          </Row>
-          <Row className="h-25">
-            <p>
-              The Department of Health and Human Services (HHS) recently
-              finalized reforms targeted at the government contractors that run
-              the organ donation system.
-            </p>
-          </Row>
-          <Row>
-            <Link to="https://www.healthaffairs.org/do/10.1377/hblog20201211.229975/full/">
-              <h4>
-                Read this article on Health Affairs Blog
-                <ArrowRight className={styles.rightArrow} />
-              </h4>
-            </Link>
-          </Row>
-        </Col>
-        <Col className="mx-4">
-          <Row>
-            <StaticImage src="../images/editorial3.png" alt="news-article" />
-          </Row>
-          <Row className="h-25">
-            <h3>
-              Organ collection agencies told to improve performance or face
-              tighter rules
-            </h3>
-          </Row>
-          <Row className="h-25">
-            <p>
-              With 107,000 people waiting for kidneys, hearts, livers and other
-              organs, a congressional subcommittee renewed efforts to force
-              organ procurement organizations to improve.
-            </p>
-          </Row>
-          <Row>
-            <Link to="https://www.washingtonpost.com/health/organ-collection-agencies-told-to-improve-performance-or-face-tighter-rules/2021/05/04/68847bce-ad06-11eb-acd3-24b44a57093a_story.html">
-              <h4>
-                Read this article on Washington Post
-                <ArrowRight className={styles.rightArrow} />
-              </h4>
-            </Link>
-          </Row>
-        </Col>
+        {articles.map(({ description, title, image, link }) => (
+          <Col className="mx-4" key={title}>
+            <Row>
+              <GatsbyImage
+                image={getImage(articleImgsByPath[image])}
+                alt={title}
+              />
+            </Row>
+            <Row className="h-25">
+              <h3>{title}</h3>
+            </Row>
+            <Row className="h-25">
+              <ReactMarkdown>{description}</ReactMarkdown>
+            </Row>
+            <Row>
+              <a href={link} target="_blank" rel="noreferrer">
+                <h4>
+                  Read more
+                  <ArrowRight className={styles.rightArrow} />
+                </h4>
+              </a>
+            </Row>
+          </Col>
+        ))}
       </Row>
     </Layout>
   );
@@ -173,6 +157,18 @@ export default function Dashboard({
 
 export const query = graphql`
   query {
+    articleImages: allFile(
+      filter: { relativeDirectory: { eq: "images/articles" } }
+    ) {
+      edges {
+        node {
+          relativePath
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+          }
+        }
+      }
+    }
     quoteImage: file(relativePath: { eq: "images/quoteImage.png" }) {
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
@@ -186,7 +182,6 @@ export const query = graphql`
             coordinates
           }
           properties {
-            name
             opo
           }
           type
@@ -201,16 +196,22 @@ export const query = graphql`
             coordinates
           }
           properties {
-            name
+            abbreviation
           }
           type
         }
       }
     }
-    opoData: allMetricsCsv {
+    opoData: allOposCsv {
       nodes {
-        OPO
-        Tier
+        opo
+        tier
+      }
+    }
+    statesData: allStatesCsv {
+      nodes {
+        abbreviation
+        name
       }
     }
   }

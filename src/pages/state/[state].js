@@ -1,52 +1,131 @@
 import React from "react";
 import { graphql } from "gatsby";
-import booleanInersects from "@turf/boolean-intersects";
+import booleanIntersects from "@turf/boolean-intersects";
 import center from "@turf/center";
 
 import Layout from "../../components/layout";
 import Map from "../../components/map";
 
+import content from "./[state].content.yml";
+
 export default function Dashboard({
-  data: { dsaGeoData, statesGeoData, opoData },
+  data: { dsaGeoData, statesGeoData, opoData, statesData },
   state = "DC",
 }) {
-  const stateFeature = statesGeoData?.childGeoJson?.features?.find(
-    ({ properties }) =>
-      properties.abbreviation.toLowerCase() === state.toLocaleLowerCase()
-  );
-  const dsaFeatures = dsaGeoData?.childGeoJson?.features?.filter(dsaFeature =>
-    booleanInersects(dsaFeature, stateFeature)
-  );
-  const opos = opoData?.nodes?.filter(({ OPO }) =>
-    dsaFeatures.map(({ properties }) => properties.name).includes(OPO)
-  );
-
-  const tierData = opos.reduce(
-    (opoDataMap, { Tier, OPO }) => ({
-      ...opoDataMap,
-      [OPO]: Tier,
+  const notesByOpo = content?.notes?.reduce(
+    (notesMap, { note, tags }) => ({
+      ...notesMap,
+      ...tags.reduce(
+        (_, tag) => ({ [tag]: [...(notesMap[tag] ?? []), note] }),
+        {}
+      ),
     }),
     {}
   );
-  const transformedDSAFeatures = dsaFeatures.map(feature => ({
-    ...feature,
-    properties: {
-      ...feature.properties,
-      tier: tierData[feature.properties.name],
+
+  // Find associated state data and feature by abbreviation
+  const stateData = statesData?.nodes?.find(
+    ({ abbreviation }) => abbreviation === state.toLocaleUpperCase()
+  );
+  const stateFeature = statesGeoData?.childGeoJson?.features?.find(
+    ({ properties: { abbreviation } }) =>
+      abbreviation === stateData.abbreviation
+  );
+
+  // Use Turf to find bordering states by their geojson polygon
+  const borderingStates = statesGeoData?.childGeoJson?.features
+    ?.filter(feature => booleanIntersects(stateFeature, feature))
+    ?.map(({ properties: { abbreviation } }) => abbreviation);
+
+  // Filter into in- and out-of-state (or neither); add region and notes (in), or formatted state list (out)
+  const { inStateOpos, outOfStateOpos } = opoData?.nodes.reduce(
+    (filter, opo) => {
+      // `states` field: newline-delineated state(s) with an optional `-`-delineated region.
+      // Transform -> Array<Array<state, region>>. e.g. `states: 'OH - West\n'` -> `states: [['OH', 'West']]`.
+      const statesWithRegion = opo.states
+        .split("\n")
+        .map(swr => swr.split("-").map(sor => sor.trim()));
+
+      const inState = statesWithRegion.find(
+        ([state]) => state === stateData.abbreviation
+      );
+      if (inState) {
+        // In state: pull region and tagged notes
+        return {
+          ...filter,
+          inStateOpos: [
+            ...filter.inStateOpos,
+            {
+              ...opo,
+              notes: notesByOpo[opo.opo],
+              region: inState[1],
+            },
+          ],
+        };
+      } else if (
+        statesWithRegion.filter(([state]) => borderingStates.includes(state))
+          .length
+      ) {
+        // Out of state (but nearby): pull and format state list
+        return {
+          ...filter,
+          outOfStateOpos: [
+            ...filter.outOfStateOpos,
+            {
+              ...opo,
+              states: statesWithRegion.map(([state]) => state).join(", "),
+            },
+          ],
+        };
+      } else {
+        // Else, not nearby
+        return filter;
+      }
     },
-  }));
+    { inStateOpos: [], outOfStateOpos: [] }
+  );
+
+  // Get nearby DSA geojson features, colored by tier
+  const nearbyOpoTiers = [...inStateOpos, ...outOfStateOpos].reduce(
+    (nearbyMap, { opo, tier }) => ({ ...nearbyMap, [opo]: tier }),
+    {}
+  );
+  const dsaFeatures = dsaGeoData?.childGeoJson?.features
+    ?.filter(({ properties: { opo } }) => nearbyOpoTiers[opo])
+    ?.map(feature => ({
+      ...feature,
+      properties: {
+        ...feature.properties,
+        tier: nearbyOpoTiers[feature.properties.opo],
+      },
+    }));
+
+  const statePopoutStats = {
+    avgCeoComp:
+      inStateOpos?.reduce(
+        (sum, { compensation }) => sum + parseInt(compensation),
+        0
+      ) / inStateOpos.length,
+    monthlyDead: 0, // TODO ?
+    waitlist: parseInt(stateData.waitlist),
+  };
+
+  // TODO: use
+  console.log({ inStateOpos });
+  console.log({ outOfStateOpos });
+  console.log({ statePopoutStats });
 
   return (
     <Layout>
       <Map
         center={center(stateFeature).geometry.coordinates.reverse()}
         dimensions={{ height: "75vh", width: "100vh" }}
-        dsaGeoJSON={transformedDSAFeatures}
+        dsaGeoJSON={dsaFeatures}
         statesGeoJSON={stateFeature}
         zoom={5.5}
       />
       <h2>
-        {stateFeature.properties.name} ({state})
+        {stateData.name} ({stateData.abbreviation})
       </h2>
     </Layout>
   );
@@ -62,7 +141,6 @@ export const query = graphql`
             coordinates
           }
           properties {
-            name
             opo
           }
           type
@@ -77,24 +155,28 @@ export const query = graphql`
             coordinates
           }
           properties {
-            name
             abbreviation
           }
           type
         }
       }
     }
-    opoData: allMetricsCsv {
+    opoData: allOposCsv {
       nodes {
-        Board
-        CEO
-        Donors
-        Notes
-        OPO
-        Organs
-        States
-        Tier
-        Waitlist
+        compensation
+        donors
+        name
+        opo
+        shadows
+        states
+        tier
+      }
+    }
+    statesData: allStatesCsv {
+      nodes {
+        abbreviation
+        name
+        waitlist
       }
     }
   }

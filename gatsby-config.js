@@ -31,13 +31,28 @@ module.exports = {
         display: "swap",
       },
     },
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        manualInit: true,
+        modulePath: `${__dirname}/src/cms/cms.js`,
+        customizeWebpackConfig: config => {
+          config.module.rules.push({
+            test: /\.csv$/,
+            loader: "csv-loader",
+            options: {
+              header: true,
+            },
+          });
+        },
+      },
+    },
     `gatsby-transformer-geojson`,
     `gatsby-transformer-csv`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-leaflet`,
-    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-netlify`,
   ],
 };

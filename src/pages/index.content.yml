@@ -1,12 +1,9 @@
 stats:
-  stat1:
-    title: NATIONAL WAITLIST AS OF JUNE 1, 2021
+  - title: National waitlist as of June 1, 2021
     value: 107,419
-  stat2:
-    title: NUMBER OF AMERICANS PROJECTED TO DIE BEFORE AN OPO LOSES IT’S CONTRACT
+  - title: Number of Americans projected to die before an OPO loses its contract
     value: 60,000
-  stat3:
-    title: AVERAGE REPORTED CEO COMPENSATION FOR FAILING OPOS (2019)
+  - title: Average reported CEO compensation for failing OPOS (2019)
     value: $535,630
 quote:
   quote: An astounding lack of accountability and oversight in the nation’s
@@ -14,7 +11,7 @@ quote:
     thousands of potential organ donations to fall through the cracks.
   attribution: NYT editorial board
 video:
-  title: REP. KATIE PORTER SPEAKS ABOUT OPO REFORM
+  title: Rep. Katie Porter Speaks About OPO Reform
   description: >-
     Organ Procurement Organizations (OPOs) are supposed to swiftly retrieve
     organs from donors. Yet, they're often havens for waste and abuse, in part
@@ -23,4 +20,26 @@ video:
 
 
     Congresswoman Katie Porter (CA-45) called out an industry lobbyist for this during a recent Oversight Committee hearing.
-  link: https://www.youtube.com/watch?v=siDYyRClKKk
+  youtube: siDYyRClKKk
+articles:
+  - title: They Survived Covid. Now They Need New Lungs.
+    description: He survived Covid-19, but his lungs were ravaged. After months of
+      deep sedation, he is delirious, his muscles atrophied. And this
+      61-year-old still cannot breathe on his own.
+    source: NYT
+    link: https://www.nytimes.com/2021/04/29/opinion/covid-19-lung-transplants.html
+    image: ../images/articles/editorial1.png
+  - title: New Organ Donation Rule Is A Win For Black Patients And Health Equity
+    description: The Department of Health and Human Services (HHS) recently
+      finalized reforms targeted at the government contractors that run the
+      organ donation system.
+    source: Health Affairs Blog
+    link: https://www.healthaffairs.org/do/10.1377/hblog20201211.229975/full
+    image: ../images/articles/editorial2.png
+  - title: Organ collection agencies told to improve performance or face tighter rules
+    description: With 107,000 people waiting for kidneys, hearts, livers and other
+      organs, a congressional subcommittee renewed efforts to force organ
+      procurement organizations to improve.
+    source: Washington Post
+    link: https://www.washingtonpost.com/health/organ-collection-agencies-told-to-improve-performance-or-face-tighter-rules/2021/05/04/68847bce-ad06-11eb-acd3-24b44a57093a_story.html
+    image: ../images/articles/editorial3.png

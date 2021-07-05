@@ -43,32 +43,32 @@ export default function Layout({ children }) {
           <StaticImage
             src="../images/logos/av.png"
             alt="Arnold Ventures"
-            height="35"
+            height={35}
           />
         </Col>
         <Col>
           <StaticImage
             src="../images/logos/schmidt.png"
             alt="Schmidt Futures"
-            height="35"
+            height={35}
           />
         </Col>
         <Col>
           <StaticImage
             src="../images/logos/bloomworks.png"
             alt="Bloomworks"
-            height="35"
+            height={35}
           />
         </Col>
         <Col>
           <StaticImage
             src="../images/logos/organize.png"
             alt="Organize"
-            height="35"
+            height={35}
           />
         </Col>
         <Col>
-          <StaticImage src="../images/logos/fas.png" alt="FAS" height="35" />
+          <StaticImage src="../images/logos/fas.png" alt="FAS" height={35} />
         </Col>
       </Row>
     </Container>
