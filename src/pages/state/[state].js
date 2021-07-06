@@ -6,6 +6,9 @@ import center from "@turf/center";
 import Layout from "../../components/layout";
 import Map from "../../components/map";
 
+import { Row, Col } from "react-bootstrap";
+import * as styles from "./state.module.css";
+
 import content from "./[state].content.yml";
 
 export default function Dashboard({
@@ -113,20 +116,52 @@ export default function Dashboard({
   // TODO: use
   console.log({ inStateOpos });
   console.log({ outOfStateOpos });
-  console.log({ statePopoutStats });
+  console.log(statePopoutStats);
 
   return (
     <Layout>
-      <Map
-        center={center(stateFeature).geometry.coordinates.reverse()}
-        dimensions={{ height: "75vh", width: "100vh" }}
-        dsaGeoJSON={dsaFeatures}
-        statesGeoJSON={stateFeature}
-        zoom={5.5}
-      />
-      <h2>
-        {stateData.name} ({stateData.abbreviation})
-      </h2>
+      <Row className={styles.statsSection}>
+        <Col>
+          <h2>
+            {stateData.name} ({stateData.abbreviation})
+          </h2>
+          <Row className={styles.statsHeading}>
+            <Col>
+              <h3>State Waitlist in 2021 </h3>
+            </Col>
+            <Col>
+              <h3>Average CEO Compensation (2019)</h3>
+            </Col>
+            <Col>
+              <h3 className={styles.red}>
+                Ohioans who died each month waiting for an organ (2021){" "}
+              </h3>
+            </Col>
+          </Row>
+          <Row className={styles.statsPopout}>
+            <Col>
+              <p>{statePopoutStats.waitlist} </p>
+            </Col>
+            <Col>
+              <p>${statePopoutStats.avgCeoComp}</p>
+            </Col>
+            <Col>
+              <p className={styles.red}>{statePopoutStats.monthlyDead} </p>
+            </Col>
+          </Row>
+          <hr />
+        </Col>
+
+        <Col className={styles.map}>
+          <Map
+            center={center(stateFeature).geometry.coordinates.reverse()}
+            dimensions={{ height: "37rem", width: "53rem" }}
+            dsaGeoJSON={dsaFeatures}
+            statesGeoJSON={stateFeature}
+            zoom={5.5}
+          />
+        </Col>
+      </Row>
     </Layout>
   );
 }
