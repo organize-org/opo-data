@@ -11,6 +11,7 @@
 .statsHeading {
   background-color: var(--opoWhiteSmoke);
   margin-top: 2.5rem;
+  padding: 1rem;
 }
 
 .statsSection h3 {

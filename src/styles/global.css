@@ -62,6 +62,10 @@ a:hover {
   padding: 0.75rem 0;
 }
 
+.header h2 {
+  text-transform: none;
+}
+
 .headerImg {
   width: 3.5rem;
   height: 2.5rem;
