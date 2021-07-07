@@ -121,49 +121,49 @@ export default function Dashboard({
     <Layout>
       <Row>
         <Row className={styles.titleSection}>
-          <Col>
-            <h2>
-              {stateData.name} ({stateData.abbreviation})
-            </h2>
-          </Col>
+          <h2>
+            {stateData.name} ({stateData.abbreviation})
+          </h2>
         </Row>
-        <Row className={styles.statsRow}>
+        <Row className={styles.statsMapRow}>
           <Col>
-            <Row className={styles.statsHeading}>
-              <Col>
-                <h3>State Waitlist in 2021 </h3>
-              </Col>
-              <Col>
-                <h3>Average CEO Compensation (2019)</h3>
-              </Col>
-              <Col>
-                <h3 className={styles.red}>
-                  {`Number of people in ${stateData.name} who died each month waiting for an organ`}
-                </h3>
-              </Col>
-            </Row>
-            <Row className={styles.statsPopout}>
-              <Col>
-                <p>{statePopoutStats.waitlist} </p>
-              </Col>
-              <Col>
-                <p>${statePopoutStats.avgCeoComp}</p>
-              </Col>
-              <Col>
-                <p className={styles.red}>{statePopoutStats.monthlyDead} </p>
-              </Col>
-            </Row>
-            <hr />
+            <Col className="border-bottom">
+              <Row className={styles.statsHeading}>
+                <Col>
+                  <h3>State Waitlist in 2021 </h3>
+                </Col>
+                <Col>
+                  <h3>Average CEO Compensation (2019)</h3>
+                </Col>
+                <Col>
+                  <h3 className={styles.red}>
+                    {`Number of people in ${stateData.name} who died each month waiting for an organ`}
+                  </h3>
+                </Col>
+              </Row>
+              <Row className={styles.statsPopout}>
+                <Col>
+                  <p>{statePopoutStats.waitlist} </p>
+                </Col>
+                <Col>
+                  <p>${statePopoutStats.avgCeoComp}</p>
+                </Col>
+                <Col>
+                  <p className={styles.red}>{statePopoutStats.monthlyDead} </p>
+                </Col>
+              </Row>
+            </Col>
           </Col>
-
-          <Col className={styles.map}>
-            <Map
-              center={center(stateFeature).geometry.coordinates.reverse()}
-              dimensions={{ height: "37rem", width: "53rem" }}
-              dsaGeoJSON={dsaFeatures}
-              statesGeoJSON={stateFeature}
-              zoom={5.5}
-            />
+          <Col>
+            <Col className={styles.map}>
+              <Map
+                center={center(stateFeature).geometry.coordinates.reverse()}
+                dimensions={{ height: "37rem", width: "53rem" }}
+                dsaGeoJSON={dsaFeatures}
+                statesGeoJSON={stateFeature}
+                zoom={5.5}
+              />
+            </Col>
           </Col>
         </Row>
       </Row>
