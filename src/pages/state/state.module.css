@@ -1,25 +1,31 @@
-.statsSection {
-  font-weight: 700;
-  margin: 4rem 0;
-}
-
-.statsSection h2 {
+.titleSection h2 {
   color: var(--opoBlack);
   font-size: 2rem;
+  margin-top: 8.6rem;
+  margin-left: 4rem;
+  text-transform: uppercase;
+}
+
+.statsRow {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.statsRow h3 {
+  font-size: 1rem;
+  text-align: center;
 }
 
 .statsHeading {
   background-color: var(--opoWhiteSmoke);
   margin-top: 2.5rem;
   padding: 1rem;
-}
-
-.statsSection h3 {
-  font-size: 1rem;
-  text-align: center;
+  font-weight: 700;
 }
 
 .statsPopout p {
+  font-weight: 700;
   font-size: 2rem;
   text-align: center;
   margin-top: 1.3rem;
@@ -31,5 +37,5 @@
 
 .map {
   margin-left: 7.875rem;
-  margin-top: 5rem;
+  margin-top: 2.5rem;
 }
