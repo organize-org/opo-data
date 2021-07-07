@@ -1,0 +1,42 @@
+.titleSection h2 {
+  color: var(--opoBlack);
+  font-size: 3.4rem;
+  margin-top: 8.6rem;
+  margin-left: 5rem;
+  text-transform: uppercase;
+}
+
+.state {
+  margin-left: 5rem;
+  margin-right: 3rem;
+  margin-bottom: 3rem;
+}
+
+.state h3 {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.statsHeading {
+  background-color: var(--opoWhiteSmoke);
+  margin-top: 2.5rem;
+  padding: 1rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.statsPopout p {
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 1.3rem;
+}
+
+.red {
+  color: var(--opoRed);
+}
+
+.map {
+  margin-left: 6rem;
+  margin-top: 2.5rem;
+}
