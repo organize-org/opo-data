@@ -1,5 +1,6 @@
 import { init } from "netlify-cms-app";
 import opos from "../data/opos.csv";
+import states from "../data/states.csv";
 
 init({
   config: {
@@ -95,6 +96,36 @@ init({
             name: "state",
             file: "src/pages/state/[state].content.yml",
             fields: [
+              {
+                label: "Videos",
+                label_singular: "Video",
+                name: "videos",
+                summary: "{{fields.title}}",
+                widget: "list",
+                add_to_top: true,
+                fields: [
+                  { label: "Link", name: "link", widget: "string" },
+                  { label: "Title", name: "title", widget: "string" },
+                  {
+                    label: "Description",
+                    name: "description",
+                    widget: "markdown",
+                  },
+                  {
+                    label: "Tags",
+                    name: "tags",
+                    widget: "select",
+                    multiple: true,
+                    options: [
+                      { label: "All", value: "All" },
+                      ...states.map(({ name, abbreviation }) => ({
+                        label: name,
+                        value: abbreviation,
+                      })),
+                    ],
+                  },
+                ],
+              },
               {
                 label: "Notes",
                 label_singular: "Note",
