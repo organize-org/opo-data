@@ -34,6 +34,18 @@ export default function Dashboard({
     ({ properties: { abbreviation } }) =>
       abbreviation === stateData.abbreviation
   );
+  // Get the videos tagged for the state, or fallback to those tagged 'All'
+  const { allVideos, stateVideos } = content?.videos?.reduce(
+    (videoMap, video) => {
+      if (video.tags.includes(stateData.abbreviation)) {
+        return { ...videoMap, stateVideos: [...videoMap.stateVideos, video] };
+      } else if (video.tags.includes("All")) {
+        return { ...videoMap, allVideos: [...videoMap.allVideos, video] };
+      }
+    },
+    { allVideos: [], stateVideos: [] }
+  );
+  const videos = stateVideos.length ? stateVideos : allVideos;
 
   // Use Turf to find bordering states by their geojson polygon
   const borderingStates = statesGeoData?.childGeoJson?.features
@@ -104,16 +116,18 @@ export default function Dashboard({
     }));
 
   const statePopoutStats = {
-    avgCeoComp:
-      inStateOpos?.reduce(
-        (sum, { compensation }) => sum + parseInt(compensation),
-        0
-      ) / inStateOpos.length,
+    avgCeoComp: Math.floor(
+      inStateOpos?.reduce((sum, { compensation }) => {
+        const comp = parseInt(compensation);
+        return isNaN(comp) ? sum : sum + comp;
+      }, 0) / inStateOpos.length
+    ),
     monthlyDead: 0, // TODO ?
     waitlist: parseInt(stateData.waitlist),
   };
 
   // TODO: use
+  console.log({ videos });
   console.log({ inStateOpos });
   console.log({ outOfStateOpos });
 
