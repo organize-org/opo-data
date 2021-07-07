@@ -125,9 +125,9 @@ export default function Dashboard({
             {stateData.name} ({stateData.abbreviation})
           </h2>
         </Row>
-        <Row className={styles.statsMapRow}>
+        <Row className={styles.state}>
           <Col>
-            <Col className="border-bottom">
+            <Row className="border-bottom">
               <Row className={styles.statsHeading}>
                 <Col>
                   <h3>State Waitlist in 2021 </h3>
@@ -141,7 +141,7 @@ export default function Dashboard({
                   </h3>
                 </Col>
               </Row>
-              <Row className={styles.statsPopout}>
+              <Row className={`w-100 ${styles.statsPopout}`}>
                 <Col>
                   <p>{statePopoutStats.waitlist} </p>
                 </Col>
@@ -152,10 +152,10 @@ export default function Dashboard({
                   <p className={styles.red}>{statePopoutStats.monthlyDead} </p>
                 </Col>
               </Row>
-            </Col>
+            </Row>
           </Col>
           <Col>
-            <Col className={styles.map}>
+            <Row className={styles.map}>
               <Map
                 center={center(stateFeature).geometry.coordinates.reverse()}
                 dimensions={{ height: "37rem", width: "53rem" }}
@@ -163,7 +163,7 @@ export default function Dashboard({
                 statesGeoJSON={stateFeature}
                 zoom={5.5}
               />
-            </Col>
+            </Row>
           </Col>
         </Row>
       </Row>
