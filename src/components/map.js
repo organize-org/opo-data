@@ -13,6 +13,8 @@ export default function Map({
   dimensions = { height: "60vh", width: "100%" },
   dsaGeoJSON,
   interactive = false,
+  maxZoom = 7,
+  minZoom = 3,
   statesGeoJSON,
   zoom = 4,
 }) {
@@ -24,8 +26,8 @@ export default function Map({
           typeof window !== "undefined" && (
             <MapContainer
               center={center}
-              maxZoom={7}
-              minZoom={3}
+              maxZoom={maxZoom}
+              minZoom={minZoom}
               scrollWheelZoom={false}
               style={dimensions}
               zoom={zoom}
