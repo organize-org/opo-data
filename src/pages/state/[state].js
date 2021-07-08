@@ -41,6 +41,8 @@ export default function Dashboard({
         return { ...videoMap, stateVideos: [...videoMap.stateVideos, video] };
       } else if (video.tags.includes("All")) {
         return { ...videoMap, allVideos: [...videoMap.allVideos, video] };
+      } else {
+        return videoMap;
       }
     },
     { allVideos: [], stateVideos: [] }
@@ -101,17 +103,17 @@ export default function Dashboard({
   );
 
   // Get nearby DSA geojson features, colored by tier
-  const nearbyOpoTiers = [...inStateOpos, ...outOfStateOpos].reduce(
-    (nearbyMap, { opo, tier }) => ({ ...nearbyMap, [opo]: tier }),
+  const opoTiers = inStateOpos.reduce(
+    (tierMap, { opo, tier }) => ({ ...tierMap, [opo]: tier }),
     {}
   );
   const dsaFeatures = dsaGeoData?.childGeoJson?.features
-    ?.filter(({ properties: { opo } }) => nearbyOpoTiers[opo])
+    ?.filter(({ properties: { opo } }) => opoTiers[opo])
     ?.map(feature => ({
       ...feature,
       properties: {
         ...feature.properties,
-        tier: nearbyOpoTiers[feature.properties.opo],
+        tier: opoTiers[feature.properties.opo],
       },
     }));
 
@@ -172,10 +174,12 @@ export default function Dashboard({
             <Row className={styles.map}>
               <Map
                 center={center(stateFeature).geometry.coordinates.reverse()}
-                dimensions={{ height: "37rem", width: "53rem" }}
+                dimensions={{ height: "30rem", width: "40rem" }}
                 dsaGeoJSON={dsaFeatures}
                 statesGeoJSON={stateFeature}
-                zoom={5.5}
+                maxZoom={6}
+                minZoom={5}
+                zoom={6}
               />
             </Row>
           </Col>
