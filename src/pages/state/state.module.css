@@ -5,11 +5,11 @@
   text-transform: uppercase;
 }
 
-.state {
+.stats {
   margin: 1rem 3rem 3rem 3rem;
 }
 
-.state h3 {
+.stats h3 {
   font-size: 1rem;
   text-align: center;
 }
@@ -34,4 +34,45 @@
 
 .map {
   margin-left: 3rem;
+}
+
+.table {
+  margin-top: 4.75rem;
+}
+
+.table h3 {
+  font-size: 1.75rem;
+  text-transform: uppercase;
+}
+
+.table th {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.table td {
+  font-size: 1.125rem;
+  border-top: none;
+}
+
+.table h4 {
+  font-size: 1rem;
+  color: var(--opoRed);
+}
+
+tbody tr td:nth-last-child(1) {
+  border-right: solid 0.3rem;
+  border-left: solid 0.3rem;
+  background-color: rgba(212, 60, 55, 0.3);
+  color: var(--opoRed);
+  font-weight: 700;
+  text-align: center;
+}
+
+tbody tr:nth-child(1) td:nth-last-child(1) {
+  border-top: solid 0.3rem var(--opoRed);
+}
+
+tbody tr:nth-last-child(1) td:nth-last-child(1) {
+  border-bottom: solid 0.3rem var(--opoRed);
 }

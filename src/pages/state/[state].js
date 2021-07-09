@@ -1,11 +1,13 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
+import Table from "react-bootstrap/Table";
 import { graphql } from "gatsby";
 import booleanIntersects from "@turf/boolean-intersects";
 import center from "@turf/center";
 
 import Layout from "../../components/layout";
 import Map from "../../components/map";
+import ColoredSquare from "../../components/coloredSquare";
 
 import * as styles from "./state.module.css";
 
@@ -130,7 +132,6 @@ export default function Dashboard({
 
   // TODO: use
   console.log({ videos });
-  console.log({ inStateOpos });
   console.log({ outOfStateOpos });
 
   return (
@@ -141,7 +142,7 @@ export default function Dashboard({
             {stateData.name} ({stateData.abbreviation})
           </h2>
         </Row>
-        <Row className={styles.state}>
+        <Row className={styles.stats}>
           <Col>
             <Row className="border-bottom">
               <Row className={styles.statsHeading}>
@@ -168,6 +169,49 @@ export default function Dashboard({
                   <p className={styles.red}>{statePopoutStats.monthlyDead} </p>
                 </Col>
               </Row>
+            </Row>
+            <Row className={`border-bottom ${styles.table}`}>
+              <h3>{`OPOS Servicing ${stateData.name}`}</h3>
+              <Table striped>
+                <thead>
+                  <tr>
+                    <th>OPO Name</th>
+                    <th>Region</th>
+                    <th>Tier (2019)</th>
+                    <th className="text-center">Donors Needed</th>
+                    <th className={`text-center ${styles.red}`}>
+                      Shadow Deaths*
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {inStateOpos.map(
+                    ({ name, region, tier, donors, shadows }) => (
+                      <tr>
+                        <td>{name}</td>
+                        <td>{region}</td>
+                        <td>
+                          <Row>
+                            <Col style={{ flexGrow: "0" }}>
+                              <ColoredSquare tier={tier} />
+                            </Col>
+                            <Col>{tier.split(" ")[1]}</Col>
+                          </Row>
+                        </td>
+                        <td className="text-center">
+                          {donors ? donors : "----"}
+                        </td>
+                        <td>{shadows ? shadows : "----"}</td>
+                      </tr>
+                    )
+                  )}
+                </tbody>
+              </Table>
+              <h4>
+                * Every organ that is not recovered because of OPO ineffective
+                practices, transportation errors, or understaffing, results in
+                another person dying while on the waitlist is a shadow death
+              </h4>
             </Row>
           </Col>
           <Col>

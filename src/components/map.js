@@ -2,11 +2,8 @@ import React from "react";
 import { Container, Col, Row } from "react-bootstrap";
 import { GeoJSON, MapContainer, TileLayer, ZoomControl } from "react-leaflet";
 
-const tierColors = {
-  "1 Passing": "#C4C4C4",
-  "2 Underperforming": "#FFB042",
-  "3 Failing": "#D43C37",
-};
+import { tierColors } from "../util/tiers";
+import ColoredSquare from "./coloredSquare";
 
 export default function Map({
   center = [37.09024, -95.712891],
@@ -98,13 +95,7 @@ export default function Map({
                     {Object.keys(tierColors).map(tier => (
                       <Row key={tier}>
                         <Col md="auto">
-                          <div
-                            style={{
-                              background: tierColors[tier],
-                              height: "25px",
-                              width: "30px",
-                            }}
-                          ></div>
+                          <ColoredSquare tier={tier} />
                         </Col>
                         <Col>
                           <p>{tier.split(" ")[1]}</p>
