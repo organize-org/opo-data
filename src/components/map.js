@@ -1,18 +1,17 @@
 import React from "react";
-import { Container, Col, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import { GeoJSON, MapContainer, TileLayer, ZoomControl } from "react-leaflet";
+import { navigate } from "gatsby";
 
-const tierColors = {
-  "1 Passing": "#C4C4C4",
-  "2 Underperforming": "#FFB042",
-  "3 Failing": "#D43C37",
-};
+import { tierColors } from "../util/tiers";
+import Tier from "./tier";
 
 export default function Map({
   center = [37.09024, -95.712891],
   dimensions = { height: "60vh", width: "100%" },
   dsaGeoJSON,
   interactive = false,
+  legend = true,
   maxZoom = 7,
   minZoom = 3,
   statesGeoJSON,
@@ -72,8 +71,9 @@ export default function Map({
                             .openTooltip(),
                         mouseout: ({ target }) => target?.resetStyle(),
                         click: ({ layer }) =>
-                          // TODO: click -> State page
-                          console.log(layer?.feature?.properties?.name),
+                          navigate(
+                            `/state/${layer?.feature?.properties?.abbreviation}`
+                          ),
                       }
                     : null
                 }
@@ -83,37 +83,23 @@ export default function Map({
                   weight: 1.5,
                 }}
               />
-              <div
-                className="leaflet-bottom leaflet-right"
-                style={{ right: "45px", bottom: "15px" }}
-              >
+              {legend && (
                 <div
-                  className="leaflet-control leaflet-bar"
-                  style={{ background: "#FFFFFF", padding: "0 10px" }}
+                  className="leaflet-bottom leaflet-right"
+                  style={{ right: "45px", bottom: "15px" }}
                 >
-                  <Container>
-                    <Row md="auto" className="justify-content-center">
-                      <h4>Performance Tier</h4>
-                    </Row>
-                    {Object.keys(tierColors).map(tier => (
-                      <Row key={tier}>
-                        <Col md="auto">
-                          <div
-                            style={{
-                              background: tierColors[tier],
-                              height: "25px",
-                              width: "30px",
-                            }}
-                          ></div>
-                        </Col>
-                        <Col>
-                          <p>{tier.split(" ")[1]}</p>
-                        </Col>
+                  <div className="leaflet-control leaflet-bar bg-white p-1">
+                    <Container>
+                      <Row className="justify-content-center">
+                        <h4 className="m-1">Performance Tier</h4>
                       </Row>
-                    ))}
-                  </Container>
+                      {Object.keys(tierColors).map(tier => (
+                        <Tier className="my-1" tier={tier} key={tier} />
+                      ))}
+                    </Container>
+                  </div>
                 </div>
-              </div>
+              )}
             </MapContainer>
           )
         }

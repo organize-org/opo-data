@@ -7,6 +7,12 @@
   --opoTeal: #00768f;
 }
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 body {
   color: var(--opoBlack);
   font-family: "Barlow", sans-serif;
@@ -74,4 +80,53 @@ a:hover {
 
 .footer p {
   font-size: 0.9rem;
+}
+
+.opo-table {
+  padding-bottom: 4rem;
+}
+
+.opo-table h3 {
+  font-size: 1.25rem;
+}
+
+.opo-table h4 {
+  font-size: 0.85rem;
+}
+
+th {
+  font-size: 0.85rem;
+  font-weight: 700;
+  border: none !important;
+}
+
+td {
+  font-size: 1rem;
+  border: none !important;
+  padding: 2rem 0.75rem !important;
+}
+
+tbody tr td:nth-last-child(1) {
+  background-color: rgba(212, 60, 55, 0.2);
+  border-right: solid 0.25rem !important;
+  border-left: solid 0.25rem !important;
+  color: var(--opoRed);
+  font-weight: 700;
+  text-align: center;
+}
+
+tbody tr:nth-child(1) td:nth-last-child(1) {
+  border-top: solid 0.25rem var(--opoRed) !important;
+}
+
+tbody tr:nth-last-child(1) td:nth-last-child(1) {
+  border-bottom: solid 0.25rem var(--opoRed) !important;
+}
+
+.tierCol {
+  width: 30%;
+}
+
+.red {
+  color: var(--opoRed);
 }

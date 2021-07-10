@@ -6,6 +6,7 @@ import center from "@turf/center";
 
 import Layout from "../../components/layout";
 import Map from "../../components/map";
+import OpoTable from "../../components/opoTable";
 
 import * as styles from "./state.module.css";
 
@@ -124,66 +125,79 @@ export default function Dashboard({
         return isNaN(comp) ? sum : sum + comp;
       }, 0) / inStateOpos.length
     ),
-    monthlyDead: 0, // TODO ?
+    monthlyDead: stateData.monthlyDead,
     waitlist: parseInt(stateData.waitlist),
   };
 
   // TODO: use
   console.log({ videos });
-  console.log({ inStateOpos });
-  console.log({ outOfStateOpos });
 
   return (
     <Layout>
-      <Row>
-        <Row className={styles.titleSection}>
-          <h2>
-            {stateData.name} ({stateData.abbreviation})
-          </h2>
-        </Row>
-        <Row className={styles.state}>
-          <Col>
-            <Row className="border-bottom">
-              <Row className={styles.statsHeading}>
-                <Col>
-                  <h3>State Waitlist in 2021 </h3>
-                </Col>
-                <Col>
-                  <h3>Average CEO Compensation (2019)</h3>
-                </Col>
-                <Col>
-                  <h3 className={styles.red}>
-                    {`Number of people in ${stateData.name} who died each month waiting for an organ`}
-                  </h3>
-                </Col>
-              </Row>
-              <Row className={`w-100 ${styles.statsPopout}`}>
-                <Col>
-                  <p>{statePopoutStats.waitlist} </p>
-                </Col>
-                <Col>
-                  <p>${statePopoutStats.avgCeoComp}</p>
-                </Col>
-                <Col>
-                  <p className={styles.red}>{statePopoutStats.monthlyDead} </p>
-                </Col>
-              </Row>
+      <Row className={styles.title}>
+        <h2>
+          {stateData.name} ({stateData.abbreviation})
+        </h2>
+      </Row>
+      <Row className={styles.state}>
+        <Col>
+          <Row className={styles.stats}>
+            <Row className={styles.statsHeading}>
+              <Col>
+                <h3>State Waitlist in 2021 </h3>
+              </Col>
+              <Col>
+                <h3>Average CEO Compensation (2019)</h3>
+              </Col>
+              <Col>
+                <h3 className="red">
+                  {`Number of people in ${stateData.name} who died each month waiting for an organ`}
+                </h3>
+              </Col>
             </Row>
-          </Col>
-          <Col>
-            <Row className={styles.map}>
-              <Map
-                center={center(stateFeature).geometry.coordinates.reverse()}
-                dimensions={{ height: "30rem", width: "40rem" }}
-                dsaGeoJSON={dsaFeatures}
-                statesGeoJSON={stateFeature}
-                maxZoom={6}
-                minZoom={5}
-                zoom={6}
-              />
+            <Row className={styles.statsPopout}>
+              <Col>
+                <p>{statePopoutStats.waitlist} </p>
+              </Col>
+              <Col>
+                <p>
+                  {statePopoutStats.avgCeoComp.toLocaleString("en-US", {
+                    style: "currency",
+                    currency: "USD",
+                    maximumFractionDigits: 0,
+                  })}
+                </p>
+              </Col>
+              <Col>
+                <p className="red">{statePopoutStats.monthlyDead} </p>
+              </Col>
             </Row>
-          </Col>
-        </Row>
+          </Row>
+          <OpoTable
+            citation="* Every organ that is not recovered because of OPO ineffective practices, transportation errors, or understaffing, results in another person dying while on the waitlist is a shadow death"
+            heading={`OPOS Servicing ${stateData.name}`}
+            opos={inStateOpos}
+          />
+          <OpoTable
+            heading="OPO Performance in Nearby States"
+            inState={false}
+            opos={outOfStateOpos}
+          />
+        </Col>
+        <Col>
+          <Row className="justify-content-center">
+            <Map
+              center={center(stateFeature).geometry.coordinates.reverse()}
+              dimensions={{ height: "30rem", width: "35rem" }}
+              dsaGeoJSON={dsaFeatures}
+              statesGeoJSON={stateFeature}
+              legend={false}
+              maxZoom={7}
+              minZoom={5}
+              zoom={7}
+            />
+          </Row>
+        </Col>
       </Row>
     </Layout>
   );
