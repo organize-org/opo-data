@@ -241,6 +241,7 @@ module.exports = {
         },
       },
     },
+    "gatsby-plugin-netlify-identity-widget",
     `gatsby-transformer-geojson`,
     `gatsby-transformer-csv`,
     `gatsby-plugin-image`,
