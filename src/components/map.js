@@ -18,7 +18,7 @@ export default function Map({
   zoom = 4,
 }) {
   return (
-    <Row>
+    <Row className="justify-content-center">
       <div style={dimensions}>
         {
           // Hack: [`window` dependency for Leaflet](https://www.gatsbyjs.com/docs/debugging-html-builds/#fixing-third-party-modules)

@@ -4,11 +4,15 @@ A tabular and geospatial dashboard for Organ Procurement Organization (OPO) metr
 
 ## Running
 
+Obtain the Airtable API Key.
+Then create a `.env` file in the base directory (e.g. based on the `example.env`: `cp example.env .env`).
+Populate `AIRTABLE_API_KEY=[value]` with the API key value.
+
 (With `node` and `npm` installed:)
 
 Install: `npm ci`
 
-Start dev: `npm start`
-Start the local dev CMS (in another terminal, may need to install): `npx netlify-cms-proxy-server`
+Dev: `npm start`
+Dev CMS (in another terminal, may require install): `npx netlify-cms-proxy-server`
 
-Build and start prod: `npm run build && npm run serve`
+Prod: `npm run build && npm run serve`

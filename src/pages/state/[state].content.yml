@@ -1,5 +1,11 @@
 videos: []
 notes:
+  - note: >
+      [OPO CEO Matthew Wadsworth in
+      Harvard](https://blog.petrieflom.law.harvard.edu/2021/02/05/recent-organ-procurement-organization-regulations-will-save-lives/)
+      Petrie-Flom blog
+    tags:
+      - OH
   - note: Started private jet business [TxJet](https://txjet.org/) in 2014
     tags:
       - INOP
@@ -10,10 +16,8 @@ notes:
       inquiry
   - tags:
       - GALL
-    note: Subject of [investigative
-      reporting](https://archive.triblive.com/local/pittsburgh-allegheny/gift-of-life-worth-millions-to-donation-organizations/)
-  - tags:
-      - GALL
+      - FLWC
+      - PRLL
     note: Parent company LifeLink Foundation has $117M in assets, paid Board Chair
       $750,000 in 2017
   - tags:
@@ -25,13 +29,11 @@ notes:
       Herald](https://www.miamiherald.com/news/health-care/article47968670.html))
   - tags:
       - FLWC
+      - GALL
+      - PRLL
     note: "Subject of [investigative
       reporting](https://archive.triblive.com/local/pittsburgh-allegheny/gift-o\
       f-life-worth-millions-to-donation-organizations/) "
-  - tags:
-      - FLWC
-    note: Parent company LifeLink Foundation has $117M in assets, paid Board Chair
-      $750,000 in 2017
   - tags:
       - MAOB
     note: Bought [private jet](
@@ -43,15 +45,23 @@ notes:
       prison](https://archives.fbi.gov/archives/birmingham/press-releases/2012/former-alabama-organ-center-executive-sentenced-for-fraud)
       in 2012 for fraud
   - tags:
-      - PRLL
-    note: Parent company LifeLink Foundation has $117M in assets, paid Board Chair
-      $750,000 in 2017
-  - tags:
-      - PRLL
-    note: Subject of [investigative
-      reporting](https://archive.triblive.com/local/pittsburgh-allegheny/gift-of-life-worth-millions-to-donation-organizations/)
-  - tags:
       - SCOP
+      - CAOP
+      - WALC
+      - TNDS
+      - MNOP
+      - PRLL
+      - NMOP
+      - NJTO
+      - ALOB
+      - KYDA
+      - CAGS
+      - CTOP
+      - MAOB
+      - FLMP
+      - FLWC
+      - GALL
+      - INOP
     note: Included in [House Committee on Oversight and Reform
       investigation](https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)
   - tags:
@@ -65,38 +75,18 @@ notes:
   - note: Board Chair paid $100,000 annually
     tags:
       - CAOP
-  - note: Included in [House Committee on Oversight and Reform
-      investigation](https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)
-    tags:
-      - CAOP
-  - note: Included in [House Committee on Oversight and Reform
-      investigation](https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)
-    tags:
-      - WALC
   - note: Investigative reporting found [fatal
       lapses](https://www.postandcourier.com/health/he-died-when-he-got-the-wrong-lungs-it-wasnt-the-only-organ-error-in/article_c6a6e386-e704-11ea-91ce-2783df6c6f2d.html)
       in patient safety
     tags:
       - VATB
+      - SCOP
   - note: "[CEO published
       support](https://www.dallasnews.com/opinion/commentary/2021/02/12/the-us-\
       organ-donation-system-needs-transparency-and-accountability/) of new OPO
       rule"
     tags:
       - TXSB
-  - note: Included in [House Committee on Oversight and Reform
-      investigation](https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)
-    tags:
-      - TNDS
-  - note: Investigative reporting found [fatal
-      lapses](https://www.postandcourier.com/health/he-died-when-he-got-the-wrong-lungs-it-wasnt-the-only-organ-error-in/article_c6a6e386-e704-11ea-91ce-2783df6c6f2d.html)
-      in patient safety
-    tags:
-      - SCOP
-  - note: Included in [House Committee on Oversight and Reform
-      investigation](https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)
-    tags:
-      - PRLL
   - note: 2017 CEO compensation
       [2.5M](https://porter.house.gov/uploadedfiles/cms_hhs_opo_oversight_final_7.9.20.pdf)
     tags:
@@ -128,59 +118,22 @@ notes:
       processor](https://www.nevadabusiness.com/2018/11/nevadas-first-tissue-processing-facility-brings-opportunity-of-hope-and-healing-to-more-nevadans/)
     tags:
       - NVLV
-  - note: Included in  [House Committee on Oversight and Reform
-      investigation](https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)
-    tags:
-      - NMOP
-  - note: Included in  [House Committee on Oversight and Reform
-      investigation](https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)
-    tags:
-      - NJTO
-  - note: Included in [House Committee on Oversight and Reform
-      investigation](https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and
-      )
-    tags:
-      - ALOB
   - note: "[OIG](https://oig.hhs.gov/oas/reports/region9/91102035.pdf) found the OPO
       overstating organ procurement costs and not reporting proceeds from the
       sale of research organs. 2019 CEO compensation increased by 17.6% from
       2018."
     tags:
       - AZOB
-  - note: Included in  [House Committee on Oversight and Reform
-      investigation](https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)
-    tags:
-      - CAGS
   - note: New CEO led [major
       improvements](https://www.bridgespan.org/bridgespan/Images/articles/transforming-organ-donation-in-america/transforming-organ-donation-in-america-dec2020-update.pdf)
       following leadership change, increasing donations by nearly 30%.
     tags:
       - CADN
-  - note: Included in  [House Committee on Oversight and Reform
-      investigation](https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)
-    tags:
-      - CTOP
-  - note: Included in  [House Committee on Oversight and Reform
-      investigation](https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)
-    tags:
-      - MAOB
   - note: "[CEO published
       support](https://morningconsult.com/opinions/organ-donation-can-save-more\
       -lives-through-reform/) for new OPO rule"
     tags:
       - FLFH
-  - note: Included in  [House Committee on Oversight and Reform
-      investigation](https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)
-    tags:
-      - FLMP
-  - note: Included in  [House Committee on Oversight and Reform
-      investigation](https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)
-    tags:
-      - FLWC
-  - note: Included in  [House Committee on Oversight and Reform
-      investigation](https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)
-    tags:
-      - GALL
   - note: '[Owns
       $8M](https://projects.propublica.org/nonprofits/organizations/421414092/202011199349301261/full)
       "interest in net assets" of tissue processor Allosource'
@@ -190,21 +143,8 @@ notes:
       [$24M](https://projects.propublica.org/nonprofits/display_990/363516431/12_2019_prefixes_35-38%2F363516431_201812_990_2019121116944630)'
     tags:
       - ILIP
-  - note: Included in [House Committee on Oversight and Reform
-      investigation](https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and
-      )
-    tags:
-      - INOP
-  - note: Included in  [House Committee on Oversight and Reform
-      investigation](https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)
-    tags:
-      - KYDA
   - note: Built
       [$14.3M](https://www.giftoflifemichigan.org/news-calendar/latest-news/gift-life-begins-recovering-organs-and-tissue-new-ann-arbor-surgical)
       , 40,000 foot surgical center in 2016
     tags:
       - MIOP
-  - note: Included in [House Committee on Oversight and Reform
-      investigation](https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)
-    tags:
-      - MNOP
