@@ -29,11 +29,16 @@ export default function Dashboard({
 
   // Find associated state data and feature by abbreviation
   const stateData = statesData?.nodes?.find(
-    ({ abbreviation }) => abbreviation === state.toLocaleUpperCase()
-  );
+    ({ data: { abbreviation } }) => abbreviation === state.toLocaleUpperCase()
+  )?.data;
   const stateFeature = statesGeoData?.childGeoJson?.features?.find(
     ({ properties: { abbreviation } }) =>
       abbreviation === stateData.abbreviation
+  );
+
+  // Get the notes tagged at the state level
+  stateData.notes = content?.notes?.filter(({ tags }) =>
+    tags.includes(stateData.abbreviation)
   );
   // Get the videos tagged for the state, or fallback to those tagged 'All'
   const { allVideos, stateVideos } = content?.videos?.reduce(
@@ -48,7 +53,7 @@ export default function Dashboard({
     },
     { allVideos: [], stateVideos: [] }
   );
-  const videos = stateVideos.length ? stateVideos : allVideos;
+  stateData.videos = stateVideos.length ? stateVideos : allVideos;
 
   // Use Turf to find bordering states by their geojson polygon
   const borderingStates = statesGeoData?.childGeoJson?.features
@@ -57,10 +62,10 @@ export default function Dashboard({
 
   // Filter into in- and out-of-state (or neither); add region and notes (in), or formatted state list (out)
   const { inStateOpos, outOfStateOpos } = opoData?.nodes.reduce(
-    (filter, opo) => {
+    (filter, { data }) => {
       // `states` field: newline-delineated state(s) with an optional `-`-delineated region.
       // Transform -> Array<Array<state, region>>. e.g. `states: 'OH - West\n'` -> `states: [['OH', 'West']]`.
-      const statesWithRegion = opo.states
+      const statesWithRegion = data.states
         .split("\n")
         .map(swr => swr.split("-").map(sor => sor.trim()));
 
@@ -74,8 +79,8 @@ export default function Dashboard({
           inStateOpos: [
             ...filter.inStateOpos,
             {
-              ...opo,
-              notes: notesByOpo[opo.opo],
+              ...data,
+              notes: notesByOpo[data.opo],
               region: inState[1],
             },
           ],
@@ -90,7 +95,7 @@ export default function Dashboard({
           outOfStateOpos: [
             ...filter.outOfStateOpos,
             {
-              ...opo,
+              ...data,
               states: statesWithRegion.map(([state]) => state).join(", "),
             },
           ],
@@ -125,12 +130,12 @@ export default function Dashboard({
         return isNaN(comp) ? sum : sum + comp;
       }, 0) / inStateOpos.length
     ),
-    monthlyDead: stateData.monthlyDead,
+    monthlyDead: stateData.monthly,
     waitlist: parseInt(stateData.waitlist),
   };
 
-  // TODO: use
-  console.log({ videos });
+  // TODO: use .notes and .videos
+  console.log({ stateData });
 
   return (
     <Layout>
@@ -157,7 +162,11 @@ export default function Dashboard({
             </Row>
             <Row className={styles.statsPopout}>
               <Col>
-                <p>{statePopoutStats.waitlist} </p>
+                <p>
+                  {isNaN(statePopoutStats.waitlist)
+                    ? "--"
+                    : statePopoutStats.waitlist}
+                </p>
               </Col>
               <Col>
                 <p>
@@ -169,7 +178,7 @@ export default function Dashboard({
                 </p>
               </Col>
               <Col>
-                <p className="red">{statePopoutStats.monthlyDead} </p>
+                <p className="red">{statePopoutStats.monthlyDead ?? "--"}</p>
               </Col>
             </Row>
           </Row>
@@ -185,18 +194,16 @@ export default function Dashboard({
           />
         </Col>
         <Col>
-          <Row className="justify-content-center">
-            <Map
-              center={center(stateFeature).geometry.coordinates.reverse()}
-              dimensions={{ height: "30rem", width: "35rem" }}
-              dsaGeoJSON={dsaFeatures}
-              statesGeoJSON={stateFeature}
-              legend={false}
-              maxZoom={7}
-              minZoom={5}
-              zoom={7}
-            />
-          </Row>
+          <Map
+            center={center(stateFeature).geometry.coordinates.reverse()}
+            dimensions={{ height: "30rem", width: "35rem" }}
+            dsaGeoJSON={dsaFeatures}
+            statesGeoJSON={stateFeature}
+            legend={false}
+            maxZoom={7}
+            minZoom={5}
+            zoom={7}
+          />
         </Col>
       </Row>
     </Layout>
@@ -233,22 +240,27 @@ export const query = graphql`
         }
       }
     }
-    opoData: allOposCsv {
+    opoData: allAirtable(filter: { table: { eq: "OPOs" } }) {
       nodes {
-        compensation
-        donors
-        name
-        opo
-        shadows
-        states
-        tier
+        data {
+          compensation
+          donors
+          name
+          opo
+          shadows
+          states
+          tier
+        }
       }
     }
-    statesData: allStatesCsv {
+    statesData: allAirtable(filter: { table: { eq: "States" } }) {
       nodes {
-        abbreviation
-        name
-        waitlist
+        data {
+          abbreviation
+          monthly
+          name
+          waitlist
+        }
       }
     }
   }

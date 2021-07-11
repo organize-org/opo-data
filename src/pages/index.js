@@ -32,14 +32,14 @@ export default function Dashboard({
     {}
   );
   const tierData = opoData?.nodes?.reduce(
-    (opoDataMap, { opo, tier }) => ({
+    (opoDataMap, { data: { opo, tier } }) => ({
       ...opoDataMap,
       [opo]: tier,
     }),
     {}
   );
   const stateNameData = statesData?.nodes?.reduce(
-    (stateNameMap, { abbreviation, name }) => ({
+    (stateNameMap, { data: { abbreviation, name } }) => ({
       ...stateNameMap,
       [abbreviation]: name,
     }),
@@ -202,16 +202,20 @@ export const query = graphql`
         }
       }
     }
-    opoData: allOposCsv {
+    opoData: allAirtable(filter: { table: { eq: "OPOs" } }) {
       nodes {
-        opo
-        tier
+        data {
+          opo
+          tier
+        }
       }
     }
-    statesData: allStatesCsv {
+    statesData: allAirtable(filter: { table: { eq: "States" } }) {
       nodes {
-        abbreviation
-        name
+        data {
+          abbreviation
+          name
+        }
       }
     }
   }
