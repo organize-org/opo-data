@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
+import ReactMarkdown from "react-markdown";
 import { graphql } from "gatsby";
 import booleanIntersects from "@turf/boolean-intersects";
 import center from "@turf/center";
@@ -40,20 +41,9 @@ export default function Dashboard({
   stateData.notes = content?.notes?.filter(({ tags }) =>
     tags.includes(stateData.abbreviation)
   );
-  // Get the videos tagged for the state, or fallback to those tagged 'All'
-  const { allVideos, stateVideos } = content?.videos?.reduce(
-    (videoMap, video) => {
-      if (video.tags.includes(stateData.abbreviation)) {
-        return { ...videoMap, stateVideos: [...videoMap.stateVideos, video] };
-      } else if (video.tags.includes("All")) {
-        return { ...videoMap, allVideos: [...videoMap.allVideos, video] };
-      } else {
-        return videoMap;
-      }
-    },
-    { allVideos: [], stateVideos: [] }
+  stateData.videos = content?.videos?.filter(({ tags }) =>
+    tags.includes(stateData.abbreviation)
   );
-  stateData.videos = stateVideos.length ? stateVideos : allVideos;
 
   // Use Turf to find bordering states by their geojson polygon
   const borderingStates = statesGeoData?.childGeoJson?.features
@@ -134,7 +124,7 @@ export default function Dashboard({
     waitlist: parseInt(stateData.waitlist),
   };
 
-  // TODO: use .notes and .videos
+  // TODO: use .videos
   console.log({ stateData });
 
   return (
@@ -187,6 +177,40 @@ export default function Dashboard({
             heading={`OPOS Servicing ${stateData.name}`}
             opos={inStateOpos}
           />
+          {stateData.notes.length ||
+          inStateOpos.some(({ notes }) => notes?.length) ? (
+            <Row>
+              <Row>
+                <h3>OPO News and Notes in {stateData.name}</h3>
+              </Row>
+              {stateData.notes.length ? (
+                <Row>
+                  <h4>Statewide</h4>
+                  <ul>
+                    {stateData.notes.map(({ note }, i) => (
+                      <li key={`statewide-note-${i}`}>
+                        <ReactMarkdown>{note}</ReactMarkdown>
+                      </li>
+                    ))}
+                  </ul>
+                </Row>
+              ) : null}
+              {inStateOpos
+                .filter(({ notes }) => notes?.length)
+                .map(({ name, notes }) => (
+                  <Row key={name}>
+                    <h4>{name}</h4>
+                    <ul>
+                      {notes?.map((note, i) => (
+                        <li key={`${name}-note-${i}`}>
+                          <ReactMarkdown>{note}</ReactMarkdown>
+                        </li>
+                      ))}
+                    </ul>
+                  </Row>
+                ))}
+            </Row>
+          ) : null}
           <OpoTable
             heading="OPO Performance in Nearby States"
             inState={false}

@@ -206,10 +206,7 @@ module.exports = {
                             widget: "select",
                             multiple: true,
                             collapsed: false,
-                            options: [
-                              { label: "All States", value: "All" },
-                              ...stateOptions,
-                            ],
+                            options: stateOptions,
                           },
                         ],
                       },
