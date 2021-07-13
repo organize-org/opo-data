@@ -1,4 +1,10 @@
+videos: []
 notes:
+  - note: "[Dr. Jayme Locke, University of
+      Alabama](https://www.healthaffairs.org/do/10.1377/hblog20201211.229975/fu\
+      ll/)"
+    tags:
+      - AL
   - note: >
       [OPO CEO Matthew Wadsworth in
       Harvard](https://blog.petrieflom.law.harvard.edu/2021/02/05/recent-organ-procurement-organization-regulations-will-save-lives/)
@@ -17,8 +23,7 @@ notes:
       - GALL
       - FLWC
       - PRLL
-    note:
-      Parent company LifeLink Foundation has $117M in assets, paid Board Chair
+    note: Parent company LifeLink Foundation has $117M in assets, paid Board Chair
       $750,000 in 2017
   - tags:
       - FLMP
@@ -118,8 +123,7 @@ notes:
       processor](https://www.nevadabusiness.com/2018/11/nevadas-first-tissue-processing-facility-brings-opportunity-of-hope-and-healing-to-more-nevadans/)
     tags:
       - NVLV
-  - note:
-      "[OIG](https://oig.hhs.gov/oas/reports/region9/91102035.pdf) found the OPO
+  - note: "[OIG](https://oig.hhs.gov/oas/reports/region9/91102035.pdf) found the OPO
       overstating organ procurement costs and not reporting proceeds from the
       sale of research organs. 2019 CEO compensation increased by 17.6% from
       2018."
