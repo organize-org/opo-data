@@ -209,16 +209,14 @@ export default function Dashboard({
                 ))}
             </Row>
           ) : null}
-          {stateData.videos.length ? (
+          {stateData.videos?.length ? (
             <Row className={styles.voices}>
               <Row>
                 <h3> Voices For Organ Donation Reform </h3>
               </Row>
               {stateData.videos.map(({ link, title, description }, i) => (
                 <Row key={`statewide-videos-${i}`}>
-                  <h4>
-                    <ReactPlayer url={link} width={594} height={361} />
-                  </h4>
+                  <ReactPlayer url={link} width={594} height={361} />
                   <h4>{title}</h4>
                   <p>{description}</p>
                 </Row>
