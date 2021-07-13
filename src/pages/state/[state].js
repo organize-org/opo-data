@@ -209,25 +209,20 @@ export default function Dashboard({
                 ))}
             </Row>
           ) : null}
-          {stateData.videos.length ||
-          inStateOpos.some(({ videos }) => videos?.length) ? (
+          {stateData.videos.length ? (
             <Row className={styles.voices}>
               <Row>
                 <h3> Voices For Organ Donation Reform </h3>
               </Row>
-              {stateData.videos.length ? (
-                <Row>
-                  {stateData.videos.map(({ link, title, description }, i) => (
-                    <>
-                      <h4 key={`statewide-videos-${i}`}>
-                        <ReactPlayer url={link} width={594} height={361} />
-                      </h4>
-                      <h4>{title}</h4>
-                      <h5>{description}</h5>
-                    </>
-                  ))}
+              {stateData.videos.map(({ link, title, description }, i) => (
+                <Row key={`statewide-videos-${i}`}>
+                  <h4>
+                    <ReactPlayer url={link} width={594} height={361} />
+                  </h4>
+                  <h4>{title}</h4>
+                  <p>{description}</p>
                 </Row>
-              ) : null}
+              ))}
             </Row>
           ) : null}
           <OpoTable
