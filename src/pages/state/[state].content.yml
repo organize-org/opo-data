@@ -1,4 +1,3 @@
-videos: []
 notes:
   - note: >
       [OPO CEO Matthew Wadsworth in
@@ -18,7 +17,8 @@ notes:
       - GALL
       - FLWC
       - PRLL
-    note: Parent company LifeLink Foundation has $117M in assets, paid Board Chair
+    note:
+      Parent company LifeLink Foundation has $117M in assets, paid Board Chair
       $750,000 in 2017
   - tags:
       - FLMP
@@ -118,7 +118,8 @@ notes:
       processor](https://www.nevadabusiness.com/2018/11/nevadas-first-tissue-processing-facility-brings-opportunity-of-hope-and-healing-to-more-nevadans/)
     tags:
       - NVLV
-  - note: "[OIG](https://oig.hhs.gov/oas/reports/region9/91102035.pdf) found the OPO
+  - note:
+      "[OIG](https://oig.hhs.gov/oas/reports/region9/91102035.pdf) found the OPO
       overstating organ procurement costs and not reporting proceeds from the
       sale of research organs. 2019 CEO compensation increased by 17.6% from
       2018."
