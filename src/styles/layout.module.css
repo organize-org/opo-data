@@ -1,0 +1,21 @@
+.header {
+  align-items: center;
+  background-color: var(--opoBlack);
+  justify-content: center;
+  padding: 0.75rem 0;
+}
+
+.headerImg {
+  width: 3.5rem;
+  height: 2.5rem;
+}
+
+.footer {
+  align-items: center;
+  background-color: #f7fafc;
+  padding: 2rem;
+}
+
+.footer p {
+  font-size: 0.9rem;
+}
