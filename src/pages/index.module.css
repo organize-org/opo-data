@@ -2,6 +2,23 @@
   margin-left: 5px;
 }
 
+.topBar {
+  font-size: 1.15rem;
+  height: 60px;
+  padding: 0.5rem 1rem;
+}
+
+.topBar p {
+  line-height: 2;
+  text-align: right;
+  margin: 0;
+}
+
+.topBarSelect {
+  width: 250px;
+  z-index: 1001;
+}
+
 .statsSection {
   font-weight: 700;
   text-align: center;

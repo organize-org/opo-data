@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, Row } from "react-bootstrap";
 import { GeoJSON, MapContainer, TileLayer, ZoomControl } from "react-leaflet";
 import { useStaticQuery, graphql, Link } from "gatsby";
@@ -76,9 +76,10 @@ export default function Map({
   maxZoom = 7,
   minZoom = 3,
   state,
+  popoutAbbreviation = null,
+  setPopoutAbbrevation,
   zoom = 4,
 }) {
-  const [selectedState, setSelectedState] = useState(null);
   const [{ opoDataMap, stateDataMap }] = useDataMaps();
   const { dsaGeoData, statesGeoData } = useStaticQuery(
     graphql`
@@ -118,7 +119,9 @@ export default function Map({
   return (
     <Row className="justify-content-center">
       <div style={dimensions}>
-        {selectedState && <StatePopout state={selectedState} />}
+        {popoutAbbreviation && (
+          <StatePopout state={stateDataMap[popoutAbbreviation]} />
+        )}
         {legend && <Legend />}
         {
           // Hack: [`window` dependency for Leaflet](https://www.gatsbyjs.com/docs/debugging-html-builds/#fixing-third-party-modules)
@@ -154,14 +157,15 @@ export default function Map({
                   },
                 }))}
                 style={feature => ({
-                  weight: 0.5,
-                  opacity: 1,
+                  weight: 0.3,
+                  opacity: 0.5,
                   color: "white",
                   fillColor: tierColors[feature.properties.tier],
-                  fillOpacity: 0.7,
+                  fillOpacity: 0.65,
                 })}
               />
               <GeoJSON
+                key={popoutAbbreviation}
                 data={(state
                   ? statesGeoData?.childGeoJson?.features.filter(
                       f =>
@@ -186,7 +190,7 @@ export default function Map({
                                   propagatedFrom?.feature?.properties?.name && {
                                   color: "#373737",
                                   fillOpacity: 0.3,
-                                  weight: 3,
+                                  weight: 2,
                                 }
                             )
                             .bindTooltip(
@@ -201,12 +205,9 @@ export default function Map({
                         mouseout: ({ target }) => {
                           target?.resetStyle();
                         },
-                        click: ({ propagatedFrom, target }) => {
-                          target.unbindTooltip();
-                          setSelectedState(
-                            stateDataMap[
-                              propagatedFrom?.feature?.properties?.abbreviation
-                            ]
+                        click: ({ propagatedFrom }) => {
+                          setPopoutAbbrevation(
+                            propagatedFrom?.feature?.properties?.abbreviation
                           );
                         },
                       }

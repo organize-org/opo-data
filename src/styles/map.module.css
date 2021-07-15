@@ -5,7 +5,7 @@
   right: 50px;
   padding: 1rem 1.5rem;
   position: absolute;
-  top: calc(60vh - 97px);
+  top: calc(60vh - 40px);
   width: 200px;
   z-index: 1000;
 }
@@ -16,6 +16,7 @@
 
 .legend h3 {
   font-size: 1rem;
+  font-weight: 550;
   text-transform: none;
 }
 
@@ -33,7 +34,7 @@
   max-width: 300px;
   padding: 1rem 3rem;
   position: absolute;
-  top: 10vh;
+  top: 20vh;
   z-index: 1000;
 }
 
