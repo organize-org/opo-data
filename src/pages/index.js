@@ -62,6 +62,7 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
       </Row>
       <Map
         interactive={true}
+        legend={true}
         popoutAbbreviation={popoutAbbreviation}
         setPopoutAbbrevation={setPopoutAbbrevation}
       />

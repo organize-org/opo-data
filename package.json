@@ -17,8 +17,8 @@
     "test": "echo \"Write tests!\" && exit 1"
   },
   "dependencies": {
+    "@turf/bbox": "^6.5.0",
     "@turf/boolean-intersects": "^6.4.0",
-    "@turf/center": "^6.4.0",
     "bootstrap": "^4.6.0",
     "gatsby": "^3.3.1",
     "gatsby-background-image": "^1.5.3",

@@ -4,13 +4,16 @@ import ReactMarkdown from "react-markdown";
 import ReactPlayer from "react-player";
 import { graphql } from "gatsby";
 import booleanIntersects from "@turf/boolean-intersects";
-import center from "@turf/center";
 
 import Layout from "../../components/layout";
 import Map from "../../components/map";
 import OpoTable from "../../components/opoTable";
 import useDataMaps from "../../hooks/useDataMaps";
-import { formatStateName, formatNumber } from "../../utils/utils";
+import {
+  findStateFeature,
+  formatStateName,
+  formatNumber,
+} from "../../utils/utils";
 
 import * as styles from "./state.module.css";
 import content from "./[state].content.yml";
@@ -31,10 +34,7 @@ export default function Dashboard({ data: { statesGeoData }, state = "DC" }) {
 
   // Find associated state data and feature by abbreviation
   const stateData = stateDataMap[state.toLocaleUpperCase()];
-  stateData.feature = statesGeoData?.childGeoJson?.features?.find(
-    ({ properties: { abbreviation } }) =>
-      abbreviation === stateData.abbreviation
-  );
+  stateData.feature = findStateFeature(statesGeoData, stateData.abbreviation);
 
   // Use Turf to find bordering states by their geojson polygon
   const borderingStates = statesGeoData?.childGeoJson?.features
@@ -196,13 +196,8 @@ export default function Dashboard({ data: { statesGeoData }, state = "DC" }) {
         </Col>
         <Col>
           <Map
-            center={center(stateData.feature).geometry.coordinates.reverse()}
             dimensions={{ height: "30rem", width: "35rem" }}
-            legend={false}
-            maxZoom={7}
-            minZoom={5}
             state={stateData.abbreviation}
-            zoom={7}
           />
         </Col>
       </Row>

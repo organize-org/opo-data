@@ -5,7 +5,7 @@
   right: 50px;
   padding: 1rem 1.5rem;
   position: absolute;
-  top: calc(60vh - 40px);
+  top: calc(55vh - 40px);
   width: 200px;
   z-index: 1000;
 }
@@ -31,10 +31,10 @@
   border-radius: 4px;
   font-size: 1rem;
   left: 0;
-  max-width: 300px;
+  max-width: 330px;
   padding: 1rem 3rem;
   position: absolute;
-  top: 20vh;
+  top: 16vh;
   z-index: 1000;
 }
 

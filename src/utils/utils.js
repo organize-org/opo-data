@@ -4,6 +4,13 @@ export const tierColors = {
   "3 Failing": "#D43C37",
 };
 
+export const findStateFeature = (statesGeoData, abbrev) =>
+  abbrev
+    ? statesGeoData?.childGeoJson?.features?.find(
+        ({ properties: { abbreviation } }) => abbreviation === abbrev
+      )
+    : null;
+
 export const formatNumber = (num, options) =>
   !num || isNaN(num) ? "--" : num.toLocaleString("en-US", options);
 

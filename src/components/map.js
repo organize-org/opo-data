@@ -2,10 +2,11 @@ import React from "react";
 import { Container, Row } from "react-bootstrap";
 import { GeoJSON, MapContainer, TileLayer, ZoomControl } from "react-leaflet";
 import { useStaticQuery, graphql, Link } from "gatsby";
+import bbox from "@turf/bbox";
 
 import useDataMaps from "../hooks/useDataMaps";
 import * as styles from "../styles/map.module.css";
-import { formatStateName, tierColors } from "../utils/utils";
+import { findStateFeature, formatStateName, tierColors } from "../utils/utils";
 import Tier from "./tier";
 
 function Legend() {
@@ -67,18 +68,13 @@ function StatePopout({ state }) {
   );
 }
 
-// TODO: now that we have the data pulled in anyway, these should not be props, dynamically generated from the data
 export default function Map({
-  center = [37.09024, -95.712891],
-  dimensions = { height: "60vh", width: "100%" },
+  dimensions = { height: "55vh", width: "100%" },
   interactive = false,
-  legend = true,
-  maxZoom = 7,
-  minZoom = 3,
-  state,
+  legend = false,
+  state = null,
   popoutAbbreviation = null,
   setPopoutAbbrevation,
-  zoom = 4,
 }) {
   const [{ opoDataMap, stateDataMap }] = useDataMaps();
   const { dsaGeoData, statesGeoData } = useStaticQuery(
@@ -96,6 +92,7 @@ export default function Map({
               }
               type
             }
+            type
           }
         }
         statesGeoData: file(relativePath: { eq: "data/states.geojson" }) {
@@ -110,11 +107,36 @@ export default function Map({
               }
               type
             }
+            type
           }
         }
       }
     `
   );
+
+  // State geojson: either individual state or whole US, mapped to hoverable name
+  const stateGeoJson = {
+    ...statesGeoData.childGeoJson,
+    features: (state
+      ? [findStateFeature(statesGeoData, state)]
+      : statesGeoData.childGeoJson.features
+    ).map(f => ({
+      ...f,
+      properties: {
+        ...f.properties,
+        name: stateDataMap[f.properties.abbreviation].name,
+      },
+    })),
+  };
+
+  // Map bounding box: individual state or continential US (first 48)
+  const [minX, minY, maxX, maxY] = bbox({
+    ...stateGeoJson,
+    features:
+      stateGeoJson.features.length > 1
+        ? stateGeoJson.features.slice(0, -3)
+        : stateGeoJson.features,
+  });
 
   return (
     <Row className="justify-content-center">
@@ -127,12 +149,12 @@ export default function Map({
           // Hack: [`window` dependency for Leaflet](https://www.gatsbyjs.com/docs/debugging-html-builds/#fixing-third-party-modules)
           typeof window !== "undefined" && (
             <MapContainer
-              center={center}
-              maxZoom={maxZoom}
-              minZoom={minZoom}
+              bounds={[
+                [minY, minX],
+                [maxY, maxX],
+              ]}
               scrollWheelZoom={false}
               style={dimensions}
-              zoom={zoom}
               zoomControl={false}
             >
               <ZoomControl position="bottomright" />
@@ -157,28 +179,16 @@ export default function Map({
                   },
                 }))}
                 style={feature => ({
-                  weight: 0.3,
-                  opacity: 0.5,
                   color: "white",
                   fillColor: tierColors[feature.properties.tier],
                   fillOpacity: 0.65,
+                  opacity: 0.75,
+                  weight: 0.75,
                 })}
               />
               <GeoJSON
                 key={popoutAbbreviation}
-                data={(state
-                  ? statesGeoData?.childGeoJson?.features.filter(
-                      f =>
-                        f.properties.abbreviation.toLocaleUpperCase() === state
-                    )
-                  : statesGeoData?.childGeoJson?.features
-                ).map(f => ({
-                  ...f,
-                  properties: {
-                    ...f.properties,
-                    name: stateDataMap[f.properties.abbreviation].name,
-                  },
-                }))}
+                data={stateGeoJson}
                 eventHandlers={
                   interactive
                     ? {
@@ -216,7 +226,8 @@ export default function Map({
                 style={{
                   color: "#373737",
                   fillOpacity: 0,
-                  weight: 1.5,
+                  opacity: 0.75,
+                  weight: 1,
                 }}
               />
             </MapContainer>
