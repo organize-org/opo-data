@@ -8,8 +8,8 @@ import Select from "react-select";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { BgImage } from "gbimage-bridge";
 
-import Layout from "../components/layout";
-import Map from "../components/map";
+import Layout from "../components/layout/layout";
+import Map from "../components/map/map";
 import useDataMaps from "../hooks/useDataMaps";
 
 import * as styles from "./index.module.css";

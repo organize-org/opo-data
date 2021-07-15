@@ -4,10 +4,15 @@ import { GeoJSON, MapContainer, TileLayer, ZoomControl } from "react-leaflet";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import bbox from "@turf/bbox";
 
-import useDataMaps from "../hooks/useDataMaps";
-import * as styles from "../styles/map.module.css";
-import { findStateFeature, formatStateName, tierColors } from "../utils/utils";
-import Tier from "./tier";
+import useDataMaps from "../../hooks/useDataMaps";
+import {
+  findStateFeature,
+  formatStateName,
+  tierColors,
+} from "../../utils/utils";
+import Tier from "../tier/tier";
+
+import * as styles from "./map.module.css";
 
 function Legend() {
   return (
@@ -16,7 +21,7 @@ function Legend() {
         <h3>OPO Performance Tier</h3>
       </Row>
       {Object.keys(tierColors).map(tier => (
-        <Tier key={tier} className={styles.legendTier} size={20} tier={tier} />
+        <Tier key={tier} className={styles.legendTier} tier={tier} />
       ))}
     </Container>
   );
@@ -51,12 +56,7 @@ function StatePopout({ state }) {
             <Row>
               <h4>{name}</h4>
             </Row>
-            <Tier
-              key={tier}
-              className={styles.popoutTier}
-              size={20}
-              tier={tier}
-            />
+            <Tier key={tier} className={styles.popoutTier} tier={tier} />
           </div>
         ))}
       <Row>

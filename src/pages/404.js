@@ -2,7 +2,7 @@ import React from "react";
 import { Row } from "react-bootstrap";
 import { Link } from "gatsby";
 
-import Layout from "../components/layout";
+import Layout from "../components/layout/layout";
 
 import * as styles from "./404.module.css";
 

@@ -1,17 +1,17 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 
-import { tierColors } from "../utils/utils";
+import { tierColors } from "../../utils/utils";
 
-export default function Tier({ className, tier, size = "25" }) {
+export default function Tier({ className, tier }) {
   return (
     <Row className={className}>
       <Col className="flex-grow-0 my-auto">
         <div
           style={{
             background: tierColors[tier],
-            height: `${size}px`,
-            width: `${size}px`,
+            height: `20px`,
+            width: `20px`,
           }}
         ></div>
       </Col>
