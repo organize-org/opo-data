@@ -1,6 +1,7 @@
 import React from "react";
-import { Row, Table } from "react-bootstrap";
+import { Container, Row, Table } from "react-bootstrap";
 
+import { formatNumber } from "../utils/utils";
 import * as styles from "../styles/opoTable.module.css";
 
 import Tier from "./tier";
@@ -29,35 +30,51 @@ export default function OpoTable({ citation, opos, inState = true, heading }) {
                 </>
               )}
               <th scope="col">Tier (2019)</th>
-              <th scope="col" className="text-center">
-                Donors Needed
-              </th>
-              <th scope="col" className={`text-center red`}>
+              <th scope="col">Donors Needed</th>
+              <th scope="col" className="red">
                 Shadow Deaths*
               </th>
+              {inState && <th scope="col">Under Investigation</th>}
             </tr>
           </thead>
           <tbody>
-            {opos.map(({ donors, name, region, shadows, states, tier }) => (
-              <tr key={name}>
-                {inState ? (
-                  <>
-                    <td>{name}</td>
-                    <td>{region}</td>
-                  </>
-                ) : (
-                  <>
-                    <td>{states}</td>
-                    <td>{name}</td>
-                  </>
-                )}
-                <td className={styles.tierCol}>
-                  <Tier tier={tier} />
-                </td>
-                <td className="text-center">{donors ?? "----"}</td>
-                <td>{shadows ?? "----"}</td>
-              </tr>
-            ))}
+            {opos.map(
+              ({
+                donors,
+                investigation,
+                name,
+                region,
+                shadows,
+                states,
+                tier,
+              }) => (
+                <tr key={name}>
+                  {inState ? (
+                    <>
+                      <td>{name}</td>
+                      <td>{region}</td>
+                    </>
+                  ) : (
+                    <>
+                      <td>{states}</td>
+                      <td>{name}</td>
+                    </>
+                  )}
+                  <td>
+                    <Container>
+                      <Tier className={styles.tierCol} tier={tier} />
+                    </Container>
+                  </td>
+                  <td className="text-center">{formatNumber(donors)}</td>
+                  <td className={styles.shadows}>{formatNumber(shadows)}</td>
+                  {inState && (
+                    <td className="text-center">
+                      {investigation ? "Yes" : "--"}
+                    </td>
+                  )}
+                </tr>
+              )
+            )}
           </tbody>
         </Table>
       </Row>

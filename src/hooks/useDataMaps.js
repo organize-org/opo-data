@@ -9,6 +9,7 @@ export default function useDataMaps() {
             data {
               compensation
               donors
+              investigation
               name
               opo
               shadows

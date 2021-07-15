@@ -16,7 +16,7 @@ function Legend() {
         <h3>OPO Performance Tier</h3>
       </Row>
       {Object.keys(tierColors).map(tier => (
-        <Tier key={tier} className={styles.legendTier} size={20} tier={tier} />
+        <Tier key={tier} className={styles.legendTier} tier={tier} />
       ))}
     </Container>
   );
@@ -51,12 +51,7 @@ function StatePopout({ state }) {
             <Row>
               <h4>{name}</h4>
             </Row>
-            <Tier
-              key={tier}
-              className={styles.popoutTier}
-              size={20}
-              tier={tier}
-            />
+            <Tier key={tier} className={styles.popoutTier} tier={tier} />
           </div>
         ))}
       <Row>
