@@ -1,10 +1,11 @@
 import React from "react";
-import { Row, Col } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
 import ReactPlayer from "react-player";
 import { graphql, navigate } from "gatsby";
 import booleanIntersects from "@turf/boolean-intersects";
 
+import DemographicTable from "../../components/demographicTable";
 import Layout from "../../components/layout";
 import Map from "../../components/map";
 import OpoTable from "../../components/opoTable";
@@ -192,6 +193,7 @@ export default function Dashboard({ data: { statesGeoData }, state = "DC" }) {
               ))}
             </Row>
           ) : null}
+          <DemographicTable opos={inStateOpos} />
           <OpoTable
             heading="OPO Performance in Nearby States"
             inState={false}
