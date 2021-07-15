@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
 import ReactPlayer from "react-player";
-import { graphql } from "gatsby";
+import { graphql, navigate } from "gatsby";
 import booleanIntersects from "@turf/boolean-intersects";
 
 import Layout from "../../components/layout";
@@ -32,8 +32,12 @@ export default function Dashboard({ data: { statesGeoData }, state = "DC" }) {
     {}
   );
 
-  // Find associated state data and feature by abbreviation
+  // Find associated state data and feature by abbreviation, redirect if not found
   const stateData = stateDataMap[state.toLocaleUpperCase()];
+  if (!stateData) {
+    navigate("/404");
+    return null;
+  }
   stateData.feature = findStateFeature(statesGeoData, stateData.abbreviation);
 
   // Use Turf to find bordering states by their geojson polygon
