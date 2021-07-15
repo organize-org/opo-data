@@ -4,10 +4,15 @@ import { GeoJSON, MapContainer, TileLayer, ZoomControl } from "react-leaflet";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import bbox from "@turf/bbox";
 
-import useDataMaps from "../hooks/useDataMaps";
-import * as styles from "../styles/map.module.css";
-import { findStateFeature, formatStateName, tierColors } from "../utils/utils";
-import Tier from "./tier";
+import useDataMaps from "../../hooks/useDataMaps";
+import {
+  findStateFeature,
+  formatStateName,
+  tierColors,
+} from "../../utils/utils";
+import Tier from "../tier/tier";
+
+import * as styles from "./map.module.css";
 
 function Legend() {
   return (

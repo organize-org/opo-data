@@ -3,7 +3,7 @@ import { useStaticQuery, graphql, Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { Container, Row, Col } from "react-bootstrap";
 
-import * as styles from "../styles/layout.module.css";
+import * as styles from "./layout.module.css";
 
 export default function Layout({ children }) {
   const { site } = useStaticQuery(

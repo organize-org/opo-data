@@ -1,8 +1,9 @@
 import React from "react";
 import { Row, Table } from "react-bootstrap";
 
-import { racialDemographics, formatPercent } from "../utils/utils";
-import * as styles from "../styles/demographicTable.module.css";
+import { racialDemographics, formatPercent } from "../../utils/utils";
+
+import * as styles from "./demographicTable.module.css";
 
 export default function DemographicTable({ opos }) {
   // Show table if some non-0 data

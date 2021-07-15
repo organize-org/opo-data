@@ -1,10 +1,11 @@
 import React from "react";
 import { Container, Row, Table } from "react-bootstrap";
 
-import { formatNumber } from "../utils/utils";
-import * as styles from "../styles/opoTable.module.css";
+import { formatNumber } from "../../utils/utils";
 
-import Tier from "./tier";
+import Tier from "../tier/tier";
+
+import * as styles from "./opoTable.module.css";
 
 export default function OpoTable({ citation, opos, inState = true, heading }) {
   if (!opos.length) return null;

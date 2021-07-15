@@ -5,10 +5,10 @@ import ReactPlayer from "react-player";
 import { graphql, navigate } from "gatsby";
 import booleanIntersects from "@turf/boolean-intersects";
 
-import DemographicTable from "../../components/demographicTable";
-import Layout from "../../components/layout";
-import Map from "../../components/map";
-import OpoTable from "../../components/opoTable";
+import DemographicTable from "../../components/demographicTable/demographicTable";
+import Layout from "../../components/layout/layout";
+import Map from "../../components/map/map";
+import OpoTable from "../../components/opoTable/opoTable";
 import useDataMaps from "../../hooks/useDataMaps";
 import {
   findStateFeature,
