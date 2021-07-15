@@ -1,28 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { BgImage } from "gbimage-bridge";
 import { Row, Col } from "react-bootstrap";
 import { ArrowRight } from "react-bootstrap-icons";
 import ReactMarkdown from "react-markdown";
 import ReactPlayer from "react-player";
+import Select from "react-select";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { BgImage } from "gbimage-bridge";
 
 import Layout from "../components/layout";
 import Map from "../components/map";
+import useDataMaps from "../hooks/useDataMaps";
 
 import * as styles from "./index.module.css";
 import content from "./index.content.yml";
 
-export default function Dashboard({
-  data: {
-    articleImages,
-    dsaGeoData,
-    statesGeoData,
-    opoData,
-    statesData,
-    quoteImage,
-  },
-}) {
+export default function Dashboard({ data: { articleImages, quoteImage } }) {
+  const [{ stateDataMap }] = useDataMaps();
+  const [popoutAbbreviation, setPopoutAbbrevation] = useState(null);
+
   const { articles, stats, quote, video } = content;
   const articleImgsByPath = articleImages?.edges?.reduce(
     (imgMap, { node }) => ({
@@ -31,45 +27,44 @@ export default function Dashboard({
     }),
     {}
   );
-  const tierData = opoData?.nodes?.reduce(
-    (opoDataMap, { data: { opo, tier } }) => ({
-      ...opoDataMap,
-      [opo]: tier,
-    }),
-    {}
-  );
-  const stateNameData = statesData?.nodes?.reduce(
-    (stateNameMap, { data: { abbreviation, name } }) => ({
-      ...stateNameMap,
-      [abbreviation]: name,
-    }),
-    {}
-  );
 
   return (
     <Layout>
+      <Row className={styles.topBar}>
+        <Col>
+          <Row className="w-50">
+            <Col>
+              <p>View state data:</p>
+            </Col>
+            <Col>
+              <Select
+                className={styles.topBarSelect}
+                value={
+                  popoutAbbreviation
+                    ? {
+                        value: popoutAbbreviation,
+                        label: stateDataMap[popoutAbbreviation].name,
+                      }
+                    : null
+                }
+                onChange={({ value }) => setPopoutAbbrevation(value)}
+                options={Object.entries(stateDataMap).map(
+                  ([key, { name }]) => ({
+                    value: key,
+                    label: name,
+                  })
+                )}
+                placeholder="Select state"
+              />
+            </Col>
+          </Row>
+        </Col>
+      </Row>
       <Map
-        dsaGeoJSON={{
-          ...dsaGeoData?.childGeoJson,
-          features: dsaGeoData?.childGeoJson?.features?.map(feature => ({
-            ...feature,
-            properties: {
-              ...feature.properties,
-              tier: tierData[feature.properties.opo],
-            },
-          })),
-        }}
         interactive={true}
-        statesGeoJSON={{
-          ...statesGeoData?.childGeoJson,
-          features: statesGeoData?.childGeoJson?.features?.map(feature => ({
-            ...feature,
-            properties: {
-              ...feature.properties,
-              name: stateNameData[feature.properties.abbreviation],
-            },
-          })),
-        }}
+        legend={true}
+        popoutAbbreviation={popoutAbbreviation}
+        setPopoutAbbrevation={setPopoutAbbrevation}
       />
       <Row className={styles.statsSection}>
         {Object.values(stats).map(({ title, value }) => (
@@ -172,50 +167,6 @@ export const query = graphql`
     quoteImage: file(relativePath: { eq: "images/quoteImage.png" }) {
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
-      }
-    }
-    dsaGeoData: file(relativePath: { eq: "data/dsas.geojson" }) {
-      childGeoJson {
-        features {
-          geometry {
-            type
-            coordinates
-          }
-          properties {
-            opo
-          }
-          type
-        }
-      }
-    }
-    statesGeoData: file(relativePath: { eq: "data/states.geojson" }) {
-      childGeoJson {
-        features {
-          geometry {
-            type
-            coordinates
-          }
-          properties {
-            abbreviation
-          }
-          type
-        }
-      }
-    }
-    opoData: allAirtable(filter: { table: { eq: "OPOs" } }) {
-      nodes {
-        data {
-          opo
-          tier
-        }
-      }
-    }
-    statesData: allAirtable(filter: { table: { eq: "States" } }) {
-      nodes {
-        data {
-          abbreviation
-          name
-        }
       }
     }
   }

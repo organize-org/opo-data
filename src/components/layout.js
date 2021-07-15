@@ -1,10 +1,12 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { Container, Row, Col } from "react-bootstrap";
 
+import * as styles from "../styles/layout.module.css";
+
 export default function Layout({ children }) {
-  const data = useStaticQuery(
+  const { site } = useStaticQuery(
     graphql`
       query {
         site {
@@ -18,21 +20,24 @@ export default function Layout({ children }) {
 
   return (
     <Container fluid>
-      <Row className="header">
+      <Row className={styles.header}>
         <Col md="auto">
           <StaticImage
-            className="headerImg"
+            className={styles.headerImg}
             src="../images/logo.png"
             alt="logo"
           />
         </Col>
-        <Col md="auto">
-          <h1>{data.site.siteMetadata.title}</h1>
-          <h2>Performance Comparison</h2>
-        </Col>
+        <Link to="/">
+          <Col md="auto">
+            <h1>{site.siteMetadata.title}</h1>
+            <h2>Performance Comparison</h2>
+          </Col>
+        </Link>
       </Row>
+
       {children}
-      <Row className="footer">
+      <Row className={styles.footer}>
         <Col xs={6}>
           <p>
             Research supported by Arnold Ventures and Schmidt Futures in

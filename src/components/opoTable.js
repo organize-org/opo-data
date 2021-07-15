@@ -1,11 +1,15 @@
 import React from "react";
 import { Row, Table } from "react-bootstrap";
 
+import * as styles from "../styles/opoTable.module.css";
+
 import Tier from "./tier";
 
 export default function OpoTable({ citation, opos, inState = true, heading }) {
+  if (!opos.length) return null;
+
   return (
-    <Row className="opo-table">
+    <Row className={styles.opoTable}>
       <Row>
         <h3>{heading}</h3>
       </Row>
@@ -47,7 +51,7 @@ export default function OpoTable({ citation, opos, inState = true, heading }) {
                     <td>{name}</td>
                   </>
                 )}
-                <td className="tierCol">
+                <td className={styles.tierCol}>
                   <Tier tier={tier} />
                 </td>
                 <td className="text-center">{donors ?? "----"}</td>

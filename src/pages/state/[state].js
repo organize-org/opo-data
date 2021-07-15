@@ -2,22 +2,25 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
 import ReactPlayer from "react-player";
-import { graphql } from "gatsby";
+import { graphql, navigate } from "gatsby";
 import booleanIntersects from "@turf/boolean-intersects";
-import center from "@turf/center";
 
 import Layout from "../../components/layout";
 import Map from "../../components/map";
 import OpoTable from "../../components/opoTable";
+import useDataMaps from "../../hooks/useDataMaps";
+import {
+  findStateFeature,
+  formatStateName,
+  formatNumber,
+} from "../../utils/utils";
 
 import * as styles from "./state.module.css";
-
 import content from "./[state].content.yml";
 
-export default function Dashboard({
-  data: { dsaGeoData, statesGeoData, opoData, statesData },
-  state = "DC",
-}) {
+export default function Dashboard({ data: { statesGeoData }, state = "DC" }) {
+  const [{ opoDataMap, stateDataMap }] = useDataMaps();
+
   const notesByOpo = content?.notes?.reduce(
     (notesMap, { note, tags }) => ({
       ...notesMap,
@@ -29,66 +32,44 @@ export default function Dashboard({
     {}
   );
 
-  // Find associated state data and feature by abbreviation
-  const stateData = statesData?.nodes?.find(
-    ({ data: { abbreviation } }) => abbreviation === state.toLocaleUpperCase()
-  )?.data;
-  const stateFeature = statesGeoData?.childGeoJson?.features?.find(
-    ({ properties: { abbreviation } }) =>
-      abbreviation === stateData.abbreviation
-  );
-
-  // Get the notes tagged at the state level
-  stateData.notes = content?.notes?.filter(({ tags }) =>
-    tags.includes(stateData.abbreviation)
-  );
-  stateData.videos = content?.videos?.filter(({ tags }) =>
-    tags.includes(stateData.abbreviation)
-  );
+  // Find associated state data and feature by abbreviation, redirect if not found
+  const stateData = stateDataMap[state.toLocaleUpperCase()];
+  if (!stateData) {
+    navigate("/404");
+    return null;
+  }
+  stateData.feature = findStateFeature(statesGeoData, stateData.abbreviation);
 
   // Use Turf to find bordering states by their geojson polygon
   const borderingStates = statesGeoData?.childGeoJson?.features
-    ?.filter(feature => booleanIntersects(stateFeature, feature))
+    ?.filter(feature => booleanIntersects(stateData.feature, feature))
     ?.map(({ properties: { abbreviation } }) => abbreviation);
 
   // Filter into in- and out-of-state (or neither); add region and notes (in), or formatted state list (out)
-  const { inStateOpos, outOfStateOpos } = opoData?.nodes.reduce(
-    (filter, { data }) => {
-      // `states` field: newline-delineated state(s) with an optional `-`-delineated region.
-      // Transform -> Array<Array<state, region>>. e.g. `states: 'OH - West\n'` -> `states: [['OH', 'West']]`.
-      const statesWithRegion = data.states
-        .split("\n")
-        .map(swr => swr.split("-").map(sor => sor.trim()));
-
-      const inState = statesWithRegion.find(
-        ([state]) => state === stateData.abbreviation
-      );
-      if (inState) {
-        // In state: pull region and tagged notes
+  const { inStateOpos, outOfStateOpos } = Object.values(opoDataMap).reduce(
+    (filter, opo) => {
+      // In state
+      if (opo.statesWithRegions[stateData.abbreviation] !== undefined) {
         return {
           ...filter,
           inStateOpos: [
             ...filter.inStateOpos,
             {
-              ...data,
-              notes: notesByOpo[data.opo],
-              region: inState[1],
+              ...opo,
+              // Add notes and region
+              notes: notesByOpo[opo.opo],
+              region: opo.statesWithRegions[stateData.abbreviation],
             },
           ],
         };
-      } else if (
-        statesWithRegion.filter(([state]) => borderingStates.includes(state))
-          .length
-      ) {
-        // Out of state (but nearby): pull and format state list
+      } else if (borderingStates?.some(bs => opo.statesWithRegions[bs])) {
+        // Out of state (but nearby)
         return {
           ...filter,
           outOfStateOpos: [
             ...filter.outOfStateOpos,
-            {
-              ...data,
-              states: statesWithRegion.map(([state]) => state).join(", "),
-            },
+            // Add formatted state list
+            { ...opo, states: Object.keys(opo.statesWithRegions).join(", ") },
           ],
         };
       } else {
@@ -99,45 +80,36 @@ export default function Dashboard({
     { inStateOpos: [], outOfStateOpos: [] }
   );
 
-  // Get nearby DSA geojson features, colored by tier
-  const opoTiers = inStateOpos.reduce(
-    (tierMap, { opo, tier }) => ({ ...tierMap, [opo]: tier }),
-    {}
-  );
-  const dsaFeatures = dsaGeoData?.childGeoJson?.features
-    ?.filter(({ properties: { opo } }) => opoTiers[opo])
-    ?.map(feature => ({
-      ...feature,
-      properties: {
-        ...feature.properties,
-        tier: opoTiers[feature.properties.opo],
-      },
-    }));
-
-  const statePopoutStats = {
-    avgCeoComp: Math.floor(
-      inStateOpos?.reduce((sum, { compensation }) => {
-        const comp = parseInt(compensation);
-        return isNaN(comp) ? sum : sum + comp;
-      }, 0) / inStateOpos.length
-    ),
+  // Popout stats
+  const comps = inStateOpos
+    .map(({ compensation }) => compensation)
+    .filter(comp => !isNaN(comp));
+  stateData.popoutStats = {
+    avgCeoComp: comps.length
+      ? Math.floor(comps.reduce((sum, comp) => sum + comp, 0) / comps.length)
+      : 0,
     monthlyDead: stateData.monthly,
     waitlist: parseInt(stateData.waitlist),
   };
+  // State-level the notes and videos
+  stateData.notes = content?.notes?.filter(({ tags }) =>
+    tags.includes(stateData.abbreviation)
+  );
+  stateData.videos = content?.videos?.filter(({ tags }) =>
+    tags.includes(stateData.abbreviation)
+  );
 
   return (
     <Layout>
       <Row className={styles.title}>
-        <h2>
-          {stateData.name} ({stateData.abbreviation})
-        </h2>
+        <h2>{formatStateName(stateData)}</h2>
       </Row>
       <Row className={styles.state}>
         <Col>
           <Row className={styles.stats}>
             <Row className={styles.statsHeading}>
               <Col>
-                <h3>State Waitlist in 2021 </h3>
+                <h3>State Waitlist in 2021</h3>
               </Col>
               <Col>
                 <h3>Average CEO Compensation (2019)</h3>
@@ -150,15 +122,11 @@ export default function Dashboard({
             </Row>
             <Row className={styles.statsPopout}>
               <Col>
-                <p>
-                  {isNaN(statePopoutStats.waitlist)
-                    ? "--"
-                    : statePopoutStats.waitlist}
-                </p>
+                <p>{formatNumber(stateData.popoutStats.waitlist)}</p>
               </Col>
               <Col>
                 <p>
-                  {statePopoutStats.avgCeoComp.toLocaleString("en-US", {
+                  {formatNumber(stateData.popoutStats.avgCeoComp, {
                     style: "currency",
                     currency: "USD",
                     maximumFractionDigits: 0,
@@ -166,7 +134,9 @@ export default function Dashboard({
                 </p>
               </Col>
               <Col>
-                <p className="red">{statePopoutStats.monthlyDead ?? "--"}</p>
+                <p className="red">
+                  {formatNumber(stateData.popoutStats.monthlyDead)}
+                </p>
               </Col>
             </Row>
           </Row>
@@ -179,11 +149,10 @@ export default function Dashboard({
           inStateOpos.some(({ notes }) => notes?.length) ? (
             <Row>
               <Row>
-                <h3> {stateData.name} OPO Updates </h3>
+                <h3>{stateData.name} OPO Updates</h3>
               </Row>
               {stateData.notes.length ? (
                 <Row>
-                  <h4>Statewide</h4>
                   <ul>
                     {stateData.notes.map(({ note }, i) => (
                       <li key={`statewide-note-${i}`}>
@@ -212,7 +181,7 @@ export default function Dashboard({
           {stateData.videos?.length ? (
             <Row className={styles.voices}>
               <Row>
-                <h3> Voices For Organ Donation Reform </h3>
+                <h3>Voices For Organ Donation Reform</h3>
               </Row>
               {stateData.videos.map(({ link, title, description }, i) => (
                 <Row key={`statewide-videos-${i}`}>
@@ -231,14 +200,8 @@ export default function Dashboard({
         </Col>
         <Col>
           <Map
-            center={center(stateFeature).geometry.coordinates.reverse()}
             dimensions={{ height: "30rem", width: "35rem" }}
-            dsaGeoJSON={dsaFeatures}
-            statesGeoJSON={stateFeature}
-            legend={false}
-            maxZoom={7}
-            minZoom={5}
-            zoom={7}
+            state={stateData.abbreviation}
           />
         </Col>
       </Row>
@@ -248,20 +211,6 @@ export default function Dashboard({
 
 export const query = graphql`
   query {
-    dsaGeoData: file(relativePath: { eq: "data/dsas.geojson" }) {
-      childGeoJson {
-        features {
-          geometry {
-            type
-            coordinates
-          }
-          properties {
-            opo
-          }
-          type
-        }
-      }
-    }
     statesGeoData: file(relativePath: { eq: "data/states.geojson" }) {
       childGeoJson {
         features {
@@ -273,29 +222,6 @@ export const query = graphql`
             abbreviation
           }
           type
-        }
-      }
-    }
-    opoData: allAirtable(filter: { table: { eq: "OPOs" } }) {
-      nodes {
-        data {
-          compensation
-          donors
-          name
-          opo
-          shadows
-          states
-          tier
-        }
-      }
-    }
-    statesData: allAirtable(filter: { table: { eq: "States" } }) {
-      nodes {
-        data {
-          abbreviation
-          monthly
-          name
-          waitlist
         }
       }
     }

@@ -17,8 +17,8 @@
     "test": "echo \"Write tests!\" && exit 1"
   },
   "dependencies": {
+    "@turf/bbox": "^6.5.0",
     "@turf/boolean-intersects": "^6.4.0",
-    "@turf/center": "^6.4.0",
     "bootstrap": "^4.6.0",
     "gatsby": "^3.3.1",
     "gatsby-background-image": "^1.5.3",
@@ -42,7 +42,8 @@
     "react-dom": "^17.0.2",
     "react-leaflet": "^3.2.0",
     "react-markdown": "^6.0.2",
-    "react-player": "^2.9.0"
+    "react-player": "^2.9.0",
+    "react-select": "^4.3.1"
   },
   "devDependencies": {
     "husky": "^6.0.0",
