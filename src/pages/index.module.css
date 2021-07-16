@@ -2,10 +2,16 @@
   margin-left: 5px;
 }
 
-.topBar {
+.topBar > * {
+  display: flex;
+  flex-wrap: nowrap;
   font-size: 1.15rem;
   height: 60px;
   padding: 0.5rem 1rem;
+}
+
+.topBar > * > * {
+  margin: auto;
 }
 
 .topBar p {

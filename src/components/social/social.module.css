@@ -1,0 +1,29 @@
+.social {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.social > * {
+  margin: auto;
+}
+
+.social p {
+  line-height: 2;
+  text-align: right;
+  margin: 0;
+}
+
+.icon {
+  fill: var(--opoWhiteSmoke);
+  height: 30px !important;
+  margin: 0 0.25rem;
+  width: 30px !important;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+.icon:active {
+  transform: scale(0.85);
+}
