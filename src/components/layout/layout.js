@@ -21,21 +21,23 @@ export default function Layout({ children }) {
   return (
     <Container fluid>
       <Row className={styles.header}>
-        <Col md="auto">
-          <StaticImage
-            className={styles.headerImg}
-            src="../../images/logo.png"
-            alt="logo"
-          />
-        </Col>
+        <StaticImage
+          className={styles.headerImg}
+          src="../../images/logo.png"
+          alt="logo"
+        />
         <Link to="/">
-          <Col md="auto">
-            <h1>{site.siteMetadata.title}</h1>
-            <h2>Performance Comparison</h2>
-          </Col>
+          <h1>{site.siteMetadata.title}</h1>
+          <h2>Performance Comparison</h2>
         </Link>
+        <a
+          href="https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc3_4344f40b3ba74ef4a7845cc1d4798120.pdf"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <p>About our Organ Donation System</p>
+        </a>
       </Row>
-
       {children}
       <Row className={styles.footer}>
         <Col xs={6}>
