@@ -24,7 +24,7 @@ export default function Layout({ children }) {
         <Col md="auto">
           <StaticImage
             className={styles.headerImg}
-            src="../images/logo.png"
+            src="../../images/logo.png"
             alt="logo"
           />
         </Col>
@@ -46,34 +46,34 @@ export default function Layout({ children }) {
         </Col>
         <Col>
           <StaticImage
-            src="../images/logos/av.png"
+            src="../../images/logos/av.png"
             alt="Arnold Ventures"
             height={35}
           />
         </Col>
         <Col>
           <StaticImage
-            src="../images/logos/schmidt.png"
+            src="../../images/logos/schmidt.png"
             alt="Schmidt Futures"
             height={35}
           />
         </Col>
         <Col>
           <StaticImage
-            src="../images/logos/bloomworks.png"
+            src="../../images/logos/bloomworks.png"
             alt="Bloomworks"
             height={35}
           />
         </Col>
         <Col>
           <StaticImage
-            src="../images/logos/organize.png"
+            src="../../images/logos/organize.png"
             alt="Organize"
             height={35}
           />
         </Col>
         <Col>
-          <StaticImage src="../images/logos/fas.png" alt="FAS" height={35} />
+          <StaticImage src="../../images/logos/fas.png" alt="FAS" height={35} />
         </Col>
       </Row>
     </Container>

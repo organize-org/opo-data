@@ -3,6 +3,7 @@ require(`dotenv`).config({ path: `.env` });
 module.exports = {
   siteMetadata: {
     title: `Organ Procurement Organization (OPO)`,
+    url: `https://opo-dashboard.netlify.app`,
   },
   plugins: [
     {
@@ -24,6 +25,14 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images/`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /images\/.*\.svg/,
+        },
       },
     },
     {

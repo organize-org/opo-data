@@ -10,6 +10,7 @@ import { BgImage } from "gbimage-bridge";
 
 import Layout from "../components/layout/layout";
 import Map from "../components/map/map";
+import Social from "../components/social/social";
 import useDataMaps from "../hooks/useDataMaps";
 
 import * as styles from "./index.module.css";
@@ -32,33 +33,30 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
     <Layout>
       <Row className={styles.topBar}>
         <Col>
-          <Row className="w-50">
-            <Col>
-              <p>View state data:</p>
-            </Col>
-            <Col>
-              <Select
-                className={styles.topBarSelect}
-                value={
-                  popoutAbbreviation
-                    ? {
-                        value: popoutAbbreviation,
-                        label: stateDataMap[popoutAbbreviation].name,
-                      }
-                    : null
-                }
-                onChange={({ value }) => setPopoutAbbrevation(value)}
-                options={Object.entries(stateDataMap).map(
-                  ([key, { name }]) => ({
-                    value: key,
-                    label: name,
-                  })
-                )}
-                placeholder="Select state"
-              />
-            </Col>
-          </Row>
+          <Col>
+            <p>View state data:</p>
+          </Col>
+          <Col>
+            <Select
+              className={styles.topBarSelect}
+              value={
+                popoutAbbreviation
+                  ? {
+                      value: popoutAbbreviation,
+                      label: stateDataMap[popoutAbbreviation].name,
+                    }
+                  : null
+              }
+              onChange={({ value }) => setPopoutAbbrevation(value)}
+              options={Object.entries(stateDataMap).map(([key, { name }]) => ({
+                value: key,
+                label: name,
+              }))}
+              placeholder="Select state"
+            />
+          </Col>
         </Col>
+        <Social />
       </Row>
       <Map
         interactive={true}
