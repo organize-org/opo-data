@@ -1,5 +1,382 @@
 videos: []
 notes:
+  - note: "[Jennifer
+      Erickson](https://www.washingtonpost.com/opinions/i-want-a-journalist-to-\
+      see-what-happens-to-my-organs-after-i-die-heres-why/2019/10/04/42c5e888-e\
+      529-11e9-a331-2df12d56a80b_story.html)"
+    tags:
+      - DC
+  - note: "[Washington Post editorial
+      board](https://www.washingtonpost.com/opinions/many-die-waiting-for-organ\
+      s-the-trump-administration-could-help/2020/07/31/77e3a102-dfd6-11e9-b199-\
+      f638bf2c340f_story.html)"
+    tags:
+      - DC
+  - note: "[Rep. Suzan DelBene, Co-Chair of House Kidney
+      Caucus](https://delbene.house.gov/news/documentsingle.aspx?DocumentID=267\
+      4)"
+    tags:
+      - WA
+  - note: "[Former Surgeon General Ken
+      Moritsugu](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/\
+      581bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    tags:
+      - VA
+  - note: "[Rep. Ben
+      Cline](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581b\
+      c3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    tags:
+      - VA
+  - note: "[Rep. Abigail
+      Spanberger](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd\
+      /581bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    tags:
+      - VA
+  - note: "[Rep. John
+      Curtis](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
+      bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    tags:
+      - UT
+  - note: "[Joe
+      Lonsdale](https://joelonsdale.com/news/steering-american-healthcare/)"
+    tags:
+      - TX
+  - note: "[Laura and John
+      Arnold](https://www.statnews.com/2019/07/24/a-simple-bureaucratic-organ-d\
+      onation-fix-will-save-thousands-of-lives/)"
+    tags:
+      - TX
+  - note: "[Baylor College of
+      Medicine](https://www.bcm.edu/about-us/leadership/office-of-the-president\
+      /position-statements/organ-donation-policy)"
+    tags:
+      - TX
+  - note: "[Rep. Kenny
+      Marchant](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/5\
+      81bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    tags:
+      - TX
+  - note: "[Rep. Jodey
+      Arrington](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/\
+      581bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    tags:
+      - TX
+  - note: "[Dallas OPO CEO Patti
+      Niles](https://www.dallasnews.com/opinion/commentary/2021/02/12/the-us-or\
+      gan-donation-system-needs-transparency-and-accountability/)"
+    tags:
+      - TX
+  - note: "[Bakari
+      Sellers](https://www.cnn.com/2019/12/24/opinions/broken-organ-donation-sy\
+      stem-sellers/index.html)"
+    tags:
+      - SC
+  - note: "[Dr. Alefiyah Mesiwala, former Obama White
+      House](https://www.post-gazette.com/opinion/2019/07/24/div-class-libPageB\
+      odyLinebreak-Organ-care-is-not-a-partisan-issue-div/stories/201907240024)"
+    tags:
+      - PA
+  - note: "[Dr. Laura Siminoff,
+      Temple](http://www.siminoffresearchgroup.org/research-studies/cead/)"
+    tags:
+      - PA
+  - note: "[Dr. David Goldberg, University of
+      Pennsylvania](https://www.med.upenn.edu/goldberglab/data.html)"
+    tags:
+      - PA
+  - note: "[Rep. Brian
+      Fitzpatrick](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ug\
+      d/581bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    tags:
+      - PA
+  - note: "[Dr. Esther Choo](https://twitter.com/choo_ek/status/1321536322725502976)
+      (Oregon Health & Sciences University)"
+    tags:
+      - OR
+  - note: "[Oregon Public
+      Broadcasting](https://www.opb.org/news/article/oregon-transplant-system-o\
+      rganization-health-department-proposed-trump-rules/)"
+    tags:
+      - OR
+  - note: "[Oregon liver transplant patient Erika
+      Zak](https://www.cnn.com/2019/08/17/health/erika-zak-liver-transplant-201\
+      9-update/index.html)"
+    tags:
+      - OR
+  - note: "[Chairman Ron
+      Wyden](https://www.finance.senate.gov/ranking-members-news/grassley-wyden\
+      -subpoena-the-united-network-for-organ-sharing-as-part-of-continued-inves\
+      tigation-into-us-organ-transplant-system)"
+    tags:
+      - OR
+  - note: "[Boomer Esiason
+      Foundation](https://twitter.com/cysticfibrosis/status/1296463486957113344\
+      )"
+    tags:
+      - OH
+  - note: "[OPO CEO Matt
+      Wadsworth](https://blog.petrieflom.law.harvard.edu/2021/02/05/recent-orga\
+      n-procurement-organization-regulations-will-save-lives/) in Harvard
+      Petrie-Flom blog"
+    tags:
+      - OH
+  - note: "[New York Times editorial
+      board](https://www.nytimes.com/2019/08/20/opinion/erika-zak-organ-donor.h\
+      tml)"
+    tags:
+      - NY
+  - note: "[NY doctors, including Dr. Craig Spencer and Dr. Dara
+      Kass](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc\
+      3_e70640160570491b9855d21980e87092.pdf)"
+    tags:
+      - NY
+  - note: "[New York City-based OPO
+      LiveOnNY](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/5\
+      81bc3_ad2bfdb091974d62bc52596e06f8d848.pdf)"
+    tags:
+      - NY
+  - note: "[Rep. Grace
+      Meng](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc\
+      3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    tags:
+      - NY
+  - note: "[Rep. Thomas
+      Suozzi](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
+      bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    tags:
+      - NY
+  - note: "[Rep. Tom
+      Reed](https://www.finance.senate.gov/imo/media/doc/031621%20Bipartisan%20\
+      Bicameral%20HHS%20OPO%20Rule%20Support%20Letter.pdf)"
+    tags:
+      - NY
+  - note: "[Rep. Max
+      Rose](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc\
+      3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    tags:
+      - NY
+  - note: "[Greg Segal in Albuquerque
+      Journal](https://www.abqjournal.com/1522747/organ-donation-in-dire-need-o\
+      f-reforms.html)"
+    tags:
+      - NM
+  - note: "[Marissa Padilla in Albuquerque
+      Journal](https://www.abqjournal.com/1515216/modern-organ-donation-system-\
+      could-save-more-nm-lives.html)"
+    tags:
+      - NM
+  - note: "[Rep. Steven
+      Horsford](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/5\
+      81bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    tags:
+      - NV
+  - note: "[Missouri OPO CEO Diane
+      Brockmeier](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd\
+      /581bc3_2b0e0453d04b474cb26d7b7cd82da91d.pdf)"
+    tags:
+      - MO
+  - note: "[Senator Cindy
+      Hyde-Smith](https://www.congress.gov/bill/116th-congress/senate-bill/2063\
+      )"
+    tags:
+      - MS
+  - note: "[Dr. Tim
+      Pruett](http://www.startribune.com/organ-donation-a-better-system-could-s\
+      ave-thousands-of-lives/507749852/)"
+    tags:
+      - MN
+  - note: "[Andy Slavitt, former Obama and Biden senior
+      official](https://www.usatoday.com/story/opinion/2019/12/11/organ-donatio\
+      n-reform-could-save-thousands-lives-billions-taxes-column/4377383002/)"
+    tags:
+      - MN
+  - note: "[Minneapolis Star Tribune editorial
+      board](http://www.startribune.com/too-many-americans-die-while-waiting-fo\
+      r-gift-of-life/563241112/)"
+    tags:
+      - MN
+  - note: "[Lansing State
+      Journal](https://www.lansingstatejournal.com/story/opinion/contributors/v\
+      iewpoints/2020/12/22/new-organ-transplant-reforms-save-lives/4006015001/)"
+    tags:
+      - MI
+  - note: "[Jerry Mande
+      (Tufts)](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/c1\
+      14f6_b6fd6a59c60a43d0bc8f33386ebd11b3.pdf)"
+    tags:
+      - MA
+  - note: "[Harvard Law School Petrie-Flom
+      Center](https://blog.petrieflom.law.harvard.edu/2021/02/05/recent-organ-p\
+      rocurement-organization-regulations-will-save-lives/)"
+    tags:
+      - MA
+  - note: "[Dr. Jeremy
+      Faust](https://twitter.com/jeremyfaust/status/1389326765940568065)"
+    tags:
+      - MA
+  - note: "[Senator Elizabeth
+      Warren](https://www.warren.senate.gov/oversight/letters/senators-warren-a\
+      nd-blumenthal-request-information-about-oversight-of-organ-procurement-or\
+      ganizations-opos)"
+    tags:
+      - MA
+  - note: "[Rep. Jamie
+      Raskin](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
+      bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    tags:
+      - MD
+  - note: "[Baltimore Corps CEO Fagan
+      Harris](https://twitter.com/oversightdems/status/1388204146969427971?s=10\
+      )"
+    tags:
+      - MD
+  - note: "[Senator Ben
+      Cardin](https://www.finance.senate.gov/imo/media/doc/031621%20Bipartisan%\
+      20Bicameral%20HHS%20OPO%20Rule%20Support%20Letter.pdf)"
+    tags:
+      - MD
+  - note: "[Ben
+      Jealous](https://www.healthaffairs.org/do/10.1377/hblog20201211.229975/fu\
+      ll/)"
+    tags:
+      - MD
+  - note: "[Louisiana OPO CEO Kelly
+      Ranum](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581b\
+      c3_2b0e0453d04b474cb26d7b7cd82da91d.pdf)"
+    tags:
+      - LA
+  - note: "[Rep. John
+      Yarmuth](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/58\
+      1bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    tags:
+      - KY
+  - note: "[Rep. James
+      Comer](https://www.finance.senate.gov/imo/media/doc/031621%20Bipartisan%2\
+      0Bicameral%20HHS%20OPO%20Rule%20Support%20Letter.pdf)"
+    tags:
+      - KY
+  - note: "[Kentucky kidney patient testifies before House Oversight
+      Committee](https://youtu.be/TnKo8Q-Hemk?t=827)"
+    tags:
+      - KY
+  - note: "[University of Kentucky
+      doctors](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/58\
+      1bc3_a695046dc1c048d39536cae6c154eadc.pdf)"
+    tags:
+      - KY
+  - note: "[Dr. Malay Shah, University of
+      Kentucky](https://www.courier-journal.com/story/opinion/2020/12/04/organ-\
+      transplants-reforms-opos-lead-more-organ-donors/3798051001/)"
+    tags:
+      - KY
+  - note: "[Rep. Cindy
+      Axne](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc\
+      3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    tags:
+      - IA
+  - note: "[Iowa heart transplant recipient Michael
+      Kutcher](https://twitter.com/oversightdems/status/1388204146969427971?s=1\
+      0)"
+    tags:
+      - IA
+  - note: "[Senator Chuck
+      Grassley](https://www.finance.senate.gov/ranking-members-news/grassley-wy\
+      den-subpoena-the-united-network-for-organ-sharing-as-part-of-continued-in\
+      vestigation-into-us-organ-transplant-system)"
+    tags:
+      - IA
+  - note: "[Rep. Larry Bucshon, Co-chair of House Kidney
+      Caucus](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
+      bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    tags:
+      - IN
+  - note: "[Gift of Hope OPO
+      Statement](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/\
+      581bc3_cf8ab4dc8e6744419eee63c3deec8993.pdf)"
+    tags:
+      - IN
+  - note: "[Rep. Danny
+      Davis](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581b\
+      c3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    tags:
+      - IL
+  - note: "[Gift of Hope, Chicago-based
+      OPO](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc3\
+      _cf8ab4dc8e6744419eee63c3deec8993.pdf)"
+    tags:
+      - IL
+  - note: "[Chicago Tribune: letter to the
+      editor](https://www.chicagotribune.com/opinion/letters/ct-letters-vp-1031\
+      20-20201030-tr6q64dknvfzhfv4zdwzxsok24-story.html)"
+    tags:
+      - IL
+  - note: "[Rep. Buddy
+      Carter](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
+      bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    tags:
+      - GA
+  - note: "[Rep. Neal
+      Dunn](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc\
+      3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    tags:
+      - FL
+  - note: "[Orlando OPO CEO Ginny
+      McBride](https://morningconsult.com/opinions/organ-donation-can-save-more\
+      -lives-through-reform/)"
+    tags:
+      - FL
+  - note: "[Senator Richard
+      Blumenthal](https://www.warren.senate.gov/oversight/letters/senators-warr\
+      en-and-blumenthal-request-information-about-oversight-of-organ-procuremen\
+      t-organizations-opos)"
+    tags:
+      - CT
+  - note: "[Rep. Diana DeGette, Co-chair, Diabetes
+      Caucus](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
+      bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    tags:
+      - CO
+  - note: "[Senator Michael
+      Bennet](https://www.congress.gov/bill/116th-congress/senate-bill/2063)"
+    tags:
+      - CO
+  - note: "[Nobel Laureate Al Roth
+      (Stanford)](https://www.statnews.com/2021/04/02/reforming-and-improving-o\
+      rgan-transplant-systems-will-save-lives-taxpayer-dollars/)"
+    tags:
+      - CA
+  - note: "[San Francisco OPO CEO Janice
+      Whaley](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
+      bc3_2b0e0453d04b474cb26d7b7cd82da91d.pdf)"
+    tags:
+      - CA
+  - note: "[Rep. Mark DeSaulnier](https://youtu.be/TnKo8Q-Hemk?t=5189)"
+    tags:
+      - CA
+  - note: "[Kidney patient Tonya Ingram testifies before House Oversight
+      Committee](https://youtu.be/TnKo8Q-Hemk?t=129)"
+    tags:
+      - CA
+  - note: "[Rep. Karen
+      Bass](https://drive.google.com/file/d/1FJy3StR9TOdv-LlsXqU22P2QNeRjAJkB/v\
+      iew?usp=sharing)"
+    tags:
+      - CA
+  - note: "[Rep. Katie
+      Porter](https://drive.google.com/file/d/1FJy3StR9TOdv-LlsXqU22P2QNeRjAJkB\
+      /view?usp=sharing)"
+    tags:
+      - CA
+  - note: "[U.S. Attorney Joyce
+      Vance](https://archives.fbi.gov/archives/birmingham/press-releases/2012/f\
+      ormer-alabama-organ-center-executive-sentenced-for-fraud)"
+    tags:
+      - AL
+  - note: "[Rep. Terri
+      Sewell](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
+      bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    tags:
+      - AL
   - note: "[Dr. Jayme Locke, University of
       Alabama](https://www.healthaffairs.org/do/10.1377/hblog20201211.229975/fu\
       ll/)"
