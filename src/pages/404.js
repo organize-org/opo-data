@@ -6,7 +6,7 @@ import Layout from "../components/layout/layout";
 
 import * as styles from "./404.module.css";
 
-export default function Dashboard() {
+export default function NotFound() {
   return (
     <Layout>
       <div className={styles.error}>

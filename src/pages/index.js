@@ -6,11 +6,12 @@ import ReactMarkdown from "react-markdown";
 import ReactPlayer from "react-player";
 import Select from "react-select";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { BgImage } from "gbimage-bridge";
 
+import EquitySection from "../components/equitySection/equitySection";
 import Layout from "../components/layout/layout";
 import Map from "../components/map/map";
 import Social from "../components/social/social";
+import QuoteWithImage from "../components/quoteWithImage/quoteWithImage";
 import useDataMaps from "../hooks/useDataMaps";
 
 import * as styles from "./index.module.css";
@@ -76,21 +77,8 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
           </Col>
         ))}
       </Row>
-      <Row>
-        <BgImage
-          className={styles.quoteImgBackground}
-          image={getImage(quoteImage)}
-        >
-          <Col className={styles.quoteSection} md={{ span: 5, offset: 6 }}>
-            <figure>
-              <blockquote>{quote.quote}</blockquote>
-            </figure>
-            <figcaption>
-              &mdash; <cite>{quote.attribution}</cite>
-            </figcaption>
-          </Col>
-        </BgImage>
-      </Row>
+      <QuoteWithImage image={getImage(quoteImage)} quote={quote} />
+      <EquitySection />
       <Row className={`mx-5 ${styles.videoSection}`}>
         <Col className="mx-5">
           <Row>
@@ -162,7 +150,7 @@ export const query = graphql`
         }
       }
     }
-    quoteImage: file(relativePath: { eq: "images/quoteImage.png" }) {
+    quoteImage: file(relativePath: { eq: "images/quotes/main.png" }) {
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }

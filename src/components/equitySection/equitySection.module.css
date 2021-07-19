@@ -1,0 +1,24 @@
+.background {
+  background-position: right;
+}
+
+.lg {
+  margin: 4rem 6rem;
+}
+
+.lg .copy {
+  margin: 4rem 6rem;
+}
+
+.lg h4 {
+  font-weight: 600;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+}
+
+.sm .copy {
+  background-color: var(--opoWhiteSmoke);
+  margin-top: 15rem;
+  opacity: 0.9;
+  padding: 1.5rem;
+}
