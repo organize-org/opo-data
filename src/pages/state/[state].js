@@ -6,6 +6,7 @@ import { graphql, navigate } from "gatsby";
 import booleanIntersects from "@turf/boolean-intersects";
 
 import DemographicTable from "../../components/demographicTable/demographicTable";
+import EquitySection from "../../components/equitySection/equitySection";
 import Layout from "../../components/layout/layout";
 import Map from "../../components/map/map";
 import OpoTable from "../../components/opoTable/opoTable";
@@ -20,7 +21,7 @@ import {
 import * as styles from "./state.module.css";
 import content from "./[state].content.yml";
 
-export default function Dashboard({ data: { statesGeoData }, state = "DC" }) {
+export default function State({ data: { statesGeoData }, state = "DC" }) {
   const [{ opoDataMap, stateDataMap }] = useDataMaps();
 
   const notesByOpo = content?.notes?.reduce(
@@ -209,6 +210,7 @@ export default function Dashboard({ data: { statesGeoData }, state = "DC" }) {
             dimensions={{ height: "30rem", width: "35rem" }}
             state={stateData.abbreviation}
           />
+          <EquitySection size="sm" />
         </Col>
       </Row>
     </Layout>

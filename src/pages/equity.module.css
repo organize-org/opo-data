@@ -1,0 +1,79 @@
+.topBar {
+  margin: 2rem 0;
+  font-size: 1.15rem;
+}
+
+.topBar h2 {
+  color: var(--opoBlack);
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.main,
+.heading {
+  margin: 3rem;
+}
+
+.main h3 {
+  text-transform: none;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main table th {
+  font-size: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main table td {
+  font-weight: 700;
+  text-align: center;
+}
+
+.smallQuote {
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.steps > * {
+  margin-top: 2rem;
+}
+
+.steps h4 {
+  margin-top: 0;
+}
+
+.step {
+  border-radius: 25px;
+  height: 100%;
+  width: 40px;
+}
+
+.step span {
+  border-radius: 50%;
+  background-color: var(--opoWhiteSmoke);
+  display: inline-block;
+  line-height: 30px;
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+  text-align: center;
+}
+
+.darkRed {
+  background-color: #920303;
+}
+
+.lightRed {
+  background-color: #d43c37;
+}
+
+.yellow {
+  background-color: #ffb042;
+}

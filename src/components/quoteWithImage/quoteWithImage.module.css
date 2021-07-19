@@ -1,0 +1,40 @@
+.left {
+  background-position: right;
+}
+
+.right {
+  background-position: left;
+  background-size: contain;
+}
+
+.background {
+  background-blend-mode: multiply;
+  background-color: #b00e0c;
+  width: 100%;
+}
+
+.quote {
+  color: var(--opoWhiteSmoke);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+  padding: 4rem 0;
+}
+
+.quote blockquote {
+  text-indent: -3em;
+  quotes: "\201C""\301E""\2018""\2019";
+}
+
+.quote blockquote::before {
+  content: open-quote;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 4em;
+  line-height: 0.005em;
+  margin-right: 0.25em;
+  vertical-align: -0.45em;
+}
+
+.quote blockquote::after {
+  content: close-quote;
+}
