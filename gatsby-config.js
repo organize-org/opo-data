@@ -138,6 +138,13 @@ module.exports = {
                             name: "attribution",
                             widget: "string",
                           },
+                          {
+                            label: "Image",
+                            name: "image",
+                            allow_multiple: false,
+                            media_folder: "../images/quotes",
+                            widget: "image",
+                          },
                         ],
                       },
                       {
@@ -312,6 +319,145 @@ module.exports = {
                             options: [...opoOptions, ...stateOptions],
                           },
                         ],
+                      },
+                    ],
+                  },
+                  {
+                    label: "Equity Page",
+                    name: "equity",
+                    file: "src/pages/equity.content.yml",
+                    fields: [
+                      {
+                        label: "Top quote",
+                        name: "topQuote",
+                        widget: "object",
+                        fields: [
+                          { label: "Quote", name: "quote", widget: "string" },
+                          {
+                            label: "Attribution",
+                            name: "attribution",
+                            widget: "string",
+                          },
+                          {
+                            label: "Image",
+                            name: "image",
+                            allow_multiple: false,
+                            media_folder: "../images/quotes",
+                            widget: "image",
+                          },
+                        ],
+                      },
+                      {
+                        label: "Bottom quote",
+                        name: "bottomQuote",
+                        widget: "object",
+                        fields: [
+                          { label: "Quote", name: "quote", widget: "string" },
+                          {
+                            label: "Attribution",
+                            name: "attribution",
+                            widget: "string",
+                          },
+                          {
+                            label: "Image",
+                            name: "image",
+                            allow_multiple: false,
+                            media_folder: "../images/quotes",
+                            widget: "image",
+                          },
+                        ],
+                      },
+                      {
+                        label: "Embedded",
+                        name: "embedded",
+                        widget: "object",
+                        collapsed: false,
+                        fields: [
+                          {
+                            label: "Heading",
+                            name: "heading",
+                            widget: "string",
+                          },
+                          {
+                            label: "Description",
+                            name: "description",
+                            widget: "markdown",
+                          },
+                          {
+                            label: "Link Text",
+                            name: "link",
+                            widget: "string",
+                          },
+                        ],
+                      },
+                      {
+                        label: "Tables",
+                        name: "tables",
+                        widget: "object",
+                        collapsed: false,
+                        fields: [
+                          {
+                            label: "Table 1 Heading",
+                            name: "table1Heading",
+                            widget: "string",
+                          },
+                          {
+                            label: "Table 2 Heading",
+                            name: "table2Heading",
+                            widget: "string",
+                          },
+                        ],
+                      },
+                      {
+                        label: "Funnel",
+                        name: "funnel",
+                        widget: "object",
+                        collapsed: false,
+                        fields: [
+                          {
+                            label: "Heading",
+                            name: "heading",
+                            widget: "string",
+                          },
+                          {
+                            label: "Steps",
+                            name: "steps",
+                            widget: "list",
+                            allow_add: false,
+                            collapsed: false,
+                            fields: [
+                              {
+                                label: "Heading",
+                                name: "heading",
+                                widget: "string",
+                              },
+                              {
+                                label: "Description",
+                                name: "description",
+                                widget: "markdown",
+                              },
+                            ],
+                          },
+                        ],
+                      },
+                      {
+                        label: "Small quotes",
+                        name: "smallQuotes",
+                        widget: "list",
+                        collapsed: false,
+                        fields: [
+                          { label: "Quote", name: "quote", widget: "string" },
+                          {
+                            label: "Attribution",
+                            name: "attribution",
+                            widget: "string",
+                          },
+                        ],
+                      },
+                      {
+                        label: "Tweet ID",
+                        name: "tweet",
+                        widget: "string",
                       },
                     ],
                   },

@@ -19,6 +19,7 @@ import content from "./index.content.yml";
 
 export default function Dashboard({ data: { articleImages, quoteImage } }) {
   const [{ stateDataMap }] = useDataMaps();
+
   const [popoutAbbreviation, setPopoutAbbrevation] = useState(null);
 
   const { articles, stats, quote, video } = content;
@@ -75,7 +76,7 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
           </Col>
         ))}
       </Row>
-      <QuoteWithImage image={getImage(quoteImage)} quote={quote} />
+      <QuoteWithImage quote={quote} />
       <EquitySection />
       <Row className={`mx-5 ${styles.videoSection}`}>
         <Col className="mx-5">
@@ -138,11 +139,6 @@ export const query = graphql`
             gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
           }
         }
-      }
-    }
-    quoteImage: file(relativePath: { eq: "images/quotes/mainPage.png" }) {
-      childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }
     }
   }
