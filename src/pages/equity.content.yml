@@ -1,7 +1,9 @@
 topQuote:
-  quote: The burden of OPO failures is disproportionately borne by patients of
-    color, making OPO reform an urgent health care equity issue.
-  attribution: House Oversight Committee
+  quote: The COVID-19 pandemic is exacerbating the need for organs now and
+    creating an urgent health equity issue, as communities of color are
+    disproportionately impacted by the failures of the current organ donation
+    system and the effects of COVID-19.
+  attribution: Bipartisan/Bicameral Congressional Leaders
   image: ../images/quotes/equity-head.jpg
 bottomQuote:
   quote: The reality is that the U.S. organ donation system is broken.... Both
@@ -70,4 +72,7 @@ smallQuotes:
       donor families and patients of color who need an organ experience
       different treatments and a system deeply rooted in inequity.
     attribution: Global Liver Institute
+  - quote: We must confront the racial injustices in our organ transplantation
+      system as a matter of life and death.
+    attribution: Congresswoman Ayanna Pressley
 tweet: "1388204146969427971"
