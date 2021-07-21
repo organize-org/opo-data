@@ -2,14 +2,14 @@ stats:
   - title: National waitlist as of June 1, 2021
     value: 107,419
   - title: Number of Americans projected to die before an OPO loses its contract
-    value: 60,000
+    value: 60,000+
   - title: Average reported CEO compensation for failing OPOS (2019)
     value: $535,630
 quote:
   quote: An astounding lack of accountability and oversight in the nation’s
     creaking, monopolistic organ transplant system is allowing hundreds of
     thousands of potential organ donations to fall through the cracks.
-  attribution: NYT editorial board
+  attribution: <a href="http://www.nytimes.com">NYT editorial board</a>
   image: ../images/quotes/mainPage.png
 video:
   title: Rep. Katie Porter Speaks About OPO Reform
