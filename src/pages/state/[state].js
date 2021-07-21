@@ -15,6 +15,7 @@ import {
   findStateFeature,
   formatStateName,
   formatNumber,
+  citations,
 } from "../../utils/utils";
 
 import * as styles from "./state.module.css";
@@ -101,6 +102,19 @@ export default function Dashboard({ data: { statesGeoData }, state = "DC" }) {
     tags.includes(stateData.abbreviation)
   );
 
+  // Citations
+  const citeIndex = citations.map(({ citation }, index) => (
+    <sup>
+      <a
+        style={{ textDecoration: "none", color: "red" }}
+        href="#citations"
+        target="_self"
+      >
+        {index + 1}
+      </a>
+    </sup>
+  ));
+
   return (
     <Layout>
       <Row className={styles.title}>
@@ -114,10 +128,10 @@ export default function Dashboard({ data: { statesGeoData }, state = "DC" }) {
           <Row className={styles.stats}>
             <Row className={styles.statsHeading}>
               <Col>
-                <h3>State Waitlist in 2021</h3>
+                <h3>State Waitlist in 2020 {citeIndex[2]}</h3>
               </Col>
               <Col>
-                <h3>Average CEO Compensation (2019)</h3>
+                <h3>Average CEO Compensation (2019) {citeIndex[1]}</h3>
               </Col>
               <Col>
                 <h3 className="red">
@@ -146,6 +160,8 @@ export default function Dashboard({ data: { statesGeoData }, state = "DC" }) {
             </Row>
           </Row>
           <OpoTable
+            citeIndex={citeIndex}
+            // citationsByHeading={citationsByHeading}
             citation="* Every organ that is not recovered because of OPO ineffective practices, transportation errors, or understaffing, results in another person dying while on the waitlist is a shadow death"
             heading={`OPOS Servicing ${stateData.name}`}
             opos={inStateOpos}
@@ -199,10 +215,22 @@ export default function Dashboard({ data: { statesGeoData }, state = "DC" }) {
           ) : null}
           <DemographicTable opos={inStateOpos} />
           <OpoTable
+            citeIndex={citeIndex}
+            // citationsByHeading={citationsByHeading}
             heading="OPO Performance in Nearby States"
             inState={false}
             opos={outOfStateOpos}
           />
+          <Row>
+            <h3>Citation Notes</h3>
+          </Row>
+          <Row id="citations">
+            {citations.map(({ citation }, index) => (
+              <p className="red">
+                {index + 1}. {citation}
+              </p>
+            ))}
+          </Row>
         </Col>
         <Col>
           <Map

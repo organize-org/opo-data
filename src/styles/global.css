@@ -63,3 +63,7 @@ a:hover {
 .red {
   color: var(--opoRed);
 }
+
+.center {
+  text-align: center;
+}

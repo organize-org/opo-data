@@ -35,3 +35,22 @@ export const formatPercent = percent =>
 
 export const formatStateName = ({ abbreviation, name }) =>
   `${name} (${abbreviation.toLocaleUpperCase()})`;
+
+export const citations = [
+  {
+    heading: "shadows",
+    citation: `[2020 CMS Final Organ Procurement Organization Rule](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to) `,
+  },
+  {
+    heading: "avgCeoComp",
+    citation: `Author's calculations; CEO pay figures are taken from each OPO's most recently listed 990 (as of 6/1/21) `,
+  },
+  {
+    heading: "waitlist",
+    citation: `Waitlists pulled from 'https://optn.transplant.hrsa.gov/data/view-data-reports/state-data/' (as of 6/1/21)`,
+  },
+  {
+    heading: "donors",
+    citation: `[2020 CMS Final Organ Procurement Organization Rule](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to) `,
+  },
+];

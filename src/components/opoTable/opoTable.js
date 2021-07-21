@@ -7,7 +7,7 @@ import Tier from "../tier/tier";
 
 import * as styles from "./opoTable.module.css";
 
-export default function OpoTable({ citation, opos, inState = true, heading }) {
+export default function OpoTable({ citeIndex, opos, inState = true, heading }) {
   if (!opos.length) return null;
 
   return (
@@ -31,9 +31,11 @@ export default function OpoTable({ citation, opos, inState = true, heading }) {
                 </>
               )}
               <th scope="col">Tier (2019)</th>
-              <th scope="col">Donors Needed</th>
-              <th scope="col" className="red">
-                Shadow Deaths*
+              <th scope="col" className="center">
+                Donors Needed{citeIndex[3]}
+              </th>
+              <th scope="col" className={`red center`}>
+                Shadow Deaths {citeIndex[0]}
               </th>
               {inState && <th scope="col">Under Investigation</th>}
             </tr>
@@ -79,11 +81,11 @@ export default function OpoTable({ citation, opos, inState = true, heading }) {
           </tbody>
         </Table>
       </Row>
-      {citation && (
+      {/* {citation && (
         <Row>
-          <h4 className="red">{citation}</h4>
+          <h4 className="red">{citationsByHeading.shadows.citation}</h4>
         </Row>
-      )}
+      )} */}
     </Row>
   );
 }
