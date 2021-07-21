@@ -6,8 +6,304 @@ citations:
   shadows: Every organ that is not recovered because of OPO ineffective practices,
     transportation errors, or understaffing, results in another person dying
     while on the waitlist is a shadow death
-videos: []
+videos:
+  - link: https://youtu.be/TnKo8Q-Hemk?t=2360
+    title: DC patient Donna Cryer testifies before House Oversight Committee
+    tags:
+      - DC
+  - title: "Ranking Member Rep. Michael Cloud at House Oversight hearing "
+    link: https://youtu.be/TnKo8Q-Hemk?t=1976
+    tags:
+      - TX
+  - link: https://youtu.be/TnKo8Q-Hemk?t=2748
+    title: Dr. Seth Karp (Vanderbilt) testifies before House Oversight Committee
+    tags:
+      - TN
+  - title: Senate Finance Chairman Ron Wyden at Confirmation Hearing for Secretary
+      Becerra
+    link: https://www.c-span.org/video/?c4948478/user-clip-opo-discussion
+    tags:
+      - OR
+  - title: OPO CEO Matt Wadsworth testifies before House Oversight Committee
+    link: https://youtu.be/TnKo8Q-Hemk?t=3401
+    tags:
+      - OH
+  - link: https://youtu.be/TnKo8Q-Hemk?t=4421
+    title: Chairwoman Carolyn Maloney in House Oversight hearing
+    tags:
+      - NY
+  - link: https://twitter.com/RepCori/status/1389700912617304065?s=20
+    title: "Rep. Cori Bush at House Oversight hearing "
+    tags:
+      - MO
+  - title: Rep. Ayanna Pressley at House Oversight Hearing
+    link: https://youtu.be/TnKo8Q-Hemk?t=5911
+    tags:
+      - MA
+  - link: https://youtu.be/TnKo8Q-Hemk?t=1634
+    title: Rep. Krishnamoorthi Chairs House Oversight Committee Hearing
+    tags:
+      - IL
+  - title: Senator Todd Young at Confirmation Hearing for Secretary Becerra
+    link: https://www.c-span.org/video/?c4948478/user-clip-opo-discussion
+    tags:
+      - IN
+  - title: Rep. Hank Johnson in COR hearing
+    link: https://youtu.be/TnKo8Q-Hemk?t=5532
+    tags:
+      - GA
+  - title: NBA Hall of Famer Alonzo Mourning
+    link: https://twitter.com/oversightdems/status/1388204146969427971?s=10
+    tags:
+      - FL
+  - link: https://youtu.be/TnKo8Q-Hemk?t=6352
+    title: Rep. Katie Porter at House Oversight Committee Hearing
+    tags:
+      - CA
+  - title: Patient advocates including Alonzo Mourning, Samantha Bee, and Jenna Zak
+    link: https://twitter.com/oversightdems/status/1388204146969427971?s=10
+    tags:
+      - AL
 notes:
+  - note: "[Washington
+      Post](https://www.washingtonpost.com/national/health-science/a-human-hear\
+      t-was-left-on-a-plane-revealing-how-organs-move-around-the-country/2018/1\
+      2/14/3aabe696-ffb7-11e8-862a-b6a6f3ce8199_story.html): “​​A human heart
+      was left on a plane, revealing how organs move around the country”"
+    tags:
+      - VA
+  - note: '[Project on Government
+      Oversight](https://www.pogo.org/investigation/2020/10/heartless-organ-donation-contractors-lobby-against-a-popular-health-care-initiative-while-pocketing-pandemic-relief-loans/):
+      “Heartless: Organ Donation Contractors Lobby Against a Popular Health Care
+      Initiative While Pocketing Pandemic Relief Loans"'
+    tags:
+      - VA
+  - note: "[Medscape](https://www.medpagetoday.com/surgery/transplantation/92446):
+      “Lawmakers Lambast Organ Procurement Lobbyists”"
+    tags:
+      - VA
+  - note: "[HHS Office of the Inspector
+      General](https://oig.hhs.gov/oas/reports/region9/91102039.pdf):
+      “LifeCenter Northwest Did Not Fully Comply with Medicare Requirements for
+      Reporting Organ Statistics in its Fiscal Year 2009 Medicare Cost Report"
+    tags:
+      - WA
+  - note: "[ABC
+      Nashville:](https://www.wkrn.com/washington/washington-dc/house-committee\
+      -investigates-broken-system-for-patients-on-organ-transplant-waitlist/)
+      “House committee investigates ‘broken system’ for patients on organ
+      transplant waitlist”"
+    tags:
+      - TN
+  - note: "[Fox 13
+      Memphis](https://www.fox13memphis.com/news/local/patients-urge-congress-r\
+      eform-organ-transplant-system/SNQGMPS5UVE7PHZ3PNRZVTCC64/): “Patients urge
+      Congress to reform organ transplant system”"
+    tags:
+      - TN
+  - note: "[Post and
+      Courier](https://www.postandcourier.com/news/after-blood-type-error-sc-or\
+      gan-network-faces-investigation-pressure-to-improve/article_c568faee-be28\
+      -11eb-baf7-1fffb4833e8c.html): “After blood-type error, SC organ network
+      faces investigation, pressure to improve”"
+    tags:
+      - SC
+  - note: "[Post and
+      Courier](https://www.postandcourier.com/health/he-died-when-he-got-the-wr\
+      ong-lungs-it-wasnt-the-only-organ-error-in/article_c6a6e386-e704-11ea-91c\
+      e-2783df6c6f2d.html): “He died when he got the wrong lungs. It wasn’t the
+      only organ error in SC that day.”"
+    tags:
+      - SC
+  - note: "[Project on Government
+      Oversight](https://www.pogo.org/investigation/2020/10/heartless-organ-don\
+      ation-contractors-lobby-against-a-popular-health-care-initiative-while-po\
+      cketing-pandemic-relief-loans/): “Heartless: Organ Donation Contractors
+      Lobby Against a Popular Health Care Initiative While Pocketing Pandemic
+      Relief Loans”"
+    tags:
+      - PA
+  - note: "[Pittsburgh-Tribune
+      Review:](https://archive.triblive.com/local/pittsburgh-allegheny/gift-of-\
+      life-worth-millions-to-donation-organizations/) “Gift of life worth
+      millions to donation organizations”"
+    tags:
+      - PA
+  - note: "[Pittsburgh
+      Tribune-Review:](https://archive.triblive.com/local/pittsburgh-allegheny/\
+      taxpayers-help-pay-for-organ-donor-groups-parties-rose-parade-expenses/)
+      “Taxpayers help pay for organ donor groups' parties, Rose Parade
+      expenses”[](https://archive.triblive.com/local/pittsburgh-allegheny/taxpa\
+      yers-help-pay-for-organ-donor-groups-parties-rose-parade-expenses/)"
+    tags:
+      - PA
+  - note: "[News 5
+      Cleveland](https://www.news5cleveland.com/news/local-news/investigations/\
+      uh-transplant-patient-receives-kidney-intended-for-another-hospital-offic\
+      ial-confirms): “UH transplant patient receives kidney intended for
+      another, hospital official confirms.”"
+    tags:
+      - OH
+  - note: "[Columbus
+      Dispatch](https://www.dispatch.com/story/news/2021/06/13/organ-transplant\
+      s-may-jump-7-300-year-under-new-federal-rules/7617863002/): “New federal
+      rules on organ transplants seek to boost numbers, increase
+      accountability”"
+    tags:
+      - OH
+  - note: "[CBS
+      News](https://www.cbsnews.com/news/anatomy-of-a-mistake-16-03-2003/):
+      “Anatomy of a Mistake”"
+    tags:
+      - NC
+  - note: "[USA
+      Today](https://www.usatoday.com/story/news/nation/2019/11/26/kidney-trans\
+      planted-into-wrong-patient-new-jersey-hospital-says/4314849002/):
+      “​​Hospital says donated kidney was transplanted into wrong patient in
+      NJ”"
+    tags:
+      - NJ
+  - note: "[Project on Government
+      Oversight](https://www.pogo.org/investigation/2020/10/heartless-organ-don\
+      ation-contractors-lobby-against-a-popular-health-care-initiative-while-po\
+      cketing-pandemic-relief-loans/): “Heartless: Organ Donation Contractors
+      Lobby Against a Popular Health Care Initiative While Pocketing Pandemic
+      Relief Loans”"
+    tags:
+      - NJ
+  - note: "[Oversight Subcommittee Expands Investigation into Fraud, Waste, and
+      Abuse in Organ Transplant
+      Industry](https://oversight.house.gov/news/press-releases/oversight-subco\
+      mmittee-expands-investigation-into-fraud-waste-and-abuse-in-organ)"
+    tags:
+      - NV
+  - note: "[Project on Government
+      Oversight](https://www.pogo.org/investigation/2020/10/heartless-organ-don\
+      ation-contractors-lobby-against-a-popular-health-care-initiative-while-po\
+      cketing-pandemic-relief-loans/): “Heartless: Organ Donation Contractors
+      Lobby Against a Popular Health Care Initiative While Pocketing Pandemic
+      Relief Loans”"
+    tags:
+      - NV
+  - note: "[Las Vegas
+      Journal-Review](https://www.reviewjournal.com/local/local-las-vegas/tissu\
+      e-donation-turns-into-nightmare-for-three-sisters/): “Tissue donation
+      turns into nightmare for three sisters”"
+    tags:
+      - NV
+  - note: "[The Nevada
+      Independent](https://thenevadaindependent.com/article/nevada-donor-networ\
+      k-under-congressional-scrutiny-for-spending-says-it-has-complied-with-the\
+      -law): “Nevada Donor Network, under congressional scrutiny for spending,
+      says it has complied with the law”"
+    tags:
+      - NV
+  - note: "[Las Vegas
+      Journal-Review](https://www.google.com/search?q=las+vegas+journal-review+\
+      nevada+organ+donor+group&oq=las+vegas+journal-review+nevada+organ+donor+g\
+      roup&aqs=chrome..69i57j33i160l3.4858j0j4&sourceid=chrome&ie=UTF-8#:~:text\
+      =Nevada%20organ%20donor%20group%20blasted,reviewjournal.com%20%E2%80%BA%2\
+      0news%20%E2%80%BA%20nevada-organ-...): “Nevada organ donor group blasted
+      for VGK, Raiders season tickets”"
+    tags:
+      - NV
+  - note: "[Fox 2 Now](https://fox2now.com/) (St. Louis): House committee
+      investigates ‘broken system’ for patients on organ transplant waitlist"
+    tags:
+      - MO
+  - note: "[Project on Government
+      Oversight](https://www.pogo.org/investigation/2020/10/heartless-organ-don\
+      ation-contractors-lobby-against-a-popular-health-care-initiative-while-po\
+      cketing-pandemic-relief-loans/): “Heartless: Organ Donation Contractors
+      Lobby Against a Popular Health Care Initiative While Pocketing Pandemic
+      Relief Loans”"
+    tags:
+      - MA
+  - note: "[NBC Springfield
+      MA](https://www.wwlp.com/video/house-committee-investigates-%e2%80%98brok\
+      en-system%e2%80%99-for-patients-on-organ-transplant-waitlist/6594868/):
+      “House committee investigates ‘broken system’ for patients on organ
+      transplant waitlist”"
+    tags:
+      - MA
+  - note: "[Washington
+      Post](https://www.washingtonpost.com/national/health-science/behind-the-f\
+      ailure-of-the-first-us-uterine-transplant/2019/02/13/6345f018-07c0-11e9-8\
+      5b6-41c0fe0c5b8f_story.html): “Behind the failure of the first U.S.
+      uterine transplant”"
+    tags:
+      - FL
+  - note: "[Miami
+      Herald](https://www.miamiherald.com/news/local/community/miami-dade/artic\
+      le8081760.html): “Doctor, nurse: UM administrator assaulted us”"
+    tags:
+      - FL
+  - note: "[Miami
+      Herald](https://www.miamiherald.com/news/health-care/article47968670.html\
+      ): “University of Miami organ bank fails to meet regulatory requirements”"
+    tags:
+      - FL
+  - note: "[Project on Government
+      Oversight](https://www.pogo.org/investigation/2020/10/heartless-organ-don\
+      ation-contractors-lobby-against-a-popular-health-care-initiative-while-po\
+      cketing-pandemic-relief-loans/): “Heartless: Organ Donation Contractors
+      Lobby Against a Popular Health Care Initiative While Pocketing Pandemic
+      Relief Loans”"
+    tags:
+      - CA
+  - note: "[HHS Office of the Inspector
+      General](https://oig.hhs.gov/oas/reports/region9/90800033.pdf): “Review of
+      OneLegacy’s Reported Fiscal Year 2006 Organ Acquisition Overhead Costs and
+      Administrative and General Costs”"
+    tags:
+      - CA
+  - note: "[LA
+      Times](https://www.latimes.com/business/la-fi-executives-coroners-body-pa\
+      rt-harvesting-secret-20190408-story.html): “Executives coached coroners on
+      how to keep body parts harvesting records secret”"
+    tags:
+      - CA
+  - note: "[LA
+      Times](https://www.latimes.com/business/la-fi-how-body-brokers-took-over-\
+      county-morgue-20190408-story.html):
+      [](https://www.latimes.com/business/la-fi-how-body-brokers-took-over-coun\
+      ty-morgue-20190408-story.html)“How organ and tissue donation companies
+      worked their way into the county morgue”"
+    tags:
+      - CA
+  - note: "[ABC 15
+      Arizona](https://www.abc15.com/news/region-southeast-valley/mesa/mesa-fam\
+      ily-pursues-legal-action-after-donor-network-of-arizona-wrongly-harvests-\
+      their-sons-corneas): “Mesa family takes legal action after Donor Network
+      of Arizona 'wrongly harvests' their son's corneas”"
+    tags:
+      - AZ
+  - note: "[HHS Office of Inspector
+      General](https://oig.hhs.gov/oas/reports/region9/91102035.pdf): “Donor
+      Network of Arizona Did Not Fully Comply With Medicare Requirements for
+      Reporting Organ Statistics and Related Costs in Its Fiscal Year 2009
+      Medicare Cost Report”"
+    tags:
+      - AZ
+  - note: "[Arizona
+      Republic](https://www.azcentral.com/story/news/local/arizona-health/2019/\
+      12/27/arizona-fares-better-than-most-for-organ-transplant-waiting-lists/4\
+      017173002/): “Arizona fares better than most in challenging environment
+      for organ transplants”"
+    tags:
+      - AZ
+  - note: "[CBS
+      News](https://www.cbsnews.com/news/whistleblower-threatened-with-being-cr\
+      emated-alive-after-exposing-mortuary-kickback-scheme/): “Whistleblower
+      threatened with being cremated alive after exposing mortuary kickback
+      scheme”"
+    tags:
+      - AL
+  - note: "[FBI](https://archives.fbi.gov/archives/birmingham/press-releases/2011/f\
+      ormer-alabama-organ-center-executives-charged-with-fraud): “Former Alabama
+      Organ Center Executives Charged with Fraud”"
+    tags:
+      - AL
   - note: "[Jennifer
       Erickson](https://www.washingtonpost.com/opinions/i-want-a-journalist-to-\
       see-what-happens-to-my-organs-after-i-die-heres-why/2019/10/04/42c5e888-e\
