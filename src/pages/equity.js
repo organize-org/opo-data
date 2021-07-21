@@ -40,26 +40,31 @@ export default function Equity({ data: { bottomImage, topImage } }) {
         }}
         side="left"
       />
-      <Row className={styles.heading}>
-        <h3>
-          Patients of color are less likely to receive organ transplants then
-          white patients
-        </h3>
-        <h4>To achieve health care equity, we must reform the system</h4>
-        <p>
-          In order to address the problem, people need to know there is a
-          problem. OPOs are failing people of color, and they need to be held
-          accountable.
-        </p>
-      </Row>
       <Row className={styles.main}>
+        <h3>
+          Patients of color are far more likely to need an organ transplant than
+          white Americans as a result of inferior service from OPOs
+        </h3>
         <Col md="7">
           <Row>
+            <p>
+              Patients of color are less likely to receive organ transplants
+              than white patients because of inferior OPO service. We must drive
+              reforms to hold OPOs accountable.
+            </p>
+            <p>
+              See our report cataloguing peer-reviewed research on the
+              inequitable service OPOs provide to different ethnic communities.
+              As bipartisan, bicameral Congressional leaders have written, OPO
+              reforms have “urgent implications for health equity”.
+            </p>
+          </Row>
+          <Row className={styles.tables}>
             <Col>
-              <h3>
+              <h4>
                 Likelihood of kidney failure compared to White Americans in the
                 U.S. by race
-              </h3>
+              </h4>
               <Table striped>
                 <thead>
                   <tr>
@@ -78,10 +83,10 @@ export default function Equity({ data: { bottomImage, topImage } }) {
               </Table>
             </Col>
             <Col>
-              <h3>
+              <h4>
                 Likelihood to have heptacellular carinoma* (HCC) compared to
                 White Americans in the U.S.
-              </h3>
+              </h4>
               <Table striped>
                 <thead>
                   <tr>
@@ -100,7 +105,7 @@ export default function Equity({ data: { bottomImage, topImage } }) {
             </Col>
           </Row>
           <Row className={styles.steps}>
-            <h3>How this plays out during the organ procurement process</h3>
+            <h4>How this plays out during the organ procurement process</h4>
             <Row>
               <Col md="1">
                 <div className={`${styles.step} ${styles.yellow}`}>
@@ -186,7 +191,7 @@ export default function Equity({ data: { bottomImage, topImage } }) {
         </Col>
         <Col md="4">
           <Row>
-            <h3>Voices for organ donation reform</h3>
+            <h4>Voices for organ donation reform</h4>
           </Row>
           <SmallQuote
             attribution="Alonzo Mourning"
@@ -214,7 +219,7 @@ export default function Equity({ data: { bottomImage, topImage } }) {
 
 export const query = graphql`
   query {
-    bottomImage: file(relativePath: { eq: "images/quotes/equitySection.png" }) {
+    bottomImage: file(relativePath: { eq: "images/quotes/equityPage.png" }) {
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }

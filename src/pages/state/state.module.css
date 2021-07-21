@@ -1,5 +1,13 @@
+.state {
+  justify-content: center;
+}
+
 .state > * {
-  margin: 0 2rem;
+  margin: 0 1rem;
+}
+
+.state h4 {
+  width: 100%;
 }
 
 .state > * > * {

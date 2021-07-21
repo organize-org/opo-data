@@ -23,8 +23,11 @@ import content from "./[state].content.yml";
 
 export default function State({ data: { statesGeoData }, state = "DC" }) {
   const [{ opoDataMap, stateDataMap }] = useDataMaps();
+  const { citations, notes, stats, videos } = content;
 
-  const notesByOpo = content?.notes?.reduce(
+  console.log({ citations }); // TODO: use
+
+  const notesByOpo = notes?.reduce(
     (notesMap, { note, tags }) => ({
       ...notesMap,
       ...tags.reduce(
@@ -95,10 +98,10 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
     waitlist: parseInt(stateData.waitlist),
   };
   // State-level the notes and videos
-  stateData.notes = content?.notes?.filter(({ tags }) =>
+  stateData.notes = notes?.filter(({ tags }) =>
     tags.includes(stateData.abbreviation)
   );
-  stateData.videos = content?.videos?.filter(({ tags }) =>
+  stateData.videos = videos?.filter(({ tags }) =>
     tags.includes(stateData.abbreviation)
   );
 
@@ -111,19 +114,17 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
         <Social />
       </Row>
       <Row className={styles.state}>
-        <Col>
+        <Col md="7">
           <Row className={styles.stats}>
             <Row className={styles.statsHeading}>
               <Col>
-                <h3>State Waitlist in 2021</h3>
+                <h3>{stats.waitlist}</h3>
               </Col>
               <Col>
-                <h3>Average CEO Compensation (2019)</h3>
+                <h3>{stats.comp}</h3>
               </Col>
               <Col>
-                <h3 className="red">
-                  {`Number of people in ${stateData.name} who died each month waiting for an organ`}
-                </h3>
+                <h3 className="red">{stats.monthly}</h3>
               </Col>
             </Row>
             <Row className={styles.statsPopout}>
@@ -193,7 +194,7 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
                 <Row key={`statewide-videos-${i}`}>
                   <ReactPlayer url={link} width={594} height={361} />
                   <h4>{title}</h4>
-                  <p>{description}</p>
+                  {description && <p>{description}</p>}
                 </Row>
               ))}
             </Row>
@@ -205,9 +206,9 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
             opos={outOfStateOpos}
           />
         </Col>
-        <Col>
+        <Col md="4">
           <Map
-            dimensions={{ height: "30rem", width: "35rem" }}
+            dimensions={{ height: "30rem", width: "100%" }}
             state={stateData.abbreviation}
           />
           <EquitySection size="sm" />

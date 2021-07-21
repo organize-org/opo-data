@@ -43,3 +43,28 @@ articles:
     source: Washington Post
     link: https://www.washingtonpost.com/health/organ-collection-agencies-told-to-improve-performance-or-face-tighter-rules/2021/05/04/68847bce-ad06-11eb-acd3-24b44a57093a_story.html
     image: ../images/articles/editorial3.png
+  - description: "In the more than 35 years since federal legislation created OPOs
+      to recover organs from deceased donors for transplantation, there has been
+      a disparity in their performance, with the best OPOs recovering organs
+      from four times as many donors as the worst OPOs by objective criteria. "
+    title: New Regulation for Organ Procurement Will Improve Equity and Save Lives
+    source: The Hastings Center
+    link: https://www.thehastingscenter.org/new-regulation-for-organ-procurement-will-improve-equity-and-save-lives/
+    image: ../images/articles/editorial4.png
+  - title: "Heartless: Organ Donation Contractors Lobby Against a Popular Health
+      Care Initiative While Pocketing Pandemic Relief Loans"
+    description: “This industry’s attempts to block efforts to implement metrics to
+      hold OPOs accountable for their poor performance only further underscores
+      the need for oversight.”
+    source: POGO.org
+    link: https://www.pogo.org/investigation/2020/10/heartless-organ-donation-contractors-lobby-against-a-popular-health-care-initiative-while-pocketing-pandemic-relief-loans/
+    image: ../images/articles/editorial5.png
+  - title: How organ and tissue donation companies worked their way into the county
+      morgue
+    link: https://www.latimes.com/business/la-fi-how-body-brokers-took-over-county-morgue-20190408-story.html
+    source: LATimes
+    description: Even before the new laws passed, coroners rarely said no when
+      companies asked to procure hearts, kidneys or other vital organs. But
+      coroners often rejected requests to harvest tissues such as skin and bone
+      when they thought it would upend a death investigation.
+    image: ../images/articles/editorial6.png

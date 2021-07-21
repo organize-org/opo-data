@@ -10,14 +10,13 @@
   padding: 0.5rem 1rem;
 }
 
-.topBar > * > * {
+.topBar > * {
   margin: auto;
 }
 
 .topBar p {
   line-height: 2;
-  text-align: right;
-  margin: 0;
+  margin: auto 2rem;
 }
 
 .topBarSelect {
@@ -33,9 +32,9 @@
 
 .statsSection p {
   color: var(--opoRed);
-  font-size: 4rem;
+  font-size: 3rem;
   line-height: 1.15;
-  margin-top: 1rem;
+  margin: 1rem;
 }
 
 .videoSection {
@@ -47,12 +46,23 @@
 }
 
 .articlesSection {
+  justify-content: center;
   line-height: 2rem;
   margin: 4rem 0;
 }
 
+.articlesSection > * {
+  display: flex;
+  flex-direction: column;
+}
+
 .articlesSection h3 {
   margin-top: 2rem;
+}
+
+.articlesSection a {
+  margin-top: auto;
+  margin-bottom: 1rem;
 }
 
 .articlesSection p {

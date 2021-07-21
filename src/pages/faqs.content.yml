@@ -1,0 +1,220 @@
+sections:
+  - heading: Let’s start with the basics
+    qanda:
+      - question: What are OPOs?
+        answer: >-
+          Organ procurement organizations (OPOs) are federal contractors in
+          charge of coordinating the recovery of transplantable organs from
+          medically eligible organ donors in their region. When someone dies in
+          a manner that qualifies for organ donation (e.g., strokes, traumas,
+          opioid
+
+          overdose), the role of the OPO is to show up at the hospital and talk with that patient’s next of kin about organ donation.
+
+
+          Contrary to popular belief, even if someone was not registered as an organ donor during their
+
+          lifetime, their next of kin can still authorize donation. This underscores the importance of a well-functioning system: the biggest predictor of donation rates is the strength of that OPO’s
+
+          management team. Which OPO services a region can have an enormous effect on whether or
+
+          not an organ is actually procured for transplant, and performance varies by [as much as 470%](https://bloomworks.digital/organdonationreform/Summary/)
+      - answer: Historically, the Organ Procurement Organization Certification Act has
+          been interpreted as precluding the creation of new or additional OPOs,
+          although the actual statutory language does not seem to ban this
+          explicitly. There are currently 57 OPOs, each of which is legally
+          structured as a state-incorporated non-profit and has been awarded a
+          designation by HHS to operate.
+        question: "How does an organization become a designated OPO? "
+      - question: "What law authorizes OPOs and the current organ donation system? Has
+          it been reformed or changed since its first passage? "
+        answer: >-
+          The [two
+          laws](https://organdonationreform.netlify.app/assets/PDF/Policy_Chart.pdf)
+          most directly relevant to OPOs and the current organ donation system
+          are the National Organ Transplant Act of 1984 (NOTA) and the Public
+          Health Services Act amended by the Organ Procurement Organization
+          Certification Act.
+
+
+          NOTA created the Organ Procurement and Transplantation Network (OPTN), a federal contractor meant to manage the national organ donation system and oversee OPOs. However, the OPTN contract has long been [fraught with conflicts of interest](https://bloomworks.digital/organdonationreform/oversight/); in fact, [only one contractor](https://www.washingtonpost.com/national/health-science/a-plan-to-take-over-the-us-organ-network-is-thwarted/2018/08/03/93c0a4ba-972f-11e8-810c-5fa705927d54_story.html), the United Network for Organ Sharing (UNOS) has [ever bid](https://www.forbes.com/forbes/1999/1101/6411164a.html?sh=202082e1659f) on the OPTN contract.
+
+
+          In 2019, the [New York Times editorial board](https://www.nytimes.com/2019/08/20/opinion/erika-zak-organ-donor.html) highlighted that “a lack of competition has thwarted innovation, allowed [UNOS] to become mired in bureaucracy and made it resistant to change. Other groups have expressed interest in bidding against UNOS, but the government agency responsible for the contract has done little to encourage those bids” and called on the Department of Health and Human Services (HHS) to “revisit the UNOS monopoly.”
+
+
+          The Organ Procurement Organization Certification Act establishes the duration period for OPO contracts. Historically, these contracts have been awarded on 4-year cycles, though there has been some recent interest in compressing these contracts given the [performance failure](https://www.bridgespan.org/bridgespan/Images/articles/reforming-organ-donation-in-america/reforming-organ-donation-in-america-01-2019.pdf) and [patient safety lapses](https://www.postandcourier.com/health/he-died-when-he-got-the-wrong-lungs-it-wasnt-the-only-organ-error-in/article_c6a6e386-e704-11ea-91ce-2783df6c6f2d.html) documented at many OPOs.
+      - question: "Who oversees OPOs? "
+        answer: >-
+          OPO oversight is split across CMS and UNOS, which currently operates
+          as the OPTN (see
+
+          chart from the United States Digital Service outlining the [oversight bodies for OPOs](https://organdonationreform.netlify.app/assets/PDF/Governance_Map.pdf)). CMS is
+
+          responsible for re-certifying or decertifying OPOs based on their performance, although it should be noted that CMS has never once decertified an OPO.
+
+
+          UNOS also provides oversight over OPOs, although has also never taken any action against an
+
+          OPO. A report from alumni of the United States Digital Service has identified severe [“gaps,
+
+          conflicts, and impotencies”](https://bloomworks.digital/organdonationreform/oversight/) in the current organ donation governance and oversight structures.
+  - heading: Now let’s talk more about the details of OPO measurements and oversight.
+    qanda:
+      - question: What metrics are OPOs measured by? Have these measures changed at all?
+        answer: >-
+          Historically OPOs have been evaluated only on [self-interpreted and
+          self-reported performance
+
+          data](https://www.nytimes.com/2019/06/11/opinion/organ-transplant-deaths.html), which the Association of OPOs itself has argued are [vulnerable to manipulation and
+
+          gaming](https://obamawhitehouse.archives.gov/sites/default/files/omb/assets/oira_0938/0938_10292013b-1.pdf), and do not accurately reflect an OPOs performance. As a result, these metrics have
+
+          proven [functionally unenforceable](https://www.washingtonpost.com/national/despite-low-performance-organ-collection-group-gets-new-federal-contract/2019/02/04/9b9ba2aa-2895-11e9-b2fc-721718903bfc_story.html), and, despite severe performance failure across the OPO
+
+          industry, [no OPO](https://www.statnews.com/2019/07/24/a-simple-bureaucratic-organ-donation-fix-will-save-thousands-of-lives/) has ever lost its government contract.
+
+
+          In November 2020, the Department of Health and Human Services finalized [new regulations](https://www.cms.gov/files/document/112020-opo-final-rule-cms-3380-f.pdf) to
+
+          evaluate OPOs based on objective, government-held data, which were broadly supported by
+
+          bipartisan, [bicameral Congressional leaders](https://www.finance.senate.gov/imo/media/doc/031621%2520Bipartisan%2520Bicameral%2520HHS%2520OPO%2520Rule%2520Support%2520Letter.pdf) as well as [patient advocates and public health
+
+          experts](https://blog.petrieflom.law.harvard.edu/2021/02/05/recent-organ-procurement-organization-regulations-will-save-lives/). After a brief regulatory review period, the [Biden Administration](https://www.pogo.org/investigation/2021/04/americas-transformative-new-organ-donation-rule-goes-into-effect-over-objections-from-monopolistic-contractors/) implemented these new
+
+          metrics beginning in April, 2021. This newly-enabled OPO accountability is projected to save
+
+          more than [7,000](https://fas.org/press-release/fas-announces-organ-procurement-organization-innovation-cohort/) lives every year - [disproportionately among patients of color](https://www.healthaffairs.org/do/10.1377/hblog20201211.229975/full/) - as well as $1
+
+          billion to Medicare in avoided dialysis costs. 
+      - question: "Can OPOs perform better? "
+        answer: >-
+          Absolutely. In fact, the Centers for Medicare and Medicaid Services
+          projects that even bare
+
+          minimum OPO compliance with [newly finalized accountability standards](https://www.cms.gov/files/document/112020-opo-final-rule-cms-3380-f.pdf) will result in more than [7,000](https://www.finance.senate.gov/imo/media/doc/031621%2520Bipartisan%2520Bicameral%2520HHS%2520OPO%2520Rule%2520Support%2520Letter.pdf) additional lives saved every year.
+
+
+          Increased and sustained oversight is the single best solution for improving OPO performance.
+
+          As the [Washington Post editorial board](https://www.washingtonpost.com/opinions/many-die-waiting-for-organs-the-trump-administration-could-help/2020/07/31/77e3a102-dfd6-11e9-b199-f638bf2c340f_story.html) wrote: “in a system in which [OPOs] have an effective
+
+          monopoly on organ recovery within their zones, there are few incentives for them to improve
+
+          unless decertification is a serious possibility.”
+
+
+          Indeed, recent oversight has thus far proven effective. [Peer-reviewed](https://onlinelibrary.wiley.com/doi/abs/10.1111/ajt.16527) research finds that, from 2018 to 2019 (a year of extremely heightened OPO scrutiny, including an Executive Order and a
+
+          proposed rule pertaining to OPO evaluation), donation rates relative to actual potential grew by 12.3%; this represents a change of nearly **five times the median growth over the preceding
+
+          decade**, and seems to simply be a function of increased OPO effort.
+
+
+          In one of the most pronounced examples, [peer-reviewed research](https://onlinelibrary.wiley.com/doi/abs/10.1111/ajt.16442) finds, in response to
+
+          Congressional oversight from Senator Todd Young (R-IN), the Indiana OPO approached 57%
+
+          more families for donation than in the previous year and recovered 44% more donors.
+      - question: "Are there perverse incentives encouraging OPOs to perform poorly? "
+        answer: >-
+          The regulations by which OPOs have been evaluated historically—and by
+          which they will
+
+          continue to be evaluated until the new regulations are implemented in 2022—have been fraught with perverse incentives. For example, OPOs are evaluated on the percentage of “eligible donors” from whom they recover organs. However, OPOs will only deem a potential donor
+
+          “eligible” if the OPO actually shows up at the hospital and talks to the family. Historically, this has created a dynamic in which OPOs are only [half as likely to even respond](https://bloomworks.digital/organdonationreform/Inequity) to cases involving a Black donor versus a white donor, which [Reps. Porter (D-CA), Bass (D-CA), and
+
+          Krishnamoorthi (D-IL)](https://twitter.com/RepKatiePorter/status/1356713431332655104) have characterized as OPOs engaging in “racial profiling.”
+
+
+          Similarly, OPOs were historically evaluated on the average number of organs per donor it
+
+          recovered (a donor can have anywhere from 1 to 8 organs appropriate for transplant, which is
+
+          somewhat a function of how well the OPO clinically manages the case). However, this led OPOs to outright ignore cases in which a donor had only one or two organs available.
+
+
+          In 2013, the Association of OPOs wrote as much to the [White House Office of Management and
+
+          Budget](https://obamawhitehouse.archives.gov/sites/default/files/omb/assets/oira_0938/0938_10292013b-1.pdf) that “OPOs ‘game’ the processing of the [yield] standard by only targeting "high-yield"
+
+          organ candidates… This practice results in fewer organs being transplanted, and more lives
+
+          lost.”
+
+
+          OPOs are also funded on a [cost-reimbursement](https://www.bridgespan.org/bridgespan/Images/articles/transforming-organ-donation-in-america/transforming-organ-donation-in-america-dec2020-update.pdf) basis, with Medicare and transplant centers
+
+          covering 100 percent of costs for activities related to organ procurement. This arrangement
+
+          appears to be unique in US healthcare, and historically has been susceptible to [fraud, waste and abuse](https://oversight.house.gov/news/press-releases/oversight-subcommittee-expands-investigation-into-fraud-waste-and-abuse-in-organ), and has otherwise lead to an [unproductive allocation of taxpayer resources](https://archive.triblive.com/local/pittsburgh-allegheny/taxpayers-help-pay-for-organ-donor-groups-parties-rose-parade-expenses/).
+      - question: "What Congressional entities are investigating OPOs? "
+        answer: >-
+          The [Senate Finance
+          Committee](https://www.finance.senate.gov/imo/media/doc/2020-02-10%2520Grassley,%2520Wyden,%2520Young,%2520Cardin%2520to%2520UNOS%2520(Information%2520Request%2520on%2520Organ%2520Transplant%2520System).pdf)
+          initiated an investigation into UNOS in February 2020, writing:
+
+          “Recent reports of lapses in patient safety, misuse of taxpayer dollars, and tens of thousands of
+
+          organs going unrecovered or not transplanted lead us to question the adequacy of UNOS'
+
+          oversight of these OPOs.” In February 2021, after a year of noncompliance, the Committee
+
+          escalated its investigation to a [subpoena](https://www.finance.senate.gov/ranking-members-news/grassley-wyden-subpoena-the-united-network-for-organ-sharing-as-part-of-continued-investigation-into-us-organ-transplant-system).
+
+
+          The [House Oversight Committee](https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and) also launched a parallel investigation into OPOs in December 2020, highlighting: “serious concerns, including [poor performance](http://www.cms.gov/files/document/112020-opo-final-rule-cms-3380-f.pdf) under CMS’s new objective measures, exorbitant executive pay, [death and injury](http://www.postandcourier.com/health/he-died-when-he-got-the-wrong-lungs-it-wasnt-the-only-organ-error-in/article_c6a6e386-e704-11ea-91ce-2783df6c6f2d.html) caused by basic errors, [criminal convictions](https://archives.fbi.gov/archives/birmingham/press-releases/2012/former-alabama-organ-center-executive-sentenced-for-fraud) for kickback schemes, [improper payments from Medicare](https://oversight.house.gov/oig.hhs.gov/oas/reports/region9/90800033.pdf) for a Rose Bowl float and festivities, and potential impropriety and conflicts arising out of lucrative side businesses, such as a [private airline](https://txjet.org/faq/), [dialysis centers](https://dcids.org/history/), and tissue banks and processors.” In May 2021, this investigation escalated to a [bipartisan hearing](https://oversight.house.gov/news/press-releases/oversight-subcommittee-held-bipartisan-hearing-on-needed-reforms-in-organ).
+
+
+          In June 2021 the [Office of the Inspector General](https://oig.hhs.gov/reports-and-publications/workplan/summary/wp-summary-0000595.asp) also announced it will audit OPO finances and
+
+          publish its findings in 2022.
+      - question: "What are the next steps in OPO oversight? "
+        answer: >-
+          The [Senate Finance
+          Committee](https://www.finance.senate.gov/ranking-members-news/grassley-wyden-subpoena-the-united-network-for-organ-sharing-as-part-of-continued-investigation-into-us-organ-transplant-system)
+          and [House Oversight
+          Committee](https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)
+          investigations are ongoing.
+
+
+          Additionally, there is a push for HHS to support further reform. Both [Ben Jealous (past president
+
+          of the NAACP)](https://www.healthaffairs.org/do/10.1377/hblog20201211.229975/full/) and [Al Roth (Nobel Laureate)](https://www.statnews.com/2021/04/02/reforming-and-improving-organ-transplant-systems-will-save-lives-taxpayer-dollars/) have voiced support for an empowered Office of
+
+          Organ Policy at HHS, joining a chorus of patient advocates and other industry stakeholders. For
+
+          a more comprehensive explanation of the need for such an office, see a detailed report from
+
+          [here](https://bloomworks.digital/organdonationreform/oversight/). 
+  - heading: Finally, let’s talk about what this means for patients in 2021.
+    qanda:
+      - question: "How does COVID-19 impact organ donation? "
+        answer: >-
+          [COVID-19](https://bloomworks.digital/organdonationreform/COVID-19/),
+          which causes organ failure, has been shown to increase the need for
+          organ
+
+          transplants. In fact, leading nephrologists have predicted that “[the next epidemic](https://www.cnbc.com/2020/08/03/severe-covid-19-can-lead-to-kidney-failure-medical-studies-reveal.html) will be chronic kidney disease in the U.S. among those who recovered from the coronavirus”, and Kaiser Health News has reported that COVID-19 is creating a [“completely new category”](https://khn.org/news/article/covid-spawns-new-category-of-organ-transplants/) of patients who need organ transplants. As has been highlighted by [bipartisan, bicameral Congressional](https://www.finance.senate.gov/imo/media/doc/031621%2520Bipartisan%2520Bicameral%2520HHS%2520OPO%2520Rule%2520Support%2520Letter.pdf)
+
+          offices, this increases the urgency in enforcing the new OPO regulations.
+      - question: "Are there racial disparities in access to organ transplants? "
+        answer: >-
+          [Patients of
+          color](https://bloomworks.digital/organdonationreform/Inequity) are
+          far more likely to need an organ transplant than white Americans:
+          Hispanic Americans are 1.5 times more likely to have kidney failure;
+          Black Americans are 3 times more
+
+          likely to have kidney failure; Native Americans are 4 times more likely to have kidney failure; and Asian Americans are 4 times more likely to have hepatocellular carcinoma (HCC), one of the
+
+          most common indications for liver transplant. Despite this, people of color are significantly less likely to receive organ transplants.
+
+
+          This inequity results directly from OPO management decisions and practices. For example,
+
+          [research shows](https://www.healthaffairs.org/do/10.1377/hblog20201211.229975/full/) OPOs are only half as likely to even approach the family of a Black versus a
+
+          white donor, and that they provide far less compassionate service to families of Black versus white donors. Not only is this a grave disservice to donor families of color, but because same ethnicity donors and recipients are more likely to be clinical matches for transplant, fewer donors of color means there are fewer organs available for recipients of color, too. 

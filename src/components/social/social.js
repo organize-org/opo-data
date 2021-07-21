@@ -28,10 +28,8 @@ export default function Social() {
 
   return (
     <Col className={styles.social}>
-      <Col>
-        <p>Share this page</p>
-      </Col>
-      <Col>
+      <p>Share this page</p>
+      <Col className={styles.icons}>
         <CopyIcon
           className={styles.icon}
           onClick={() => {

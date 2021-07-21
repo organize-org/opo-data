@@ -164,7 +164,7 @@ module.exports = {
                         widget: "list",
                         allow_add: false,
                         collapsed: false,
-                        max: 3,
+                        max: 6,
                         fields: [
                           { label: "Link", name: "link", widget: "string" },
                           {
@@ -195,6 +195,80 @@ module.exports = {
                     file: "src/pages/state/[state].content.yml",
                     fields: [
                       {
+                        label: "Stat Headings",
+                        name: "stats",
+                        widget: "object",
+                        collapsed: false,
+                        fields: [
+                          {
+                            label: "Waitlist stat heading",
+                            name: "waitlist",
+                            widget: "string",
+                          },
+                          {
+                            label: "CEO comp stat heading",
+                            name: "comp",
+                            widget: "string",
+                          },
+                          {
+                            label: "Monthly dead stat heading",
+                            name: "monthly",
+                            widget: "string",
+                          },
+                        ],
+                      },
+                      {
+                        label: "Data Citations",
+                        name: "citations",
+                        widget: "object",
+                        collapsed: false,
+                        required: false,
+                        fields: [
+                          {
+                            label: "Name citation",
+                            name: "name",
+                            widget: "markdown",
+                            required: false,
+                          },
+                          {
+                            label: "Region citation",
+                            name: "region",
+                            widget: "markdown",
+                            required: false,
+                          },
+                          {
+                            label: "States citation",
+                            name: "states",
+                            widget: "markdown",
+                            required: false,
+                          },
+                          {
+                            label: "Tier citation",
+                            name: "tier",
+                            widget: "markdown",
+                            required: false,
+                          },
+                          {
+                            label: "Donors Needed citation",
+                            name: "donors",
+                            widget: "markdown",
+                            required: false,
+                          },
+                          {
+                            label: "Shadow Deaths citation",
+                            name: "shadows",
+                            widget: "markdown",
+                            required: false,
+                          },
+                          {
+                            label: "Under Investigation citation",
+                            name: "investigation",
+                            widget: "markdown",
+                            required: false,
+                          },
+                        ],
+                      },
+                      {
                         label: "Videos",
                         label_singular: "Video",
                         name: "videos",
@@ -208,6 +282,7 @@ module.exports = {
                             label: "Description",
                             name: "description",
                             widget: "markdown",
+                            required: false,
                           },
                           {
                             label: "Tags",
@@ -235,6 +310,44 @@ module.exports = {
                             widget: "select",
                             multiple: true,
                             options: [...opoOptions, ...stateOptions],
+                          },
+                        ],
+                      },
+                    ],
+                  },
+                  {
+                    label: "FAQs Page",
+                    name: "faqs",
+                    file: "src/pages/faqs.content.yml",
+                    fields: [
+                      {
+                        label: "Sections",
+                        name: "sections",
+                        widget: "list",
+                        collapsed: false,
+                        fields: [
+                          {
+                            label: "Heading",
+                            name: "heading",
+                            widget: "string",
+                          },
+                          {
+                            label: "Q and A",
+                            name: "qanda",
+                            widget: "list",
+                            collapsed: false,
+                            fields: [
+                              {
+                                label: "Question",
+                                name: "question",
+                                widget: "string",
+                              },
+                              {
+                                label: "Answer",
+                                name: "answer",
+                                widget: "markdown",
+                              },
+                            ],
                           },
                         ],
                       },

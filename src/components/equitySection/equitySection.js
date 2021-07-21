@@ -11,7 +11,7 @@ export default function EquitySection({ size = "lg" }) {
     graphql`
       query {
         equitySectionImg: file(
-          relativePath: { eq: "images/quotes/equitySection.png" }
+          relativePath: { eq: "images/quotes/equity.png" }
         ) {
           childImageSharp {
             gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
@@ -31,22 +31,25 @@ export default function EquitySection({ size = "lg" }) {
           className={styles.copy}
           md={size === "lg" ? { span: 6, offset: 5 } : null}
         >
-          <h3>
-            Patients of color are less likely to receive organ transplants then
-            white patients
-          </h3>
+          <h3>OPO Reform is and Urgent Equity Issue</h3>
           {size === "lg" && (
-            <h4>To achieve health care equity, we must reform the system</h4>
-          )}
-          {size === "lg" && (
-            <p>
-              In order to address the problem, people need to know there is a
-              problem. OPOs are failing people of color, and they need to be
-              held accountable.
-            </p>
+            <>
+              <p>
+                Patients of color are less likely to receive organ transplants
+                than white patients because of inferior OPO service. We must
+                drive reforms to hold OPOs accountable.
+              </p>
+              <p>
+                See our report cataloguing peer-reviewed research on the
+                inequitable service OPOs provide to different ethnic
+                communities. As bipartisan, bicameral Congressional leaders have
+                written, OPO reforms have “urgent implications for health
+                equity”.
+              </p>
+            </>
           )}
           <Link to="/equity">
-            Read are our findings on inequity in the organ donation process.
+            We must drive reforms to hold OPOs accountable.
           </Link>
         </Col>
       </BgImage>
