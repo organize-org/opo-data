@@ -1,0 +1,13 @@
+.faqs {
+  padding: 3rem 7rem;
+}
+
+.faqs h2 {
+  color: var(--opoBlack);
+  font-size: 3rem;
+  margin: 1rem;
+}
+
+.faqs h3 {
+  margin: 1rem 0;
+}

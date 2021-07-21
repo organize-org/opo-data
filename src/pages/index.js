@@ -34,28 +34,26 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
     <Layout>
       <Row className={styles.topBar}>
         <Col>
-          <Col>
-            <p>View state data:</p>
-          </Col>
-          <Col>
-            <Select
-              className={styles.topBarSelect}
-              value={
-                popoutAbbreviation
-                  ? {
-                      value: popoutAbbreviation,
-                      label: stateDataMap[popoutAbbreviation].name,
-                    }
-                  : null
-              }
-              onChange={({ value }) => setPopoutAbbrevation(value)}
-              options={Object.entries(stateDataMap).map(([key, { name }]) => ({
+          <p>View state data:</p>
+          <Select
+            className={styles.topBarSelect}
+            value={
+              popoutAbbreviation
+                ? {
+                    value: popoutAbbreviation,
+                    label: stateDataMap[popoutAbbreviation].name,
+                  }
+                : null
+            }
+            onChange={({ value }) => setPopoutAbbrevation(value)}
+            options={Object.entries(stateDataMap)
+              .sort()
+              .map(([key, { name }]) => ({
                 value: key,
                 label: name,
               }))}
-              placeholder="Select state"
-            />
-          </Col>
+            placeholder="Select state"
+          />
         </Col>
         <Social />
       </Row>
@@ -108,27 +106,19 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
       </Row>
       <Row className={`mx-4 ${styles.articlesSection}`}>
         {articles.map(({ description, title, image, link }) => (
-          <Col className="mx-4" key={title}>
-            <Row>
-              <GatsbyImage
-                image={getImage(articleImgsByPath[image])}
-                alt={title}
-              />
-            </Row>
-            <Row className="h-25">
-              <h3>{title}</h3>
-            </Row>
-            <Row className="h-25">
-              <ReactMarkdown>{description}</ReactMarkdown>
-            </Row>
-            <Row>
-              <a href={link} target="_blank" rel="noreferrer">
-                <h4>
-                  Read more
-                  <ArrowRight className={styles.rightArrow} />
-                </h4>
-              </a>
-            </Row>
+          <Col className="mx-5" md={3} key={title}>
+            <GatsbyImage
+              image={getImage(articleImgsByPath[image])}
+              alt={title}
+            />
+            <h3>{title}</h3>
+            <ReactMarkdown>{description}</ReactMarkdown>
+            <a href={link} target="_blank" rel="noreferrer">
+              <h4>
+                Read more
+                <ArrowRight className={styles.rightArrow} />
+              </h4>
+            </a>
           </Col>
         ))}
       </Row>
@@ -150,7 +140,7 @@ export const query = graphql`
         }
       }
     }
-    quoteImage: file(relativePath: { eq: "images/quotes/main.png" }) {
+    quoteImage: file(relativePath: { eq: "images/quotes/mainPage.png" }) {
       childImageSharp {
         gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
       }

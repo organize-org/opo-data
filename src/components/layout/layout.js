@@ -30,13 +30,9 @@ export default function Layout({ children }) {
           <h1>{site.siteMetadata.title}</h1>
           <h2>Performance Comparison</h2>
         </Link>
-        <a
-          href="https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc3_4344f40b3ba74ef4a7845cc1d4798120.pdf"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <p>About our Organ Donation System</p>
-        </a>
+        <Link to="/faqs">
+          <p>About Our Organ Donation System</p>
+        </Link>
       </Row>
       {children}
       <Row className={styles.footer}>

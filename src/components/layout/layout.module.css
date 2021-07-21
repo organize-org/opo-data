@@ -20,6 +20,7 @@
 .header p {
   color: var(--opoWhiteSmoke);
   font-size: 1rem;
+  margin: auto;
   text-decoration: underline;
 }
 

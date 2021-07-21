@@ -10,12 +10,6 @@
   margin: 4rem 6rem;
 }
 
-.lg h4 {
-  font-weight: 600;
-  margin-top: 0.5rem;
-  text-transform: uppercase;
-}
-
 .sm .copy {
   background-color: var(--opoWhiteSmoke);
   margin-top: 15rem;
