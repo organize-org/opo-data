@@ -81,11 +81,6 @@ export default function OpoTable({ citeIndex, opos, inState = true, heading }) {
           </tbody>
         </Table>
       </Row>
-      {/* {citation && (
-        <Row>
-          <h4 className="red">{citationsByHeading.shadows.citation}</h4>
-        </Row>
-      )} */}
     </Row>
   );
 }

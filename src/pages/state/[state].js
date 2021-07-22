@@ -161,7 +161,6 @@ export default function Dashboard({ data: { statesGeoData }, state = "DC" }) {
           </Row>
           <OpoTable
             citeIndex={citeIndex}
-            // citationsByHeading={citationsByHeading}
             citation="* Every organ that is not recovered because of OPO ineffective practices, transportation errors, or understaffing, results in another person dying while on the waitlist is a shadow death"
             heading={`OPOS Servicing ${stateData.name}`}
             opos={inStateOpos}
@@ -216,7 +215,6 @@ export default function Dashboard({ data: { statesGeoData }, state = "DC" }) {
           <DemographicTable opos={inStateOpos} />
           <OpoTable
             citeIndex={citeIndex}
-            // citationsByHeading={citationsByHeading}
             heading="OPO Performance in Nearby States"
             inState={false}
             opos={outOfStateOpos}
