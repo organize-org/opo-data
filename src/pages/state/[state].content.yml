@@ -2,10 +2,25 @@ stats:
   waitlist: State Waitlist in 2021
   comp: Average CEO Compensation (2019)
   monthly: Number of People In-state Who Died Each Month Waiting for an Organ
-citations:
-  shadows: Every organ that is not recovered because of OPO ineffective practices,
-    transportation errors, or understaffing, results in another person dying
-    while on the waitlist is a shadow death
+headings:
+  shadow:
+    citation: Every organ that is not recovered because of OPO ineffective
+      practices, transportation errors, or understaffing, results in another
+      person dying while on the waitlist is a shadow death
+    heading: Shadow Deaths
+  name:
+    heading: OPO Name
+  region:
+    heading: Region
+  states:
+    heading: States
+  tier:
+    heading: Tier
+    citation: "2019"
+  donors:
+    heading: Donors Needed
+  investigation:
+    heading: Under Investigation
 videos:
   - link: https://youtu.be/TnKo8Q-Hemk?t=2360
     title: DC patient Donna Cryer testifies before House Oversight Committee

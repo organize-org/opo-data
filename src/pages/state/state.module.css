@@ -2,7 +2,8 @@
   justify-content: center;
 }
 
-.state > * {
+.state > *,
+.citations {
   margin: 0 1rem;
 }
 
@@ -61,4 +62,28 @@
 
 .voices p {
   margin-bottom: 4.25rem;
+}
+
+.citations h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.citations ol {
+  counter-reset: li;
+  padding: 0;
+  list-style: none;
+}
+
+.citations li {
+  counter-increment: li;
+  display: flex;
+  font-size: 1rem;
+}
+
+.citations li::before {
+  color: var(--opoRed);
+  content: counter(li) ". ";
+  padding-right: 1rem;
 }
