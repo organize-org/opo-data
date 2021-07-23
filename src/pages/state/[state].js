@@ -39,7 +39,6 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
   // Map heading citations to ordered indexes
   const citations = [];
   Object.entries(headings).forEach(([key, { citation }]) => {
-    console.log(key);
     if (citation) {
       const newCitation = {
         copy: headings[key].citation,
