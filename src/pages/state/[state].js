@@ -37,19 +37,18 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
   );
 
   // Map heading citations to ordered indexes
-  let citationsCount = 0;
+  const citations = [];
   Object.entries(headings).forEach(([key, { citation }]) => {
+    console.log(key);
     if (citation) {
-      headings[key].citation = {
+      const newCitation = {
         copy: headings[key].citation,
-        index: ++citationsCount,
+        index: citations.length,
       };
+      headings[key].citation = newCitation;
+      citations.push(newCitation);
     }
   });
-  const citations = Object.values(headings)
-    .map(({ citation }) => citation)
-    .filter(c => !!c)
-    .sort((a, b) => a.index - b.index);
 
   // Find associated state data and feature by abbreviation, redirect if not found
   const stateData = stateDataMap[state.toLocaleUpperCase()];
