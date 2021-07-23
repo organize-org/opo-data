@@ -7,13 +7,30 @@ import Tier from "../tier/tier";
 
 import * as styles from "./opoTable.module.css";
 
-export default function OpoTable({ citation, opos, inState = true, heading }) {
+const Heading = ({ heading, citation, color }) => (
+  <th scope="col" className={color ?? null}>
+    {heading}
+    {citation && (
+      <sup>
+        <a
+          className={color ?? null}
+          href={`#citations-${citation.index}`}
+          target="_self"
+        >
+          {citation.index}
+        </a>
+      </sup>
+    )}
+  </th>
+);
+
+export default function OpoTable({ headings, inState = true, opos, title }) {
   if (!opos.length) return null;
 
   return (
     <Row className={styles.opoTable}>
       <Row>
-        <h3>{heading}</h3>
+        <h3>{title}</h3>
       </Row>
       <Row>
         <Table striped>
@@ -21,21 +38,19 @@ export default function OpoTable({ citation, opos, inState = true, heading }) {
             <tr>
               {inState ? (
                 <>
-                  <th scope="col">OPO Name</th>
-                  <th scope="col">Region</th>
+                  <Heading {...headings.name} />
+                  <Heading {...headings.region} />
                 </>
               ) : (
                 <>
-                  <th scope="col">States</th>
-                  <th scope="col">OPO Name</th>
+                  <Heading {...headings.states} />
+                  <Heading {...headings.name} />
                 </>
               )}
-              <th scope="col">Tier (2019)</th>
-              <th scope="col">Donors Needed</th>
-              <th scope="col" className="red">
-                Shadow Deaths*
-              </th>
-              {inState && <th scope="col">Under Investigation</th>}
+              <Heading {...headings.tier} />
+              <Heading {...headings.donors} />
+              <Heading {...{ ...headings.shadow, color: "red" }} />
+              {inState && <Heading {...headings.investigation} />}
             </tr>
           </thead>
           <tbody>
@@ -79,11 +94,6 @@ export default function OpoTable({ citation, opos, inState = true, heading }) {
           </tbody>
         </Table>
       </Row>
-      {citation && (
-        <Row>
-          <h4 className="red">{citation}</h4>
-        </Row>
-      )}
     </Row>
   );
 }

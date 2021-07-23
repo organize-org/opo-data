@@ -23,9 +23,7 @@ import content from "./[state].content.yml";
 
 export default function State({ data: { statesGeoData }, state = "DC" }) {
   const [{ opoDataMap, stateDataMap }] = useDataMaps();
-  const { citations, notes, stats, videos } = content;
-
-  console.log({ citations }); // TODO: use
+  const { headings, notes, stats, videos } = content;
 
   const notesByOpo = notes?.reduce(
     (notesMap, { note, tags }) => ({
@@ -37,6 +35,21 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
     }),
     {}
   );
+
+  // Map heading citations to ordered indexes
+  let citationsCount = 0;
+  Object.entries(headings).forEach(([key, { citation }]) => {
+    if (citation) {
+      headings[key].citation = {
+        copy: headings[key].citation,
+        index: ++citationsCount,
+      };
+    }
+  });
+  const citations = Object.values(headings)
+    .map(({ citation }) => citation)
+    .filter(c => !!c)
+    .sort((a, b) => a.index - b.index);
 
   // Find associated state data and feature by abbreviation, redirect if not found
   const stateData = stateDataMap[state.toLocaleUpperCase()];
@@ -148,9 +161,9 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
             </Row>
           </Row>
           <OpoTable
-            citation="* Every organ that is not recovered because of OPO ineffective practices, transportation errors, or understaffing, results in another person dying while on the waitlist is a shadow death"
-            heading={`OPOS Servicing ${stateData.name}`}
+            headings={headings}
             opos={inStateOpos}
+            title={`OPOS Servicing ${stateData.name}`}
           />
           {stateData.notes.length ||
           inStateOpos.some(({ notes }) => notes?.length) ? (
@@ -201,9 +214,10 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
           ) : null}
           <DemographicTable opos={inStateOpos} />
           <OpoTable
-            heading="OPO Performance in Nearby States"
+            headings={headings}
             inState={false}
             opos={outOfStateOpos}
+            title="OPO Performance in Nearby States"
           />
         </Col>
         <Col md="4">
@@ -214,6 +228,18 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
           <EquitySection size="sm" />
         </Col>
       </Row>
+      {citations?.length ? (
+        <Row className={styles.citations}>
+          <h3>Notes</h3>
+          <ol>
+            {citations.map(({ copy, index }) => (
+              <li id={`citations-${index}`} key={`citations-${index}`}>
+                <ReactMarkdown>{copy}</ReactMarkdown>
+              </li>
+            ))}
+          </ol>
+        </Row>
+      ) : null}
     </Layout>
   );
 }
