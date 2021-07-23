@@ -8,11 +8,11 @@
   white-space: nowrap;
 }
 
-.header > *:nth-child(2) {
+.logoText {
   margin-left: 1rem;
 }
 
-.header > *:nth-child(3) {
+.faqLink {
   position: absolute;
   right: 1rem;
 }
