@@ -23,7 +23,6 @@ export default function Layout({ children }) {
       <Row className={styles.header}>
         <Link to="/" className={styles.logoWithText}>
           <StaticImage
-            className={styles.headerImg}
             src="../../images/logo.png"
             alt="logo"
             loading="eager"
