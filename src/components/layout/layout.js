@@ -26,8 +26,6 @@ export default function Layout({ children }) {
             src="../../images/logo.png"
             alt="logo"
             placeholder="none"
-            layout="fixed"
-            loading="eager"
           />
           <div className={styles.logoText}>
             <h1>{site.siteMetadata.title}</h1>
