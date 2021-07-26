@@ -25,6 +25,8 @@ export default function Layout({ children }) {
           <StaticImage
             src="../../images/logo.png"
             alt="logo"
+            placeholder="none"
+            layout="fixed"
             loading="eager"
           />
           <div className={styles.logoText}>
