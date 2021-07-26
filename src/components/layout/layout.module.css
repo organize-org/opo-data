@@ -8,6 +8,11 @@
   white-space: nowrap;
 }
 
+.logoWithText {
+  display: flex;
+  align-items: center;
+}
+
 .logoText {
   margin-left: 1rem;
 }
@@ -27,6 +32,7 @@
 .headerImg {
   width: 3.5rem;
   height: 2.5rem;
+
 }
 
 .footer {

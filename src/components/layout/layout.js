@@ -21,7 +21,7 @@ export default function Layout({ children }) {
   return (
     <Container fluid>
       <Row className={styles.header}>
-        <Link to="/" style={{ display: "inline-flex" }}>
+        <Link to="/" className={styles.logoWithText}>
           <StaticImage
             className={styles.headerImg}
             src="../../images/logo.png"
