@@ -22,17 +22,17 @@ body {
 
 h1 {
   color: var(--opoWhiteSmoke);
-  font-size: 0.9rem;
+  font-size: 1.15rem;
   font-weight: 600;
-  line-height: 1.15;
+  line-height: 1;
   margin: 0;
 }
 
 h2 {
   color: var(--opoWhiteSmoke);
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 1.35;
+  font-size: 1.74rem;
+  font-weight: 600;
+  line-height: 1.25;
   margin: 0;
 }
 

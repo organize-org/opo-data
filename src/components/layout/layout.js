@@ -21,16 +21,18 @@ export default function Layout({ children }) {
   return (
     <Container fluid>
       <Row className={styles.header}>
-        <StaticImage
-          className={styles.headerImg}
-          src="../../images/logo.png"
-          alt="logo"
-        />
-        <Link to="/">
-          <h1>{site.siteMetadata.title}</h1>
-          <h2>Performance Comparison</h2>
+        <Link to="/" className={styles.logoWithText}>
+          <StaticImage
+            src="../../images/logo.png"
+            alt="logo"
+            placeholder="none"
+          />
+          <div className={styles.logoText}>
+            <h1>{site.siteMetadata.title}</h1>
+            <h2>Performance Comparison</h2>
+          </div>
         </Link>
-        <Link to="/faqs">
+        <Link to="/faqs" className={styles.faqLink}>
           <p>About Our Organ Donation System</p>
         </Link>
       </Row>

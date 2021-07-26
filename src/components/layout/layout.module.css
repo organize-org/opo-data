@@ -8,11 +8,16 @@
   white-space: nowrap;
 }
 
-.header > *:nth-child(2) {
+.logoWithText {
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
   margin-left: 1rem;
 }
 
-.header > *:nth-child(3) {
+.faqLink {
   position: absolute;
   right: 1rem;
 }
@@ -22,11 +27,6 @@
   font-size: 1rem;
   margin: auto;
   text-decoration: underline;
-}
-
-.headerImg {
-  width: 3.5rem;
-  height: 2.5rem;
 }
 
 .footer {
