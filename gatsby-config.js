@@ -169,9 +169,8 @@ module.exports = {
                         label: "Articles",
                         name: "articles",
                         widget: "list",
-                        allow_add: false,
+                        allow_add: true,
                         collapsed: false,
-                        max: 6,
                         fields: [
                           { label: "Link", name: "link", widget: "string" },
                           {
