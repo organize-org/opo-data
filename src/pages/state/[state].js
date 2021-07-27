@@ -12,7 +12,6 @@ import Map from "../../components/map/map";
 import OpoTable from "../../components/opoTable/opoTable";
 import Social from "../../components/social/social";
 import useDataMaps from "../../hooks/useDataMaps";
-
 import {
   findStateFeature,
   formatStateName,
@@ -200,7 +199,7 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
           {stateData.videos?.length ? (
             <Row className={styles.voices}>
               <Row>
-                <h3>Voices For Organ Donation Reform</h3>
+                <h3>Voices For Reform</h3>
               </Row>
               {stateData.videos.map(({ link, title, description }, i) => (
                 <Row key={`statewide-videos-${i}`}>
