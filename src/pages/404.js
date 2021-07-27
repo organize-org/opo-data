@@ -6,9 +6,9 @@ import Layout from "../components/layout/layout";
 
 import * as styles from "./404.module.css";
 
-export default function NotFound() {
+export default function NotFound({ location }) {
   return (
-    <Layout>
+    <Layout location={location} crumbLabel="Page Not Found">
       <div className={styles.error}>
         <Row>
           <h3>404</h3>

@@ -12,6 +12,7 @@ import Map from "../../components/map/map";
 import OpoTable from "../../components/opoTable/opoTable";
 import Social from "../../components/social/social";
 import useDataMaps from "../../hooks/useDataMaps";
+
 import {
   findStateFeature,
   formatStateName,
@@ -21,7 +22,11 @@ import {
 import * as styles from "./state.module.css";
 import content from "./[state].content.yml";
 
-export default function State({ data: { statesGeoData }, state = "DC" }) {
+export default function State({
+  location,
+  data: { statesGeoData },
+  state = "DC",
+}) {
   const [{ opoDataMap, stateDataMap }] = useDataMaps();
   const { headings, notes, stats, videos } = content;
 
@@ -117,7 +122,7 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
   );
 
   return (
-    <Layout>
+    <Layout location={location} crumbLabel={formatStateName(stateData)}>
       <Row className={styles.title}>
         <Col>
           <h2>{formatStateName(stateData)}</h2>

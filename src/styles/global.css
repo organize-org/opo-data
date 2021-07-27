@@ -63,3 +63,30 @@ a:hover {
 .red {
   color: var(--opoRed);
 }
+
+.breadcrumb {
+  background-color: transparent;
+}
+
+.breadcrumb__list {
+  display: inline-flex;
+  margin-top: 2.125rem;
+}
+
+.breadcrumb__item {
+  list-style: none;
+  font-size: 0.75rem;
+}
+
+.breadcrumb__link {
+  text-decoration: none;
+}
+
+.breadcrumb__link:nth-last-child(2) {
+  color: var(--opoTeal);
+}
+
+.breadcrumb__separator {
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
