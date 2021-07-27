@@ -148,6 +148,40 @@ module.exports = {
                         ],
                       },
                       {
+                        label: "Equity Embed",
+                        name: "equityEmbed",
+                        widget: "object",
+                        fields: [
+                          {
+                            label: "Attribution",
+                            name: "attribution",
+                            widget: "string",
+                          },
+                          {
+                            label: "Image",
+                            name: "image",
+                            allow_multiple: false,
+                            media_folder: "../images/quotes",
+                            widget: "image",
+                          },
+                          {
+                            label: "Heading",
+                            name: "heading",
+                            widget: "string",
+                          },
+                          {
+                            label: "Description",
+                            name: "description",
+                            widget: "markdown",
+                          },
+                          {
+                            label: "Link Text",
+                            name: "link",
+                            widget: "string",
+                          },
+                        ],
+                      },
+                      {
                         label: "Video",
                         name: "video",
                         widget: "object",
@@ -354,6 +388,40 @@ module.exports = {
                                 required: false,
                               },
                             ],
+                          },
+                        ],
+                      },
+                      {
+                        label: "Equity Embed",
+                        name: "equityEmbed",
+                        widget: "object",
+                        fields: [
+                          {
+                            label: "Attribution",
+                            name: "attribution",
+                            widget: "string",
+                          },
+                          {
+                            label: "Image",
+                            name: "image",
+                            allow_multiple: false,
+                            media_folder: "../../images/quotes",
+                            widget: "image",
+                          },
+                          {
+                            label: "Heading",
+                            name: "heading",
+                            widget: "string",
+                          },
+                          {
+                            label: "Description",
+                            name: "description",
+                            widget: "markdown",
+                          },
+                          {
+                            label: "Link Text",
+                            name: "link",
+                            widget: "string",
                           },
                         ],
                       },

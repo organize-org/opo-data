@@ -17,7 +17,7 @@ import useDataMaps from "../hooks/useDataMaps";
 import * as styles from "./index.module.css";
 import content from "./index.content.yml";
 
-export default function Dashboard({ data: { articleImages, quoteImage } }) {
+export default function Dashboard({ location, data: { articleImages, quoteImage } }) {
   const [{ stateDataMap }] = useDataMaps();
 
   const [popoutAbbreviation, setPopoutAbbrevation] = useState(null);

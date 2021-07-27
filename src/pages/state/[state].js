@@ -21,7 +21,7 @@ import {
 import * as styles from "./state.module.css";
 import content from "./[state].content.yml";
 
-export default function State({ data: { statesGeoData }, state = "DC" }) {
+export default function State({ location, data: { statesGeoData }, state = "DC" }) {
   const [{ opoDataMap, stateDataMap }] = useDataMaps();
   const { headings, notes, stats, videos } = content;
 
