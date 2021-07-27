@@ -63,3 +63,24 @@ a:hover {
 .red {
   color: var(--opoRed);
 }
+
+.breadcrumb {
+  background-color: inherit;
+  margin-top: 2.125rem;
+}
+
+.breadcrumb-item {
+  font-size: 0.75rem;
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+}
+
+.breadcrumb-item a:first-child {
+  color: var(--opoTeal);
+}
+
+li.breadcrumb-item.active::before {
+  content: " > ";
+}

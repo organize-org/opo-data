@@ -37,7 +37,7 @@ export default function Equity({ data: { bottomImage, topImage } }) {
   } = content;
 
   return (
-    <Layout>
+    <Layout crumbLabel="OPO Reform is an Urgent Equity Issue">
       <Row className={styles.topBar}>
         <Col md="8">
           <h2>Inequities in Organ Procurement Across the Nation</h2>

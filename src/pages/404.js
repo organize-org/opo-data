@@ -8,7 +8,7 @@ import * as styles from "./404.module.css";
 
 export default function NotFound() {
   return (
-    <Layout>
+    <Layout crumbLabel="Page Not Found">
       <div className={styles.error}>
         <Row>
           <h3>404</h3>
