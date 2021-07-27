@@ -11,25 +11,25 @@ import stateContent from "../../pages/state/[state].content.yml";
 
 import * as styles from "./equitySection.module.css";
 
-export default function EquitySection({ location, size = "lg" }) {
+export default function EquitySection({ page = "main"}) {
   const [{ quoteImagesByPath }] = useQuoteImages();
 
   const {
     equityEmbed: { image, description, heading, link },
-  } = location.pathname === "/" ? indexContent : stateContent;
+  } = page === "main" ? indexContent : stateContent;
 
   return (
-    <Row className={styles[size]}>
+    <Row className={styles[page === "main" ? "lg" : "sm"]}>
       <BgImage
         className={styles.background}
-        image={getImage(quoteImagesByPath[location.pathname.includes("state") ? image.slice(3, image.length) : image])}
+        image={getImage(quoteImagesByPath[page !== "main" ? image.slice(3, image.length) : image])}
       >
         <Col
           className={styles.copy}
-          md={size === "lg" ? { span: 6, offset: 5 } : null}
+          md={page === "main" ? { span: 6, offset: 5 } : null}
         >
           <h3>{heading}</h3>
-          {size === "lg" && (
+          {page === "main" && (
             <>
               <ReactMarkdown>{description}</ReactMarkdown>
             </>
