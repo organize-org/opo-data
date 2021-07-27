@@ -196,20 +196,6 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
                 ))}
             </Row>
           ) : null}
-          {stateData.videos?.length ? (
-            <Row className={styles.voices}>
-              <Row>
-                <h3>Voices For Reform</h3>
-              </Row>
-              {stateData.videos.map(({ link, title, description }, i) => (
-                <Row key={`statewide-videos-${i}`}>
-                  <ReactPlayer url={link} width={594} height={361} />
-                  <h4>{title}</h4>
-                  {description && <p>{description}</p>}
-                </Row>
-              ))}
-            </Row>
-          ) : null}
           <DemographicTable opos={inStateOpos} />
           <OpoTable
             headings={headings}
@@ -224,6 +210,20 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
             state={stateData.abbreviation}
           />
           <EquitySection size="sm" />
+          {stateData.videos?.length ? (
+            <Row className={styles.voices}>
+              <Row>
+                <h3>Voices For Reform</h3>
+              </Row>
+              {stateData.videos.map(({ link, title, description }, i) => (
+                <Row key={`statewide-videos-${i}`}>
+                  <ReactPlayer url={link} width={594} height={361} />
+                  <h4>{title}</h4>
+                  {description && <p>{description}</p>}
+                </Row>
+              ))}
+            </Row>
+          ) : null}
         </Col>
       </Row>
       {citations?.length ? (
