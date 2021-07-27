@@ -65,28 +65,22 @@ a:hover {
 }
 
 .breadcrumb {
-  background-color: transparent;
-}
-
-.breadcrumb__list {
-  display: inline-flex;
+  background-color: inherit;
   margin-top: 2.125rem;
 }
 
-.breadcrumb__item {
-  list-style: none;
+.breadcrumb-item {
   font-size: 0.75rem;
 }
 
-.breadcrumb__link {
+.breadcrumb-item a {
   text-decoration: none;
 }
 
-.breadcrumb__link:nth-last-child(2) {
+.breadcrumb-item a:first-child {
   color: var(--opoTeal);
 }
 
-.breadcrumb__separator {
-  margin-left: 0.3rem;
-  margin-right: 0.3rem;
+li.breadcrumb-item.active::before {
+  content: " > ";
 }

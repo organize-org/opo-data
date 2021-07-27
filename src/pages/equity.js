@@ -4,7 +4,6 @@ import ReactMarkdown from "react-markdown";
 import { Tweet } from "react-twitter-widgets";
 import { graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
-// import { Breadcrumb } from "gatsby-plugin-breadcrumb";
 
 import Layout from "../components/layout/layout";
 import Social from "../components/social/social";
@@ -26,7 +25,7 @@ const SmallQuote = ({ attribution, quote }) => (
   </Row>
 );
 
-export default function Equity({ location, data: { bottomImage, topImage } }) {
+export default function Equity({ data: { bottomImage, topImage } }) {
   const {
     bottomQuote,
     embedded,
@@ -38,10 +37,7 @@ export default function Equity({ location, data: { bottomImage, topImage } }) {
   } = content;
 
   return (
-    <Layout
-      location={location}
-      crumbLabel=" OPO Reform is an Urgent Equity Issue"
-    >
+    <Layout crumbLabel="OPO Reform is an Urgent Equity Issue">
       <Row className={styles.topBar}>
         <Col md="8">
           <h2>Inequities in Organ Procurement Across the Nation</h2>

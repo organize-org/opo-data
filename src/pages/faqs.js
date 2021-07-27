@@ -7,9 +7,9 @@ import Layout from "../components/layout/layout";
 import * as styles from "./faqs.module.css";
 import content from "./faqs.content.yml";
 
-export default function FAQs({ location }) {
+export default function FAQs() {
   return (
-    <Layout location={location} crumbLabel="FAQs">
+    <Layout crumbLabel="FAQs">
       <Row className={styles.faqs}>
         <h2>FAQs</h2>
         {content.sections.map(({ heading, qanda }, i) => (

@@ -43,18 +43,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-breadcrumb`,
-      options: {
-        defaultCrumb: {
-          location: {
-            pathname: "/",
-          },
-          crumbLabel: "Home",
-          crumbSeparator: " > ",
-        },
-      },
-    },
-    {
       resolve: `gatsby-source-airtable`,
       options: {
         apiKey: process.env.AIRTABLE_API_KEY,
