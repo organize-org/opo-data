@@ -153,11 +153,6 @@ module.exports = {
                         widget: "object",
                         fields: [
                           {
-                            label: "Attribution",
-                            name: "attribution",
-                            widget: "string",
-                          },
-                          {
                             label: "Image",
                             name: "image",
                             allow_multiple: false,
@@ -397,11 +392,6 @@ module.exports = {
                         widget: "object",
                         fields: [
                           {
-                            label: "Attribution",
-                            name: "attribution",
-                            widget: "string",
-                          },
-                          {
                             label: "Image",
                             name: "image",
                             allow_multiple: false,
@@ -412,11 +402,6 @@ module.exports = {
                             label: "Heading",
                             name: "heading",
                             widget: "string",
-                          },
-                          {
-                            label: "Description",
-                            name: "description",
-                            widget: "markdown",
                           },
                           {
                             label: "Link Text",
