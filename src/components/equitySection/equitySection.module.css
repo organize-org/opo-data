@@ -1,28 +1,49 @@
-.background {
+.main .background {
   background-position: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 4rem 5rem;
+  height: 452px
+}
+.state .background {
+  background-position: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 480px;
+  margin: 0px -15px;
 }
 
-.lg {
-  margin: 4rem 6rem;
+.main .copy {
+  width: 50%;
+  padding: 4rem;
 }
 
-.lg .copy {
-  margin: 4rem 6rem;
-}
-
-.sm .copy {
+.state .copy {
   background-color: var(--opoWhiteSmoke);
-  margin-top: 15rem;
+  margin-top: 20rem;
   opacity: 0.9;
   padding: 1.5rem;
 }
 
 @media (max-width: 700px) {
-  .lg {
-    margin: 1rem;
+
+  .state {
+    margin: 1rem 0;
   }
-  .lg .copy {
+
+  .main {
+    margin: 1rem 0;
+  }
+
+  .main .background {
+    justify-content: flex-end;
     margin: 0;
+  }
+
+  .main .copy {
+    width: 100%;
     padding: 1rem;
   }
 }

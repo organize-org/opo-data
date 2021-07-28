@@ -19,24 +19,23 @@ export default function EquitySection({ page = "main"}) {
   } = page === "main" ? indexContent : stateContent;
 
   return (
-    <Row className={styles[page === "main" ? "lg" : "sm"]}>
-      <BgImage
-        className={styles.background}
-        image={getImage(quoteImagesByPath[page !== "main" ? image.slice(3, image.length) : image])}
-      >
-        <Col
-          className={styles.copy}
-          md={page === "main" ? { span: 6, offset: 5 } : null}
-        >
-          <h3>{heading}</h3>
-          {page === "main" && (
-            <>
-              <ReactMarkdown>{description}</ReactMarkdown>
-            </>
+    <Row className={styles[page]}>
+      <Col>
+        <BgImage
+          className={styles.background}
+          image={getImage(
+            quoteImagesByPath[
+              page !== "main" ? image.slice(3, image.length) : image
+            ]
           )}
-          <Link to="/equity">{link}</Link>
-        </Col>
-      </BgImage>
+        >
+          <div className={styles.copy}>
+            <h3>{heading}</h3>
+            {page === "main" && <ReactMarkdown>{description}</ReactMarkdown>}
+            <Link to="/equity">{link}</Link>
+          </div>
+        </BgImage>
+      </Col>
     </Row>
   );
 }

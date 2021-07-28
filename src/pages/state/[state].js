@@ -208,7 +208,7 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
         </Col>
         <Col md="4">
           <Map
-            dimensions={{ height: "30rem", width: "100%" }}
+            dimensions={{ height: "30rem", width: "100%"}}
             state={stateData.abbreviation}
           />
           <EquitySection page="state" />
