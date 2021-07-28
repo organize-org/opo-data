@@ -35,7 +35,7 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
     <Layout>
       <Row className={styles.topBar}>
         <Col>
-          <p>View state data:</p>
+          <p>View state data</p>
           <Select
             className={styles.topBarSelect}
             value={
@@ -78,36 +78,31 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
       </Row>
       <QuoteWithImage quote={quote} />
       <EquitySection />
-      <Row className={`mx-5 ${styles.videoSection}`}>
-        <Col className="mx-5">
-          <Row>
-            <h3>{video.title}</h3>
-          </Row>
-          <Row>
-            <ReactMarkdown>{video.description}</ReactMarkdown>
-          </Row>
-          <Row>
-            <a
-              href={`https://www.youtube.com/watch?v=${video.youtube}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <h4>
-                See the full video
-                <ArrowRight className={styles.rightArrow} />
-              </h4>
-            </a>
-          </Row>
+      <Row className={styles.videoSection}>
+        <Col>
+          <h3>{video.title}</h3>
+          <ReactMarkdown>{video.description}</ReactMarkdown>
+          <a
+            href={`https://www.youtube.com/watch?v=${video.youtube}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <h4>
+              See the full video
+              <ArrowRight className={styles.rightArrow} />
+            </h4>
+          </a>
         </Col>
-        <Col className="align-items-center">
+        <Col>
           <ReactPlayer
             url={`https://www.youtube.com/watch?v=${video.youtube}`}
+            width="100%"
           />
         </Col>
       </Row>
-      <Row className={`mx-4 ${styles.articlesSection}`}>
-        {articles.map(({ description, title, image, link }) => (
-          <Col className="mx-5" md={3} key={title}>
+      <Row className={styles.articlesSection}>
+        {articles.map(({ description, image, link, source, title }) => (
+          <Col md={3} key={title}>
             <GatsbyImage
               image={getImage(articleImgsByPath[image])}
               alt={title}
@@ -116,7 +111,7 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
             <ReactMarkdown>{description}</ReactMarkdown>
             <a href={link} target="_blank" rel="noreferrer">
               <h4>
-                Read more
+                Read more from {source}
                 <ArrowRight className={styles.rightArrow} />
               </h4>
             </a>
