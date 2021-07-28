@@ -69,7 +69,7 @@ function StatePopout({ state }) {
 }
 
 export default function Map({
-  dimensions = { height: "55vh", width: "100%" },
+  dimensions = { height: "55vh", width: "100%"},
   interactive = false,
   legend = false,
   state = null,
@@ -139,7 +139,7 @@ export default function Map({
   });
 
   return (
-    <Row className="justify-content-center">
+    <Row className={styles.map}>
       <div style={dimensions}>
         {popoutAbbreviation && (
           <StatePopout state={stateDataMap[popoutAbbreviation]} />

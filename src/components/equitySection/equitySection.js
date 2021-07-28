@@ -6,37 +6,36 @@ import { getImage } from "gatsby-plugin-image";
 import { BgImage } from "gbimage-bridge";
 import useQuoteImages from "../../hooks/useQuoteImages";
 
-import content from "../../pages/equity.content.yml";
+import indexContent from "../../pages/index.content.yml";
+import stateContent from "../../pages/state/[state].content.yml";
 
 import * as styles from "./equitySection.module.css";
 
-export default function EquitySection({ size = "lg" }) {
+export default function EquitySection({ page = "main"}) {
   const [{ quoteImagesByPath }] = useQuoteImages();
 
   const {
-    topQuote: { image },
-    embedded: { description, heading, link },
-  } = content;
+    equityEmbed: { image, description, heading, link },
+  } = page === "main" ? indexContent : stateContent;
 
   return (
-    <Row className={styles[size]}>
-      <BgImage
-        className={styles.background}
-        image={getImage(quoteImagesByPath[image])}
-      >
-        <Col
-          className={styles.copy}
-          md={size === "lg" ? { span: 6, offset: 5 } : null}
-        >
-          <h3>{heading}</h3>
-          {size === "lg" && (
-            <>
-              <ReactMarkdown>{description}</ReactMarkdown>
-            </>
+    <Row className={styles[page]}>
+      <Col>
+        <BgImage
+          className={styles.background}
+          image={getImage(
+            quoteImagesByPath[
+              page !== "main" ? image.slice(3, image.length) : image
+            ]
           )}
-          <Link to="/equity">{link}</Link>
-        </Col>
-      </BgImage>
+        >
+          <div className={styles.copy}>
+            <h3>{heading}</h3>
+            {page === "main" && <ReactMarkdown>{description}</ReactMarkdown>}
+            <Link to="/equity">{link}</Link>
+          </div>
+        </BgImage>
+      </Col>
     </Row>
   );
 }

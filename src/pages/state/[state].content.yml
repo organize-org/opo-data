@@ -21,6 +21,10 @@ headings:
     heading: Donors Needed
   investigation:
     heading: Under Congressional Investigation
+equityEmbed:
+  image: ../../images/quotes/equity-state.jpg
+  heading: OPO REFORM IS AN URGENT EQUITY ISSUE
+  link: We must drive reforms to hold OPOs accountable.
 videos:
   - link: https://youtu.be/TnKo8Q-Hemk?t=2360
     title: DC patient Donna Cryer testifies before House Oversight Committee

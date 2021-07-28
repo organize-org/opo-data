@@ -93,4 +93,8 @@
     flex-grow: 1;
     text-align: center;
   }
+
+  .voices {
+    margin: 0;
+  }
 }

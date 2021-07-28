@@ -148,6 +148,35 @@ module.exports = {
                         ],
                       },
                       {
+                        label: "Equity Embed",
+                        name: "equityEmbed",
+                        widget: "object",
+                        fields: [
+                          {
+                            label: "Image",
+                            name: "image",
+                            allow_multiple: false,
+                            media_folder: "../images/quotes",
+                            widget: "image",
+                          },
+                          {
+                            label: "Heading",
+                            name: "heading",
+                            widget: "string",
+                          },
+                          {
+                            label: "Description",
+                            name: "description",
+                            widget: "markdown",
+                          },
+                          {
+                            label: "Link Text",
+                            name: "link",
+                            widget: "string",
+                          },
+                        ],
+                      },
+                      {
                         label: "Video",
                         name: "video",
                         widget: "object",
@@ -358,6 +387,30 @@ module.exports = {
                         ],
                       },
                       {
+                        label: "Equity Embed",
+                        name: "equityEmbed",
+                        widget: "object",
+                        fields: [
+                          {
+                            label: "Image",
+                            name: "image",
+                            allow_multiple: false,
+                            media_folder: "../../images/quotes",
+                            widget: "image",
+                          },
+                          {
+                            label: "Heading",
+                            name: "heading",
+                            widget: "string",
+                          },
+                          {
+                            label: "Link Text",
+                            name: "link",
+                            widget: "string",
+                          },
+                        ],
+                      },
+                      {
                         label: "Videos",
                         label_singular: "Video",
                         name: "videos",
@@ -464,12 +517,7 @@ module.exports = {
                             label: "Description",
                             name: "description",
                             widget: "markdown",
-                          },
-                          {
-                            label: "Link Text",
-                            name: "link",
-                            widget: "string",
-                          },
+                          }
                         ],
                       },
                       {
