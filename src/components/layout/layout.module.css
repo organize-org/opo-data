@@ -8,11 +8,17 @@
   white-space: nowrap;
 }
 
-.header > *:nth-child(2) {
+.logoWithText {
+  display: flex;
+  align-items: center;
+  margin: 0 2rem;
+}
+
+.logoText {
   margin-left: 1rem;
 }
 
-.header > *:nth-child(3) {
+.faqLink {
   position: absolute;
   right: 1rem;
 }
@@ -24,17 +30,41 @@
   text-decoration: underline;
 }
 
-.headerImg {
-  width: 3.5rem;
-  height: 2.5rem;
-}
-
 .footer {
   align-items: center;
   background-color: #f7fafc;
-  padding: 2rem;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 1rem 2rem;
+}
+
+.footer > * {
+  margin: 1rem;
 }
 
 .footer p {
   font-size: 0.9rem;
+}
+
+@media (max-width: 700px) {
+  .logoText {
+    margin: 1rem 0 0 0;
+  }
+
+  .logoWithText > *:nth-child(1) {
+    display: none;
+  }
+
+  .faqLink {
+    position: static;
+    margin-top: 1rem;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer p {
+    margin: 1rem 0;
+  }
 }

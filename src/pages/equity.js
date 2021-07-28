@@ -15,14 +15,14 @@ import content from "./equity.content.yml";
 const stepColors = ["yellow", "lightRed", "darkRed"];
 
 const SmallQuote = ({ attribution, quote }) => (
-  <Row className={styles.smallQuote}>
+  <div className={styles.smallQuote}>
     <figure className="red">
       <blockquote>"{quote}"</blockquote>
     </figure>
     <figcaption>
       &mdash; <cite>{attribution}</cite>
     </figcaption>
-  </Row>
+  </div>
 );
 
 export default function Equity({ data: { bottomImage, topImage } }) {
@@ -91,7 +91,7 @@ export default function Equity({ data: { bottomImage, topImage } }) {
             </Col>
           </Row>
           <Row className={styles.steps}>
-            <h4>{funnel.heading}</h4>
+            <h3>{funnel.heading}</h3>
             {funnel.steps.map(({ description, heading }, i) => (
               <Row key={`step-${i}`}>
                 <Col md="1">
@@ -107,10 +107,8 @@ export default function Equity({ data: { bottomImage, topImage } }) {
             ))}
           </Row>
         </Col>
-        <Col md="4">
-          <Row>
-            <h4>Voices for organ donation reform</h4>
-          </Row>
+        <Col className={styles.quotes}>
+          <h4>Voices for organ donation reform</h4>
           {smallQuotes.map(({ attribution, quote }, i) => (
             <SmallQuote
               key={`smallquote-${i}`}

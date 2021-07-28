@@ -49,3 +49,11 @@
   padding-left: 0 !important;
   padding-right: 5px !important;
 }
+
+@media (max-width: 700px) {
+  .opoTable table {
+    display: inline-block;
+    width: 90vw;
+    overflow: auto;
+  }
+}

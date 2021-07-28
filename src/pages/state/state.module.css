@@ -87,3 +87,10 @@
   content: counter(li) ". ";
   padding-right: 1rem;
 }
+
+@media (max-width: 700px) {
+  .title h2 {
+    flex-grow: 1;
+    text-align: center;
+  }
+}
