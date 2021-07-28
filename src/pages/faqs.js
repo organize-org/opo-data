@@ -9,7 +9,7 @@ import content from "./faqs.content.yml";
 
 export default function FAQs() {
   return (
-    <Layout>
+    <Layout crumbLabel="FAQs">
       <Row className={styles.faqs}>
         <h2>FAQs</h2>
         {content.sections.map(({ heading, qanda }, i) => (

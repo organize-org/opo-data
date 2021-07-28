@@ -119,7 +119,7 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
   );
 
   return (
-    <Layout>
+    <Layout crumbLabel={formatStateName(stateData)}>
       <Row className={styles.title}>
         <h2>{formatStateName(stateData)}</h2>
         <Social />
@@ -200,7 +200,7 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
           {stateData.videos?.length ? (
             <Row className={styles.voices}>
               <Row>
-                <h3>Voices For Organ Donation Reform</h3>
+                <h3>Voices For Reform</h3>
               </Row>
               {stateData.videos.map(({ link, title, description }, i) => (
                 <Row key={`statewide-videos-${i}`}>

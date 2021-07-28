@@ -1,11 +1,11 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import { Container, Row } from "react-bootstrap";
+import { Breadcrumb, Container, Row } from "react-bootstrap";
 
 import * as styles from "./layout.module.css";
 
-export default function Layout({ children }) {
+export default function Layout({ crumbLabel, children }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -36,6 +36,12 @@ export default function Layout({ children }) {
           <p>About Our Organ Donation System</p>
         </Link>
       </Row>
+      {crumbLabel ? (
+        <Breadcrumb>
+          <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+          <Breadcrumb.Item active>{crumbLabel}</Breadcrumb.Item>
+        </Breadcrumb>
+      ) : null}
       {children}
       <Row className={styles.footer}>
         <p>
