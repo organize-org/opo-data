@@ -61,7 +61,7 @@ function StatePopout({ state }) {
         ))}
       <Row>
         <Link to={`/state/${state.abbreviation}`}>
-          See all data for {state.abbreviation}
+          See more data for {state.abbreviation}
         </Link>
       </Row>
     </Container>
@@ -212,9 +212,7 @@ export default function Map({
                               }
                             )
                             .openTooltip(),
-                        mouseout: ({ target }) => {
-                          target?.resetStyle();
-                        },
+                        mouseout: ({ target }) => target?.resetStyle(),
                         click: ({ propagatedFrom }) => {
                           setPopoutAbbrevation(
                             propagatedFrom?.feature?.properties?.abbreviation

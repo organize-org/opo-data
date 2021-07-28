@@ -16,3 +16,13 @@
   opacity: 0.9;
   padding: 1.5rem;
 }
+
+@media (max-width: 700px) {
+  .lg {
+    margin: 1rem;
+  }
+  .lg .copy {
+    margin: 0;
+    padding: 1rem;
+  }
+}
