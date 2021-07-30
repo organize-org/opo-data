@@ -3,7 +3,7 @@ require(`dotenv`).config({ path: `.env` });
 module.exports = {
   siteMetadata: {
     title: `Organ Procurement Organization (OPO)`,
-    url: `https://opodata.org/`,
+    url: `https://opodata.org`,
   },
   plugins: [
     {
