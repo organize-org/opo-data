@@ -21,47 +21,50 @@ export default function OpoTable({
       ? ["name", "region", "tier", "donors", "shadow", "investigation"]
       : ["states", "name", "tier", "donors", "shadow"];
 
-    const Heading = ({ color, title }) => (
-      <div>
-        {headings[title].heading}
-        {citations[title] && (
-          <sup>
-            <a
-              className={color ?? null}
-              href={`#citations-${citations[title].index}`}
-              target="_self"
-            >
-              {citations[title].index + 1}
-            </a>
-          </sup>
-        )}
-      </div>
-    );
     const createCol = accessor => {
-      let col = {
+      const col = {
         Header: (
-          <Heading
-            title={accessor}
-            color={accessor === "shadow" ? "red" : null}
-          />
+          <div>
+            {headings[accessor].heading}
+            {citations[accessor] && (
+              <sup>
+                <a
+                  className={accessor === "shadow" ? "red" : null}
+                  href={`#citations-${citations[accessor].index}`}
+                  target="_self"
+                >
+                  {citations[accessor].index + 1}
+                </a>
+              </sup>
+            )}
+          </div>
         ),
         accessor,
       };
-      if (accessor === "donors" || accessor === "investigation")
-        col.cellClass = "text-center";
-      if (accessor === "shadow") {
-        col.cellClass = styles.shadows;
-        col.color = "red";
+      if (accessor === "donors" || accessor === "investigation") {
+        return {
+          ...col,
+          cellClass: "text-center",
+        };
+      } else if (accessor === "shadow") {
+        return {
+          ...col,
+          cellClass: styles.shadows,
+          color: "red",
+        };
+      } else if (accessor === "tier") {
+        return {
+          ...col,
+          cellClass: styles.tierCol,
+          Cell: props => (
+            <Container>
+              <Tier className={styles.tierCol} tier={props.value} />
+            </Container>
+          ),
+        };
+      } else {
+        return col;
       }
-      if (accessor === "tier") {
-        col.Cell = props => (
-          <Container>
-            <Tier className={styles.tierCol} tier={props.value} />
-          </Container>
-        );
-        col.cellClass = styles.tierCol;
-      }
-      return col;
     };
     return cols.map(col => createCol(col));
   }, [headings, inState, citations]);
@@ -134,7 +137,7 @@ export default function OpoTable({
                   return (
                     <td
                       {...cell.getCellProps()}
-                      className={cell.column.cellClass ?? ""}
+                      className={cell.column.cellClass ?? null}
                     >
                       {cell.render("Cell")}
                     </td>
