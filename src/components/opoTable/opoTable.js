@@ -9,7 +9,7 @@ import Tier from "../tier/tier";
 
 import * as styles from "./opoTable.module.css";
 
-export default function OpoTableRT({
+export default function OpoTable({
   citations,
   headings,
   inState = true,
