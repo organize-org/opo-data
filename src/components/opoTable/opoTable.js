@@ -2,6 +2,9 @@ import React, {useMemo} from "react";
 import { Container, Row, Table } from "react-bootstrap";
  import { useTable, useSortBy } from "react-table";
 
+import ChevronUp from '../../images/icons/chevron-up.svg'
+import ChevronDown from '../../images/icons/chevron-down.svg'
+import ChevronDownGrey from '../../images/icons/chevron-down-grey.svg'
 import Tier from "../tier/tier";
 
 import * as styles from "./opoTable.module.css";
@@ -26,7 +29,7 @@ const columns = useMemo(() => {
     "investigation",
   ];
   const Heading = ({ color, title }) => (
-    <>
+    <div>
       {headings[title].heading}
       {citations[title] && (
         <sup>
@@ -39,7 +42,7 @@ const columns = useMemo(() => {
           </a>
         </sup>
       )}
-    </>
+    </div>
   );
   const createCol = accessor => {
     let col = {
@@ -116,7 +119,21 @@ const columns = useMemo(() => {
                    scope="col"
                    className={column.color ?? null}
                  >
-                   {column.render("Header")}
+
+                     <div className={styles.header}>
+                       {column.render("Header")}
+                       <div className={styles.chevron}>
+                         {column.isSorted ? (
+                           column.isSortedDesc ? (
+                             <ChevronUp />
+                           ) : (
+                             <ChevronDown />
+                           )
+                         ) : (
+                           <ChevronDownGrey />
+                         )}
+                       </div>
+                     </div>
                  </th>
                ))}
              </tr>
