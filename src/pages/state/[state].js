@@ -200,7 +200,7 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
             </Row>
           ) : null}
           <DemographicTable opos={inStateOpos} />
-          {inStateOpos.length > 0 && (
+          {outOfStateOpos.length > 0 && (
             <OpoTable
               citations={citations}
               headings={headings}

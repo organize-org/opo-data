@@ -517,7 +517,7 @@ module.exports = {
                             label: "Description",
                             name: "description",
                             widget: "markdown",
-                          }
+                          },
                         ],
                       },
                       {

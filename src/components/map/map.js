@@ -69,7 +69,7 @@ function StatePopout({ state }) {
 }
 
 export default function Map({
-  dimensions = { height: "55vh", width: "100%"},
+  dimensions = { height: "55vh", width: "100%" },
   interactive = false,
   legend = false,
   state = null,
