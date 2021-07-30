@@ -3,7 +3,7 @@ require(`dotenv`).config({ path: `.env` });
 module.exports = {
   siteMetadata: {
     title: `Organ Procurement Organization (OPO)`,
-    url: `https://opo-dashboard.netlify.app`,
+    url: `https://opodata.org/`,
   },
   plugins: [
     {
