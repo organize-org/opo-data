@@ -84,8 +84,69 @@ videos:
     tags:
       - AL
 notes:
+  - note: Passing (Tier 1) [in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - FLFH
+  - note: "CEO compensation: Unavailable via 990"
+    tags:
+      - FLFH
   - note: Failing (Tier 3) [in
       2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - FLMP
+  - note: "CEO compensation: Unavailable via 990"
+    tags:
+      - FLMP
+  - note: Passing (Tier 1) [in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - FLWC
+  - note: "CEO compensation: Unavailable via 990"
+    tags:
+      - FLWC
+  - note: Failing (Tier 3) [in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - FLUF
+  - note: "CEO compensation
+      ([2019](https://projects.propublica.org/nonprofits/organizations/52152846\
+      1/202003089349302685/full)): $533,289"
+    tags:
+      - FLUF
+  - note: Passing (Tier 1) [in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - PADV
+  - tags:
+      - PADV
+    note: "CEO Compensation
+      ([2018](https://projects.propublica.org/nonprofits/display_990/237388767/\
+      01_2020_prefixes_23-23%2F237388767_201812_990_2020012717071877)):
+      $752,777"
+  - note: Passing (Tier 1) [in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - DCTC
+  - note: "CEO Compensation
+      ([2019](https://projects.propublica.org/nonprofits/organizations/52152846\
+      1/202003089349302685/full)): $533,289"
+    tags:
+      - DCTC
+  - note: Failing (Tier 3) [in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - CORS
+  - note: "CEO compensation
+      ([2019](https://projects.propublica.org/nonprofits/display_990/841003771/\
+      08_2020_prefixes_82-90%2F841003771_201912_990_2020081017226599)):
+      $653,534"
+    tags:
+      - CORS
+  - note: "CEO compensation
+      ([2019](https://projects.propublica.org/nonprofits/display_990/943062436/\
+      02_2021_prefixes_92-95%2F943062436_201912_990_2021021817718168)):
+      $532,136"
     tags:
       - CAOP
   - note: "CEO compensation
