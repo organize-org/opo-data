@@ -87,6 +87,98 @@ notes:
   - note: Failing (Tier 3) [in
       2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
     tags:
+      - CAOP
+  - note: "CEO compensation
+      ([2019](https://projects.propublica.org/nonprofits/display_990/953138799/\
+      02_2021_prefixes_95-99%2F953138799_201912_990_2021022417749964)):
+      $972,505"
+    tags:
+      - CAOP
+  - note: Included in [House Committee on Oversight and Reform
+      Investigation](https://oversight.house.gov/sites/democrats.oversight.house.gov/files/OPO%20Letters.pdf)
+    tags:
+      - CAOP
+  - note: Passing (Tier 1) [in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - CASD
+  - note: "CEO compensation: Unavailable via 990"
+    tags:
+      - CASD
+  - note: Underperforming (Tier 2) [in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - CAGS
+  - note: "CEO compensation: Unavailable via 990"
+    tags:
+      - CAGS
+  - note: Included in [House Committee on Oversight and Reform
+      Investigation](https://oversight.house.gov/sites/democrats.oversight.house.gov/files/OPO%20Letters.pdf)
+    tags:
+      - CAGS
+  - note: Underperforming (Tier 2) [in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - CADN
+  - note: "CEO Compensation
+      ([2019](https://projects.propublica.org/nonprofits/display_990/943062436/\
+      02_2021_prefixes_92-95%2F943062436_201912_990_2021021817718168)):
+      $532,136"
+    tags:
+      - CADN
+  - note: Passing (Tier 1) [in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - AZOB
+  - note: "CEO Compensation
+      ([2019](https://projects.propublica.org/nonprofits/display_990/860707697/\
+      08_2020_prefixes_82-90%2F860707697_201912_990_2020081917242655)):
+      $630,942"
+    tags:
+      - AZOB
+  - note: Passing (Tier 1) [in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - TXSB
+  - note: "CEO compensation
+      ([2018](https://projects.propublica.org/nonprofits/display_990/751469319/\
+      01_2020_prefixes_74-76%2F751469319_201812_990_2020012417063597)):
+      $705,285"
+    tags:
+      - TXSB
+  - note: Failing (Tier 3) [in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - AROR
+  - note: "CEO compensation
+      ([2018](https://projects.propublica.org/nonprofits/display_990/710656542/\
+      02_2020_prefixes_64-73%2F710656542_201812_990_2020021317141438)):
+      $251,689"
+    tags:
+      - AROR
+  - note: Failing (Tier 3) [in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - TNMS
+  - note: "CEO compensation
+      ([2019](https://projects.propublica.org/nonprofits/display_990/620992075/\
+      02_2021_prefixes_61-68%2F620992075_201912_990_2021022217735673)):
+      $310,513"
+    tags:
+      - TNMS
+  - note: Passing (Tier 1) [in
+      2018 ](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - MOMA
+  - note: "CEO compensation
+      ([2019](https://projects.propublica.org/nonprofits/display_990/237426306/\
+      02_2021_prefixes_23-25%2F237426306_201912_990_2021021817717361)):
+      $574,635"
+    tags:
+      - MOMA
+  - note: Failing (Tier 3) [in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
       - ALOB
   - note: "CEO compensation: Unavailable via 990"
     tags:
