@@ -404,6 +404,11 @@ module.exports = {
                             widget: "string",
                           },
                           {
+                            label: "Description",
+                            name: "description",
+                            widget: "markdown",
+                          },
+                          {
                             label: "Link Text",
                             name: "link",
                             widget: "string",

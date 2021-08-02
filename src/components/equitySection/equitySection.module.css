@@ -24,7 +24,12 @@
   background-color: var(--opoWhiteSmoke);
   margin-top: 20rem;
   opacity: 0.9;
-  padding: 1.5rem;
+  padding: 2rem;
+}
+
+.stateHeader {
+  margin-bottom: 1rem !important;
+  border-bottom: none !important;
 }
 
 @media (max-width: 700px) {
@@ -45,5 +50,9 @@
   .main .copy {
     width: 100%;
     padding: 1rem;
+  }
+
+  .stateHeader {
+    margin-left: 0;
   }
 }
