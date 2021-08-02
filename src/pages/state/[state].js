@@ -102,7 +102,7 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
   // Popout stats
   const comps = inStateOpos
     .map(({ compensation }) => compensation)
-    .filter(comp => !isNaN(comp));
+    .filter(comp => !isNaN(parseInt(comp)));
   stateData.popoutStats = {
     avgCeoComp: comps.length
       ? Math.floor(comps.reduce((sum, comp) => sum + comp, 0) / comps.length)
