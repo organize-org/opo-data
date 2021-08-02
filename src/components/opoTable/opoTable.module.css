@@ -43,6 +43,7 @@
 .tierCol {
   display: flex;
   flex-wrap: nowrap;
+  padding-left: .75rem !important;
 }
 
 .tierCol > * {
