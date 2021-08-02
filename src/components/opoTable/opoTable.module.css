@@ -43,11 +43,27 @@
 .tierCol {
   display: flex;
   flex-wrap: nowrap;
+  padding-left: .75rem !important;
 }
 
 .tierCol > * {
   padding-left: 0 !important;
   padding-right: 5px !important;
+}
+
+.chevron {
+  margin-left: 4px;
+}
+
+.chevron .up {
+  margin-bottom: 4px;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: flex-end;
 }
 
 @media (max-width: 700px) {

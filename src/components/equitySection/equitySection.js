@@ -11,7 +11,7 @@ import stateContent from "../../pages/state/[state].content.yml";
 
 import * as styles from "./equitySection.module.css";
 
-export default function EquitySection({ page = "main"}) {
+export default function EquitySection({ page = "main" }) {
   const [{ quoteImagesByPath }] = useQuoteImages();
 
   const {

@@ -158,12 +158,14 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
               </Col>
             </Row>
           </Row>
-          <OpoTable
-            citations={citations}
-            headings={headings}
-            opos={inStateOpos}
-            title={`OPOS Servicing ${stateData.name}`}
-          />
+          {inStateOpos.length > 0 && (
+            <OpoTable
+              citations={citations}
+              headings={headings}
+              opos={inStateOpos}
+              title={`OPOS Servicing ${stateData.name}`}
+            />
+          )}
           {stateData.notes.length ||
           inStateOpos.some(({ notes }) => notes?.length) ? (
             <Row>
@@ -198,17 +200,19 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
             </Row>
           ) : null}
           <DemographicTable opos={inStateOpos} />
-          <OpoTable
-            citations={citations}
-            headings={headings}
-            inState={false}
-            opos={outOfStateOpos}
-            title="OPO Performance in Neighboring States"
-          />
+          {outOfStateOpos.length > 0 && (
+            <OpoTable
+              citations={citations}
+              headings={headings}
+              inState={false}
+              opos={outOfStateOpos}
+              title="OPO Performance in Neighboring States"
+            />
+          )}
         </Col>
         <Col md="4">
           <Map
-            dimensions={{ height: "30rem", width: "100%"}}
+            dimensions={{ height: "30rem", width: "100%" }}
             state={stateData.abbreviation}
           />
           <EquitySection page="state" />
