@@ -34,6 +34,15 @@
   transform: scale(0.85);
 }
 
+.copyIcon {
+  cursor: pointer;
+  fill: #c4c4c4;
+}
+
+.copyIcon:hover {
+  fill: #fdca82;
+}
+
 @media (max-width: 700px) {
   .social {
     margin-bottom: 1rem;

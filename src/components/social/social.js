@@ -1,5 +1,5 @@
-import React from "react";
-import { Col } from "react-bootstrap";
+import React, { useState, useRef } from "react";
+import { Col, Tooltip, OverlayTrigger } from "react-bootstrap";
 import { SocialIcon } from "react-social-icons";
 import { useStaticQuery, graphql } from "gatsby";
 import { useLocation } from "@reach/router";
@@ -26,24 +26,62 @@ export default function Social() {
   const siteUrl = `${site.siteMetadata.url}${location.pathname}`;
   const encodedUrl = encodeURIComponent(siteUrl);
 
+  function HoverIcon({ hoverColor, url }) {
+    const defaultColor = "#c4c4c4";
+    const [color, setColor] = useState(defaultColor);
+    const [show, setShow] = useState(false);
+    const timeOut = useRef(null);
+    const eventHandlers = {
+      onMouseOver: () => setColor(hoverColor),
+      onMouseLeave: () => setColor(defaultColor),
+      className: styles.icon,
+    };
+    const showOverlay = () => {
+      if (show) {
+        setShow(false);
+        clearTimeout(timeOut.current);
+      } else {
+        setShow(true);
+        timeOut.current = setTimeout(() => {
+          setShow(false);
+        }, 1000);
+      }
+    };
+
+    return url ? (
+      <SocialIcon bgColor={color} url={url} {...eventHandlers} />
+    ) : (
+      <OverlayTrigger
+        placement="bottom"
+        show={show}
+        overlay={
+          <Tooltip id="button-tooltip">Link copied to clipboard</Tooltip>
+        }
+      >
+        <div>
+          <CopyIcon
+            onClick={() => {
+              copy(siteUrl);
+              showOverlay();
+            }}
+            className={`${styles.copyIcon} ${styles.icon}`}
+          />
+        </div>
+      </OverlayTrigger>
+    );
+  }
+
   return (
     <Col className={styles.social}>
       <p>Share this page</p>
       <Col className={styles.icons}>
-        <CopyIcon
-          className={styles.icon}
-          onClick={() => {
-            copy(siteUrl);
-          }}
-        />
-        <SocialIcon
-          bgColor="#c4c4c4"
-          className={styles.icon}
+        <HoverIcon />
+        <HoverIcon
+          hoverColor="#118af5"
           url={`https://twitter.com/intent/tweet?url=${encodedUrl}`}
         />
-        <SocialIcon
-          bgColor="#c4c4c4"
-          className={styles.icon}
+        <HoverIcon
+          hoverColor="#4267B2"
           url={`https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`}
         />
       </Col>
