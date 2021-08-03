@@ -49,6 +49,17 @@ videos:
     link: https://youtu.be/TnKo8Q-Hemk?t=3401
     tags:
       - OH
+    notes:
+      - note: "[Boomer Esiason
+          Foundation](https://twitter.com/cysticfibrosis/status/129646348695711\
+          3344)"
+      - note: "[OPO CEO Matthew Wadsworth in
+          Harvard](https://blog.petrieflom.law.harvard.edu/2021/02/05/recent-or\
+          gan-procurement-organization-regulations-will-save-lives/) Petrie-Flom
+          blog"
+    description: \[Optional] Lorem ipsum dolor sit amet, consectetur adipiscing
+      elit. Nulla auctor commodo vestibulum. In sollicitudin ultrices blandit.
+      Suspendisse lacus quam, euismod sed facilisis a, venenatis facilisis nisi.
   - link: https://youtu.be/TnKo8Q-Hemk?t=4421
     title: Chairwoman Carolyn Maloney in House Oversight hearing
     tags:
@@ -81,6 +92,8 @@ videos:
     title: Rep. Katie Porter at House Oversight Committee Hearing
     tags:
       - CA
+    description: ""
+    notes: []
   - title: Patient advocates including Alonzo Mourning, Samantha Bee, and Jenna Zak
     link: https://twitter.com/oversightdems/status/1388204146969427971?s=10
     tags:
