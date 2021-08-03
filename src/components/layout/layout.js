@@ -44,7 +44,7 @@ export default function Layout({ crumbLabel, children, sources }) {
         </Breadcrumb>
       ) : null}
       {children}
-      {sources.length ? (
+      {sources?.length ? (
           <Row className={styles.sources}>
             <h3>Sources</h3>
             <ol>
