@@ -111,10 +111,13 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
     waitlist: parseInt(stateData.waitlist),
   };
   // State-level the notes and videos
-  stateData.notes = notes?.filter(({ tags }) =>
+  stateData.allNotes = notes?.filter(({ tags }) =>
     tags.includes(stateData.abbreviation)
   );
-  stateData.voicesForReform = stateData.notes.filter(
+  stateData.notes = stateData?.allNotes.filter(
+    note => !note.voicesForReform
+    );
+  stateData.voicesForReform = stateData?.allNotes.filter(
     note => note.voicesForReform
   );
   stateData.videos = videos?.filter(({ tags }) =>
