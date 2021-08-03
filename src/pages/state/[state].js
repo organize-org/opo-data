@@ -114,7 +114,9 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
   stateData.notes = notes?.filter(({ tags }) =>
     tags.includes(stateData.abbreviation)
   );
-  stateData.voicesForReform = stateData.notes.filter( note => note.voicesForReform)
+  stateData.voicesForReform = stateData.notes.filter(
+    note => note.voicesForReform
+  );
   stateData.videos = videos?.filter(({ tags }) =>
     tags.includes(stateData.abbreviation)
   );
@@ -217,13 +219,14 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
             state={stateData.abbreviation}
           />
           <EquitySection page="state" />
-          {stateData.videos?.length ? (
+          {stateData.videos?.length || stateData.voicesForReform?.length ? (
             <Row className={styles.voices}>
               <Row>
                 <h3>Voices For Reform</h3>
               </Row>
-              <Row>
-                {stateData.voicesForReform?.length ? (
+
+              {stateData.voicesForReform?.length ? (
+                <Row>
                   <ul>
                     {stateData.voicesForReform.map(n => (
                       <li key={n.note + "vfr"}>
@@ -231,21 +234,22 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
                       </li>
                     ))}
                   </ul>
-                ) : null}
-              </Row>
-              {stateData.videos.map(
-                ({ link, title, description, notes }, i) => (
-                  <Row key={`statewide-videos-${i}`}>
-                    <ReactPlayer url={link} width={594} height={361} />
-                    <h4>{title}</h4>
-                    {description && (
-                      <ReactMarkdown className={styles.description}>
-                        {description}
-                      </ReactMarkdown>
-                    )}
-                  </Row>
-                )
-              )}
+                </Row>
+              ) : null}
+              {stateData.videos?.length &&
+                stateData.videos.map(
+                  ({ link, title, description, notes }, i) => (
+                    <Row key={`statewide-videos-${i}`}>
+                      <ReactPlayer url={link} width={594} height={361} />
+                      <h4>{title}</h4>
+                      {description && (
+                        <ReactMarkdown className={styles.description}>
+                          {description}
+                        </ReactMarkdown>
+                      )}
+                    </Row>
+                  )
+                )}
             </Row>
           ) : null}
         </Col>

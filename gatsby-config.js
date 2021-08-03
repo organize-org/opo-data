@@ -456,7 +456,7 @@ module.exports = {
                             name: "voicesForReform",
                             widget: "boolean",
                             default: false,
-                            required: false
+                            required: false,
                           },
                           {
                             label: "Tags",
