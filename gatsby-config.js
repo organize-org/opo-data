@@ -452,6 +452,13 @@ module.exports = {
                         fields: [
                           { label: "Note", name: "note", widget: "markdown" },
                           {
+                            label: "Voices for Reform",
+                            name: "voicesForReform",
+                            widget: "boolean",
+                            default: false,
+                            required: true,
+                          },
+                          {
                             label: "Tags",
                             name: "tags",
                             widget: "select",

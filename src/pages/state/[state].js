@@ -111,8 +111,14 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
     waitlist: parseInt(stateData.waitlist),
   };
   // State-level the notes and videos
-  stateData.notes = notes?.filter(({ tags }) =>
+  stateData.allNotes = notes?.filter(({ tags }) =>
     tags.includes(stateData.abbreviation)
+  );
+  stateData.notes = stateData?.allNotes.filter(
+    note => !note.voicesForReform
+    );
+  stateData.voicesForReform = stateData?.allNotes.filter(
+    note => note.voicesForReform
   );
   stateData.videos = videos?.filter(({ tags }) =>
     tags.includes(stateData.abbreviation)
@@ -216,19 +222,36 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
             state={stateData.abbreviation}
           />
           <EquitySection page="state" />
-          {stateData.videos?.length ? (
+          {stateData.videos?.length || stateData.voicesForReform?.length ? (
             <Row className={styles.voices}>
               <Row>
                 <h3>Voices For Reform</h3>
               </Row>
-              {stateData.videos.map(({ link, title, description }, i) => (
-                <Row key={`statewide-videos-${i}`}>
-                  <ReactPlayer url={link} width={594} height={361} />
-                  <h4>{title}</h4>
-                  {description && <ReactMarkdown>{description}</ReactMarkdown>}
+              {stateData.voicesForReform?.length ? (
+                <Row>
+                  <ul>
+                    {stateData.voicesForReform.map(({ note }, i) => (
+                      <li key={"vfr-notes-" + i}>
+                        <ReactMarkdown>{note}</ReactMarkdown>
+                      </li>
+                    ))}
+                  </ul>
                 </Row>
-              ))}
-            </Row>
+              ) : null}
+              {stateData.videos?.length
+                ? stateData.videos.map(({ link, title, description }, i) => (
+                    <Row key={`statewide-videos-${i}`}>
+                      <ReactPlayer url={link} width={594} height={361} />
+                      <h4>{title}</h4>
+                      {description && (
+                        <ReactMarkdown className={styles.description}>
+                          {description}
+                        </ReactMarkdown>
+                      )}
+                    </Row>
+                  ))
+                : null}
+              </Row>
           ) : null}
         </Col>
       </Row>
