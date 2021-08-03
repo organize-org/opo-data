@@ -227,21 +227,19 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
               <Row>
                 <h3>Voices For Reform</h3>
               </Row>
-
               {stateData.voicesForReform?.length ? (
                 <Row>
                   <ul>
-                    {stateData.voicesForReform.map(n => (
-                      <li key={n.note + "vfr"}>
-                        <ReactMarkdown>{n.note}</ReactMarkdown>
+                    {stateData.voicesForReform.map(({ note }, i) => (
+                      <li key={"vfr-notes-" + i}>
+                        <ReactMarkdown>{note}</ReactMarkdown>
                       </li>
                     ))}
                   </ul>
                 </Row>
               ) : null}
-              {stateData.videos?.length &&
-                stateData.videos.map(
-                  ({ link, title, description, notes }, i) => (
+              {stateData.videos?.length
+                ? stateData.videos.map(({ link, title, description }, i) => (
                     <Row key={`statewide-videos-${i}`}>
                       <ReactPlayer url={link} width={594} height={361} />
                       <h4>{title}</h4>
@@ -251,9 +249,9 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
                         </ReactMarkdown>
                       )}
                     </Row>
-                  )
-                )}
-            </Row>
+                  ))
+                : null}
+              </Row>
           ) : null}
         </Col>
       </Row>
