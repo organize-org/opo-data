@@ -114,6 +114,7 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
   stateData.notes = notes?.filter(({ tags }) =>
     tags.includes(stateData.abbreviation)
   );
+  stateData.voicesForReform = stateData.notes.filter( note => note.voicesForReform)
   stateData.videos = videos?.filter(({ tags }) =>
     tags.includes(stateData.abbreviation)
   );
@@ -221,18 +222,20 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
               <Row>
                 <h3>Voices For Reform</h3>
               </Row>
+              <Row>
+                {stateData.voicesForReform?.length ? (
+                  <ul>
+                    {stateData.voicesForReform.map(n => (
+                      <li key={n.note + "vfr"}>
+                        <ReactMarkdown>{n.note}</ReactMarkdown>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+              </Row>
               {stateData.videos.map(
                 ({ link, title, description, notes }, i) => (
                   <Row key={`statewide-videos-${i}`}>
-                    {notes?.length > 0 ? (
-                      <ul>
-                        {notes.map(n => (
-                          <li key={n.note}>
-                            <ReactMarkdown>{n.note}</ReactMarkdown>
-                          </li>
-                        ))}
-                      </ul>
-                    ) : null}
                     <ReactPlayer url={link} width={594} height={361} />
                     <h4>{title}</h4>
                     {description && (

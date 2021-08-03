@@ -49,14 +49,6 @@ videos:
     link: https://youtu.be/TnKo8Q-Hemk?t=3401
     tags:
       - OH
-    notes:
-      - note: "[Boomer Esiason
-          Foundation](https://twitter.com/cysticfibrosis/status/129646348695711\
-          3344)"
-      - note: "[OPO CEO Matthew Wadsworth in
-          Harvard](https://blog.petrieflom.law.harvard.edu/2021/02/05/recent-or\
-          gan-procurement-organization-regulations-will-save-lives/) Petrie-Flom
-          blog"
     description: \[Optional] Lorem ipsum dolor sit amet, consectetur adipiscing
       elit. Nulla auctor commodo vestibulum. In sollicitudin ultrices blandit.
       Suspendisse lacus quam, euismod sed facilisis a, venenatis facilisis nisi.
@@ -93,7 +85,6 @@ videos:
     tags:
       - CA
     description: ""
-    notes: []
   - title: Patient advocates including Alonzo Mourning, Samantha Bee, and Jenna Zak
     link: https://twitter.com/oversightdems/status/1388204146969427971?s=10
     tags:
@@ -101,36 +92,43 @@ videos:
 notes:
   - note: Passing (Tier 1) [in
       2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    voicesforreform: false
     tags:
       - NEOR
   - note: "CEO compensation
       ([2019](https://projects.propublica.org/nonprofits/display_990/470597541/\
       01_2020_prefixes_46-47%2F470597541_201906_990_2020012717070434)):
       $250,379"
+    voicesforreform: false
     tags:
       - NEOR
   - note: Failing (Tier 3) [in
       2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    voicesforreform: false
     tags:
       - IAOP
   - note: "CEO compensation
       ([2019](https://projects.propublica.org/nonprofits/display_990/421414092/\
       08_2020_prefixes_41-45%2F421414092_201912_990_2020081817242292)):
       $393,024"
+    voicesforreform: false
     tags:
       - IAOP
   - note: Failing (Tier 3) [in
       2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    voicesforreform: false
     tags:
       - HIOP
   - note: "CEO compensation
       ([2018](https://projects.propublica.org/nonprofits/display_990/990257883/\
       01_2020_prefixes_95-99%2F990257883_201812_990_2020011417026820)):
       $142,729"
+    voicesforreform: false
     tags:
       - HIOP
   - note: Underperforming (Tier 2) [in
       2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    voicesforreform: false
     tags:
       - TNDS
   - note: "CEO compensation
@@ -139,66 +137,83 @@ notes:
       JK*MTYyNzc3OTQxNS4yLjEuMTYyNzc3OTQzMi4w*_ga_5W8PXYYGBX*MTYyNzc3OTQxNS4yLj\
       EuMTYyNzc3OTQzMi4w&_ga=2.156327736.2055005190.1627779416-1118675835.16275\
       15191)): $318,193"
+    voicesforreform: false
     tags:
       - TNDS
   - note: Included in [House Committee on Oversight and Reform
       Investigation](https://oversight.house.gov/sites/democrats.oversight.house.gov/files/OPO%20Letters.pdf)
+    voicesforreform: false
     tags:
       - TNDS
   - note: Underperforming (Tier 2) [in
       2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    voicesforreform: false
     tags:
       - GALL
   - note: "CEO compensation: Unavailable via 990"
+    voicesforreform: false
     tags:
       - GALL
   - note: Included in [House Committee on Oversight and Reform
       Investigation](https://oversight.house.gov/sites/democrats.oversight.house.gov/files/OPO%20Letters.pdf)
+    voicesforreform: false
     tags:
       - GALL
   - note: Passing (Tier 1) [in
       2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    voicesforreform: false
     tags:
       - FLFH
   - note: "CEO compensation: Unavailable via 990"
+    voicesforreform: false
     tags:
       - FLFH
   - note: Failing (Tier 3) [in
       2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    voicesforreform: false
     tags:
       - FLMP
   - note: "CEO compensation: Unavailable via 990"
+    voicesforreform: false
     tags:
       - FLMP
   - note: Included in [House Committee on Oversight and Reform
       Investigation](https://oversight.house.gov/sites/democrats.oversight.house.gov/files/OPO%20Letters.pdf)
+    voicesforreform: false
     tags:
       - FLMP
   - note: Passing (Tier 1) [in
       2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    voicesforreform: false
     tags:
       - FLWC
   - note: "CEO compensation: Unavailable via 990"
+    voicesforreform: false
     tags:
       - FLWC
   - note: Included in [House Committee on Oversight and Reform
       Investigation](https://oversight.house.gov/sites/democrats.oversight.house.gov/files/OPO%20Letters.pdf)
+    voicesforreform: false
     tags:
       - FLWC
   - note: Failing (Tier 3) [in
       2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    voicesforreform: false
     tags:
       - FLUF
   - note: "CEO compensation
       ([2019](https://projects.propublica.org/nonprofits/organizations/52152846\
       1/202003089349302685/full)): $533,289"
+    voicesforreform: false
     tags:
       - FLUF
   - note: Passing (Tier 1) [in
       2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    voicesforreform: false
     tags:
       - PADV
-  - tags:
+  - voicesforreform: false
+    tags:
       - PADV
     note: "CEO Compensation
       ([2018](https://projects.propublica.org/nonprofits/display_990/237388767/\
@@ -206,122 +221,148 @@ notes:
       $752,777"
   - note: Passing (Tier 1) [in
       2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    voicesforreform: false
     tags:
       - DCTC
   - note: "CEO Compensation
       ([2019](https://projects.propublica.org/nonprofits/organizations/52152846\
       1/202003089349302685/full)): $533,289"
+    voicesforreform: false
     tags:
       - DCTC
   - note: Failing (Tier 3) [in
       2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    voicesforreform: false
     tags:
       - CORS
   - note: "CEO compensation
       ([2019](https://projects.propublica.org/nonprofits/display_990/841003771/\
       08_2020_prefixes_82-90%2F841003771_201912_990_2020081017226599)):
       $653,534"
+    voicesforreform: false
     tags:
       - CORS
   - note: "CEO compensation
       ([2019](https://projects.propublica.org/nonprofits/display_990/943062436/\
       02_2021_prefixes_92-95%2F943062436_201912_990_2021021817718168)):
       $532,136"
+    voicesforreform: false
     tags:
       - CAOP
   - note: "CEO compensation
       ([2019](https://projects.propublica.org/nonprofits/display_990/953138799/\
       02_2021_prefixes_95-99%2F953138799_201912_990_2021022417749964)):
       $972,505"
+    voicesforreform: false
     tags:
       - CAOP
   - note: Included in [House Committee on Oversight and Reform
       Investigation](https://oversight.house.gov/sites/democrats.oversight.house.gov/files/OPO%20Letters.pdf)
+    voicesforreform: false
     tags:
       - CAOP
   - note: Passing (Tier 1) [in
       2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    voicesforreform: false
     tags:
       - CASD
   - note: "CEO compensation: Unavailable via 990"
+    voicesforreform: false
     tags:
       - CASD
   - note: Underperforming (Tier 2) [in
       2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    voicesforreform: false
     tags:
       - CAGS
   - note: "CEO compensation: Unavailable via 990"
+    voicesforreform: false
     tags:
       - CAGS
   - note: Included in [House Committee on Oversight and Reform
       Investigation](https://oversight.house.gov/sites/democrats.oversight.house.gov/files/OPO%20Letters.pdf)
+    voicesforreform: false
     tags:
       - CAGS
   - note: Underperforming (Tier 2) [in
       2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    voicesforreform: false
     tags:
       - CADN
   - note: "CEO Compensation
       ([2019](https://projects.propublica.org/nonprofits/display_990/943062436/\
       02_2021_prefixes_92-95%2F943062436_201912_990_2021021817718168)):
       $532,136"
+    voicesforreform: false
     tags:
       - CADN
   - note: Passing (Tier 1) [in
       2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    voicesforreform: false
     tags:
       - AZOB
   - note: "CEO Compensation
       ([2019](https://projects.propublica.org/nonprofits/display_990/860707697/\
       08_2020_prefixes_82-90%2F860707697_201912_990_2020081917242655)):
       $630,942"
+    voicesforreform: false
     tags:
       - AZOB
   - note: Passing (Tier 1) [in
       2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    voicesforreform: false
     tags:
       - TXSB
   - note: "CEO compensation
       ([2018](https://projects.propublica.org/nonprofits/display_990/751469319/\
       01_2020_prefixes_74-76%2F751469319_201812_990_2020012417063597)):
       $705,285"
+    voicesforreform: false
     tags:
       - TXSB
   - note: Failing (Tier 3) [in
       2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    voicesforreform: false
     tags:
       - AROR
   - note: "CEO compensation
       ([2018](https://projects.propublica.org/nonprofits/display_990/710656542/\
       02_2020_prefixes_64-73%2F710656542_201812_990_2020021317141438)):
       $251,689"
+    voicesforreform: false
     tags:
       - AROR
   - note: Failing (Tier 3) [in
       2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    voicesforreform: false
     tags:
       - TNMS
   - note: "CEO compensation
       ([2019](https://projects.propublica.org/nonprofits/display_990/620992075/\
       02_2021_prefixes_61-68%2F620992075_201912_990_2021022217735673)):
       $310,513"
+    voicesforreform: false
     tags:
       - TNMS
   - note: Passing (Tier 1) [in
       2018 ](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    voicesforreform: false
     tags:
       - MOMA
   - note: "CEO compensation
       ([2019](https://projects.propublica.org/nonprofits/display_990/237426306/\
       02_2021_prefixes_23-25%2F237426306_201912_990_2021021817717361)):
       $574,635"
+    voicesforreform: false
     tags:
       - MOMA
   - note: Failing (Tier 3) [in
       2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    voicesforreform: false
     tags:
       - ALOB
   - note: "CEO compensation: Unavailable via 990"
+    voicesforreform: false
     tags:
       - ALOB
   - note: "[Washington
@@ -329,22 +370,26 @@ notes:
       t-was-left-on-a-plane-revealing-how-organs-move-around-the-country/2018/1\
       2/14/3aabe696-ffb7-11e8-862a-b6a6f3ce8199_story.html): “​​A human heart
       was left on a plane, revealing how organs move around the country”"
+    voicesforreform: false
     tags:
       - VA
   - note: '[Project on Government
       Oversight](https://www.pogo.org/investigation/2020/10/heartless-organ-donation-contractors-lobby-against-a-popular-health-care-initiative-while-pocketing-pandemic-relief-loans/):
       “Heartless: Organ Donation Contractors Lobby Against a Popular Health Care
       Initiative While Pocketing Pandemic Relief Loans"'
+    voicesforreform: false
     tags:
       - VA
   - note: "[Medscape](https://www.medpagetoday.com/surgery/transplantation/92446):
       “Lawmakers Lambast Organ Procurement Lobbyists”"
+    voicesforreform: false
     tags:
       - VA
   - note: "[HHS Office of the Inspector
       General](https://oig.hhs.gov/oas/reports/region9/91102039.pdf):
       “LifeCenter Northwest Did Not Fully Comply with Medicare Requirements for
       Reporting Organ Statistics in its Fiscal Year 2009 Medicare Cost Report"
+    voicesforreform: false
     tags:
       - WA
   - note: "[ABC
@@ -352,12 +397,14 @@ notes:
       -investigates-broken-system-for-patients-on-organ-transplant-waitlist/)
       “House committee investigates ‘broken system’ for patients on organ
       transplant waitlist”"
+    voicesforreform: false
     tags:
       - TN
   - note: "[Fox 13
       Memphis](https://www.fox13memphis.com/news/local/patients-urge-congress-r\
       eform-organ-transplant-system/SNQGMPS5UVE7PHZ3PNRZVTCC64/): “Patients urge
       Congress to reform organ transplant system”"
+    voicesforreform: false
     tags:
       - TN
   - note: "[Post and
@@ -365,6 +412,7 @@ notes:
       gan-network-faces-investigation-pressure-to-improve/article_c568faee-be28\
       -11eb-baf7-1fffb4833e8c.html): “After blood-type error, SC organ network
       faces investigation, pressure to improve”"
+    voicesforreform: false
     tags:
       - SC
   - note: "[Post and
@@ -372,6 +420,7 @@ notes:
       ong-lungs-it-wasnt-the-only-organ-error-in/article_c6a6e386-e704-11ea-91c\
       e-2783df6c6f2d.html): “He died when he got the wrong lungs. It wasn’t the
       only organ error in SC that day.”"
+    voicesforreform: false
     tags:
       - SC
   - note: "[Project on Government
@@ -380,12 +429,14 @@ notes:
       cketing-pandemic-relief-loans/): “Heartless: Organ Donation Contractors
       Lobby Against a Popular Health Care Initiative While Pocketing Pandemic
       Relief Loans”"
+    voicesforreform: false
     tags:
       - PA
   - note: "[Pittsburgh-Tribune
       Review:](https://archive.triblive.com/local/pittsburgh-allegheny/gift-of-\
       life-worth-millions-to-donation-organizations/) “Gift of life worth
       millions to donation organizations”"
+    voicesforreform: false
     tags:
       - PA
   - note: "[Pittsburgh
@@ -394,6 +445,7 @@ notes:
       “Taxpayers help pay for organ donor groups' parties, Rose Parade
       expenses”[](https://archive.triblive.com/local/pittsburgh-allegheny/taxpa\
       yers-help-pay-for-organ-donor-groups-parties-rose-parade-expenses/)"
+    voicesforreform: false
     tags:
       - PA
   - note: "[News 5
@@ -401,6 +453,7 @@ notes:
       uh-transplant-patient-receives-kidney-intended-for-another-hospital-offic\
       ial-confirms): “UH transplant patient receives kidney intended for
       another, hospital official confirms.”"
+    voicesforreform: false
     tags:
       - OH
   - note: "[Columbus
@@ -408,11 +461,13 @@ notes:
       s-may-jump-7-300-year-under-new-federal-rules/7617863002/): “New federal
       rules on organ transplants seek to boost numbers, increase
       accountability”"
+    voicesforreform: false
     tags:
       - OH
   - note: "[CBS
       News](https://www.cbsnews.com/news/anatomy-of-a-mistake-16-03-2003/):
       “Anatomy of a Mistake”"
+    voicesforreform: false
     tags:
       - NC
   - note: "[USA
@@ -420,6 +475,7 @@ notes:
       planted-into-wrong-patient-new-jersey-hospital-says/4314849002/):
       “​​Hospital says donated kidney was transplanted into wrong patient in
       NJ”"
+    voicesforreform: false
     tags:
       - NJ
   - note: "[Project on Government
@@ -428,12 +484,14 @@ notes:
       cketing-pandemic-relief-loans/): “Heartless: Organ Donation Contractors
       Lobby Against a Popular Health Care Initiative While Pocketing Pandemic
       Relief Loans”"
+    voicesforreform: false
     tags:
       - NJ
   - note: "[Oversight Subcommittee Expands Investigation into Fraud, Waste, and
       Abuse in Organ Transplant
       Industry](https://oversight.house.gov/news/press-releases/oversight-subco\
       mmittee-expands-investigation-into-fraud-waste-and-abuse-in-organ)"
+    voicesforreform: false
     tags:
       - NV
   - note: "[Project on Government
@@ -442,12 +500,14 @@ notes:
       cketing-pandemic-relief-loans/): “Heartless: Organ Donation Contractors
       Lobby Against a Popular Health Care Initiative While Pocketing Pandemic
       Relief Loans”"
+    voicesforreform: false
     tags:
       - NV
   - note: "[Las Vegas
       Journal-Review](https://www.reviewjournal.com/local/local-las-vegas/tissu\
       e-donation-turns-into-nightmare-for-three-sisters/): “Tissue donation
       turns into nightmare for three sisters”"
+    voicesforreform: false
     tags:
       - NV
   - note: "[The Nevada
@@ -455,6 +515,7 @@ notes:
       k-under-congressional-scrutiny-for-spending-says-it-has-complied-with-the\
       -law): “Nevada Donor Network, under congressional scrutiny for spending,
       says it has complied with the law”"
+    voicesforreform: false
     tags:
       - NV
   - note: "[Las Vegas
@@ -464,10 +525,12 @@ notes:
       =Nevada%20organ%20donor%20group%20blasted,reviewjournal.com%20%E2%80%BA%2\
       0news%20%E2%80%BA%20nevada-organ-...): “Nevada organ donor group blasted
       for VGK, Raiders season tickets”"
+    voicesforreform: false
     tags:
       - NV
   - note: "[Fox 2 Now](https://fox2now.com/) (St. Louis): House committee
       investigates ‘broken system’ for patients on organ transplant waitlist"
+    voicesforreform: false
     tags:
       - MO
   - note: "[Project on Government
@@ -476,6 +539,7 @@ notes:
       cketing-pandemic-relief-loans/): “Heartless: Organ Donation Contractors
       Lobby Against a Popular Health Care Initiative While Pocketing Pandemic
       Relief Loans”"
+    voicesforreform: false
     tags:
       - MA
   - note: "[NBC Springfield
@@ -483,6 +547,7 @@ notes:
       en-system%e2%80%99-for-patients-on-organ-transplant-waitlist/6594868/):
       “House committee investigates ‘broken system’ for patients on organ
       transplant waitlist”"
+    voicesforreform: false
     tags:
       - MA
   - note: "[Washington
@@ -490,16 +555,19 @@ notes:
       ailure-of-the-first-us-uterine-transplant/2019/02/13/6345f018-07c0-11e9-8\
       5b6-41c0fe0c5b8f_story.html): “Behind the failure of the first U.S.
       uterine transplant”"
+    voicesforreform: false
     tags:
       - FL
   - note: "[Miami
       Herald](https://www.miamiherald.com/news/local/community/miami-dade/artic\
       le8081760.html): “Doctor, nurse: UM administrator assaulted us”"
+    voicesforreform: false
     tags:
       - FL
   - note: "[Miami
       Herald](https://www.miamiherald.com/news/health-care/article47968670.html\
       ): “University of Miami organ bank fails to meet regulatory requirements”"
+    voicesforreform: false
     tags:
       - FL
   - note: "[Project on Government
@@ -508,18 +576,21 @@ notes:
       cketing-pandemic-relief-loans/): “Heartless: Organ Donation Contractors
       Lobby Against a Popular Health Care Initiative While Pocketing Pandemic
       Relief Loans”"
+    voicesforreform: false
     tags:
       - CA
   - note: "[HHS Office of the Inspector
       General](https://oig.hhs.gov/oas/reports/region9/90800033.pdf): “Review of
       OneLegacy’s Reported Fiscal Year 2006 Organ Acquisition Overhead Costs and
       Administrative and General Costs”"
+    voicesforreform: false
     tags:
       - CA
   - note: "[LA
       Times](https://www.latimes.com/business/la-fi-executives-coroners-body-pa\
       rt-harvesting-secret-20190408-story.html): “Executives coached coroners on
       how to keep body parts harvesting records secret”"
+    voicesforreform: false
     tags:
       - CA
   - note: "[LA
@@ -528,6 +599,7 @@ notes:
       [](https://www.latimes.com/business/la-fi-how-body-brokers-took-over-coun\
       ty-morgue-20190408-story.html)“How organ and tissue donation companies
       worked their way into the county morgue”"
+    voicesforreform: false
     tags:
       - CA
   - note: "[ABC 15
@@ -535,6 +607,7 @@ notes:
       ily-pursues-legal-action-after-donor-network-of-arizona-wrongly-harvests-\
       their-sons-corneas): “Mesa family takes legal action after Donor Network
       of Arizona 'wrongly harvests' their son's corneas”"
+    voicesforreform: false
     tags:
       - AZ
   - note: "[HHS Office of Inspector
@@ -542,6 +615,7 @@ notes:
       Network of Arizona Did Not Fully Comply With Medicare Requirements for
       Reporting Organ Statistics and Related Costs in Its Fiscal Year 2009
       Medicare Cost Report”"
+    voicesforreform: false
     tags:
       - AZ
   - note: "[Arizona
@@ -549,6 +623,7 @@ notes:
       12/27/arizona-fares-better-than-most-for-organ-transplant-waiting-lists/4\
       017173002/): “Arizona fares better than most in challenging environment
       for organ transplants”"
+    voicesforreform: false
     tags:
       - AZ
   - note: "[CBS
@@ -556,434 +631,523 @@ notes:
       emated-alive-after-exposing-mortuary-kickback-scheme/): “Whistleblower
       threatened with being cremated alive after exposing mortuary kickback
       scheme”"
+    voicesforreform: false
     tags:
       - AL
   - note: "[FBI](https://archives.fbi.gov/archives/birmingham/press-releases/2011/f\
       ormer-alabama-organ-center-executives-charged-with-fraud): “Former Alabama
       Organ Center Executives Charged with Fraud”"
+    voicesforreform: false
     tags:
       - AL
   - note: "[Jennifer
       Erickson](https://www.washingtonpost.com/opinions/i-want-a-journalist-to-\
       see-what-happens-to-my-organs-after-i-die-heres-why/2019/10/04/42c5e888-e\
       529-11e9-a331-2df12d56a80b_story.html)"
+    voicesforreform: false
     tags:
       - DC
   - note: "[Washington Post editorial
       board](https://www.washingtonpost.com/opinions/many-die-waiting-for-organ\
       s-the-trump-administration-could-help/2020/07/31/77e3a102-dfd6-11e9-b199-\
       f638bf2c340f_story.html)"
+    voicesforreform: false
     tags:
       - DC
   - note: "[Rep. Suzan DelBene, Co-Chair of House Kidney
       Caucus](https://delbene.house.gov/news/documentsingle.aspx?DocumentID=267\
       4)"
+    voicesforreform: false
     tags:
       - WA
   - note: "[Former Surgeon General Ken
       Moritsugu](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/\
       581bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    voicesforreform: false
     tags:
       - VA
   - note: "[Rep. Ben
       Cline](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581b\
       c3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    voicesforreform: false
     tags:
       - VA
   - note: "[Rep. Abigail
       Spanberger](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd\
       /581bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    voicesforreform: false
     tags:
       - VA
   - note: "[Rep. John
       Curtis](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
       bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    voicesforreform: false
     tags:
       - UT
   - note: "[Joe
       Lonsdale](https://joelonsdale.com/news/steering-american-healthcare/)"
+    voicesforreform: false
     tags:
       - TX
   - note: "[Laura and John
       Arnold](https://www.statnews.com/2019/07/24/a-simple-bureaucratic-organ-d\
       onation-fix-will-save-thousands-of-lives/)"
+    voicesforreform: false
     tags:
       - TX
   - note: "[Baylor College of
       Medicine](https://www.bcm.edu/about-us/leadership/office-of-the-president\
       /position-statements/organ-donation-policy)"
+    voicesforreform: false
     tags:
       - TX
   - note: "[Rep. Kenny
       Marchant](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/5\
       81bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    voicesforreform: false
     tags:
       - TX
   - note: "[Rep. Jodey
       Arrington](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/\
       581bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    voicesforreform: false
     tags:
       - TX
   - note: "[Dallas OPO CEO Patti
       Niles](https://www.dallasnews.com/opinion/commentary/2021/02/12/the-us-or\
       gan-donation-system-needs-transparency-and-accountability/)"
+    voicesforreform: false
     tags:
       - TX
   - note: "[Bakari
       Sellers](https://www.cnn.com/2019/12/24/opinions/broken-organ-donation-sy\
       stem-sellers/index.html)"
+    voicesforreform: false
     tags:
       - SC
   - note: "[Dr. Alefiyah Mesiwala, former Obama White
       House](https://www.post-gazette.com/opinion/2019/07/24/div-class-libPageB\
       odyLinebreak-Organ-care-is-not-a-partisan-issue-div/stories/201907240024)"
+    voicesforreform: false
     tags:
       - PA
   - note: "[Dr. Laura Siminoff,
       Temple](http://www.siminoffresearchgroup.org/research-studies/cead/)"
+    voicesforreform: false
     tags:
       - PA
   - note: "[Dr. David Goldberg, University of
       Pennsylvania](https://www.med.upenn.edu/goldberglab/data.html)"
+    voicesforreform: false
     tags:
       - PA
   - note: "[Rep. Brian
       Fitzpatrick](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ug\
       d/581bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    voicesforreform: false
     tags:
       - PA
   - note: "[Dr. Esther Choo](https://twitter.com/choo_ek/status/1321536322725502976)
       (Oregon Health & Sciences University)"
+    voicesforreform: false
     tags:
       - OR
   - note: "[Oregon Public
       Broadcasting](https://www.opb.org/news/article/oregon-transplant-system-o\
       rganization-health-department-proposed-trump-rules/)"
+    voicesforreform: false
     tags:
       - OR
   - note: "[Oregon liver transplant patient Erika
       Zak](https://www.cnn.com/2019/08/17/health/erika-zak-liver-transplant-201\
       9-update/index.html)"
+    voicesforreform: false
     tags:
       - OR
   - note: "[Chairman Ron
       Wyden](https://www.finance.senate.gov/ranking-members-news/grassley-wyden\
       -subpoena-the-united-network-for-organ-sharing-as-part-of-continued-inves\
       tigation-into-us-organ-transplant-system)"
+    voicesforreform: false
     tags:
       - OR
   - note: "[Boomer Esiason
       Foundation](https://twitter.com/cysticfibrosis/status/1296463486957113344\
       )"
+    voicesforreform: false
     tags:
       - OH
+    voicesForReform: true
   - note: "[New York Times editorial
       board](https://www.nytimes.com/2019/08/20/opinion/erika-zak-organ-donor.h\
       tml)"
+    voicesforreform: false
     tags:
       - NY
   - note: "[NY doctors, including Dr. Craig Spencer and Dr. Dara
       Kass](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc\
       3_e70640160570491b9855d21980e87092.pdf)"
+    voicesforreform: false
     tags:
       - NY
   - note: "[New York City-based OPO
       LiveOnNY](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/5\
       81bc3_ad2bfdb091974d62bc52596e06f8d848.pdf)"
+    voicesforreform: false
     tags:
       - NY
   - note: "[Rep. Grace
       Meng](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc\
       3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    voicesforreform: false
     tags:
       - NY
   - note: "[Rep. Thomas
       Suozzi](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
       bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    voicesforreform: false
     tags:
       - NY
   - note: "[Rep. Tom
       Reed](https://www.finance.senate.gov/imo/media/doc/031621%20Bipartisan%20\
       Bicameral%20HHS%20OPO%20Rule%20Support%20Letter.pdf)"
+    voicesforreform: false
     tags:
       - NY
   - note: "[Rep. Max
       Rose](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc\
       3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    voicesforreform: false
     tags:
       - NY
   - note: "[Greg Segal in Albuquerque
       Journal](https://www.abqjournal.com/1522747/organ-donation-in-dire-need-o\
       f-reforms.html)"
+    voicesforreform: false
     tags:
       - NM
   - note: "[Marissa Padilla in Albuquerque
       Journal](https://www.abqjournal.com/1515216/modern-organ-donation-system-\
       could-save-more-nm-lives.html)"
+    voicesforreform: false
     tags:
       - NM
   - note: "[Rep. Steven
       Horsford](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/5\
       81bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    voicesforreform: false
     tags:
       - NV
   - note: "[Missouri OPO CEO Diane
       Brockmeier](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd\
       /581bc3_2b0e0453d04b474cb26d7b7cd82da91d.pdf)"
+    voicesforreform: false
     tags:
       - MO
   - note: "[Senator Cindy
       Hyde-Smith](https://www.congress.gov/bill/116th-congress/senate-bill/2063\
       )"
+    voicesforreform: false
     tags:
       - MS
   - note: "[Dr. Tim
       Pruett](http://www.startribune.com/organ-donation-a-better-system-could-s\
       ave-thousands-of-lives/507749852/)"
+    voicesforreform: false
     tags:
       - MN
   - note: "[Andy Slavitt, former Obama and Biden senior
       official](https://www.usatoday.com/story/opinion/2019/12/11/organ-donatio\
       n-reform-could-save-thousands-lives-billions-taxes-column/4377383002/)"
+    voicesforreform: false
     tags:
       - MN
   - note: "[Minneapolis Star Tribune editorial
       board](http://www.startribune.com/too-many-americans-die-while-waiting-fo\
       r-gift-of-life/563241112/)"
+    voicesforreform: false
     tags:
       - MN
   - note: "[Lansing State
       Journal](https://www.lansingstatejournal.com/story/opinion/contributors/v\
       iewpoints/2020/12/22/new-organ-transplant-reforms-save-lives/4006015001/)"
+    voicesforreform: false
     tags:
       - MI
   - note: "[Jerry Mande
       (Tufts)](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/c1\
       14f6_b6fd6a59c60a43d0bc8f33386ebd11b3.pdf)"
+    voicesforreform: false
     tags:
       - MA
   - note: "[Harvard Law School Petrie-Flom
       Center](https://blog.petrieflom.law.harvard.edu/2021/02/05/recent-organ-p\
       rocurement-organization-regulations-will-save-lives/)"
+    voicesforreform: false
     tags:
       - MA
   - note: "[Dr. Jeremy
       Faust](https://twitter.com/jeremyfaust/status/1389326765940568065)"
+    voicesforreform: false
     tags:
       - MA
   - note: "[Senator Elizabeth
       Warren](https://www.warren.senate.gov/oversight/letters/senators-warren-a\
       nd-blumenthal-request-information-about-oversight-of-organ-procurement-or\
       ganizations-opos)"
+    voicesforreform: false
     tags:
       - MA
   - note: "[Rep. Jamie
       Raskin](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
       bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    voicesforreform: false
     tags:
       - MD
   - note: "[Baltimore Corps CEO Fagan
       Harris](https://twitter.com/oversightdems/status/1388204146969427971?s=10\
       )"
+    voicesforreform: false
     tags:
       - MD
   - note: "[Senator Ben
       Cardin](https://www.finance.senate.gov/imo/media/doc/031621%20Bipartisan%\
       20Bicameral%20HHS%20OPO%20Rule%20Support%20Letter.pdf)"
+    voicesforreform: false
     tags:
       - MD
   - note: "[Ben
       Jealous](https://www.healthaffairs.org/do/10.1377/hblog20201211.229975/fu\
       ll/)"
+    voicesforreform: false
     tags:
       - MD
   - note: "[Louisiana OPO CEO Kelly
       Ranum](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581b\
       c3_2b0e0453d04b474cb26d7b7cd82da91d.pdf)"
+    voicesforreform: false
     tags:
       - LA
   - note: "[Rep. John
       Yarmuth](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/58\
       1bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    voicesforreform: false
     tags:
       - KY
   - note: "[Rep. James
       Comer](https://www.finance.senate.gov/imo/media/doc/031621%20Bipartisan%2\
       0Bicameral%20HHS%20OPO%20Rule%20Support%20Letter.pdf)"
+    voicesforreform: false
     tags:
       - KY
   - note: "[Kentucky kidney patient testifies before House Oversight
       Committee](https://youtu.be/TnKo8Q-Hemk?t=827)"
+    voicesforreform: false
     tags:
       - KY
   - note: "[University of Kentucky
       doctors](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/58\
       1bc3_a695046dc1c048d39536cae6c154eadc.pdf)"
+    voicesforreform: false
     tags:
       - KY
   - note: "[Dr. Malay Shah, University of
       Kentucky](https://www.courier-journal.com/story/opinion/2020/12/04/organ-\
       transplants-reforms-opos-lead-more-organ-donors/3798051001/)"
+    voicesforreform: false
     tags:
       - KY
   - note: "[Rep. Cindy
       Axne](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc\
       3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    voicesforreform: false
     tags:
       - IA
   - note: "[Iowa heart transplant recipient Michael
       Kutcher](https://twitter.com/oversightdems/status/1388204146969427971?s=1\
       0)"
+    voicesforreform: false
     tags:
       - IA
   - note: "[Senator Chuck
       Grassley](https://www.finance.senate.gov/ranking-members-news/grassley-wy\
       den-subpoena-the-united-network-for-organ-sharing-as-part-of-continued-in\
       vestigation-into-us-organ-transplant-system)"
+    voicesforreform: false
     tags:
       - IA
   - note: "[Rep. Larry Bucshon, Co-chair of House Kidney
       Caucus](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
       bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    voicesforreform: false
     tags:
       - IN
   - note: "[Gift of Hope OPO
       Statement](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/\
       581bc3_cf8ab4dc8e6744419eee63c3deec8993.pdf)"
+    voicesforreform: false
     tags:
       - IN
   - note: "[Rep. Danny
       Davis](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581b\
       c3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    voicesforreform: false
     tags:
       - IL
   - note: "[Gift of Hope, Chicago-based
       OPO](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc3\
       _cf8ab4dc8e6744419eee63c3deec8993.pdf)"
+    voicesforreform: false
     tags:
       - IL
   - note: "[Chicago Tribune: letter to the
       editor](https://www.chicagotribune.com/opinion/letters/ct-letters-vp-1031\
       20-20201030-tr6q64dknvfzhfv4zdwzxsok24-story.html)"
+    voicesforreform: false
     tags:
       - IL
   - note: "[Rep. Buddy
       Carter](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
       bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    voicesforreform: false
     tags:
       - GA
   - note: "[Rep. Neal
       Dunn](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc\
       3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    voicesforreform: false
     tags:
       - FL
   - note: "[Orlando OPO CEO Ginny
       McBride](https://morningconsult.com/opinions/organ-donation-can-save-more\
       -lives-through-reform/)"
+    voicesforreform: false
     tags:
       - FL
   - note: "[Senator Richard
       Blumenthal](https://www.warren.senate.gov/oversight/letters/senators-warr\
       en-and-blumenthal-request-information-about-oversight-of-organ-procuremen\
       t-organizations-opos)"
+    voicesforreform: false
     tags:
       - CT
   - note: "[Rep. Diana DeGette, Co-chair, Diabetes
       Caucus](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
       bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    voicesforreform: false
     tags:
       - CO
   - note: "[Senator Michael
       Bennet](https://www.congress.gov/bill/116th-congress/senate-bill/2063)"
+    voicesforreform: false
     tags:
       - CO
   - note: "[Nobel Laureate Al Roth
       (Stanford)](https://www.statnews.com/2021/04/02/reforming-and-improving-o\
       rgan-transplant-systems-will-save-lives-taxpayer-dollars/)"
+    voicesforreform: false
     tags:
       - CA
   - note: "[San Francisco OPO CEO Janice
       Whaley](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
       bc3_2b0e0453d04b474cb26d7b7cd82da91d.pdf)"
+    voicesforreform: false
     tags:
       - CA
   - note: "[Rep. Mark DeSaulnier](https://youtu.be/TnKo8Q-Hemk?t=5189)"
+    voicesforreform: false
     tags:
       - CA
   - note: "[Kidney patient Tonya Ingram testifies before House Oversight
       Committee](https://youtu.be/TnKo8Q-Hemk?t=129)"
+    voicesforreform: false
     tags:
       - CA
   - note: "[Rep. Karen
       Bass](https://drive.google.com/file/d/1FJy3StR9TOdv-LlsXqU22P2QNeRjAJkB/v\
       iew?usp=sharing)"
+    voicesforreform: false
     tags:
       - CA
   - note: "[Rep. Katie
       Porter](https://drive.google.com/file/d/1FJy3StR9TOdv-LlsXqU22P2QNeRjAJkB\
       /view?usp=sharing)"
+    voicesforreform: false
     tags:
       - CA
   - note: "[U.S. Attorney Joyce
       Vance](https://archives.fbi.gov/archives/birmingham/press-releases/2012/f\
       ormer-alabama-organ-center-executive-sentenced-for-fraud)"
+    voicesforreform: false
     tags:
       - AL
   - note: "[Rep. Terri
       Sewell](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
       bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
+    voicesforreform: false
     tags:
       - AL
   - note: "[Dr. Jayme Locke, University of
       Alabama](https://www.healthaffairs.org/do/10.1377/hblog20201211.229975/fu\
       ll/)"
+    voicesforreform: false
     tags:
       - AL
   - note: >
       [OPO CEO Matthew Wadsworth in
       Harvard](https://blog.petrieflom.law.harvard.edu/2021/02/05/recent-organ-procurement-organization-regulations-will-save-lives/)
       Petrie-Flom blog
+    voicesforreform: false
     tags:
       - OH
+    voicesForReform: true
   - note: Started private jet business [TxJet](https://txjet.org/) in 2014
+    voicesforreform: false
     tags:
       - INOP
-  - tags:
+  - voicesforreform: false
+    tags:
       - INOP
     note: Currently subject of [Senate
       oversight](https://www.finance.senate.gov/imo/media/doc/2020-02-10%20Grassley,%20Wyden,%20Young,%20Cardin%20to%20UNOS%20(Information%20Request%20on%20Organ%20Transplant%20System).pdf)
       inquiry
-  - tags:
+  - voicesforreform: false
+    tags:
       - GALL
       - FLWC
       - PRLL
     note: Parent company LifeLink Foundation has $117M in assets, paid Board Chair
       $750,000 in 2017
-  - tags:
+  - voicesforreform: false
+    tags:
       - FLMP
     note: Subject of investigative reporting for quality control issues and
       workplace violence (see [Washington
       Post](https://www.washingtonpost.com/national/health-science/behind-the-failure-of-the-first-us-uterine-transplant/2019/02/13/6345f018-07c0-11e9-85b6-41c0fe0c5b8f_story.html)
       and [Miami
       Herald](https://www.miamiherald.com/news/health-care/article47968670.html))
-  - tags:
+  - voicesforreform: false
+    tags:
       - FLWC
       - GALL
       - PRLL
     note: "Subject of [investigative
       reporting](https://archive.triblive.com/local/pittsburgh-allegheny/gift-o\
       f-life-worth-millions-to-donation-organizations/) "
-  - tags:
+  - voicesforreform: false
+    tags:
       - MAOB
     note: Bought [private jet](
       https://4kx391lh5z1qexgd32brx810-wpengine.netdna-ssl.com/wp-content/uploads/2018/08/Essex_case_study_NEDS.pdf)
       in 2018
-  - tags:
+  - voicesforreform: false
+    tags:
       - ALOB
     note: OPO executives sentenced to [Federal
       prison](https://archives.fbi.gov/archives/birmingham/press-releases/2012/former-alabama-organ-center-executive-sentenced-for-fraud)
       in 2012 for fraud
-  - tags:
+  - voicesforreform: false
+    tags:
       - SCOP
       - CAOP
       - WALC
@@ -1003,20 +1167,24 @@ notes:
       - INOP
     note: Included in [House Committee on Oversight and Reform
       investigation](https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)
-  - tags:
+  - voicesforreform: false
+    tags:
       - VATB
     note: 2018 [CEO
       Salary](https://projects.propublica.org/nonprofits/display_990/521273592/02_2020_prefixes_47-52%2F521273592_201812_990_2020021817159635)
       was $1.6 million
   - note: Spent $392M on "tissue processing" and $22M on "organ procurement" in 2018
+    voicesforreform: false
     tags:
       - VATB
   - note: Board Chair paid $100,000 annually
+    voicesforreform: false
     tags:
       - CAOP
   - note: Investigative reporting found [fatal
       lapses](https://www.postandcourier.com/health/he-died-when-he-got-the-wrong-lungs-it-wasnt-the-only-organ-error-in/article_c6a6e386-e704-11ea-91ce-2783df6c6f2d.html)
       in patient safety
+    voicesforreform: false
     tags:
       - VATB
       - SCOP
@@ -1024,10 +1192,12 @@ notes:
       support](https://www.dallasnews.com/opinion/commentary/2021/02/12/the-us-\
       organ-donation-system-needs-transparency-and-accountability/) of new OPO
       rule"
+    voicesforreform: false
     tags:
       - TXSB
   - note: 2017 CEO compensation
       [2.5M](https://porter.house.gov/uploadedfiles/cms_hhs_opo_oversight_final_7.9.20.pdf)
+    voicesforreform: false
     tags:
       - PADV
   - note: "[CEO
@@ -1037,53 +1207,64 @@ notes:
       year](https://www.bridgespan.org/bridgespan/Images/articles/transforming-\
       organ-donation-in-america/transforming-organ-donation-in-america-dec2020-\
       update.pdf) when he took over as leader"
+    voicesforreform: false
     tags:
       - OHLC
   - note: "[Investigative
       reporting](https://archive.triblive.com/local/pittsburgh-allegheny/taxpay\
       ers-help-pay-for-organ-donor-groups-parties-rose-parade-expenses/) found
       board members billing taxpayers for private planes"
+    voicesforreform: false
     tags:
       - OHLP
   - note: Owns $11M stake in tissue processor Allosource
+    voicesforreform: false
     tags:
       - NYWN
   - note: "[Board Chair published
       support](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/58\
       1bc3_ad2bfdb091974d62bc52596e06f8d848.pdf) for new OPO rule"
+    voicesforreform: false
     tags:
       - NYRT
   - note: Has $1.8M investment in [related tissue
       processor](https://www.nevadabusiness.com/2018/11/nevadas-first-tissue-processing-facility-brings-opportunity-of-hope-and-healing-to-more-nevadans/)
+    voicesforreform: false
     tags:
       - NVLV
   - note: "[OIG](https://oig.hhs.gov/oas/reports/region9/91102035.pdf) found the OPO
       overstating organ procurement costs and not reporting proceeds from the
       sale of research organs. 2019 CEO compensation increased by 17.6% from
       2018."
+    voicesforreform: false
     tags:
       - AZOB
   - note: New CEO led [major
       improvements](https://www.bridgespan.org/bridgespan/Images/articles/transforming-organ-donation-in-america/transforming-organ-donation-in-america-dec2020-update.pdf)
       following leadership change, increasing donations by nearly 30%.
+    voicesforreform: false
     tags:
       - CADN
   - note: "[CEO published
       support](https://morningconsult.com/opinions/organ-donation-can-save-more\
       -lives-through-reform/) for new OPO rule"
+    voicesforreform: false
     tags:
       - FLFH
   - note: '[Owns
       $8M](https://projects.propublica.org/nonprofits/organizations/421414092/202011199349301261/full)
       "interest in net assets" of tissue processor Allosource'
+    voicesforreform: false
     tags:
       - IAOP
   - note: '"Investment in affiliate" worth
       [$24M](https://projects.propublica.org/nonprofits/display_990/363516431/12_2019_prefixes_35-38%2F363516431_201812_990_2019121116944630)'
+    voicesforreform: false
     tags:
       - ILIP
   - note: Built
       [$14.3M](https://www.giftoflifemichigan.org/news-calendar/latest-news/gift-life-begins-recovering-organs-and-tissue-new-ann-arbor-surgical)
       , 40,000 foot surgical center in 2016
+    voicesforreform: false
     tags:
       - MIOP

@@ -426,18 +426,6 @@ module.exports = {
                           { label: "Link", name: "link", widget: "string" },
                           { label: "Title", name: "title", widget: "string" },
                           {
-                            label: "Notes",
-                            name: "notes",
-                            widget: "list",
-                            fields: [
-                              {
-                                label: "Note",
-                                name: "note",
-                                widget: "markdown",
-                              },
-                            ],
-                          },
-                          {
                             label: "Description",
                             name: "description",
                             widget: "markdown",
@@ -463,6 +451,13 @@ module.exports = {
                         collapsed: false,
                         fields: [
                           { label: "Note", name: "note", widget: "markdown" },
+                          {
+                            label: "Voices for Reform",
+                            name: "voicesForReform",
+                            widget: "boolean",
+                            default: false,
+                            required: false
+                          },
                           {
                             label: "Tags",
                             name: "tags",
