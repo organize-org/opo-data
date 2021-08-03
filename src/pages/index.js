@@ -22,7 +22,7 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
 
   const [popoutAbbreviation, setPopoutAbbrevation] = useState(null);
 
-  const { articles, stats, quote, video } = content;
+  const { articles, stats, quote, video, sources } = content;
   const articleImgsByPath = articleImages?.edges?.reduce(
     (imgMap, { node }) => ({
       ...imgMap,
@@ -32,7 +32,7 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
   );
 
   return (
-    <Layout>
+    <Layout sources={sources}>
       <Row className={styles.topBar}>
         <Col>
           <p>View state data</p>

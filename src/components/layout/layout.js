@@ -2,10 +2,11 @@ import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { Breadcrumb, Container, Row } from "react-bootstrap";
+import ReactMarkdown from "react-markdown";
 
 import * as styles from "./layout.module.css";
 
-export default function Layout({ crumbLabel, children }) {
+export default function Layout({ crumbLabel, children, sources }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -43,6 +44,20 @@ export default function Layout({ crumbLabel, children }) {
         </Breadcrumb>
       ) : null}
       {children}
+      {sources.length ? (
+          <Row className={styles.sources}>
+            <h3>Sources</h3>
+            <ol>
+              {Object.values(sources)
+                .sort((a, b) => a.index - b.index)
+                .map((source, index) => (
+                  <li id={`sources-${index + 1}`} key={`sources-${index}`}>
+                    <ReactMarkdown>{source}</ReactMarkdown>
+                  </li>
+                ))}
+            </ol>
+          </Row>
+      ) : null}
       <Row className={styles.footer}>
         <p>
           Research supported by Arnold Ventures and Schmidt Futures in

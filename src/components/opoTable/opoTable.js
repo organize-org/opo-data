@@ -10,7 +10,6 @@ import Tier from "../tier/tier";
 import * as styles from "./opoTable.module.css";
 
 export default function OpoTable({
-  citations,
   headings,
   inState = true,
   opos,
@@ -26,17 +25,6 @@ export default function OpoTable({
         Header: (
           <div>
             {headings[accessor].heading}
-            {citations[accessor] && (
-              <sup>
-                <a
-                  className={accessor === "shadow" ? "red" : null}
-                  href={`#citations-${citations[accessor].index}`}
-                  target="_self"
-                >
-                  {citations[accessor].index + 1}
-                </a>
-              </sup>
-            )}
           </div>
         ),
         accessor,
@@ -67,7 +55,7 @@ export default function OpoTable({
       }
     };
     return cols.map(col => createCol(col));
-  }, [headings, inState, citations]);
+  }, [headings, inState]);
 
   const data = useMemo(() => {
     const formatNumber = (num, options) =>

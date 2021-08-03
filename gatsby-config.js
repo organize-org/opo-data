@@ -96,6 +96,13 @@ module.exports = {
             })
           );
 
+          const sources = {
+            label: "Sources",
+            name: "sources",
+            widget: "list",
+            field: {label: "Source", name: "source", widget: "markdown"}
+          }
+
           return {
             backend: {
               name: "git-gateway",
@@ -147,6 +154,7 @@ module.exports = {
                           },
                         ],
                       },
+                      sources,
                       {
                         label: "Equity Embed",
                         name: "equityEmbed",
@@ -386,6 +394,7 @@ module.exports = {
                           },
                         ],
                       },
+                      sources,
                       {
                         label: "Equity Embed",
                         name: "equityEmbed",
@@ -601,6 +610,7 @@ module.exports = {
                         name: "tweet",
                         widget: "string",
                       },
+                      sources,
                     ],
                   },
                   {
