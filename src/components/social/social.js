@@ -58,15 +58,13 @@ export default function Social() {
           <Tooltip id="button-tooltip">Link copied to clipboard</Tooltip>
         }
       >
-        <div>
-          <CopyIcon
-            onClick={() => {
-              copy(siteUrl);
-              showOverlay();
-            }}
-            className={`${styles.copyIcon} ${styles.icon}`}
-          />
-        </div>
+        <CopyIcon
+          onClick={() => {
+            copy(siteUrl);
+            showOverlay();
+          }}
+          className={`${styles.copyIcon} ${styles.icon}`}
+        />
       </OverlayTrigger>
     );
   }
