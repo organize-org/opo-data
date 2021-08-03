@@ -227,7 +227,7 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
                     {notes?.length > 0 ? (
                       <ul>
                         {notes.map(n => (
-                          <li>
+                          <li key={n.note}>
                             <ReactMarkdown>{n.note}</ReactMarkdown>
                           </li>
                         ))}
