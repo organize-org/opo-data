@@ -59,16 +59,16 @@ export default function Layout({ crumbLabel, children }) {
           height={35}
         />
         <StaticImage
-          src="../../images/logos/Bloomworks.png"
+          src="../../images/logos/bloomworks.png"
           alt="Bloomworks"
           height={35}
         />
         <StaticImage
-          src="../../images/logos/Organize.png"
+          src="../../images/logos/organize.png"
           alt="Organize"
           height={35}
         />
-        <StaticImage src="../../images/logos/FAS.png" alt="FAS" height={35} />
+        <StaticImage src="../../images/logos/fas.png" alt="FAS" height={35} />
       </Row>
     </Container>
   );
