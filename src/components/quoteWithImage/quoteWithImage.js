@@ -13,7 +13,6 @@ export default function QuoteWithImage({
   const [{ quoteImagesByPath }] = useQuoteImages();
 
   return (
-    <>
       <BgImage
         className={`${styles.background} ${styles[side]}`}
         image={getImage(quoteImagesByPath[image])}
@@ -30,6 +29,5 @@ export default function QuoteWithImage({
           </figcaption>
         </Col>
       </BgImage>
-    </>
   );
 }
