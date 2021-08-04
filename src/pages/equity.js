@@ -120,11 +120,13 @@ export default function Equity({ data: { bottomImage, topImage } }) {
           <Tweet tweetId={tweet} />
         </Col>
       </Row>
-      <QuoteWithImage
-        image={getImage(bottomImage)}
-        quote={bottomQuote}
-        side="left"
-      />
+      <Row className={styles.quoteWithImage}>
+        <QuoteWithImage
+          image={getImage(bottomImage)}
+          quote={bottomQuote}
+          side="left"
+        />
+      </Row>
     </Layout>
   );
 }

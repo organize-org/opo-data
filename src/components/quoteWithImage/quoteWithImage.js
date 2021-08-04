@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 import { getImage } from "gatsby-plugin-image";
 import { BgImage } from "gbimage-bridge";
 import useQuoteImages from "../../hooks/useQuoteImages";
@@ -13,7 +13,7 @@ export default function QuoteWithImage({
   const [{ quoteImagesByPath }] = useQuoteImages();
 
   return (
-    <Row>
+    <>
       <BgImage
         className={`${styles.background} ${styles[side]}`}
         image={getImage(quoteImagesByPath[image])}
@@ -30,6 +30,6 @@ export default function QuoteWithImage({
           </figcaption>
         </Col>
       </BgImage>
-    </Row>
+    </>
   );
 }

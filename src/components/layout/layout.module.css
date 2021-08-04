@@ -47,7 +47,9 @@
 }
 
 .sources {
-  margin: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding: 1rem;
 }
 
 .sources h3 {
@@ -96,4 +98,9 @@
   .footer p {
     margin: 1rem 0;
   }
+
+  .sources {
+  margin: 0rem;
+  padding: 1rem;
+}
 }

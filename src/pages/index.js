@@ -76,7 +76,9 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
           </Col>
         ))}
       </Row>
-      <QuoteWithImage quote={quote} />
+      <Row>
+        <QuoteWithImage quote={quote} />
+      </Row>
       <EquitySection />
       <Row className={styles.videoSection}>
         <Col>
