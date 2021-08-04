@@ -4,9 +4,6 @@ stats:
   monthly: Number of people in-state who die each month waiting for an organ
 headings:
   shadow:
-    citation: \*Every organ that is not recovered because of OPO ineffective
-      practices, transportation errors, or understaffing  results in another
-      would-be recipient dying. These are referred to as “shadow deaths.”
     heading: Shadow Deaths (2018)
   name:
     heading: OPO Name
@@ -16,7 +13,6 @@ headings:
     heading: States
   tier:
     heading: Tier
-    citation: "2018"
   donors:
     heading: Donors Needed
   investigation:

@@ -276,12 +276,6 @@ module.exports = {
                                 name: "heading",
                                 widget: "string",
                               },
-                              {
-                                label: "citation",
-                                name: "citation",
-                                widget: "markdown",
-                                required: false,
-                              },
                             ],
                           },
                           {
