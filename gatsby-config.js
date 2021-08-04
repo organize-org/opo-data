@@ -100,8 +100,8 @@ module.exports = {
             label: "Sources",
             name: "sources",
             widget: "list",
-            field: {label: "Source", name: "source", widget: "markdown"}
-          }
+            field: { label: "Source", name: "source", widget: "markdown" },
+          };
 
           return {
             backend: {

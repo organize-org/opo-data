@@ -9,12 +9,7 @@ import Tier from "../tier/tier";
 
 import * as styles from "./opoTable.module.css";
 
-export default function OpoTable({
-  headings,
-  inState = true,
-  opos,
-  title,
-}) {
+export default function OpoTable({ headings, inState = true, opos, title }) {
   const columns = useMemo(() => {
     const cols = inState
       ? ["name", "region", "tier", "donors", "shadow", "investigation"]
@@ -22,11 +17,7 @@ export default function OpoTable({
 
     const createCol = accessor => {
       const col = {
-        Header: (
-          <div>
-            {headings[accessor].heading}
-          </div>
-        ),
+        Header: <div>{headings[accessor].heading}</div>,
         accessor,
       };
       if (accessor === "donors" || accessor === "investigation") {

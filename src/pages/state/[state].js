@@ -99,9 +99,7 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
   stateData.allNotes = notes?.filter(({ tags }) =>
     tags.includes(stateData.abbreviation)
   );
-  stateData.notes = stateData?.allNotes.filter(
-    note => !note.voicesForReform
-    );
+  stateData.notes = stateData?.allNotes.filter(note => !note.voicesForReform);
   stateData.voicesForReform = stateData?.allNotes.filter(
     note => note.voicesForReform
   );
@@ -234,7 +232,7 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
                     </Row>
                   ))
                 : null}
-              </Row>
+            </Row>
           ) : null}
         </Col>
       </Row>

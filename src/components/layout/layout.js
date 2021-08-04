@@ -45,17 +45,16 @@ export default function Layout({ crumbLabel, children, sources }) {
       ) : null}
       {children}
       {sources?.length ? (
-          <Row className={styles.sources}>
-            <h3>Sources</h3>
-            <ol>
-              {Object.values(sources)
-                .map((source, index) => (
-                  <li id={`sources-${index + 1}`} key={`sources-${index}`}>
-                    <ReactMarkdown>{source}</ReactMarkdown>
-                  </li>
-                ))}
-            </ol>
-          </Row>
+        <Row className={styles.sources}>
+          <h3>Sources</h3>
+          <ol>
+            {Object.values(sources).map((source, index) => (
+              <li id={`sources-${index + 1}`} key={`sources-${index}`}>
+                <ReactMarkdown>{source}</ReactMarkdown>
+              </li>
+            ))}
+          </ol>
+        </Row>
       ) : null}
       <Row className={styles.footer}>
         <p>
