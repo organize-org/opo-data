@@ -49,7 +49,6 @@ export default function Layout({ crumbLabel, children, sources }) {
             <h3>Sources</h3>
             <ol>
               {Object.values(sources)
-                .sort((a, b) => a.index - b.index)
                 .map((source, index) => (
                   <li id={`sources-${index + 1}`} key={`sources-${index}`}>
                     <ReactMarkdown>{source}</ReactMarkdown>
