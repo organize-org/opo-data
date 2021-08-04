@@ -288,12 +288,6 @@ module.exports = {
                                 name: "heading",
                                 widget: "string",
                               },
-                              {
-                                label: "citation",
-                                name: "citation",
-                                widget: "markdown",
-                                required: false,
-                              },
                             ],
                           },
                           {
@@ -305,12 +299,6 @@ module.exports = {
                                 label: "heading",
                                 name: "heading",
                                 widget: "string",
-                              },
-                              {
-                                label: "citation",
-                                name: "citation",
-                                widget: "markdown",
-                                required: false,
                               },
                             ],
                           },
@@ -324,12 +312,6 @@ module.exports = {
                                 name: "heading",
                                 widget: "string",
                               },
-                              {
-                                label: "citation",
-                                name: "citation",
-                                widget: "markdown",
-                                required: false,
-                              },
                             ],
                           },
                           {
@@ -341,12 +323,6 @@ module.exports = {
                                 label: "heading",
                                 name: "heading",
                                 widget: "string",
-                              },
-                              {
-                                label: "citation",
-                                name: "citation",
-                                widget: "markdown",
-                                required: false,
                               },
                             ],
                           },
@@ -360,12 +336,6 @@ module.exports = {
                                 name: "heading",
                                 widget: "string",
                               },
-                              {
-                                label: "citation",
-                                name: "citation",
-                                widget: "markdown",
-                                required: false,
-                              },
                             ],
                           },
                           {
@@ -377,12 +347,6 @@ module.exports = {
                                 label: "heading",
                                 name: "heading",
                                 widget: "string",
-                              },
-                              {
-                                label: "citation",
-                                name: "citation",
-                                widget: "markdown",
-                                required: false,
                               },
                             ],
                           },
