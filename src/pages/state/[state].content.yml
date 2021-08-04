@@ -87,6 +87,118 @@ videos:
     tags:
       - AL
 notes:
+  - voicesForReform: false
+    note: Failing (Tier 3) [in 2018
+      ](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - KYDA
+  - voicesForReform: false
+    tags:
+      - KYDA
+    note: "CEO compensation
+      ([2018](https://projects.propublica.org/nonprofits/display_990/611122515/\
+      12_2019_prefixes_58-63%2F611122515_201812_990_2019122016973033)):
+      $316,970"
+  - voicesForReform: false
+    note: Included in [House Committee on Oversight and Reform
+      Investigation](https://oversight.house.gov/sites/democrats.oversight.house.gov/files/OPO%20Letters.pdf)
+    tags:
+      - KYDA
+  - voicesForReform: false
+    note: Failing (Tier 3) [in 2018
+      ](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - INOP
+  - voicesForReform: false
+    note: "CEO compensation
+      ([2019](https://projects.propublica.org/nonprofits/display_990/351746358/\
+      02_2021_prefixes_34-36%2F351746358_201912_990_2021022217734846)):
+      $517,315"
+    tags:
+      - INOP
+  - voicesForReform: false
+    note: Included in [House Committee on Oversight and Reform
+      Investigation](https://oversight.house.gov/sites/democrats.oversight.house.gov/files/OPO%20Letters.pdf)
+    tags:
+      - INOP
+  - voicesForReform: false
+    note: Failing (Tier 3) [in 2018
+      ](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - OHOV
+  - voicesForReform: false
+    note: "CEO compensation
+      ([2019](https://projects.propublica.org/nonprofits/display_990/311040508/\
+      02_2021_prefixes_27-31%2F311040508_201912_990_2021021717710866)):
+      $310,044"
+    tags:
+      - OHOV
+  - voicesForReform: false
+    note: Passing (Tier 1) [in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - WIUW
+  - voicesForReform: false
+    note: "CEO compensation: Unavailable via 990"
+    tags:
+      - WIUW
+  - voicesForReform: false
+    note: Passing (Tier 1) [in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - ILIP
+  - voicesForReform: false
+    note: "CEO compensation
+      ([2019](https://projects.propublica.org/nonprofits/display_990/363516431/\
+      02_2021_prefixes_34-36%2F363516431_201912_990_2021021817719111)):
+      $690,692"
+    tags:
+      - ILIP
+  - voicesForReform: false
+    note: Passing (Tier 1) [in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - WALC
+  - voicesForReform: false
+    note: "CEO compensation
+      ([2019](https://projects.propublica.org/nonprofits/display_990/943253342/\
+      02_2021_prefixes_92-95%2F943253342_201912_990_2021022217741150)):
+      $515,166"
+    tags:
+      - WALC
+  - voicesForReform: false
+    note: Underperforming (Tier 2) [in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - ORUO
+  - voicesForReform: false
+    note: "CEO compensation: unavailable via 990"
+    tags:
+      - ORUO
+  - voicesForReform: false
+    note: Passing (Tier 1) [in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - UTOP
+  - voicesForReform: false
+    note: "CEO compensation
+      ([2018](https://projects.propublica.org/nonprofits/display_990/870447660/\
+      01_2021_prefixes_82-91%2F870447660_201906_990_2021012117606280)):
+      $290,079"
+    tags:
+      - UTOP
+  - voicesForReform: false
+    note: Failing (Tier 3) [in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - IAOP
+  - voicesForReform: false
+    note: "CEO compensation
+      ([2019](https://projects.propublica.org/nonprofits/display_990/421414092/\
+      08_2020_prefixes_41-45%2F421414092_201912_990_2020081817242292)):
+      $393,024"
+    tags:
+      - IAOP
   - note: Passing (Tier 1) [in
       2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
     voicesForReform: false
