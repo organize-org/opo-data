@@ -269,86 +269,37 @@ module.exports = {
                           {
                             label: "Name",
                             name: "name",
-                            widget: "object",
-                            fields: [
-                              {
-                                label: "heading",
-                                name: "heading",
-                                widget: "string",
-                              },
-                            ],
+                            widget: "string",
                           },
                           {
                             label: "Region",
                             name: "region",
-                            widget: "object",
-                            fields: [
-                              {
-                                label: "heading",
-                                name: "heading",
-                                widget: "string",
-                              },
-                            ],
+                            widget: "string",
                           },
                           {
                             label: "States",
                             name: "states",
-                            widget: "object",
-                            fields: [
-                              {
-                                label: "heading",
-                                name: "heading",
-                                widget: "string",
-                              },
-                            ],
+                            widget: "string",
                           },
                           {
                             label: "Tier",
                             name: "tier",
-                            widget: "object",
-                            fields: [
-                              {
-                                label: "heading",
-                                name: "heading",
-                                widget: "string",
-                              },
-                            ],
+                            widget: "string",
                           },
                           {
                             label: "Donors Needed",
                             name: "donors",
-                            widget: "object",
-                            fields: [
-                              {
-                                label: "heading",
-                                name: "heading",
-                                widget: "string",
-                              },
-                            ],
+                            widget: "string",
                           },
                           {
                             label: "Shadow Deaths",
                             name: "shadow",
-                            widget: "object",
-                            fields: [
-                              {
-                                label: "heading",
-                                name: "heading",
-                                widget: "string",
-                              },
-                            ],
+                            widget: "string",
                           },
                           {
                             label: "Under Investigation",
                             name: "investigation",
-                            widget: "object",
-                            fields: [
-                              {
-                                label: "heading",
-                                name: "heading",
-                                widget: "string",
-                              },
-                            ],
+                            widget: "string",
                           },
                         ],
                       },

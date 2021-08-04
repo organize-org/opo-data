@@ -17,7 +17,7 @@ export default function OpoTable({ headings, inState = true, opos, title }) {
 
     const createCol = accessor => {
       const col = {
-        Header: <div>{headings[accessor].heading}</div>,
+        Header: <div>{headings[accessor]}</div>,
         accessor,
       };
       if (accessor === "donors" || accessor === "investigation") {

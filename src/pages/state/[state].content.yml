@@ -3,20 +3,13 @@ stats:
   comp: Average CEO Compensation
   monthly: Number of people in-state who die each month waiting for an organ
 headings:
-  shadow:
-    heading: Shadow Deaths (2018)
-  name:
-    heading: OPO Name
-  region:
-    heading: Region
-  states:
-    heading: States
-  tier:
-    heading: Tier
-  donors:
-    heading: Donors Needed
-  investigation:
-    heading: Under Congressional Investigation
+  shadow: Shadow Deaths (2018)
+  name: OPO Name
+  region: Region
+  states: States
+  tier: Tier
+  donors: Donors Needed
+  investigation: Under Congressional Investigation
 sources:
   - This is a test for the source list on state pages.
   - This is a second test source for the state page. [^2]
