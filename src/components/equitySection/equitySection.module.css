@@ -33,7 +33,7 @@
   border-bottom: none !important;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .state {
     margin: 0;
   }
@@ -50,8 +50,14 @@
   .main .copy {
     width: 100%;
     padding: 1rem;
+    background-color: var(--opoWhiteSmoke);
+    opacity: 0.9;
   }
 
+  .mainHeader {
+    margin-left: 1rem;
+    padding-top: 2rem;
+  }
   .stateHeader {
     margin-left: 0;
   }
