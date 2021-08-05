@@ -118,13 +118,19 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
           <Row className={styles.stats}>
             <Row className={styles.statsHeading}>
               <Col>
-                <h3>{stats.waitlist}</h3>
+                <h3>
+                  <ReactMarkdown>{stats.waitlist}</ReactMarkdown>
+                </h3>
               </Col>
               <Col>
-                <h3>{stats.comp}</h3>
+                <h3>
+                  <ReactMarkdown>{stats.comp}</ReactMarkdown>
+                </h3>
               </Col>
               <Col>
-                <h3 className="red">{stats.monthly}</h3>
+                <h3 className="red">
+                  <ReactMarkdown>{stats.monthly}</ReactMarkdown>
+                </h3>
               </Col>
             </Row>
             <Row className={styles.statsPopout}>

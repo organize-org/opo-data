@@ -27,11 +27,15 @@
   margin: 4rem 0;
 }
 
-.statsSection p {
+.statsValues {
   color: var(--opoRed);
   font-size: 3rem;
   line-height: 1.15;
   margin: 1rem;
+}
+
+.statsSection h3 p {
+  margin: 0rem;
 }
 
 .videoSection {

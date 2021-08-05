@@ -33,6 +33,10 @@
   font-weight: 700;
 }
 
+.stats h3 p {
+  margin: 0;
+}
+
 .statsHeading {
   background-color: var(--opoWhiteSmoke);
 }

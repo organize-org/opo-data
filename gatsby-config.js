@@ -130,8 +130,8 @@ module.exports = {
                         collapsed: false,
                         max: 3,
                         fields: [
-                          { label: "Title", name: "title", widget: "string" },
-                          { label: "Value", name: "value", widget: "string" },
+                          { label: "Title", name: "title", widget: "markdown" },
+                          { label: "Value", name: "value", widget: "markdown" },
                         ],
                       },
                       {
@@ -246,17 +246,17 @@ module.exports = {
                           {
                             label: "Waitlist stat heading",
                             name: "waitlist",
-                            widget: "string",
+                            widget: "markdown",
                           },
                           {
                             label: "CEO comp stat heading",
                             name: "comp",
-                            widget: "string",
+                            widget: "markdown",
                           },
                           {
                             label: "Monthly dead stat heading",
                             name: "monthly",
-                            widget: "string",
+                            widget: "markdown",
                           },
                         ],
                       },
