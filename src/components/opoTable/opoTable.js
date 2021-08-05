@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import { Container, Row, Table } from "react-bootstrap";
 import { useTable, useSortBy } from "react-table";
+import ReactMarkdown from "react-markdown";
 
 import ChevronUp from "../../images/icons/chevron-up.svg";
 import ChevronDown from "../../images/icons/chevron-down.svg";
@@ -17,7 +18,7 @@ export default function OpoTable({ headings, inState = true, opos, title }) {
 
     const createCol = accessor => {
       const col = {
-        Header: <div>{headings[accessor]}</div>,
+        Header: <ReactMarkdown>{headings[accessor]}</ReactMarkdown>,
         accessor,
       };
       if (accessor === "donors" || accessor === "investigation") {
