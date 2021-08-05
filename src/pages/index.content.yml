@@ -11,14 +11,7 @@ quote:
     thousands of potential organ donations to fall through the cracks.
   attribution: New York Times editorial board
   image: ../images/quotes/mainPage.png
-sources:
-  - This is a test main page source 1.
-  - this is a test main page source 2.
-  - This is a very long test source on the main page 3.  This is a very long
-    test source on the main page 3.  This is a very long test source on the main
-    page 3.  This is a very long test source on the main page 3.  This is a very
-    long test source on the main page 3.  This is a very long test source on the
-    main page 3.
+sources: []
 equityEmbed:
   image: ../images/quotes/equity-home.jpg
   heading: OPO REFORM IS AN URGENT EQUITY ISSUE
