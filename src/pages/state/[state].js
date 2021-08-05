@@ -23,7 +23,7 @@ import content from "./[state].content.yml";
 
 export default function State({ data: { statesGeoData }, state = "DC" }) {
   const [{ opoDataMap, stateDataMap }] = useDataMaps();
-  const { headings, notes, stats, videos } = content;
+  const { headings, notes, stats, videos, sources } = content;
 
   const notesByOpo = notes?.reduce(
     (notesMap, { note, tags }) => ({
@@ -33,21 +33,6 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
         {}
       ),
     }),
-    {}
-  );
-
-  // Map heading citations to ordered indexes
-  const citations = Object.entries(headings).reduce(
-    (cites, [key, { citation }]) => {
-      if (citation) {
-        cites[key] = {
-          copy: citation,
-          index: Object.keys(cites).length,
-        };
-      }
-
-      return cites;
-    },
     {}
   );
 
@@ -114,9 +99,7 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
   stateData.allNotes = notes?.filter(({ tags }) =>
     tags.includes(stateData.abbreviation)
   );
-  stateData.notes = stateData?.allNotes.filter(
-    note => !note.voicesForReform
-    );
+  stateData.notes = stateData?.allNotes.filter(note => !note.voicesForReform);
   stateData.voicesForReform = stateData?.allNotes.filter(
     note => note.voicesForReform
   );
@@ -125,7 +108,7 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
   );
 
   return (
-    <Layout crumbLabel={formatStateName(stateData)}>
+    <Layout crumbLabel={formatStateName(stateData)} sources={sources}>
       <Row className={styles.title}>
         <h2>{formatStateName(stateData)}</h2>
         <Social />
@@ -135,13 +118,19 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
           <Row className={styles.stats}>
             <Row className={styles.statsHeading}>
               <Col>
-                <h3>{stats.waitlist}</h3>
+                <h3>
+                  <ReactMarkdown>{stats.waitlist}</ReactMarkdown>
+                </h3>
               </Col>
               <Col>
-                <h3>{stats.comp}</h3>
+                <h3>
+                  <ReactMarkdown>{stats.comp}</ReactMarkdown>
+                </h3>
               </Col>
               <Col>
-                <h3 className="red">{stats.monthly}</h3>
+                <h3 className="red">
+                  <ReactMarkdown>{stats.monthly}</ReactMarkdown>
+                </h3>
               </Col>
             </Row>
             <Row className={styles.statsPopout}>
@@ -166,7 +155,6 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
           </Row>
           {inStateOpos.length > 0 && (
             <OpoTable
-              citations={citations}
               headings={headings}
               opos={inStateOpos}
               title={`OPOS Servicing ${stateData.name}`}
@@ -208,7 +196,6 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
           <DemographicTable opos={inStateOpos} />
           {outOfStateOpos.length > 0 && (
             <OpoTable
-              citations={citations}
               headings={headings}
               inState={false}
               opos={outOfStateOpos}
@@ -251,24 +238,10 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
                     </Row>
                   ))
                 : null}
-              </Row>
+            </Row>
           ) : null}
         </Col>
       </Row>
-      {Object.keys(citations).length ? (
-        <Row className={styles.citations}>
-          <h3>Notes</h3>
-          <ol>
-            {Object.values(citations)
-              .sort((a, b) => a.index - b.index)
-              .map(({ copy, index }) => (
-                <li id={`citations-${index}`} key={`citations-${index}`}>
-                  <ReactMarkdown>{copy}</ReactMarkdown>
-                </li>
-              ))}
-          </ol>
-        </Row>
-      ) : null}
     </Layout>
   );
 }

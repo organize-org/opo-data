@@ -34,10 +34,11 @@ export default function Equity({ data: { bottomImage, topImage } }) {
     tables,
     topQuote,
     tweet,
+    sources,
   } = content;
 
   return (
-    <Layout crumbLabel="OPO Reform is an Urgent Equity Issue">
+    <Layout crumbLabel="OPO Reform is an Urgent Equity Issue" sources={sources}>
       <Row className={styles.topBar}>
         <Col md="8">
           <h2>Inequities in Organ Procurement Across the Nation</h2>
@@ -53,7 +54,9 @@ export default function Equity({ data: { bottomImage, topImage } }) {
           </Row>
           <Row className={styles.tables}>
             <Col>
-              <h4>{tables.table1Heading}</h4>
+              <h4>
+                <ReactMarkdown>{tables.table1Heading}</ReactMarkdown>
+              </h4>
               <Table striped>
                 <thead>
                   <tr>
@@ -72,7 +75,9 @@ export default function Equity({ data: { bottomImage, topImage } }) {
               </Table>
             </Col>
             <Col>
-              <h4>{tables.table2Heading}</h4>
+              <h4>
+                <ReactMarkdown>{tables.table2Heading}</ReactMarkdown>
+              </h4>
               <Table striped>
                 <thead>
                   <tr>
@@ -119,11 +124,13 @@ export default function Equity({ data: { bottomImage, topImage } }) {
           <Tweet tweetId={tweet} />
         </Col>
       </Row>
-      <QuoteWithImage
-        image={getImage(bottomImage)}
-        quote={bottomQuote}
-        side="left"
-      />
+      <Row className={styles.quoteWithImage}>
+        <QuoteWithImage
+          image={getImage(bottomImage)}
+          quote={bottomQuote}
+          side="left"
+        />
+      </Row>
     </Layout>
   );
 }

@@ -98,6 +98,10 @@
   margin-right: 1rem;
 }
 
+.tables h4 p {
+  margin-bottom: 0;
+}
+
 .quotes {
   margin-left: 2rem;
   width: 30%;
@@ -115,6 +119,10 @@
   background-color: #ffb042;
 }
 
+.quoteWithImage {
+  margin-bottom: 4rem;
+}
+
 @media (max-width: 700px) {
   .topBar h2 {
     margin-bottom: 1rem;
@@ -125,7 +133,7 @@
   }
 
   .main {
-    margin: 2rem;
+    margin: 2rem 1rem;
   }
 
   .main > h3:nth-child(1) {

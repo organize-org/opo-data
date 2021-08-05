@@ -22,7 +22,7 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
 
   const [popoutAbbreviation, setPopoutAbbrevation] = useState(null);
 
-  const { articles, stats, quote, video } = content;
+  const { articles, stats, quote, video, sources } = content;
   const articleImgsByPath = articleImages?.edges?.reduce(
     (imgMap, { node }) => ({
       ...imgMap,
@@ -32,7 +32,7 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
   );
 
   return (
-    <Layout>
+    <Layout sources={sources}>
       <Row className={styles.topBar}>
         <Col>
           <p>View state data</p>
@@ -68,15 +68,21 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
         {Object.values(stats).map(({ title, value }) => (
           <Col className="mx-5" key={title}>
             <Row className="h-50">
-              <h3>{title}</h3>
+              <h3>
+                <ReactMarkdown>{title}</ReactMarkdown>
+              </h3>
             </Row>
             <Row className="justify-content-center">
-              <p>{value}</p>
+              <ReactMarkdown className={styles.statsValues}>
+                {value}
+              </ReactMarkdown>
             </Row>
           </Col>
         ))}
       </Row>
-      <QuoteWithImage quote={quote} />
+      <Row>
+        <QuoteWithImage quote={quote} />
+      </Row>
       <EquitySection />
       <Row className={styles.videoSection}>
         <Col>

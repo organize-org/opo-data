@@ -3,24 +3,14 @@ stats:
   comp: Average CEO Compensation
   monthly: Number of people in-state who die each month waiting for an organ
 headings:
-  shadow:
-    citation: \*Every organ that is not recovered because of OPO ineffective
-      practices, transportation errors, or understaffing  results in another
-      would-be recipient dying. These are referred to as “shadow deaths.”
-    heading: Shadow Deaths (2018)*
-  name:
-    heading: OPO Name
-  region:
-    heading: Region
-  states:
-    heading: States
-  tier:
-    heading: Tier
-    citation: "2018"
-  donors:
-    heading: Donors Needed
-  investigation:
-    heading: Under Congressional Investigation
+  shadow: Shadow Deaths (2018)
+  name: OPO Name
+  region: Region
+  states: States
+  tier: Tier
+  donors: Donors Needed
+  investigation: Under Congressional Investigation
+sources: []
 equityEmbed:
   image: ../../images/quotes/equity-state.jpg
   heading: OPO REFORM IS AN URGENT EQUITY ISSUE

@@ -46,6 +46,37 @@
   font-size: 0.9rem;
 }
 
+.sources {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding: 1rem;
+}
+
+.sources h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.sources ol {
+  counter-reset: li;
+  padding: 0;
+  list-style: none;
+}
+
+.sources li {
+  counter-increment: li;
+  display: flex;
+  font-size: 1rem;
+}
+
+.sources li::before {
+  color: var(--opoRed);
+  content: counter(li) ". ";
+  padding-right: 1rem;
+}
+
 @media (max-width: 700px) {
   .logoText {
     margin: 1rem 0 0 0;
@@ -67,4 +98,9 @@
   .footer p {
     margin: 1rem 0;
   }
+
+  .sources {
+  margin: 0rem;
+  padding: 1rem;
+}
 }

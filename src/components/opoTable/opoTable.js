@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import { Container, Row, Table } from "react-bootstrap";
 import { useTable, useSortBy } from "react-table";
+import ReactMarkdown from "react-markdown";
 
 import ChevronUp from "../../images/icons/chevron-up.svg";
 import ChevronDown from "../../images/icons/chevron-down.svg";
@@ -9,13 +10,7 @@ import Tier from "../tier/tier";
 
 import * as styles from "./opoTable.module.css";
 
-export default function OpoTable({
-  citations,
-  headings,
-  inState = true,
-  opos,
-  title,
-}) {
+export default function OpoTable({ headings, inState = true, opos, title }) {
   const columns = useMemo(() => {
     const cols = inState
       ? ["name", "region", "tier", "donors", "shadow", "investigation"]
@@ -23,22 +18,7 @@ export default function OpoTable({
 
     const createCol = accessor => {
       const col = {
-        Header: (
-          <div>
-            {headings[accessor].heading}
-            {citations[accessor] && (
-              <sup>
-                <a
-                  className={accessor === "shadow" ? "red" : null}
-                  href={`#citations-${citations[accessor].index}`}
-                  target="_self"
-                >
-                  {citations[accessor].index + 1}
-                </a>
-              </sup>
-            )}
-          </div>
-        ),
+        Header: <ReactMarkdown>{headings[accessor]}</ReactMarkdown>,
         accessor,
       };
       if (accessor === "donors" || accessor === "investigation") {
@@ -67,7 +47,7 @@ export default function OpoTable({
       }
     };
     return cols.map(col => createCol(col));
-  }, [headings, inState, citations]);
+  }, [headings, inState]);
 
   const data = useMemo(() => {
     const formatNumber = (num, options) =>

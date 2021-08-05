@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 import { getImage } from "gatsby-plugin-image";
 import { BgImage } from "gbimage-bridge";
 import useQuoteImages from "../../hooks/useQuoteImages";
@@ -13,23 +13,21 @@ export default function QuoteWithImage({
   const [{ quoteImagesByPath }] = useQuoteImages();
 
   return (
-    <Row>
-      <BgImage
-        className={`${styles.background} ${styles[side]}`}
-        image={getImage(quoteImagesByPath[image])}
+    <BgImage
+      className={`${styles.background} ${styles[side]}`}
+      image={getImage(quoteImagesByPath[image])}
+    >
+      <Col
+        className={styles.quote}
+        md={{ span: 5, offset: side === "right" ? 6 : 1 }}
       >
-        <Col
-          className={styles.quote}
-          md={{ span: 5, offset: side === "right" ? 6 : 1 }}
-        >
-          <figure>
-            <blockquote>{quote}</blockquote>
-          </figure>
-          <figcaption>
-            &mdash; <cite>{attribution}</cite>
-          </figcaption>
-        </Col>
-      </BgImage>
-    </Row>
+        <figure>
+          <blockquote>{quote}</blockquote>
+        </figure>
+        <figcaption>
+          &mdash; <cite>{attribution}</cite>
+        </figcaption>
+      </Col>
+    </BgImage>
   );
 }

@@ -59,6 +59,10 @@
   margin-bottom: 4px;
 }
 
+th p {
+  margin: 0;
+}
+
 .header {
   display: flex;
   justify-content: flex-start;
