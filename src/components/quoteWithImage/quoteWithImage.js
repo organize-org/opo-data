@@ -13,21 +13,21 @@ export default function QuoteWithImage({
   const [{ quoteImagesByPath }] = useQuoteImages();
 
   return (
-      <BgImage
-        className={`${styles.background} ${styles[side]}`}
-        image={getImage(quoteImagesByPath[image])}
+    <BgImage
+      className={`${styles.background} ${styles[side]}`}
+      image={getImage(quoteImagesByPath[image])}
+    >
+      <Col
+        className={styles.quote}
+        md={{ span: 5, offset: side === "right" ? 6 : 1 }}
       >
-        <Col
-          className={styles.quote}
-          md={{ span: 5, offset: side === "right" ? 6 : 1 }}
-        >
-          <figure>
-            <blockquote>{quote}</blockquote>
-          </figure>
-          <figcaption>
-            &mdash; <cite>{attribution}</cite>
-          </figcaption>
-        </Col>
-      </BgImage>
+        <figure>
+          <blockquote>{quote}</blockquote>
+        </figure>
+        <figcaption>
+          &mdash; <cite>{attribution}</cite>
+        </figcaption>
+      </Col>
+    </BgImage>
   );
 }

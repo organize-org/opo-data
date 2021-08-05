@@ -98,6 +98,10 @@
   margin-right: 1rem;
 }
 
+.tables h4 p {
+  margin-bottom: 0;
+}
+
 .quotes {
   margin-left: 2rem;
   width: 30%;

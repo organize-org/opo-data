@@ -459,12 +459,12 @@ module.exports = {
                           {
                             label: "Table 1 Heading",
                             name: "table1Heading",
-                            widget: "string",
+                            widget: "markdown",
                           },
                           {
                             label: "Table 2 Heading",
                             name: "table2Heading",
-                            widget: "string",
+                            widget: "markdown",
                           },
                         ],
                       },

@@ -68,10 +68,14 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
         {Object.values(stats).map(({ title, value }) => (
           <Col className="mx-5" key={title}>
             <Row className="h-50">
-              <h3><ReactMarkdown>{title}</ReactMarkdown></h3>
+              <h3>
+                <ReactMarkdown>{title}</ReactMarkdown>
+              </h3>
             </Row>
             <Row className="justify-content-center">
-              <ReactMarkdown className={styles.statsValues}>{value}</ReactMarkdown>
+              <ReactMarkdown className={styles.statsValues}>
+                {value}
+              </ReactMarkdown>
             </Row>
           </Col>
         ))}

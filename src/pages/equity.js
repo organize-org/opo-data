@@ -54,7 +54,9 @@ export default function Equity({ data: { bottomImage, topImage } }) {
           </Row>
           <Row className={styles.tables}>
             <Col>
-              <h4>{tables.table1Heading}</h4>
+              <h4>
+                <ReactMarkdown>{tables.table1Heading}</ReactMarkdown>
+              </h4>
               <Table striped>
                 <thead>
                   <tr>
@@ -73,7 +75,9 @@ export default function Equity({ data: { bottomImage, topImage } }) {
               </Table>
             </Col>
             <Col>
-              <h4>{tables.table2Heading}</h4>
+              <h4>
+                <ReactMarkdown>{tables.table2Heading}</ReactMarkdown>
+              </h4>
               <Table striped>
                 <thead>
                   <tr>
