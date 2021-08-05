@@ -4,8 +4,9 @@
   flex-direction: column;
   justify-content: center;
   margin: 4rem 3rem;
-  height: 452px
+  height: 452px;
 }
+
 .state .background {
   background-position: right;
   display: flex;
@@ -33,7 +34,6 @@
 }
 
 @media (max-width: 700px) {
-
   .state {
     margin: 0;
   }

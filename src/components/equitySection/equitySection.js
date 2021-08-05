@@ -9,14 +9,18 @@ import useQuoteImages from "../../hooks/useQuoteImages";
 import indexContent from "../../pages/index.content.yml";
 import stateContent from "../../pages/state/[state].content.yml";
 
+import useWindowDimensions from "../../hooks/useWindowDimensions";
+
 import * as styles from "./equitySection.module.css";
 
 export default function EquitySection({ page = "main" }) {
   const [{ quoteImagesByPath }] = useQuoteImages();
 
   const {
-    equityEmbed: { image, description, heading, link },
+    equityEmbed: { image, mobileImage, description, heading, link },
   } = page === "main" ? indexContent : stateContent;
+
+  const width = useWindowDimensions().width;
 
   return (
     <>
@@ -31,7 +35,11 @@ export default function EquitySection({ page = "main" }) {
             className={styles.background}
             image={getImage(
               quoteImagesByPath[
-                page !== "main" ? image.slice(3, image.length) : image
+                page !== "main"
+                  ? image.slice(3, image.length)
+                  : width < 800
+                  ? mobileImage
+                  : image
               ]
             )}
           >

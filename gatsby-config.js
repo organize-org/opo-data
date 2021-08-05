@@ -168,6 +168,13 @@ module.exports = {
                             widget: "image",
                           },
                           {
+                            label: "Mobile Image",
+                            name: "mobileImage",
+                            allow_multiple: false,
+                            media_folder: "../images/quotes",
+                            widget: "image",
+                          },
+                          {
                             label: "Heading",
                             name: "heading",
                             widget: "string",
