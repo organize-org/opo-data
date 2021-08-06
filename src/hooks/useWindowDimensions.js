@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 
 export default function useWindowDimensions() {
   const getWindowDimensions = useCallback(() => {
-    const { innerWidth: width } = window ?? { innerWidth: 1920 };
+    const { innerWidth: width } = typeof window !== "undefined" ? window : { innerWidth: 1920 };
     return {
       width,
     };
