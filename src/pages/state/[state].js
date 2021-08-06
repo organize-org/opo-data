@@ -143,6 +143,7 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
                     style: "currency",
                     currency: "USD",
                     maximumFractionDigits: 0,
+                    minimumFractionDigits: 0,
                   })}
                 </p>
               </Col>
