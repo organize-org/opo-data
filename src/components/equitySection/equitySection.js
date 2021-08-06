@@ -24,7 +24,6 @@ export default function EquitySection({ page = "main" }) {
 
   return (
     <>
-      {/* If width is less than 800 and the page is main or it's state display heading here */}
       {width < 800 && page === "main" ? (
         <Row className={styles.mainHeader}>
           <h3>{heading}</h3>
@@ -51,7 +50,6 @@ export default function EquitySection({ page = "main" }) {
             )}
           >
             <div className={styles.copy}>
-              {/* //if page is bigger than 800 and the page is main page then display heading here */}
               {width > 800 && page === "main" && <h3>{heading}</h3>}
               <ReactMarkdown>{description}</ReactMarkdown>
               <Link to="/equity">{link}</Link>
