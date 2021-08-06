@@ -1,5 +1,5 @@
 stats:
-  - title: National organ transplant waiting list as of June 1, 2021[¹](#sources-1)
+  - title: National organ transplant waiting list as of June 1, 2021
     value: 107,419
   - title: Number of Americans projected to die before an OPO loses its contract
     value: 60,000+
@@ -11,15 +11,13 @@ quote:
     thousands of potential organ donations to fall through the cracks.
   attribution: New York Times editorial board
   image: ../images/quotes/mainPage.png
-sources:
-  - This is a [source](https://opodata.org).
-  - Hi I'm a source
+sources: []
 equityEmbed:
   image: ../images/quotes/equity-home.jpg
   heading: OPO REFORM IS AN URGENT EQUITY ISSUE
   description: Patients of color are less likely to receive organ transplants than
     white patients because of inferior OPO service.
-  link: We must drive reforms to hold OPOs accountable.
+  link: We must drive reforms to hold OPOs accountable
 video:
   title: REP. KATIE PORTER HIGHLIGHTS OPO ABUSES
   description: On May 4, 2021, the House Oversight Committee held a bipartisan
