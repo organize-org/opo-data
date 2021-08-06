@@ -38,7 +38,10 @@ export default function Equity({ data: { bottomImage, topImage } }) {
   } = content;
 
   return (
-    <Layout crumbLabel="OPO Reform is an Urgent Equity Issue" sources={sources}>
+    <Layout
+      crumbLabel="Inequities in Organ Procurement Across the Nation"
+      sources={sources}
+    >
       <Row className={styles.topBar}>
         <Col md="8">
           <h2>Inequities in Organ Procurement Across the Nation</h2>
@@ -99,7 +102,7 @@ export default function Equity({ data: { bottomImage, topImage } }) {
             <h3>{funnel.heading}</h3>
             {funnel.steps.map(({ description, heading }, i) => (
               <Row key={`step-${i}`}>
-                <Col md="1">
+                <Col md="1" className={styles.stepContainer}>
                   <div className={`${styles.step} ${styles[stepColors[i]]}`}>
                     <span>{i + 1}</span>
                   </div>

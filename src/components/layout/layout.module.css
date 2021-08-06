@@ -77,20 +77,25 @@
   padding-right: 1rem;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1100px) {
   .logoText {
     margin: 1rem 0 0 0;
   }
 
   .logoWithText > *:nth-child(1) {
-    display: none;
+    margin-right: 1rem;
   }
 
   .faqLink {
     position: static;
     margin-top: 1rem;
   }
+}
 
+@media (max-width: 700px) {
+  .logoWithText > *:nth-child(1) {
+    display: none;
+  }
   .footer {
     flex-direction: column;
   }
@@ -100,7 +105,7 @@
   }
 
   .sources {
-  margin: 0rem;
-  padding: 1rem;
-}
+    margin: 0rem;
+    padding: 1rem;
+  }
 }
