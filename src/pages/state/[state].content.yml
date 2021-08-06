@@ -1,22 +1,20 @@
 stats:
-  waitlist: State Waitlist[2](#sources-2)
+  waitlist: State Waitlist
   comp: Average CEO Compensation
   monthly: Number of people in-state who die each month waiting for an organ
 headings:
   shadow: Shadow Deaths (2018)
-  name: OPO Name[^1](#sources-1)
+  name: OPO Name
   region: Region
   states: States
   tier: Tier
   donors: Donors Needed
   investigation: Under Congressional Investigation
-sources:
-  - Source test 2 to test order
-  - Source 1 Test
+sources: []
 equityEmbed:
   image: ../../images/quotes/equity-state.jpg
   heading: OPO REFORM IS AN URGENT EQUITY ISSUE
-  link: We must drive reforms to hold OPOs accountable
+  link: We must drive reforms to hold OPOs accountable.
   description: Patients of color are less likely to receive organ transplants than
     white patients because of inferior OPO service.
 videos:
