@@ -2,7 +2,6 @@ stats:
   waitlist: State Waitlist
   comp: Average CEO Compensation
   monthly: Number of people in-state who die each month waiting for an organ
-    [¹](#sources-1)
 headings:
   shadow: Shadow Deaths (2018)
   name: OPO Name
@@ -11,8 +10,7 @@ headings:
   tier: Tier
   donors: Donors Needed
   investigation: Under Congressional Investigation
-sources:
-  - This is a test ¹
+sources: []
 equityEmbed:
   image: ../../images/quotes/equity-state.jpg
   heading: OPO REFORM IS AN URGENT EQUITY ISSUE
