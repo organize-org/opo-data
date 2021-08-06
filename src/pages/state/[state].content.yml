@@ -4,13 +4,14 @@ stats:
   monthly: Number of people in-state who die each month waiting for an organ
 headings:
   shadow: Shadow Deaths (2018)
-  name: OPO Name
+  name: OPO Name[^1](#sources-1)
   region: Region
   states: States
   tier: Tier
   donors: Donors Needed
   investigation: Under Congressional Investigation
-sources: []
+sources:
+  - Source 1 Test
 equityEmbed:
   image: ../../images/quotes/equity-state.jpg
   heading: OPO REFORM IS AN URGENT EQUITY ISSUE
