@@ -1,5 +1,5 @@
 stats:
-  waitlist: State Waitlist\[2](#sources-2)
+  waitlist: State Waitlist[2](#sources-2)
   comp: Average CEO Compensation
   monthly: Number of people in-state who die each month waiting for an organ
 headings:
@@ -11,8 +11,8 @@ headings:
   donors: Donors Needed
   investigation: Under Congressional Investigation
 sources:
-  - Source 1 Test
   - Source test 2 to test order
+  - Source 1 Test
 equityEmbed:
   image: ../../images/quotes/equity-state.jpg
   heading: OPO REFORM IS AN URGENT EQUITY ISSUE
