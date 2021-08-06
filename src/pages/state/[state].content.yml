@@ -10,7 +10,8 @@ headings:
   tier: Tier
   donors: Donors Needed
   investigation: Under Congressional Investigation
-sources: []
+sources:
+  - This is a test ¹
 equityEmbed:
   image: ../../images/quotes/equity-state.jpg
   heading: OPO REFORM IS AN URGENT EQUITY ISSUE
