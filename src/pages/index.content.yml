@@ -1,10 +1,9 @@
 stats:
-  - title: National organ transplant waiting list as of June 1, 2021 [1](#sources-1)
+  - title: National organ transplant waiting list as of June 1, 2021
     value: 107,419
-  - title: Number of Americans projected to die before an OPO loses its
-      contract[2](#sources-2)
+  - title: Number of Americans projected to die before an OPO loses its contract
     value: 60,000+
-  - title: Average reported CEO compensation for failing OPOs[^3](#sources-3)
+  - title: Average reported CEO compensation for failing OPOs[3](#sources-3)
     value: $535,630
 quote:
   quote: An astounding lack of accountability and oversight in the nation’s
@@ -12,10 +11,7 @@ quote:
     thousands of potential organ donations to fall through the cracks.
   attribution: New York Times editorial board
   image: ../images/quotes/mainPage.png
-sources:
-  - Test source 1
-  - Test Source 2
-  - Test source 3 [with link](https://opodata.org/equity)
+sources: []
 equityEmbed:
   image: ../images/quotes/equity-home.jpg
   heading: OPO REFORM IS AN URGENT EQUITY ISSUE
