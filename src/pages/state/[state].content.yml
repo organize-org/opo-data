@@ -1141,38 +1141,44 @@ notes:
     tags:
       - UT
   - note: "[Joe
-      Lonsdale](https://joelonsdale.com/news/steering-american-healthcare/)"
-    voicesForReform: false
+      Lonsdale](https://joelonsdale.com/news/steering-american-healthcare/):
+      “kidney transplants offer a less expensive alternative to dialysis that
+      also increases the likelihood of patient survival.”"
+    voicesForReform: true
     tags:
       - TX
   - note: "[Laura and John
       Arnold](https://www.statnews.com/2019/07/24/a-simple-bureaucratic-organ-d\
-      onation-fix-will-save-thousands-of-lives/)"
-    voicesForReform: false
+      onation-fix-will-save-thousands-of-lives/): A simple bureaucratic organ
+      donation fix will save thousands of lives"
+    voicesForReform: true
     tags:
       - TX
   - note: "[Baylor College of
       Medicine](https://www.bcm.edu/about-us/leadership/office-of-the-president\
-      /position-statements/organ-donation-policy)"
-    voicesForReform: false
+      /position-statements/organ-donation-policy) calls for More Accountability
+      and New Strategies to Improve Organ Donation Policy"
+    voicesForReform: true
     tags:
       - TX
   - note: "[Rep. Kenny
       Marchant](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/5\
-      81bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      81bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - TX
   - note: "[Rep. Jodey
       Arrington](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/\
-      581bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      581bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - TX
   - note: "[Dallas OPO CEO Patti
       Niles](https://www.dallasnews.com/opinion/commentary/2021/02/12/the-us-or\
       gan-donation-system-needs-transparency-and-accountability/)"
-    voicesForReform: false
+    voicesForReform: true
     tags:
       - TX
   - note: "[Bakari
@@ -1249,44 +1255,52 @@ notes:
     voicesForReform: true
   - note: "[New York Times editorial
       board](https://www.nytimes.com/2019/08/20/opinion/erika-zak-organ-donor.h\
-      tml)"
-    voicesForReform: false
+      tml): “Twenty Americans die each day waiting for organs. Here’s how to
+      change that.”"
+    voicesForReform: true
     tags:
       - NY
   - note: "[NY doctors, including Dr. Craig Spencer and Dr. Dara
       Kass](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc\
-      3_e70640160570491b9855d21980e87092.pdf)"
-    voicesForReform: false
+      3_e70640160570491b9855d21980e87092.pdf) writing to Secretary Becerra
+      encouraging finalization of OPO rule"
+    voicesForReform: true
     tags:
       - NY
   - note: "[New York City-based OPO
       LiveOnNY](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/5\
-      81bc3_ad2bfdb091974d62bc52596e06f8d848.pdf)"
-    voicesForReform: false
+      81bc3_ad2bfdb091974d62bc52596e06f8d848.pdf) writing in support of the OPO
+      final rule"
+    voicesForReform: true
     tags:
       - NY
   - note: "[Rep. Grace
       Meng](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc\
-      3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - NY
   - note: "[Rep. Thomas
       Suozzi](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
-      bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - NY
   - note: "[Rep. Tom
       Reed](https://www.finance.senate.gov/imo/media/doc/031621%20Bipartisan%20\
-      Bicameral%20HHS%20OPO%20Rule%20Support%20Letter.pdf)"
-    voicesForReform: false
+      Bicameral%20HHS%20OPO%20Rule%20Support%20Letter.pdf) on letter to HHS
+      urging the issuing of a rule to bring accountability and oversight to
+      OPOs"
+    voicesForReform: true
     tags:
       - NY
   - note: "[Rep. Max
       Rose](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc\
-      3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - NY
   - note: "[Greg Segal in Albuquerque
