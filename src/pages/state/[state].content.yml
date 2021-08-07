@@ -1177,59 +1177,73 @@ notes:
       - TX
   - note: "[Bakari
       Sellers](https://www.cnn.com/2019/12/24/opinions/broken-organ-donation-sy\
-      stem-sellers/index.html)"
-    voicesForReform: false
+      stem-sellers/index.html): Dealing with a broken organ donation system
+      after my 4 month old had liver failure"
+    voicesForReform: true
     tags:
       - SC
   - note: "[Dr. Alefiyah Mesiwala, former Obama White
       House](https://www.post-gazette.com/opinion/2019/07/24/div-class-libPageB\
-      odyLinebreak-Organ-care-is-not-a-partisan-issue-div/stories/201907240024)"
-    voicesForReform: false
+      odyLinebreak-Organ-care-is-not-a-partisan-issue-div/stories/201907240024):
+      Organ Care is not a Partisan Issue"
+    voicesForReform: true
     tags:
       - PA
   - note: "[Dr. Laura Siminoff,
-      Temple](http://www.siminoffresearchgroup.org/research-studies/cead/)"
-    voicesForReform: false
+      Temple](http://www.siminoffresearchgroup.org/research-studies/cead/)
+      project to inform OPOs on the best way to communicate with families to
+      encourage donation"
+    voicesForReform: true
     tags:
       - PA
   - note: "[Dr. David Goldberg, University of
-      Pennsylvania](https://www.med.upenn.edu/goldberglab/data.html)"
-    voicesForReform: false
+      Pennsylvania](https://www.med.upenn.edu/goldberglab/data.html) study on
+      deceased donor potential"
+    voicesForReform: true
     tags:
       - PA
   - note: "[Rep. Brian
       Fitzpatrick](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ug\
-      d/581bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      d/581bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - PA
   - note: "[Dr. Esther Choo](https://twitter.com/choo_ek/status/1321536322725502976)
-      (Oregon Health & Sciences University)"
-    voicesForReform: false
+      (Oregon Health & Sciences University)**:** “Our organ procurement process
+      lacks oversight to ensure it is safe, equitable, and well functioning.”"
+    voicesForReform: true
     tags:
       - OR
   - note: "[Oregon Public
       Broadcasting](https://www.opb.org/news/article/oregon-transplant-system-o\
-      rganization-health-department-proposed-trump-rules/)"
-    voicesForReform: false
+      rganization-health-department-proposed-trump-rules/): “Oregon’s
+      Organization For Procuring Transplant Organs Fails Under Proposed Rules”"
+    voicesForReform: true
     tags:
       - OR
   - note: "[Oregon liver transplant patient Erika
       Zak](https://www.cnn.com/2019/08/17/health/erika-zak-liver-transplant-201\
-      9-update/index.html)"
-    voicesForReform: false
+      9-update/index.html)**[](https://www.cnn.com/2019/08/17/health/erika-zak-\
+      liver-transplant-2019-update/index.html):** “‘Mommy can’t do this for much
+      longer’: Waiting for a liver transplant, she prepares her family for the
+      worst”"
+    voicesForReform: true
     tags:
       - OR
   - note: "[Chairman Ron
       Wyden](https://www.finance.senate.gov/ranking-members-news/grassley-wyden\
       -subpoena-the-united-network-for-organ-sharing-as-part-of-continued-inves\
-      tigation-into-us-organ-transplant-system)"
-    voicesForReform: false
+      tigation-into-us-organ-transplant-system) issues subpoena to the United
+      Network for Organ Sharing as part of Continued Investigation into U.S.
+      Organ Transplant System"
+    voicesForReform: true
     tags:
       - OR
   - note: "[Boomer Esiason
-      Foundation](https://twitter.com/cysticfibrosis/status/1296463486957113344\
-      )"
+      Foundation](https://twitter.com/cysticfibrosis/status/1296463486957113344)
+      joins a coalition of cystic fibrosis advocacy organizations in urging HHS
+      to sign off on OPO reform"
     tags:
       - OH
     voicesForReform: true
