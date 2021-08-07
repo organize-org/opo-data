@@ -1291,20 +1291,22 @@ notes:
       - NY
   - note: "[Greg Segal in Albuquerque
       Journal](https://www.abqjournal.com/1522747/organ-donation-in-dire-need-o\
-      f-reforms.html)"
-    voicesForReform: false
+      f-reforms.html): Organ donation in dire need of reforms"
+    voicesForReform: true
     tags:
       - NM
   - note: "[Marissa Padilla in Albuquerque
       Journal](https://www.abqjournal.com/1515216/modern-organ-donation-system-\
-      could-save-more-nm-lives.html)"
-    voicesForReform: false
+      could-save-more-nm-lives.html): Modern organ donation system could save
+      more NM lives"
+    voicesForReform: true
     tags:
       - NM
   - note: "[Rep. Steven
       Horsford](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/5\
-      81bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      81bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - NV
   - note: "[Missouri OPO CEO Diane
@@ -1314,33 +1316,40 @@ notes:
     tags:
       - MO
   - note: "[Senator Cindy
-      Hyde-Smith](https://www.congress.gov/bill/116th-congress/senate-bill/2063\
-      )"
-    voicesForReform: false
+      Hyde-Smith](https://www.congress.gov/bill/116th-congress/senate-bill/2063)
+      cosponsoring legislation to push standardized, objective, and verifiable
+      OPO performance metrics."
+    voicesForReform: true
     tags:
       - MS
   - note: "[Dr. Tim
       Pruett](http://www.startribune.com/organ-donation-a-better-system-could-s\
-      ave-thousands-of-lives/507749852/)"
-    voicesForReform: false
+      ave-thousands-of-lives/507749852/): Organ donation: A better system could
+      save thousands of lives"
+    voicesForReform: true
     tags:
       - MN
   - note: "[Andy Slavitt, former Obama and Biden senior
       official](https://www.usatoday.com/story/opinion/2019/12/11/organ-donatio\
-      n-reform-could-save-thousands-lives-billions-taxes-column/4377383002/)"
-    voicesForReform: false
+      n-reform-could-save-thousands-lives-billions-taxes-column/4377383002/):
+      Here's how organ donation reform could save thousands of lives, billions
+      in tax dollar"
+    voicesForReform: true
     tags:
       - MN
   - note: "[Minneapolis Star Tribune editorial
       board](http://www.startribune.com/too-many-americans-die-while-waiting-fo\
-      r-gift-of-life/563241112/)"
-    voicesForReform: false
+      r-gift-of-life/563241112/): Too many Americans die while waiting for 'gift
+      of life'"
+    voicesForReform: true
     tags:
       - MN
   - note: "[Lansing State
       Journal](https://www.lansingstatejournal.com/story/opinion/contributors/v\
-      iewpoints/2020/12/22/new-organ-transplant-reforms-save-lives/4006015001/)"
-    voicesForReform: false
+      iewpoints/2020/12/22/new-organ-transplant-reforms-save-lives/4006015001/):
+      Recent legislative reforms on organ donation policy were much needed
+      (Opinion)"
+    voicesForReform: true
     tags:
       - MI
   - note: "[Jerry Mande
