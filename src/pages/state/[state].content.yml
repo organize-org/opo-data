@@ -1093,45 +1093,51 @@ notes:
   - note: "[Jennifer
       Erickson](https://www.washingtonpost.com/opinions/i-want-a-journalist-to-\
       see-what-happens-to-my-organs-after-i-die-heres-why/2019/10/04/42c5e888-e\
-      529-11e9-a331-2df12d56a80b_story.html)"
-    voicesForReform: false
+      529-11e9-a331-2df12d56a80b_story.html): I want a journalist to see what
+      happens to my organs after I die. Here’s why."
+    voicesForReform: true
     tags:
       - DC
   - note: "[Washington Post editorial
       board](https://www.washingtonpost.com/opinions/many-die-waiting-for-organ\
       s-the-trump-administration-could-help/2020/07/31/77e3a102-dfd6-11e9-b199-\
-      f638bf2c340f_story.html)"
-    voicesForReform: false
+      f638bf2c340f_story.html)**:** Many die waiting for organs. The Trump
+      administration could help."
+    voicesForReform: true
     tags:
       - DC
   - note: "[Rep. Suzan DelBene, Co-Chair of House Kidney
       Caucus](https://delbene.house.gov/news/documentsingle.aspx?DocumentID=267\
-      4)"
-    voicesForReform: false
+      4) on letter to HHS urging the issuing of a rule to bring accountability
+      and oversight to OPOs"
+    voicesForReform: true
     tags:
       - WA
   - note: "[Former Surgeon General Ken
       Moritsugu](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/\
       581bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+    voicesForReform: true
     tags:
       - VA
   - note: "[Rep. Ben
       Cline](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581b\
-      c3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      c3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - VA
   - note: "[Rep. Abigail
       Spanberger](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd\
-      /581bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      /581bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - VA
   - note: "[Rep. John
       Curtis](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
-      bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - UT
   - note: "[Joe
