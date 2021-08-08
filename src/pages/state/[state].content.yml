@@ -1,7 +1,8 @@
 stats:
-  waitlist: State Waitlist [¹]
-  comp: Average CEO Compensation
-  monthly: Number of people in-state who die each month waiting for an organ
+  waitlist: State Waitlist[¹](#sources-1)
+  comp: Average CEO Compensation[²](#sources-2)
+  monthly: Number of people in-state who die each month waiting for an
+    organ[³](#sources-3)
 headings:
   shadow: Shadow Deaths (2018)
   name: OPO Name
@@ -15,6 +16,12 @@ sources:
     https://optn.transplant.hrsa.gov/data/view-data-reports/state-data/ (as of
     6/1/21). Alaska, Idaho, Montana, and Wyoming do not have transplant centers,
     so they do not have a state waiting list.
+  - Calculated with CEO compensation figures taken from each OPO's most recently
+    listed 990 (as of 6/1/21)
+  - Author’s calculations based on OPTN state data. To calculate the number of
+    patients who died monthly, we took the sum of 2020’s count of patients who
+    died on the waiting list and those too sick to transplant, then divided this
+    amount by 12 months.
 equityEmbed:
   image: ../../images/quotes/equity-state.jpg
   heading: OPO REFORM IS AN URGENT EQUITY ISSUE
