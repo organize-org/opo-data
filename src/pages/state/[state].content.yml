@@ -1,5 +1,5 @@
 stats:
-  waitlist: State Waitlist
+  waitlist: State Waitlist [¹] (#sources-1)
   comp: Average CEO Compensation
   monthly: Number of people in-state who die each month waiting for an organ
 headings:
@@ -10,7 +10,11 @@ headings:
   tier: Tier
   donors: Donors Needed
   investigation: Under Congressional Investigation
-sources: []
+sources:
+  - Waitlists pulled from
+    https://optn.transplant.hrsa.gov/data/view-data-reports/state-data/ (as of
+    6/1/21). Alaska, Idaho, Montana, and Wyoming do not have transplant centers,
+    so they do not have a state waiting list.
 equityEmbed:
   image: ../../images/quotes/equity-state.jpg
   heading: OPO REFORM IS AN URGENT EQUITY ISSUE
