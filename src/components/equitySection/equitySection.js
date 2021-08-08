@@ -5,11 +5,10 @@ import { Link } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 import { BgImage } from "gbimage-bridge";
 import useQuoteImages from "../../hooks/useQuoteImages";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 import indexContent from "../../pages/index.content.yml";
 import stateContent from "../../pages/state/[state].content.yml";
-
-import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 import * as styles from "./equitySection.module.css";
 
@@ -24,17 +23,14 @@ export default function EquitySection({ page = "main" }) {
 
   return (
     <>
-      {width < 800 && page === "main" ? (
-        <Row className={styles.mainHeader}>
-          <h3>{heading}</h3>
-        </Row>
-      ) : (
-        page === "state" && (
-          <Row className={styles.stateHeader}>
+      {(width < 800 && page === "main") ||
+        (page === "state" && (
+          <Row
+            className={page === "main" ? styles.mainHeader : styles.stateHeader}
+          >
             <h3>{heading}</h3>
           </Row>
-        )
-      )}
+        ))}
       <Row className={styles[page]}>
         <Col>
           <BgImage
