@@ -1,7 +1,8 @@
 stats:
-  waitlist: State Waitlist
-  comp: Average CEO Compensation
-  monthly: Number of people in-state who die each month waiting for an organ
+  waitlist: State Waitlist[¹](#sources-1)
+  comp: Average CEO Compensation[²](#sources-2)
+  monthly: Number of people in-state who die each month waiting for an
+    organ[³](#sources-3)
 headings:
   shadow: Shadow Deaths (2018)
   name: OPO Name
@@ -10,11 +11,21 @@ headings:
   tier: Tier
   donors: Donors Needed
   investigation: Under Congressional Investigation
-sources: []
+sources:
+  - Waitlists pulled from
+    https://optn.transplant.hrsa.gov/data/view-data-reports/state-data/ (as of
+    6/1/21). Alaska, Idaho, Montana, and Wyoming do not have transplant centers,
+    so they do not have a state waiting list.
+  - Calculated with CEO compensation figures taken from each OPO's most recently
+    listed 990 (as of 6/1/21)
+  - Author’s calculations based on OPTN state data. To calculate the number of
+    patients who died monthly, we took the sum of 2020’s count of patients who
+    died on the waiting list and those too sick to transplant, then divided this
+    amount by 12 months.
 equityEmbed:
   image: ../../images/quotes/equity-state.jpg
   heading: OPO REFORM IS AN URGENT EQUITY ISSUE
-  link: We must drive reforms to hold OPOs accountable
+  link: We must drive reforms to hold OPOs accountable.
   description: Patients of color are less likely to receive organ transplants than
     white patients because of inferior OPO service.
 videos:
@@ -77,6 +88,172 @@ videos:
     tags:
       - AL
 notes:
+  - voicesForReform: false
+    note: Passing (Tier 1)[ in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - WIDN
+  - voicesForReform: false
+    note: "CEO compensation
+      ([2019](https://projects.propublica.org/nonprofits/display_990/454675354/\
+      03_2021_prefixes_42-46%2F454675354_201912_990_2021030117771823)):
+      $959,263"
+    tags:
+      - WIDN
+  - voicesForReform: false
+    note: Passing (Tier 1)[ in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - TXGC
+  - voicesForReform: false
+    note: "CEO compensation
+      ([2018](https://projects.propublica.org/nonprofits/display_990/760231238/\
+      02_2020_prefixes_76-81%2F760231238_201812_990_2020020617119321)):
+      $478,522"
+    tags:
+      - TXGC
+  - voicesForReform: false
+    note: Failing (Tier 3) [in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - TXSA
+  - voicesForReform: false
+    note: "CEO compensation
+      ([2019](https://projects.propublica.org/nonprofits/display_990/741849716/\
+      10_2020_prefixes_68-74%2F741849716_201912_990_2020102117395103)):
+      $343,738"
+    tags:
+      - TXSA
+  - voicesForReform: false
+    note: Failing (Tier 3) [in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - SCOP
+  - voicesForReform: false
+    note: "CEO compensation
+      ([2019](https://projects.propublica.org/nonprofits/display_990/570875658/\
+      01_2021_prefixes_54-58%2F570875658_201912_990_2021012117620744)):
+      $290,965"
+    tags:
+      - SCOP
+  - voicesForReform: false
+    note: Passing (Tier 1)[ in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - PRLL
+  - voicesForReform: false
+    note: "CEO compensation: Unavailable via 990"
+    tags:
+      - PRLL
+  - voicesForReform: false
+    note: Passing (Tier 1)[ in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - OKOP
+  - voicesForReform: false
+    note: "CEO compensation
+      ([2018](https://projects.propublica.org/nonprofits/display_990/731281589/\
+      01_2020_prefixes_72-74%2F731281589_201812_990_2020010316995486)):
+      $462,721"
+    tags:
+      - OKOP
+  - voicesForReform: false
+    note: Underperforming (Tier 2)[ in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - OHLP
+  - voicesForReform: false
+    note: "CEO compensation
+      ([2019](https://projects.propublica.org/nonprofits/display_990/311116603/\
+      02_2021_prefixes_27-31%2F311116603_201912_990_2021022417747578)):
+      $308,995"
+    tags:
+      - OHLP
+  - voicesForReform: false
+    note: Passing (Tier 1)[ in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - OHLB
+  - voicesForReform: false
+    note: "CEO compensation
+      ([2019](https://projects.propublica.org/nonprofits/display_990/341525159/\
+      02_2021_prefixes_31-34%2F341525159_201912_990_2021021917731663)):
+      $538,849"
+    tags:
+      - OHLB
+  - voicesForReform: false
+    note: Failing (Tier 3) [in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - OHLC
+  - voicesForReform: false
+    note: "CEO compensation
+      ([2019](https://projects.propublica.org/nonprofits/display_990/311285637/\
+      09_2020_prefixes_27-32%2F311285637_201912_990_2020091717305109)):
+      $276,372"
+    tags:
+      - OHLC
+  - voicesForReform: false
+    note: Failing (Tier 3) [in 2018
+      ](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - NYFL
+  - voicesForReform: false
+    note: "CEO compensation: Unavailable via 990"
+    tags:
+      - NYFL
+  - voicesForReform: false
+    note: Underperforming (Tier 2)[ in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - NYWN
+  - voicesForReform: false
+    note: "CEO compensation
+      ([2019](https://projects.propublica.org/nonprofits/organizations/16117245\
+      3/202022979349300242/full)): $428,864"
+    tags:
+      - NYWN
+  - voicesForReform: false
+    note: Underperforming (Tier 2)[ in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - PATF
+  - voicesForReform: false
+    note: "CEO compensation
+      ([2019](https://projects.propublica.org/nonprofits/display_990/251332885/\
+      01_2021_prefixes_23-27%2F251332885_201912_990_2021012717664484)):
+      $542,245"
+    tags:
+      - PATF
+  - voicesForReform: false
+    note: Failing (Tier 3) [in 2018
+      ](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - NYRT
+  - voicesForReform: false
+    note: "CEO compensation
+      ([2019](https://projects.propublica.org/nonprofits/display_990/132945229/\
+      02_2021_prefixes_11-13%2F132945229_201912_990_2021021717716323)) :
+      $768,024"
+    tags:
+      - NYRT
+  - voicesForReform: false
+    note: Underperforming (Tier 2)[ in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - CTOP
+  - voicesForReform: false
+    note: Passing (Tier 1)[ in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    tags:
+      - MAOB
+  - voicesForReform: false
+    note: "CEO compensation
+      ([2019](https://projects.propublica.org/nonprofits/display_990/61631615/0\
+      2_2021_prefixes_04-11%2F061631615_201912_990_2021022417755375)): $554,529"
+    tags:
+      - CTOP
+      - MAOB
   - voicesForReform: false
     note: Passing (Tier 1)[ in
       2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
@@ -158,18 +335,6 @@ notes:
       Investigation](https://oversight.house.gov/sites/democrats.oversight.house.gov/files/OPO%20Letters.pdf)
     tags:
       - VATB
-  - voicesForReform: false
-    note: Passing (Tier 1) [in
-      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
-    tags:
-      - WALC
-  - voicesForReform: false
-    note: "CEO compensation
-      ([2019](https://projects.propublica.org/nonprofits/display_990/943253342/\
-      02_2021_prefixes_92-95%2F943253342_201912_990_2021022217741150)):
-      $515,166"
-    tags:
-      - WALC
   - voicesForReform: false
     note: Failing (Tier 3) [in 2018
       ](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
@@ -927,198 +1092,234 @@ notes:
   - note: "[Jennifer
       Erickson](https://www.washingtonpost.com/opinions/i-want-a-journalist-to-\
       see-what-happens-to-my-organs-after-i-die-heres-why/2019/10/04/42c5e888-e\
-      529-11e9-a331-2df12d56a80b_story.html)"
-    voicesForReform: false
+      529-11e9-a331-2df12d56a80b_story.html): I want a journalist to see what
+      happens to my organs after I die. Here’s why."
+    voicesForReform: true
     tags:
       - DC
   - note: "[Washington Post editorial
       board](https://www.washingtonpost.com/opinions/many-die-waiting-for-organ\
       s-the-trump-administration-could-help/2020/07/31/77e3a102-dfd6-11e9-b199-\
-      f638bf2c340f_story.html)"
-    voicesForReform: false
+      f638bf2c340f_story.html)**:** Many die waiting for organs. The Trump
+      administration could help."
+    voicesForReform: true
     tags:
       - DC
   - note: "[Rep. Suzan DelBene, Co-Chair of House Kidney
       Caucus](https://delbene.house.gov/news/documentsingle.aspx?DocumentID=267\
-      4)"
-    voicesForReform: false
+      4) on letter to HHS urging the issuing of a rule to bring accountability
+      and oversight to OPOs"
+    voicesForReform: true
     tags:
       - WA
   - note: "[Former Surgeon General Ken
       Moritsugu](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/\
       581bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+    voicesForReform: true
     tags:
       - VA
   - note: "[Rep. Ben
       Cline](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581b\
-      c3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      c3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - VA
   - note: "[Rep. Abigail
       Spanberger](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd\
-      /581bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      /581bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - VA
   - note: "[Rep. John
       Curtis](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
-      bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - UT
   - note: "[Joe
-      Lonsdale](https://joelonsdale.com/news/steering-american-healthcare/)"
-    voicesForReform: false
+      Lonsdale](https://joelonsdale.com/news/steering-american-healthcare/):
+      “kidney transplants offer a less expensive alternative to dialysis that
+      also increases the likelihood of patient survival.”"
+    voicesForReform: true
     tags:
       - TX
   - note: "[Laura and John
       Arnold](https://www.statnews.com/2019/07/24/a-simple-bureaucratic-organ-d\
-      onation-fix-will-save-thousands-of-lives/)"
-    voicesForReform: false
+      onation-fix-will-save-thousands-of-lives/): A simple bureaucratic organ
+      donation fix will save thousands of lives"
+    voicesForReform: true
     tags:
       - TX
   - note: "[Baylor College of
       Medicine](https://www.bcm.edu/about-us/leadership/office-of-the-president\
-      /position-statements/organ-donation-policy)"
-    voicesForReform: false
+      /position-statements/organ-donation-policy) calls for More Accountability
+      and New Strategies to Improve Organ Donation Policy"
+    voicesForReform: true
     tags:
       - TX
   - note: "[Rep. Kenny
       Marchant](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/5\
-      81bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      81bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - TX
   - note: "[Rep. Jodey
       Arrington](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/\
-      581bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      581bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - TX
   - note: "[Dallas OPO CEO Patti
       Niles](https://www.dallasnews.com/opinion/commentary/2021/02/12/the-us-or\
       gan-donation-system-needs-transparency-and-accountability/)"
-    voicesForReform: false
+    voicesForReform: true
     tags:
       - TX
   - note: "[Bakari
       Sellers](https://www.cnn.com/2019/12/24/opinions/broken-organ-donation-sy\
-      stem-sellers/index.html)"
-    voicesForReform: false
+      stem-sellers/index.html): Dealing with a broken organ donation system
+      after my 4 month old had liver failure"
+    voicesForReform: true
     tags:
       - SC
   - note: "[Dr. Alefiyah Mesiwala, former Obama White
       House](https://www.post-gazette.com/opinion/2019/07/24/div-class-libPageB\
-      odyLinebreak-Organ-care-is-not-a-partisan-issue-div/stories/201907240024)"
-    voicesForReform: false
+      odyLinebreak-Organ-care-is-not-a-partisan-issue-div/stories/201907240024):
+      Organ Care is not a Partisan Issue"
+    voicesForReform: true
     tags:
       - PA
   - note: "[Dr. Laura Siminoff,
-      Temple](http://www.siminoffresearchgroup.org/research-studies/cead/)"
-    voicesForReform: false
+      Temple](http://www.siminoffresearchgroup.org/research-studies/cead/)
+      project to inform OPOs on the best way to communicate with families to
+      encourage donation"
+    voicesForReform: true
     tags:
       - PA
   - note: "[Dr. David Goldberg, University of
-      Pennsylvania](https://www.med.upenn.edu/goldberglab/data.html)"
-    voicesForReform: false
+      Pennsylvania](https://www.med.upenn.edu/goldberglab/data.html) study on
+      deceased donor potential"
+    voicesForReform: true
     tags:
       - PA
   - note: "[Rep. Brian
       Fitzpatrick](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ug\
-      d/581bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      d/581bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - PA
   - note: "[Dr. Esther Choo](https://twitter.com/choo_ek/status/1321536322725502976)
-      (Oregon Health & Sciences University)"
-    voicesForReform: false
+      (Oregon Health & Sciences University)**:** “Our organ procurement process
+      lacks oversight to ensure it is safe, equitable, and well functioning.”"
+    voicesForReform: true
     tags:
       - OR
   - note: "[Oregon Public
       Broadcasting](https://www.opb.org/news/article/oregon-transplant-system-o\
-      rganization-health-department-proposed-trump-rules/)"
-    voicesForReform: false
+      rganization-health-department-proposed-trump-rules/): “Oregon’s
+      Organization For Procuring Transplant Organs Fails Under Proposed Rules”"
+    voicesForReform: true
     tags:
       - OR
   - note: "[Oregon liver transplant patient Erika
       Zak](https://www.cnn.com/2019/08/17/health/erika-zak-liver-transplant-201\
-      9-update/index.html)"
-    voicesForReform: false
+      9-update/index.html)**[](https://www.cnn.com/2019/08/17/health/erika-zak-\
+      liver-transplant-2019-update/index.html):** “‘Mommy can’t do this for much
+      longer’: Waiting for a liver transplant, she prepares her family for the
+      worst”"
+    voicesForReform: true
     tags:
       - OR
   - note: "[Chairman Ron
       Wyden](https://www.finance.senate.gov/ranking-members-news/grassley-wyden\
       -subpoena-the-united-network-for-organ-sharing-as-part-of-continued-inves\
-      tigation-into-us-organ-transplant-system)"
-    voicesForReform: false
+      tigation-into-us-organ-transplant-system) issues subpoena to the United
+      Network for Organ Sharing as part of Continued Investigation into U.S.
+      Organ Transplant System"
+    voicesForReform: true
     tags:
       - OR
   - note: "[Boomer Esiason
-      Foundation](https://twitter.com/cysticfibrosis/status/1296463486957113344\
-      )"
+      Foundation](https://twitter.com/cysticfibrosis/status/1296463486957113344)
+      joins a coalition of cystic fibrosis advocacy organizations in urging HHS
+      to sign off on OPO reform"
     tags:
       - OH
     voicesForReform: true
   - note: "[New York Times editorial
       board](https://www.nytimes.com/2019/08/20/opinion/erika-zak-organ-donor.h\
-      tml)"
-    voicesForReform: false
+      tml): “Twenty Americans die each day waiting for organs. Here’s how to
+      change that.”"
+    voicesForReform: true
     tags:
       - NY
   - note: "[NY doctors, including Dr. Craig Spencer and Dr. Dara
       Kass](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc\
-      3_e70640160570491b9855d21980e87092.pdf)"
-    voicesForReform: false
+      3_e70640160570491b9855d21980e87092.pdf) writing to Secretary Becerra
+      encouraging finalization of OPO rule"
+    voicesForReform: true
     tags:
       - NY
   - note: "[New York City-based OPO
       LiveOnNY](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/5\
-      81bc3_ad2bfdb091974d62bc52596e06f8d848.pdf)"
-    voicesForReform: false
+      81bc3_ad2bfdb091974d62bc52596e06f8d848.pdf) writing in support of the OPO
+      final rule"
+    voicesForReform: true
     tags:
       - NY
   - note: "[Rep. Grace
       Meng](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc\
-      3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - NY
   - note: "[Rep. Thomas
       Suozzi](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
-      bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - NY
   - note: "[Rep. Tom
       Reed](https://www.finance.senate.gov/imo/media/doc/031621%20Bipartisan%20\
-      Bicameral%20HHS%20OPO%20Rule%20Support%20Letter.pdf)"
-    voicesForReform: false
+      Bicameral%20HHS%20OPO%20Rule%20Support%20Letter.pdf) on letter to HHS
+      urging the issuing of a rule to bring accountability and oversight to
+      OPOs"
+    voicesForReform: true
     tags:
       - NY
   - note: "[Rep. Max
       Rose](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc\
-      3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - NY
   - note: "[Greg Segal in Albuquerque
       Journal](https://www.abqjournal.com/1522747/organ-donation-in-dire-need-o\
-      f-reforms.html)"
-    voicesForReform: false
+      f-reforms.html): Organ donation in dire need of reforms"
+    voicesForReform: true
     tags:
       - NM
   - note: "[Marissa Padilla in Albuquerque
       Journal](https://www.abqjournal.com/1515216/modern-organ-donation-system-\
-      could-save-more-nm-lives.html)"
-    voicesForReform: false
+      could-save-more-nm-lives.html): Modern organ donation system could save
+      more NM lives"
+    voicesForReform: true
     tags:
       - NM
   - note: "[Rep. Steven
       Horsford](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/5\
-      81bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      81bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - NV
   - note: "[Missouri OPO CEO Diane
@@ -1128,81 +1329,95 @@ notes:
     tags:
       - MO
   - note: "[Senator Cindy
-      Hyde-Smith](https://www.congress.gov/bill/116th-congress/senate-bill/2063\
-      )"
-    voicesForReform: false
+      Hyde-Smith](https://www.congress.gov/bill/116th-congress/senate-bill/2063)
+      cosponsoring legislation to push standardized, objective, and verifiable
+      OPO performance metrics."
+    voicesForReform: true
     tags:
       - MS
   - note: "[Dr. Tim
       Pruett](http://www.startribune.com/organ-donation-a-better-system-could-s\
-      ave-thousands-of-lives/507749852/)"
-    voicesForReform: false
+      ave-thousands-of-lives/507749852/): Organ donation: A better system could
+      save thousands of lives"
+    voicesForReform: true
     tags:
       - MN
   - note: "[Andy Slavitt, former Obama and Biden senior
       official](https://www.usatoday.com/story/opinion/2019/12/11/organ-donatio\
-      n-reform-could-save-thousands-lives-billions-taxes-column/4377383002/)"
-    voicesForReform: false
+      n-reform-could-save-thousands-lives-billions-taxes-column/4377383002/):
+      Here's how organ donation reform could save thousands of lives, billions
+      in tax dollar"
+    voicesForReform: true
     tags:
       - MN
   - note: "[Minneapolis Star Tribune editorial
       board](http://www.startribune.com/too-many-americans-die-while-waiting-fo\
-      r-gift-of-life/563241112/)"
-    voicesForReform: false
+      r-gift-of-life/563241112/): Too many Americans die while waiting for 'gift
+      of life'"
+    voicesForReform: true
     tags:
       - MN
   - note: "[Lansing State
       Journal](https://www.lansingstatejournal.com/story/opinion/contributors/v\
-      iewpoints/2020/12/22/new-organ-transplant-reforms-save-lives/4006015001/)"
-    voicesForReform: false
+      iewpoints/2020/12/22/new-organ-transplant-reforms-save-lives/4006015001/):
+      Recent legislative reforms on organ donation policy were much needed
+      (Opinion)"
+    voicesForReform: true
     tags:
       - MI
   - note: "[Jerry Mande
       (Tufts)](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/c1\
-      14f6_b6fd6a59c60a43d0bc8f33386ebd11b3.pdf)"
-    voicesForReform: false
+      14f6_b6fd6a59c60a43d0bc8f33386ebd11b3.pdf) writing to HHS in support of
+      OPO reform"
+    voicesForReform: true
     tags:
       - MA
   - note: "[Harvard Law School Petrie-Flom
       Center](https://blog.petrieflom.law.harvard.edu/2021/02/05/recent-organ-p\
-      rocurement-organization-regulations-will-save-lives/)"
-    voicesForReform: false
+      rocurement-organization-regulations-will-save-lives/): Recent Organ
+      Procurement Organization Regulations Will Save Lives"
+    voicesForReform: true
     tags:
       - MA
   - note: "[Dr. Jeremy
-      Faust](https://twitter.com/jeremyfaust/status/1389326765940568065)"
-    voicesForReform: false
+      Faust](https://twitter.com/jeremyfaust/status/1389326765940568065) showing
+      support for OPO oversight on twitter"
+    voicesForReform: true
     tags:
       - MA
   - note: "[Senator Elizabeth
       Warren](https://www.warren.senate.gov/oversight/letters/senators-warren-a\
       nd-blumenthal-request-information-about-oversight-of-organ-procurement-or\
-      ganizations-opos)"
-    voicesForReform: false
+      ganizations-opos) Requests Information About Oversight of Organ
+      Procurement Organizations (OPOs)"
+    voicesForReform: true
     tags:
       - MA
   - note: "[Rep. Jamie
       Raskin](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
-      bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - MD
   - note: "[Baltimore Corps CEO Fagan
       Harris](https://twitter.com/oversightdems/status/1388204146969427971?s=10\
       )"
-    voicesForReform: false
+    voicesForReform: true
     tags:
       - MD
   - note: "[Senator Ben
       Cardin](https://www.finance.senate.gov/imo/media/doc/031621%20Bipartisan%\
-      20Bicameral%20HHS%20OPO%20Rule%20Support%20Letter.pdf)"
-    voicesForReform: false
+      20Bicameral%20HHS%20OPO%20Rule%20Support%20Letter.pdf) on bipartisan,
+      bicameral letter asking CMS to accelerate the accountability of OPOs"
+    voicesForReform: true
     tags:
       - MD
   - note: "[Ben
       Jealous](https://www.healthaffairs.org/do/10.1377/hblog20201211.229975/fu\
-      ll/)"
-    voicesForReform: false
+      ll/): New Organ Donation Rule Is A Win For Black Patients And Health
+      Equity"
+    voicesForReform: true
     tags:
       - MD
   - note: "[Louisiana OPO CEO Kelly
@@ -1213,167 +1428,191 @@ notes:
       - LA
   - note: "[Rep. John
       Yarmuth](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/58\
-      1bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      1bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - KY
   - note: "[Rep. James
       Comer](https://www.finance.senate.gov/imo/media/doc/031621%20Bipartisan%2\
-      0Bicameral%20HHS%20OPO%20Rule%20Support%20Letter.pdf)"
-    voicesForReform: false
+      0Bicameral%20HHS%20OPO%20Rule%20Support%20Letter.pdf) on bipartisan,
+      bicameral letter asking CMS to accelerate the accountability of OPOs"
+    voicesForReform: true
     tags:
       - KY
   - note: "[Kentucky kidney patient testifies before House Oversight
       Committee](https://youtu.be/TnKo8Q-Hemk?t=827)"
-    voicesForReform: false
+    voicesForReform: true
     tags:
       - KY
   - note: "[University of Kentucky
       doctors](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/58\
-      1bc3_a695046dc1c048d39536cae6c154eadc.pdf)"
-    voicesForReform: false
+      1bc3_a695046dc1c048d39536cae6c154eadc.pdf) write to Senator McConnell with
+      concerns surrounding federal oversight of OPOs."
+    voicesForReform: true
     tags:
       - KY
   - note: "[Dr. Malay Shah, University of
       Kentucky](https://www.courier-journal.com/story/opinion/2020/12/04/organ-\
-      transplants-reforms-opos-lead-more-organ-donors/3798051001/)"
-    voicesForReform: false
+      transplants-reforms-opos-lead-more-organ-donors/3798051001/): Reforms of
+      OPOs will lead to more organ donors"
+    voicesForReform: true
     tags:
       - KY
   - note: "[Rep. Cindy
       Axne](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc\
-      3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - IA
   - note: "[Iowa heart transplant recipient Michael
       Kutcher](https://twitter.com/oversightdems/status/1388204146969427971?s=1\
       0)"
-    voicesForReform: false
+    voicesForReform: true
     tags:
       - IA
   - note: "[Senator Chuck
       Grassley](https://www.finance.senate.gov/ranking-members-news/grassley-wy\
       den-subpoena-the-united-network-for-organ-sharing-as-part-of-continued-in\
-      vestigation-into-us-organ-transplant-system)"
-    voicesForReform: false
+      vestigation-into-us-organ-transplant-system) issues subpoena to the United
+      Network for Organ Sharing as part of Continued Investigation into U.S.
+      Organ Transplant System"
+    voicesForReform: true
     tags:
       - IA
   - note: "[Rep. Larry Bucshon, Co-chair of House Kidney
       Caucus](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
-      bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - IN
   - note: "[Gift of Hope OPO
       Statement](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/\
-      581bc3_cf8ab4dc8e6744419eee63c3deec8993.pdf)"
-    voicesForReform: false
+      581bc3_cf8ab4dc8e6744419eee63c3deec8993.pdf) in support of House Oversight
+      Committee investigation and new OPO rule"
+    voicesForReform: true
     tags:
       - IN
   - note: "[Rep. Danny
       Davis](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581b\
-      c3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      c3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - IL
   - note: "[Gift of Hope, Chicago-based
       OPO](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc3\
-      _cf8ab4dc8e6744419eee63c3deec8993.pdf)"
-    voicesForReform: false
+      _cf8ab4dc8e6744419eee63c3deec8993.pdf) writing in support of House
+      Oversight Committee investigation and new OPO rule"
+    voicesForReform: true
     tags:
       - IL
   - note: "[Chicago Tribune: letter to the
       editor](https://www.chicagotribune.com/opinion/letters/ct-letters-vp-1031\
       20-20201030-tr6q64dknvfzhfv4zdwzxsok24-story.html)"
-    voicesForReform: false
+    voicesForReform: true
     tags:
       - IL
   - note: "[Rep. Buddy
       Carter](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
-      bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - GA
   - note: "[Rep. Neal
       Dunn](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc\
-      3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - FL
   - note: "[Orlando OPO CEO Ginny
       McBride](https://morningconsult.com/opinions/organ-donation-can-save-more\
       -lives-through-reform/)"
-    voicesForReform: false
+    voicesForReform: true
     tags:
       - FL
   - note: "[Senator Richard
       Blumenthal](https://www.warren.senate.gov/oversight/letters/senators-warr\
       en-and-blumenthal-request-information-about-oversight-of-organ-procuremen\
-      t-organizations-opos)"
-    voicesForReform: false
+      t-organizations-opos) Requests Information About Oversight of Organ
+      Procurement Organizations (OPOs)"
+    voicesForReform: true
     tags:
       - CT
   - note: "[Rep. Diana DeGette, Co-chair, Diabetes
       Caucus](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
-      bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    voicesForReform: true
     tags:
       - CO
   - note: "[Senator Michael
-      Bennet](https://www.congress.gov/bill/116th-congress/senate-bill/2063)"
-    voicesForReform: false
+      Bennet](https://www.finance.senate.gov/imo/media/doc/071921%20Wyden%20Gra\
+      ssley%20Young%20Bipart%20Bicam%20OPO%20letter%20to%20HHS.pdf) on
+      bipartisan, bicameral letter asking CMS to accelerate the accountability
+      of OPOs"
+    voicesForReform: true
     tags:
       - CO
   - note: "[Nobel Laureate Al Roth
       (Stanford)](https://www.statnews.com/2021/04/02/reforming-and-improving-o\
-      rgan-transplant-systems-will-save-lives-taxpayer-dollars/)"
-    voicesForReform: false
+      rgan-transplant-systems-will-save-lives-taxpayer-dollars/) suggesting OPO
+      reform will save lives and taxpayer dollars"
+    voicesForReform: true
     tags:
       - CA
   - note: "[San Francisco OPO CEO Janice
       Whaley](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
       bc3_2b0e0453d04b474cb26d7b7cd82da91d.pdf)"
-    voicesForReform: false
+    voicesForReform: true
     tags:
       - CA
-  - note: "[Rep. Mark DeSaulnier](https://youtu.be/TnKo8Q-Hemk?t=5189)"
-    voicesForReform: false
+  - note: "[Rep. Mark DeSaulnier](https://youtu.be/TnKo8Q-Hemk?t=5189) in House
+      Oversight Committee hearing on OPO reform"
+    voicesForReform: true
     tags:
       - CA
   - note: "[Kidney patient Tonya Ingram testifies before House Oversight
       Committee](https://youtu.be/TnKo8Q-Hemk?t=129)"
-    voicesForReform: false
+    voicesForReform: true
     tags:
       - CA
   - note: "[Rep. Karen
       Bass](https://drive.google.com/file/d/1FJy3StR9TOdv-LlsXqU22P2QNeRjAJkB/v\
-      iew?usp=sharing)"
-    voicesForReform: false
+      iew?usp=sharing) writing to HHS to encourage finalization of OPO reform
+      final rule"
+    voicesForReform: true
     tags:
       - CA
   - note: "[Rep. Katie
       Porter](https://drive.google.com/file/d/1FJy3StR9TOdv-LlsXqU22P2QNeRjAJkB\
-      /view?usp=sharing)"
-    voicesForReform: false
+      /view?usp=sharing) writing to HHS to encourage finalization of OPO reform
+      final rule"
+    voicesForReform: true
     tags:
       - CA
   - note: "[U.S. Attorney Joyce
       Vance](https://archives.fbi.gov/archives/birmingham/press-releases/2012/f\
-      ormer-alabama-organ-center-executive-sentenced-for-fraud)"
-    voicesForReform: false
+      ormer-alabama-organ-center-executive-sentenced-for-fraud) prosecuting
+      former Alabama OPO leaders for fraud."
+    voicesForReform: true
     tags:
       - AL
   - note: "[Rep. Terri
       Sewell](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
-      bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
-    voicesForReform: false
+      bc3_a34641941c3e4dad86c015f019ba2051.pdf) on bipartisan letter to HHS
+      supporting OPO reform."
+    voicesForReform: true
     tags:
       - AL
   - note: "[Dr. Jayme Locke, University of
       Alabama](https://www.healthaffairs.org/do/10.1377/hblog20201211.229975/fu\
-      ll/)"
-    voicesForReform: false
+      ll/) supporting OPO reform in Health Affairs"
+    voicesForReform: true
     tags:
       - AL
   - note: >
