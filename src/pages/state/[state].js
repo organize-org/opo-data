@@ -114,7 +114,7 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
         <Social />
       </Row>
       <Row className={styles.state}>
-        <Col md="7">
+        <Col className={styles.statsColumn}>
           <Row className={styles.stats}>
             <Row className={styles.statsHeading}>
               <Col>
@@ -143,6 +143,7 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
                     style: "currency",
                     currency: "USD",
                     maximumFractionDigits: 0,
+                    minimumFractionDigits: 0,
                   })}
                 </p>
               </Col>
@@ -203,7 +204,7 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
             />
           )}
         </Col>
-        <Col md="4">
+        <Col className={styles.mapSection}>
           <Map
             dimensions={{ height: "30rem", width: "100%" }}
             state={stateData.abbreviation}

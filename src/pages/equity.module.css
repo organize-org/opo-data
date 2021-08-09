@@ -123,6 +123,27 @@
   margin-bottom: 4rem;
 }
 
+@media (max-width: 1100px) {
+  .main {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .topBar {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .stepContainer {
+    margin-right: 1rem;
+  }
+
+  .quotes {
+    margin-top: 2rem;
+    width: auto;
+  }
+}
+
 @media (max-width: 700px) {
   .topBar h2 {
     margin-bottom: 1rem;
@@ -147,7 +168,6 @@
   .quotes {
     padding: 0;
     margin: 2rem 0 0 0;
-    width: 100%;
   }
 
   .quotes > * {

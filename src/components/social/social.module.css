@@ -43,6 +43,12 @@
   fill: #fdca82;
 }
 
+@media (max-width: 1100px) {
+  .social {
+    justify-content: left;
+  }
+}
+
 @media (max-width: 700px) {
   .social {
     margin-bottom: 1rem;

@@ -4,8 +4,9 @@
   flex-direction: column;
   justify-content: center;
   margin: 4rem 3rem;
-  height: 452px
+  height: 452px;
 }
+
 .state .background {
   background-position: right;
   display: flex;
@@ -32,8 +33,7 @@
   border-bottom: none !important;
 }
 
-@media (max-width: 700px) {
-
+@media (max-width: 800px) {
   .state {
     margin: 0;
   }
@@ -50,8 +50,14 @@
   .main .copy {
     width: 100%;
     padding: 1rem;
+    background-color: var(--opoWhiteSmoke);
+    opacity: 0.9;
   }
 
+  .mainHeader {
+    margin-left: 1rem;
+    padding-top: 2rem;
+  }
   .stateHeader {
     margin-left: 0;
   }
