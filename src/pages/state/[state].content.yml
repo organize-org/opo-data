@@ -1,27 +1,75 @@
 stats:
   waitlist: State Waitlist[¹](#sources-1)
   comp: Average CEO Compensation[²](#sources-2)
-  monthly: Number of people in-state who die each month waiting for an
-    organ[³](#sources-3)
+  monthly: Number of people on state waiting list who die each month waiting for
+    an organ[³](#sources-3)
 headings:
-  shadow: Shadow Deaths (2018)
+  shadow: Shadow Deaths (2018)[⁶](#sources-6)
   name: OPO Name
   region: Region
   states: States
-  tier: Tier
-  donors: Donors Needed
-  investigation: Under Congressional Investigation
+  tier: Tier (2018)[⁴](#sources-4)
+  donors: Donors Needed (2018)[⁵](#sources-5)
+  investigation: Under Congressional Investigation[⁷](#sources-7)
 sources:
-  - Waitlists pulled from
-    https://optn.transplant.hrsa.gov/data/view-data-reports/state-data/ (as of
-    6/1/21). Alaska, Idaho, Montana, and Wyoming do not have transplant centers,
-    so they do not have a state waiting list.
-  - Calculated with CEO compensation figures taken from each OPO's most recently
-    listed 990 (as of 6/1/21)
-  - Author’s calculations based on OPTN state data. To calculate the number of
-    patients who died monthly, we took the sum of 2020’s count of patients who
-    died on the waiting list and those too sick to transplant, then divided this
-    amount by 12 months.
+  - State waitlist via [OPTN state
+    data](https://optn.transplant.hrsa.gov/data/view-data-reports/state-data/)
+    (as of 6/1/21). Alaska, Idaho, Montana, and Wyoming do not have transplant
+    centers, so they do not have a state waiting list; patients are listed in
+    the state in which their transplant center is based, which is not
+    necessarily their state of residence
+  - "Average CEO compensation via each OPO's most recently listed 990 (as of
+    6/1/21). 2019: Donor Network Arizona, OneLegacy, Donor Network West, Donor
+    Alliance, LifeChoice Donor Services, New England Organ Bank, Washington
+    Regional Transplant Community, Iowa Donor Network, Gift of Hope Organ &
+    Tissue Donor Network, Indiana Donor Network, Midwest Transplant Network,
+    Kentucky Organ Donor Affiliates, The Living Legacy Foundation, Gift of Life
+    Michigan, Lifesource MN, Mid-America Transplant Services, Mississippi Organ
+    Recovery Agency, New Jersey Sharing Network, Nevada Donor Network, LiveOnNY,
+    ConnectLife, Lifeline of Ohio, LifeBanc, Life Connection of Ohio, LifeCenter
+    Organ Donor Network, Center for Organ Recovery and Education, We Are Sharing
+    Hope SC, Tennessee Donor Services, Mid-South Transplant Services, Texas
+    Organ Sharing Alliance, Intermountain Donor Services (DonorConnect),
+    LifeCenter Northwest, Versiti 2018: Arkansas Regional Organ Recovery Agency,
+    Legacy of Life Hawaii, Louisiana Organ Procurement Agency, Carolina Donor
+    Services, Nebraska Organ Recovery, Center for Donation and Transplant,
+    Lifeshare Transplant Donor Services of Oklahoma, Gift of Life, Southwest
+    Transplant Alliance, LifeGift, LifeNet. Note: hospital-based OPOs do not
+    have separate 990s, so unless this information has been made publicly
+    available by the OPO, it is not listed"
+  - "Number of people on state waiting list who die each month waiting for an
+    organ: 2020 deaths via [OPTN state
+    data](https://optn.transplant.hrsa.gov/data/view-data-reports/state-data/)
+    (patients who died on waiting list + patients who died who were listed as
+    too sick to transplant) divided by 12 months."
+  - Tier (2018) via [CMS OPO final
+    rule](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to),
+    data most recently available (2018)
+  - Donors needed (2018) via [CMS OPO final
+    rule](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    represents the number of additional donors needed for OPO to reach Tier 1.
+    See Table 4. Data most recently available (2018)
+  - "Shadow deaths (2018) via [CMS OPO final
+    rule](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medic\
+    are-and-medicaid-programs-organ-procurement-organizations-conditions-for-co\
+    verage-revisions-to) represents the number of additional organ transplants
+    needed for the OPO to reach Tier 1. See Table 5. Data most recently
+    available (2018). See “[Oversight Gaps and
+    Conflicts](https://bloomworks.digital/organdonationreform/Oversight/)”:
+    “Every organ that is not recovered because of OPO ineffective practices,
+    transportation errors, or understaffing, results in another person dying
+    while on the waitlist. For the purposes of this report, we have termed these
+    ‘shadow deaths’; they are just as real and consequential as deaths resulting
+    from errors that have brought higher profile media attention, but are less
+    visible as they result from systemic rather than acute problems.”"
+  - Under Congressional investigation represents the 16 OPOs under investigation
+    by the House Committee on Oversight and Reform for “[poor performance,
+    waste, and
+    mismanagement](https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)”.
+    See letters
+    [here](https://oversight.house.gov/sites/democrats.oversight.house.gov/files/OPO%20Letters.pdf)
+    and
+    [here.](https://oversight.house.gov/sites/democrats.oversight.house.gov/files/2021-05-27.RK%20KP%20to%20Ferreira-NDN%20re%20Expenses.pdf)
 equityEmbed:
   image: ../../images/quotes/equity-state.jpg
   heading: OPO REFORM IS AN URGENT EQUITY ISSUE
