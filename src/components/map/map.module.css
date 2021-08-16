@@ -80,6 +80,17 @@
   background-color: transparent;
   height: 2rem;
   width: 2rem;
+  opacity: .6;
+}
+
+.closeModal:hover {
+  opacity: 1;
+}
+
+@media (max-width: 1100px) {
+  .closeModal {
+    opacity: .8;
+  }
 }
 
 @media (max-width: 700px) {
