@@ -74,17 +74,12 @@
 }
 
 .closeModal {
-  margin-top: -2px;
-  padding: 0;
   margin-left: auto;
   order: 2;
   border: 0;
-  opacity: .4;
-  background-color: #fff;
-}
-
-.closeModal:hover {
-  opacity: .8;
+  background-color: transparent;
+  height: 2rem;
+  width: 2rem;
 }
 
 @media (max-width: 700px) {

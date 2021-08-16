@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import { Container, Row } from "react-bootstrap";
 import { GeoJSON, MapContainer, TileLayer, ZoomControl } from "react-leaflet";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import bbox from "@turf/bbox";
+import CloseHover from '../../images/icons/close-hover.svg'
+import CloseDefault from '../../images/icons/close-default.svg'
 
 import useDataMaps from "../../hooks/useDataMaps";
 import {
@@ -29,12 +31,24 @@ function Legend() {
 
 function StatePopout({ state, setPopoutAbbrevation }) {
   const [{ opoDataMap }] = useDataMaps();
+  const [hover, setHover] = useState(false)
 
   return (
     <Container className={styles.popout}>
       <Row>
         <h3>{formatStateName(state)}</h3>
-        <button className={styles.closeModal} onClick={() => setPopoutAbbrevation(null)}>X</button>
+        <button
+          className={styles.closeModal}
+          onClick={() => setPopoutAbbrevation(null)}
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
+        >
+          {hover ? (
+            <CloseHover />
+          ) : (
+            <CloseDefault />
+          )}
+        </button>
       </Row>
       <Row>
         {state.waitlist ? (
