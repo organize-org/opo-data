@@ -27,13 +27,14 @@ function Legend() {
   );
 }
 
-function StatePopout({ state }) {
+function StatePopout({ state, setPopoutAbbrevation }) {
   const [{ opoDataMap }] = useDataMaps();
 
   return (
     <Container className={styles.popout}>
       <Row>
         <h3>{formatStateName(state)}</h3>
+        <button className={styles.closeModal} onClick={() => setPopoutAbbrevation(null)}>X</button>
       </Row>
       <Row>
         {state.waitlist ? (
@@ -142,7 +143,10 @@ export default function Map({
     <Row className={styles.map}>
       <div style={dimensions}>
         {popoutAbbreviation && (
-          <StatePopout state={stateDataMap[popoutAbbreviation]} />
+          <StatePopout
+            state={stateDataMap[popoutAbbreviation]}
+            setPopoutAbbrevation
+          ={setPopoutAbbrevation}/>
         )}
         {legend && <Legend />}
         {
