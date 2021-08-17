@@ -3,7 +3,7 @@ import { Container, Row } from "react-bootstrap";
 import { GeoJSON, MapContainer, TileLayer, ZoomControl } from "react-leaflet";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import bbox from "@turf/bbox";
-import CloseDefault from '../../images/icons/close-default.svg'
+import CloseDefault from "../../images/icons/close-default.svg";
 
 import useDataMaps from "../../hooks/useDataMaps";
 import {
@@ -38,7 +38,8 @@ function StatePopout({ state, setPopoutAbbrevation }) {
         <button
           className={styles.closeModal}
           onClick={() => setPopoutAbbrevation(null)}
-        ><CloseDefault />
+        >
+          <CloseDefault />
         </button>
       </Row>
       <Row>
@@ -150,8 +151,8 @@ export default function Map({
         {popoutAbbreviation && (
           <StatePopout
             state={stateDataMap[popoutAbbreviation]}
-            setPopoutAbbrevation
-          ={setPopoutAbbrevation}/>
+            setPopoutAbbrevation={setPopoutAbbrevation}
+          />
         )}
         {legend && <Legend />}
         {
