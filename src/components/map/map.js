@@ -3,6 +3,7 @@ import { Container, Row } from "react-bootstrap";
 import { GeoJSON, MapContainer, TileLayer, ZoomControl } from "react-leaflet";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import bbox from "@turf/bbox";
+import CloseDefault from "../../images/icons/close-default.svg";
 
 import useDataMaps from "../../hooks/useDataMaps";
 import {
@@ -27,13 +28,19 @@ function Legend() {
   );
 }
 
-function StatePopout({ state }) {
+function StatePopout({ state, setPopoutAbbrevation }) {
   const [{ opoDataMap }] = useDataMaps();
 
   return (
     <Container className={styles.popout}>
       <Row>
         <h3>{formatStateName(state)}</h3>
+        <button
+          className={styles.closeModal}
+          onClick={() => setPopoutAbbrevation(null)}
+        >
+          <CloseDefault />
+        </button>
       </Row>
       <Row>
         {state.waitlist ? (
@@ -44,7 +51,7 @@ function StatePopout({ state }) {
         ) : null}
       </Row>
       <Row>
-        <h5>OPOs Servicing {state.abbreviation.toLocaleUpperCase()} (2019)</h5>
+        <h5>OPOs Servicing {state.abbreviation.toLocaleUpperCase()} (2018)</h5>
       </Row>
       {Object.values(opoDataMap)
         .filter(
@@ -142,7 +149,10 @@ export default function Map({
     <Row className={styles.map}>
       <div style={dimensions}>
         {popoutAbbreviation && (
-          <StatePopout state={stateDataMap[popoutAbbreviation]} />
+          <StatePopout
+            state={stateDataMap[popoutAbbreviation]}
+            setPopoutAbbrevation={setPopoutAbbrevation}
+          />
         )}
         {legend && <Legend />}
         {

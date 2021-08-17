@@ -71,6 +71,7 @@ export default function Layout({ crumbLabel, children, sources }) {
           alt="Schmidt Futures"
           height={35}
         />
+        <StaticImage src="../../images/logos/fas.png" alt="FAS" height={35} />
         <StaticImage
           src="../../images/logos/bloomworks.png"
           alt="Bloomworks"
@@ -79,9 +80,8 @@ export default function Layout({ crumbLabel, children, sources }) {
         <StaticImage
           src="../../images/logos/organize.png"
           alt="Organize"
-          height={35}
+          height={30}
         />
-        <StaticImage src="../../images/logos/fas.png" alt="FAS" height={35} />
       </Row>
     </Container>
   );

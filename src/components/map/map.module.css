@@ -57,7 +57,7 @@
 .popout h5 {
   font-size: 0.9rem;
   margin-top: 0.5rem;
-  color: var(--opoDarkgray);
+  color: var(--opoBlack);
   text-transform: uppercase;
 }
 
@@ -71,6 +71,26 @@
 
 .map {
   justify-content: center;
+}
+
+.closeModal {
+  margin-left: auto;
+  order: 2;
+  border: 0;
+  background-color: transparent;
+  height: 2rem;
+  width: 2rem;
+  opacity: .6;
+}
+
+.closeModal:hover {
+  opacity: 1;
+}
+
+@media (max-width: 1100px) {
+  .closeModal {
+    opacity: .8;
+  }
 }
 
 @media (max-width: 700px) {
