@@ -146,8 +146,6 @@ export default function Map({
         : stateGeoJson.features,
   });
 
-  const width = useWindowDimensions().width;
-
   return (
     <Row className={styles.map}>
       <div style={dimensions}>
@@ -169,7 +167,7 @@ export default function Map({
               scrollWheelZoom={false}
               style={dimensions}
               zoomControl={false}
-              dragging={width > 700}
+              dragging={useWindowDimensions().width > 800}
             >
               <ZoomControl position="bottomright" />
               <TileLayer
