@@ -78,8 +78,6 @@
 }
 
 .closeModal {
-  margin-left: auto;
-  order: 2;
   border: 0;
   background-color: transparent;
   height: 2rem;
