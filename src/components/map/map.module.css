@@ -80,8 +80,6 @@
 .closeModal {
   border: 0;
   background-color: transparent;
-  height: 2rem;
-  width: 2rem;
   opacity: .6;
 }
 
