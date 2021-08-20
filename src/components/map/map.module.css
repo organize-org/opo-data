@@ -69,6 +69,10 @@
   padding-left: 0 !important;
 }
 
+.popoutHeader {
+  justify-content: space-between;
+}
+
 .map {
   justify-content: center;
 }

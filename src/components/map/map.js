@@ -34,7 +34,7 @@ function StatePopout({ state, setPopoutAbbrevation }) {
 
   return (
     <Container className={styles.popout}>
-      <Row>
+      <Row className={styles.popoutHeader}>
         <h3>{formatStateName(state)}</h3>
         <button
           className={styles.closeModal}
