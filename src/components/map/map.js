@@ -4,6 +4,7 @@ import { GeoJSON, MapContainer, TileLayer, ZoomControl } from "react-leaflet";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import bbox from "@turf/bbox";
 import CloseDefault from "../../images/icons/close-default.svg";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 import useDataMaps from "../../hooks/useDataMaps";
 import {
@@ -145,6 +146,8 @@ export default function Map({
         : stateGeoJson.features,
   });
 
+  const width = useWindowDimensions().width;
+
   return (
     <Row className={styles.map}>
       <div style={dimensions}>
@@ -166,6 +169,7 @@ export default function Map({
               scrollWheelZoom={false}
               style={dimensions}
               zoomControl={false}
+              dragging={width > 700}
             >
               <ZoomControl position="bottomright" />
               <TileLayer
