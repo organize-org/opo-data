@@ -69,17 +69,17 @@
   padding-left: 0 !important;
 }
 
+.popoutHeader {
+  justify-content: space-between;
+}
+
 .map {
   justify-content: center;
 }
 
 .closeModal {
-  margin-left: auto;
-  order: 2;
   border: 0;
   background-color: transparent;
-  height: 2rem;
-  width: 2rem;
   opacity: .6;
 }
 

@@ -4,6 +4,7 @@ import { GeoJSON, MapContainer, TileLayer, ZoomControl } from "react-leaflet";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import bbox from "@turf/bbox";
 import CloseDefault from "../../images/icons/close-default.svg";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 import useDataMaps from "../../hooks/useDataMaps";
 import {
@@ -33,7 +34,7 @@ function StatePopout({ state, setPopoutAbbrevation }) {
 
   return (
     <Container className={styles.popout}>
-      <Row>
+      <Row className={styles.popoutHeader}>
         <h3>{formatStateName(state)}</h3>
         <button
           className={styles.closeModal}
@@ -166,6 +167,7 @@ export default function Map({
               scrollWheelZoom={false}
               style={dimensions}
               zoomControl={false}
+              dragging={useWindowDimensions().width > 800}
             >
               <ZoomControl position="bottomright" />
               <TileLayer
