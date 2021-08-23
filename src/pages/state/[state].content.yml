@@ -96,7 +96,7 @@ videos:
     link: https://www.c-span.org/video/?c4948478/user-clip-opo-discussion
     tags:
       - OR
-    description: " "
+    description: ""
   - title: OPO CEO Matt Wadsworth testifies before House Oversight Committee
     link: https://youtu.be/TnKo8Q-Hemk?t=3401
     tags:
@@ -701,9 +701,9 @@ notes:
     voicesForReform: false
     tags:
       - FLUF
-  - note: "CEO compensation
-      ([2019](https://projects.propublica.org/nonprofits/organizations/52152846\
-      1/202003089349302685/full)): $533,289"
+  - note: "CEO
+      compensation[](https://projects.propublica.org/nonprofits/organizations/5\
+      21528461/202003089349302685/full): Unavailable via 990"
     voicesForReform: false
     tags:
       - FLUF
