@@ -139,6 +139,15 @@ videos:
     tags:
       - AL
 notes:
+  - voicesForReform: true
+    note: '[Rep. Raja
+      Krishnamoorthi:](https://thehill.com/blogs/congress-blog/healthcare/569398-its-time-to-put-patients-and-taxpayers-ahead-of-transplant)
+      "Unfortunately, no one is holding these organizations accountable. The
+      results has been disastrous for patients and taxpayers...\[and] the
+      industry is lobbying to delay the implementation of these new rules until
+      2026."'
+    tags:
+      - IL
   - voicesForReform: false
     note: Passing (Tier 1)[ in
       2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
