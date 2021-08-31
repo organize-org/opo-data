@@ -178,6 +178,21 @@ videos:
 notes:
   - voicesForReform: true
     tags:
+      - CO
+    note: "[Senator Michael
+      Bennet](https://www.finance.senate.gov/imo/media/doc/071921%20Wyden%20Gra\
+      ssley%20Young%20Bipart%20Bicam%20OPO%20letter%20to%20HHS.pdf) on
+      bipartisan, bicameral letter asking CMS to accelerate the accountability
+      of OPOs"
+  - voicesForReform: true
+    tags:
+      - CO
+    note: "[Rep. Diana DeGette, Co-chair, Diabetes
+      Caucus](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
+      bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+  - voicesForReform: true
+    tags:
       - WA
     note: "[Rep. Suzan DelBene, Co-Chair of House Kidney
       Caucus](https://delbene.house.gov/news/documentsingle.aspx?DocumentID=267\
@@ -1879,21 +1894,6 @@ notes:
     voicesForReform: true
     tags:
       - FL
-  - note: "[Rep. Diana DeGette, Co-chair, Diabetes
-      Caucus](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
-      bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
-      issuing of a rule to bring accountability and oversight to OPOs"
-    voicesForReform: true
-    tags:
-      - CO
-  - note: "[Senator Michael
-      Bennet](https://www.finance.senate.gov/imo/media/doc/071921%20Wyden%20Gra\
-      ssley%20Young%20Bipart%20Bicam%20OPO%20letter%20to%20HHS.pdf) on
-      bipartisan, bicameral letter asking CMS to accelerate the accountability
-      of OPOs"
-    voicesForReform: true
-    tags:
-      - CO
   - note: "[Nobel Laureate Al Roth
       (Stanford)](https://www.statnews.com/2021/04/02/reforming-and-improving-o\
       rgan-transplant-systems-will-save-lives-taxpayer-dollars/) suggesting OPO
