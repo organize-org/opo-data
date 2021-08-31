@@ -177,6 +177,49 @@ videos:
       - WY
 notes:
   - voicesForReform: true
+    tags:
+      - WA
+    note: "[Rep. Suzan DelBene, Co-Chair of House Kidney
+      Caucus](https://delbene.house.gov/news/documentsingle.aspx?DocumentID=267\
+      4) on letter to HHS urging the issuing of a rule to bring accountability
+      and oversight to OPOs"
+  - voicesForReform: true
+    tags:
+      - UT
+    note: "[Rep. John
+      Curtis](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
+      bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+  - voicesForReform: true
+    tags:
+      - SC
+    note: "[Bakari
+      Sellers](https://www.cnn.com/2019/12/24/opinions/broken-organ-donation-sy\
+      stem-sellers/index.html): Dealing with a broken organ donation system
+      after my 4 month old had liver failure"
+  - voicesForReform: true
+    note: "[Rep. Steven
+      Horsford](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/5\
+      81bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    tags:
+      - NV
+  - voicesForReform: true
+    tags:
+      - MS
+    note: "[Senator Cindy
+      Hyde-Smith](https://www.congress.gov/bill/116th-congress/senate-bill/2063)
+      cosponsoring legislation to push standardized, objective, and verifiable
+      OPO performance metrics."
+  - voicesForReform: true
+    note: "[Lansing State
+      Journal](https://www.lansingstatejournal.com/story/opinion/contributors/v\
+      iewpoints/2020/12/22/new-organ-transplant-reforms-save-lives/4006015001/):
+      Recent legislative reforms on organ donation policy were much needed
+      (Opinion)"
+    tags:
+      - MI
+  - voicesForReform: true
     note: "[Rep. Buddy
       Carter](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
       bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
@@ -1456,13 +1499,6 @@ notes:
     voicesForReform: true
     tags:
       - DC
-  - note: "[Rep. Suzan DelBene, Co-Chair of House Kidney
-      Caucus](https://delbene.house.gov/news/documentsingle.aspx?DocumentID=267\
-      4) on letter to HHS urging the issuing of a rule to bring accountability
-      and oversight to OPOs"
-    voicesForReform: true
-    tags:
-      - WA
   - note: "[Former Surgeon General Ken
       Moritsugu](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/\
       581bc3_a34641941c3e4dad86c015f019ba2051.pdf)"
@@ -1483,13 +1519,6 @@ notes:
     voicesForReform: true
     tags:
       - VA
-  - note: "[Rep. John
-      Curtis](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
-      bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
-      issuing of a rule to bring accountability and oversight to OPOs"
-    voicesForReform: true
-    tags:
-      - UT
   - note: "[Joe
       Lonsdale](https://joelonsdale.com/news/steering-american-healthcare/):
       “kidney transplants offer a less expensive alternative to dialysis that
@@ -1531,13 +1560,6 @@ notes:
     voicesForReform: true
     tags:
       - TX
-  - note: "[Bakari
-      Sellers](https://www.cnn.com/2019/12/24/opinions/broken-organ-donation-sy\
-      stem-sellers/index.html): Dealing with a broken organ donation system
-      after my 4 month old had liver failure"
-    voicesForReform: true
-    tags:
-      - SC
   - note: "[Rep. Brian
       Fitzpatrick](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ug\
       d/581bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
@@ -1666,26 +1688,12 @@ notes:
     voicesForReform: true
     tags:
       - NM
-  - note: "[Rep. Steven
-      Horsford](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/5\
-      81bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
-      issuing of a rule to bring accountability and oversight to OPOs"
-    voicesForReform: true
-    tags:
-      - NV
   - note: "[Missouri OPO CEO Diane
       Brockmeier](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd\
       /581bc3_2b0e0453d04b474cb26d7b7cd82da91d.pdf)"
     voicesForReform: false
     tags:
       - MO
-  - note: "[Senator Cindy
-      Hyde-Smith](https://www.congress.gov/bill/116th-congress/senate-bill/2063)
-      cosponsoring legislation to push standardized, objective, and verifiable
-      OPO performance metrics."
-    voicesForReform: true
-    tags:
-      - MS
   - note: "[Dr. Tim
       Pruett](http://www.startribune.com/organ-donation-a-better-system-could-s\
       ave-thousands-of-lives/507749852/): Organ donation: A better system could
@@ -1708,14 +1716,6 @@ notes:
     voicesForReform: true
     tags:
       - MN
-  - note: "[Lansing State
-      Journal](https://www.lansingstatejournal.com/story/opinion/contributors/v\
-      iewpoints/2020/12/22/new-organ-transplant-reforms-save-lives/4006015001/):
-      Recent legislative reforms on organ donation policy were much needed
-      (Opinion)"
-    voicesForReform: true
-    tags:
-      - MI
   - note: "[Jerry Mande
       (Tufts)](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/c1\
       14f6_b6fd6a59c60a43d0bc8f33386ebd11b3.pdf) writing to HHS in support of
