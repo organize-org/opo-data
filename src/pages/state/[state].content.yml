@@ -178,6 +178,26 @@ videos:
 notes:
   - voicesForReform: true
     tags:
+      - AL
+    note: "[Rep. Terri
+      Sewell](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
+      bc3_a34641941c3e4dad86c015f019ba2051.pdf) on bipartisan letter to HHS
+      supporting OPO reform."
+  - voicesForReform: true
+    tags:
+      - AL
+    note: "[Dr. Jayme Locke, University of
+      Alabama](https://www.healthaffairs.org/do/10.1377/hblog20201211.229975/fu\
+      ll/) supporting OPO reform in Health Affairs"
+  - voicesForReform: true
+    tags:
+      - AL
+    note: "[U.S. Attorney Joyce
+      Vance](https://archives.fbi.gov/archives/birmingham/press-releases/2012/f\
+      ormer-alabama-organ-center-executive-sentenced-for-fraud) prosecuting
+      former Alabama OPO leaders for fraud."
+  - voicesForReform: true
+    tags:
       - OH
     note: "[OPO CEO Matthew Wadsworth in
       Harvard](https://blog.petrieflom.law.harvard.edu/2021/02/05/recent-organ-\
@@ -1663,6 +1683,15 @@ notes:
     voicesForReform: true
     tags:
       - PA
+  - note: "[Chairman Ron
+      Wyden](https://www.finance.senate.gov/ranking-members-news/grassley-wyden\
+      -subpoena-the-united-network-for-organ-sharing-as-part-of-continued-inves\
+      tigation-into-us-organ-transplant-system) issues subpoena to the United
+      Network for Organ Sharing as part of Continued Investigation into U.S.
+      Organ Transplant System"
+    voicesForReform: true
+    tags:
+      - OR
   - note: "[Dr. Esther Choo](https://twitter.com/choo_ek/status/1321536322725502976)
       (Oregon Health & Sciences University)**:** “Our organ procurement process
       lacks oversight to ensure it is safe, equitable, and well functioning.”"
@@ -1682,15 +1711,6 @@ notes:
       liver-transplant-2019-update/index.html):** “‘Mommy can’t do this for much
       longer’: Waiting for a liver transplant, she prepares her family for the
       worst”"
-    voicesForReform: true
-    tags:
-      - OR
-  - note: "[Chairman Ron
-      Wyden](https://www.finance.senate.gov/ranking-members-news/grassley-wyden\
-      -subpoena-the-united-network-for-organ-sharing-as-part-of-continued-inves\
-      tigation-into-us-organ-transplant-system) issues subpoena to the United
-      Network for Organ Sharing as part of Continued Investigation into U.S.
-      Organ Transplant System"
     voicesForReform: true
     tags:
       - OR
@@ -1945,26 +1965,6 @@ notes:
     voicesForReform: true
     tags:
       - CA
-  - note: "[U.S. Attorney Joyce
-      Vance](https://archives.fbi.gov/archives/birmingham/press-releases/2012/f\
-      ormer-alabama-organ-center-executive-sentenced-for-fraud) prosecuting
-      former Alabama OPO leaders for fraud."
-    voicesForReform: true
-    tags:
-      - AL
-  - note: "[Rep. Terri
-      Sewell](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
-      bc3_a34641941c3e4dad86c015f019ba2051.pdf) on bipartisan letter to HHS
-      supporting OPO reform."
-    voicesForReform: true
-    tags:
-      - AL
-  - note: "[Dr. Jayme Locke, University of
-      Alabama](https://www.healthaffairs.org/do/10.1377/hblog20201211.229975/fu\
-      ll/) supporting OPO reform in Health Affairs"
-    voicesForReform: true
-    tags:
-      - AL
   - note: Started private jet business [TxJet](https://txjet.org/) in 2014
     voicesForReform: false
     tags:
