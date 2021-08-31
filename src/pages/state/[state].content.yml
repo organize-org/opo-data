@@ -206,6 +206,24 @@ notes:
       - WI
       - WV
       - WY
+      - CT
+      - GA
+      - MI
+      - MS
+      - NV
+      - SC
+      - UT
+      - WA
+      - CO
+      - DC
+      - FL
+      - IN
+      - NM
+      - OH
+      - AL
+      - IA
+      - MN
+      - VA
   - voicesForReform: true
     note: "[House Oversight
       Committee](https://oversight.house.gov/news/press-releases/oversight-subc\
@@ -235,6 +253,27 @@ notes:
       - WI
       - WV
       - WY
+      - NEOR
+      - TN
+      - MO
+      - CT
+      - GA
+      - MI
+      - MS
+      - NV
+      - SC
+      - UT
+      - WA
+      - CO
+      - DC
+      - FL
+      - IN
+      - NM
+      - OH
+      - AL
+      - IA
+      - MN
+      - VA
   - voicesForReform: true
     note: "[House Appropriations
       Committee](https://docs.house.gov/meetings/AP/AP00/20210715/113908/HMKP-1\
@@ -263,6 +302,26 @@ notes:
       - WI
       - WV
       - WY
+      - TN
+      - MO
+      - CT
+      - GA
+      - MI
+      - MS
+      - NV
+      - SC
+      - UT
+      - WA
+      - CO
+      - DC
+      - FL
+      - IN
+      - NM
+      - OH
+      - AL
+      - IA
+      - MN
+      - VA
   - voicesForReform: true
     note: "[Ben Jealous, past NAACP
       President](https://www.healthaffairs.org/do/10.1377/hblog20201211.229975/\
@@ -291,6 +350,22 @@ notes:
       - WI
       - WV
       - WY
+      - TN
+      - MO
+      - CT
+      - GA
+      - MI
+      - MS
+      - NV
+      - SC
+      - UT
+      - WA
+      - CO
+      - DC
+      - FL
+      - IN
+      - NM
+      - OH
   - voicesForReform: true
     note: "[Nobel Laureate Al
       Roth](https://www.statnews.com/2021/04/02/reforming-and-improving-organ-t\
@@ -320,6 +395,16 @@ notes:
       - WI
       - WV
       - WY
+      - TN
+      - MO
+      - CT
+      - GA
+      - MI
+      - MS
+      - NV
+      - SC
+      - UT
+      - WA
   - voicesForReform: true
     note: '[Rep. Raja
       Krishnamoorthi:](https://thehill.com/blogs/congress-blog/healthcare/569398-its-time-to-put-patients-and-taxpayers-ahead-of-transplant)
