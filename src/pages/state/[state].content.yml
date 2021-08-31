@@ -178,6 +178,59 @@ videos:
 notes:
   - voicesForReform: true
     tags:
+      - OH
+    note: "[OPO CEO Matthew Wadsworth in
+      Harvard](https://blog.petrieflom.law.harvard.edu/2021/02/05/recent-organ-\
+      procurement-organization-regulations-will-save-lives/) Petrie-Flom blog"
+  - voicesForReform: true
+    tags:
+      - OH
+    note: "[Boomer Esiason
+      Foundation](https://twitter.com/cysticfibrosis/status/1296463486957113344)
+      joins a coalition of cystic fibrosis advocacy organizations in urging HHS
+      to sign off on OPO reform"
+  - voicesForReform: true
+    tags:
+      - NM
+    note: "[Greg Segal in Albuquerque
+      Journal](https://www.abqjournal.com/1522747/organ-donation-in-dire-need-o\
+      f-reforms.html): Organ donation in dire need of reforms"
+  - voicesForReform: true
+    tags:
+      - NM
+    note: "[Marissa Padilla in Albuquerque
+      Journal](https://www.abqjournal.com/1515216/modern-organ-donation-system-\
+      could-save-more-nm-lives.html): Modern organ donation system could save
+      more NM lives"
+  - voicesForReform: true
+    tags:
+      - IN
+    note: "[Rep. Larry Bucshon, Co-chair of House Kidney
+      Caucus](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
+      bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+  - voicesForReform: true
+    tags:
+      - IN
+    note: "[Gift of Hope OPO
+      Statement](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/\
+      581bc3_cf8ab4dc8e6744419eee63c3deec8993.pdf) in support of House Oversight
+      Committee investigation and new OPO rule"
+  - voicesForReform: true
+    tags:
+      - FL
+    note: "[Rep. Neal
+      Dunn](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc\
+      3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+  - voicesForReform: true
+    tags:
+      - FL
+    note: "[Orlando OPO CEO Ginny
+      McBride](https://morningconsult.com/opinions/organ-donation-can-save-more\
+      -lives-through-reform/)"
+  - voicesForReform: true
+    tags:
       - DC
     note: "[Jennifer
       Erickson](https://www.washingtonpost.com/opinions/i-want-a-journalist-to-\
@@ -1641,13 +1694,6 @@ notes:
     voicesForReform: true
     tags:
       - OR
-  - note: "[Boomer Esiason
-      Foundation](https://twitter.com/cysticfibrosis/status/1296463486957113344)
-      joins a coalition of cystic fibrosis advocacy organizations in urging HHS
-      to sign off on OPO reform"
-    tags:
-      - OH
-    voicesForReform: true
   - note: "[New York Times editorial
       board](https://www.nytimes.com/2019/08/20/opinion/erika-zak-organ-donor.h\
       tml): “Twenty Americans die each day waiting for organs. Here’s how to
@@ -1698,19 +1744,6 @@ notes:
     voicesForReform: true
     tags:
       - NY
-  - note: "[Greg Segal in Albuquerque
-      Journal](https://www.abqjournal.com/1522747/organ-donation-in-dire-need-o\
-      f-reforms.html): Organ donation in dire need of reforms"
-    voicesForReform: true
-    tags:
-      - NM
-  - note: "[Marissa Padilla in Albuquerque
-      Journal](https://www.abqjournal.com/1515216/modern-organ-donation-system-\
-      could-save-more-nm-lives.html): Modern organ donation system could save
-      more NM lives"
-    voicesForReform: true
-    tags:
-      - NM
   - note: "[Missouri OPO CEO Diane
       Brockmeier](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd\
       /581bc3_2b0e0453d04b474cb26d7b7cd82da91d.pdf)"
@@ -1739,6 +1772,14 @@ notes:
     voicesForReform: true
     tags:
       - MN
+  - note: "[Senator Elizabeth
+      Warren](https://www.warren.senate.gov/oversight/letters/senators-warren-a\
+      nd-blumenthal-request-information-about-oversight-of-organ-procurement-or\
+      ganizations-opos) Requests Information About Oversight of Organ
+      Procurement Organizations (OPOs)"
+    voicesForReform: true
+    tags:
+      - MA
   - note: "[Jerry Mande
       (Tufts)](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/c1\
       14f6_b6fd6a59c60a43d0bc8f33386ebd11b3.pdf) writing to HHS in support of
@@ -1759,14 +1800,13 @@ notes:
     voicesForReform: true
     tags:
       - MA
-  - note: "[Senator Elizabeth
-      Warren](https://www.warren.senate.gov/oversight/letters/senators-warren-a\
-      nd-blumenthal-request-information-about-oversight-of-organ-procurement-or\
-      ganizations-opos) Requests Information About Oversight of Organ
-      Procurement Organizations (OPOs)"
+  - note: "[Senator Ben
+      Cardin](https://www.finance.senate.gov/imo/media/doc/031621%20Bipartisan%\
+      20Bicameral%20HHS%20OPO%20Rule%20Support%20Letter.pdf) on bipartisan,
+      bicameral letter asking CMS to accelerate the accountability of OPOs"
     voicesForReform: true
     tags:
-      - MA
+      - MD
   - note: "[Rep. Jamie
       Raskin](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
       bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
@@ -1777,13 +1817,6 @@ notes:
   - note: "[Baltimore Corps CEO Fagan
       Harris](https://twitter.com/oversightdems/status/1388204146969427971?s=10\
       )"
-    voicesForReform: true
-    tags:
-      - MD
-  - note: "[Senator Ben
-      Cardin](https://www.finance.senate.gov/imo/media/doc/031621%20Bipartisan%\
-      20Bicameral%20HHS%20OPO%20Rule%20Support%20Letter.pdf) on bipartisan,
-      bicameral letter asking CMS to accelerate the accountability of OPOs"
     voicesForReform: true
     tags:
       - MD
@@ -1855,20 +1888,6 @@ notes:
     voicesForReform: true
     tags:
       - IA
-  - note: "[Rep. Larry Bucshon, Co-chair of House Kidney
-      Caucus](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
-      bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
-      issuing of a rule to bring accountability and oversight to OPOs"
-    voicesForReform: true
-    tags:
-      - IN
-  - note: "[Gift of Hope OPO
-      Statement](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/\
-      581bc3_cf8ab4dc8e6744419eee63c3deec8993.pdf) in support of House Oversight
-      Committee investigation and new OPO rule"
-    voicesForReform: true
-    tags:
-      - IN
   - note: "[Rep. Danny
       Davis](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581b\
       c3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
@@ -1889,19 +1908,6 @@ notes:
     voicesForReform: true
     tags:
       - IL
-  - note: "[Rep. Neal
-      Dunn](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc\
-      3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
-      issuing of a rule to bring accountability and oversight to OPOs"
-    voicesForReform: true
-    tags:
-      - FL
-  - note: "[Orlando OPO CEO Ginny
-      McBride](https://morningconsult.com/opinions/organ-donation-can-save-more\
-      -lives-through-reform/)"
-    voicesForReform: true
-    tags:
-      - FL
   - note: "[Nobel Laureate Al Roth
       (Stanford)](https://www.statnews.com/2021/04/02/reforming-and-improving-o\
       rgan-transplant-systems-will-save-lives-taxpayer-dollars/) suggesting OPO
@@ -1959,13 +1965,6 @@ notes:
     voicesForReform: true
     tags:
       - AL
-  - note: >
-      [OPO CEO Matthew Wadsworth in
-      Harvard](https://blog.petrieflom.law.harvard.edu/2021/02/05/recent-organ-procurement-organization-regulations-will-save-lives/)
-      Petrie-Flom blog
-    tags:
-      - OH
-    voicesForReform: true
   - note: Started private jet business [TxJet](https://txjet.org/) in 2014
     voicesForReform: false
     tags:
