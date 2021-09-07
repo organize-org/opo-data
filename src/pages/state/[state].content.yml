@@ -177,6 +177,20 @@ videos:
       - WY
 notes:
   - voicesForReform: true
+    note: "[Missouri OPO CEO Diane
+      Brockmeier](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd\
+      /581bc3_2b0e0453d04b474cb26d7b7cd82da91d.pdf) supporting new OPO rule and
+      calling for its acceleartion"
+    tags:
+      - MO
+  - voicesForReform: true
+    note: "[Louisiana OPO CEO Kelly
+      Ranum](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581b\
+      c3_2b0e0453d04b474cb26d7b7cd82da91d.pdf) supporting new OPO rule and
+      calling for its acceleration"
+    tags:
+      - LA
+  - voicesForReform: true
     tags:
       - VA
     note: "[Rep. Ben
@@ -256,10 +270,10 @@ notes:
   - voicesForReform: true
     tags:
       - AL
-    note: "[U.S. Attorney Joyce
-      Vance](https://archives.fbi.gov/archives/birmingham/press-releases/2012/f\
-      ormer-alabama-organ-center-executive-sentenced-for-fraud) prosecuting
-      former Alabama OPO leaders for fraud."
+    note: "[OPO CEO Matthew
+      Wadsworth](https://blog.petrieflom.law.harvard.edu/2021/02/05/recent-orga\
+      n-procurement-organization-regulations-will-save-lives/) in Harvard
+      Petrie-Flom blog"
   - voicesForReform: true
     tags:
       - OH
@@ -312,7 +326,8 @@ notes:
       - FL
     note: "[Orlando OPO CEO Ginny
       McBride](https://morningconsult.com/opinions/organ-donation-can-save-more\
-      -lives-through-reform/)"
+      -lives-through-reform/) supporting new OPO rule and calling for its
+      acceleration"
   - voicesForReform: true
     tags:
       - DC
@@ -686,7 +701,8 @@ notes:
     tags:
       - PRLL
   - voicesForReform: false
-    note: "CEO compensation: Unavailable via 990"
+    note: Passing (Tier 1)[ in
+      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
     tags:
       - PRLL
   - voicesForReform: false
@@ -787,7 +803,7 @@ notes:
     tags:
       - CTOP
   - voicesForReform: false
-    note: Passing (Tier 1)[ in
+    note: Passing (Tier 1) [in
       2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
     tags:
       - MAOB
@@ -1646,10 +1662,10 @@ notes:
     voicesForReform: true
     tags:
       - TX
-  - note: "[Rep. Jodey
-      Arrington](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/\
-      581bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
-      issuing of a rule to bring accountability and oversight to OPOs"
+  - note: "[Joe
+      Lonsdale](https://joelonsdale.com/news/steering-american-healthcare/):
+      “Kidney transplants offer a less expensive alternative to dialysis that
+      also increases the likelihood of patient survival.”"
     voicesForReform: true
     tags:
       - TX
@@ -1667,10 +1683,10 @@ notes:
     voicesForReform: true
     tags:
       - TX
-  - note: "[Baylor College of
-      Medicine](https://www.bcm.edu/about-us/leadership/office-of-the-president\
-      /position-statements/organ-donation-policy) calls for More Accountability
-      and New Strategies to Improve Organ Donation Policy"
+  - note: "[Dallas OPO CEO Patti
+      Niles](https://www.dallasnews.com/opinion/commentary/2021/02/12/the-us-or\
+      gan-donation-system-needs-transparency-and-accountability/) supporting new
+      OPO rule and calling for its acceleration"
     voicesForReform: true
     tags:
       - TX
@@ -1788,12 +1804,6 @@ notes:
     voicesForReform: true
     tags:
       - NY
-  - note: "[Missouri OPO CEO Diane
-      Brockmeier](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd\
-      /581bc3_2b0e0453d04b474cb26d7b7cd82da91d.pdf)"
-    voicesForReform: false
-    tags:
-      - MO
   - note: "[Senator Elizabeth
       Warren](https://www.warren.senate.gov/oversight/letters/senators-warren-a\
       nd-blumenthal-request-information-about-oversight-of-organ-procurement-or\
@@ -1849,12 +1859,6 @@ notes:
     voicesForReform: true
     tags:
       - MD
-  - note: "[Louisiana OPO CEO Kelly
-      Ranum](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581b\
-      c3_2b0e0453d04b474cb26d7b7cd82da91d.pdf)"
-    voicesForReform: false
-    tags:
-      - LA
   - note: "[Rep. John
       Yarmuth](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/58\
       1bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
@@ -1936,7 +1940,8 @@ notes:
       - CA
   - note: "[San Francisco OPO CEO Janice
       Whaley](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
-      bc3_2b0e0453d04b474cb26d7b7cd82da91d.pdf)"
+      bc3_2b0e0453d04b474cb26d7b7cd82da91d.pdf) supporting new OPO rule and
+      calling for its acceleration"
     voicesForReform: true
     tags:
       - CA
