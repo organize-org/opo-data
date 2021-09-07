@@ -22,10 +22,11 @@ sources:
     6/1/21). 2019: Donor Network Arizona, OneLegacy, Donor Network West, Donor
     Alliance, LifeChoice Donor Services, New England Organ Bank, Washington
     Regional Transplant Community, Iowa Donor Network, Gift of Hope Organ &
-    Tissue Donor Network, Indiana Donor Network, Midwest Transplant Network,
-    Kentucky Organ Donor Affiliates, The Living Legacy Foundation, Gift of Life
-    Michigan, Lifesource MN, Mid-America Transplant Services, Mississippi Organ
-    Recovery Agency, New Jersey Sharing Network, Nevada Donor Network, LiveOnNY,
+    Tissue Donor Network, Indiana Donor Network, Lifelink of
+    Florida/Georgia/Puerto Rico, Midwest Transplant Network, Kentucky Organ
+    Donor Affiliates, The Living Legacy Foundation, Gift of Life Michigan,
+    Lifesource MN, Mid-America Transplant Services, Mississippi Organ Recovery
+    Agency, New Jersey Sharing Network, Nevada Donor Network, LiveOnNY,
     ConnectLife, Lifeline of Ohio, LifeBanc, Life Connection of Ohio, LifeCenter
     Organ Donor Network, Center for Organ Recovery and Education, We Are Sharing
     Hope SC, Tennessee Donor Services, Mid-South Transplant Services, Texas
@@ -696,8 +697,12 @@ notes:
     tags:
       - PRLL
   - voicesForReform: false
-    note: Passing (Tier 1)[ in
-      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    note: "CEO compensation
+      ([2019](https://pdf.guidestar.org/PDF_Images/2020/592/193/2020-592193032-\
+      202101319349303525-9.pdf?_gl=1*tt6su*_ga*NDE3MTU5ODg3LjE2MjYyNjczMjQ.*_ga\
+      _0H865XH5JK*MTYyOTc0MzE3Ny4xMC4xLjE2Mjk3NDMyMDkuMA..*_ga_5W8PXYYGBX*MTYyO\
+      Tc0MzE3Ny4xMC4xLjE2Mjk3NDMyMDkuMA..&_ga=2.118075401.1837771540.1629743177\
+      -417159887.1626267324)): $648,021"
     tags:
       - PRLL
   - voicesForReform: false
@@ -1147,7 +1152,7 @@ notes:
       202101319349303525-9.pdf?_gl=1*tt6su*_ga*NDE3MTU5ODg3LjE2MjYyNjczMjQ.*_ga\
       _0H865XH5JK*MTYyOTc0MzE3Ny4xMC4xLjE2Mjk3NDMyMDkuMA..*_ga_5W8PXYYGBX*MTYyO\
       Tc0MzE3Ny4xMC4xLjE2Mjk3NDMyMDkuMA..&_ga=2.118075401.1837771540.1629743177\
-      -417159887.1626267324)): $552,139"
+      -417159887.1626267324)): $648,021"
     voicesForReform: false
     tags:
       - GALL
@@ -1189,7 +1194,7 @@ notes:
       202101319349303525-9.pdf?_gl=1*tt6su*_ga*NDE3MTU5ODg3LjE2MjYyNjczMjQ.*_ga\
       _0H865XH5JK*MTYyOTc0MzE3Ny4xMC4xLjE2Mjk3NDMyMDkuMA..*_ga_5W8PXYYGBX*MTYyO\
       Tc0MzE3Ny4xMC4xLjE2Mjk3NDMyMDkuMA..&_ga=2.118075401.1837771540.1629743177\
-      -417159887.1626267324)): $433,900"
+      -417159887.1626267324)): $648,021"
     voicesForReform: false
     tags:
       - FLWC
