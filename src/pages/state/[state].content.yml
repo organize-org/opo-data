@@ -316,14 +316,6 @@ notes:
   - voicesForReform: true
     tags:
       - DC
-    note: "[Jennifer
-      Erickson](https://www.washingtonpost.com/opinions/i-want-a-journalist-to-\
-      see-what-happens-to-my-organs-after-i-die-heres-why/2019/10/04/42c5e888-e\
-      529-11e9-a331-2df12d56a80b_story.html): I want a journalist to see what
-      happens to my organs after I die. Here’s why."
-  - voicesForReform: true
-    tags:
-      - DC
     note: "[Washington Post editorial
       board](https://www.washingtonpost.com/opinions/many-die-waiting-for-organ\
       s-the-trump-administration-could-help/2020/07/31/77e3a102-dfd6-11e9-b199-\
@@ -1079,18 +1071,6 @@ notes:
       $290,079"
     tags:
       - UTOP
-  - voicesForReform: false
-    note: Failing (Tier 3) [in
-      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
-    tags:
-      - IAOP
-  - voicesForReform: false
-    note: "CEO compensation
-      ([2019](https://projects.propublica.org/nonprofits/display_990/421414092/\
-      08_2020_prefixes_41-45%2F421414092_201912_990_2020081817242292)):
-      $393,024"
-    tags:
-      - IAOP
   - note: Passing (Tier 1) [in
       2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
     voicesForReform: false
