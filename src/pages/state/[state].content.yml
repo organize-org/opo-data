@@ -1906,9 +1906,8 @@ notes:
     voicesForReform: true
     tags:
       - IL
-  - note: "[Chicago Tribune: letter to the
-      editor](https://www.chicagotribune.com/opinion/letters/ct-letters-vp-1031\
-      20-20201030-tr6q64dknvfzhfv4zdwzxsok24-story.html)"
+  - note: "[Rep. Mark DeSaulnier](https://youtu.be/TnKo8Q-Hemk?t=5189) speaking in
+      House Oversight Committee hearing on OPO reform"
     voicesForReform: true
     tags:
       - IL
@@ -1931,17 +1930,17 @@ notes:
     voicesForReform: true
     tags:
       - CA
-  - note: "[Nobel Laureate Al Roth
-      (Stanford)](https://www.statnews.com/2021/04/02/reforming-and-improving-o\
-      rgan-transplant-systems-will-save-lives-taxpayer-dollars/) suggesting OPO
-      reform will save lives and taxpayer dollars"
-    voicesForReform: true
-    tags:
-      - CA
   - note: "[San Francisco OPO CEO Janice
       Whaley](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
       bc3_2b0e0453d04b474cb26d7b7cd82da91d.pdf) supporting new OPO rule and
       calling for its acceleration"
+    voicesForReform: true
+    tags:
+      - CA
+  - note: "[Nobel Laureate Al Roth
+      (Stanford)](https://www.statnews.com/2021/04/02/reforming-and-improving-o\
+      rgan-transplant-systems-will-save-lives-taxpayer-dollars/) suggesting OPO
+      reform will save lives and taxpayer dollars"
     voicesForReform: true
     tags:
       - CA
