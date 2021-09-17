@@ -84,6 +84,7 @@ export default function Map({
   popoutAbbreviation = null,
   setPopoutAbbrevation,
 }) {
+  const windowWidth = useWindowDimensions().width;
   const [{ opoDataMap, stateDataMap }] = useDataMaps();
   const { dsaGeoData, statesGeoData } = useStaticQuery(
     graphql`
@@ -167,7 +168,7 @@ export default function Map({
               scrollWheelZoom={false}
               style={dimensions}
               zoomControl={false}
-              dragging={useWindowDimensions().width > 800}
+              dragging={windowWidth > 800}
             >
               <ZoomControl position="bottomright" />
               <TileLayer

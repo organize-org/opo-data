@@ -21,7 +21,7 @@ import {
 import * as styles from "./state.module.css";
 import content from "./[state].content.yml";
 
-export default function State({ data: { statesGeoData }, state = "DC" }) {
+export default function State({ data: { statesGeoData }, state }) {
   const [{ opoDataMap, stateDataMap }] = useDataMaps();
   const { headings, notes, stats, videos, sources } = content;
 
@@ -37,8 +37,9 @@ export default function State({ data: { statesGeoData }, state = "DC" }) {
   );
 
   // Find associated state data and feature by abbreviation, redirect if not found
-  const stateData = stateDataMap[state.toLocaleUpperCase()];
+  const stateData = stateDataMap[state?.toLocaleUpperCase()];
   if (!stateData) {
+    if (!state) return null;
     navigate("/404");
     return null;
   }
