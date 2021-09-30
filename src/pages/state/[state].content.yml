@@ -1106,8 +1106,9 @@ notes:
     voicesForReform: false
     tags:
       - NEOR
-  - note: Failing (Tier 3) [in
-      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+  - note: Underperforming (Tier 2)
+      [](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)[in
+      2019](https://qcor.cms.gov/main.jsp)
     voicesForReform: false
     tags:
       - IAOP
@@ -1118,8 +1119,9 @@ notes:
     voicesForReform: false
     tags:
       - IAOP
-  - note: Failing (Tier 3) [in
-      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+  - note: Failing (Tier 3)
+      [](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)[in
+      2019](https://qcor.cms.gov/main.jsp)
     voicesForReform: false
     tags:
       - HIOP
@@ -1130,8 +1132,9 @@ notes:
     voicesForReform: false
     tags:
       - HIOP
-  - note: Underperforming (Tier 2) [in
-      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+  - note: Passing (Tier 1)
+      [](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)[in
+      2019](https://qcor.cms.gov/main.jsp)
     voicesForReform: false
     tags:
       - TNDS
@@ -1149,8 +1152,7 @@ notes:
     voicesForReform: false
     tags:
       - TNDS
-  - note: Underperforming (Tier 2) [in
-      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+  - note: Underperforming (Tier 2) [in 2019](https://qcor.cms.gov/main.jsp)
     voicesForReform: false
     tags:
       - GALL
@@ -1168,8 +1170,8 @@ notes:
     voicesForReform: false
     tags:
       - GALL
-  - note: Passing (Tier 1) [in
-      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+  - note: Passing (Tier 1) [](https://qcor.cms.gov/main.jsp)[in
+      2019](https://qcor.cms.gov/main.jsp)
     voicesForReform: false
     tags:
       - FLFH
@@ -1178,7 +1180,7 @@ notes:
     tags:
       - FLFH
   - note: Failing (Tier 3) [in
-      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+      2019](https://qcor.cms.gov/main.jsp)[](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
     voicesForReform: false
     tags:
       - FLMP
