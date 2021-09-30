@@ -4,12 +4,12 @@ stats:
   monthly: Number of people on state waiting list who die each month waiting for
     an organ[³](#sources-3)
 headings:
-  shadow: Shadow Deaths (2018)[⁶](#sources-6)
+  shadow: Shadow Deaths (2019)[⁶](#sources-6)
   name: OPO Name
   region: Region
   states: States
-  tier: Tier (2018)[⁴](#sources-4)
-  donors: Donors Needed (2018)[⁵](#sources-5)
+  tier: Tier (2019)[](#sources-4)9
+  donors: Donors Needed (2019)[⁵](#sources-5)
   investigation: Under Congressional Investigation[⁷](#sources-7)
 sources:
   - State waitlist via [OPTN state
@@ -43,20 +43,14 @@ sources:
     data](https://optn.transplant.hrsa.gov/data/view-data-reports/state-data/)
     (patients who died on waiting list + patients who died who were listed as
     too sick to transplant) divided by 12 months."
-  - Tier (2018) via [CMS OPO final
-    rule](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to),
-    data most recently available (2018). OPO names are listed as they are in
-    final rule.
-  - Donors needed (2018) via [CMS OPO final
-    rule](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
-    represents the number of additional donors needed for OPO to reach Tier 1.
-    See Table 4. Data most recently available (2018)
-  - "Shadow deaths (2018) via [CMS OPO final
-    rule](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medic\
-    are-and-medicaid-programs-organ-procurement-organizations-conditions-for-co\
-    verage-revisions-to) represents the number of additional organ transplants
-    needed for the OPO to reach Tier 1. See Table 5. Data most recently
-    available (2018). See “[Oversight Gaps and
+  - Tier (2019) via [CMS](https://qcor.cms.gov/main.jsp), data most recently
+    available (2019). OPO names are listed as they are by CMS.
+  - Donors needed (2019) via [CMS](https://qcor.cms.gov/main.jsp) represents the
+    number of additional donors needed for OPO to reach Tier 1. Data most
+    recently available (2019)
+  - "Shadow deaths (2019) via [CMS](https://qcor.cms.gov/main.jsp) represents
+    the number of additional organ transplants needed for the OPO to reach Tier
+    1. Data most recently available (2019). See “[Oversight Gaps and
     Conflicts](https://bloomworks.digital/organdonationreform/Oversight/)”:
     “Every organ that is not recovered because of OPO ineffective practices,
     transportation errors, or understaffing, results in another person dying
@@ -639,8 +633,8 @@ notes:
     tags:
       - IL
   - voicesForReform: false
-    note: Passing (Tier 1)[ in
-      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    note: Passing (Tier 1)[](https://qcor.cms.gov/main.jsp) [in
+      2019](https://qcor.cms.gov/main.jsp)
     tags:
       - WIDN
   - voicesForReform: false
@@ -651,8 +645,9 @@ notes:
     tags:
       - WIDN
   - voicesForReform: false
-    note: Passing (Tier 1)[ in
-      2018](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+    note: Passing (Tier
+      1)[](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
+      [in 2019](https://qcor.cms.gov/main.jsp)
     tags:
       - TXGC
   - voicesForReform: false
