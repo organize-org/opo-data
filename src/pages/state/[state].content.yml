@@ -2055,8 +2055,8 @@ notes:
     tags:
       - TXSB
   - note: "2017 CEO compensation:
-      [2.5M](https://porter.house.gov/uploadedfiles/cms_hhs_opo_oversight_final\
-      _7.9.20.pdf)"
+      $[2.5M](https://porter.house.gov/uploadedfiles/cms_hhs_opo_oversight_fina\
+      l_7.9.20.pdf)"
     voicesForReform: false
     tags:
       - PADV
