@@ -52,7 +52,7 @@ function StatePopout({ state, setPopoutAbbrevation }) {
         ) : null}
       </Row>
       <Row>
-        <h5>OPOs Servicing {state.abbreviation.toLocaleUpperCase()} (2018)</h5>
+        <h5>OPOs Servicing {state.abbreviation.toLocaleUpperCase()} (2019)</h5>
       </Row>
       {Object.values(opoDataMap)
         .filter(
