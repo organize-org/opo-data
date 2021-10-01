@@ -172,6 +172,10 @@ videos:
       - WV
       - WY
 notes:
+  - voicesForReform: false
+    note: Failing (Tier 3) [in 2019](https://qcor.cms.gov/main.jsp)
+    tags:
+      - CAOP
   - voicesForReform: true
     note: "[Seth Karp and Greg
       Segal](https://www.thehastingscenter.org/new-regulation-for-organ-procure\
@@ -810,8 +814,8 @@ notes:
       ([2019](https://projects.propublica.org/nonprofits/display_990/61631615/0\
       2_2021_prefixes_04-11%2F061631615_201912_990_2021022417755375)): $554,529"
     tags:
-      - CTOP
       - MAOB
+      - CTOP
   - voicesForReform: false
     note: Passing (Tier
       1)[](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
@@ -1028,7 +1032,7 @@ notes:
     tags:
       - INOP
   - voicesForReform: false
-    note: Failing (Tier 3)
+    note: Passing (Tier 1)
       [](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)[in
       2019](https://qcor.cms.gov/main.jsp)
     tags:
@@ -1346,7 +1350,7 @@ notes:
     voicesForReform: false
     tags:
       - AROR
-  - note: Failing (Tier 3) in 2019
+  - note: Failing (Tier 3) [in 2019](https://qcor.cms.gov/main.jsp)
     voicesForReform: false
     tags:
       - TNMS
@@ -2016,7 +2020,6 @@ notes:
       - FLMP
       - FLWC
       - GALL
-      - INOP
     note: Included in [House Committee on Oversight and Reform
       investigation](https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)
   - voicesForReform: false
