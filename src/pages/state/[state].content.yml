@@ -173,6 +173,12 @@ videos:
       - WY
 notes:
   - voicesForReform: false
+    note: '[Daily
+      Record](https://www.dailyrecord.us/arora-s-top-executive-steps-down-amid-federal-organ-donation-reforms):
+      "ARORA’s top executive steps down amid federal organ donation reforms"'
+    tags:
+      - AR
+  - voicesForReform: false
     note: Failing (Tier 3) [in 2019](https://qcor.cms.gov/main.jsp)
     tags:
       - CAOP
