@@ -174,6 +174,13 @@ videos:
 notes:
   - voicesForReform: false
     note: '[Daily
+      Record](https://www.dailyrecord.us/new-cms-reports-shows-arora-s-organ-donation-rate-is-worst-in-the-nation):
+      "New CMS reports shows ARORA’s organ donation rate is worst in the
+      nation"'
+    tags:
+      - AROR
+  - voicesForReform: false
+    note: '[Daily
       Record](https://www.dailyrecord.us/arora-s-top-executive-steps-down-amid-federal-organ-donation-reforms):
       "ARORA’s top executive steps down amid federal organ donation reforms"'
     tags:
