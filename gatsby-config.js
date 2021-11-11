@@ -108,6 +108,11 @@ module.exports = {
               name: "git-gateway",
               repo: "Bloom-Works/opo-dashboard",
               branch: "main",
+              site_domain: "https://d1uw5t0gaufvpl.cloudfront.net",
+              base_url:
+                "https://ws9psj582g.execute-api.us-east-1.amazonaws.com",
+              auth_endpoint:
+                "default/ServerlessOauthPortalForNetlifyCms__redirect",
             },
             local_backend: true,
             load_config_file: false,
@@ -572,6 +577,15 @@ module.exports = {
             ],
           };
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "opodata.org",
+        protocol: "http",
+        hostname: "opodata.org.s3-website-us-east-1.amazonaws.com",
+        generateRedirectObjectsForPermanentRedirects: true,
       },
     },
     "gatsby-plugin-netlify-identity-widget",

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Row } from "react-bootstrap";
 import { Link } from "gatsby";
 
@@ -7,6 +7,16 @@ import Layout from "../components/layout/layout";
 import * as styles from "./404.module.css";
 
 export default function NotFound() {
+    const [isMount, setMount] = useState(false);
+
+    useEffect(() => {
+      setMount(true);
+    }, []);
+
+    if (!isMount) {
+      return <h2>Loading...</h2>;
+    }
+
   return (
     <Layout crumbLabel="Page Not Found">
       <div className={styles.error}>
