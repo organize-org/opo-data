@@ -105,7 +105,7 @@ module.exports = {
 
           return {
             backend: {
-              name: "git-gateway",
+              name: "github",
               repo: "Bloom-Works/opo-dashboard",
               branch: "main",
               site_domain: "https://d1uw5t0gaufvpl.cloudfront.net",
