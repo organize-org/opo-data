@@ -14,7 +14,7 @@ export default function QuoteWithImage({
 
   return (
     <BgImage
-      className={`${styles.background} ${styles[side]}`}
+      className={styles.background}
       image={getImage(quoteImagesByPath[image])}
     >
       <Col
