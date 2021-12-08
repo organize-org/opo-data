@@ -1,7 +1,10 @@
 .background {
-  background-blend-mode: multiply;
   background-color: #b00e0c;
   width: 100%;
+}
+
+.background::after {
+  mix-blend-mode: multiply;
 }
 
 .quote {
