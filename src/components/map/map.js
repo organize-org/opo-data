@@ -85,6 +85,7 @@ export default function Map({
   setPopoutAbbrevation,
 }) {
   const windowWidth = useWindowDimensions().width;
+
   const [{ opoDataMap, stateDataMap }] = useDataMaps();
   const { dsaGeoData, statesGeoData } = useStaticQuery(
     graphql`
