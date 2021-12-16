@@ -129,7 +129,16 @@ export default function State({ data: { statesGeoData }, state }) {
             <SelectState label={"See state data for:"} link={stateData.name} />
           </div>
         </Row>
-        <Row></Row>
+        <Row className={styles.mapStats}>
+          <Row className={styles.mapV2}>
+            <Map
+              dimensions={{ height: "16rem", width: "16rem" }}
+              state={stateData.abbreviation}
+              zoomControl={false}
+            />
+          </Row>
+          <Row className={styles.statsV2}>Stats</Row>
+        </Row>
       </Row>
       <Row className={styles.state}>
         <Col className={styles.statsColumn}>
@@ -223,10 +232,10 @@ export default function State({ data: { statesGeoData }, state }) {
           )}
         </Col>
         <Col className={styles.mapSection}>
-          <Map
+          {/* <Map
             dimensions={{ height: "30rem", width: "100%" }}
             state={stateData.abbreviation}
-          />
+          /> */}
           <EquitySection page="state" />
           {stateData.videos?.length || stateData.voicesForReform?.length ? (
             <Row className={styles.voices}>
