@@ -1,0 +1,13 @@
+.selectState {
+  display: flex;
+}
+
+p {
+  line-height: 2;
+  margin: auto 2rem;
+}
+
+.selectInput {
+  width: 250px;
+  z-index: 1002;
+}

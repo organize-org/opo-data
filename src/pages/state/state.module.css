@@ -21,7 +21,26 @@
   width: 100%;
 }
 
-.title h2 {
+.hero {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--opoWhiteSmoke);
+}
+
+.servicing {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.navToState {
+  margin-right: 2rem;
+}
+
+.serviceState {
+  justify-content: space-between;
+}
+
+.title {
   color: var(--opoBlack);
   font-size: 2.75rem;
   margin: 2rem;

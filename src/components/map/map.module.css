@@ -34,7 +34,7 @@
   max-width: 330px;
   padding: 1rem 3rem;
   position: absolute;
-  top: 16vh;
+  margin-top: 2rem;
   z-index: 1001;
 }
 
@@ -113,6 +113,5 @@
   .popout {
     max-width: 75%;
     padding: 1rem 2rem;
-    top: 36vh;
   }
 }

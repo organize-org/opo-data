@@ -19,6 +19,7 @@ import {
 
 import * as styles from "./state.module.css";
 import content from "./[state].content.yml";
+import SelectState from "../../components/selectState/selectState";
 
 export default function State({ data: { statesGeoData }, state }) {
   const [{ opoDataMap, stateDataMap }] = useDataMaps();
@@ -107,10 +108,28 @@ export default function State({ data: { statesGeoData }, state }) {
     tags.includes(stateData.abbreviation)
   );
 
+  console.log(stateData)
+
   return (
-    <Layout crumbLabel={formatStateName(stateData)} sources={sources} social={true}>
-      <Row className={styles.title}>
-        <h2>{formatStateName(stateData)}</h2>
+    <Layout
+      crumbLabel={formatStateName(stateData)}
+      sources={sources}
+      social={true}
+    >
+      <Row className={styles.hero}>
+        <Row>
+          <h2 className={styles.title}>{formatStateName(stateData)}</h2>
+        </Row>
+        <Row className={styles.serviceState}>
+          <span className={styles.servicing}>
+            OPOs servicing {stateData.abbreviation}:{" "}
+            <strong>{inStateOpos.length ?? 0}</strong>
+          </span>
+          <div className={styles.navToState}>
+            <SelectState label={"See state data for:"} link={stateData.name} />
+          </div>
+        </Row>
+        <Row></Row>
       </Row>
       <Row className={styles.state}>
         <Col className={styles.statsColumn}>
