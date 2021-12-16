@@ -10,7 +10,6 @@ import EquitySection from "../../components/equitySection/equitySection";
 import Layout from "../../components/layout/layout";
 import Map from "../../components/map/map";
 import OpoTable from "../../components/opoTable/opoTable";
-import Social from "../../components/social/social";
 import useDataMaps from "../../hooks/useDataMaps";
 import {
   findStateFeature,
@@ -109,10 +108,9 @@ export default function State({ data: { statesGeoData }, state }) {
   );
 
   return (
-    <Layout crumbLabel={formatStateName(stateData)} sources={sources}>
+    <Layout crumbLabel={formatStateName(stateData)} sources={sources} social={true}>
       <Row className={styles.title}>
         <h2>{formatStateName(stateData)}</h2>
-        <Social />
       </Row>
       <Row className={styles.state}>
         <Col className={styles.statsColumn}>

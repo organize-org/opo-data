@@ -93,6 +93,9 @@
 }
 
 @media (max-width: 700px) {
+  .breadcrumb {
+    width: 100%;
+  }
   .logoWithText > *:nth-child(1) {
     display: none;
   }
