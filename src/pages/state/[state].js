@@ -137,11 +137,6 @@ export default function State({ data: { statesGeoData }, state }) {
               zoomControl={false}
             />
           </Row>
-          <Row className={styles.statsV2}>Stats</Row>
-        </Row>
-      </Row>
-      <Row className={styles.state}>
-        <Col className={styles.statsColumn}>
           <Row className={styles.stats}>
             <Row className={styles.statsHeading}>
               <Col>
@@ -150,19 +145,24 @@ export default function State({ data: { statesGeoData }, state }) {
                 </h3>
               </Col>
               <Col>
-                <h3>
-                  <ReactMarkdown>{stats.comp}</ReactMarkdown>
+                <h3 className="red">
+                  <ReactMarkdown>{stats.monthly}</ReactMarkdown>
                 </h3>
               </Col>
               <Col>
-                <h3 className="red">
-                  <ReactMarkdown>{stats.monthly}</ReactMarkdown>
+                <h3>
+                  <ReactMarkdown>{stats.comp}</ReactMarkdown>
                 </h3>
               </Col>
             </Row>
             <Row className={styles.statsPopout}>
               <Col>
                 <p>{formatNumber(stateData.popoutStats.waitlist)}</p>
+              </Col>
+              <Col>
+                <p className="red">
+                  {formatNumber(stateData.popoutStats.monthlyDead)}
+                </p>
               </Col>
               <Col>
                 <p>
@@ -174,13 +174,13 @@ export default function State({ data: { statesGeoData }, state }) {
                   })}
                 </p>
               </Col>
-              <Col>
-                <p className="red">
-                  {formatNumber(stateData.popoutStats.monthlyDead)}
-                </p>
-              </Col>
             </Row>
           </Row>
+        </Row>
+      </Row>
+      <Row className={styles.state}>
+        <Col className={styles.statsColumn}>
+          <Row className={styles.stats}></Row>
           {inStateOpos.length > 0 && (
             <OpoTable
               headings={headings}
