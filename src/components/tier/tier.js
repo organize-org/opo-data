@@ -12,6 +12,7 @@ export default function Tier({ className, tier }) {
             background: tierColors[tier],
             height: `20px`,
             width: `20px`,
+            borderRadius: `2rem`
           }}
         ></div>
       </Col>

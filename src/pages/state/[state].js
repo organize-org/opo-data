@@ -5,8 +5,6 @@ import ReactPlayer from "react-player";
 import { graphql, navigate } from "gatsby";
 import booleanIntersects from "@turf/boolean-intersects";
 
-import DemographicTable from "../../components/demographicTable/demographicTable";
-import EquitySection from "../../components/equitySection/equitySection";
 import Layout from "../../components/layout/layout";
 import Map from "../../components/map/map";
 import OpoTable from "../../components/opoTable/opoTable";
@@ -195,12 +193,19 @@ export default function State({ data: { statesGeoData }, state }) {
               </ul>
             </Row>
           ) : null}
-          <hr/>
+          <hr />
         </Row>
       ) : null}
-
-      <Row className={styles.state}>
-        {/* This data will be the bar charts
+      <Row className={styles.serviceTable}>
+        {inStateOpos.length > 0 && (
+          <OpoTable
+            headings={headings}
+            opos={inStateOpos}
+            title={`OPOS Servicing ${stateData.name}`}
+          />
+        )}
+      </Row>
+      {/* This data will be the bar charts
         {inStateOpos
           .filter(({ notes }) => notes?.length)
           .map(({ name, notes }) => (
@@ -215,65 +220,47 @@ export default function State({ data: { statesGeoData }, state }) {
               </ul>
             </Row>
           ))} */}
-        <Col className={styles.statsColumn}>
-          <Row className={styles.stats}></Row>
-          {inStateOpos.length > 0 && (
-            <OpoTable
-              headings={headings}
-              opos={inStateOpos}
-              title={`OPOS Servicing ${stateData.name}`}
-            />
-          )}
-
-          <DemographicTable opos={inStateOpos} />
-          {outOfStateOpos.length > 0 && (
-            <OpoTable
-              headings={headings}
-              inState={false}
-              opos={outOfStateOpos}
-              title="OPO Performance in Neighboring States"
-            />
-          )}
-        </Col>
-        <Col className={styles.mapSection}>
-          {/* <Map
-            dimensions={{ height: "30rem", width: "100%" }}
-            state={stateData.abbreviation}
-          /> */}
-          <EquitySection page="state" />
-          {stateData.videos?.length || stateData.voicesForReform?.length ? (
-            <Row className={styles.voices}>
-              <Row>
-                <h3>Voices For Reform</h3>
-              </Row>
-              {stateData.voicesForReform?.length ? (
-                <Row>
-                  <ul>
-                    {stateData.voicesForReform.map(({ note }, i) => (
-                      <li key={"vfr-notes-" + i}>
-                        <ReactMarkdown>{note}</ReactMarkdown>
-                      </li>
-                    ))}
-                  </ul>
-                </Row>
-              ) : null}
-              {stateData.videos?.length
-                ? stateData.videos.map(({ link, title, description }, i) => (
-                    <Row key={`statewide-videos-${i}`}>
-                      <ReactPlayer url={link} width={594} height={361} />
-                      <h4>{title}</h4>
-                      {description && (
-                        <ReactMarkdown className={styles.description}>
-                          {description}
-                        </ReactMarkdown>
-                      )}
-                    </Row>
-                  ))
-                : null}
+      {stateData.videos?.length || stateData.voicesForReform?.length ? (
+        <Row className={styles.voices}>
+          <Row>
+            <h3>Voices For Reform</h3>
+          </Row>
+          {stateData.voicesForReform?.length ? (
+            <Row>
+              <ul>
+                {stateData.voicesForReform.map(({ note }, i) => (
+                  <li key={"vfr-notes-" + i}>
+                    <ReactMarkdown>{note}</ReactMarkdown>
+                  </li>
+                ))}
+              </ul>
             </Row>
           ) : null}
-        </Col>
-      </Row>
+          {stateData.videos?.length
+            ? stateData.videos.map(({ link, title, description }, i) => (
+                <Row key={`statewide-videos-${i}`} className={styles.video}>
+                  <ReactPlayer url={link} width={594} height={361} />
+                  <h4>{title}</h4>
+                  {description && (
+                    <ReactMarkdown className={styles.description}>
+                      {description}
+                    </ReactMarkdown>
+                  )}
+                </Row>
+              ))
+            : null}
+        </Row>
+      ) : null}
+      {outOfStateOpos.length > 0 && (
+        <Row className={styles.serviceTable}>
+          <OpoTable
+            headings={headings}
+            inState={false}
+            opos={outOfStateOpos}
+            title="OPO Performance in Neighboring States"
+          />
+        </Row>
+      )}
     </Layout>
   );
 }

@@ -86,6 +86,18 @@
   justify-content: space-between;
 }
 
+.serviceTable {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  max-width: 80rem;
+}
+
+.serviceTable > * {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .title {
   color: var(--opoBlack);
   font-size: 2.75rem;
@@ -93,10 +105,18 @@
   text-transform: uppercase;
 }
 
-
-
 .voices {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  flex-direction: column;
+  max-width: 80rem;
   margin-bottom: 4rem;
+}
+
+.voices > * {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .voices h3 {
@@ -114,6 +134,15 @@
 .voices ul {
   list-style-type: none;
   padding: 0;
+}
+
+.voices p {
+  margin: auto 0;
+}
+
+.video {
+  margin-top: 1rem;
+  flex-direction: column;
 }
 
 .citations h3 {

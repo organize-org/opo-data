@@ -32,6 +32,13 @@
   text-align: center;
 }
 
+.opoTable thead th:first-child {
+   background-color: #a6cee3;
+}
+.opoTable tbody td:first-child {
+   background-color: #a6cee340;
+}
+
 .opoTable tbody tr:nth-child(1) .shadows {
   border-top: solid 0.25rem var(--opoRed) !important;
 }
