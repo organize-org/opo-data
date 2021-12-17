@@ -7,15 +7,15 @@ import Layout from "../components/layout/layout";
 import * as styles from "./404.module.css";
 
 export default function NotFound() {
-    const [isMount, setMount] = useState(false);
+  const [isMount, setMount] = useState(false);
 
-    useEffect(() => {
-      setMount(true);
-    }, []);
+  useEffect(() => {
+    setMount(true);
+  }, []);
 
-    if (!isMount) {
-      return <h2>Loading...</h2>;
-    }
+  if (!isMount) {
+    return <h2>Loading...</h2>;
+  }
 
   return (
     <Layout crumbLabel="Page Not Found">

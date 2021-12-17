@@ -586,7 +586,7 @@ module.exports = {
         protocol: "http",
         hostname: "opodata.org.s3-website-us-east-1.amazonaws.com",
         generateRedirectObjectsForPermanentRedirects: true,
-      }
+      },
     },
     {
       resolve: `gatsby-plugin-google-gtag`,
