@@ -132,7 +132,7 @@ export default function State({ data: { statesGeoData }, state }) {
         <Row className={styles.mapStats}>
           <Row className={styles.mapV2}>
             <Map
-              dimensions={{ height: "16rem", width: "16rem" }}
+              dimensions={{ height: "16rem", width: "24rem" }}
               state={stateData.abbreviation}
               zoomControl={false}
             />
@@ -178,7 +178,43 @@ export default function State({ data: { statesGeoData }, state }) {
           </Row>
         </Row>
       </Row>
+      {stateData.notes.length ||
+      inStateOpos.some(({ notes }) => notes?.length) ? (
+        <Row className={styles.news}>
+          <Row>
+            <h3>OPO News and Notes in {stateData.name}</h3>
+          </Row>
+          {stateData.notes.length ? (
+            <Row>
+              <ul>
+                {stateData.notes.map(({ note }, i) => (
+                  <li key={`statewide-note-${i}`}>
+                    <ReactMarkdown>{note}</ReactMarkdown>
+                  </li>
+                ))}
+              </ul>
+            </Row>
+          ) : null}
+          <hr/>
+        </Row>
+      ) : null}
+
       <Row className={styles.state}>
+        {/* This data will be the bar charts
+        {inStateOpos
+          .filter(({ notes }) => notes?.length)
+          .map(({ name, notes }) => (
+            <Row key={name}>
+              <h4>{name}</h4>
+              <ul>
+                {notes?.map((note, i) => (
+                  <li key={`${name}-note-${i}`}>
+                    <ReactMarkdown>{note}</ReactMarkdown>
+                  </li>
+                ))}
+              </ul>
+            </Row>
+          ))} */}
         <Col className={styles.statsColumn}>
           <Row className={styles.stats}></Row>
           {inStateOpos.length > 0 && (
@@ -188,39 +224,7 @@ export default function State({ data: { statesGeoData }, state }) {
               title={`OPOS Servicing ${stateData.name}`}
             />
           )}
-          {stateData.notes.length ||
-          inStateOpos.some(({ notes }) => notes?.length) ? (
-            <Row>
-              <Row>
-                <h3>OPO News and Notes in {stateData.name}</h3>
-              </Row>
-              {stateData.notes.length ? (
-                <Row>
-                  <ul>
-                    {stateData.notes.map(({ note }, i) => (
-                      <li key={`statewide-note-${i}`}>
-                        <ReactMarkdown>{note}</ReactMarkdown>
-                      </li>
-                    ))}
-                  </ul>
-                </Row>
-              ) : null}
-              {inStateOpos
-                .filter(({ notes }) => notes?.length)
-                .map(({ name, notes }) => (
-                  <Row key={name}>
-                    <h4>{name}</h4>
-                    <ul>
-                      {notes?.map((note, i) => (
-                        <li key={`${name}-note-${i}`}>
-                          <ReactMarkdown>{note}</ReactMarkdown>
-                        </li>
-                      ))}
-                    </ul>
-                  </Row>
-                ))}
-            </Row>
-          ) : null}
+
           <DemographicTable opos={inStateOpos} />
           {outOfStateOpos.length > 0 && (
             <OpoTable
