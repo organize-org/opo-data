@@ -33,10 +33,10 @@
 }
 
 .opoTable thead th:first-child {
-   background-color: #a6cee3;
+  background-color: #a6cee3;
 }
 .opoTable tbody td:first-child {
-   background-color: #a6cee340;
+  background-color: #a6cee340;
 }
 
 .opoTable tbody tr:nth-child(1) .shadows {
@@ -50,7 +50,7 @@
 .tierCol {
   display: flex;
   flex-wrap: nowrap;
-  padding-left: .75rem !important;
+  padding-left: 0.75rem !important;
 }
 
 .tierCol > * {

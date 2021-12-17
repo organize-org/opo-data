@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 import Select from "react-select";
 import useDataMaps from "../../hooks/useDataMaps";
-import { navigate } from 'gatsby'
+import { navigate } from "gatsby";
 
 import * as styles from "./selectState.module.css";
 

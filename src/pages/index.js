@@ -11,13 +11,12 @@ import Layout from "../components/layout/layout";
 import Map from "../components/map/map";
 import Social from "../components/social/social";
 import QuoteWithImage from "../components/quoteWithImage/quoteWithImage";
-import SelectState from "../components/selectState/selectState"
+import SelectState from "../components/selectState/selectState";
 
 import * as styles from "./index.module.css";
 import content from "./index.content.yml";
 
 export default function Dashboard({ data: { articleImages, quoteImage } }) {
-
   const [popoutAbbreviation, setPopoutAbbrevation] = useState(null);
 
   const { articles, stats, quote, video, sources } = content;

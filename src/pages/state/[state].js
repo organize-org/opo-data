@@ -106,7 +106,7 @@ export default function State({ data: { statesGeoData }, state }) {
     tags.includes(stateData.abbreviation)
   );
 
-  console.log(stateData)
+  console.log(stateData);
 
   return (
     <Layout

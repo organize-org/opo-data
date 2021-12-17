@@ -80,7 +80,7 @@
 .closeModal {
   border: 0;
   background-color: transparent;
-  opacity: .6;
+  opacity: 0.6;
 }
 
 .closeModal:hover {
@@ -89,7 +89,7 @@
 
 @media (max-width: 1100px) {
   .closeModal {
-    opacity: .8;
+    opacity: 0.8;
   }
 }
 
