@@ -173,10 +173,6 @@ export default function Map({
               dragging={windowWidth > 800}
             >
               {zoomControl && <ZoomControl position="bottomright" />}
-              <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-                url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png"
-              />
               <GeoJSON
                 data={(state
                   ? dsaGeoData?.childGeoJson?.features.filter(
