@@ -17,6 +17,10 @@
   margin-left: 1rem;
 }
 
+.nav {
+  margin: auto;
+}
+
 .navLink {
   color: var(--opoWhiteSmoke) !important;
   font-size: 1rem;
@@ -26,6 +30,12 @@
 
 .navToggle {
   border-color: var(--opoWhiteSmoke) !important;
+}
+
+@media (max-width: 1100px) {
+  .nav {
+    margin-left: initial;
+  }
 }
 
 @media (max-width: 700px) {
@@ -41,6 +51,10 @@
 
   .logoText {
     margin: 0 !important;
+  }
+
+  .nav {
+    margin: auto;
   }
 
   .navLink {

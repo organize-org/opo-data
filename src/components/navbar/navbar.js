@@ -20,7 +20,7 @@ export default function Navigation({ site }) {
           <h2>Performance Comparison</h2>
         </section>
       </Nav.Link>
-      <Navbar expand="md">
+      <Navbar expand="md" className={styles.nav}>
         <Container>
           <Navbar.Toggle
             aria-controls="basic-navbar-nav"
