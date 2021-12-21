@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
-import { GeoJSON, MapContainer, TileLayer, ZoomControl } from "react-leaflet";
-import { useStaticQuery, graphql, Link } from "gatsby";
+import { GeoJSON, MapContainer, ZoomControl } from "react-leaflet";
+import { useStaticQuery, graphql, Link, navigate } from "gatsby";
 import bbox from "@turf/bbox";
 import CloseDefault from "../../images/icons/close-default.svg";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
@@ -159,6 +159,7 @@ export default function Map({
           />
         )}
         {legend && <Legend />}
+        <hr />
         {
           // Hack: [`window` dependency for Leaflet](https://www.gatsbyjs.com/docs/debugging-html-builds/#fixing-third-party-modules)
           typeof window !== "undefined" && (
@@ -171,6 +172,7 @@ export default function Map({
               style={dimensions}
               zoomControl={false}
               dragging={windowWidth > 800}
+              className={styles.mapContainer}
             >
               {zoomControl && <ZoomControl position="bottomright" />}
               <GeoJSON
@@ -192,7 +194,7 @@ export default function Map({
                 style={feature => ({
                   color: "white",
                   fillColor: tierColors[feature.properties.tier],
-                  fillOpacity: 0.65,
+                  fillOpacity: 0.85,
                   opacity: 0.75,
                   weight: 0.75,
                 })}
@@ -209,39 +211,61 @@ export default function Map({
                               f =>
                                 f?.properties?.name ===
                                   propagatedFrom?.feature?.properties?.name && {
-                                  color: "#373737",
-                                  fillOpacity: 0.3,
-                                  weight: 2,
+                                  color: "white",
+                                  fillColor: "black",
+                                  fillOpacity: 0.2,
+                                  weight: 4,
                                 }
                             )
                             .bindTooltip(
-                              propagatedFrom?.feature?.properties?.name,
+                              `<div class="${styles.tooltip}">
+                              <h4>
+                                ${propagatedFrom?.feature?.properties?.name}
+                              </h4>
+                              <p>State waitlist: <strong>${
+                                stateDataMap[
+                                  propagatedFrom?.feature?.properties
+                                    ?.abbreviation
+                                ].waitlist ?? "No Data"
+                              }</strong></p>
+                              <p>OPOs servicing: <strong>${
+                                Object.values(opoDataMap).filter(
+                                  ({ statesWithRegions }) =>
+                                    statesWithRegions[
+                                      propagatedFrom?.feature?.properties
+                                        ?.abbreviation
+                                    ] !== undefined
+                                ).length ?? "No Data"
+                              }</strong></p>
+                              <p>People dying every month waiting for an organ: <strong>${
+                                stateDataMap[
+                                  propagatedFrom?.feature?.properties
+                                    ?.abbreviation
+                                ].monthly ?? "No Data"
+                              }</strong></p>
+                              </div>`,
                               {
-                                direction: "bottom",
-                                offset: [0, 20],
                                 sticky: true,
                               }
                             )
                             .openTooltip(),
                         mouseout: ({ target }) => target?.resetStyle(),
                         click: ({ propagatedFrom }) => {
-                          setPopoutAbbrevation(
-                            propagatedFrom?.feature?.properties?.abbreviation
-                          );
+                          navigate(`/state/${propagatedFrom?.feature?.properties?.abbreviation}`);
                         },
                       }
                     : null
                 }
                 style={{
-                  color: "#373737",
+                  color: "white",
                   fillOpacity: 0,
-                  opacity: 0.75,
-                  weight: 1,
+                  weight: 2,
                 }}
               />
             </MapContainer>
           )
         }
+        <hr />
       </div>
     </Row>
   );
