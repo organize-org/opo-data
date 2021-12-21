@@ -1,8 +1,10 @@
 import React from "react";
-import { useStaticQuery, graphql, Link } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { Breadcrumb, Container, Row } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
+
+import Navbar from "../navbar/navbar";
 
 import * as styles from "./layout.module.css";
 
@@ -21,22 +23,7 @@ export default function Layout({ crumbLabel, children, sources }) {
 
   return (
     <Container fluid>
-      <Row className={styles.header}>
-        <Link to="/" className={styles.logoWithText}>
-          <StaticImage
-            src="../../images/logo.png"
-            alt="logo"
-            placeholder="none"
-          />
-          <div className={styles.logoText}>
-            <h1>{site.siteMetadata.title}</h1>
-            <h2>Performance Comparison</h2>
-          </div>
-        </Link>
-        <Link to="/faqs" className={styles.faqLink}>
-          <p>About Our Organ Donation System</p>
-        </Link>
-      </Row>
+      <Navbar site={site.siteMetadata.title} />
       {crumbLabel ? (
         <Breadcrumb>
           <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
