@@ -4,7 +4,6 @@ import { Row, Col } from "react-bootstrap";
 import { ArrowRight } from "react-bootstrap-icons";
 import ReactMarkdown from "react-markdown";
 import ReactPlayer from "react-player";
-import Select from "react-select";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import EquitySection from "../components/equitySection/equitySection";
@@ -12,14 +11,12 @@ import Layout from "../components/layout/layout";
 import Map from "../components/map/map";
 import Social from "../components/social/social";
 import QuoteWithImage from "../components/quoteWithImage/quoteWithImage";
-import useDataMaps from "../hooks/useDataMaps";
+import SelectState from "../components/selectState/selectState";
 
 import * as styles from "./index.module.css";
 import content from "./index.content.yml";
 
 export default function Dashboard({ data: { articleImages, quoteImage } }) {
-  const [{ stateDataMap }] = useDataMaps();
-
   const [popoutAbbreviation, setPopoutAbbrevation] = useState(null);
 
   const { articles, stats, quote, video, sources } = content;
@@ -35,25 +32,10 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
     <Layout sources={sources}>
       <Row className={styles.topBar}>
         <Col>
-          <p>View state data</p>
-          <Select
-            className={styles.topBarSelect}
-            value={
-              popoutAbbreviation
-                ? {
-                    value: popoutAbbreviation,
-                    label: stateDataMap[popoutAbbreviation].name,
-                  }
-                : null
-            }
-            onChange={({ value }) => setPopoutAbbrevation(value)}
-            options={Object.entries(stateDataMap)
-              .sort()
-              .map(([key, { name }]) => ({
-                value: key,
-                label: name,
-              }))}
-            placeholder="Select state"
+          <SelectState
+            label="View state data"
+            popoutAbbreviation={popoutAbbreviation}
+            setPopoutAbbrevation={setPopoutAbbrevation}
           />
         </Col>
         <Social />
@@ -61,6 +43,7 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
       <Map
         interactive={true}
         legend={true}
+        zoomControl={true}
         popoutAbbreviation={popoutAbbreviation}
         setPopoutAbbrevation={setPopoutAbbrevation}
       />

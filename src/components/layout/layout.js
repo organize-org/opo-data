@@ -3,10 +3,11 @@ import { useStaticQuery, graphql, Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { Breadcrumb, Container, Row } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
+import Social from "../../components/social/social";
 
 import * as styles from "./layout.module.css";
 
-export default function Layout({ crumbLabel, children, sources }) {
+export default function Layout({ crumbLabel, children, sources, social }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -37,12 +38,16 @@ export default function Layout({ crumbLabel, children, sources }) {
           <p>About Our Organ Donation System</p>
         </Link>
       </Row>
-      {crumbLabel ? (
-        <Breadcrumb>
-          <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-          <Breadcrumb.Item active>{crumbLabel}</Breadcrumb.Item>
-        </Breadcrumb>
-      ) : null}
+      <Row>
+        {crumbLabel ? (
+          <Breadcrumb className={styles.breadcrumb}>
+            <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+            <Breadcrumb.Item active>{crumbLabel}</Breadcrumb.Item>
+          </Breadcrumb>
+        ) : null}
+        {social ? <Social /> : null}
+      </Row>
+
       {children}
       {sources?.length ? (
         <Row className={styles.sources}>

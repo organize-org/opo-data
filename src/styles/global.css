@@ -64,6 +64,10 @@ a:hover {
   color: var(--opoRed);
 }
 
+.blue {
+  background-color: #a6cee3;
+}
+
 .breadcrumb {
   background-color: inherit;
   margin-top: 2.125rem;
