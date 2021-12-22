@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { Breadcrumb, Container, Row } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
-import Social from "../../components/social/social";
 
 import Navbar from "../navbar/navbar";
 
