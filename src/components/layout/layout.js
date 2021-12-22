@@ -7,6 +7,8 @@ import Social from "../../components/social/social";
 
 import Navbar from "../navbar/navbar";
 
+import Navbar from "../navbar/navbar";
+
 import * as styles from "./layout.module.css";
 
 export default function Layout({ crumbLabel, children, sources, social }) {
