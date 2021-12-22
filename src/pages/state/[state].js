@@ -21,6 +21,15 @@ import SelectState from "../../components/selectState/selectState";
 
 export default function State({ data: { statesGeoData }, state }) {
   const [{ opoDataMap, stateDataMap }] = useDataMaps();
+
+  // Find associated state data and feature by abbreviation, redirect if not found
+  const stateData = stateDataMap[state?.toLocaleUpperCase()];
+  if (!stateData) {
+    if (!state) return null;
+    navigate("/404");
+    return null;
+  }
+
   const { headings, notes, stats, videos, sources } = content;
 
   const notesByOpo = notes?.reduce(
@@ -34,13 +43,6 @@ export default function State({ data: { statesGeoData }, state }) {
     {}
   );
 
-  // Find associated state data and feature by abbreviation, redirect if not found
-  const stateData = stateDataMap[state?.toLocaleUpperCase()];
-  if (!stateData) {
-    if (!state) return null;
-    navigate("/404");
-    return null;
-  }
   stateData.feature = findStateFeature(statesGeoData, stateData.abbreviation);
 
   // Use Turf to find bordering states by their geojson polygon
@@ -105,8 +107,6 @@ export default function State({ data: { statesGeoData }, state }) {
   stateData.videos = videos?.filter(({ tags }) =>
     tags.includes(stateData.abbreviation)
   );
-
-  console.log(stateData);
 
   return (
     <Layout
@@ -176,26 +176,23 @@ export default function State({ data: { statesGeoData }, state }) {
           </Row>
         </Row>
       </Row>
-      {stateData.notes.length ||
-      inStateOpos.some(({ notes }) => notes?.length) ? (
+      {stateData.notes.length && (
         <Row className={styles.news}>
           <Row>
             <h3>OPO News and Notes in {stateData.name}</h3>
           </Row>
-          {stateData.notes.length ? (
-            <Row>
-              <ul>
-                {stateData.notes.map(({ note }, i) => (
-                  <li key={`statewide-note-${i}`}>
-                    <ReactMarkdown>{note}</ReactMarkdown>
-                  </li>
-                ))}
-              </ul>
-            </Row>
-          ) : null}
+          <Row>
+            <ul>
+              {stateData.notes.map(({ note }, i) => (
+                <li key={`statewide-note-${i}`}>
+                  <ReactMarkdown>{note}</ReactMarkdown>
+                </li>
+              ))}
+            </ul>
+          </Row>
           <hr />
         </Row>
-      ) : null}
+      )}
       <Row className={styles.serviceTable}>
         {inStateOpos.length > 0 && (
           <OpoTable

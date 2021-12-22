@@ -83,7 +83,7 @@ export default function Map({
   state = null,
   popoutAbbreviation = null,
   setPopoutAbbrevation,
-  zoomControl = true,
+  zoomControl = false,
 }) {
   const windowWidth = useWindowDimensions().width;
 
