@@ -25,6 +25,11 @@
   color: var(--opoWhiteSmoke) !important;
   font-size: 1rem;
   margin: auto;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navLink:hover {
   text-decoration: underline;
 }
 
@@ -32,9 +37,17 @@
   border-color: var(--opoWhiteSmoke) !important;
 }
 
+h1.mobileTitle {
+  display: none !important;
+}
+
 @media (max-width: 1100px) {
   .nav {
     margin-left: initial;
+  }
+
+  .mobileTitle {
+    display: none !important;
   }
 }
 

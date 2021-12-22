@@ -8,7 +8,7 @@ import * as styles from "./navbar.module.css";
 export default function Navigation({ site }) {
   return (
     <Row className={styles.header}>
-      <Nav.Link to="/" className={styles.logoWithText}>
+      <Nav.Link href="/" className={styles.logoWithText}>
         <StaticImage
           src="../../images/logo.png"
           alt="logo"
@@ -22,6 +22,7 @@ export default function Navigation({ site }) {
       </Nav.Link>
       <Navbar expand="md" className={styles.nav}>
         <Container>
+          <h1 className={styles.mobileTitle}> Menu </h1>
           <Navbar.Toggle
             aria-controls="basic-navbar-nav"
             className={styles.navToggle}
@@ -29,16 +30,13 @@ export default function Navigation({ site }) {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav>
               <Nav.Link href="#" className={styles.navLink}>
-                Performance Data
-              </Nav.Link>
-              <Nav.Link href="#" className={styles.navLink}>
-                News
-              </Nav.Link>
-              <Nav.Link href="#" className={styles.navLink}>
                 Inequities in Organ Procurement
               </Nav.Link>
               <Nav.Link href="#" className={styles.navLink}>
                 Improving the System
+              </Nav.Link>
+              <Nav.Link href="#" className={styles.navLink}>
+                About OPODATA.ORG
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
