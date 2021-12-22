@@ -81,6 +81,11 @@
   background-color: white;
 }
 
+hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 .tooltip {
   width: 12rem;
   overflow-wrap: break-word;

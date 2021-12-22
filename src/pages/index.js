@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql, navigate } from "gatsby";
+import { graphql } from "gatsby";
 import { Row, Col } from "react-bootstrap";
 import { ArrowRight } from "react-bootstrap-icons";
 import ReactMarkdown from "react-markdown";
@@ -17,7 +17,6 @@ import * as styles from "./index.module.css";
 import content from "./index.content.yml";
 
 export default function Dashboard({ data: { articleImages, quoteImage } }) {
-  const [{ stateDataMap }] = useDataMaps();
 
   const { articles, stats, quote, video, sources } = content;
   const articleImgsByPath = articleImages?.edges?.reduce(
@@ -34,8 +33,6 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
         <Col>
           <SelectState
             label="View state data"
-            popoutAbbreviation={popoutAbbreviation}
-            setPopoutAbbrevation={setPopoutAbbrevation}
           />
         </Col>
         <Social />

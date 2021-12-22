@@ -96,14 +96,15 @@ export default function Map({
     <Row className={styles.map}>
       <div style={dimensions}>
         {legend && <Legend />}
-        <hr />
+        {state ? null : <hr />}
         {
           // Hack: [`window` dependency for Leaflet](https://www.gatsbyjs.com/docs/debugging-html-builds/#fixing-third-party-modules)
           typeof window !== "undefined" && (
             <MapContainer
+            key={state + "container"}
               bounds={[
-                [minY + 4, minX + 4],
-                [maxY - 4, maxX - 4],
+                [minY, minX],
+                [maxY, maxX],
               ]}
               scrollWheelZoom={false}
               style={dimensions}
@@ -113,6 +114,7 @@ export default function Map({
             >
               {zoomControl && <ZoomControl position="bottomright" />}
               <GeoJSON
+                key={state + "opos"}
                 data={(state
                   ? dsaGeoData?.childGeoJson?.features.filter(
                       f =>
@@ -205,7 +207,7 @@ export default function Map({
             </MapContainer>
           )
         }
-        <hr />
+        {state ? null : <hr />}
       </div>
     </Row>
   );
