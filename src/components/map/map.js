@@ -29,6 +29,7 @@ export default function Map({
   interactive = false,
   legend = false,
   state = null,
+  opo = null,
   zoomControl = false,
 }) {
   const windowWidth = useWindowDimensions().width;

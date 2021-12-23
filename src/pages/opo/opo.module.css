@@ -1,0 +1,104 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-color: var(--opoWhiteSmoke);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+}
+
+.hero > * {
+  max-width: 80rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.title {
+  color: var(--opoBlack);
+  font-size: 2.75rem;
+  margin: 2rem 0;
+  text-transform: uppercase;
+}
+
+.region {
+  justify-content: space-between;
+}
+
+.mapStats {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.map {
+  margin-left: 0;
+  margin-right: 1rem;
+}
+
+.map > * {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.stats {
+  margin-left: 1rem;
+  margin-right: 0;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+}
+.stats h3 {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.stats h3 p {
+  margin: 0;
+}
+
+.statsHeading > * {
+  align-self: flex-end;
+}
+
+.statsPopout p {
+  margin: 0;
+}
+
+.statsHeading,
+.statsPopout {
+  padding: 0 1rem;
+  text-align: left;
+}
+
+.statsPopout p {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+
+@media (max-width: 700px) {
+    .title {
+    flex-direction: column-reverse;
+  }
+
+  .title h2 {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .navToOpo p {
+    margin-left: 0;
+  }
+
+    .mapStats {
+    flex-wrap: wrap;
+  }
+
+  .stats {
+    margin-top: 2rem;
+  }
+}

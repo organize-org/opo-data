@@ -8,8 +8,9 @@ import * as styles from "./selectState.module.css";
 export default function SelectState({
   label,
   link = false,
+  opo = false,
 }) {
-  const [{ stateDataMap }] = useDataMaps();
+  const [{ stateDataMap, opoDataMap }] = useDataMaps();
 
   return (
     <div className={styles.selectState}>
@@ -24,15 +25,15 @@ export default function SelectState({
             : null
         }
         onChange={({ value }) =>
-         navigate(`/state/${value}`, {
+         navigate(`/${opo ? 'opo' : 'state'}/${value}`, {
                 replace: true,
               })
         }
-        options={Object.entries(stateDataMap)
+        options={Object.entries(opo ? opoDataMap : stateDataMap)
           .sort()
           .map(([key, { name }]) => ({
             value: key,
-            label: name,
+            label: opo ? `${name} (${key})` : name,
           }))}
         placeholder="Select state"
       />

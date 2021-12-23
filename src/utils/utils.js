@@ -35,3 +35,7 @@ export const formatPercent = percent =>
 
 export const formatStateName = ({ abbreviation, name }) =>
   `${name} (${abbreviation.toLocaleUpperCase()})`;
+
+export const formatOpoName = ({name, opo}) => `${name} (${opo.toUpperCase()})`
+
+export const formatOPORank = (opoDate) => 99;
