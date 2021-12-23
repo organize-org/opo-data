@@ -176,7 +176,7 @@ export default function State({ data: { statesGeoData }, state }) {
           </Row>
         </Row>
       </Row>
-      {stateData.notes.length && (
+      {stateData?.notes?.length > 0 && (
         <Row className={styles.news}>
           <Row>
             <h3>OPO News and Notes in {stateData.name}</h3>
