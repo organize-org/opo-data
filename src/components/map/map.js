@@ -6,7 +6,11 @@ import bbox from "@turf/bbox";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 import useDataMaps from "../../hooks/useDataMaps";
-import { findStateFeature, tierColors } from "../../utils/utils";
+import {
+  findStateFeature,
+  tierColors,
+  findOpoFeature,
+} from "../../utils/utils";
 import Tier from "../tier/tier";
 
 import * as styles from "./map.module.css";
@@ -87,11 +91,29 @@ export default function Map({
     })),
   };
 
+  const opoGeoJson = {
+    ...dsaGeoData.childGeoJson,
+    features: (opo ? [findOpoFeature(dsaGeoData, opo)] : dsaGeoData.childGeoJson.features).map(f => ({
+      ...f,
+      properties: {
+        ...f.properties,
+        tier: opoDataMap[f.properties.opo].tier,
+      },
+    })),
+  };
+
   // Map bounding box: individual state or continential US (first 48)
-  const [minX, minY, maxX, maxY] = bbox({
-    ...stateGeoJson,
-    features: stateGeoJson.features,
-  });
+  const [minX, minY, maxX, maxY] = bbox(
+    opo
+      ? {
+          ...opoGeoJson,
+          features: opoGeoJson.features,
+        }
+      : {
+          ...stateGeoJson,
+          features: stateGeoJson.features,
+        }
+  );
 
   return (
     <Row className={styles.map}>
@@ -102,7 +124,13 @@ export default function Map({
           // Hack: [`window` dependency for Leaflet](https://www.gatsbyjs.com/docs/debugging-html-builds/#fixing-third-party-modules)
           typeof window !== "undefined" && (
             <MapContainer
-            key={state + "container"}
+              key={
+                state
+                  ? state + "container"
+                  : opo
+                  ? opo + "container"
+                  : "state container"
+              }
               bounds={[
                 [minY, minX],
                 [maxY, maxX],
@@ -115,32 +143,48 @@ export default function Map({
             >
               {zoomControl && <ZoomControl position="bottomright" />}
               <GeoJSON
-                key={state + "opos"}
-                data={(state
-                  ? dsaGeoData?.childGeoJson?.features.filter(
-                      f =>
-                        opoDataMap[f.properties.opo].statesWithRegions[
-                          state
-                        ] !== undefined
-                    )
-                  : dsaGeoData?.childGeoJson?.features
-                ).map(f => ({
-                  ...f,
-                  properties: {
-                    ...f.properties,
-                    tier: opoDataMap[f.properties.opo].tier,
-                  },
-                }))}
+                key={
+                  state
+                    ? state + "opos"
+                    : opo
+                    ? opo + "opos"
+                    : "state opos"
+                }
+                data={
+                  opo
+                    ? {
+                        ...opoGeoJson,
+                        properties: {
+                          ...opoGeoJson.properties,
+                          tier: opo.tier,
+                        },
+                      }
+                    : (state
+                        ? dsaGeoData?.childGeoJson?.features.filter(
+                            f =>
+                              opoDataMap[f.properties.opo].statesWithRegions[
+                                state
+                              ] !== undefined
+                          )
+                        : dsaGeoData?.childGeoJson?.features
+                      ).map(f => ({
+                        ...f,
+                        properties: {
+                          ...f.properties,
+                          tier: opoDataMap[f.properties.opo].tier,
+                        },
+                      }))
+                }
                 style={feature => ({
                   color: "white",
-                  fillColor: tierColors[feature.properties.tier],
+                  fillColor: tierColors[feature.properties.tier.split(" ")[1]],
                   fillOpacity: 0.85,
                   opacity: 0.75,
                   weight: 0.75,
                 })}
               />
               <GeoJSON
-                key={state}
+                key={state ? state : opo ? opo : "state"}
                 data={stateGeoJson}
                 eventHandlers={
                   interactive
@@ -200,7 +244,7 @@ export default function Map({
                     : null
                 }
                 style={{
-                  color: "white",
+                  color: opo ? "black" : "white",
                   fillOpacity: 0,
                   weight: 2,
                 }}

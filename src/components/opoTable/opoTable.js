@@ -1,4 +1,5 @@
 import React, { useMemo } from "react";
+import {Link} from 'gatsby'
 import { Container, Row, Table } from "react-bootstrap";
 import { useTable, useSortBy } from "react-table";
 import ReactMarkdown from "react-markdown";
@@ -21,7 +22,12 @@ export default function OpoTable({ headings, inState = true, opos, title }) {
         Header: <ReactMarkdown>{headings[accessor]}</ReactMarkdown>,
         accessor,
       };
-      if (accessor === "donors" || accessor === "investigation") {
+      if (accessor === "name") {
+        return {
+          ...col,
+          Cell: props =>(<Link to={`/opo/${opos.find( opo => opo.name === props.value)?.opo}`} >{props.value}</Link>)
+        }
+      } else if (accessor === "donors" || accessor === "investigation") {
         return {
           ...col,
           cellClass: "text-center",
@@ -38,7 +44,10 @@ export default function OpoTable({ headings, inState = true, opos, title }) {
           cellClass: styles.tierCol,
           Cell: props => (
             <Container>
-              <Tier className={styles.tierCol} tier={props.value} />
+              <Tier
+                className={styles.tierCol}
+                tier={props.value.split(" ")[1]}
+              />
             </Container>
           ),
         };

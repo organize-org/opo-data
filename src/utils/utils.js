@@ -1,7 +1,7 @@
 export const tierColors = {
-  "1 Passing": "#C4C4C4",
-  "2 Underperforming": "#FFB042",
-  "3 Failing": "#D43C37",
+  "Passing": "#C4C4C4",
+  "Underperforming": "#FFB042",
+  "Failing": "#D43C37",
 };
 
 export const racialDemographics = {
@@ -19,6 +19,12 @@ export const findStateFeature = (statesGeoData, abbrev) =>
   abbrev
     ? statesGeoData?.childGeoJson?.features?.find(
         ({ properties: { abbreviation } }) => abbreviation === abbrev
+      )
+    : null;
+export const findOpoFeature = (dsaGeoJson, abbr) =>
+  abbr
+    ? dsaGeoJson?.childGeoJson?.features?.find(
+        ({ properties: { opo } }) => opo === abbr
       )
     : null;
 

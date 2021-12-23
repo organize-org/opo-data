@@ -26,11 +26,6 @@ export default function Opo({ data: { oposGeoData }, opo }) {
 
     const opoHeadlines = notes.filter( note => note.tags?.includes(opo.toUpperCase()))
 
-    console.log("opoHeadlines", opoHeadlines);
-    console.log("oposGeoData", oposGeoData);
-    console.log("opoDataMap", opoDataMap);
-    console.log("opoData", opoData);
-
   return (
     <Layout crumbLabel={formatOpoName(opoData)} sources={sources} social={true}>
       <Row className={styles.hero}>
@@ -53,11 +48,14 @@ export default function Opo({ data: { oposGeoData }, opo }) {
           <Row className={styles.map}>
             <Map
               dimensions={{ height: "16rem", width: "24rem" }}
-              opo={opoData}
+              opo={opo}
               zoomControl={false}
             />
           </Row>
           <Row className={styles.stats}>
+            <Row className={styles.statsTier}>
+              <h3>Performance Tier (2019</h3>
+            </Row>
             <Row className={styles.statsHeading}>
               <Col>
                 <h3>OPO Rank (of {oposGeoData.length})</h3>
