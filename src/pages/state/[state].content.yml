@@ -2027,7 +2027,6 @@ notes:
       in 2012 for fraud
   - voicesForReform: false
     tags:
-      - SCOP
       - CAOP
       - WALC
       - TNDS
@@ -2042,6 +2041,7 @@ notes:
       - MAOB
       - FLMP
       - FLWC
+      - SCOP
     note: Included in [House Committee on Oversight and Reform
       investigation](https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)
   - voicesForReform: false
@@ -2063,7 +2063,6 @@ notes:
       in patient safety
     voicesForReform: false
     tags:
-      - VATB
       - SCOP
   - note: "[CEO published
       support](https://www.dallasnews.com/opinion/commentary/2021/02/12/the-us-\
