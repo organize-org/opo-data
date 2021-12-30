@@ -172,6 +172,13 @@ videos:
       - WV
       - WY
 notes:
+  - voicesForReform: false
+    note: '[Washington
+      Post](https://www.washingtonpost.com/health/liver-transplant-lawsuit/2021/12/21/2443f904-61b9-11ec-bf70-58003351c627_story.html):
+      "Lawsuit alleges bullying tactics by transplant executives in bid to
+      revamp system"'
+    tags:
+      - MA
   - voicesForReform: true
     note: "[Representative Cori
       Bush](https://bush.house.gov/media/press-releases/congresswoman-cori-bush\
