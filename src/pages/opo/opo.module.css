@@ -133,6 +133,11 @@
   margin-right: 0;
 }
 
+.serviceTable h3 {
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+}
+
 @media (max-width: 700px) {
   .title {
     flex-direction: column-reverse;
