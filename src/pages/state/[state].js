@@ -119,7 +119,7 @@ export default function State({ data: { statesGeoData }, state }) {
           <h2 className={styles.title}>{formatStateName(stateData)}</h2>
         </Row>
         <Row className={styles.serviceState}>
-          <span className={styles.servicing}>
+          <span>
             OPOs servicing {stateData.abbreviation}:{" "}
             <strong>{inStateOpos.length ?? 0}</strong>
           </span>
@@ -131,7 +131,7 @@ export default function State({ data: { statesGeoData }, state }) {
           <Row className={styles.mapV2}>
             <Map
               dimensions={{ height: "16rem", width: "24rem" }}
-              state={stateData.abbreviation}
+              state={state}
               zoomControl={false}
             />
           </Row>
@@ -176,7 +176,7 @@ export default function State({ data: { statesGeoData }, state }) {
           </Row>
         </Row>
       </Row>
-      {stateData.notes.length && (
+      {stateData?.notes?.length > 0 && (
         <Row className={styles.news}>
           <Row>
             <h3>OPO News and Notes in {stateData.name}</h3>

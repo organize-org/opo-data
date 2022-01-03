@@ -8,8 +8,6 @@ import * as styles from "./selectState.module.css";
 export default function SelectState({
   label,
   link = false,
-  popoutAbbreviation,
-  setPopoutAbbrevation,
 }) {
   const [{ stateDataMap }] = useDataMaps();
 
@@ -18,13 +16,7 @@ export default function SelectState({
       <p>{label}</p>
       <Select
         className={styles.selectInput}
-        value={
-          popoutAbbreviation
-            ? {
-                value: popoutAbbreviation,
-                label: stateDataMap[popoutAbbreviation]?.name,
-              }
-            : typeof link === "string"
+        value={typeof link === "string"
             ? {
                 value: link,
                 label: link,
@@ -32,11 +24,9 @@ export default function SelectState({
             : null
         }
         onChange={({ value }) =>
-          typeof link === "string"
-            ? navigate(`/state/${value}`, {
+         navigate(`/state/${value}`, {
                 replace: true,
               })
-            : setPopoutAbbrevation(value)
         }
         options={Object.entries(stateDataMap)
           .sort()

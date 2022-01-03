@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { graphql } from "gatsby";
 import { Row, Col } from "react-bootstrap";
 import { ArrowRight } from "react-bootstrap-icons";
@@ -17,7 +17,6 @@ import * as styles from "./index.module.css";
 import content from "./index.content.yml";
 
 export default function Dashboard({ data: { articleImages, quoteImage } }) {
-  const [popoutAbbreviation, setPopoutAbbrevation] = useState(null);
 
   const { articles, stats, quote, video, sources } = content;
   const articleImgsByPath = articleImages?.edges?.reduce(
@@ -34,19 +33,11 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
         <Col>
           <SelectState
             label="View state data"
-            popoutAbbreviation={popoutAbbreviation}
-            setPopoutAbbrevation={setPopoutAbbrevation}
           />
         </Col>
         <Social />
       </Row>
-      <Map
-        interactive={true}
-        legend={true}
-        zoomControl={true}
-        popoutAbbreviation={popoutAbbreviation}
-        setPopoutAbbrevation={setPopoutAbbrevation}
-      />
+      <Map interactive={true} legend={true} zoomControl={true} />
       <Row className={styles.statsSection}>
         {Object.values(stats).map(({ title, value }) => (
           <Col className="mx-5" key={title}>

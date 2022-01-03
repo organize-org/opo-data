@@ -1,17 +1,12 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
-import { GeoJSON, MapContainer, TileLayer, ZoomControl } from "react-leaflet";
-import { useStaticQuery, graphql, Link } from "gatsby";
+import { GeoJSON, MapContainer, ZoomControl } from "react-leaflet";
+import { useStaticQuery, graphql, navigate } from "gatsby";
 import bbox from "@turf/bbox";
-import CloseDefault from "../../images/icons/close-default.svg";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 import useDataMaps from "../../hooks/useDataMaps";
-import {
-  findStateFeature,
-  formatStateName,
-  tierColors,
-} from "../../utils/utils";
+import { findStateFeature, tierColors } from "../../utils/utils";
 import Tier from "../tier/tier";
 
 import * as styles from "./map.module.css";
@@ -29,60 +24,11 @@ function Legend() {
   );
 }
 
-function StatePopout({ state, setPopoutAbbrevation }) {
-  const [{ opoDataMap }] = useDataMaps();
-
-  return (
-    <Container className={styles.popout}>
-      <Row className={styles.popoutHeader}>
-        <h3>{formatStateName(state)}</h3>
-        <button
-          className={styles.closeModal}
-          onClick={() => setPopoutAbbrevation(null)}
-        >
-          <CloseDefault />
-        </button>
-      </Row>
-      <Row>
-        {state.waitlist ? (
-          <h4>
-            State waitlist:
-            {state.waitlist.toLocaleString("en-US")}
-          </h4>
-        ) : null}
-      </Row>
-      <Row>
-        <h5>OPOs Servicing {state.abbreviation.toLocaleUpperCase()} (2019)</h5>
-      </Row>
-      {Object.values(opoDataMap)
-        .filter(
-          ({ statesWithRegions }) =>
-            statesWithRegions[state.abbreviation] !== undefined
-        )
-        .map(({ name, tier }) => (
-          <div key={name}>
-            <Row>
-              <h4>{name}</h4>
-            </Row>
-            <Tier key={tier} className={styles.popoutTier} tier={tier} />
-          </div>
-        ))}
-      <Row>
-        <Link to={`/state/${state.abbreviation}`}>
-          See more data for {state.abbreviation}
-        </Link>
-      </Row>
-    </Container>
-  );
-}
-
 export default function Map({
   dimensions = { height: "55vh", width: "100%" },
   interactive = false,
   legend = false,
   state = null,
-  popoutAbbreviation = null,
-  setPopoutAbbrevation,
   zoomControl = false,
 }) {
   const windowWidth = useWindowDimensions().width;
@@ -143,26 +89,19 @@ export default function Map({
   // Map bounding box: individual state or continential US (first 48)
   const [minX, minY, maxX, maxY] = bbox({
     ...stateGeoJson,
-    features:
-      stateGeoJson.features.length > 1
-        ? stateGeoJson.features.slice(0, -3)
-        : stateGeoJson.features,
+    features: stateGeoJson.features,
   });
 
   return (
     <Row className={styles.map}>
       <div style={dimensions}>
-        {popoutAbbreviation && (
-          <StatePopout
-            state={stateDataMap[popoutAbbreviation]}
-            setPopoutAbbrevation={setPopoutAbbrevation}
-          />
-        )}
         {legend && <Legend />}
+        {state ? null : <hr />}
         {
           // Hack: [`window` dependency for Leaflet](https://www.gatsbyjs.com/docs/debugging-html-builds/#fixing-third-party-modules)
           typeof window !== "undefined" && (
             <MapContainer
+            key={state + "container"}
               bounds={[
                 [minY, minX],
                 [maxY, maxX],
@@ -171,13 +110,11 @@ export default function Map({
               style={dimensions}
               zoomControl={false}
               dragging={windowWidth > 800}
+              className={styles.mapContainer}
             >
               {zoomControl && <ZoomControl position="bottomright" />}
-              <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-                url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png"
-              />
               <GeoJSON
+                key={state + "opos"}
                 data={(state
                   ? dsaGeoData?.childGeoJson?.features.filter(
                       f =>
@@ -196,13 +133,13 @@ export default function Map({
                 style={feature => ({
                   color: "white",
                   fillColor: tierColors[feature.properties.tier],
-                  fillOpacity: 0.65,
+                  fillOpacity: 0.85,
                   opacity: 0.75,
                   weight: 0.75,
                 })}
               />
               <GeoJSON
-                key={popoutAbbreviation}
+                key={state}
                 data={stateGeoJson}
                 eventHandlers={
                   interactive
@@ -213,39 +150,64 @@ export default function Map({
                               f =>
                                 f?.properties?.name ===
                                   propagatedFrom?.feature?.properties?.name && {
-                                  color: "#373737",
-                                  fillOpacity: 0.3,
-                                  weight: 2,
+                                  color: "white",
+                                  fillColor: "black",
+                                  fillOpacity: 0.2,
+                                  weight: 4,
                                 }
                             )
                             .bindTooltip(
-                              propagatedFrom?.feature?.properties?.name,
+                              `<div class="${styles.tooltip}">
+                              <h4>
+                                ${propagatedFrom?.feature?.properties?.name}
+                              </h4>
+                              <p>State waitlist: <strong>${
+                                stateDataMap[
+                                  propagatedFrom?.feature?.properties
+                                    ?.abbreviation
+                                ].waitlist ?? "No Data"
+                              }</strong></p>
+                              <p>OPOs servicing: <strong>${
+                                Object.values(opoDataMap).filter(
+                                  ({ statesWithRegions }) =>
+                                    statesWithRegions[
+                                      propagatedFrom?.feature?.properties
+                                        ?.abbreviation
+                                    ] !== undefined
+                                ).length ?? "No Data"
+                              }</strong></p>
+                              <p>People dying every month waiting for an organ: <strong>${
+                                stateDataMap[
+                                  propagatedFrom?.feature?.properties
+                                    ?.abbreviation
+                                ].monthly ?? "No Data"
+                              }</strong></p>
+                              </div>`,
                               {
-                                direction: "bottom",
-                                offset: [0, 20],
                                 sticky: true,
+                                offset: [10, 0],
                               }
                             )
                             .openTooltip(),
                         mouseout: ({ target }) => target?.resetStyle(),
                         click: ({ propagatedFrom }) => {
-                          setPopoutAbbrevation(
-                            propagatedFrom?.feature?.properties?.abbreviation
+                          navigate(
+                            `/state/${propagatedFrom?.feature?.properties?.abbreviation}`
                           );
                         },
                       }
                     : null
                 }
                 style={{
-                  color: "#373737",
+                  color: "white",
                   fillOpacity: 0,
-                  opacity: 0.75,
-                  weight: 1,
+                  weight: 2,
                 }}
               />
             </MapContainer>
           )
         }
+        {state ? null : <hr />}
       </div>
     </Row>
   );
