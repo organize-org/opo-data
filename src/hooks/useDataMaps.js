@@ -23,6 +23,8 @@ export default function useDataMaps() {
               shadows
               states
               tier
+              ceo
+              board
             }
           }
         }

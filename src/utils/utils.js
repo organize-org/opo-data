@@ -39,6 +39,15 @@ export const formatPercent = percent =>
         minimumFractionDigits: 2,
       })}`;
 
+export const formatMoney = num => {
+  return formatNumber(num, {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  });
+}
+
 export const formatStateName = ({ abbreviation, name }) =>
   `${name} (${abbreviation.toLocaleUpperCase()})`;
 

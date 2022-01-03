@@ -50,10 +50,9 @@
   flex-direction: column;
   justify-content: center;
   background-color: white;
-}
-.stats h3 {
-  font-size: 0.85rem;
+  font-size: 1.125rem;
   font-weight: 700;
+  padding: 1rem;
 }
 
 .stats h3 p {
@@ -64,21 +63,61 @@
   align-self: flex-end;
 }
 
+.statsPopout {
+  height: 5rem;
+}
+
 .statsPopout p {
   margin: 0;
 }
 
 .statsHeading,
-.statsPopout {
+.statsPopout, .statsTier{
   padding: 0 1rem;
   text-align: left;
 }
 
+.statsTier {
+  flex-direction: column;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.statsComp {
+  height: 2rem;
+  font-weight: 600;
+  padding: 0 1rem;
+}
+
+.statsComp .ceo {
+  color: #C4C4C4;
+  font-weight: 400;
+}
+
+.statsTier .Passing {
+  color: #C4C4C4;
+}
+.statsTier .Underperforming {
+  color: #FFB042;
+}
+.statsTier .Failing {
+  color: #D43C37;
+}
+
 .statsPopout p {
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
+.headlines {
+  flex-direction: column;
+  padding-left: 6rem;
+}
+
+.headlines h3 {
+  font-size: 1.7rem;
+  margin-top: 4rem;
+}
 
 @media (max-width: 700px) {
     .title {
@@ -101,4 +140,8 @@
   .stats {
     margin-top: 2rem;
   }
+
+  .headlines {
+  padding-left: 4rem;
+}
 }
