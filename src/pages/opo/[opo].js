@@ -6,6 +6,7 @@ import ReactMarkdown from "react-markdown";
 import Layout from "../../components/layout/layout";
 import Map from "../../components/map/map";
 import SelectState from "../../components/selectState/selectState";
+import OpoTable from "../../components/opoTable/opoTable";
 import Tier from "../../components/tier/tier";
 import {
   formatOpoName,
@@ -34,6 +35,16 @@ export default function Opo({ data: { oposGeoData }, opo }) {
     note.tags?.includes(opo.toUpperCase())
   );
 
+  const inStateOpos = Object.values(opoDataMap)
+    .filter(
+      opoFromMap =>
+        opoFromMap.statesWithRegions[opoData.states.split(" ")[0]] !== undefined
+    )
+    .map(opoFromMap => ({
+      ...opoFromMap,
+      region: opoFromMap.statesWithRegions[opoData.states.split(" ")[0]],
+    }));
+
   console.log("opo", opo);
   console.log("opoDataMap", opoDataMap);
   console.log("opoData", opoData);
@@ -60,7 +71,7 @@ export default function Opo({ data: { oposGeoData }, opo }) {
         <Row className={styles.mapStats}>
           <Row className={styles.map}>
             <Map
-              dimensions={{ height: "20.5rem", width: "24rem" }}
+              dimensions={{ height: "24rem", width: "24rem" }}
               opo={opo}
               zoomControl={false}
             />
@@ -80,7 +91,7 @@ export default function Opo({ data: { oposGeoData }, opo }) {
             </Row>
             <Row className={styles.statsHeading}>
               <Col>
-                <h3>OPO Rank (of {oposGeoData.length})</h3>
+                <h3>OPO Rank (of {Object.keys(opoDataMap).length})</h3>
               </Col>
               <Col>
                 <h3 className="red">Preventable Deaths (2019)</h3>
@@ -127,7 +138,7 @@ export default function Opo({ data: { oposGeoData }, opo }) {
       {opoHeadlines?.length > 0 && (
         <Row className={styles.headlines}>
           <Row>
-            <h3>Headlines</h3>
+            <h3>HEADLINES</h3>
           </Row>
           <Row>
             <ul>
@@ -141,6 +152,15 @@ export default function Opo({ data: { oposGeoData }, opo }) {
           <hr />
         </Row>
       )}
+      <Row className={styles.serviceTable}>
+        {inStateOpos.length > 0 && (
+          <OpoTable
+            headings={headings}
+            opos={inStateOpos}
+            title={`OPO PERFORMANCE COMPARISON IN THIS STATE`}
+          />
+        )}
+      </Row>
     </Layout>
   );
 }
