@@ -1,7 +1,7 @@
 export const tierColors = {
-  "Passing": "#C4C4C4",
-  "Underperforming": "#FFB042",
-  "Failing": "#D43C37",
+  Passing: "#C4C4C4",
+  Underperforming: "#FFB042",
+  Failing: "#D43C37",
 };
 
 export const racialDemographics = {
@@ -46,11 +46,12 @@ export const formatMoney = num => {
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
   });
-}
+};
 
 export const formatStateName = ({ abbreviation, name }) =>
   `${name} (${abbreviation.toLocaleUpperCase()})`;
 
-export const formatOpoName = ({name, opo}) => `${name} (${opo.toUpperCase()})`
+export const formatOpoName = ({ name, opo }) =>
+  `${name} (${opo.toUpperCase()})`;
 
-export const formatOPORank = (opoDate) => 99;
+export const formatOPORank = opoDate => 99;

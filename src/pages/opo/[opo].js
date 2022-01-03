@@ -3,10 +3,10 @@ import { Col, Row } from "react-bootstrap";
 import { graphql, navigate } from "gatsby";
 import ReactMarkdown from "react-markdown";
 
-import Layout from '../../components/layout/layout'
+import Layout from "../../components/layout/layout";
 import Map from "../../components/map/map";
 import SelectState from "../../components/selectState/selectState";
-import Tier from "../../components/tier/tier"
+import Tier from "../../components/tier/tier";
 import {
   formatOpoName,
   formatOPORank,
@@ -19,24 +19,25 @@ import useDataMaps from "../../hooks/useDataMaps";
 import content from "../state/[state].content.yml";
 
 export default function Opo({ data: { oposGeoData }, opo }) {
-
   const [{ opoDataMap, stateDataMap }] = useDataMaps();
 
-    const opoData = opoDataMap[opo?.toLocaleUpperCase()];
-    if (!opoData) {
-      if (!opo) return null;
-      navigate("/404");
-      return null;
-    }
+  const opoData = opoDataMap[opo?.toLocaleUpperCase()];
+  if (!opoData) {
+    if (!opo) return null;
+    navigate("/404");
+    return null;
+  }
 
-    const { headings, notes, stats, sources } = content;
+  const { headings, notes, stats, sources } = content;
 
-    const opoHeadlines = notes.filter( note => note.tags?.includes(opo.toUpperCase()))
+  const opoHeadlines = notes.filter(note =>
+    note.tags?.includes(opo.toUpperCase())
+  );
 
-    console.log("opo", opo)
-    console.log("opoDataMap", opoDataMap);
-    console.log("opoData", opoData);
-    console.log("opoHeadlines", opoHeadlines);
+  console.log("opo", opo);
+  console.log("opoDataMap", opoDataMap);
+  console.log("opoData", opoData);
+  console.log("opoHeadlines", opoHeadlines);
 
   return (
     <Layout crumbLabel={formatOpoName(opoData)} sources={sources} social={true}>

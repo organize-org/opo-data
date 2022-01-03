@@ -72,7 +72,8 @@
 }
 
 .statsHeading,
-.statsPopout, .statsTier{
+.statsPopout,
+.statsTier {
   padding: 0 1rem;
   text-align: left;
 }
@@ -90,18 +91,18 @@
 }
 
 .statsComp .ceo {
-  color: #C4C4C4;
+  color: #c4c4c4;
   font-weight: 400;
 }
 
 .statsTier .Passing {
-  color: #C4C4C4;
+  color: #c4c4c4;
 }
 .statsTier .Underperforming {
-  color: #FFB042;
+  color: #ffb042;
 }
 .statsTier .Failing {
-  color: #D43C37;
+  color: #d43c37;
 }
 
 .statsPopout p {
@@ -120,7 +121,7 @@
 }
 
 @media (max-width: 700px) {
-    .title {
+  .title {
     flex-direction: column-reverse;
   }
 
@@ -133,7 +134,7 @@
     margin-left: 0;
   }
 
-    .mapStats {
+  .mapStats {
     flex-wrap: wrap;
   }
 
@@ -142,6 +143,6 @@
   }
 
   .headlines {
-  padding-left: 4rem;
-}
+    padding-left: 4rem;
+  }
 }

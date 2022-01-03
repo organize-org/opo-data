@@ -93,7 +93,10 @@ export default function Map({
 
   const opoGeoJson = {
     ...dsaGeoData.childGeoJson,
-    features: (opo ? [findOpoFeature(dsaGeoData, opo)] : dsaGeoData.childGeoJson.features).map(f => ({
+    features: (opo
+      ? [findOpoFeature(dsaGeoData, opo)]
+      : dsaGeoData.childGeoJson.features
+    ).map(f => ({
       ...f,
       properties: {
         ...f.properties,

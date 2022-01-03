@@ -17,7 +17,6 @@ import * as styles from "./index.module.css";
 import content from "./index.content.yml";
 
 export default function Dashboard({ data: { articleImages, quoteImage } }) {
-
   const { articles, stats, quote, video, sources } = content;
   const articleImgsByPath = articleImages?.edges?.reduce(
     (imgMap, { node }) => ({
@@ -31,9 +30,7 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
     <Layout sources={sources}>
       <Row className={styles.topBar}>
         <Col>
-          <SelectState
-            label="View state data"
-          />
+          <SelectState label="View state data" />
         </Col>
         <Social />
       </Row>
