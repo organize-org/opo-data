@@ -11,10 +11,18 @@ import Tier from "../tier/tier";
 
 import * as styles from "./opoTable.module.css";
 
-export default function OpoTable({ headings, inState = true, opos, title }) {
+export default function OpoTable({
+  headings,
+  inState = true,
+  inOpo = false,
+  opos,
+  title,
+}) {
   const columns = useMemo(() => {
     const cols = inState
       ? ["name", "region", "tier", "donors", "shadow", "investigation"]
+      : inOpo
+      ? ["ethnicity", "donors", "recovery", "death"]
       : ["states", "name", "tier", "donors", "shadow"];
 
     const createCol = accessor => {
@@ -33,7 +41,10 @@ export default function OpoTable({ headings, inState = true, opos, title }) {
             </Link>
           ),
         };
-      } else if (accessor === "donors" || accessor === "investigation") {
+      } else if (
+        (accessor === "donors" && !inOpo) ||
+        accessor === "investigation"
+      ) {
         return {
           ...col,
           cellClass: "text-center",
@@ -57,6 +68,13 @@ export default function OpoTable({ headings, inState = true, opos, title }) {
             </Container>
           ),
         };
+      } else if (accessor === "death") {
+        return {
+          ...col,
+          sortType: (a, b) =>
+            parseInt(a.values.death?.replace(/,/g, "")) -
+            parseInt(b.values.death?.replace(/,/g, "")),
+        };
       } else {
         return col;
       }
@@ -69,7 +87,18 @@ export default function OpoTable({ headings, inState = true, opos, title }) {
       !num || isNaN(num) ? "--" : num.toLocaleString("en-US", options);
 
     return opos.map(
-      ({ donors, investigation, name, region, shadows, states, tier }) => {
+      ({
+        donors,
+        investigation,
+        name,
+        region,
+        shadows,
+        states,
+        tier,
+        death,
+        recovery,
+        ethnicity,
+      }) => {
         return {
           donors: formatNumber(donors),
           investigation: investigation ? "Yes" : "--",
@@ -78,6 +107,9 @@ export default function OpoTable({ headings, inState = true, opos, title }) {
           shadow: formatNumber(shadows),
           states: states,
           tier: tier,
+          ethnicity,
+          death: death?.toLocaleString(),
+          recovery: formatNumber(recovery),
         };
       }
     );

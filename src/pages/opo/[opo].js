@@ -30,6 +30,12 @@ export default function Opo({ data: { oposGeoData }, opo }) {
   }
 
   const { headings, notes, stats, sources } = content;
+  const ethnicityHeadings = {
+    ethnicity: "Ethnicity",
+    donors: "Number of Donors",
+    recovery: "Recovery Rate",
+    death: "CALC Deaths",
+  };
 
   const opoHeadlines = notes.filter(note =>
     note.tags?.includes(opo.toUpperCase())
@@ -45,10 +51,29 @@ export default function Opo({ data: { oposGeoData }, opo }) {
       region: opoFromMap.statesWithRegions[opoData.states.split(" ")[0]],
     }));
 
-  console.log("opo", opo);
+  const ethnicityKeys = {
+    nhw_: "Non-Hispanic White",
+    nhb_: "Non-Hispanic Black",
+    h_: "Hispanic",
+    a_: "Asian",
+  };
+  const ethnicityData = ["nhw_", "nhb_", "h_", "a_"].reduce((acc, prefix) => {
+    const data = Object.fromEntries(
+      Object.entries(opoData).filter(([key]) => key.includes(prefix))
+    );
+    const formattedData = {
+      ethnicity: ethnicityKeys[prefix],
+      donors: opoData[prefix + "donors"],
+      recovery: opoData[prefix + "recovery"],
+      death: opoData[prefix + "death"],
+    };
+    return [...acc, formattedData];
+  }, []);
+
+  console.log("ethnicityData", ethnicityData);
   console.log("opoDataMap", opoDataMap);
   console.log("opoData", opoData);
-  console.log("opoHeadlines", opoHeadlines);
+  console.log("inStateOpos", inStateOpos);
 
   return (
     <Layout crumbLabel={formatOpoName(opoData)} sources={sources} social={true}>
@@ -152,6 +177,17 @@ export default function Opo({ data: { oposGeoData }, opo }) {
           <hr />
         </Row>
       )}
+      <Row className={styles.ethnicityTable}>
+        {ethnicityData.length > 0 && (
+          <OpoTable
+            inState={false}
+            inOpo={true}
+            headings={ethnicityHeadings}
+            opos={ethnicityData}
+            title={`${opoData.name} RECOVERY PERFORMANCE DATA by ethnicity (2019)`}
+          />
+        )}
+      </Row>
       <Row className={styles.serviceTable}>
         {inStateOpos.length > 0 && (
           <OpoTable
