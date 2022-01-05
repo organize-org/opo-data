@@ -12,14 +12,6 @@ export default function useDataMaps() {
               investigation
               name
               opo
-              race_perf_asian
-              race_perf_black
-              race_perf_hispanic
-              race_perf_islander
-              race_perf_multiracial
-              race_perf_native
-              race_perf_unkown
-              race_perf_white
               shadows
               states
               tier
