@@ -25,7 +25,6 @@ export default function Navigation({ site }) {
 
   const toggle = e => {
     e.preventDefault();
-
     if (icon.props.alt === "hamburger") {
       setIcon(close);
     } else {
