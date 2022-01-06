@@ -400,6 +400,128 @@ module.exports = {
                     ],
                   },
                   {
+                    label: "Opo Page",
+                    name: "opo",
+                    file: "src/pages/opo/[opo].content.yml",
+                    fields: [
+                      {
+                        label: "Stat Headings",
+                        name: "stats",
+                        widget: "object",
+                        collapsed: false,
+                        fields: [
+                          {
+                            label: "Performance tier heading",
+                            name: "tier",
+                            widget: "markdown",
+                          },
+                          {
+                            label: "Rank heading",
+                            name: "rank",
+                            widget: "markdown",
+                          },
+                          {
+                            label: "Preventable death heading",
+                            name: "preventable",
+                            widget: "markdown",
+                          },
+                          {
+                            label: "Investigation heading",
+                            name: "investigation",
+                            widget: "markdown",
+                          },
+                          {
+                            label: "CEO & comp heading",
+                            name: "ceo",
+                            widget: "markdown",
+                          },
+                          {
+                            label: "Board compensatino heading",
+                            name: "board",
+                            widget: "markdown",
+                          },
+                        ],
+                      },
+                      {
+                        label: "OPO Table headings",
+                        name: "opoHeadings",
+                        widget: "object",
+                        collapsed: false,
+                        fields: [
+                          {
+                            label: "Ethnicity",
+                            name: "ethnicity",
+                            widget: "markdown",
+                          },
+                          {
+                            label: "Potential Donors",
+                            name: "death",
+                            widget: "markdown",
+                          },
+                          {
+                            label: "Actual Donors",
+                            name: "donors",
+                            widget: "markdown",
+                          },
+                          {
+                            label: "Recovery Rate",
+                            name: "recovery",
+                            widget: "markdown",
+                          },
+                          {
+                            label: "Rank",
+                            name: "rank",
+                            widget: "markdown",
+                          },
+                        ],
+                      },
+                      {
+                        label: "State Table headings",
+                        name: "stateHeadings",
+                        widget: "object",
+                        collapsed: false,
+                        fields: [
+                          {
+                            label: "Name",
+                            name: "name",
+                            widget: "markdown",
+                          },
+                          {
+                            label: "Region",
+                            name: "region",
+                            widget: "markdown",
+                          },
+                          {
+                            label: "States",
+                            name: "states",
+                            widget: "markdown",
+                          },
+                          {
+                            label: "Tier",
+                            name: "tier",
+                            widget: "markdown",
+                          },
+                          {
+                            label: "Donors Needed",
+                            name: "donors",
+                            widget: "markdown",
+                          },
+                          {
+                            label: "Shadow Deaths",
+                            name: "shadow",
+                            widget: "markdown",
+                          },
+                          {
+                            label: "Under Investigation",
+                            name: "investigation",
+                            widget: "markdown",
+                          },
+                        ],
+                      },
+                      sources,
+                    ],
+                  },
+                  {
                     label: "Equity Page",
                     name: "equity",
                     file: "src/pages/equity.content.yml",

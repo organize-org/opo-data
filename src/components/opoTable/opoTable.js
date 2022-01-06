@@ -22,7 +22,7 @@ export default function OpoTable({
     const cols = inState
       ? ["name", "region", "tier", "donors", "shadow", "investigation"]
       : inOpo
-      ? ["ethnicity", "donors", "recovery", "death"]
+      ? ["ethnicity", "death", "donors", "recovery", "rank"]
       : ["states", "name", "tier", "donors", "shadow"];
 
     const createCol = accessor => {
@@ -98,6 +98,7 @@ export default function OpoTable({
         death,
         recovery,
         ethnicity,
+        rank,
       }) => {
         return {
           donors: formatNumber(donors),
@@ -110,6 +111,7 @@ export default function OpoTable({
           ethnicity,
           death: death?.toLocaleString(),
           recovery: formatNumber(recovery),
+          rank: formatNumber(rank),
         };
       }
     );

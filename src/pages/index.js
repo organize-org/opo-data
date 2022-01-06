@@ -18,6 +18,7 @@ import content from "./index.content.yml";
 
 export default function Dashboard({ data: { articleImages, quoteImage } }) {
   const { articles, stats, quote, video, sources } = content;
+
   const articleImgsByPath = articleImages?.edges?.reduce(
     (imgMap, { node }) => ({
       ...imgMap,

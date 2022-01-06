@@ -17,7 +17,8 @@ import {
 
 import * as styles from "./opo.module.css";
 import useDataMaps from "../../hooks/useDataMaps";
-import content from "../state/[state].content.yml";
+import stateContent from "../state/[state].content.yml";
+import opoContent from "./[opo].content.yml";
 
 export default function Opo({ data: { oposGeoData }, opo }) {
   const [{ opoDataMap, stateDataMap }] = useDataMaps();
@@ -29,13 +30,10 @@ export default function Opo({ data: { oposGeoData }, opo }) {
     return null;
   }
 
-  const { headings, notes, stats, sources } = content;
-  const ethnicityHeadings = {
-    ethnicity: "Ethnicity",
-    donors: "Number of Donors",
-    recovery: "Recovery Rate",
-    death: "CALC Deaths",
-  };
+  const { notes } = stateContent;
+  const {opoHeadings, stateHeadings, stats, sources } = opoContent;
+
+  console.log(opoHeadings);
 
   const opoHeadlines = notes.filter(note =>
     note.tags?.includes(opo.toUpperCase())
@@ -66,14 +64,12 @@ export default function Opo({ data: { oposGeoData }, opo }) {
       donors: opoData[prefix + "donors"],
       recovery: opoData[prefix + "recovery"],
       death: opoData[prefix + "death"],
+      rank: opoData[prefix + "rank"],
     };
     return [...acc, formattedData];
   }, []);
 
-  console.log("ethnicityData", ethnicityData);
-  console.log("opoDataMap", opoDataMap);
-  console.log("opoData", opoData);
-  console.log("inStateOpos", inStateOpos);
+ console.log(ethnicityData);
 
   return (
     <Layout crumbLabel={formatOpoName(opoData)} sources={sources} social={true}>
@@ -104,7 +100,9 @@ export default function Opo({ data: { oposGeoData }, opo }) {
           <Row className={styles.stats}>
             <Row className={styles.statsTier}>
               <Col>
-                <h3>Performance Tier (2019)</h3>
+                <h4>
+                  <ReactMarkdown>{stats.performance}</ReactMarkdown>
+                </h4>
               </Col>
               <Col>
                 <Tier
@@ -116,13 +114,19 @@ export default function Opo({ data: { oposGeoData }, opo }) {
             </Row>
             <Row className={styles.statsHeading}>
               <Col>
-                <h3>OPO Rank (of {Object.keys(opoDataMap).length})</h3>
+                <h4>
+                  <ReactMarkdown>{stats.rank}</ReactMarkdown>
+                </h4>
               </Col>
               <Col>
-                <h3 className="red">Preventable Deaths (2019)</h3>
+                <h4 className="red">
+                  <ReactMarkdown>{stats.preventable}</ReactMarkdown>
+                </h4>
               </Col>
               <Col>
-                <h3>Under Congressional Investigation</h3>
+                <h4>
+                  <ReactMarkdown>{stats.investigation}</ReactMarkdown>
+                </h4>
               </Col>
             </Row>
             <Row className={styles.statsPopout}>
@@ -144,16 +148,21 @@ export default function Opo({ data: { oposGeoData }, opo }) {
             </Row>
             <Row className={styles.statsComp}>
               <Col>
-                <span className={styles.ceo}> CEO & Compensation: </span>
-                {opoData.ceo ?? "No Data"}{" "}
-                {opoData.compensation
-                  ? `- ${formatMoney(opoData.compensation)}`
-                  : ""}
+                <span className={styles.ceo}>
+                  <ReactMarkdown>{stats.ceo}</ReactMarkdown>
+                </span>
+                {`${opoData.ceo ?? "No Data"} ${
+                  opoData.compensation
+                    ? `- ${formatMoney(opoData.compensation)}`
+                    : ""
+                }`}
               </Col>
             </Row>
             <Row className={styles.statsComp}>
               <Col>
-                <span className={styles.ceo}>Board Compensation: </span>
+                <span className={styles.ceo}>
+                  <ReactMarkdown>{stats.board}</ReactMarkdown>
+                </span>
                 {opoData.board ?? "No Data"}
               </Col>
             </Row>
@@ -182,7 +191,7 @@ export default function Opo({ data: { oposGeoData }, opo }) {
           <OpoTable
             inState={false}
             inOpo={true}
-            headings={ethnicityHeadings}
+            headings={opoHeadings}
             opos={ethnicityData}
             title={`${opoData.name} RECOVERY PERFORMANCE DATA by ethnicity (2019)`}
           />
@@ -191,7 +200,7 @@ export default function Opo({ data: { oposGeoData }, opo }) {
       <Row className={styles.serviceTable}>
         {inStateOpos.length > 0 && (
           <OpoTable
-            headings={headings}
+            headings={stateHeadings}
             opos={inStateOpos}
             title={`OPO PERFORMANCE COMPARISON IN THIS STATE`}
           />
