@@ -1,13 +1,3 @@
-.logoWithText {
-  display: flex;
-  align-items: center;
-  margin: 0 2rem;
-}
-
-.logoText {
-  margin-left: 1rem;
-}
-
 .nav {
   margin: 0 -15px;
   align-items: center;
@@ -16,6 +6,16 @@
   padding: 0.75rem 0;
   white-space: nowrap;
   justify-content: space-between;
+}
+
+.logoWithText {
+  display: flex;
+  align-items: center;
+  margin: 0 2rem;
+}
+
+.logoText {
+  margin-left: 1rem;
 }
 
 .navToggle {
@@ -42,23 +42,23 @@
 }
 
 @media (max-width: 1000px) {
-  .mobileTitle {
+  .nav {
+    padding: 0;
+  }
+
+  /* .mobileTitle {
     margin-left: 2.5rem;
     display: contents;
-  }
+  } */
 
   .mobileTitle h1 {
     font-size: 1.2rem;
-    margin-right: 1rem;
-    margin-left: 8rem;
+    /* margin-right: 1rem;
+    margin-left: 8rem; */
   }
 
   .mobileTitle button {
     margin-right: auto;
-  }
-
-  .nav {
-    padding: 0;
   }
 
   .navCollapse {
@@ -77,6 +77,10 @@
 }
 
 @media (max-width: 700px) {
+  .nav {
+    padding: 0;
+  }
+
   .logoWithText {
     margin: 0 !important;
     margin-right: 2rem;
@@ -100,18 +104,33 @@
   }
 
   .mobileTitle {
-    margin-left: 2.5rem;
-    display: contents;
+    display: inline-flex;
+    align-items: center;
+    background-color: unset;
+  }
+
+  .mobileTitleClose {
+    display: inline-flex;
+    align-items: center;
+    background-color: #000000;
   }
 
   .mobileTitle h1 {
     font-size: 1.2rem;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
     margin-left: 0;
   }
 
-  .nav {
-    padding: 0;
+  .hamburger {
+    margin-right: 0.5rem;
+    height: 28px;
+    width: 28px;
+  }
+
+  .close {
+    margin-left: 0.5rem;
+    height: 18px;
+    width: 18px;
   }
 
   .navCollapse {
