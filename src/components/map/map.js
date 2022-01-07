@@ -139,7 +139,7 @@ export default function Map({
                 [maxY, maxX],
               ]}
               scrollWheelZoom={false}
-              style={dimensions}
+              style={Object.assign(dimensions, {backgroundColor: "#fff"})}
               zoomControl={false}
               dragging={windowWidth > 800}
               className={styles.mapContainer}
