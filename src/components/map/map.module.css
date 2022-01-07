@@ -112,9 +112,9 @@ hr {
 }
 
 .opoLabel {
-  box-shadow: none;
-  background: #ffffffBF;
-  border: none;
+  box-shadow: none !important;
+  background: #ffffffBF !important;
+  border: none !important;
   font-size: 10px;
   font-weight: 600;
 }
