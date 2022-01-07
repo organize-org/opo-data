@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
-import { GeoJSON, MapContainer, ZoomControl } from "react-leaflet";
+import { GeoJSON, MapContainer, ZoomControl, Tooltip } from "react-leaflet";
 import { useStaticQuery, graphql, navigate } from "gatsby";
 import bbox from "@turf/bbox";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
@@ -179,6 +179,11 @@ export default function Map({
                   opacity: 0.75,
                   weight: 0.75,
                 })}
+                onEachFeature={ (feature, layer) =>
+                  state ? layer.bindTooltip( (layer) =>
+     layer.feature.properties.opo, {permanent: true, direction: 'center', className: styles.opoLabel}
+ ) : layer
+                }
               />
               <GeoJSON
                 key={state ? state : opo ? opo : "state"}

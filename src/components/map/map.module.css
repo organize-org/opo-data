@@ -111,6 +111,14 @@ hr {
   opacity: 1;
 }
 
+.opoLabel {
+  box-shadow: none;
+  background: none;
+  border: none;
+  font-size: 10px;
+  font-weight: 600;
+}
+
 @media (max-width: 1100px) {
   .closeModal {
     opacity: 0.8;

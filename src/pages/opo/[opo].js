@@ -33,8 +33,6 @@ export default function Opo({ data: { oposGeoData }, opo }) {
   const { notes } = stateContent;
   const {opoHeadings, stateHeadings, stats, sources } = opoContent;
 
-  console.log(opoHeadings);
-
   const opoHeadlines = notes.filter(note =>
     note.tags?.includes(opo.toUpperCase())
   );
@@ -68,8 +66,6 @@ export default function Opo({ data: { oposGeoData }, opo }) {
     };
     return [...acc, formattedData];
   }, []);
-
- console.log(ethnicityData);
 
   return (
     <Layout crumbLabel={formatOpoName(opoData)} sources={sources} social={true}>
