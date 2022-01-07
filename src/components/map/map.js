@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
-import { GeoJSON, MapContainer, ZoomControl, Tooltip } from "react-leaflet";
+import { GeoJSON, MapContainer, ZoomControl } from "react-leaflet";
 import { useStaticQuery, graphql, navigate } from "gatsby";
 import bbox from "@turf/bbox";
 import useWindowDimensions from "../../hooks/useWindowDimensions";

@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { graphql, navigate } from "gatsby";
+import { navigate } from "gatsby";
 import ReactMarkdown from "react-markdown";
 
 import Layout from "../../components/layout/layout";
@@ -54,9 +54,6 @@ export default function Opo({ opo }) {
     a_: "Asian",
   };
   const ethnicityData = ["nhw_", "nhb_", "h_", "a_"].reduce((acc, prefix) => {
-    const data = Object.fromEntries(
-      Object.entries(opoData).filter(([key]) => key.includes(prefix))
-    );
     const formattedData = {
       ethnicity: ethnicityKeys[prefix],
       donors: opoData[prefix + "donors"],
