@@ -179,10 +179,14 @@ export default function Map({
                   opacity: 0.75,
                   weight: 0.75,
                 })}
-                onEachFeature={ (feature, layer) =>
-                  state ? layer.bindTooltip( (layer) =>
-     layer.feature.properties.opo, {permanent: true, direction: 'center', className: styles.opoLabel}
- ) : layer
+                onEachFeature={(feature, layer) =>
+                  state
+                    ? layer.bindTooltip(layer => layer.feature.properties.opo, {
+                        permanent: true,
+                        direction: "center",
+                        className: styles.opoLabel,
+                      })
+                    : layer
                 }
               />
               <GeoJSON

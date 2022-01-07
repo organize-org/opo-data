@@ -20,8 +20,8 @@ import useDataMaps from "../../hooks/useDataMaps";
 import stateContent from "../state/[state].content.yml";
 import opoContent from "./[opo].content.yml";
 
-export default function Opo({ data: { oposGeoData }, opo }) {
-  const [{ opoDataMap, stateDataMap }] = useDataMaps();
+export default function Opo({ opo }) {
+  const [{ opoDataMap }] = useDataMaps();
 
   const opoData = opoDataMap[opo?.toLocaleUpperCase()];
   if (!opoData) {
@@ -31,7 +31,7 @@ export default function Opo({ data: { oposGeoData }, opo }) {
   }
 
   const { notes } = stateContent;
-  const {opoHeadings, stateHeadings, stats, sources } = opoContent;
+  const { opoHeadings, stateHeadings, stats, sources } = opoContent;
 
   const opoHeadlines = notes.filter(note =>
     note.tags?.includes(opo.toUpperCase())
@@ -205,22 +205,3 @@ export default function Opo({ data: { oposGeoData }, opo }) {
     </Layout>
   );
 }
-
-export const query = graphql`
-  query {
-    oposGeoData: file(relativePath: { eq: "data/dsas.geojson" }) {
-      childGeoJson {
-        features {
-          geometry {
-            type
-            coordinates
-          }
-          properties {
-            opo
-          }
-          type
-        }
-      }
-    }
-  }
-`;

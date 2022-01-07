@@ -56,7 +56,7 @@
 }
 
 .stats h4 {
-  margin-top: 0
+  margin-top: 0;
 }
 .stats h4 p {
   margin: 0;
@@ -94,7 +94,8 @@
   padding: 0 1rem;
 }
 
-.statsComp .ceo, .statsComp .ceo p {
+.statsComp .ceo,
+.statsComp .ceo p {
   color: #c4c4c4;
   font-weight: 400;
   display: inline;
@@ -121,7 +122,6 @@
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
-
 }
 
 .headlines h3 {
