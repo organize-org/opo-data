@@ -139,7 +139,7 @@ export default function Map({
                 [maxY, maxX],
               ]}
               scrollWheelZoom={false}
-              style={Object.assign(dimensions, { backgroundColor: "#fff" })}
+              style={Object.assign(dimensions, {backgroundColor: "#fff"})}
               zoomControl={false}
               dragging={windowWidth > 800}
               className={styles.mapContainer}
@@ -181,12 +181,11 @@ export default function Map({
                 })}
                 onEachFeature={(feature, layer) =>
                   state
-                    ? (layer
-                        .bindTooltip(layer => layer.feature.properties.opo, {
-                          permanent: true,
-                          direction: "center",
-                        })
-                        .getContainer().className += " " + styles.opoLabel)
+                    ? layer.bindTooltip(layer => layer.feature.properties.opo, {
+                        permanent: true,
+                        direction: "center",
+                        className: styles.opoLabel,
+                      })
                     : layer
                 }
               />
