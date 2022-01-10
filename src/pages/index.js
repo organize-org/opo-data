@@ -4,20 +4,19 @@ import { Row, Col } from "react-bootstrap";
 import { ArrowRight } from "react-bootstrap-icons";
 import ReactMarkdown from "react-markdown";
 import ReactPlayer from "react-player";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 
 import EquitySection from "../components/equitySection/equitySection";
 import Layout from "../components/layout/layout";
 import Map from "../components/map/map";
 import Social from "../components/social/social";
 import QuoteWithImage from "../components/quoteWithImage/quoteWithImage";
-import SelectState from "../components/selectState/selectState";
+// import SelectState from "../components/selectState/selectState";
 
 import * as styles from "./index.module.css";
 import content from "./index.content.yml";
 
 export default function Dashboard({ data: { articleImages, quoteImage } }) {
-
   const { articles, stats, quote, video, sources } = content;
   const articleImgsByPath = articleImages?.edges?.reduce(
     (imgMap, { node }) => ({
@@ -30,14 +29,22 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
   return (
     <Layout sources={sources}>
       <Row className={styles.topBar}>
-        <Col>
-          <SelectState
-            label="View state data"
-          />
+        <Col className={styles.topHeader} xs={12} md={8}>
+          <StaticImage src="../images/icons/map.png" />
+          <h2>Data on U.S. Organ Procurement Organizations (OPO)</h2>
         </Col>
         <Social />
       </Row>
+      {/* <SelectState /> */}
       <Map interactive={true} legend={true} zoomControl={true} />
+      <Col
+        className={`${styles.secondHeader} + ${styles.topHeader}`}
+        xs={10}
+        md={6}
+      >
+        <StaticImage src="../images/icons/triangle.png" />
+        <h2>Poor OPO Performance Costs Lives</h2>
+      </Col>
       <Row className={styles.statsSection}>
         {Object.values(stats).map(({ title, value }) => (
           <Col className="mx-5" key={title}>
@@ -58,6 +65,14 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
         <QuoteWithImage quote={quote} />
       </Row>
       <EquitySection />
+      <Col
+        className={`${styles.thirdHeader} + ${styles.topHeader}`}
+        xs={10}
+        md={5}
+      >
+        <StaticImage src="../images/icons/letter.png" />
+        <h2>Organ donation in the news</h2>
+      </Col>
       <Row className={styles.videoSection}>
         <Col>
           <h3>{video.title}</h3>
