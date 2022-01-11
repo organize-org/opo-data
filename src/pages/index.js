@@ -38,11 +38,7 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
       </Row>
       <SelectState />
       <Map interactive={true} legend={true} zoomControl={true} />
-      <Col
-        className={`${styles.secondHeader} + ${styles.topHeader}`}
-        xs={10}
-        md={6}
-      >
+      <Col className={styles.secondHeader} xs={10} md={6}>
         <StaticImage src="../images/icons/triangle.png" />
         <h2>Poor OPO Performance Costs Lives</h2>
       </Col>
@@ -67,7 +63,7 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
       </Row>
       <EquitySection />
       <Col
-        className={`${styles.thirdHeader} + ${styles.topHeader}`}
+        className={`${styles.thirdHeader} + ${styles.secondHeader}`}
         xs={10}
         md={5}
       >
