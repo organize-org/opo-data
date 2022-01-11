@@ -29,11 +29,18 @@
   display: inline-flex;
   align-items: center;
   background-color: #000000;
-  padding: 0.2rem;
+  padding: 0.6rem;
+  padding-left: 1.5rem;
   margin-left: auto;
 }
 
 .mobileTitle h1 {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+.mobileTitleClose h1 {
   font-size: 1.2rem;
   margin-right: 0.5rem;
   margin-left: 0;
@@ -55,11 +62,16 @@
   border: none;
   padding: 0;
   margin-right: 1rem;
+  border-color: transparent !important;
+  display: contents;
 }
 
 .navCollapse {
+  margin-right: 0;
+  margin-bottom: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   justify-content: flex-end;
-  margin-right: 1rem;
 }
 
 .navLink {
@@ -81,30 +93,7 @@
 }
 
 @media (max-width: 990px) {
-  .mobileTitleClose {
-    display: inline-flex;
-    align-items: center;
-    background-color: #000000;
-    padding: 0.2rem;
-  }
-
-  .hamburger {
-    margin-right: 0.5rem;
-    height: 28px;
-    width: 28px;
-  }
-
-  .close {
-    margin-left: 0.5rem;
-    height: 24px;
-    width: 24px;
-  }
-
   .navCollapse {
-    margin-right: 0;
-    margin-bottom: 0;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
     background-color: #000000;
   }
 
@@ -131,11 +120,11 @@
   }
 
   .logoText > *:nth-child(2) {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   .logoText > *:nth-child(1) {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   .logoText {
@@ -143,48 +132,7 @@
   }
 
   .mobileTitle {
-    display: inline-flex;
-    align-items: center;
     background-color: unset;
-  }
-
-  .mobileTitleClose {
-    display: inline-flex;
-    align-items: center;
-    background-color: #000000;
-    padding: 0.2rem;
-  }
-
-  .mobileTitle h1 {
-    font-size: 1.2rem;
-    margin-right: 0.5rem;
-    margin-left: 0;
-  }
-
-  .hamburger {
-    margin-right: 0.5rem;
-    height: 28px;
-    width: 28px;
-  }
-
-  .close {
-    margin-left: 0.5rem;
-    height: 24px;
-    width: 24px;
-  }
-
-  .navCollapse {
-    margin-right: 0;
-    margin-bottom: 0;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    background-color: #000000;
-  }
-
-  .navLink {
-    padding: 0.2rem !important;
-    margin-left: 1rem;
-    font-size: 0.8rem;
   }
 }
 

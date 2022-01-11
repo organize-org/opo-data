@@ -23,8 +23,7 @@ export default function Navigation({ site }) {
 
   const [icon, setIcon] = useState(hamburger);
 
-  const toggle = e => {
-    e.preventDefault();
+  const toggle = () => {
     if (icon.props.alt === "hamburger") {
       setIcon(close);
     } else {
@@ -54,16 +53,15 @@ export default function Navigation({ site }) {
             : styles.mobileTitleClose
         }
       >
-        <h1>Menu</h1>
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"
           className={styles.navToggle}
           onClick={toggle}
         >
+          <h1>Menu</h1>
           {icon}
         </Navbar.Toggle>
       </section>
-      }
       <Navbar.Collapse id="basic-navbar-nav" className={styles.navCollapse}>
         <Nav>
           <Nav.Link href="#" className={styles.navLink}>
