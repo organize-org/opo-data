@@ -11,7 +11,8 @@ import Layout from "../components/layout/layout";
 import Map from "../components/map/map";
 import Social from "../components/social/social";
 import QuoteWithImage from "../components/quoteWithImage/quoteWithImage";
-// import SelectState from "../components/selectState/selectState";
+import Footer from "../components/footer/footer";
+import SelectState from "../components/selectState/selectState";
 
 import * as styles from "./index.module.css";
 import content from "./index.content.yml";
@@ -35,7 +36,7 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
         </Col>
         <Social />
       </Row>
-      {/* <SelectState /> */}
+      <SelectState />
       <Map interactive={true} legend={true} zoomControl={true} />
       <Col
         className={`${styles.secondHeader} + ${styles.topHeader}`}
@@ -113,6 +114,7 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
           </Col>
         ))}
       </Row>
+      <Footer />
     </Layout>
   );
 }

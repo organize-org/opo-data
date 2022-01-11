@@ -61,33 +61,6 @@ export default function Layout({ crumbLabel, children, sources, social }) {
           </ol>
         </Row>
       ) : null}
-      <Row className={styles.footer}>
-        <p>
-          Research supported by Arnold Ventures and Schmidt Futures in
-          partnership with Organize and the Federation of American Scientists.
-        </p>
-        <StaticImage
-          src="../../images/logos/Arnold Ventures.png"
-          alt="Arnold Ventures"
-          height={35}
-        />
-        <StaticImage
-          src="../../images/logos/Schmidt Futures.png"
-          alt="Schmidt Futures"
-          height={35}
-        />
-        <StaticImage src="../../images/logos/fas.png" alt="FAS" height={35} />
-        <StaticImage
-          src="../../images/logos/bloomworks.png"
-          alt="Bloomworks"
-          height={35}
-        />
-        <StaticImage
-          src="../../images/logos/organize.png"
-          alt="Organize"
-          height={30}
-        />
-      </Row>
     </Container>
   );
 }

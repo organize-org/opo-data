@@ -1,5 +1,7 @@
 .selectState {
   display: flex;
+  justify-content: flex-end;
+  margin-right: 3rem;
 }
 
 p {

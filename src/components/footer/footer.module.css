@@ -1,0 +1,65 @@
+.footer {
+  background-color: #f3f3f3;
+  height: 28rem;
+}
+
+.header {
+  margin-top: 5rem;
+}
+
+.header h2 {
+  color: var(--opoRed);
+  font-weight: 800;
+  margin-left: 1rem;
+  text-transform: uppercase;
+}
+
+.header img {
+  object-fit: contain !important;
+}
+
+.icon {
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+.logosOne {
+  margin-top: 10rem;
+  margin-bottom: 2.5rem;
+}
+
+.organize {
+  margin-right: 1rem;
+}
+
+.logosTwo {
+  justify-content: flex-start;
+}
+
+.schmidt {
+  margin-right: 4.5rem;
+}
+
+@media (max-width: 700px) {
+  .logosOne {
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .organize {
+    margin-bottom: 0.5rem;
+  }
+
+  .logosTwo {
+    display: inline-grid;
+    margin-left: 1rem;
+  }
+
+  .logosTwo img {
+    width: initial;
+  }
+
+  .schmidt {
+    margin-bottom: 0.5rem;
+  }
+}

@@ -5,10 +5,7 @@ import { navigate } from "gatsby";
 
 import * as styles from "./selectState.module.css";
 
-export default function SelectState({
-  label,
-  link = false,
-}) {
+export default function SelectState({ label, link = false }) {
   const [{ stateDataMap }] = useDataMaps();
 
   return (
@@ -16,7 +13,8 @@ export default function SelectState({
       <p>{label}</p>
       <Select
         className={styles.selectInput}
-        value={typeof link === "string"
+        value={
+          typeof link === "string"
             ? {
                 value: link,
                 label: link,
@@ -24,9 +22,9 @@ export default function SelectState({
             : null
         }
         onChange={({ value }) =>
-         navigate(`/state/${value}`, {
-                replace: true,
-              })
+          navigate(`/state/${value}`, {
+            replace: true,
+          })
         }
         options={Object.entries(stateDataMap)
           .sort()
@@ -34,7 +32,7 @@ export default function SelectState({
             value: key,
             label: name,
           }))}
-        placeholder="Select state"
+        placeholder="See data by state"
       />
     </div>
   );
