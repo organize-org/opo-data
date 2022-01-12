@@ -1,4 +1,5 @@
 import React, { useMemo } from "react";
+import { Link } from "gatsby";
 import { Container, Row, Table } from "react-bootstrap";
 import { useTable, useSortBy } from "react-table";
 import ReactMarkdown from "react-markdown";
@@ -10,10 +11,18 @@ import Tier from "../tier/tier";
 
 import * as styles from "./opoTable.module.css";
 
-export default function OpoTable({ headings, inState = true, opos, title }) {
+export default function OpoTable({
+  headings,
+  inState = true,
+  inOpo = false,
+  opos,
+  title,
+}) {
   const columns = useMemo(() => {
     const cols = inState
       ? ["name", "region", "tier", "donors", "shadow", "investigation"]
+      : inOpo
+      ? ["ethnicity", "death", "donors", "recovery", "rank"]
       : ["states", "name", "tier", "donors", "shadow"];
 
     const createCol = accessor => {
@@ -21,7 +30,21 @@ export default function OpoTable({ headings, inState = true, opos, title }) {
         Header: <ReactMarkdown>{headings[accessor]}</ReactMarkdown>,
         accessor,
       };
-      if (accessor === "donors" || accessor === "investigation") {
+      if (accessor === "name") {
+        return {
+          ...col,
+          Cell: props => (
+            <Link
+              to={`/opo/${opos.find(opo => opo.name === props.value)?.opo}`}
+            >
+              {props.value}
+            </Link>
+          ),
+        };
+      } else if (
+        (accessor === "donors" && !inOpo) ||
+        accessor === "investigation"
+      ) {
         return {
           ...col,
           cellClass: "text-center",
@@ -38,9 +61,19 @@ export default function OpoTable({ headings, inState = true, opos, title }) {
           cellClass: styles.tierCol,
           Cell: props => (
             <Container>
-              <Tier className={styles.tierCol} tier={props.value} />
+              <Tier
+                className={styles.tierCol}
+                tier={props.value.split(" ")[1]}
+              />
             </Container>
           ),
+        };
+      } else if (accessor === "death") {
+        return {
+          ...col,
+          sortType: (a, b) =>
+            parseInt(a.values.death?.replace(/,/g, "")) -
+            parseInt(b.values.death?.replace(/,/g, "")),
         };
       } else {
         return col;
@@ -54,7 +87,19 @@ export default function OpoTable({ headings, inState = true, opos, title }) {
       !num || isNaN(num) ? "--" : num.toLocaleString("en-US", options);
 
     return opos.map(
-      ({ donors, investigation, name, region, shadows, states, tier }) => {
+      ({
+        donors,
+        investigation,
+        name,
+        region,
+        shadows,
+        states,
+        tier,
+        death,
+        recovery,
+        ethnicity,
+        rank,
+      }) => {
         return {
           donors: formatNumber(donors),
           investigation: investigation ? "Yes" : "--",
@@ -63,6 +108,10 @@ export default function OpoTable({ headings, inState = true, opos, title }) {
           shadow: formatNumber(shadows),
           states: states,
           tier: tier,
+          ethnicity,
+          death: death?.toLocaleString(),
+          recovery: formatNumber(recovery),
+          rank: formatNumber(rank),
         };
       }
     );

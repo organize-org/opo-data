@@ -3,7 +3,7 @@ import { Row, Col } from "react-bootstrap";
 
 import { tierColors } from "../../utils/utils";
 
-export default function Tier({ className, tier }) {
+export default function Tier({ className, tier, altText = null }) {
   return (
     <Row className={className}>
       <Col className="flex-grow-0 my-auto">
@@ -16,7 +16,7 @@ export default function Tier({ className, tier }) {
           }}
         ></div>
       </Col>
-      <Col className="my-auto px-0">{tier.split(" ")[1]}</Col>
+      <Col className="my-auto px-0">{altText ? altText : tier}</Col>
     </Row>
   );
 }
