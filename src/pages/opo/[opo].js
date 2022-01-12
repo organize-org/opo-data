@@ -1,6 +1,6 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
 import { navigate } from "gatsby";
+import { Col, Row } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
 
 import Layout from "../../components/layout/layout";
@@ -15,10 +15,11 @@ import {
   formatMoney,
 } from "../../utils/utils";
 
-import * as styles from "./opo.module.css";
 import useDataMaps from "../../hooks/useDataMaps";
 import stateContent from "../state/[state].content.yml";
 import opoContent from "./[opo].content.yml";
+
+import * as styles from "./opo.module.css";
 
 export default function Opo({ opo }) {
   const [{ opoDataMap }] = useDataMaps();

@@ -1,23 +1,24 @@
 import React from "react";
+import { graphql, navigate } from "gatsby";
 import { Col, Row } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
 import ReactPlayer from "react-player";
-import { graphql, navigate } from "gatsby";
 import booleanIntersects from "@turf/boolean-intersects";
 
 import Layout from "../../components/layout/layout";
 import Map from "../../components/map/map";
+import SelectState from "../../components/selectState/selectState";
 import OpoTable from "../../components/opoTable/opoTable";
-import useDataMaps from "../../hooks/useDataMaps";
+
 import {
   findStateFeature,
   formatStateName,
   formatNumber,
 } from "../../utils/utils";
+import useDataMaps from "../../hooks/useDataMaps";
+import content from "./[state].content.yml";
 
 import * as styles from "./state.module.css";
-import content from "./[state].content.yml";
-import SelectState from "../../components/selectState/selectState";
 
 export default function State({ data: { statesGeoData }, state }) {
   const [{ opoDataMap, stateDataMap }] = useDataMaps();
