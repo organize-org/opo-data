@@ -22,7 +22,7 @@ export default function Footer() {
           <a href="organize.org"> Organize.org</a>.
         </p>
       </Col>
-      <Col>
+      <Col className={styles.logos}>
         <Row className={styles.logosOne}>
           <StaticImage
             src="../../images/logos/organize.png"
