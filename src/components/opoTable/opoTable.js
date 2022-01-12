@@ -80,7 +80,7 @@ export default function OpoTable({
       }
     };
     return cols.map(col => createCol(col));
-  }, [headings, inState]);
+  }, [headings, inState, opos, inOpo]);
 
   const data = useMemo(() => {
     const formatNumber = (num, options) =>

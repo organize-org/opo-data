@@ -131,7 +131,8 @@ export default function State({ data: { statesGeoData }, state }) {
           <Row className={styles.mapV2}>
             <Map
               dimensions={{ height: "16rem", width: "24rem" }}
-              state={state}
+              data={state}
+              page="state"
               zoomControl={false}
             />
           </Row>

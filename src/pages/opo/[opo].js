@@ -86,8 +86,9 @@ export default function Opo({ opo }) {
           <Row className={styles.map}>
             <Map
               dimensions={{ height: "24rem", width: "24rem" }}
-              opo={opo}
+              data={opo}
               zoomControl={false}
+              page="opo"
             />
           </Row>
           <Row className={styles.stats}>
