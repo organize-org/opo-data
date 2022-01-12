@@ -4,10 +4,11 @@ import { Container, Row, Table } from "react-bootstrap";
 import { useTable, useSortBy } from "react-table";
 import ReactMarkdown from "react-markdown";
 
+import Tier from "../tier/tier";
+
 import ChevronUp from "../../images/icons/chevron-up.svg";
 import ChevronDown from "../../images/icons/chevron-down.svg";
 import ChevronDownGrey from "../../images/icons/chevron-down-grey.svg";
-import Tier from "../tier/tier";
 
 import * as styles from "./opoTable.module.css";
 
@@ -80,7 +81,7 @@ export default function OpoTable({
       }
     };
     return cols.map(col => createCol(col));
-  }, [headings, inState]);
+  }, [headings, inState, opos, inOpo]);
 
   const data = useMemo(() => {
     const formatNumber = (num, options) =>

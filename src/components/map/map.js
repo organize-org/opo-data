@@ -32,8 +32,8 @@ export default function Map({
   dimensions = { height: "55vh", width: "100%" },
   interactive = false,
   legend = false,
-  state = null,
-  opo = null,
+  page = "main",
+  data,
   zoomControl = false,
 }) {
   const windowWidth = useWindowDimensions().width;
@@ -79,8 +79,8 @@ export default function Map({
   // State geojson: either individual state or whole US, mapped to hoverable name
   const stateGeoJson = {
     ...statesGeoData.childGeoJson,
-    features: (state
-      ? [findStateFeature(statesGeoData, state)]
+    features: (page === "state"
+      ? [findStateFeature(statesGeoData, data)]
       : statesGeoData.childGeoJson.features
     ).map(f => ({
       ...f,
@@ -93,8 +93,8 @@ export default function Map({
 
   const opoGeoJson = {
     ...dsaGeoData.childGeoJson,
-    features: (opo
-      ? [findOpoFeature(dsaGeoData, opo)]
+    features: (page === "opo"
+      ? [findOpoFeature(dsaGeoData, data)]
       : dsaGeoData.childGeoJson.features
     ).map(f => ({
       ...f,
@@ -107,7 +107,7 @@ export default function Map({
 
   // Map bounding box: individual state or continential US (first 48)
   const [minX, minY, maxX, maxY] = bbox(
-    opo
+    page === "opo"
       ? {
           ...opoGeoJson,
           features: opoGeoJson.features,
@@ -122,45 +122,39 @@ export default function Map({
     <Row className={styles.map}>
       <div style={dimensions}>
         {legend && <Legend />}
-        {state || opo ? null : <hr />}
+        {page !== "main" ? null : <hr />}
         {
           // Hack: [`window` dependency for Leaflet](https://www.gatsbyjs.com/docs/debugging-html-builds/#fixing-third-party-modules)
           typeof window !== "undefined" && (
             <MapContainer
-              key={
-                state
-                  ? state + "container"
-                  : opo
-                  ? opo + "container"
-                  : "state container"
-              }
+              key={page === "main" ? "state container" : data + "container"}
               bounds={[
                 [minY, minX],
                 [maxY, maxX],
               ]}
               scrollWheelZoom={false}
-              style={Object.assign(dimensions, {backgroundColor: "#fff"})}
+              style={Object.assign(dimensions, { backgroundColor: "#fff" })}
               zoomControl={false}
               dragging={windowWidth > 800}
               className={styles.mapContainer}
             >
               {zoomControl && <ZoomControl position="bottomright" />}
               <GeoJSON
-                key={state ? state + "opos" : opo ? opo + "opos" : "state opos"}
+                key={page === "main" ? "state opos" : data + "opos"}
                 data={
-                  opo
+                  page === "opo"
                     ? {
                         ...opoGeoJson,
                         properties: {
                           ...opoGeoJson.properties,
-                          tier: opo.tier,
+                          tier: data.tier,
                         },
                       }
-                    : (state
+                    : (page === "state"
                         ? dsaGeoData?.childGeoJson?.features.filter(
                             f =>
                               opoDataMap[f.properties.opo].statesWithRegions[
-                                state
+                                data
                               ] !== undefined
                           )
                         : dsaGeoData?.childGeoJson?.features
@@ -180,7 +174,7 @@ export default function Map({
                   weight: 0.75,
                 })}
                 onEachFeature={(feature, layer) =>
-                  state
+                  page === "state"
                     ? layer.bindTooltip(layer => layer.feature.properties.opo, {
                         permanent: true,
                         direction: "center",
@@ -190,7 +184,7 @@ export default function Map({
                 }
               />
               <GeoJSON
-                key={state ? state : opo ? opo : "state"}
+                key={page === "main" ? "state" : data}
                 data={stateGeoJson}
                 eventHandlers={
                   interactive
@@ -250,7 +244,7 @@ export default function Map({
                     : null
                 }
                 style={{
-                  color: opo ? "black" : "white",
+                  color: page === "opo" ? "black" : "white",
                   fillOpacity: 0,
                   weight: 2,
                 }}
@@ -258,7 +252,7 @@ export default function Map({
             </MapContainer>
           )
         }
-        {state || opo ? null : <hr />}
+        {page !== "main" ? null : <hr />}
       </div>
     </Row>
   );
