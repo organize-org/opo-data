@@ -8,14 +8,14 @@ import * as styles from "./navbar.module.css";
 export default function Navigation({ site }) {
   const hamburger = (
     <StaticImage
-      src="../../images/icons/hamburger.png"
+      src="../../images/icons/mobile-menu.png"
       alt="hamburger"
       className={styles.hamburger}
     />
   );
   const close = (
     <StaticImage
-      src="../../images/icons/close.png"
+      src="../../images/icons/mobile-x.png"
       alt="close"
       className={styles.close}
     />
@@ -64,14 +64,11 @@ export default function Navigation({ site }) {
       </section>
       <Navbar.Collapse id="basic-navbar-nav" className={styles.navCollapse}>
         <Nav>
-          <Nav.Link href="#" className={styles.navLink}>
+          <Nav.Link href="/equity" className={styles.navLink}>
             Inequities in Organ Procurement
           </Nav.Link>
-          <Nav.Link href="#" className={styles.navLink}>
-            Improving the System
-          </Nav.Link>
-          <Nav.Link href="#" className={styles.navLink}>
-            About OPODATA.ORG
+          <Nav.Link href="/faqs" className={styles.navLink}>
+            About Our Organ Donation System
           </Nav.Link>
         </Nav>
       </Navbar.Collapse>
