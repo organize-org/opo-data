@@ -17,6 +17,7 @@ import {
 
 import useDataMaps from "../../hooks/useDataMaps";
 import stateContent from "../state/[state].content.yml";
+import { BoxArrowUpRight } from "react-bootstrap-icons";
 import opoContent from "./[opo].content.yml";
 
 import * as styles from "./opo.module.css";
@@ -132,13 +133,10 @@ export default function Opo({ opo }) {
                 <p className="red">{formatNumber(opoData.shadows)}</p>
               </Col>
               <Col>
-                <p>
-                  {opoData.investigation
-                    ? "Yes"
-                    : opoData.investigation === null
-                    ? "No Data"
-                    : "No"}
-                </p>
+                  {!!opoData.investigation
+                    ? <a href={opoData.investigation_url} target="_blank"> Yes <BoxArrowUpRight /> </a>
+                    : <p>No</p>
+                  }
               </Col>
             </Row>
             <Row className={styles.statsComp}>

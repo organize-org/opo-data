@@ -10,6 +10,7 @@ export default function useDataMaps() {
               compensation
               donors
               investigation
+              investigation_url
               name
               opo
               nhw_donors
