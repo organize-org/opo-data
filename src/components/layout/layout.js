@@ -1,25 +1,14 @@
 import React from "react";
-import { useStaticQuery, graphql, Link } from "gatsby";
+import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { Breadcrumb, Container, Row } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
 import Social from "../../components/social/social";
+import Footer from "../footer/footer";
 
 import * as styles from "./layout.module.css";
 
 export default function Layout({ crumbLabel, children, sources, social }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `
-  );
-
   return (
     <Container fluid>
       <Row className={styles.header}>
@@ -30,8 +19,7 @@ export default function Layout({ crumbLabel, children, sources, social }) {
             placeholder="none"
           />
           <div className={styles.logoText}>
-            <h1>{site.siteMetadata.title}</h1>
-            <h2>Performance Comparison</h2>
+            <h1>OPODATA.ORG</h1>
           </div>
         </Link>
         <Link to="/faqs" className={styles.faqLink}>
@@ -61,6 +49,7 @@ export default function Layout({ crumbLabel, children, sources, social }) {
           </ol>
         </Row>
       ) : null}
+      <Footer />
     </Container>
   );
 }

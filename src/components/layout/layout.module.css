@@ -18,6 +18,11 @@
   margin-left: 1rem;
 }
 
+.logoText h1 {
+  font-size: 2rem;
+  line-height: unset;
+}
+
 .faqLink {
   position: absolute;
   right: 1rem;

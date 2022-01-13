@@ -24,8 +24,9 @@
 .topHeader {
   display: inline-flex;
   flex-wrap: nowrap;
-  justify-content: flex-end;
   margin-left: 2rem;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .topHeader h2 {
@@ -46,6 +47,7 @@
   display: inline-flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
+  align-items: center;
 }
 
 .secondHeader h2 {
@@ -78,6 +80,8 @@
 
 .statsSection h3 p {
   margin: 0rem;
+  line-height: 1.5;
+  text-transform: none;
 }
 
 .videoSection {

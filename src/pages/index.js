@@ -11,7 +11,6 @@ import Layout from "../components/layout/layout";
 import Map from "../components/map/map";
 import Social from "../components/social/social";
 import QuoteWithImage from "../components/quoteWithImage/quoteWithImage";
-import Footer from "../components/footer/footer";
 import SelectState from "../components/selectState/selectState";
 
 import * as styles from "./index.module.css";
@@ -31,7 +30,7 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
     <Layout sources={sources}>
       <Row className={styles.topBar}>
         <Col className={styles.topHeader} xs={12} md={8}>
-          <StaticImage src="../images/icons/map.png" />
+          <StaticImage src="../images/icons/data.png" />
           <h2>Data on U.S. Organ Procurement Organizations (OPO)</h2>
         </Col>
         <Social />
@@ -39,7 +38,7 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
       <SelectState />
       <Map interactive={true} legend={true} zoomControl={true} />
       <Col className={styles.secondHeader} xs={10} md={6}>
-        <StaticImage src="../images/icons/triangle.png" />
+        <StaticImage src="../images/icons/performance.png" />
         <h2>Poor OPO Performance Costs Lives</h2>
       </Col>
       <Row className={styles.statsSection}>
@@ -67,7 +66,7 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
         xs={10}
         md={5}
       >
-        <StaticImage src="../images/icons/letter.png" />
+        <StaticImage src="../images/icons/news.png" />
         <h2>Organ donation in the news</h2>
       </Col>
       <Row className={styles.videoSection}>
@@ -110,7 +109,6 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
           </Col>
         ))}
       </Row>
-      <Footer />
     </Layout>
   );
 }

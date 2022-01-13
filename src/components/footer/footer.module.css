@@ -1,6 +1,5 @@
 .footer {
   background-color: #f3f3f3;
-  height: 28rem;
   align-items: center;
 }
 
@@ -24,23 +23,30 @@
   margin-bottom: 2rem;
 }
 
+.research {
+  margin-top: 1rem;
+}
+
 .logos {
   margin-right: 1rem;
 }
 
 .logosOne {
   margin-bottom: 2.5rem;
-  flex-wrap: nowrap;
   justify-content: space-between;
 }
 
-.organize {
+.schmidt {
   margin-right: 1rem;
 }
 
 .logosTwo {
   flex-wrap: nowrap;
   justify-content: space-between;
+}
+
+.bloom {
+  margin-right: 1rem;
 }
 
 @media (max-width: 900px) {
@@ -63,16 +69,20 @@
   .logosOne {
     align-items: center;
     margin-bottom: 0.5rem;
-    margin-right: 0.5rem;
+    margin-right: 0.2rem;
     flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 
   .logosTwo {
     flex-wrap: wrap;
   }
 
-  .schmidt {
-    margin-bottom: 0.5rem;
+  .logosTwo img {
+    height: initial;
+  }
+
+  .bloom {
     margin-right: 0.5rem;
   }
 }

@@ -9,7 +9,7 @@ export default function Footer() {
     <Row className={styles.footer}>
       <Col className={styles.header} xs={10} md={8}>
         <Row className={styles.icon}>
-          <StaticImage src="../../images/icons/people.png" />
+          <StaticImage src="../../images/icons/about.png" />
           <h2>About Us</h2>
         </Row>
         <p>
@@ -21,38 +21,40 @@ export default function Footer() {
           on ways to improve the U.S. organ donation system, visit
           <a href="organize.org"> Organize.org</a>.
         </p>
+        <p className={styles.research}>
+          Research supported by Arnold Ventures and Schmidt Futures in
+          partnership with Organize and the Federation of American Scientists.
+        </p>
       </Col>
       <Col className={styles.logos}>
         <Row className={styles.logosOne}>
           <StaticImage
-            src="../../images/logos/organize.png"
-            alt="organize logo"
-            height={28}
-            className={styles.organize}
+            src="../../images/logos/ArnoldVentures.png"
+            alt="arnold logo"
+            height={40}
           />
           <StaticImage
-            src="../../images/logos/bloomworks.png"
-            alt="bloomworks logo"
-            height={28}
+            src="../../images/logos/SchmidtFutures.png"
+            alt="schmidt logo"
+            height={40}
+          />
+          <StaticImage
+            src="../../images/logos/fas-logo.png"
+            alt="fas logo"
+            height={40}
           />
         </Row>
         <Row className={styles.logosTwo}>
           <StaticImage
-            src="../../images/logos/schmidt.png"
-            alt="schmidt logo"
-            height={40}
-            className={styles.schmidt}
+            src="../../images/logos/bloomworks.png"
+            alt="bloom logo"
+            height={35}
+            className={styles.bloom}
           />
           <StaticImage
-            src="../../images/logos/av.png"
-            alt="arnold venture logo"
-            height={40}
-            className={styles.schmidt}
-          />
-          <StaticImage
-            src="../../images/logos/fas.png"
-            alt="fas logo"
-            height={40}
+            src="../../images/logos/organize.png"
+            alt="organize logo"
+            height={35}
           />
         </Row>
       </Col>
