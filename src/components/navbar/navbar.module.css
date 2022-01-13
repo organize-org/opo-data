@@ -1,0 +1,143 @@
+.nav {
+  margin: 0 -15px;
+  align-items: center;
+  flex-direction: row;
+  background-color: var(--opoBlack);
+  padding: 0.75rem 0;
+  white-space: nowrap;
+  justify-content: space-between;
+}
+
+.logoWithText {
+  display: flex;
+  align-items: center;
+  margin: 0 2rem;
+}
+
+.logoText {
+  margin-left: 1rem;
+}
+
+.mobileTitle {
+  display: inline-flex;
+  align-items: center;
+  background-color: unset;
+  margin-left: auto;
+}
+
+.mobileTitleClose {
+  display: inline-flex;
+  align-items: center;
+  background-color: #000000;
+  padding: 0.6rem;
+  padding-left: 1.5rem;
+  margin-left: auto;
+}
+
+.mobileTitle h1 {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+.mobileTitleClose h1 {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+  margin-left: 0;
+}
+
+.hamburger {
+  margin-right: 0.5rem;
+  height: 28px;
+  width: 28px;
+}
+
+.close {
+  margin-left: 0.5rem;
+  height: 24px;
+  width: 24px;
+}
+
+.navToggle {
+  border: none;
+  padding: 0;
+  margin-right: 1rem;
+  border-color: transparent !important;
+  display: contents;
+}
+
+.navCollapse {
+  margin-right: 0;
+  margin-bottom: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  justify-content: flex-end;
+}
+
+.navLink {
+  color: var(--opoWhiteSmoke) !important;
+  font-size: 1rem;
+  margin: auto;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1100px) {
+  .logoWithText > *:nth-child(1) {
+    display: none;
+  }
+}
+
+@media (max-width: 990px) {
+  .navCollapse {
+    background-color: #000000;
+  }
+
+  .navLink {
+    padding: 0.2rem !important;
+    margin-left: 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .nav {
+    padding: 0;
+  }
+
+  .logoWithText {
+    margin: 0 !important;
+    margin-right: 2rem;
+    text-align: left;
+  }
+
+  .logoWithText > *:nth-child(1) {
+    display: none;
+  }
+
+  .logoText > *:nth-child(2) {
+    font-size: 0.7rem;
+  }
+
+  .logoText > *:nth-child(1) {
+    font-size: 0.7rem;
+  }
+
+  .logoText {
+    margin: 0 !important;
+  }
+
+  .mobileTitle {
+    background-color: unset;
+  }
+}
+
+@media (min-width: 992px) {
+  .mobileTitle h1 {
+    display: none !important;
+  }
+}

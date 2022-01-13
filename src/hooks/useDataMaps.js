@@ -12,9 +12,27 @@ export default function useDataMaps() {
               investigation
               name
               opo
+              nhw_donors
+              nhb_donors
+              h_donors
+              a_donors
+              nhw_recovery
+              nhb_recovery
+              h_recovery
+              a_recovery
+              nhw_death
+              nhb_death
+              h_death
+              a_death
+              nhw_rank
+              nhb_rank
+              h_rank
+              a_rank
               shadows
               states
               tier
+              ceo
+              board
             }
           }
         }

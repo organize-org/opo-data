@@ -1,7 +1,7 @@
 export const tierColors = {
-  "1 Passing": "#C4C4C4",
-  "2 Underperforming": "#FFB042",
-  "3 Failing": "#D43C37",
+  Passing: "#C4C4C4",
+  Underperforming: "#FFB042",
+  Failing: "#D43C37",
 };
 
 export const racialDemographics = {
@@ -21,6 +21,12 @@ export const findStateFeature = (statesGeoData, abbrev) =>
         ({ properties: { abbreviation } }) => abbreviation === abbrev
       )
     : null;
+export const findOpoFeature = (dsaGeoJson, abbr) =>
+  abbr
+    ? dsaGeoJson?.childGeoJson?.features?.find(
+        ({ properties: { opo } }) => opo === abbr
+      )
+    : null;
 
 export const formatNumber = (num, options) =>
   !num || isNaN(num) ? "--" : num.toLocaleString("en-US", options);
@@ -33,5 +39,19 @@ export const formatPercent = percent =>
         minimumFractionDigits: 2,
       })}`;
 
+export const formatMoney = num => {
+  return formatNumber(num, {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  });
+};
+
 export const formatStateName = ({ abbreviation, name }) =>
   `${name} (${abbreviation.toLocaleUpperCase()})`;
+
+export const formatOpoName = ({ name, opo }) =>
+  `${name} (${opo.toUpperCase()})`;
+
+export const formatOPORank = opoDate => 99;
