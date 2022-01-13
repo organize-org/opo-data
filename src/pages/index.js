@@ -8,13 +8,15 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import EquitySection from "../components/equitySection/equitySection";
 import Layout from "../components/layout/layout";
-import Map from "../components/map/map";
+// import Map from "../components/map/map";
 import Social from "../components/social/social";
 import QuoteWithImage from "../components/quoteWithImage/quoteWithImage";
 import SelectState from "../components/selectState/selectState";
 
 import * as styles from "./index.module.css";
 import content from "./index.content.yml";
+
+import DonorMap from "../components/donorMapOverlay/donorMap";
 
 export default function Dashboard({ data: { articleImages, quoteImage } }) {
   const { articles, stats, quote, video, sources } = content;
@@ -35,7 +37,10 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
         </Col>
         <Social />
       </Row>
-      <Map interactive={true} legend={true} zoomControl={true} />
+
+      {/* <Map interactive={true} legend={true} zoomControl={true} /> */}
+      <DonorMap interactive={true} legend={true} zoomControl={true} />
+
       <Row className={styles.statsSection}>
         {Object.values(stats).map(({ title, value }) => (
           <Col className="mx-5" key={title}>

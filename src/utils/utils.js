@@ -4,6 +4,25 @@ export const tierColors = {
   Failing: "#D43C37",
 };
 
+export const donorMapColors = nhb_rank => {
+  switch (nhb_rank) {
+    case nhb_rank < 7.5:
+      return "#4E1C19";
+    case nhb_rank > 7.5 && nhb_rank < 9.4:
+      return "#89322B";
+    case nhb_rank > 9.4 && nhb_rank < 11.4:
+      return "#D43C37";
+    case nhb_rank > 11.4 && nhb_rank < 13.0:
+      return "#FFB042";
+    case nhb_rank > 13.0 && nhb_rank < 15.4:
+      return "#F9D558";
+    case nhb_rank > 15.4:
+      return "#00768F";
+    default:
+      return `'Missing Data' + '#C4C4C4'`;
+  }
+};
+
 export const racialDemographics = {
   race_perf_white: "White",
   race_perf_native: "American Indian/Alaskan Native",
