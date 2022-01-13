@@ -1,8 +1,5 @@
 .selectState {
   display: flex;
-  justify-content: flex-end;
-  margin-right: 3rem;
-  margin-bottom: 2rem;
 }
 
 p {
@@ -11,6 +8,6 @@ p {
 }
 
 .selectInput {
-  width: 250px;
+  width: 20rem;
   z-index: 1002;
 }
