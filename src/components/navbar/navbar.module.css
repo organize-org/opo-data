@@ -18,6 +18,10 @@
   margin-left: 1rem;
 }
 
+.logoText h1 {
+  font-size: 2rem;
+}
+
 .mobileTitle {
   display: inline-flex;
   align-items: center;
@@ -105,10 +109,6 @@
 }
 
 @media (max-width: 800px) {
-  .nav {
-    padding: 0;
-  }
-
   .logoWithText {
     margin: 0 !important;
     margin-right: 2rem;
@@ -119,16 +119,9 @@
     display: none;
   }
 
-  .logoText > *:nth-child(2) {
-    font-size: 0.7rem;
-  }
-
-  .logoText > *:nth-child(1) {
-    font-size: 0.7rem;
-  }
-
   .logoText {
     margin: 0 !important;
+    font-size: 2rem;
   }
 
   .mobileTitle {
