@@ -115,6 +115,7 @@ export default function State({ data: { statesGeoData }, state }) {
       sources={sources}
       social={true}
     >
+      {/* State name, top-level stats, and map */}
       <Row className={styles.hero}>
         <Row>
           <h2 className={styles.title}>{formatStateName(stateData)}</h2>
@@ -178,6 +179,17 @@ export default function State({ data: { statesGeoData }, state }) {
           </Row>
         </Row>
       </Row>
+      {/* OPOs servicing state */}
+      <Row className={styles.serviceTable}>
+        {inStateOpos.length > 0 && (
+          <OpoTable
+            headings={headings}
+            opos={inStateOpos}
+            title={`OPOS Servicing ${stateData.name}`}
+          />
+        )}
+      </Row>
+      {/* News & notes (if exists) */}
       {stateData?.notes?.length > 0 && (
         <Row className={styles.news}>
           <Row>
@@ -195,30 +207,7 @@ export default function State({ data: { statesGeoData }, state }) {
           <hr />
         </Row>
       )}
-      <Row className={styles.serviceTable}>
-        {inStateOpos.length > 0 && (
-          <OpoTable
-            headings={headings}
-            opos={inStateOpos}
-            title={`OPOS Servicing ${stateData.name}`}
-          />
-        )}
-      </Row>
-      {/* This data will be the bar charts
-        {inStateOpos
-          .filter(({ notes }) => notes?.length)
-          .map(({ name, notes }) => (
-            <Row key={name}>
-              <h4>{name}</h4>
-              <ul>
-                {notes?.map((note, i) => (
-                  <li key={`${name}-note-${i}`}>
-                    <ReactMarkdown>{note}</ReactMarkdown>
-                  </li>
-                ))}
-              </ul>
-            </Row>
-          ))} */}
+      {/* Voices for reform (if exists) */}
       {stateData.videos?.length || stateData.voicesForReform?.length ? (
         <Row className={styles.voices}>
           <Row>
@@ -250,6 +239,7 @@ export default function State({ data: { statesGeoData }, state }) {
             : null}
         </Row>
       ) : null}
+      {/* OPOs in neighboring states (if exists) */}
       {outOfStateOpos.length > 0 && (
         <Row className={styles.serviceTable}>
           <OpoTable
