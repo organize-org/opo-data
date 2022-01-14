@@ -4,7 +4,6 @@ import { Col, Row } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
 
 import Layout from "../../components/layout/layout";
-import Map from "../../components/map/map";
 import SelectState from "../../components/selectState/selectState";
 import OpoTable from "../../components/opoTable/opoTable";
 import Tier from "../../components/tier/tier";
@@ -21,6 +20,7 @@ import { BoxArrowUpRight } from "react-bootstrap-icons";
 import opoContent from "./[opo].content.yml";
 
 import * as styles from "./opo.module.css";
+import ThumnailMap from "../../components/thumbnailMap/thumbnailMap";
 
 export default function Opo({ opo }) {
   const [{ opoDataMap }] = useDataMaps();
@@ -86,10 +86,9 @@ export default function Opo({ opo }) {
         </Row>
         <Row className={styles.mapStats}>
           <Row className={styles.map}>
-            <Map
+            <ThumnailMap
               dimensions={{ height: "24rem", width: "24rem" }}
-              data={opo}
-              zoomControl={false}
+              dataId={opo}
               page="opo"
             />
           </Row>

@@ -7,9 +7,7 @@ import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 import useDataMaps from "../../hooks/useDataMaps";
 import {
-  findStateFeature,
   tierColors,
-  findOpoFeature,
 } from "../../utils/utils";
 import Tier from "../tier/tier";
 
@@ -30,104 +28,54 @@ function Legend() {
 
 export default function Map({
   dimensions = { height: "55vh", width: "100%" },
-  interactive = false,
-  legend = false,
-  page = "main",
-  data,
-  zoomControl = false,
+  view = "state", // options: state, black-donor, congressional-investigation
 }) {
   const windowWidth = useWindowDimensions().width;
 
   const [{ opoDataMap, stateDataMap }] = useDataMaps();
-  const { dsaGeoData, statesGeoData } = useStaticQuery(
-    graphql`
-      query {
-        dsaGeoData: file(relativePath: { eq: "data/dsas.geojson" }) {
-          childGeoJson {
-            features {
-              geometry {
-                type
-                coordinates
-              }
-              properties {
-                opo
-              }
-              type
-            }
-            type
-          }
-        }
-        statesGeoData: file(relativePath: { eq: "data/states.geojson" }) {
-          childGeoJson {
-            features {
-              geometry {
-                type
-                coordinates
-              }
-              properties {
-                abbreviation
-              }
-              type
-            }
-            type
-          }
-        }
-      }
-    `
-  );
-
-  // State geojson: either individual state or whole US, mapped to hoverable name
+  const { dsaGeoData, statesGeoData } = useStaticQuery(query);
+  
+  // compose state geoJson with name property
   const stateGeoJson = {
     ...statesGeoData.childGeoJson,
-    features: (page === "state"
-      ? [findStateFeature(statesGeoData, data)]
-      : statesGeoData.childGeoJson.features
-    ).map(f => ({
-      ...f,
-      properties: {
-        ...f.properties,
-        name: stateDataMap[f.properties.abbreviation].name,
-      },
-    })),
+    features: statesGeoData.childGeoJson.features
+      .map(f => ({
+        ...f,
+        properties: {
+          ...f.properties,
+          name: stateDataMap[f.properties.abbreviation].name,
+        },
+      })),
   };
 
+  // compose OPO geoJson data with performance tier,
+  // black donor rank, and congressional investigation bool
   const opoGeoJson = {
     ...dsaGeoData.childGeoJson,
-    features: (page === "opo"
-      ? [findOpoFeature(dsaGeoData, data)]
-      : dsaGeoData.childGeoJson.features
-    ).map(f => ({
+    features: dsaGeoData.childGeoJson.features
+      .map(f => ({
       ...f,
-      properties: {
-        ...f.properties,
-        tier: opoDataMap[f.properties.opo].tier,
-      },
-    })),
+        properties: {
+          ...f.properties,
+          name: opoDataMap[f.properties.opo].name,
+          tier: opoDataMap[f.properties.opo].tier,
+          black_donor_rank: opoDataMap[f.properties.opo].nhb_rank,
+          congressional_investigation: opoDataMap[f.properties.opo].investigation,
+        },
+      })),
   };
 
-  // Map bounding box: individual state or continential US (first 48)
-  const [minX, minY, maxX, maxY] = bbox(
-    page === "opo"
-      ? {
-          ...opoGeoJson,
-          features: opoGeoJson.features,
-        }
-      : {
-          ...stateGeoJson,
-          features: stateGeoJson.features,
-        }
-  );
+  const [minX, minY, maxX, maxY] = bbox(stateGeoJson)
 
   return (
     <Row className={styles.map}>
       <div style={dimensions}>
-        {legend && <Legend />}
-        {page !== "main" ? null : <hr />}
+        <Legend />
         {
           // Hack: [`window` dependency for Leaflet](https://www.gatsbyjs.com/docs/debugging-html-builds/#fixing-third-party-modules)
           typeof window !== "undefined" && (
             <MapContainer
-              key={page === "main" ? "state container" : data + "container"}
+              key="full map container"
               bounds={[
                 [minY, minX],
                 [maxY, maxX],
@@ -138,113 +86,57 @@ export default function Map({
               dragging={windowWidth > 800}
               className={styles.mapContainer}
             >
-              {zoomControl && <ZoomControl position="bottomright" />}
+              <ZoomControl position="bottomright" />
               <GeoJSON
-                key={page === "main" ? "state opos" : data + "opos"}
-                data={
-                  page === "opo"
-                    ? {
-                        ...opoGeoJson,
-                        properties: {
-                          ...opoGeoJson.properties,
-                          tier: data.tier,
-                        },
-                      }
-                    : (page === "state"
-                        ? dsaGeoData?.childGeoJson?.features.filter(
-                            f =>
-                              opoDataMap[f.properties.opo].statesWithRegions[
-                                data
-                              ] !== undefined
-                          )
-                        : dsaGeoData?.childGeoJson?.features
-                      ).map(f => ({
-                        ...f,
-                        properties: {
-                          ...f.properties,
-                          tier: opoDataMap[f.properties.opo].tier,
-                        },
-                      }))
-                }
+                key="opo-fill"
+                data={opoGeoJson}
                 style={feature => ({
                   color: "white",
-                  fillColor: tierColors[feature.properties.tier.split(" ")[1]],
+                  fillColor: getMapFill(view, feature),
                   fillOpacity: 0.85,
                   opacity: 0.75,
                   weight: 0.75,
                 })}
-                onEachFeature={(feature, layer) =>
-                  page === "state"
-                    ? layer.bindTooltip(layer => layer.feature.properties.opo, {
-                        permanent: true,
-                        direction: "center",
-                        className: styles.opoLabel,
-                      })
-                    : layer
-                }
               />
               <GeoJSON
-                key={page === "main" ? "state" : data}
-                data={stateGeoJson}
-                eventHandlers={
-                  interactive
-                    ? {
-                        mouseover: ({ propagatedFrom, target }) =>
-                          target
-                            ?.setStyle(
-                              f =>
-                                f?.properties?.name ===
-                                  propagatedFrom?.feature?.properties?.name && {
-                                  color: "white",
-                                  fillColor: "black",
-                                  fillOpacity: 0.2,
-                                  weight: 4,
-                                }
-                            )
-                            .bindTooltip(
-                              `<div class="${styles.tooltip}">
-                              <h4>
-                                ${propagatedFrom?.feature?.properties?.name}
-                              </h4>
-                              <p>State waitlist: <strong>${
-                                stateDataMap[
-                                  propagatedFrom?.feature?.properties
-                                    ?.abbreviation
-                                ].waitlist ?? "No Data"
-                              }</strong></p>
-                              <p>OPOs servicing: <strong>${
-                                Object.values(opoDataMap).filter(
-                                  ({ statesWithRegions }) =>
-                                    statesWithRegions[
-                                      propagatedFrom?.feature?.properties
-                                        ?.abbreviation
-                                    ] !== undefined
-                                ).length ?? "No Data"
-                              }</strong></p>
-                              <p>People dying every month waiting for an organ: <strong>${
-                                stateDataMap[
-                                  propagatedFrom?.feature?.properties
-                                    ?.abbreviation
-                                ].monthly ?? "No Data"
-                              }</strong></p>
-                              </div>`,
-                              {
-                                sticky: true,
-                                offset: [10, 0],
-                              }
-                            )
-                            .openTooltip(),
-                        mouseout: ({ target }) => target?.resetStyle(),
-                        click: ({ propagatedFrom }) => {
-                          navigate(
-                            `/state/${propagatedFrom?.feature?.properties?.abbreviation}`
-                          );
-                        },
-                      }
-                    : null
+                key={"geom-boundary-and-tooltip"}
+                data={view === "state" ? stateGeoJson : opoGeoJson}
+                eventHandlers={{
+                    mouseover: ({ propagatedFrom, target }) =>
+                      target
+                        ?.setStyle(
+                          f =>
+                            f?.properties?.name ===
+                              propagatedFrom?.feature?.properties?.name && {
+                              color: "white",
+                              fillColor: "black",
+                              fillOpacity: 0.2,
+                              weight: 4,
+                            }
+                        )
+                        .bindTooltip(
+                          `<div class="${styles}">
+                            <h4>${propagatedFrom?.feature?.properties?.name}</h4>
+                            ${getToolTipContent(view, propagatedFrom, stateDataMap, opoDataMap)}
+                          </div>`,
+                          {
+                            sticky: true,
+                            offset: [10, 0],
+                          }
+                        )
+                        .openTooltip(),
+                    mouseout: ({ target }) => target?.resetStyle(),
+                    click: ({ propagatedFrom }) => {
+                      navigate(
+                        view === "state" 
+                          ? `/state/${propagatedFrom?.feature?.properties?.abbreviation}`
+                          : `/opo/${propagatedFrom?.feature?.properties?.opo}`
+                      );
+                    },  
+                  }
                 }
                 style={{
-                  color: page === "opo" ? "black" : "white",
+                  color: "white",
                   fillOpacity: 0,
                   weight: 2,
                 }}
@@ -252,8 +144,113 @@ export default function Map({
             </MapContainer>
           )
         }
-        {page !== "main" ? null : <hr />}
       </div>
     </Row>
   );
+}
+
+const query = graphql`
+query {
+  dsaGeoData: file(relativePath: { eq: "data/dsas.geojson" }) {
+    childGeoJson {
+      features {
+        geometry {
+          type
+          coordinates
+        }
+        properties {
+          opo
+        }
+        type
+      }
+      type
+    }
+  }
+  statesGeoData: file(relativePath: { eq: "data/states.geojson" }) {
+    childGeoJson {
+      features {
+        geometry {
+          type
+          coordinates
+        }
+        properties {
+          abbreviation
+        }
+        type
+      }
+      type
+    }
+  }
+}
+`;
+
+const getMapFill = (view, feature) => { 
+  if (view === "state") {
+    return getStateMapFill(feature);
+  }
+
+  if (view === "black-donor") {
+    return getBlackDonorMapFill(feature);
+  }
+
+  if (view === "congressional-investigation") {
+    return getCongressionalInvestigationFill(feature);
+  }
+}
+
+const getStateMapFill = (feature) => {
+  const tier = feature.properties.tier.split(" ")[1];
+  if (tier === "Passing") return "#C4C4C4";
+  if (tier === "Underperforming") return "#FFB042";
+  if (tier === "Failing") return  "#D43C37";
+}
+
+const getBlackDonorMapFill = (feature) => {
+  const blackDonorRank = feature.properties.black_donor_rank;
+  if (blackDonorRank < 10 ) return "#4E1C19";
+  if (blackDonorRank < 15) return "#89322B";
+  if (blackDonorRank < 20) return "#D43C37";
+  if (blackDonorRank < 25) return "#FFB042";
+  if (blackDonorRank < 30) return "#F9D558";
+  if (blackDonorRank > 35) return "#00768F";
+
+  return  "C4C4C4";
+}
+
+const getCongressionalInvestigationFill = (feature) => {
+   const investigation = feature.properties.congressional_investigation;
+
+   if(investigation) return "#00563f";
+   return "#FF0800"
+}
+
+
+const getToolTipContent = (view, propagatedFrom, stateDataMap, opoDataMap) => {
+  if (view === "state") return `
+    <p>State waitlist: <strong>${
+      stateDataMap[
+        propagatedFrom?.feature?.properties
+          ?.abbreviation
+      ].waitlist ?? "No Data"
+    }</strong></p>
+    <p>OPOs servicing: <strong>${
+      Object.values(opoDataMap).filter(
+        ({ statesWithRegions }) =>
+          statesWithRegions[
+            propagatedFrom?.feature?.properties
+              ?.abbreviation
+          ] !== undefined
+      ).length ?? "No Data"
+    }</strong></p>
+    <p>People dying every month waiting for an organ: <strong>${
+      stateDataMap[
+        propagatedFrom?.feature?.properties
+          ?.abbreviation
+      ].monthly ?? "No Data"
+    }</strong></p>`;
+
+    return `
+      <p> Other Stats for OPO here </p>
+    `;
+
 }
