@@ -1,39 +1,20 @@
-import React from "react";
-import { Container, Row } from "react-bootstrap";
+import React, { useState } from "react";
+import { Row } from "react-bootstrap";
 import { GeoJSON, MapContainer, ZoomControl } from "react-leaflet";
-import { useStaticQuery, graphql, navigate } from "gatsby";
+import { navigate } from "gatsby";
 import bbox from "@turf/bbox";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 import useDataMaps from "../../hooks/useDataMaps";
-import {
-  tierColors,
-} from "../../utils/utils";
-import Tier from "../tier/tier";
 
 import * as styles from "./map.module.css";
 import useGeoJson from "../../hooks/useGeoJson";
+import Legend, { BLACK_DONOR_DISPARITY_FILL, CONGRESSIONAL_INVESTIGATION_FILL, OPO_PERFORMANCE_TIER_FILL } from "./legend";
 
-function Legend() {
-  return (
-    <Container className={styles.legend}>
-      <Row>
-        <h3>OPO Performance Tier</h3>
-      </Row>
-      {Object.keys(tierColors).map(tier => (
-        <Tier key={tier} className={styles.legendTier} tier={tier} />
-      ))}
-    </Container>
-  );
-}
-
-export default function MainMap({
-  view = "state", // options: state, black-donor, congressional-investigation
-}) {
-
-  console.log("View", view);
+export default function MainMap({ mapView }) {
+  
   const windowWidth = useWindowDimensions().width;
-  const mapDimensions = { height: "55vh", width: "100%" };
+  const mapDimensions = { height: "100vh", width: "100%" };
 
   const [{ opoDataMap, stateDataMap }] = useDataMaps();
   const { dsaGeoData, statesGeoData } = useGeoJson();
@@ -62,95 +43,90 @@ export default function MainMap({
       ...f,
         properties: {
           ...f.properties,
-          name: opoDataMap[f.properties.opo].name,
-          tier: opoDataMap[f.properties.opo].tier,
-          black_donor_rank: opoDataMap[f.properties.opo].nhb_rank,
-          congressional_investigation: opoDataMap[f.properties.opo].investigation,
+          name: opoDataMap[f.properties.abbreviation].name,
+          tier: opoDataMap[f.properties.abbreviation].tier,
+          rate: opoDataMap[f.properties.abbreviation].nhb_recovery,
+          investigation: opoDataMap[f.properties.abbreviation].investigation,
         },
       })),
   };
 
   // use state geo data to generate bounding box
   const [minX, minY, maxX, maxY] = bbox(stateGeoJson)
-
-  console.log("styles tooltip", styles.tooltip)
-
   return (
-    <Row className={styles.map}>
-      <div style={mapDimensions}>
-        <Legend />
-        {
-          // Hack: [`window` dependency for Leaflet](https://www.gatsbyjs.com/docs/debugging-html-builds/#fixing-third-party-modules)
-          typeof window !== "undefined" && (
-            <MapContainer
-              key="full map container"
-              bounds={[
-                [minY, minX],
-                [maxY, maxX],
-              ]}
-              scrollWheelZoom={false}
-              style={Object.assign(mapDimensions, { backgroundColor: "#fff" })}
-              zoomControl={false}
-              dragging={windowWidth > 800}
-              className={styles.mapContainer}
-            >
-              <ZoomControl position="bottomright" />
+      <Row className={styles.map}>
+        <div style={mapDimensions}>
+          <hr />
+          {
+            // Hack: [`window` dependency for Leaflet](https://www.gatsbyjs.com/docs/debugging-html-builds/#fixing-third-party-modules)
+            typeof window !== "undefined" && (
+              <MapContainer
+                key={`${mapView}-map`}
+                bounds={[
+                  [minY, minX],
+                  [maxY, maxX],
+                ]}
+                scrollWheelZoom={false}
+                style={Object.assign(mapDimensions, { backgroundColor: "#fff" })}
+                zoomControl={false}
+                dragging={windowWidth > 800}
+                className={styles.mapContainer}
+              >
+                <ZoomControl position="bottomright" />
 
-              {/* Create layer for OPO polygons with fill based on map view */}
-              <GeoJSON
-                key="opo-fill"
-                data={opoGeoJson}
-                style={feature => ({
-                  color: "white",
-                  fillColor: getMapFill(view, feature),
-                  fillOpacity: 0.85,
-                  opacity: 0.75,
-                  weight: 0.75,
-                })}
-              />
+                {/* Create layer for OPO polygons with fill based on map view */}
+                <GeoJSON
+                  key="opo-fill"
+                  data={opoGeoJson}
+                  style={feature => ({
+                    color: "white",
+                    fillColor: getMapFill(mapView, feature),
+                    fillOpacity: 0.85,
+                    opacity: 0.75,
+                    weight: 0.75,
+                  })}
+                />
 
-              {/* Create layer for boundary polygons (OPO or state based on map view)
-                and add hover tool tip and click action */}
-              <GeoJSON
-                key="boundary-and-tooltip"
-                data={view === "state" ? stateGeoJson : opoGeoJson}
-                onEachFeature={(feature, layer) =>
-                  layer.bindTooltip(
-                    `<div class="${styles.tooltip}">
-                      <h4>${feature?.properties?.name}</h4>
-                      ${getToolTipContent(view, feature, stateDataMap, opoDataMap)}
-                    </div>`,
-                    {
-                      permanent: false,
-                      sticky: false,
-                      offset: [10, 0],
-                      color: "white",
-                      fillColor: "black",
-                      fillOpacity: 0.2,
-                      weight: 4
-                    }
-                  )
-                }
-                eventHandlers={{
-                  click: ({ propagatedFrom }) => {
-                    navigate(
-                      view === "state" 
-                        ? `/state/${propagatedFrom?.feature?.properties?.abbreviation}`
-                        : `/opo/${propagatedFrom?.feature?.properties?.opo}`
-                    );
-                  },  
-                }}
-                style={{
-                  color: "white",
-                  fillOpacity: 0,
-                  weight: 2,
-                }}
-              />
-            </MapContainer>
-          )
-        }
-      </div>
-    </Row>
+                {/* Create layer for boundary polygons (OPO or state based on map view)
+                  and add hover tool tip and click action */}
+                <GeoJSON
+                  key="boundary-and-tooltip"
+                  data={mapView === "opo-performance" ? stateGeoJson : opoGeoJson}
+                  onEachFeature={(feature, layer) =>
+                    layer.bindTooltip(
+                      `<div class="${styles.tooltip}">
+                        <h4>${feature?.properties?.name}</h4>
+                        ${getToolTipContent(mapView, feature.properties.abbreviation, stateDataMap, opoDataMap)}
+                      </div>`,
+                      {
+                        permanent: false,
+                        sticky: false,
+                        offset: [10, 0],
+                        color: "white",
+                        fillColor: "black",
+                        fillOpacity: 0.2,
+                        weight: 4
+                      }
+                    )
+                  }
+                  eventHandlers={{
+                    click: ({ propagatedFrom }) => {
+                      navigate(`/${mapView === 'opo-performance' ? 'state' : 'opo'}/${propagatedFrom?.feature?.properties?.abbreviation}`)
+                    },  
+                  }}
+                  style={{
+                    color: "white",
+                    fillOpacity: 0,
+                    weight: 2,
+                  }}
+                />
+              </MapContainer>
+            )
+          }
+          <Legend mapView={mapView} />
+          <hr />
+        </div>
+      </Row>
   );
 }
 
@@ -158,11 +134,11 @@ export default function MainMap({
  * Get fill color for given feature based on map view
  */
 const getMapFill = (view, feature) => { 
-  if (view === "state") {
+  if (view === "opo-performance") {
     return getStateMapFill(feature);
   }
 
-  if (view === "black-donor") {
+  if (view === "black-procurement-disparity") {
     return getBlackDonorMapFill(feature);
   }
 
@@ -176,24 +152,16 @@ const getMapFill = (view, feature) => {
  */
 const getStateMapFill = (feature) => {
   const tier = feature.properties.tier.split(" ")[1];
-  if (tier === "Passing") return "#C4C4C4";
-  if (tier === "Underperforming") return "#FFB042";
-  if (tier === "Failing") return  "#D43C37";
+  return OPO_PERFORMANCE_TIER_FILL[tier].fill;
 }
 
 /**
- * For black donor map view, fill is based on black donor rate ranking
+ * For black donor map view, fill is based on black donor recovery rate (nhb_recovery)
  */
 const getBlackDonorMapFill = (feature) => {
-  const blackDonorRank = feature.properties.black_donor_rank;
-  if (blackDonorRank < 10 ) return "#4E1C19";
-  if (blackDonorRank < 15) return "#89322B";
-  if (blackDonorRank < 20) return "#D43C37";
-  if (blackDonorRank < 25) return "#FFB042";
-  if (blackDonorRank < 30) return "#F9D558";
-  if (blackDonorRank > 35) return "#00768F";
-
-  return  "C4C4C4";
+  return Object.values(BLACK_DONOR_DISPARITY_FILL)
+    .find(({compare}) => compare(feature.properties.rate))
+    .fill;
 }
 
 /**
@@ -201,10 +169,9 @@ const getBlackDonorMapFill = (feature) => {
  * OPO is under congressional investigation 
  */
 const getCongressionalInvestigationFill = (feature) => {
-   const investigation = feature.properties.congressional_investigation;
-
-   if(investigation) return "#00563f";
-   return "#FF0800"
+  return Object.values(CONGRESSIONAL_INVESTIGATION_FILL)
+    .find(({compare}) => compare(feature.properties.investigation ))
+    .fill;
 }
 
 
@@ -212,32 +179,37 @@ const getCongressionalInvestigationFill = (feature) => {
  * Get tool tip content based on map view
  * TODO: What should be in black donor and congressional review tool tip?
  */
-const getToolTipContent = (view, feature, stateDataMap, opoDataMap) => {
-  if (view === "state") return `
-    <p>State waitlist: <strong>${
-      stateDataMap[
-        feature?.properties
-          ?.abbreviation
-      ].waitlist ?? "No Data"
-    }</strong></p>
-    <p>OPOs servicing: <strong>${
-      Object.values(opoDataMap).filter(
-        ({ statesWithRegions }) =>
-          statesWithRegions[
-            feature?.properties
-              ?.abbreviation
-          ] !== undefined
-      ).length ?? "No Data"
-    }</strong></p>
-    <p>People dying every month waiting for an organ: <strong>${
-      stateDataMap[
-        feature?.properties
-          ?.abbreviation
-      ].monthly ?? "No Data"
-    }</strong></p>`;
+const getToolTipContent = (view, id, stateDataMap, opoDataMap) => {
+  if (view === "opo-performance") {
+    return `
+      <p>State waitlist: <strong>${
+        stateDataMap[id].waitlist ?? "No Data"
+      }</strong></p>
+      <p>OPOs servicing: <strong>${
+        Object.values(opoDataMap).filter(
+          ({ statesWithRegions }) => statesWithRegions[id] !== undefined
+        ).length ?? "No Data"
+      }</strong></p>
+      <p>People dying every month waiting for an organ: <strong>${
+        stateDataMap[id].monthly ?? "No Data"
+      }</strong></p>`;
+    }
+
+    if (view === "black-procurement-disparity") {
+      return `
+        <p>Organ Recovery Rate: <strong>${
+          opoDataMap[id].nhb_recovery ?? "No Data"
+        }</strong></p>
+        <p> Recovery Ranking (out of 54 OPOs reporting): <strong>${
+          opoDataMap[id].nhb_rank ?? "No Data"
+        }</strong></p>
+      `;
+    }
 
     return `
-      <p> Other Stats for OPO here </p>
+      <p>Currently Under Congressional Investigation: <strong>${
+        !!opoDataMap[id].investigation ? "Yes" : "No"
+      }</strong></p>
     `;
 
 }

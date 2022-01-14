@@ -12,7 +12,7 @@ export default function useGeoJson() {
                 coordinates
               }
               properties {
-                opo
+                abbreviation: opo
               }
               type
             }

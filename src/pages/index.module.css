@@ -65,6 +65,15 @@
   margin-bottom: 4rem;
 }
 
+.mapIntroContent {
+  font-size: 1rem;
+  margin-left: 2rem;
+}
+
+.mapToggleButtons {
+  margin-left: 2rem;
+}
+
 .statsSection {
   font-weight: 700;
   text-align: center;

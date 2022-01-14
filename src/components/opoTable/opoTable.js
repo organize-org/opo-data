@@ -1,16 +1,15 @@
 import React, { useMemo } from "react";
 import { Link } from "gatsby";
-import { Container, Row, Table } from "react-bootstrap";
+import { Row, Table } from "react-bootstrap";
 import { useTable, useSortBy } from "react-table";
 import ReactMarkdown from "react-markdown";
-
-import Tier from "../tier/tier";
 
 import ChevronUp from "../../images/icons/chevron-up.svg";
 import ChevronDown from "../../images/icons/chevron-down.svg";
 import ChevronDownGrey from "../../images/icons/chevron-down-grey.svg";
 
 import * as styles from "./opoTable.module.css";
+import { LegendItem, OPO_PERFORMANCE_TIER_FILL } from "../map/legend";
 
 export default function OpoTable({
   headings,
@@ -61,12 +60,11 @@ export default function OpoTable({
           ...col,
           cellClass: styles.tierCol,
           Cell: props => (
-            <Container>
-              <Tier
-                className={styles.tierCol}
-                tier={props.value.split(" ")[1]}
-              />
-            </Container>
+            <LegendItem 
+              className={styles.tierCol}
+              text={props.value.split(" ")[1]}
+              background={OPO_PERFORMANCE_TIER_FILL[props.value.split(" ")[1]].fill}
+            />
           ),
         };
       } else if (accessor === "death") {

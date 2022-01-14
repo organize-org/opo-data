@@ -6,7 +6,6 @@ import ReactMarkdown from "react-markdown";
 import Layout from "../../components/layout/layout";
 import SelectState from "../../components/selectState/selectState";
 import OpoTable from "../../components/opoTable/opoTable";
-import Tier from "../../components/tier/tier";
 import {
   formatOpoName,
   formatOPORank,
@@ -21,6 +20,7 @@ import opoContent from "./[opo].content.yml";
 
 import * as styles from "./opo.module.css";
 import ThumnailMap from "../../components/map/thumbnailMap";
+import { LegendItem, OPO_PERFORMANCE_TIER_FILL } from "../../components/map/legend";
 
 export default function Opo({ opo }) {
   const [{ opoDataMap }] = useDataMaps();
@@ -100,10 +100,10 @@ export default function Opo({ opo }) {
                 </h4>
               </Col>
               <Col>
-                <Tier
+                <LegendItem
                   className={styles[opoData.tier.split(" ")[1]]}
-                  tier={opoData.tier.split(" ")[1]}
-                  altText={`Tier ${opoData.tier.split(" ").join(" - ")}`}
+                  background={OPO_PERFORMANCE_TIER_FILL[opoData.tier.split(" ")[1]].fill}
+                  text={`Tier ${opoData.tier.split(" ").join(" - ")}`}
                 />
               </Col>
             </Row>

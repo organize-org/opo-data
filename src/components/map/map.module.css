@@ -4,15 +4,9 @@
   height: 135px;
   right: 50px;
   padding: 1rem 1.5rem;
-  position: absolute;
-  top: calc(55vh - 40px);
-  width: 200px;
   z-index: 1000;
 }
 
-.legend > * {
-  justify-content: center;
-}
 
 .legend h3 {
   font-size: 1rem;
@@ -20,57 +14,11 @@
   text-transform: none;
 }
 
-.legendTier {
+.legendItem {
   font-size: 1rem !important;
   margin-bottom: 0.25rem;
-}
-
-.popout {
-  background-color: white;
-  border-top: 12px solid var(--opoBlack);
-  border-radius: 4px;
-  font-size: 1rem;
-  left: 0;
-  max-width: 330px;
-  padding: 1rem 3rem;
-  position: absolute;
-  margin-top: 2rem;
-  z-index: 1001;
-}
-
-.popout > *:nth-last-child(1) {
-  margin-top: 1rem;
-}
-
-.popout h3 {
-  font-size: 1.5rem;
-  font-weight: 550;
-  margin: 0;
-  text-transform: none;
-}
-
-.popout h4 {
-  font-size: 0.9rem;
-  margin: 0.25rem 0;
-}
-
-.popout h5 {
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
-  color: var(--opoBlack);
-  text-transform: uppercase;
-}
-
-.popoutTier {
-  font-size: 0.9rem !important;
-}
-
-.popoutTier > * {
-  padding-left: 0 !important;
-}
-
-.popoutHeader {
-  justify-content: space-between;
+  margin-left: 1rem !important;
+  justify-content: center;
 }
 
 .map {
@@ -93,6 +41,8 @@ hr {
 }
 .tooltip h4 {
   margin-top: 0;
+  word-wrap: break-word;
+  white-space: normal;
 }
 .tooltip p {
   margin: 0;

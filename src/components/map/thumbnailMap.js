@@ -2,7 +2,6 @@ import React from "react";
 import { Row } from "react-bootstrap";
 import { GeoJSON, MapContainer } from "react-leaflet";
 import bbox from "@turf/bbox";
-import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 import useDataMaps from "../../hooks/useDataMaps";
 import {
@@ -17,8 +16,6 @@ export default function ThumnailMap({
   dataId, // state or OPO abbr (e.g. AZ or ALOB)
   view, // "state" or "opo"
 }) {
-  const windowWidth = useWindowDimensions().width;
-
   const [{ opoDataMap, stateDataMap }] = useDataMaps();
   const { dsaGeoData, statesGeoData } = useGeoJson();
 
@@ -32,7 +29,7 @@ export default function ThumnailMap({
         ...f,
         properties: {
           ...f.properties,
-          tier: opoDataMap[f.properties.opo].tier,
+          tier: opoDataMap[f.properties.abbreviation].tier,
         }
       }))
   };
@@ -65,7 +62,6 @@ export default function ThumnailMap({
   return (
     <Row className={styles.map}>
       <div style={dimensions}>
-      <hr />
         {
           // Hack: [`window` dependency for Leaflet](https://www.gatsbyjs.com/docs/debugging-html-builds/#fixing-third-party-modules)
           typeof window !== "undefined" && (
@@ -81,10 +77,22 @@ export default function ThumnailMap({
               touchZoom={false}
               dragging={false}
               className={styles.mapContainer + " thumbnail"}
-            >
+            >               
+              {/* Create layer for all state polygons with fill (to contextualize other geoms!) */}
+              <GeoJSON
+                key={dataId + "state-fill"}
+                data={{...statesGeoData.childGeoJson}}
+                interactive={false}
+                style={{
+                  fillColor: "blue",
+                  fillOpacity: 0.85,
+                  opacity: 0.75,
+                  weight: 0.75,
+                }}
+              />
               {/* Create layer for OPO polygons with fill based on performance tier */}
               <GeoJSON
-                key={dataId.name + "opo-fill-layer"}
+                key={dataId + "opo-fill"}
                 data={fillGeoJson}
                 interactive={false}
                 style={feature => ({
@@ -100,7 +108,7 @@ export default function ThumnailMap({
                 // and may appear very near the edge or not at all
                 onEachFeature={(_, layer) =>
                   view === "state"
-                    ? layer.bindTooltip(layer => layer.feature.properties.opo, {
+                    ? layer.bindTooltip(layer => layer.feature.properties.abbreviation, {
                         permanent: true,
                         direction: "center",
                         className: styles.opoLabel,
@@ -110,11 +118,11 @@ export default function ThumnailMap({
               />
               {/* Create layer for state polygons with boundaries */}
               <GeoJSON
-                key={dataId.name + "boundaries"}
+                key={dataId + "boundaries"}
                 data={boundaryGeoJson}
                 interactive={false}
                 style={{
-                  color: view === "opo" ? "black" : "white",
+                  color: "white",
                   fillOpacity: 0,
                   weight: 2,
                 }}
@@ -122,7 +130,6 @@ export default function ThumnailMap({
             </MapContainer>
           )
         }
-        <hr />
       </div>
     </Row>
   );
@@ -137,13 +144,13 @@ const getOpoFeatures = (view, allFeatures, opoDataMap, dataId) => {
   if (view === "state") {
     return allFeatures.filter(
       f =>
-        opoDataMap[f.properties.opo].statesWithRegions[
+        opoDataMap[f.properties.abbreviation].statesWithRegions[
           dataId
         ] !== undefined
     )
   }
 
-  return [allFeatures.find(({ properties: { opo } }) => opo === dataId)]; 
+  return [allFeatures.find(({ properties: { abbreviation } }) => abbreviation === dataId)]; 
 }
 
 /**
