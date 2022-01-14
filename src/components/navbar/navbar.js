@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 import * as styles from "./navbar.module.css";
 
-export default function Navigation({ site }) {
+export default function Navigation() {
   const hamburger = (
     <StaticImage
       src="../../images/icons/mobile-menu.png"
@@ -41,8 +41,7 @@ export default function Navigation({ site }) {
             placeholder="none"
           />
           <section className={styles.logoText}>
-            <h1>{site}</h1>
-            <h2>Performance Comparison</h2>
+            <h1>OPODATA.ORG</h1>
           </section>
         </Nav.Link>
       </Navbar.Brand>

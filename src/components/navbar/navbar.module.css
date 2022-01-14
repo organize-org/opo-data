@@ -18,6 +18,10 @@
   margin-left: 1rem;
 }
 
+.logoText h1 {
+  font-size: 2rem;
+}
+
 .mobileTitle {
   display: inline-flex;
   align-items: center;
