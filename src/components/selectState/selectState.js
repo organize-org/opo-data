@@ -33,7 +33,7 @@ export default function SelectState({ label, link = false, opo = false }) {
             value: key,
             label: opo ? `${name} (${key})` : name,
           }))}
-        placeholder="Select state"
+        placeholder="See data by state"
       />
     </div>
   );
