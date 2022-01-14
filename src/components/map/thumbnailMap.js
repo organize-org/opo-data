@@ -70,21 +70,23 @@ export default function ThumnailMap({
           // Hack: [`window` dependency for Leaflet](https://www.gatsbyjs.com/docs/debugging-html-builds/#fixing-third-party-modules)
           typeof window !== "undefined" && (
             <MapContainer
-              key={dataId.name + "container"}
+              key={dataId.name + " container"}
               bounds={[
                 [minY, minX],
                 [maxY, maxX],
               ]}
               scrollWheelZoom={false}
-              style={Object.assign(dimensions, { backgroundColor: "#fff" })}
+              style={{...dimensions,  backgroundColor: "#fff" }}
               zoomControl={false}
-              dragging={windowWidth > 800}
-              className={styles.mapContainer}
+              touchZoom={false}
+              dragging={false}
+              className={styles.mapContainer + " thumbnail"}
             >
               {/* Create layer for OPO polygons with fill based on performance tier */}
               <GeoJSON
                 key={dataId.name + "opo-fill-layer"}
                 data={fillGeoJson}
+                interactive={false}
                 style={feature => ({
                   color: "white",
                   fillColor: tierColors[feature.properties.tier.split(" ")[1]],
@@ -110,6 +112,7 @@ export default function ThumnailMap({
               <GeoJSON
                 key={dataId.name + "boundaries"}
                 data={boundaryGeoJson}
+                interactive={false}
                 style={{
                   color: view === "opo" ? "black" : "white",
                   fillOpacity: 0,
