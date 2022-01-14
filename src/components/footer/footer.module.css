@@ -42,7 +42,7 @@
 
 .logosTwo {
   flex-wrap: nowrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .bloom {
