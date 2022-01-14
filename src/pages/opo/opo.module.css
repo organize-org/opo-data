@@ -112,9 +112,13 @@
   color: #d43c37;
 }
 
-.statsPopout p {
+.statsPopout p, .statsPopout a {
   font-size: 2rem;
   font-weight: 700;
+}
+
+.statsPopout svg {
+  height: 1rem;
 }
 
 .headlines {
