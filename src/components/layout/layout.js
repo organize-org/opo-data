@@ -23,7 +23,7 @@ export default function Layout({ crumbLabel, children, sources, social }) {
       {children}
       {sources?.length ? (
         <Row className={styles.sources}>
-          <h3>Sources</h3>
+          <h2>ADDITIONAL INFORMATION</h2>
           <ol>
             {Object.values(sources).map((source, index) => (
               <li id={`sources-${index + 1}`} key={`sources-${index}`}>
