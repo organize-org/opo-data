@@ -20,7 +20,7 @@ import { BoxArrowUpRight } from "react-bootstrap-icons";
 import opoContent from "./[opo].content.yml";
 
 import * as styles from "./opo.module.css";
-import ThumnailMap from "../../components/thumbnailMap/thumbnailMap";
+import ThumnailMap from "../../components/map/thumbnailMap";
 
 export default function Opo({ opo }) {
   const [{ opoDataMap }] = useDataMaps();
@@ -89,7 +89,7 @@ export default function Opo({ opo }) {
             <ThumnailMap
               dimensions={{ height: "24rem", width: "24rem" }}
               dataId={opo}
-              page="opo"
+              view="opo"
             />
           </Row>
           <Row className={styles.stats}>
