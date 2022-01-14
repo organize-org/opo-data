@@ -1,0 +1,26 @@
+stats:
+  tier: Performance Tier (2019)
+  rank: OPO Rank (of 58)
+  preventable: Preventable Deaths (2019)
+  investigation: Under Congressional Investigation?
+  ceo: "CEO & Compensation:"
+  board: "Board Compensation:"
+opoHeadings:
+  ethnicity: Ethnicity
+  death: Potential viable donors based on CALC methodology
+  donors: Actual Donors
+  recovery: Recovery Rate
+  rank: Recovery Rate Ranking
+stateHeadings:
+  shadow: Shadow Deaths (2019)
+  name: OPO Name
+  region: Region
+  states: States
+  tier: Tier (2019)
+  donors: Donors Needed (2019)
+  investigation: Under Congressional Investigation
+sources:
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit. At fames massa quis
+    ornare magna sodales integer.
+  - At fames massa quis ornare magna sodales integer. In urna elementum nunc,
+    sed eget ornare neque.
