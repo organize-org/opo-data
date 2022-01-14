@@ -31,7 +31,7 @@ export default function State({ data: { statesGeoData }, state }) {
     return null;
   }
 
-  const { headings, notes, stats, videos, sources } = content;
+  const { headings, notes, stats, videos, sources, opo_table_caption } = content;
 
   const notesByOpo = notes?.reduce(
     (notesMap, { note, tags }) => ({
@@ -139,7 +139,7 @@ export default function State({ data: { statesGeoData }, state }) {
           </Row>
           <Row className={styles.stats}>
             <Row className={styles.statsHeading}>
-              <Col>
+              <Col className="ml-3">
                 <h3>
                   <ReactMarkdown>{stats.waitlist}</ReactMarkdown>
                 </h3>
@@ -156,7 +156,7 @@ export default function State({ data: { statesGeoData }, state }) {
               </Col>
             </Row>
             <Row className={styles.statsPopout}>
-              <Col>
+              <Col className="ml-3">
                 <p>{formatNumber(stateData.popoutStats.waitlist)}</p>
               </Col>
               <Col>
@@ -179,6 +179,7 @@ export default function State({ data: { statesGeoData }, state }) {
         </Row>
       </Row>
       {/* OPOs servicing state */}
+      <h2 className={styles.sectionHeader}>OPOS IN THIS STATE</h2>
       <Row className={styles.serviceTable}>
         {inStateOpos.length > 0 && (
           <OpoTable
@@ -239,6 +240,7 @@ export default function State({ data: { statesGeoData }, state }) {
         </Row>
       ) : null}
       {/* OPOs in neighboring states (if exists) */}
+      <h2 className={styles.sectionHeader}>STATE DATA</h2>
       {outOfStateOpos.length > 0 && (
         <Row className={styles.serviceTable}>
           <OpoTable
@@ -246,6 +248,7 @@ export default function State({ data: { statesGeoData }, state }) {
             inState={false}
             opos={outOfStateOpos}
             title="OPO Performance in Neighboring States"
+            caption={opo_table_caption}
           />
         </Row>
       )}

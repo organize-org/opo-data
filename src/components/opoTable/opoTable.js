@@ -17,10 +17,11 @@ export default function OpoTable({
   inOpo = false,
   opos,
   title,
+  caption
 }) {
   const columns = useMemo(() => {
     const cols = inState
-      ? ["name", "region", "tier", "donors", "shadow", "investigation"]
+      ? ["name", "region", "tier", "donors", "investigation", "shadow"]
       : inOpo
       ? ["ethnicity", "death", "donors", "recovery", "rank"]
       : ["states", "name", "tier", "donors", "shadow"];
@@ -37,23 +38,18 @@ export default function OpoTable({
             <Link
               to={`/opo/${opos.find(opo => opo.name === props.value)?.opo}`}
             >
-              {props.value}
+              {props.value} ({opos.find(opo => opo.name === props.value)?.opo})
             </Link>
           ),
         };
       } else if (
         (accessor === "donors" && !inOpo) ||
-        accessor === "investigation"
+        accessor === "investigation" || 
+        accessor === "shadow"
       ) {
         return {
           ...col,
           cellClass: "text-center",
-        };
-      } else if (accessor === "shadow") {
-        return {
-          ...col,
-          cellClass: styles.shadows,
-          color: "red",
         };
       } else if (accessor === "tier") {
         return {
@@ -176,6 +172,7 @@ export default function OpoTable({
           })}
         </tbody>
       </Table>
+      {caption && <p className={styles.tableCaption}>* {caption}</p>}
     </Row>
   );
 

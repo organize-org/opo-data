@@ -15,19 +15,16 @@
 }
 
 .sources {
-  margin-left: 2rem;
-  margin-right: 2rem;
-  padding: 1rem;
+  padding: .5rem 1rem;
 }
 
-.sources h3 {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 2rem;
-  width: 100%;
+.sources h2 {
+  color: var(--opoRed);
 }
 
 .sources ol {
+  font-size: .75rem;
+  line-height: 1.5;
   counter-reset: li;
   padding: 0;
   list-style: none;
