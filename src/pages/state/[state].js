@@ -134,11 +134,7 @@ export default function State({ data: { statesGeoData }, state }) {
             <ThumbnailMap
               dimensions={{ height: "16rem", width: "24rem" }}
               dataId={state}
-<<<<<<< HEAD
-              page="state"
-=======
               view="state"
->>>>>>> Further simplifications, comments, reorg
             />
           </Row>
           <Row className={styles.stats}>

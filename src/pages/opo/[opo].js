@@ -133,7 +133,7 @@ export default function Opo({ opo }) {
               </Col>
               <Col>
                   {!!opoData.investigation
-                    ? <a href={opoData.investigation_url} target="_blank"> Yes <BoxArrowUpRight /> </a>
+                    ? <a href={opoData.investigation_url} target="_blank" rel="noreferrer"> Yes <BoxArrowUpRight /> </a>
                     : <p>No</p>
                   }
               </Col>
