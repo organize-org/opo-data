@@ -8,6 +8,10 @@
   justify-content: space-between;
 }
 
+.nav a:nth-child(2) {
+  margin-right: 3rem;
+}
+
 .logoWithText {
   display: flex;
   align-items: center;
