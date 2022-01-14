@@ -1,16 +1,17 @@
 stats:
   waitlist: State Waitlist[¹](#sources-1)
-  comp: Average CEO Compensation[²](#sources-2)
   monthly: Number of people on state waiting list who die each month waiting for
-    an organ[³](#sources-3)
+    an organ[²](#sources-2)
+  comp: Average CEO Compensation[³](#sources-3)
 headings:
-  shadow: Shadow Deaths (2019)[⁶](#sources-6)
   name: OPO Name
   region: Region
   states: States
   tier: Tier (2019)[⁴](#sources-4)
   donors: Donors Needed (2019)[⁵](#sources-5)
   investigation: Under Congressional Investigation[⁷](#sources-7)
+  shadow: Preventable Deaths (2019)[*](#captions-1)[⁶](#sources-6)
+opo_table_caption: “Preventable deaths” refer to those who die from the event of NOT receiving an organ that should have been available. These organs were not recovered presumably due to OPO performance issues, such as ineffective practices, transportation errors, or understaffing.
 sources:
   - State waitlist via [OPTN state
     data](https://optn.transplant.hrsa.gov/data/view-data-reports/state-data/)
@@ -18,6 +19,11 @@ sources:
     centers, so they do not have a state waiting list; patients are listed in
     the state in which their transplant center is based, which is not
     necessarily their state of residence
+  - "Number of people on state waiting list who die each month waiting for an
+    organ: 2020 deaths via [OPTN state
+    data](https://optn.transplant.hrsa.gov/data/view-data-reports/state-data/)
+    (patients who died on waiting list + patients who died who were listed as
+    too sick to transplant) divided by 12 months."
   - "Average CEO compensation via each OPO's most recently listed 990 (as of
     6/1/21). 2019: Donor Network Arizona, OneLegacy, Donor Network West, Donor
     Alliance, LifeChoice Donor Services, New England Organ Bank, Washington
@@ -38,11 +44,6 @@ sources:
     Transplant Alliance, LifeGift, LifeNet. Note: hospital-based OPOs do not
     have separate 990s, so unless this information has been made publicly
     available by the OPO, it is not listed"
-  - "Number of people on state waiting list who die each month waiting for an
-    organ: 2020 deaths via [OPTN state
-    data](https://optn.transplant.hrsa.gov/data/view-data-reports/state-data/)
-    (patients who died on waiting list + patients who died who were listed as
-    too sick to transplant) divided by 12 months."
   - Tier (2019) via [CMS](https://qcor.cms.gov/main.jsp), data most recently
     available (2019). OPO names are listed as they are by CMS.
   - Donors needed (2019) via [CMS](https://qcor.cms.gov/main.jsp) represents the
