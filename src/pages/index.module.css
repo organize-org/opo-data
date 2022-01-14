@@ -7,7 +7,7 @@
   flex-wrap: nowrap;
   font-size: 1.15rem;
   height: 60px;
-  margin: auto;
+  margin-top: 2rem;
   padding: 0.5rem 1rem;
 }
 
@@ -19,6 +19,50 @@
 .topBarSelect {
   width: 250px;
   z-index: 1002;
+}
+
+.topHeader {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  margin-left: 2rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.topHeader h2 {
+  color: var(--opoRed);
+  font-weight: 800;
+  margin-left: 1rem;
+  text-transform: uppercase;
+}
+
+.topHeader img {
+  object-fit: contain !important;
+}
+
+.secondHeader {
+  margin-left: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.secondHeader h2 {
+  color: var(--opoRed);
+  font-weight: 800;
+  margin-left: 1rem;
+  text-transform: uppercase;
+}
+
+.secondHeader img {
+  object-fit: contain !important;
+}
+
+.thirdHeader {
+  margin-bottom: 4rem;
 }
 
 .statsSection {
@@ -36,6 +80,8 @@
 
 .statsSection h3 p {
   margin: 0rem;
+  line-height: 1.5;
+  text-transform: none;
 }
 
 .videoSection {
@@ -87,6 +133,9 @@
     height: auto;
     justify-content: center;
     padding: 0.5rem 1rem;
+  }
+  .thirdHeader {
+    margin-top: 1rem;
   }
   .articlesSection {
     margin: 2rem 0 0 0;
