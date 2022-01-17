@@ -11,7 +11,8 @@ headings:
   donors: Donors Needed (2019)[⁵](#sources-5)
   investigation: Under Congressional Investigation[⁷](#sources-7)
   shadow: Preventable Deaths (2019)[*](#captions-1)[⁶](#sources-6)
-opo_table_caption: “Preventable deaths” refer to those who die from the event of NOT receiving an organ that should have been available. These organs were not recovered presumably due to OPO performance issues, such as ineffective practices, transportation errors, or understaffing.
+table_captions:
+  shadow: “Preventable deaths” refer to those who die from the event of NOT receiving an organ that should have been available. These organs were not recovered presumably due to OPO performance issues, such as ineffective practices, transportation errors, or understaffing.
 sources:
   - State waitlist via [OPTN state
     data](https://optn.transplant.hrsa.gov/data/view-data-reports/state-data/)

@@ -31,7 +31,7 @@ export default function State({ data: { statesGeoData }, state }) {
     return null;
   }
 
-  const { headings, notes, stats, videos, sources, opo_table_caption } = content;
+  const { headings, notes, stats, videos, sources, table_captions } = content;
 
   const notesByOpo = notes?.reduce(
     (notesMap, { note, tags }) => ({
@@ -248,7 +248,7 @@ export default function State({ data: { statesGeoData }, state }) {
             inState={false}
             opos={outOfStateOpos}
             title="OPO Performance in Neighboring States"
-            caption={opo_table_caption}
+            caption={table_captions.shadow}
           />
         </Row>
       )}
