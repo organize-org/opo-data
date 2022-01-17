@@ -18,8 +18,11 @@
   padding: .5rem 1rem;
 }
 
-.sources h2 {
+.sectionHeader {
   color: var(--opoRed);
+  font-weight: bolder;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .sources ol {

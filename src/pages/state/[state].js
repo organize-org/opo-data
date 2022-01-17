@@ -19,6 +19,7 @@ import useDataMaps from "../../hooks/useDataMaps";
 import content from "./[state].content.yml";
 
 import * as styles from "./state.module.css";
+import { FileEarmarkText, GraphUp } from "react-bootstrap-icons";
 
 export default function State({ data: { statesGeoData }, state }) {
   const [{ opoDataMap, stateDataMap }] = useDataMaps();
@@ -31,7 +32,11 @@ export default function State({ data: { statesGeoData }, state }) {
     return null;
   }
 
-  const { headings, notes, stats, videos, sources, table_captions } = content;
+  const { headings, notes, stats, videos } = content;
+
+  // const sources = Object.values(headings)
+  //   .filter(heading => !!heading.source)
+  //   .map(heading => heading.source);
 
   const notesByOpo = notes?.reduce(
     (notesMap, { note, tags }) => ({
@@ -112,10 +117,11 @@ export default function State({ data: { statesGeoData }, state }) {
   return (
     <Layout
       crumbLabel={formatStateName(stateData)}
-      sources={sources}
+      // sources must be in order they appear on the page
+      sources={{...stats, ...headings}}
       social={true}
     >
-      {/* State name, top-level stats, and map */}
+      {/* State name, top-level stats, select state menu, and map */}
       <Row className={styles.hero}>
         <Row>
           <h2 className={styles.title}>{formatStateName(stateData)}</h2>
@@ -141,17 +147,17 @@ export default function State({ data: { statesGeoData }, state }) {
             <Row className={styles.statsHeading}>
               <Col className="ml-3">
                 <h3>
-                  <ReactMarkdown>{stats.waitlist}</ReactMarkdown>
+                  <ReactMarkdown>{stats.waitlist.title}</ReactMarkdown>
                 </h3>
               </Col>
               <Col>
                 <h3 className="red">
-                  <ReactMarkdown>{stats.monthly}</ReactMarkdown>
+                  <ReactMarkdown>{stats.monthly.title}</ReactMarkdown>
                 </h3>
               </Col>
               <Col>
                 <h3>
-                  <ReactMarkdown>{stats.comp}</ReactMarkdown>
+                  <ReactMarkdown>{stats.comp.title}</ReactMarkdown>
                 </h3>
               </Col>
             </Row>
@@ -179,11 +185,12 @@ export default function State({ data: { statesGeoData }, state }) {
         </Row>
       </Row>
       {/* OPOs servicing state */}
-      <h2 className={styles.sectionHeader}>OPOS IN THIS STATE</h2>
+      <h2 className={styles.sectionHeader}> <FileEarmarkText />OPOS IN THIS STATE</h2>
       <Row className={styles.serviceTable}>
         {inStateOpos.length > 0 && (
           <OpoTable
-            headings={headings}
+          // suppress state column in the in-state OPO table
+            headings={{...headings, states: null}}
             opos={inStateOpos}
             title={`OPOS Servicing ${stateData.name}`}
           />
@@ -240,15 +247,20 @@ export default function State({ data: { statesGeoData }, state }) {
         </Row>
       ) : null}
       {/* OPOs in neighboring states (if exists) */}
-      <h2 className={styles.sectionHeader}>STATE DATA</h2>
+      <hr />
+      <h2 className={styles.sectionHeader}> <GraphUp /> STATE DATA</h2>
       {outOfStateOpos.length > 0 && (
         <Row className={styles.serviceTable}>
           <OpoTable
-            headings={headings}
+            // pull states column to front and supress region column
+            headings={{states: null, ...headings, region: null} }
             inState={false}
             opos={outOfStateOpos}
             title="OPO Performance in Neighboring States"
-            caption={table_captions.shadow}
+            captions={Object.values(headings)
+              .filter(heading => !!heading.caption)
+              .map(heading => heading.caption)
+            }
           />
         </Row>
       )}

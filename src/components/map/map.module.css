@@ -21,6 +21,10 @@
   justify-content: center;
 }
 
+.legendItemText {
+  color: var(--opoBlack);
+}
+
 .map {
   justify-content: center;
 }

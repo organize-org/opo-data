@@ -46,7 +46,7 @@ export function LegendItem({className, background, text}) {
           }}
         ></div>
       </Col>
-      <Col className="my-auto px-0">{text}</Col>
+      <Col className={`my-auto px-0 ${styles.legendItemText}`}>{text}</Col>
     </Row>
   )
 }

@@ -4,6 +4,7 @@
 
 .opoTable h3 {
   font-size: 1.25rem;
+  text-transform: none !important;
 }
 
 .opoTable h4 {
@@ -84,6 +85,10 @@ th p {
   justify-content: flex-start;
   flex-wrap: nowrap;
   align-items: center;
+}
+
+.header p {
+  line-height: 1.5rem;
 }
 
 @media (max-width: 700px) {

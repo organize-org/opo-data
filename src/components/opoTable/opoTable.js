@@ -17,18 +17,11 @@ export default function OpoTable({
   inOpo = false,
   opos,
   title,
-  caption
 }) {
   const columns = useMemo(() => {
-    const cols = inState
-      ? ["name", "region", "tier", "donors", "investigation", "shadow"]
-      : inOpo
-      ? ["ethnicity", "death", "donors", "recovery", "rank"]
-      : ["states", "name", "tier", "donors", "shadow"];
-
-    const createCol = accessor => {
+    const createCol = ([accessor, heading]) => {
       const col = {
-        Header: <ReactMarkdown>{headings[accessor]}</ReactMarkdown>,
+        Header: <ReactMarkdown>{heading.title}</ReactMarkdown>,
         accessor,
       };
       if (accessor === "name") {
@@ -74,8 +67,16 @@ export default function OpoTable({
         return col;
       }
     };
-    return cols.map(col => createCol(col));
+    const h = Object.entries(headings)
+      .filter(([_, val]) => !!val)
+      .map(col => createCol(col));
+    return h;
   }, [headings, inState, opos, inOpo]);
+
+
+  const captions = Object.values(headings)
+  .filter(heading => !!heading?.caption)
+  .map(heading => heading.caption);
 
   const data = useMemo(() => {
     const formatNumber = (num, options) =>
@@ -172,7 +173,11 @@ export default function OpoTable({
           })}
         </tbody>
       </Table>
-      {caption && <p className={styles.tableCaption}>* {caption}</p>}
+      {captions?.length && (
+        captions.map(caption => (
+          <p className={styles.tableCaption}>* {caption}</p>
+        ))
+      )}
     </Row>
   );
 
