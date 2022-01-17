@@ -306,7 +306,19 @@ module.exports = {
                           {
                             label: "Shadow Deaths",
                             name: "shadow",
-                            widget: "markdown",
+                            widget: "object",
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              }
+                            ]
                           },
                           {
                             label: "Under Investigation",

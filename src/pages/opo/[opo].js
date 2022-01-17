@@ -15,7 +15,7 @@ import {
 
 import useDataMaps from "../../hooks/useDataMaps";
 import stateContent from "../state/[state].content.yml";
-import { BoxArrowUpRight } from "react-bootstrap-icons";
+import { BoxArrowUpRight, FileEarmarkText, GraphUp } from "react-bootstrap-icons";
 import opoContent from "./[opo].content.yml";
 
 import * as styles from "./opo.module.css";
@@ -33,10 +33,14 @@ export default function Opo({ opo }) {
   }
 
   const { notes } = stateContent;
-  const { opoHeadings, stateHeadings, stats, sources } = opoContent;
+  const { opoHeadings, stateHeadings, stats, takeaways } = opoContent;
 
   const opoHeadlines = notes.filter(note =>
     note.tags?.includes(opo.toUpperCase())
+  );
+
+  const opoTakeaways = takeaways.filter(takeaway => 
+    takeaway.opo === opo.toUpperCase()
   );
 
   const inStateOpos = Object.values(opoDataMap)
@@ -67,7 +71,12 @@ export default function Opo({ opo }) {
   }, []);
 
   return (
-    <Layout crumbLabel={formatOpoName(opoData)} sources={sources} social={true}>
+    <Layout
+      crumbLabel={formatOpoName(opoData)}
+      sources={{...stats, ...opoHeadings, ... stateHeadings}}
+      social={true}
+    >
+      {/* OPO Name, top-level stats, select OPO menu, and map */}
       <Row className={styles.hero}>
         <Row>
           <h2 className={styles.title}>{formatOpoName(opoData)}</h2>
@@ -95,9 +104,9 @@ export default function Opo({ opo }) {
           <Row className={styles.stats}>
             <Row className={styles.statsTier}>
               <Col>
-                <h4>
-                  <ReactMarkdown>{stats.performance}</ReactMarkdown>
-                </h4>
+                <h3>
+                  <ReactMarkdown>{stats.tier.title}</ReactMarkdown>
+                </h3>
               </Col>
               <Col>
                 <LegendItem
@@ -109,19 +118,19 @@ export default function Opo({ opo }) {
             </Row>
             <Row className={styles.statsHeading}>
               <Col>
-                <h4>
-                  <ReactMarkdown>{stats.rank}</ReactMarkdown>
-                </h4>
+                <h3>
+                  <ReactMarkdown>{stats.rank.title}</ReactMarkdown>
+                </h3>
               </Col>
               <Col>
-                <h4 className="red">
-                  <ReactMarkdown>{stats.preventable}</ReactMarkdown>
-                </h4>
+                <h3 className="red">
+                  <ReactMarkdown>{stats.shadow.title}</ReactMarkdown>
+                </h3>
               </Col>
               <Col>
-                <h4>
-                  <ReactMarkdown>{stats.investigation}</ReactMarkdown>
-                </h4>
+                <h3>
+                  <ReactMarkdown>{stats.investigation.title}</ReactMarkdown>
+                </h3>
               </Col>
             </Row>
             <Row className={styles.statsPopout}>
@@ -138,65 +147,98 @@ export default function Opo({ opo }) {
                   }
               </Col>
             </Row>
+            < hr />
             <Row className={styles.statsComp}>
               <Col>
                 <span className={styles.ceo}>
-                  <ReactMarkdown>{stats.ceo}</ReactMarkdown>
+                  <ReactMarkdown>{stats.ceo.title}</ReactMarkdown>
                 </span>
-                {`${opoData.ceo ?? "No Data"} ${
-                  opoData.compensation
-                    ? `- ${formatMoney(opoData.compensation)}`
-                    : ""
-                }`}
+                <b>
+                  {`${opoData.ceo ?? "No Data"} ${
+                    opoData.compensation
+                      ? `- ${formatMoney(opoData.compensation)}`
+                      : ""
+                  }`}
+                </b>
               </Col>
             </Row>
             <Row className={styles.statsComp}>
               <Col>
                 <span className={styles.ceo}>
-                  <ReactMarkdown>{stats.board}</ReactMarkdown>
+                  <ReactMarkdown>{stats.board.title}</ReactMarkdown>
                 </span>
-                {opoData.board ?? "No Data"}
+                <b>{opoData.board ?? "No Data"}</b>
               </Col>
             </Row>
           </Row>
         </Row>
       </Row>
-      {opoHeadlines?.length > 0 && (
-        <Row className={styles.headlines}>
-          <Row>
-            <h3>HEADLINES</h3>
-          </Row>
-          <Row>
-            <ul>
-              {opoHeadlines.map(({ note }, i) => (
-                <li key={`statewide-note-${i}`}>
-                  <ReactMarkdown>{note}</ReactMarkdown>
-                </li>
-              ))}
-            </ul>
-          </Row>
-          <hr />
-        </Row>
-      )}
-      <Row className={styles.ethnicityTable}>
-        {ethnicityData.length > 0 && (
-          <OpoTable
-            inState={false}
-            inOpo={true}
-            headings={opoHeadings}
-            opos={ethnicityData}
-            title={`${opoData.name} RECOVERY PERFORMANCE DATA by ethnicity (2019)`}
-          />
-        )}
+      {/* Headlines about OPO */}
+      {(opoHeadlines?.length || opoTakeaways?.length)
+        ? <h2 className={styles.sectionHeader}> <FileEarmarkText /> ABOUT THIS OPO</h2>
+        : null
+      }
+      <Row className={styles.about}>
+        {opoTakeaways?.length
+          ? (
+            <>
+              <h3>Key takeaways for {opoData.name}</h3>
+              <Row>
+                <ul>
+                  {opoTakeaways.map(({ body }, i) => (
+                    <li key={`opo-takeaway-${i}`}>
+                      <ReactMarkdown>{body}</ReactMarkdown>
+                    </li>
+                  ))}
+                </ul>
+              </Row>
+            </>
+          ): null
+        }
+        {opoHeadlines?.length 
+          ? (
+            <>
+              <h3>News and investigations for {opoData.name}</h3>
+              <Row>
+                <ul>
+                  {opoHeadlines.map(({ note }, i) => (
+                    <li key={`statewide-note-${i}`}>
+                      <ReactMarkdown>{note}</ReactMarkdown>
+                    </li>
+                  ))}
+                </ul>
+              </Row>
+            </>
+          ): null
+        }
       </Row>
-      <Row className={styles.serviceTable}>
-        {inStateOpos.length > 0 && (
-          <OpoTable
-            headings={stateHeadings}
-            opos={inStateOpos}
-            title={`OPO PERFORMANCE COMPARISON IN THIS STATE`}
-          />
-        )}
+      {(opoHeadlines?.length || opoTakeaways?.length)
+        ? <hr />
+        : null
+      }
+      {/* Ethnicity data */}
+      <h2 className={styles.sectionHeader}> <GraphUp /> OPO DATA</h2>
+      <Row className={styles.opoTables}>
+        <Row>
+          {ethnicityData.length > 0 && (
+            <OpoTable
+              inState={false}
+              inOpo={true}
+              headings={opoHeadings}
+              opos={ethnicityData}
+              title={`${opoData.name} Recovery Performance data by ethnicity (2019)`}
+            />
+          )}
+        </Row>
+        <Row>
+          {inStateOpos.length > 0 && (
+            <OpoTable
+              headings={stateHeadings}
+              opos={inStateOpos}
+              title={`OPO Performance comparison in this state`}
+            />
+          )}
+        </Row>
       </Row>
     </Layout>
   );
