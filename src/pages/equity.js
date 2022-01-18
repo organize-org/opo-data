@@ -34,13 +34,11 @@ export default function Equity({ data: { bottomImage, topImage } }) {
     tables,
     topQuote,
     tweet,
-    sources,
   } = content;
 
   return (
     <Layout
       crumbLabel="Inequities in Organ Procurement Across the Nation"
-      sources={sources}
     >
       <Row className={styles.topBar}>
         <Col md="8">

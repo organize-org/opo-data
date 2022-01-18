@@ -9,9 +9,12 @@ import Footer from "../footer/footer";
 import * as styles from "./layout.module.css";
 import { Asterisk } from "react-bootstrap-icons";
 
-export default function Layout({ crumbLabel, children, sources, social }) {
+export default function Layout({ crumbLabel, children, contentWithSources, social }) {
   // Filter sources to only include those with data provided 
-  sources = Object.entries(sources).filter(([_, val]) => !!val?.source);
+  const sources = contentWithSources 
+    ? Object.entries(contentWithSources).filter(([_, val]) => !!val?.source)
+    : null; 
+  
   return (
     <Container fluid>
       <Navbar />
