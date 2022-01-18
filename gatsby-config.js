@@ -625,8 +625,8 @@ module.exports = {
                             ]
                           },
                           {
-                            label: "Preventable death heading",
-                            name: "preventable",
+                            label: "Shadow deaths heading",
+                            name: "shadow",
                             widget: "object",
                             fields: [
                               {
