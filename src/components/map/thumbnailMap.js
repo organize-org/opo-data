@@ -38,7 +38,7 @@ export default function ThumnailMap({
   // state features based on view ("opo" or "state")
   const boundaryGeoJson = {
     ...statesGeoData.childGeoJson,
-    features: getStateFeatures(view, statesGeoData.childGeoJson.features, dataId)
+    features: getStateFeatures(view, statesGeoData.childGeoJson.features, opoDataMap, dataId)
       .map(f => ({
         ...f,
         properties: {
@@ -84,7 +84,8 @@ export default function ThumnailMap({
                 data={{...statesGeoData.childGeoJson}}
                 interactive={false}
                 style={{
-                  fillColor: "blue",
+                  color: "#c4c4c4",
+                  fillColor: "white",
                   fillOpacity: 0.85,
                   opacity: 0.75,
                   weight: 0.75,
@@ -116,13 +117,13 @@ export default function ThumnailMap({
                     : layer
                 }
               />
-              {/* Create layer for state polygons with boundaries */}
+              {/* Create layer for state or OPO polygon with boundaries */}
               <GeoJSON
                 key={dataId + "boundaries"}
                 data={boundaryGeoJson}
                 interactive={false}
                 style={{
-                  color: "white",
+                  color: "black",
                   fillOpacity: 0,
                   weight: 2,
                 }}
@@ -156,14 +157,17 @@ const getOpoFeatures = (view, allFeatures, opoDataMap, dataId) => {
 /**
  * Get appropriately filtered state features based on view
  * For state view, the given state
- * For OPO view, all states (bounding box will restrict displayed geoms)
+ * For OPO view, all states served by that OPO
  */
-const getStateFeatures = (view, allFeatures, dataId) => {
+const getStateFeatures = (view, allFeatures, opoDataMap, dataId) => {
   if (view === "state") {
     return [allFeatures.find(
         ({ properties: { abbreviation } }) => abbreviation === dataId
       )]
     }
 
-    return allFeatures;
+    const opoStates = Object.keys(opoDataMap[dataId].statesWithRegions);
+    return allFeatures.filter(
+      f => opoStates.includes(f?.properties?.abbreviation)
+    );  
 }
