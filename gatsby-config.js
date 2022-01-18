@@ -96,13 +96,6 @@ module.exports = {
             })
           );
 
-          const sources = {
-            label: "Sources",
-            name: "sources",
-            widget: "list",
-            field: { label: "Source", name: "source", widget: "markdown" },
-          };
-
           return {
             backend: {
               name: "github",
@@ -159,7 +152,6 @@ module.exports = {
                           },
                         ],
                       },
-                      sources,
                       {
                         label: "Equity Embed",
                         name: "equityEmbed",
@@ -482,36 +474,6 @@ module.exports = {
                                 widget: "markdown"
                               }
                             ]
-                          },
-                        ],
-                      },
-                      sources,
-                      {
-                        label: "Equity Embed",
-                        name: "equityEmbed",
-                        widget: "object",
-                        fields: [
-                          {
-                            label: "Image",
-                            name: "image",
-                            allow_multiple: false,
-                            media_folder: "../../images/quotes",
-                            widget: "image",
-                          },
-                          {
-                            label: "Heading",
-                            name: "heading",
-                            widget: "string",
-                          },
-                          {
-                            label: "Description",
-                            name: "description",
-                            widget: "markdown",
-                          },
-                          {
-                            label: "Link Text",
-                            name: "link",
-                            widget: "string",
                           },
                         ],
                       },

@@ -66,56 +66,6 @@ headings:
     title: Preventable Deaths (2019)*[⁶](#sources-shadow)
     source: “Preventable deaths” refer to those who die from the event of NOT receiving an organ that should have been available. These organs were not recovered presumably due to OPO performance issues, such as ineffective practices, transportation errors, or understaffing.
     caption: “Preventable deaths” refer to those who die from the event of NOT receiving an organ that should have been available. These organs were not recovered presumably due to OPO performance issues, such as ineffective practices, transportation errors, or understaffing.
-sources:
-  - State waitlist via [OPTN state
-    data](https://optn.transplant.hrsa.gov/data/view-data-reports/state-data/)
-    (as of 11/22/21). Alaska, Idaho, Montana, and Wyoming do not have transplant
-    centers, so they do not have a state waiting list; patients are listed in
-    the state in which their transplant center is based, which is not
-    necessarily their state of residence
-  - "Number of people on state waiting list who die each month waiting for an
-    organ: 2020 deaths via [OPTN state
-    data](https://optn.transplant.hrsa.gov/data/view-data-reports/state-data/)
-    (patients who died on waiting list + patients who died who were listed as
-    too sick to transplant) divided by 12 months."
-  - "Average CEO compensation via each OPO's most recently listed 990 (as of
-    6/1/21). 2019: Donor Network Arizona, OneLegacy, Donor Network West, Donor
-    Alliance, LifeChoice Donor Services, New England Organ Bank, Washington
-    Regional Transplant Community, Iowa Donor Network, Gift of Hope Organ &
-    Tissue Donor Network, Indiana Donor Network, Lifelink of
-    Florida/Georgia/Puerto Rico, Midwest Transplant Network, Kentucky Organ
-    Donor Affiliates, The Living Legacy Foundation, Gift of Life Michigan,
-    Lifesource MN, Mid-America Transplant Services, Mississippi Organ Recovery
-    Agency, New Jersey Sharing Network, Nevada Donor Network, LiveOnNY,
-    ConnectLife, Lifeline of Ohio, LifeBanc, Life Connection of Ohio, LifeCenter
-    Organ Donor Network, Center for Organ Recovery and Education, We Are Sharing
-    Hope SC, Tennessee Donor Services, Mid-South Transplant Services, Texas
-    Organ Sharing Alliance, Intermountain Donor Services (DonorConnect),
-    LifeCenter Northwest, Versiti 2018: Arkansas Regional Organ Recovery Agency,
-    Legacy of Life Hawaii, Louisiana Organ Procurement Agency, Carolina Donor
-    Services, Nebraska Organ Recovery, Center for Donation and Transplant,
-    Lifeshare Transplant Donor Services of Oklahoma, Gift of Life, Southwest
-    Transplant Alliance, LifeGift, LifeNet. Note: hospital-based OPOs do not
-    have separate 990s, so unless this information has been made publicly
-    available by the OPO, it is not listed"
-  - 
-  -
-  - "Shadow deaths (2019) via [CMS](https://qcor.cms.gov/main.jsp) represents
-    the number of additional organ transplants needed for the OPO to reach Tier
-    1. Data most recently available (2019). See “[Oversight Gaps and
-    Conflicts](https://bloomworks.digital/organdonationreform/Oversight/)”:
-    “Every organ that is not recovered because of OPO ineffective practices,
-    transportation errors, or understaffing, results in another person dying
-    while on the waitlist. For the purposes of this report, we have termed these
-    ‘shadow deaths’; they are just as real and consequential as deaths resulting
-    from errors that have brought higher profile media attention, but are less
-    visible as they result from systemic rather than acute problems.”"
-  - equityEmbed:
-    image: ../../images/quotes/equity-state.jpg
-    heading: OPO REFORM IS AN URGENT EQUITY ISSUE
-    link: We must drive reforms to hold OPOs accountable.
-    description: Patients of color are less likely to receive organ transplants than
-      white patients because of inferior OPO service.
 videos:
   - link: https://youtu.be/TnKo8Q-Hemk?t=2360
     title: DC patient Donna Cryer testifies before House Oversight Committee

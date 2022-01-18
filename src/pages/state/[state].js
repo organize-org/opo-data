@@ -34,10 +34,6 @@ export default function State({ data: { statesGeoData }, state }) {
 
   const { headings, notes, stats, videos } = content;
 
-  // const sources = Object.values(headings)
-  //   .filter(heading => !!heading.source)
-  //   .map(heading => heading.source);
-
   const notesByOpo = notes?.reduce(
     (notesMap, { note, tags }) => ({
       ...notesMap,
