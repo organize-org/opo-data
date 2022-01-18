@@ -6,7 +6,7 @@ import ReactPlayer from "react-player";
 import booleanIntersects from "@turf/boolean-intersects";
 
 import Layout from "../../components/layout/layout";
-import Map from "../../components/map/map";
+import ThumbnailMap from "../../components/map/thumbnailMap";
 import SelectState from "../../components/selectState/selectState";
 import OpoTable from "../../components/opoTable/opoTable";
 
@@ -131,11 +131,10 @@ export default function State({ data: { statesGeoData }, state }) {
         </Row>
         <Row className={styles.mapStats}>
           <Row className={styles.mapV2}>
-            <Map
+            <ThumbnailMap
               dimensions={{ height: "16rem", width: "24rem" }}
-              data={state}
-              page="state"
-              zoomControl={false}
+              dataId={state}
+              view="state"
             />
           </Row>
           <Row className={styles.stats}>

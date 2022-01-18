@@ -4,10 +4,8 @@ import { Col, Row } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
 
 import Layout from "../../components/layout/layout";
-import Map from "../../components/map/map";
 import SelectState from "../../components/selectState/selectState";
 import OpoTable from "../../components/opoTable/opoTable";
-import Tier from "../../components/tier/tier";
 import {
   formatOpoName,
   formatOPORank,
@@ -21,6 +19,8 @@ import { BoxArrowUpRight } from "react-bootstrap-icons";
 import opoContent from "./[opo].content.yml";
 
 import * as styles from "./opo.module.css";
+import ThumnailMap from "../../components/map/thumbnailMap";
+import { LegendItem, OPO_PERFORMANCE_TIER_FILL } from "../../components/map/legend";
 
 export default function Opo({ opo }) {
   const [{ opoDataMap }] = useDataMaps();
@@ -86,11 +86,10 @@ export default function Opo({ opo }) {
         </Row>
         <Row className={styles.mapStats}>
           <Row className={styles.map}>
-            <Map
+            <ThumnailMap
               dimensions={{ height: "24rem", width: "24rem" }}
-              data={opo}
-              zoomControl={false}
-              page="opo"
+              dataId={opo}
+              view="opo"
             />
           </Row>
           <Row className={styles.stats}>
@@ -101,10 +100,10 @@ export default function Opo({ opo }) {
                 </h4>
               </Col>
               <Col>
-                <Tier
+                <LegendItem
                   className={styles[opoData.tier.split(" ")[1]]}
-                  tier={opoData.tier.split(" ")[1]}
-                  altText={`Tier ${opoData.tier.split(" ").join(" - ")}`}
+                  background={OPO_PERFORMANCE_TIER_FILL[opoData.tier.split(" ")[1]].fill}
+                  text={`Tier ${opoData.tier.split(" ").join(" - ")}`}
                 />
               </Col>
             </Row>
@@ -134,7 +133,7 @@ export default function Opo({ opo }) {
               </Col>
               <Col>
                   {!!opoData.investigation
-                    ? <a href={opoData.investigation_url} target="_blank"> Yes <BoxArrowUpRight /> </a>
+                    ? <a href={opoData.investigation_url} target="_blank" rel="noreferrer"> Yes <BoxArrowUpRight /> </a>
                     : <p>No</p>
                   }
               </Col>

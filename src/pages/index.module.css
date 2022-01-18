@@ -42,7 +42,7 @@
 
 .secondHeader {
   margin-left: 2rem;
-  margin-top: 4rem;
+  margin-top: 12rem;
   margin-bottom: 2rem;
   display: inline-flex;
   flex-wrap: nowrap;
@@ -63,6 +63,16 @@
 
 .thirdHeader {
   margin-bottom: 4rem;
+}
+
+.mapIntroContent {
+  font-size: 1rem;
+  margin-left: 2rem;
+}
+
+.mapToggleButtons {
+  margin-left: 1rem;
+  align-items: center;
 }
 
 .statsSection {

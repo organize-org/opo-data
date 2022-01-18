@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql } from "gatsby";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, ButtonGroup, Button } from "react-bootstrap";
 import { ArrowRight } from "react-bootstrap-icons";
 import ReactMarkdown from "react-markdown";
 import ReactPlayer from "react-player";
@@ -8,7 +8,7 @@ import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 
 import EquitySection from "../components/equitySection/equitySection";
 import Layout from "../components/layout/layout";
-import Map from "../components/map/map";
+import MainMap from "../components/map/mainMap";
 import Social from "../components/social/social";
 import QuoteWithImage from "../components/quoteWithImage/quoteWithImage";
 import SelectState from "../components/selectState/selectState";
@@ -26,6 +26,8 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
     {}
   );
 
+  const [mapView, setMapView] = useState('opo-performance');
+
   return (
     <Layout sources={sources}>
       <Row className={styles.topBar}>
@@ -35,8 +37,25 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
         </Col>
         <Social />
       </Row>
-      <SelectState />
-      <Map interactive={true} legend={true} zoomControl={true} />
+
+      <Row className={styles.mapToggleButtons}>
+        <Col xs={7}>
+          <ButtonGroup>
+            <Button variant="outline-secondary" className={styles.mapToggleButtons} active={mapView==='opo-performance'} onClick={() => setMapView('opo-performance')}>OPO Performance</Button>
+            <Button variant="outline-secondary" className={styles.mapToggleButtons} active={mapView==='congressional-investigation'} onClick={() => setMapView('congressional-investigation')}>Under Congressional Investigation</Button>
+            <Button variant="outline-secondary" className={styles.mapToggleButtons} active={mapView==='black-procurement-disparity'} onClick={() => setMapView('black-procurement-disparity')}>Black Procurement Disparities</Button>
+          </ButtonGroup>
+        </Col>
+        <Col>
+          <SelectState />
+        </Col>
+      </Row>
+      {/* Map content (specific to current map view) */}
+      <Row className={styles.mapIntroContent}>
+      <div>{getMapIntroContent(mapView)}</div>
+      </Row>  
+      <MainMap mapView={mapView}/>
+
       <Col className={styles.secondHeader} xs={10} md={6}>
         <StaticImage src="../images/icons/performance.png" />
         <h2>Poor OPO Performance Costs Lives</h2>
@@ -129,3 +148,36 @@ export const query = graphql`
     }
   }
 `;
+
+const getMapIntroContent = (view) => {
+  if (view === "opo-performance") {
+    return (
+      <>
+        <p>The Centers for Medicare & Medicaid Services (CMS) ranks OPOs into 3 different tiers. Rankings incorporate the number of donors and the number of organs transplanted. The majority of the nation’s OPOs are failing to meet Tier 1 standards, leading to thousands of unnecessary deaths each year, which disproportionately harm patients of color. </p>
+        <p>The map below shows the current ranking of U.S. OPOs by location, based on 2019 data. <a href="https://www.cms.gov/newsroom/fact-sheets/organ-procurement-organization-opo-conditions-coverage-final-rule-revisions-outcome-measures-opos" rel="noreferrer" target="_blank">Find more information here. </a></p>
+      </>
+    )
+  }
+
+  if (view === "congressional-investigation") {
+    return (
+      <>
+        <p>In the face of inadequate patient safety standards and procurement rates, the House and Senate have launced congressional investigations into the practices and performance of several OPOs across the U.S.
+          <ul>
+            <li><a target="_blank" rel="noreferrer" href="https://oversight.house.gov/sites/democrats.oversight.house.gov/files/OPO%20Letters.pdf">Read the release from the House committee</a></li>
+            <li><a target="_blank" rel="noreferrer" href="https://www.finance.senate.gov/chairmans-news/finance-committee-members-probe-us-organ-transplant-system">Read the release from the Senate Finance committee</a></li>
+          </ul>
+        </p>
+      </>
+    )
+  }
+
+  if (view === "black-procurement-disparity") {
+    return (
+      <>
+        <p>In 2019, CMS released data on organ donation success rates by ethnicity. The data highligted significant disaparities between white donors and people of color, especially black donors — who had a 10-fold difference between recovery from white donors. This gap can be attributed to ineffective community outreach, education, and lack of cultural sensitivity by some OPOs.</p>
+        <p><a target="_blank" rel="noreferrer" href="https://www.axios.com/organ-donation-recovery-worse-people-of-color-8d42a213-4ef7-48a3-85fb-dd15cfc4301b.html">Read the article from Axios covering this issue. </a></p>
+      </>
+    )
+  }
+}

@@ -4,6 +4,18 @@ export const tierColors = {
   Failing: "#D43C37",
 };
 
+export const donorMapColors = nhb_rank => {
+
+  if (nhb_rank < 10 ) return "#4E1C19";
+  if (nhb_rank < 15) return "#89322B";
+  if (nhb_rank < 20) return "#D43C37";
+  if (nhb_rank < 25) return "#FFB042";
+  if (nhb_rank < 30) return "#F9D558";
+  if (nhb_rank > 35) return "#00768F";
+
+  return  "C4C4C4";
+};
+
 export const racialDemographics = {
   race_perf_white: "White",
   race_perf_native: "American Indian/Alaskan Native",
