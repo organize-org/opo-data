@@ -114,7 +114,7 @@ export default function State({ data: { statesGeoData }, state }) {
     <Layout
       crumbLabel={formatStateName(stateData)}
       // sources must be in order they appear on the page
-      sources={{...stats, ...headings}}
+      contentWithSources={{...stats, ...headings}}
       social={true}
     >
       {/* State name, top-level stats, select state menu, and map */}
