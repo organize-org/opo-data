@@ -18,6 +18,10 @@
   padding: .5rem 1rem;
 }
 
+.sources p {
+  line-height: 1.5rem;
+}
+
 .sectionHeader {
   color: var(--opoRed);
   font-weight: bolder;

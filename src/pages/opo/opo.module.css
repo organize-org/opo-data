@@ -23,6 +23,14 @@
 
 .region {
   justify-content: space-between;
+  align-items: center;
+}
+
+.sectionHeader {
+  color: var(--opoRed);
+  font-weight: bolder;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .mapStats {
@@ -57,6 +65,7 @@
 
 h3 {
   text-transform: none !important;
+  margin-top: 1rem;
 }
 .stats h3 {
   margin-top: 0;
@@ -94,7 +103,12 @@ h3 {
 .statsComp {
   height: 2rem;
   font-weight: 600;
-  padding: 0 1rem;
+  margin: 0 1rem;
+}
+
+.statsDivider {
+  border-top: 1px solid;
+  border-color: rgba(0,0,0,.1);
 }
 
 .statsComp .ceo,
@@ -106,6 +120,9 @@ h3 {
   color: var(--opoBlack);
 }
 
+.statsComp div {
+  padding-left: 0;
+}
 .statsTier .Passing {
   color: #c4c4c4;
 }
@@ -153,12 +170,6 @@ h3 {
     text-align: center;
   }
 
-  .sectionHeader {
-    color: var(--opoRed);
-    font-weight: bolder;
-    margin-top: 2rem !important;
-    margin-bottom: 2rem !important;
-  }
   .navToOpo p {
     margin-left: 0;
   }

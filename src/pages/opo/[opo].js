@@ -147,7 +147,7 @@ export default function Opo({ opo }) {
                   }
               </Col>
             </Row>
-            < hr />
+            <div className={styles.statsDivider}></div>
             <Row className={styles.statsComp}>
               <Col>
                 <span className={styles.ceo}>

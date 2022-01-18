@@ -211,7 +211,6 @@ export default function State({ data: { statesGeoData }, state }) {
               ))}
             </ul>
           </Row>
-          <hr />
         </Row>
       )}
       {/* Voices for reform (if exists) */}

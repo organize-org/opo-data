@@ -1,5 +1,5 @@
 .opoTable {
-  padding-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .opoTable h3 {
@@ -55,6 +55,7 @@
 .tableCaption {
   font-size: 1rem;
   line-height: 1;
+  margin-left: 0;
 }
 
 .tierCol {
