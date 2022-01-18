@@ -117,7 +117,7 @@ export default function ThumnailMap({
                     : layer
                 }
               />
-              {/* Create layer for state or OPO polygon with boundaries */}
+              {/* Create layer for state or OPO states polygons with boundaries */}
               <GeoJSON
                 key={dataId + "boundaries"}
                 data={boundaryGeoJson}
