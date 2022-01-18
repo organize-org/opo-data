@@ -29,12 +29,8 @@
 }
 
 .opoTable tbody tr .shadows {
-  background-color: rgba(212, 60, 55, 0.2);
-  border-right: solid 0.25rem !important;
-  border-left: solid 0.25rem !important;
   color: var(--opoRed);
   font-weight: 700;
-  text-align: center;
 }
 
 .opoTable thead th:first-child {
@@ -42,14 +38,6 @@
 }
 .opoTable tbody td:first-child {
   background-color: #a6cee340;
-}
-
-.opoTable tbody tr:nth-child(1) .shadows {
-  border-top: solid 0.25rem var(--opoRed) !important;
-}
-
-.opoTable tbody tr:nth-last-child(1) .shadows {
-  border-bottom: solid 0.25rem var(--opoRed) !important;
 }
 
 .tableCaption {

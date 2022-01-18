@@ -58,21 +58,16 @@ opoHeadings:
     title: Recovery Rate[⁹](#sources-recovery)
     source: TODO GET CONTENT
   rank:
-    title: Recovery Rate Ranking[¹⁰](#sources-rank)
-    source: TODO GET CONTENT 
+    title: Recovery Rate Ranking[²](#sources-rank)
 stateHeadings:
   name:
     title: OPO Name
   region:
     title: Region
-  states:
-    title: States
   tier:
-    title: Tier (2019)[¹¹](#sources-tier)
-    source: Tier (2019) via [CMS](https://qcor.cms.gov/main.jsp), data most recently
-      available (2019). OPO names are listed as they are by CMS.
+    title: Performance Tier (2019)[¹](#sources-tier)
   donors:
-    title: Donors Needed (2019)[¹²](#sources-donors)
+    title: Donors Needed (2019)[¹¹](#sources-donors)
     source:  Donors needed (2019) via [CMS](https://qcor.cms.gov/main.jsp) represents the
       number of additional donors needed for OPO to reach Tier 1. Data most
       recently available (2019)

@@ -13,6 +13,10 @@ import Social from "../components/social/social";
 import QuoteWithImage from "../components/quoteWithImage/quoteWithImage";
 import SelectState from "../components/selectState/selectState";
 
+import News from '../images/icons/news.svg';
+import Data from '../images/icons/data.svg';
+import Performance from '../images/icons/performance.svg';
+
 import * as styles from "./index.module.css";
 import content from "./index.content.yml";
 
@@ -32,8 +36,7 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
     <Layout>
       <Row className={styles.topBar}>
         <Col className={styles.topHeader} xs={12} md={8}>
-          <StaticImage src="../images/icons/data.png" />
-          <h2>Data on U.S. Organ Procurement Organizations (OPO)</h2>
+          <h2> <Data />Data on U.S. Organ Procurement Organizations (OPO)</h2>
         </Col>
         <Social />
       </Row>
@@ -47,18 +50,17 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
           </ButtonGroup>
         </Col>
         <Col>
-          <SelectState />
+          <SelectState opo={mapView  !== 'opo-performance'} />
         </Col>
       </Row>
       {/* Map content (specific to current map view) */}
       <Row className={styles.mapIntroContent}>
-      <div>{getMapIntroContent(mapView)}</div>
+        <div>{getMapIntroContent(mapView)}</div>
       </Row>  
       <MainMap mapView={mapView}/>
 
       <Col className={styles.secondHeader} xs={10} md={6}>
-        <StaticImage src="../images/icons/performance.png" />
-        <h2>Poor OPO Performance Costs Lives</h2>
+        <h2><Performance />Poor OPO Performance Costs Lives</h2>
       </Col>
       <Row className={styles.statsSection}>
         {Object.values(stats).map(({ title, value }) => (
@@ -85,8 +87,7 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
         xs={10}
         md={5}
       >
-        <StaticImage src="../images/icons/news.png" />
-        <h2>Organ donation in the news</h2>
+        <h2><News />Organ donation in the news</h2>
       </Col>
       <Row className={styles.videoSection}>
         <Col>

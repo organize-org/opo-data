@@ -35,14 +35,10 @@ export default function OpoTable({
             </Link>
           ),
         };
-      } else if (
-        (accessor === "donors" && !inOpo) ||
-        accessor === "investigation" || 
-        accessor === "shadow"
-      ) {
+      } else if(accessor === "shadow") {
         return {
           ...col,
-          cellClass: "text-center",
+          cellClass: styles.shadows,
         };
       } else if (accessor === "tier") {
         return {
@@ -80,7 +76,7 @@ export default function OpoTable({
 
   const data = useMemo(() => {
     const formatNumber = (num, options) =>
-      !num || isNaN(num) ? "--" : num.toLocaleString("en-US", options);
+      typeof num === "number" ? num.toLocaleString("en-US", options) : '--';
 
     return opos.map(
       ({

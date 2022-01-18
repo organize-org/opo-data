@@ -845,28 +845,6 @@ module.exports = {
                             ]
                           },
                           {
-                            label: "States",
-                            name: "states",
-                            widget: "object",
-                            fields: [
-                              {
-                                label: "Title",
-                                name: "title",
-                                widget: "markdown"
-                              },
-                              {
-                                label: "Caption",
-                                name: "caption",
-                                widget: "markdown"
-                              },
-                              {
-                                label: "Source",
-                                name: "source",
-                                widget: "markdown"
-                              }
-                            ]
-                          },
-                          {
                             label: "Tier",
                             name: "tier",
                             widget: "object",

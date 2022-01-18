@@ -2,9 +2,9 @@ stats:
   - title: National organ transplant waiting list as of January 2022
     value: 106,608
   - title: Number of Americans in 2021 who died each day because they didn’t get a needed transplant
-    value: 31
-  - title: Average reported CEO compensation for failing OPOs
-    value: $479,581
+    value: "31"
+  - title: Number of Americans projected to die before an OPO loses its contract
+    value: 60,000+
 quote:
   quote: An astounding lack of accountability and oversight in the nation’s
     creaking, monopolistic organ transplant system is allowing hundreds of

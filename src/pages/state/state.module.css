@@ -25,6 +25,12 @@ h3 {
   margin-bottom: 2rem;
 }
 
+.sectionHeader svg {
+  width: 2rem;
+  margin-left: .25rem;
+  margin-bottom: .2rem;
+}
+
 .mapStats {
   display: flex;
   flex-direction: row;

@@ -1,3 +1,8 @@
+p {
+  margin: auto 0;
+  line-height: 1.6;
+}
+
 .rightArrow {
   margin-left: 5px;
 }
@@ -36,13 +41,15 @@
   text-transform: uppercase;
 }
 
-.topHeader img {
-  object-fit: contain !important;
+h2 svg {
+  color: var(--opoRed);
+  width: 2rem;
+  margin-right: .25rem;
+  margin-bottom: .2rem;
 }
 
 .secondHeader {
-  margin-left: 2rem;
-  margin-top: 12rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
   display: inline-flex;
   flex-wrap: nowrap;
@@ -53,12 +60,8 @@
 .secondHeader h2 {
   color: var(--opoRed);
   font-weight: 800;
-  margin-left: 1rem;
+  margin-left: 2rem;
   text-transform: uppercase;
-}
-
-.secondHeader img {
-  object-fit: contain !important;
 }
 
 .thirdHeader {
@@ -67,7 +70,7 @@
 
 .mapIntroContent {
   font-size: 1rem;
-  margin-left: 2rem;
+  margin-left: 3rem;
 }
 
 .mapToggleButtons {
@@ -78,7 +81,7 @@
 .statsSection {
   font-weight: 700;
   text-align: center;
-  margin: 4rem 0;
+  margin: 0;
 }
 
 .statsValues {

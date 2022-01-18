@@ -54,7 +54,7 @@ export default function MainMap({ mapView }) {
   // use state geo data to generate bounding box
   const [minX, minY, maxX, maxY] = bbox(stateGeoJson)
   return (
-      <Row className={styles.map}>
+      <Row className={styles.mainMap}>
         <div style={mapDimensions}>
           <hr />
           {

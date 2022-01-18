@@ -29,6 +29,11 @@
   justify-content: center;
 }
 
+.mainMap {
+  justify-content: center;
+  margin-bottom: 10rem;
+}
+
 .mapContainer {
   background-color: white;
 }

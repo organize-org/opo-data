@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 import { StaticImage } from "gatsby-plugin-image";
+import About from '../../images/icons/about.svg';
 
 import * as styles from "./footer.module.css";
 
@@ -9,7 +10,7 @@ export default function Footer() {
     <Row className={styles.footer}>
       <Col className={styles.header} xs={10} md={8}>
         <Row className={styles.icon}>
-          <StaticImage src="../../images/icons/about.png" />
+          <About />
           <h2>About Us</h2>
         </Row>
         <p>

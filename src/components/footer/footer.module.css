@@ -4,7 +4,7 @@
 }
 
 .header {
-  margin-top: 5rem;
+  margin: 5rem 0;
 }
 
 .header h2 {
@@ -21,6 +21,10 @@
 .icon {
   margin-left: 2rem;
   margin-bottom: 2rem;
+}
+
+.icon svg {
+  width: 2.5rem;
 }
 
 .research {

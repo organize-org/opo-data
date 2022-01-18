@@ -10,6 +10,9 @@ import ThumbnailMap from "../../components/map/thumbnailMap";
 import SelectState from "../../components/selectState/selectState";
 import OpoTable from "../../components/opoTable/opoTable";
 
+import News from '../../images/icons/news.svg';
+import Data from '../../images/icons/data.svg';
+
 import {
   findStateFeature,
   formatStateName,
@@ -18,8 +21,8 @@ import {
 import useDataMaps from "../../hooks/useDataMaps";
 import content from "./[state].content.yml";
 
+
 import * as styles from "./state.module.css";
-import { FileEarmarkText, GraphUp } from "react-bootstrap-icons";
 
 export default function State({ data: { statesGeoData }, state }) {
   const [{ opoDataMap, stateDataMap }] = useDataMaps();
@@ -181,14 +184,17 @@ export default function State({ data: { statesGeoData }, state }) {
         </Row>
       </Row>
       {/* OPOs servicing state */}
-      <h2 className={styles.sectionHeader}> <FileEarmarkText />OPOS IN THIS STATE</h2>
+      <h2 className={styles.sectionHeader}>
+        <News/>
+        OPOs IN THIS STATE
+      </h2>
       <Row className={styles.serviceTable}>
         {inStateOpos.length > 0 && (
           <OpoTable
           // suppress state column in the in-state OPO table
             headings={{...headings, states: null}}
             opos={inStateOpos}
-            title={`OPOS Servicing ${stateData.name}`}
+            title={`OPOs Servicing ${stateData.name}`}
           />
         )}
       </Row>
@@ -243,7 +249,7 @@ export default function State({ data: { statesGeoData }, state }) {
       ) : null}
       {/* OPOs in neighboring states (if exists) */}
       <hr />
-      <h2 className={styles.sectionHeader}> <GraphUp /> STATE DATA</h2>
+      <h2 className={styles.sectionHeader}> <Data /> STATE DATA</h2>
       {outOfStateOpos.length > 0 && (
         <Row className={styles.serviceTable}>
           <OpoTable

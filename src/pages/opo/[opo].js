@@ -6,6 +6,8 @@ import ReactMarkdown from "react-markdown";
 import Layout from "../../components/layout/layout";
 import SelectState from "../../components/selectState/selectState";
 import OpoTable from "../../components/opoTable/opoTable";
+import ThumnailMap from "../../components/map/thumbnailMap";
+import { LegendItem, OPO_PERFORMANCE_TIER_FILL } from "../../components/map/legend";
 import {
   formatOpoName,
   formatOPORank,
@@ -15,12 +17,12 @@ import {
 
 import useDataMaps from "../../hooks/useDataMaps";
 import stateContent from "../state/[state].content.yml";
-import { BoxArrowUpRight, FileEarmarkText, GraphUp } from "react-bootstrap-icons";
+import { BoxArrowUpRight, GraphUp } from "react-bootstrap-icons";
 import opoContent from "./[opo].content.yml";
+import { StaticImage } from "gatsby-plugin-image";
 
 import * as styles from "./opo.module.css";
-import ThumnailMap from "../../components/map/thumbnailMap";
-import { LegendItem, OPO_PERFORMANCE_TIER_FILL } from "../../components/map/legend";
+
 
 export default function Opo({ opo }) {
   const [{ opoDataMap }] = useDataMaps();
@@ -175,7 +177,10 @@ export default function Opo({ opo }) {
       </Row>
       {/* Headlines about OPO */}
       {(opoHeadlines?.length || opoTakeaways?.length)
-        ? <h2 className={styles.sectionHeader}> <FileEarmarkText /> ABOUT THIS OPO</h2>
+        ? <h2 className={styles.sectionHeader}>
+            <StaticImage src="../images/icons/news.png" />
+            ABOUT THIS OPO
+          </h2>
         : null
       }
       <Row className={styles.about}>
