@@ -17,7 +17,7 @@ import * as styles from "./index.module.css";
 import content from "./index.content.yml";
 
 export default function Dashboard({ data: { articleImages, quoteImage } }) {
-  const { articles, stats, quote, video, sources } = content;
+  const { articles, stats, quote, video } = content;
   const articleImgsByPath = articleImages?.edges?.reduce(
     (imgMap, { node }) => ({
       ...imgMap,
@@ -29,7 +29,7 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
   const [mapView, setMapView] = useState('opo-performance');
 
   return (
-    <Layout sources={sources}>
+    <Layout>
       <Row className={styles.topBar}>
         <Col className={styles.topHeader} xs={12} md={8}>
           <StaticImage src="../images/icons/data.png" />
