@@ -92,6 +92,19 @@ export default function MainMap({ mapView }) {
                 <GeoJSON
                   key="boundary-and-tooltip"
                   data={mapView === "opo-performance" ? stateGeoJson : opoGeoJson}
+                  eventHandlers={{
+                    mouseover: (({ propagatedFrom, target }) =>target
+                    ?.setStyle(
+                      f =>
+                        f?.properties?.name ===
+                          propagatedFrom?.feature?.properties?.name && {
+                          color: "blue",
+                          fillOpacity: 0.2,
+                          weight: 4,
+                        }
+                    )),
+                    mouseout: ({ target }) => target?.resetStyle() 
+                  }}
                   onEachFeature={(feature, layer) =>
                     layer.bindTooltip(
                       `<div class="${styles.tooltip}">

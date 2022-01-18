@@ -58,6 +58,7 @@ h3 {
 
 .stats h3 p {
   margin: 0;
+  line-height: 1rem;
 }
 
 .statsHeading > * {
@@ -94,6 +95,7 @@ h3 {
 
 .serviceState {
   justify-content: space-between;
+  align-items: center;
 }
 
 .serviceTable {
