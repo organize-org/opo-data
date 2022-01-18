@@ -53,12 +53,12 @@ export default function MainMap({ mapView }) {
 
   // use state geo data to generate bounding box
   const [minX, minY, maxX, maxY] = bbox(stateGeoJson)
-  return typeof window === "undefined"
-    ? <></>
-    : (
-      <Row className={styles.map}>
-        <div style={mapDimensions}>
-          <hr />
+  return (
+    <Row className={styles.map}>
+      <div style={mapDimensions}>
+        <hr />
+        {
+          typeof window !== "undefined" && (
           <MapContainer
             key={`${mapView}-map`}
             bounds={[
@@ -133,10 +133,12 @@ export default function MainMap({ mapView }) {
               }}
             />
           </MapContainer>
-          <Legend mapView={mapView} />
-          <hr />
-        </div>
-      </Row>
+          )
+        }
+        <Legend mapView={mapView} />
+        <hr />
+      </div>
+    </Row>
   );
 }
 

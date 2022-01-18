@@ -54,8 +54,7 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
       <Row className={styles.mapIntroContent}>
       <div>{getMapIntroContent(mapView)}</div>
       </Row>  
-      <MainMap mapView={mapView}/>
-
+      <MainMap key={typeof window} mapView={mapView}/>
       <Col className={styles.secondHeader} xs={10} md={6}>
         <StaticImage src="../images/icons/performance.png" />
         <h2>Poor OPO Performance Costs Lives</h2>
