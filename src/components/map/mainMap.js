@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Row } from "react-bootstrap";
 import { GeoJSON, MapContainer, ZoomControl } from "react-leaflet";
 import { navigate } from "gatsby";
@@ -53,89 +53,86 @@ export default function MainMap({ mapView }) {
 
   // use state geo data to generate bounding box
   const [minX, minY, maxX, maxY] = bbox(stateGeoJson)
-  return (
+  return typeof window === "undefined"
+    ? <></>
+    : (
       <Row className={styles.map}>
         <div style={mapDimensions}>
           <hr />
-          {
-            // Hack: [`window` dependency for Leaflet](https://www.gatsbyjs.com/docs/debugging-html-builds/#fixing-third-party-modules)
-            typeof window !== "undefined" && (
-              <MapContainer
-                key={`${mapView}-map`}
-                bounds={[
-                  [minY, minX],
-                  [maxY, maxX],
-                ]}
-                scrollWheelZoom={false}
-                style={Object.assign(mapDimensions, { backgroundColor: "#fff" })}
-                zoomControl={false}
-                dragging={windowWidth > 800}
-                className={styles.mapContainer}
-              >
-                <ZoomControl position="bottomright" />
+          <MapContainer
+            key={`${mapView}-map`}
+            bounds={[
+              [minY, minX],
+              [maxY, maxX],
+            ]}
+            scrollWheelZoom={false}
+            style={Object.assign(mapDimensions, { backgroundColor: "#fff" })}
+            zoomControl={false}
+            dragging={windowWidth > 800}
+            className={styles.mapContainer}
+          >
+            <ZoomControl position="bottomright" />
 
-                {/* Create layer for OPO polygons with fill based on map view */}
-                <GeoJSON
-                  key="opo-fill"
-                  data={opoGeoJson}
-                  style={feature => ({
+            {/* Create layer for OPO polygons with fill based on map view */}
+            <GeoJSON
+              key="opo-fill"
+              data={opoGeoJson}
+              style={feature => ({
+                color: "white",
+                fillColor: getMapFill(mapView, feature),
+                fillOpacity: 0.85,
+                opacity: 0.75,
+                weight: 0.75,
+              })}
+            />
+
+            {/* Create layer for boundary polygons (OPO or state based on map view)
+              and add hover tool tip and click action */}
+            <GeoJSON
+              key="boundary-and-tooltip"
+              data={mapView === "opo-performance" ? stateGeoJson : opoGeoJson}
+              onEachFeature={(feature, layer) =>
+                layer.bindTooltip(
+                  `<div class="${styles.tooltip}">
+                    <h4>${feature?.properties?.name}</h4>
+                    ${getToolTipContent(mapView, feature.properties.abbreviation, stateDataMap, opoDataMap)}
+                  </div>`,
+                  {
+                    permanent: false,
+                    sticky: false,
+                    offset: [10, 0],
                     color: "white",
-                    fillColor: getMapFill(mapView, feature),
-                    fillOpacity: 0.85,
-                    opacity: 0.75,
-                    weight: 0.75,
-                  })}
-                />
-
-                {/* Create layer for boundary polygons (OPO or state based on map view)
-                  and add hover tool tip and click action */}
-                <GeoJSON
-                  key="boundary-and-tooltip"
-                  data={mapView === "opo-performance" ? stateGeoJson : opoGeoJson}
-                  onEachFeature={(feature, layer) =>
-                    layer.bindTooltip(
-                      `<div class="${styles.tooltip}">
-                        <h4>${feature?.properties?.name}</h4>
-                        ${getToolTipContent(mapView, feature.properties.abbreviation, stateDataMap, opoDataMap)}
-                      </div>`,
-                      {
-                        permanent: false,
-                        sticky: false,
-                        offset: [10, 0],
+                    fillColor: "black",
+                    fillOpacity: 0.2,
+                    weight: 4
+                  }
+                )
+              }
+              eventHandlers={{
+                click: ({ propagatedFrom }) => {
+                  navigate(`/${mapView === 'opo-performance' ? 'state' : 'opo'}/${propagatedFrom?.feature?.properties?.abbreviation}`)
+                },
+                mouseover: (({ propagatedFrom, target }) => target
+                  ?.setStyle(
+                    f =>
+                      f?.properties?.name ===
+                        propagatedFrom?.feature?.properties?.name && {
                         color: "white",
                         fillColor: "black",
                         fillOpacity: 0.2,
-                        weight: 4
+                        weight: 4,
                       }
-                    )
-                  }
-                  eventHandlers={{
-                    click: ({ propagatedFrom }) => {
-                      navigate(`/${mapView === 'opo-performance' ? 'state' : 'opo'}/${propagatedFrom?.feature?.properties?.abbreviation}`)
-                    },
-                    mouseover: (({ propagatedFrom, target }) => target
-                      ?.setStyle(
-                        f =>
-                          f?.properties?.name ===
-                            propagatedFrom?.feature?.properties?.name && {
-                            color: "white",
-                            fillColor: "black",
-                            fillOpacity: 0.2,
-                            weight: 4,
-                          }
-                      )
-                    ),
-                    mouseout: ({ target }) => target?.resetStyle()   
-                  }}
-                  style={{
-                    color: "white",
-                    fillOpacity: 0,
-                    weight: 2,
-                  }}
-                />
-              </MapContainer>
-            )
-          }
+                  )
+                ),
+                mouseout: ({ target }) => target?.resetStyle()   
+              }}
+              style={{
+                color: "white",
+                fillOpacity: 0,
+                weight: 2,
+              }}
+            />
+          </MapContainer>
           <Legend mapView={mapView} />
           <hr />
         </div>
