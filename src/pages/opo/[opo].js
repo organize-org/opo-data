@@ -15,6 +15,9 @@ import {
   formatMoney,
 } from "../../utils/utils";
 
+import News from '../../images/icons/news.svg';
+import Data from '../../images/icons/data.svg';
+
 import useDataMaps from "../../hooks/useDataMaps";
 import stateContent from "../state/[state].content.yml";
 import { BoxArrowUpRight, GraphUp } from "react-bootstrap-icons";
@@ -74,6 +77,7 @@ export default function Opo({ opo }) {
 
   return (
     <Layout
+      className="opoPage"
       crumbLabel={formatOpoName(opoData)}
       contentWithSources={{...stats, ...opoHeadings, ... stateHeadings}}
       social={true}
@@ -178,7 +182,7 @@ export default function Opo({ opo }) {
       {/* Headlines about OPO */}
       {(opoHeadlines?.length || opoTakeaways?.length)
         ? <h2 className={styles.sectionHeader}>
-            <StaticImage src="../images/icons/news.png" />
+            <News />
             ABOUT THIS OPO
           </h2>
         : null
@@ -222,7 +226,7 @@ export default function Opo({ opo }) {
         : null
       }
       {/* Ethnicity data */}
-      <h2 className={styles.sectionHeader}> <GraphUp /> OPO DATA</h2>
+      <h2 className={styles.sectionHeader}> <Data /> OPO DATA</h2>
       <Row className={styles.opoTables}>
         <Row>
           {ethnicityData.length > 0 && (

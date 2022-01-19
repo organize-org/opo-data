@@ -33,7 +33,7 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
   const [mapView, setMapView] = useState('opo-performance');
 
   return (
-    <Layout>
+    <Layout className={styles.index}>
       <Row className={styles.topBar}>
         <Col className={styles.topHeader} xs={12} md={8}>
           <h2> <Data />Data on U.S. Organ Procurement Organizations (OPO)</h2>

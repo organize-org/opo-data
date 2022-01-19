@@ -36,14 +36,16 @@ export default function ThumnailMap({
 
   // Compose boundary state geoJson with appropriately filtered
   // state features based on view ("opo" or "state")
+  const geoData = view === "state" ? statesGeoData : dsaGeoData;
   const boundaryGeoJson = {
-    ...statesGeoData.childGeoJson,
-    features: getStateFeatures(view, statesGeoData.childGeoJson.features, opoDataMap, dataId)
-      .map(f => ({
+    ...geoData.childGeoJson,
+    features: [geoData.childGeoJson.features.find(
+      ({ properties: { abbreviation } }) => abbreviation === dataId
+    )].map(f => ({
         ...f,
         properties: {
           ...f.properties,
-          name: stateDataMap[f.properties.abbreviation].name,
+          name: (view === "state" ? stateDataMap : opoDataMap)[f.properties.abbreviation].name,
         },
       })),
   };

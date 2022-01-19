@@ -39,6 +39,7 @@ export default function OpoTable({
         return {
           ...col,
           cellClass: styles.shadows,
+          color: "red"
         };
       } else if (accessor === "tier") {
         return {
@@ -76,7 +77,7 @@ export default function OpoTable({
 
   const data = useMemo(() => {
     const formatNumber = (num, options) =>
-      typeof num === "number" ? num.toLocaleString("en-US", options) : '--';
+      typeof num === "number" ? num.toLocaleString("en-US", options) : '--';  
 
     return opos.map(
       ({
