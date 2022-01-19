@@ -7,14 +7,33 @@ import Navbar from "../navbar/navbar";
 import Footer from "../footer/footer";
 
 import * as styles from "./layout.module.css";
-import { Asterisk } from "react-bootstrap-icons";
+import Additional from '../../images/icons/additional.svg';
 
 export default function Layout({ crumbLabel, children, contentWithSources, social, className }) {
-  // Filter sources to only include those with data provided 
-  const sources = contentWithSources 
-    ? Object.entries(contentWithSources).filter(([_, val]) => !!val?.source)
-    : null; 
-  
+    // Compose sources object from all provided content,
+    // taking only those items with `source` defined
+    const sourcesObj = contentWithSources.reduce((withSources, contentObj) => {
+      Object.entries(contentObj).forEach(([key, val]) => {
+        if(!withSources[key] && val.source) {
+          withSources[key] = val
+        }
+      })  
+      return withSources;
+    }, {})
+
+  // sort based on the numerical footnote included in the content title
+  const footnoteRegex = /\[(\d+)\]\(#sources/;
+  const sources = Object.entries(sourcesObj)
+    .sort(([_aKey, aVal], [_bKey, bVal]) => {
+      const aNum = parseInt(aVal?.title?.match(footnoteRegex)?.[1])
+      const bNum = parseInt(bVal?.title?.match(footnoteRegex)?.[1])
+
+      if (aNum == undefined 
+        || bNum == undefined 
+        || aNum === bNum) return 0;
+      return aNum - bNum;
+    })
+
   return (
     <Container fluid className={className}>
       <Navbar />
@@ -31,7 +50,7 @@ export default function Layout({ crumbLabel, children, contentWithSources, socia
         <>
           <hr />
           <Row className={styles.sources}>
-            <h2 className={styles.sectionHeader}> <Asterisk /> ADDITIONAL INFORMATION</h2>
+            <h2 className={styles.sectionHeader}> <Additional /> ADDITIONAL INFORMATION</h2>
             <ol>
               {sources.map(([key, val]) => (
                 <li id={`sources-${key}`} key={`sources-${key}`}>

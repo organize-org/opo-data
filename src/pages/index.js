@@ -4,7 +4,7 @@ import { Row, Col, ButtonGroup, Button } from "react-bootstrap";
 import { ArrowRight } from "react-bootstrap-icons";
 import ReactMarkdown from "react-markdown";
 import ReactPlayer from "react-player";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import EquitySection from "../components/equitySection/equitySection";
 import Layout from "../components/layout/layout";

@@ -33,6 +33,10 @@
   margin-bottom: 2rem;
 }
 
+h3 a {
+  font-size: .75rem;
+  vertical-align: super;
+}
 .mapStats {
   display: flex;
   flex-direction: row;

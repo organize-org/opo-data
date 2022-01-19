@@ -73,12 +73,13 @@ export default function Opo({ opo }) {
     };
     return [...acc, formattedData];
   }, []);
+  
 
   return (
     <Layout
       className="opoPage"
       crumbLabel={formatOpoName(opoData)}
-      contentWithSources={{...stats, ...opoHeadings, ...stateHeadings}}
+      contentWithSources={[stats, opoHeadings, stateHeadings]}
       social={true}
     >
       {/* OPO Name, top-level stats, select OPO menu, and map */}

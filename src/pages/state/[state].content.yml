@@ -1,6 +1,6 @@
 stats:
   waitlist:
-    title: State Waitlist[¹](#sources-waitlist)
+    title: State Waitlist[1](#sources-waitlist)
     source: State waitlist via [OPTN state data](https://optn.transplant.hrsa.gov/data/view-data-reports/state-data/)
       (as of 11/22/21). Alaska, Idaho, Montana, and Wyoming do not have transplant
       centers, so they do not have a state waiting list; patients are listed in
@@ -8,14 +8,14 @@ stats:
       necessarily their state of residence
   monthly: 
     title: Number of people on state waiting list who die each month waiting for
-      an organ[²](#sources-monthly)
+      an organ[2](#sources-monthly)
     source: "Number of people on state waiting list who die each month waiting for an
       organ: 2020 deaths via [OPTN state
       data](https://optn.transplant.hrsa.gov/data/view-data-reports/state-data/)
       (patients who died on waiting list + patients who died who were listed as
       too sick to transplant) divided by 12 months."
   comp:
-    title: Average CEO Compensation[³](#sources-comp)
+    title: Average CEO Compensation[3](#sources-comp)
     source: "Average CEO compensation via each OPO's most recently listed 990 (as of
       6/1/21). 2019: Donor Network Arizona, OneLegacy, Donor Network West, Donor
       Alliance, LifeChoice Donor Services, New England Organ Bank, Washington
@@ -44,16 +44,16 @@ headings:
   states:
     title: States
   tier:
-    title: Tier (2019)[⁴](#sources-tier)
+    title: Tier (2019)[4](#sources-tier)
     source: Tier (2019) via [CMS](https://qcor.cms.gov/main.jsp), data most recently
       available (2019). OPO names are listed as they are by CMS.
   donors:
-    title:  Donors Needed (2019)[⁵](#sources-donors )
+    title:  Donors Needed (2019)[5](#sources-donors )
     source:  Donors needed (2019) via [CMS](https://qcor.cms.gov/main.jsp) represents the
       number of additional donors needed for OPO to reach Tier 1. Data most
       recently available (2019)
   investigation: 
-    title: Currently Under Congressional Investigation[⁶](#sources-investigation)
+    title: Currently Under Congressional Investigation[6](#sources-investigation)
     source: Currently Under Congressional investigation represents the 16 OPOs under investigation
       by the House Committee on Oversight and Reform for “[poor performance,
       waste, and mismanagement](https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)”
@@ -63,7 +63,7 @@ headings:
       and
       [here.](https://oversight.house.gov/sites/democrats.oversight.house.gov/files/2021-05-27.RK%20KP%20to%20Ferreira-NDN%20re%20Expenses.pdf)
   shadow: 
-    title: Preventable Deaths (2019)*[⁷](#sources-shadow)
+    title: Preventable Deaths (2019)*[7](#sources-shadow)
     source: “Preventable deaths” refer to those who die from the event of NOT receiving an organ that should have been available. These organs were not recovered presumably due to OPO performance issues, such as ineffective practices, transportation errors, or understaffing.
     caption: “Preventable deaths” refer to those who die from the event of NOT receiving an organ that should have been available. These organs were not recovered presumably due to OPO performance issues, such as ineffective practices, transportation errors, or understaffing.
 videos:

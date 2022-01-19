@@ -24,7 +24,16 @@ export default function ThumnailMap({
   const fillGeoJson =
   {
     ...dsaGeoData?.childGeoJson,
-    features: getOpoFeatures(view, dsaGeoData.childGeoJson.features, opoDataMap, dataId)
+    features: (view === "state")
+      // state view: grab geoms for all opos that service this state 
+      ? dsaGeoData?.childGeoJson?.features.filter(
+        f =>
+          opoDataMap[f.properties.abbreviation].statesWithRegions[
+            dataId
+          ] !== undefined
+      ) 
+      // opo view: grab geom for this opo
+      : [dsaGeoData?.childGeoJson?.features.find(({ properties: { abbreviation } }) => abbreviation === dataId)]
       .map(f => ({
         ...f,
         properties: {
@@ -34,11 +43,12 @@ export default function ThumnailMap({
       }))
   };
 
-  // Compose boundary state geoJson with appropriately filtered
-  // state features based on view ("opo" or "state")
+  // Compose boundary geoJson from appropriate geo data
+  // based on view ("state" or "opo")
   const geoData = view === "state" ? statesGeoData : dsaGeoData;
   const boundaryGeoJson = {
     ...geoData.childGeoJson,
+    // get the single state or opo geometry to display as boundary
     features: [geoData.childGeoJson.features.find(
       ({ properties: { abbreviation } }) => abbreviation === dataId
     )].map(f => ({
@@ -136,40 +146,4 @@ export default function ThumnailMap({
       </div>
     </Row>
   );
-}
-
-/**
- * Get appropriately filtered OPO features based on view
- * For state view, all OPOs that service the given state
- * For OPO view, the given OPO
- */
-const getOpoFeatures = (view, allFeatures, opoDataMap, dataId) => {
-  if (view === "state") {
-    return allFeatures.filter(
-      f =>
-        opoDataMap[f.properties.abbreviation].statesWithRegions[
-          dataId
-        ] !== undefined
-    )
-  }
-
-  return [allFeatures.find(({ properties: { abbreviation } }) => abbreviation === dataId)]; 
-}
-
-/**
- * Get appropriately filtered state features based on view
- * For state view, the given state
- * For OPO view, all states served by that OPO
- */
-const getStateFeatures = (view, allFeatures, opoDataMap, dataId) => {
-  if (view === "state") {
-    return [allFeatures.find(
-        ({ properties: { abbreviation } }) => abbreviation === dataId
-      )]
-    }
-
-    const opoStates = Object.keys(opoDataMap[dataId].statesWithRegions);
-    return allFeatures.filter(
-      f => opoStates.includes(f?.properties?.abbreviation)
-    );  
 }

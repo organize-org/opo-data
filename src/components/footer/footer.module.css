@@ -7,14 +7,27 @@
   margin: auto 2rem !important;
 }
 
-.header {
-  margin: 5rem 0;
+.footerContent {
+  align-items: center;
+}
+
+.footerCopyright {
+  justify-content: right;
+  width: 100%;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+
+
+.header p {
+  line-height: 1.6;
 }
 
 .header h2 {
   color: var(--opoRed);
   font-weight: 800;
   margin-left: 1rem;
+  margin-top: 3rem;
   text-transform: uppercase;
 }
 
@@ -36,7 +49,7 @@
 }
 
 .logos {
-  margin-right: 1rem;
+  margin-right: 3rem;
 }
 
 .logosOne {
