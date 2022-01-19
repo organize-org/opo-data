@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { graphql } from "gatsby";
 import { Row, Col, ButtonGroup, Button } from "react-bootstrap";
 import { ArrowRight } from "react-bootstrap-icons";
@@ -32,6 +32,14 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
 
   const [mapView, setMapView] = useState('opo-performance');
 
+  // For whatever reason on initial load the map is not rendered correctly
+  // (something to do with the map container not rendering on initial load, so map is incorrectly sized)
+  // Quick hack fix is force map to re-render by using a counter state obj as component key
+  const [rerenderMap, setRerenderMap] = useState(0);
+  useEffect(() => {
+    if(!rerenderMap) setRerenderMap(r => r + 1);
+  })
+
   return (
     <Layout className={styles.index}>
       <Row className={styles.topBar}>
@@ -57,7 +65,7 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
       <Row className={styles.mapIntroContent}>
         <div>{getMapIntroContent(mapView)}</div>
       </Row>  
-      <MainMap mapView={mapView}/>
+      <MainMap key={rerenderMap} mapView={mapView}/>
 
       <Col className={styles.secondHeader} xs={10} md={6}>
         <h2><Performance />Poor OPO Performance Costs Lives</h2>

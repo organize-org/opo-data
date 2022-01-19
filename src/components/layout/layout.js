@@ -10,16 +10,16 @@ import * as styles from "./layout.module.css";
 import Additional from '../../images/icons/additional.svg';
 
 export default function Layout({ crumbLabel, children, contentWithSources, social, className }) {
-    // Compose sources object from all provided content,
-    // taking only those items with `source` defined
-    const sourcesObj = contentWithSources.reduce((withSources, contentObj) => {
-      Object.entries(contentObj).forEach(([key, val]) => {
-        if(!withSources[key] && val.source) {
-          withSources[key] = val
-        }
-      })  
-      return withSources;
-    }, {})
+  // Compose sources object from all provided content,
+  // taking only those items with `source` defined
+  const sourcesObj = (contentWithSources ?? {}).reduce((withSources, contentObj) => {
+    Object.entries(contentObj).forEach(([key, val]) => {
+      if(!withSources[key] && val.source) {
+        withSources[key] = val
+      }
+    })  
+    return withSources;
+  }, {})
 
   // sort based on the numerical footnote included in the content title
   const footnoteRegex = /\[(\d+)\]\(#sources/;
