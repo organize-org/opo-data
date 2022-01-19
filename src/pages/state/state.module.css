@@ -18,11 +18,17 @@ h3 {
   margin-right: 0;
 }
 
+.stateContent {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
 .sectionHeader {
   color: var(--opoRed);
   font-weight: bolder;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  margin-left: 2rem;
 }
 
 .sectionHeader svg {

@@ -37,7 +37,7 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
   // Quick hack fix is force map to re-render by using a counter state obj as component key
   const [rerenderMap, setRerenderMap] = useState(0);
   useEffect(() => {
-    if(!rerenderMap) setRerenderMap(r => r + 1);
+    if(rerenderMap === 0) setRerenderMap(r => r + 1);
   })
 
   return (

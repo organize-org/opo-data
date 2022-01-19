@@ -12,7 +12,7 @@ import Additional from '../../images/icons/additional.svg';
 export default function Layout({ crumbLabel, children, contentWithSources, social, className }) {
   // Compose sources object from all provided content,
   // taking only those items with `source` defined
-  const sourcesObj = (contentWithSources ?? {}).reduce((withSources, contentObj) => {
+  const sourcesObj = (contentWithSources ?? []).reduce((withSources, contentObj) => {
     Object.entries(contentObj).forEach(([key, val]) => {
       if(!withSources[key] && val.source) {
         withSources[key] = val
@@ -47,9 +47,9 @@ export default function Layout({ crumbLabel, children, contentWithSources, socia
 
       {children}
       {sources?.length ? (
-        <>
+        <div className={styles.sources}>
           <hr />
-          <Row className={styles.sources}>
+          <Row>
             <h2 className={styles.sectionHeader}> <Additional /> ADDITIONAL INFORMATION</h2>
             <ol>
               {sources.map(([key, val]) => (
@@ -59,7 +59,7 @@ export default function Layout({ crumbLabel, children, contentWithSources, socia
               ))}
             </ol>
           </Row>
-        </>
+        </div>
       ) : null}
       <Footer />
     </Container>

@@ -179,74 +179,76 @@ export default function Opo({ opo }) {
           </Row>
         </Row>
       </Row>
-      {/* Headlines about OPO */}
-      {(opoHeadlines?.length || opoTakeaways?.length)
-        ? <h2 className={styles.sectionHeader}>
-            <News />
-            ABOUT THIS OPO
-          </h2>
-        : null
-      }
-      <Row className={styles.about}>
-        {opoTakeaways?.length
-          ? (
-            <>
-              <h3>Key takeaways for {opoData.name}</h3>
-              <Row>
-                <ul>
-                  {opoTakeaways.map(({ body }, i) => (
-                    <li key={`opo-takeaway-${i}`}>
-                      <ReactMarkdown>{body}</ReactMarkdown>
-                    </li>
-                  ))}
-                </ul>
-              </Row>
-            </>
-          ): null
+      <div className={styles.opoContent}>
+        {/* Headlines about OPO */}
+        {(opoHeadlines?.length || opoTakeaways?.length)
+          ? <h2 className={styles.sectionHeader}>
+              <News />
+              ABOUT THIS OPO
+            </h2>
+          : null
         }
-        {opoHeadlines?.length 
-          ? (
-            <>
-              <h3>News and investigations for {opoData.name}</h3>
-              <Row>
-                <ul>
-                  {opoHeadlines.map(({ note }, i) => (
-                    <li key={`statewide-note-${i}`}>
-                      <ReactMarkdown>{note}</ReactMarkdown>
-                    </li>
-                  ))}
-                </ul>
-              </Row>
-            </>
-          ): null
+        <Row className={styles.about}>
+          {opoTakeaways?.length
+            ? (
+              <>
+                <h3>Key takeaways for {opoData.name}</h3>
+                <Row>
+                  <ul>
+                    {opoTakeaways.map(({ body }, i) => (
+                      <li key={`opo-takeaway-${i}`}>
+                        <ReactMarkdown>{body}</ReactMarkdown>
+                      </li>
+                    ))}
+                  </ul>
+                </Row>
+              </>
+            ): null
+          }
+          {opoHeadlines?.length 
+            ? (
+              <>
+                <h3>News and investigations for {opoData.name}</h3>
+                <Row>
+                  <ul>
+                    {opoHeadlines.map(({ note }, i) => (
+                      <li key={`statewide-note-${i}`}>
+                        <ReactMarkdown>{note}</ReactMarkdown>
+                      </li>
+                    ))}
+                  </ul>
+                </Row>
+              </>
+            ): null
+          }
+        </Row>
+        {(opoHeadlines?.length || opoTakeaways?.length)
+          ? <hr />
+          : null
         }
-      </Row>
-      {(opoHeadlines?.length || opoTakeaways?.length)
-        ? <hr />
-        : null
-      }
-      {/* Ethnicity data */}
-      <h2 className={styles.sectionHeader}> <Data /> OPO DATA</h2>
-      <Row className={styles.opoTables}>
-        <Row>
-          {ethnicityData.length > 0 && (
-            <OpoTable
-              headings={opoHeadings}
-              opos={ethnicityData}
-              title={`${opoData.name} Recovery Performance data by ethnicity (2019)`}
-            />
-          )}
+        {/* Ethnicity data */}
+        <h2 className={styles.sectionHeader}> <Data /> OPO DATA</h2>
+        <Row className={styles.opoTables}>
+          <Row>
+            {ethnicityData.length > 0 && (
+              <OpoTable
+                headings={opoHeadings}
+                opos={ethnicityData}
+                title={`${opoData.name} Recovery Performance data by ethnicity (2019)`}
+              />
+            )}
+          </Row>
+          <Row>
+            {inStateOpos.length > 0 && (
+              <OpoTable
+                headings={stateHeadings}
+                opos={inStateOpos}
+                title={`OPO Performance comparison in this state`}
+              />
+            )}
+          </Row>
         </Row>
-        <Row>
-          {inStateOpos.length > 0 && (
-            <OpoTable
-              headings={stateHeadings}
-              opos={inStateOpos}
-              title={`OPO Performance comparison in this state`}
-            />
-          )}
-        </Row>
-      </Row>
+      </div>
     </Layout>
   );
 }

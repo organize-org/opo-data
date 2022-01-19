@@ -101,7 +101,7 @@ export default function OpoTable({
           states: states,
           tier: tier,
           ethnicity,
-          death: death?.toLocaleString(),
+          death: formatNumber(death),
           recovery: formatNumber(recovery),
           rank: formatNumber(rank),
         };

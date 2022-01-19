@@ -24,7 +24,7 @@ export default function ThumnailMap({
   const fillGeoJson =
   {
     ...dsaGeoData?.childGeoJson,
-    features: (view === "state")
+    features: ((view === "state")
       // state view: grab geoms for all opos that service this state 
       ? dsaGeoData?.childGeoJson?.features.filter(
         f =>
@@ -33,7 +33,8 @@ export default function ThumnailMap({
           ] !== undefined
       ) 
       // opo view: grab geom for this opo
-      : [dsaGeoData?.childGeoJson?.features.find(({ properties: { abbreviation } }) => abbreviation === dataId)]
+      : [dsaGeoData?.childGeoJson?.features.find(({ properties: { abbreviation } }) => abbreviation === dataId)])
+      // then augment all features with 'tier' property which is used to determine fill color
       .map(f => ({
         ...f,
         properties: {

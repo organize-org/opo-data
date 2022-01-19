@@ -31,6 +31,7 @@
   font-weight: bolder;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  margin-left: 2rem;
 }
 
 h3 a {
@@ -54,6 +55,15 @@ h3 a {
 .map > * {
   margin-left: 0;
   margin-right: 0;
+}
+
+.opoContent {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.opoContent hr {
+  padding: auto 0;
 }
 
 .stats {

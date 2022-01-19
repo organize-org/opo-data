@@ -15,7 +15,7 @@
 }
 
 .sources {
-  padding: .5rem 1rem;
+  padding: .5rem 3rem;
 }
 
 .sources p {
@@ -35,7 +35,7 @@
   font-size: .75rem;
   line-height: 1.5;
   counter-reset: li;
-  padding: 0;
+  padding: 0 .5rem;
   list-style: none;
 }
 

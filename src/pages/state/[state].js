@@ -183,87 +183,89 @@ export default function State({ data: { statesGeoData }, state }) {
           </Row>
         </Row>
       </Row>
-      {/* OPOs servicing state */}
-      <h2 className={styles.sectionHeader}>
-        <News/>
-        OPOs IN THIS STATE
-      </h2>
-      <Row className={styles.serviceTable}>
-        {inStateOpos.length > 0 && (
-          <OpoTable
-          // suppress state column in the in-state OPO table
-            headings={{...headings, states: null}}
-            opos={inStateOpos}
-            title={`OPOs Servicing ${stateData.name}`}
-          />
-        )}
-      </Row>
-      {/* News & notes (if exists) */}
-      {stateData?.notes?.length > 0 && (
-        <Row className={styles.news}>
-          <Row>
-            <h3>OPO News and Notes in {stateData.name}</h3>
-          </Row>
-          <Row>
-            <ul>
-              {stateData.notes.map(({ note }, i) => (
-                <li key={`statewide-note-${i}`}>
-                  <ReactMarkdown>{note}</ReactMarkdown>
-                </li>
-              ))}
-            </ul>
-          </Row>
+      <div className={styles.stateContent}>
+        {/* OPOs servicing state */}
+        <h2 className={styles.sectionHeader}>
+          <News/>
+          OPOs IN THIS STATE
+        </h2>
+        <Row className={styles.serviceTable}>
+          {inStateOpos.length > 0 && (
+            <OpoTable
+            // suppress state column in the in-state OPO table
+              headings={{...headings, states: null}}
+              opos={inStateOpos}
+              title={`OPOs Servicing ${stateData.name}`}
+            />
+          )}
         </Row>
-      )}
-      {/* Voices for reform (if exists) */}
-      {stateData.videos?.length || stateData.voicesForReform?.length ? (
-        <Row className={styles.voices}>
-          <Row>
-            <h3>Voices For Reform</h3>
-          </Row>
-          {stateData.voicesForReform?.length ? (
+        {/* News & notes (if exists) */}
+        {stateData?.notes?.length > 0 && (
+          <Row className={styles.news}>
+            <Row>
+              <h3>OPO News and Notes in {stateData.name}</h3>
+            </Row>
             <Row>
               <ul>
-                {stateData.voicesForReform.map(({ note }, i) => (
-                  <li key={"vfr-notes-" + i}>
+                {stateData.notes.map(({ note }, i) => (
+                  <li key={`statewide-note-${i}`}>
                     <ReactMarkdown>{note}</ReactMarkdown>
                   </li>
                 ))}
               </ul>
             </Row>
-          ) : null}
-          {stateData.videos?.length
-            ? stateData.videos.map(({ link, title, description }, i) => (
-                <Row key={`statewide-videos-${i}`} className={styles.video}>
-                  <ReactPlayer url={link} width={594} height={361} />
-                  <h4>{title}</h4>
-                  {description && (
-                    <ReactMarkdown className={styles.description}>
-                      {description}
-                    </ReactMarkdown>
-                  )}
-                </Row>
-              ))
-            : null}
-        </Row>
-      ) : null}
-      {/* OPOs in neighboring states (if exists) */}
-      <hr />
-      <h2 className={styles.sectionHeader}> <Data /> STATE DATA</h2>
-      {outOfStateOpos.length > 0 && (
-        <Row className={styles.serviceTable}>
-          <OpoTable
-            // pull states column to front and supress region column
-            headings={{states: null, ...headings, region: null} }
-            opos={outOfStateOpos}
-            title="OPO Performance in Neighboring States"
-            captions={Object.values(headings)
-              .filter(heading => !!heading.caption)
-              .map(heading => heading.caption)
-            }
-          />
-        </Row>
-      )}
+          </Row>
+        )}
+        {/* Voices for reform (if exists) */}
+        {stateData.videos?.length || stateData.voicesForReform?.length ? (
+          <Row className={styles.voices}>
+            <Row>
+              <h3>Voices For Reform</h3>
+            </Row>
+            {stateData.voicesForReform?.length ? (
+              <Row>
+                <ul>
+                  {stateData.voicesForReform.map(({ note }, i) => (
+                    <li key={"vfr-notes-" + i}>
+                      <ReactMarkdown>{note}</ReactMarkdown>
+                    </li>
+                  ))}
+                </ul>
+              </Row>
+            ) : null}
+            {stateData.videos?.length
+              ? stateData.videos.map(({ link, title, description }, i) => (
+                  <Row key={`statewide-videos-${i}`} className={styles.video}>
+                    <ReactPlayer url={link} width={594} height={361} />
+                    <h4>{title}</h4>
+                    {description && (
+                      <ReactMarkdown className={styles.description}>
+                        {description}
+                      </ReactMarkdown>
+                    )}
+                  </Row>
+                ))
+              : null}
+          </Row>
+        ) : null}
+        {/* OPOs in neighboring states (if exists) */}
+        <hr />
+        <h2 className={styles.sectionHeader}> <Data /> STATE DATA</h2>
+        {outOfStateOpos.length > 0 && (
+          <Row className={styles.serviceTable}>
+            <OpoTable
+              // pull states column to front and supress region column
+              headings={{states: null, ...headings, region: null} }
+              opos={outOfStateOpos}
+              title="OPO Performance in Neighboring States"
+              captions={Object.values(headings)
+                .filter(heading => !!heading.caption)
+                .map(heading => heading.caption)
+              }
+            />
+          </Row>
+        )}
+      </div>
     </Layout>
   );
 }

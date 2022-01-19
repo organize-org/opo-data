@@ -3,12 +3,9 @@
   align-items: center;
 }
 
-.footer p {
-  margin: auto 2rem !important;
-}
-
 .footerContent {
   align-items: center;
+  margin: auto 3rem;
 }
 
 .footerCopyright {
@@ -16,11 +13,13 @@
   width: 100%;
   margin-bottom: 3rem;
   margin-top: 1rem;
+  margin-right: 6rem;
 }
 
 
 .header p {
   line-height: 1.6;
+  margin: auto 0;
 }
 
 .header h2 {
@@ -36,7 +35,6 @@
 }
 
 .icon {
-  margin-left: 2rem;
   margin-bottom: 2rem;
 }
 
