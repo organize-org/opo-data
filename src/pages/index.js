@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { graphql } from "gatsby";
 import { Row, Col, ButtonGroup, Button } from "react-bootstrap";
 import { ArrowRight } from "react-bootstrap-icons";
@@ -25,6 +25,12 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
     }),
     {}
   );
+
+  const [hack, setHack] = useState(0);
+
+  useEffect(() => {
+    if (hack < 5) setHack(h => h +1);
+  });
 
   const [mapView, setMapView] = useState('opo-performance');
 
@@ -54,7 +60,7 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
       <Row className={styles.mapIntroContent}>
       <div>{getMapIntroContent(mapView)}</div>
       </Row>  
-      <MainMap key={typeof window} mapView={mapView}/>
+      <MainMap key={`${hack}`} mapView={mapView}/>
       <Col className={styles.secondHeader} xs={10} md={6}>
         <StaticImage src="../images/icons/performance.png" />
         <h2>Poor OPO Performance Costs Lives</h2>
