@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Row } from "react-bootstrap";
 import { GeoJSON, MapContainer, ZoomControl } from "react-leaflet";
 import { navigate } from "gatsby";
@@ -14,7 +14,6 @@ import Legend, { BLACK_DONOR_DISPARITY_FILL, CONGRESSIONAL_INVESTIGATION_FILL, O
 export default function MainMap({ mapView }) {
   
   const windowWidth = useWindowDimensions().width;
-  const mapDimensions = { height: "100vh", width: "100%" };
 
   const [{ opoDataMap, stateDataMap }] = useDataMaps();
   const { dsaGeoData, statesGeoData } = useGeoJson();
@@ -54,8 +53,8 @@ export default function MainMap({ mapView }) {
   // use state geo data to generate bounding box
   const [minX, minY, maxX, maxY] = bbox(stateGeoJson)
   return (
-      <Row className={styles.mainMap}>
-        <div style={mapDimensions}>
+      <Row className={styles.map}>
+        <div style={{width: '100%'}}>
           <hr />
           {
             // Hack: [`window` dependency for Leaflet](https://www.gatsbyjs.com/docs/debugging-html-builds/#fixing-third-party-modules)
@@ -67,7 +66,7 @@ export default function MainMap({ mapView }) {
                   [maxY, maxX],
                 ]}
                 scrollWheelZoom={false}
-                style={Object.assign(mapDimensions, { backgroundColor: "#fff" })}
+                style={{height: "75vh",  backgroundColor: "#fff" }}
                 zoomControl={false}
                 dragging={windowWidth > 800}
                 className={styles.mapContainer}
