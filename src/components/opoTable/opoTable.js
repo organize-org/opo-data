@@ -13,17 +13,17 @@ import { LegendItem, OPO_PERFORMANCE_TIER_FILL } from "../map/legend";
 
 export default function OpoTable({
   headings,
-  inState = true,
-  inOpo = false,
   opos,
   title,
 }) {
   const columns = useMemo(() => {
-    const createCol = ([accessor, heading]) => {
+    const createCol = ([accessor, heading], idx) => {
       const col = {
         Header: <ReactMarkdown>{heading.title}</ReactMarkdown>,
         accessor,
+        // isSorted: idx === 0 ? true : false,
       };
+
       if (accessor === "name") {
         return {
           ...col,
@@ -39,7 +39,7 @@ export default function OpoTable({
         return {
           ...col,
           cellClass: styles.shadows,
-          color: "red"
+          color: "red"  
         };
       } else if (accessor === "tier") {
         return {
@@ -64,12 +64,11 @@ export default function OpoTable({
         return col;
       }
     };
-    const h = Object.entries(headings)
-      .filter(([_, val]) => !!val)
-      .map(col => createCol(col));
-    return h;
-  }, [headings, inState, opos, inOpo]);
 
+    return Object.entries(headings)
+      .filter(([_, val]) => !!val)
+      .map((col, idx) => createCol(col, idx));
+  }, [headings, opos]);
 
   const captions = Object.values(headings)
   .filter(heading => !!heading?.caption)
@@ -116,7 +115,13 @@ export default function OpoTable({
     headerGroups,
     rows,
     prepareRow,
-  } = useTable({ columns, data }, useSortBy);
+  } = useTable({ 
+    columns,
+    data,
+    initialState: {
+      sortBy: [{ id: columns[0].accessor }]
+    }
+   }, useSortBy);
 
   const table = (
     <Row className={styles.opoTable}>

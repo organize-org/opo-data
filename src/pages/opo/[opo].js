@@ -20,9 +20,8 @@ import Data from '../../images/icons/data.svg';
 
 import useDataMaps from "../../hooks/useDataMaps";
 import stateContent from "../state/[state].content.yml";
-import { BoxArrowUpRight, GraphUp } from "react-bootstrap-icons";
+import { BoxArrowUpRight } from "react-bootstrap-icons";
 import opoContent from "./[opo].content.yml";
-import { StaticImage } from "gatsby-plugin-image";
 
 import * as styles from "./opo.module.css";
 
@@ -79,7 +78,7 @@ export default function Opo({ opo }) {
     <Layout
       className="opoPage"
       crumbLabel={formatOpoName(opoData)}
-      contentWithSources={{...stats, ...opoHeadings, ... stateHeadings}}
+      contentWithSources={{...stats, ...opoHeadings, ...stateHeadings}}
       social={true}
     >
       {/* OPO Name, top-level stats, select OPO menu, and map */}
@@ -231,8 +230,6 @@ export default function Opo({ opo }) {
         <Row>
           {ethnicityData.length > 0 && (
             <OpoTable
-              inState={false}
-              inOpo={true}
               headings={opoHeadings}
               opos={ethnicityData}
               title={`${opoData.name} Recovery Performance data by ethnicity (2019)`}

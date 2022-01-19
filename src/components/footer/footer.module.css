@@ -3,6 +3,10 @@
   align-items: center;
 }
 
+.footer p {
+  margin: auto 2rem !important;
+}
+
 .header {
   margin: 5rem 0;
 }

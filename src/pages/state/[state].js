@@ -255,7 +255,6 @@ export default function State({ data: { statesGeoData }, state }) {
           <OpoTable
             // pull states column to front and supress region column
             headings={{states: null, ...headings, region: null} }
-            inState={false}
             opos={outOfStateOpos}
             title="OPO Performance in Neighboring States"
             captions={Object.values(headings)
