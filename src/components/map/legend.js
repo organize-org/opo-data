@@ -14,7 +14,7 @@ export default function Legend({ mapView }) {
   }
 
   if (mapView === "black-procurement-disparity") {
-    legendHeader = " Donation Rate (2019)"
+    legendHeader = " Procurement Rate (2019)"
     legendItems = BLACK_DONOR_DISPARITY_FILL;
   }
   return (

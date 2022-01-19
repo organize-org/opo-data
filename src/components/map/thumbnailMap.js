@@ -66,11 +66,7 @@ export default function ThumnailMap({
   //  (which will only include single state given by dataId)
   // - For OPO view, use fill geoms
   //  (which will only include single OPO given by dataId)
-  const [minX, minY, maxX, maxY] = bbox(
-    view === "state"
-      ? boundaryGeoJson
-      : fillGeoJson
-  );
+  const [minX, minY, maxX, maxY] = bbox(fillGeoJson);
 
   return (
     <Row className={styles.map}>

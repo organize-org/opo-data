@@ -137,6 +137,7 @@ export default function State({ data: { statesGeoData }, state }) {
         <Row className={styles.mapStats}>
           <Row className={styles.mapV2}>
             <ThumbnailMap
+              key={state}
               dimensions={{ height: "16rem", width: "24rem" }}
               dataId={state}
               view="state"

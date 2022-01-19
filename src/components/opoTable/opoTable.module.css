@@ -34,8 +34,8 @@
 }
 
 .tableCaption {
-  font-size: 1rem;
-  line-height: 1;
+  font-size: .875;
+  line-height: 1.5;
   margin-left: 0;
 }
 
@@ -52,6 +52,7 @@
 
 .chevron {
   margin-left: 4px;
+  align-self: flex-end;
 }
 
 .chevron .up {
@@ -74,8 +75,8 @@ th p {
 }
 
 .header a {
-  font-size: .75rem;
-  vertical-align: super;
+  font-size: .6rem;
+  vertical-align: text-top;
 }
 
 @media (max-width: 700px) {

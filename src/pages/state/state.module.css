@@ -70,7 +70,12 @@ h3 {
 
 .stats h3 p {
   margin: 0;
-  line-height: 1rem;
+  line-height: 1.5;
+}
+
+.stats h3 a {
+  font-size: .5rem;
+  vertical-align: text-bottom;
 }
 
 .statsHeading > * {

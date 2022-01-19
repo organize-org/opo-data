@@ -71,6 +71,7 @@ h2 svg {
 .mapIntroContent {
   font-size: 1rem;
   margin-left: 3rem;
+  padding-bottom: 1.5rem;
 }
 
 .mapToggleButtons {

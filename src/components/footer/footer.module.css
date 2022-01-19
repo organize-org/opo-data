@@ -13,13 +13,16 @@
   width: 100%;
   margin-bottom: 3rem;
   margin-top: 1rem;
-  margin-right: 6rem;
+  margin-right: 3rem;
 }
 
+.header {
+  padding-right: 4rem;
+}
 
 .header p {
   line-height: 1.6;
-  margin: auto 0;
+  margin-left: 0;
 }
 
 .header h2 {
@@ -44,10 +47,6 @@
 
 .research {
   margin-top: 1rem;
-}
-
-.logos {
-  margin-right: 3rem;
 }
 
 .logosOne {

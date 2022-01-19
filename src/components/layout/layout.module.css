@@ -21,7 +21,6 @@
 .sources p {
   line-height: 1.5rem;
   font-size: .875rem;
-  padding-top: .5rem;
 }
 
 .sectionHeader {
@@ -43,12 +42,13 @@
   counter-increment: li;
   display: flex;
   font-size: 1rem;
+  padding-top: .5rem;
 }
 
 .sources li::before {
   color: var(--opoRed);
   content: counter(li) ". ";
-  padding-right: 1rem;
+  padding-top: .1rem;
 }
 
 @media (max-width: 1100px) {

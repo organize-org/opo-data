@@ -34,10 +34,6 @@
   margin-left: 2rem;
 }
 
-h3 a {
-  font-size: .75rem;
-  vertical-align: super;
-}
 .mapStats {
   display: flex;
   flex-direction: row;
@@ -83,10 +79,22 @@ h3 {
 }
 .stats h3 {
   margin-top: 0;
+  font-size: .85rem;
 }
+
 .stats h3 p {
   margin: 0;
   line-height: 1.5rem;
+}
+
+.stats h3 a {
+  font-size: .5rem;
+  vertical-align: text-bottom;
+}
+
+.statsComp p a {
+  font-size: .75rem;
+  vertical-align: text-bottom;
 }
 
 .statsHeading > * {
