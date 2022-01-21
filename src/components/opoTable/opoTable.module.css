@@ -16,6 +16,7 @@
   font-weight: 700;
   border: none !important;
   text-decoration: none;
+  text-align: center;
 }
 
 .opoTable th p {
@@ -26,6 +27,7 @@
   font-size: 1rem;
   border: none !important;
   padding: 2rem 0.5rem !important;
+  text-align: center;
 }
 
 .opoTable tbody tr .shadows {

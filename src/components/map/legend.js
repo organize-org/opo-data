@@ -55,7 +55,7 @@ export const OPO_PERFORMANCE_TIER_FILL = {
   Passing: { fill: "#C4C4C4" },
   Underperforming:  { fill: "#FFB042" },
   Failing: { fill: "#D43C37" }
-}
+} 
 
 export const BLACK_DONOR_DISPARITY_FILL = {
   "N/A": {
@@ -64,27 +64,27 @@ export const BLACK_DONOR_DISPARITY_FILL = {
   },
   "< 7.5": {
     compare: (val) => val < 7.5,
-    fill: "#4E1C19"
+    fill: "#D43C37"
   },
   "7.5 - 9.4": {
     compare: (val) => val >= 7.5 && val < 9.5,
-    fill: "#89322B"
+    fill: "#EA5B3B"
   },
   "9.5 - 11.4": {
     compare: (val) => val >= 9.5 && val < 11.5,
-    fill:"#D43C37" 
+    fill:"#EF924F" 
   },
   "11.5 - 12.9": {
     compare: (val) => val >= 11.5 && val < 13,
-    fill: "#FFB042",
+    fill: "#F4B55F",
   },
   "13.0 - 15.4": {
     compare: (val) => val >= 13 && val < 15.5,
-    fill: "#F9D558"
+    fill: "#F9DA84"
   },
   ">= 15.5": {
     compare: (val) => val >= 15.5,
-    fill: "#00768F"
+    fill: "#FFFEBB"
   }
 }
 

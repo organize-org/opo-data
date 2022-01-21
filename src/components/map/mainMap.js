@@ -201,10 +201,10 @@ const getCongressionalInvestigationFill = (feature) => {
 const getToolTipContent = (view, id, stateDataMap, opoDataMap) => {
   if (view === "opoPerformance") {
     return `
-      <p>State waitlist: <strong>${
+      <p>State waiting list: <strong>${
         stateDataMap[id].waitlist ?? "N/A"
       }</strong></p>
-      <p>OPOs servicing: <strong>${
+      <p>OPOs operating in: <strong>${
         Object.values(opoDataMap).filter(
           ({ statesWithRegions }) => statesWithRegions[id] !== undefined
         ).length ?? "N/A"

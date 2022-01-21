@@ -115,7 +115,7 @@ export default function State({ data: { statesGeoData }, state }) {
 
   return (
     <Layout
-      crumbLabel={formatName(stateData)}
+      crumbLabel={formatName(stateData, { includeAbbreviation: false})}
       // sources must be in order they appear on the page
       contentWithSources={[stats, headings]}
       social={true}
@@ -123,7 +123,7 @@ export default function State({ data: { statesGeoData }, state }) {
       {/* State name, top-level stats, select state menu, and map */}
       <Row className={styles.hero}>
         <Row>
-          <h2 className={styles.title}>{formatName(stateData)}</h2>
+          <h2 className={styles.title}>{formatName(stateData, { includeAbbreviation: false })}</h2>
         </Row>
         <Row className={styles.serviceState}>
           <span>
@@ -196,7 +196,7 @@ export default function State({ data: { statesGeoData }, state }) {
             // suppress state column in the in-state OPO table
               headings={{...headings, states: null}}
               opos={inStateOpos}
-              title={`OPOs Servicing ${stateData.name}`}
+              title={`OPOs Operating in ${stateData.name}`}
             />
           )}
         </Row>

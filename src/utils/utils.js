@@ -60,7 +60,7 @@ export const formatMoney = num => {
   });
 };
 
-export const formatName = ({ abbreviation, name }) =>
-  `${name} (${abbreviation.toLocaleUpperCase()})`;
+export const formatName = ({ abbreviation, name }, { includeAbbreviation = true } = {}) =>
+  `${name}${includeAbbreviation ? ` (${abbreviation.toLocaleUpperCase()})` : ''}`;
 
 export const formatOPORank = opoDate => 99;
