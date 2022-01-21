@@ -9,7 +9,7 @@ import OpoTable from "../../components/opoTable/opoTable";
 import ThumnailMap from "../../components/map/thumbnailMap";
 import { LegendItem, OPO_PERFORMANCE_TIER_FILL } from "../../components/map/legend";
 import {
-  formatOpoName,
+  formatName,
   formatOPORank,
   formatNumber,
   formatMoney,
@@ -78,14 +78,14 @@ export default function Opo({ opo }) {
   return (
     <Layout
       className="opoPage"
-      crumbLabel={formatOpoName(opoData)}
+      crumbLabel={formatName(opoData)}
       contentWithSources={[stats, opoHeadings, stateHeadings]}
       social={true}
     >
       {/* OPO Name, top-level stats, select OPO menu, and map */}
       <Row className={styles.hero}>
         <Row>
-          <h2 className={styles.title}>{formatOpoName(opoData)}</h2>
+          <h2 className={styles.title}>{formatName(opoData)}</h2>
         </Row>
         <Row className={styles.region}>
           <span>

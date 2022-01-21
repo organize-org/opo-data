@@ -76,7 +76,7 @@ th p {
 
 .header a {
   font-size: .6rem;
-  vertical-align: text-bottom;
+  vertical-align: super;
 }
 
 @media (max-width: 700px) {

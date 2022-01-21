@@ -75,7 +75,7 @@ export default function MainMap({ mapView }) {
 
                 {/* Create layer for OPO polygons with fill based on map view */}
                 <GeoJSON
-                  key="opo-fill"
+                  key="opo-fill-boundaries"
                   data={opoGeoJson}
                   style={feature => ({
                     color: "white",
@@ -86,7 +86,18 @@ export default function MainMap({ mapView }) {
                   })}
                 />
 
-                {/* Create layer for boundary polygons (OPO or state based on map view)
+                {/* Create layer for state polygon boundaries so they're displayed on OPO maps */}
+                <GeoJSON
+                  key="state-boundaries"
+                  data={stateGeoJson}
+                  style={{
+                    color: "white",
+                    fillOpacity: 0,
+                    weight: 0.5
+                  }}
+                />
+
+                {/* Create interactive layer for boundary polygons (OPO or state based on map view)
                   and add hover tool tip and click action */}
                 <GeoJSON
                   key="boundary-and-tooltip"
@@ -101,10 +112,6 @@ export default function MainMap({ mapView }) {
                         permanent: false,
                         sticky: false,
                         offset: [10, 0],
-                        color: "white",
-                        fillColor: "black",
-                        fillOpacity: 0.2,
-                        weight: 4
                       }
                     )
                   }

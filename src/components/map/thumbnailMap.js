@@ -2,6 +2,7 @@ import React from "react";
 import { Row } from "react-bootstrap";
 import { GeoJSON, MapContainer } from "react-leaflet";
 import bbox from "@turf/bbox";
+import { navigate } from 'gatsby';
 
 import useDataMaps from "../../hooks/useDataMaps";
 import {
@@ -61,12 +62,8 @@ export default function ThumnailMap({
       })),
   };
 
-  // Generate bounding box
-  // - For state view, use boundary geoms
-  //  (which will only include single state given by dataId)
-  // - For OPO view, use fill geoms
-  //  (which will only include single OPO given by dataId)
-  const [minX, minY, maxX, maxY] = bbox(fillGeoJson);
+  
+  const [minX, minY, maxX, maxY] = bbox(boundaryGeoJson);
 
   return (
     <Row className={styles.map}>
@@ -121,10 +118,17 @@ export default function ThumnailMap({
                     ? layer.bindTooltip(layer => layer.feature.properties.abbreviation, {
                         permanent: true,
                         direction: "center",
+                        offset: OPO_LABEL_OFFSETS[dataId]?.[layer.feature.properties.abbreviation] ?? [0,0],
                         className: styles.opoLabel,
+                        interactive: true,
                       })
                     : layer
                 }
+                eventHandlers={{
+                  click: ({ propagatedFrom }) => {
+                    navigate(`/opo/${propagatedFrom?.feature?.properties?.abbreviation}`)
+                  }
+                }}
               />
               {/* Create layer for state or OPO states polygons with boundaries */}
               <GeoJSON
@@ -143,4 +147,95 @@ export default function ThumnailMap({
       </div>
     </Row>
   );
+}
+
+const OPO_LABEL_OFFSETS = {
+  AK: {
+    WALC: [-70, -60]
+  },
+  AR: {
+    TXSB: [400, -100],
+    MOMA: [0, 85]
+  },
+  CA: {
+    CADN: [-10, -30],
+    CASD: [20, 10],
+  },
+  CO: {
+    CORS: [35, 120]
+  },
+  DE: {
+    PADV: [50, 120]
+  },
+  GA: {
+    TNDS: [-10, 70]
+  },
+  ID: {
+    UTOP: [0, -50],
+    WALC: [80, -650]
+  },
+  IN: {
+    KYDA: [0, -30]
+  },
+  IA: {
+    NEOR: [140, 0]
+  },
+  MA: {
+    MAOB: [50, -70],
+  },
+  MD: {
+    MDPC: [10, -20],
+  },
+  ME: {
+    MAOB: [90, -130]
+  },
+  MN: {
+    MNOP: [20, 0]
+  },
+  MT: {
+    WALC: [300, -650]
+  },
+  ND: {
+    MNOP: [-90, -60]
+  },
+  NH: {
+    MAOB: [70, -120]
+  },
+  NV: {
+    CADN: [-5, -50]
+  },
+  NY: {
+    PATF: [0, 20]
+  },
+  PA: {
+    PATF: [-100, 20]
+  },
+  RI: {
+    MAOB: [275, -60]
+  },
+  SD: {
+    MNOP: [-80, 100]
+  },
+  VA: {
+    TNDS: [150, -30],
+    NCNC: [0, -30]
+  },
+  VT: {
+    MAOB: [50, -140]
+  },
+  WA: {
+    ORUO: [50, -95],
+    WALC: [100, -1300]
+  },
+  WI: {
+    MNOP: [40, 0]
+  },
+  WV: {
+    PATF: [-80, 100],
+    KYDA: [80, 0]
+  },
+  WY: {
+    CORS: [0, -100],
+    UTOP: [140, -40]
+  }
 }

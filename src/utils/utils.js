@@ -60,10 +60,7 @@ export const formatMoney = num => {
   });
 };
 
-export const formatStateName = ({ abbreviation, name }) =>
+export const formatName = ({ abbreviation, name }) =>
   `${name} (${abbreviation.toLocaleUpperCase()})`;
-
-export const formatOpoName = ({ name, opo }) =>
-  `${name} (${opo.toUpperCase()})`;
 
 export const formatOPORank = opoDate => 99;

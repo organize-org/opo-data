@@ -75,7 +75,7 @@ h3 {
 
 .stats h3 a {
   font-size: .5rem;
-  vertical-align: text-bottom;
+  vertical-align: super;
 }
 
 .statsHeading > * {

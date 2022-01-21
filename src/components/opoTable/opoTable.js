@@ -21,7 +21,6 @@ export default function OpoTable({
       const col = {
         Header: <ReactMarkdown>{heading.title}</ReactMarkdown>,
         accessor,
-        // isSorted: idx === 0 ? true : false,
       };
 
       if (accessor === "name") {
@@ -29,9 +28,9 @@ export default function OpoTable({
           ...col,
           Cell: props => (
             <Link
-              to={`/opo/${opos.find(opo => opo.name === props.value)?.opo}`}
+              to={`/opo/${opos.find(opo => opo.name === props.value)?.abbreviation}`}
             >
-              {props.value} ({opos.find(opo => opo.name === props.value)?.opo})
+              {props.value} ({opos.find(opo => opo.name === props.value)?.abbreviation})
             </Link>
           ),
         };

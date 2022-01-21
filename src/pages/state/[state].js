@@ -15,7 +15,7 @@ import Data from '../../images/icons/data.svg';
 
 import {
   findStateFeature,
-  formatStateName,
+  formatName,
   formatNumber,
 } from "../../utils/utils";
 import useDataMaps from "../../hooks/useDataMaps";
@@ -115,7 +115,7 @@ export default function State({ data: { statesGeoData }, state }) {
 
   return (
     <Layout
-      crumbLabel={formatStateName(stateData)}
+      crumbLabel={formatName(stateData)}
       // sources must be in order they appear on the page
       contentWithSources={[stats, headings]}
       social={true}
@@ -123,7 +123,7 @@ export default function State({ data: { statesGeoData }, state }) {
       {/* State name, top-level stats, select state menu, and map */}
       <Row className={styles.hero}>
         <Row>
-          <h2 className={styles.title}>{formatStateName(stateData)}</h2>
+          <h2 className={styles.title}>{formatName(stateData)}</h2>
         </Row>
         <Row className={styles.serviceState}>
           <span>

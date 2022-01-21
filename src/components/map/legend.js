@@ -8,12 +8,12 @@ export default function Legend({ mapView }) {
   let legendHeader = "OPO Performance Tier";
   let legendItems = OPO_PERFORMANCE_TIER_FILL;
 
-  if (mapView === "congressional-investigation") {
+  if (mapView === "congressionalInvestigation") {
     legendHeader = "Under Congressional Investigation"
     legendItems = CONGRESSIONAL_INVESTIGATION_FILL;
   }
 
-  if (mapView === "black-procurement-disparity") {
+  if (mapView === "blackProcurementDisparity") {
     legendHeader = " Procurement Rate (2019)"
     legendItems = BLACK_DONOR_DISPARITY_FILL;
   }
@@ -58,6 +58,10 @@ export const OPO_PERFORMANCE_TIER_FILL = {
 }
 
 export const BLACK_DONOR_DISPARITY_FILL = {
+  "N/A": {
+    compare: (val) => val === null || val === undefined,
+    fill: "#C4C4C4"
+  },
   "< 7.5": {
     compare: (val) => val < 7.5,
     fill: "#4E1C19"
@@ -81,20 +85,16 @@ export const BLACK_DONOR_DISPARITY_FILL = {
   ">= 15.5": {
     compare: (val) => val >= 15.5,
     fill: "#00768F"
-  },
-  "No Data": {
-    compare: (val) => val == undefined,
-    fill: "#C4C4C4"
   }
 }
 
 export const CONGRESSIONAL_INVESTIGATION_FILL = {
   "Yes": { 
     compare: (val) => !!val,
-    fill: "#C4C4C4" 
+    fill: "#D43C37"
   },
   "No": { 
     compare: (val) => !val,
-    fill: "#D43C37"
+    fill: "#C4C4C4" 
   }
 }
