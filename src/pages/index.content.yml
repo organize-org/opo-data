@@ -1,10 +1,27 @@
+mapContent:
+  opoPerformance: The Centers for Medicare & Medicaid Services (CMS) ranks OPOs into 3 different tiers.
+    Rankings incorporate the number of donors and the number of organs transplanted.
+    The majority of the nation’s OPOs are failing to meet Tier 1 standards, leading to 
+    thousands of unnecessary deaths each year, which disproportionately harm patients of color.  
+    The map below shows the current ranking of U.S. OPOs by location, based on the most recent 
+    data available (2019). [Find more information here](https://www.cms.gov/newsroom/fact-sheets/organ-procurement-organization-opo-conditions-coverage-final-rule-revisions-outcome-measures-opos)
+  blackProcurementDisparity: Publicly available data shows a 10-fold difference around the country
+    in OPO procurement of organs from Black donors. Research also shows [differential treatment](https://www.healthaffairs.org/do/10.1377/forefront.20201211.229975/full/)
+    by OPOs towards families of Black and white donors. [Read the article from Axios covering this issue.](https://www.axios.com/organ-donation-recovery-worse-people-of-color-8d42a213-4ef7-48a3-85fb-dd15cfc4301b.html)
+  congressionalInvestigation: Both the House Oversight Committee and the Senate Finance
+    Committee have launched bipartisan investigations into the nation’s organ donation
+    contractors, calling acceleration of reforms an [“urgent health equity issue”.](https://www.finance.senate.gov/chairmans-news/bipartisan-bicameral-members-of-congress-commend-federal-efforts-to-reform-organ-donation-system-urge-acceleration-of-rules-impact-)
+      
+      - [Read the release from the House Oversight Committee](https://oversight.house.gov/news/press-releases/oversight-subcommittee-held-bipartisan-hearing-on-needed-reforms-in-organ)
+      
+      - [Read the release from the Senate Finance Committee](https://www.finance.senate.gov/chairmans-news/finance-committee-members-probe-us-organ-transplant-system)
 stats:
   - title: National organ transplant waiting list as of January 2022
     value: 106,608
   - title: Number of Americans in 2021 who died each day because they didn’t get a needed transplant
     value: "31"
-  - title: Number of Americans projected to die before an OPO loses its contract
-    value: 60,000+
+  - title: Annual cost to Medicare of dialysis
+    value: $36 billion
 quote:
   quote: An astounding lack of accountability and oversight in the nation’s
     creaking, monopolistic organ transplant system is allowing hundreds of
@@ -16,17 +33,13 @@ equityEmbed:
   heading: OPO REFORM IS AN URGENT EQUITY ISSUE
   description: Patients of color are less likely to receive organ transplants than
     white patients because of inferior OPO service.
-  link: We must drive reforms to hold OPOs accountable.
+  link: See more data
   mobileImage: ../images/quotes/equity-state.jpg
 video:
-  title: REP. KATIE PORTER HIGHLIGHTS OPO ABUSES
+  title: OVERSIGHT SUBCOMMITTEE BIPARTISAN HEARING ON NEEDED REFORMS IN ORGAN TRANSPLANT INDUSTRY
   description: On May 4, 2021, the House Oversight Committee held a bipartisan
     hearing about OPO performance failures as well as fraud, waste and abuse.
-    Rep. Katie Porter grilled the CEO of the Association of Organ Procurement
-    Organizations about anti-patient lobbying and a whistleblower account
-    regarding an OPO executive who used the OPO’s private jet for vacation
-    instead of organ recovery.
-  youtube: siDYyRClKKk
+  youtube: TnKo8Q-Hemk
 articles:
   - title: They Survived Covid. Now They Need New Lungs.
     description: He survived Covid-19, but his lungs were ravaged. After months of
@@ -42,63 +55,8 @@ articles:
     source: Health Affairs Blog
     link: https://www.healthaffairs.org/do/10.1377/hblog20201211.229975/full
     image: ../images/articles/editorial2.png
-  - title: Senate Republicans seek probe of organ transplant system
-    description: Some OPOs have transferred millions of dollars to foundations
-      they’ve established, which have paid for such things as jets, parties and
-      parade floats, the groups’ Internal Revenue Service records show.
-    source: Washington Post
-    link: https://www.washingtonpost.com/health/senate-republicans-seek-probe-of-organ-transplant-system/2019/12/19/0b2b4dc0-226c-11ea-a153-dce4b94e4249_story.html
-    image: ../images/articles/wapo-doctors.webp
-  - description: "In the more than 35 years since federal legislation created OPOs
-      to recover organs from deceased donors for transplantation, there has been
-      a disparity in their performance, with the best OPOs recovering organs
-      from four times as many donors as the worst OPOs by objective criteria. "
-    title: New Regulation for Organ Procurement Will Improve Equity and Save Lives
-    source: The Hastings Center
-    link: https://www.thehastingscenter.org/new-regulation-for-organ-procurement-will-improve-equity-and-save-lives/
-    image: ../images/articles/editorial4.png
-  - title: "Heartless: Organ Donation Contractors Lobby Against a Popular Health
-      Care Initiative While Pocketing Pandemic Relief Loans"
-    description: “This industry’s attempts to block efforts to implement metrics to
-      hold OPOs accountable for their poor performance only further underscores
-      the need for oversight.”
-    source: POGO.org
-    link: https://www.pogo.org/investigation/2020/10/heartless-organ-donation-contractors-lobby-against-a-popular-health-care-initiative-while-pocketing-pandemic-relief-loans/
-    image: ../images/articles/editorial5.png
-  - title: How organ and tissue donation companies worked their way into the county
-      morgue
-    link: https://www.latimes.com/business/la-fi-how-body-brokers-took-over-county-morgue-20190408-story.html
-    source: LA Times
-    description: Even before the new laws passed, coroners rarely said no when
-      companies asked to procure hearts, kidneys or other vital organs. But
-      coroners often rejected requests to harvest tissues such as skin and bone
-      when they thought it would upend a death investigation.
-    image: ../images/articles/editorial6.png
-  - link: https://www.postandcourier.com/health/he-died-when-he-got-the-wrong-lungs-it-wasnt-the-only-organ-error-in/article_c6a6e386-e704-11ea-91ce-2783df6c6f2d.html
-    source: "Post and Courier "
-    title: He died when he got the wrong lungs. It wasn’t the only organ error in SC
-      that day.
-    image: ../images/articles/post-and-courier.jpg
-    description: After the blood type of a South Carolina organ donor was
-      incorrectly identified, a man in Charleston who’d received the donor’s
-      lungs died and another patient in Tennessee who received the liver was
-      gravely injured.
-  - link: https://www.medpagetoday.com/surgery/transplantation/92446
-    source: "MedPage Today "
-    title: Lawmakers Lambast Organ Procurement Lobbyists
-    image: ../images/articles/medpage-.jpeg
-    description: "Organ procurement organizations (OPOs) have been exploiting
-      taxpayers for decades -- NHL and NFL season tickets, board meetings in
-      California wine country, private jets chartered for organ delivery but
-      hijacked for CEO jaunts -- all while failing to do what they're supposed
-      to do: procure organs for needy patients."
-  - link: https://blog.petrieflom.law.harvard.edu/2021/02/05/recent-organ-procurement-organization-regulations-will-save-lives/
-    source: Harvard Petrie-Flom Blog
-    title: Recent Organ Procurement Organization Regulations Will Save Lives
-    image: ../images/articles/harvardpetrieflom.jpeg
-    description: Every major patient group engaged on this issue — including the
-      Global Liver Institute, National Kidney Foundation, American Society of
-      Nephrology, the Boomer Esiason Foundation, Organize, and families directly
-      affected by the organ shortage, as well as advocacy groups ranging from
-      Families USA to FreedomWorks — have universally supported HHS’s new OPO
-      metrics.
+  - title: America’s Transformative New Organ Donation Rule Goes into Effect Over Objections from Monopolistic Contractors
+    description: TODO GET CONTENT
+    source: Project on Government Oversight (POGO)
+    link: https://www.pogo.org/investigation/2021/04/americas-transformative-new-organ-donation-rule-goes-into-effect-over-objections-from-monopolistic-contractors/
+    image: ../images/articles/pogo-organ-donation.jpg

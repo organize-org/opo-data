@@ -75,7 +75,6 @@ export default function Opo({ opo }) {
   }, []);
   
 
-  console.log("data name", opoData.name);
   return (
     <Layout
       className="opoPage"

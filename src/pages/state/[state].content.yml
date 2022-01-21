@@ -7,8 +7,7 @@ stats:
       the state in which their transplant center is based, which is not
       necessarily their state of residence
   monthly: 
-    title: Number of people on state waiting list who die each month waiting for
-      an organ[2](#sources-monthly)
+    title: Deaths on state waiting list each month[2](#sources-monthly)
     source: "Number of people on state waiting list who die each month waiting for an
       organ: 2020 deaths via [OPTN state
       data](https://optn.transplant.hrsa.gov/data/view-data-reports/state-data/)

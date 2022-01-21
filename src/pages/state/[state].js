@@ -127,7 +127,7 @@ export default function State({ data: { statesGeoData }, state }) {
         </Row>
         <Row className={styles.serviceState}>
           <span>
-            OPOs servicing {stateData.abbreviation}:{" "}
+            OPOs operating in {stateData.abbreviation}:{" "}
             <strong>{inStateOpos.length ?? 0}</strong>
           </span>
           <div className={styles.navToState}>

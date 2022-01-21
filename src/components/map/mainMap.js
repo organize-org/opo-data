@@ -90,7 +90,7 @@ export default function MainMap({ mapView }) {
                   and add hover tool tip and click action */}
                 <GeoJSON
                   key="boundary-and-tooltip"
-                  data={mapView === "opo-performance" ? stateGeoJson : opoGeoJson}
+                  data={mapView === "opoPerformance" ? stateGeoJson : opoGeoJson}
                   onEachFeature={(feature, layer) =>
                     layer.bindTooltip(
                       `<div class="${styles.tooltip}">
@@ -110,7 +110,7 @@ export default function MainMap({ mapView }) {
                   }
                   eventHandlers={{
                     click: ({ propagatedFrom }) => {
-                      navigate(`/${mapView === 'opo-performance' ? 'state' : 'opo'}/${propagatedFrom?.feature?.properties?.abbreviation}`)
+                      navigate(`/${mapView === 'opoPerformance' ? 'state' : 'opo'}/${propagatedFrom?.feature?.properties?.abbreviation}`)
                     },
                     mouseover: (({ propagatedFrom, target }) => target
                       ?.setStyle(
@@ -146,15 +146,15 @@ export default function MainMap({ mapView }) {
  * Get fill color for given feature based on map view
  */
 const getMapFill = (view, feature) => { 
-  if (view === "opo-performance") {
+  if (view === "opoPerformance") {
     return getStateMapFill(feature);
   }
 
-  if (view === "black-procurement-disparity") {
+  if (view === "blackProcurementDisparity") {
     return getBlackDonorMapFill(feature);
   }
 
-  if (view === "congressional-investigation") {
+  if (view === "congressionalInvestigation") {
     return getCongressionalInvestigationFill(feature);
   }
 }
@@ -192,28 +192,28 @@ const getCongressionalInvestigationFill = (feature) => {
  * TODO: What should be in black donor and congressional review tool tip?
  */
 const getToolTipContent = (view, id, stateDataMap, opoDataMap) => {
-  if (view === "opo-performance") {
+  if (view === "opoPerformance") {
     return `
       <p>State waitlist: <strong>${
-        stateDataMap[id].waitlist ?? "No Data"
+        stateDataMap[id].waitlist ?? "N/A"
       }</strong></p>
       <p>OPOs servicing: <strong>${
         Object.values(opoDataMap).filter(
           ({ statesWithRegions }) => statesWithRegions[id] !== undefined
-        ).length ?? "No Data"
+        ).length ?? "N/A"
       }</strong></p>
       <p>People dying every month waiting for an organ: <strong>${
-        stateDataMap[id].monthly ?? "No Data"
+        stateDataMap[id].monthly ?? "N/A"
       }</strong></p>`;
     }
 
-    if (view === "black-procurement-disparity") {
+    if (view === "blackProcurementDisparity") {
       return `
         <p>Organ Recovery Rate: <strong>${
-          opoDataMap[id].nhb_recovery ?? "No Data"
+          opoDataMap[id].nhb_recovery ?? "N/A"
         }</strong></p>
         <p> Recovery Ranking (out of 54 OPOs reporting): <strong>${
-          opoDataMap[id].nhb_rank ?? "No Data"
+          opoDataMap[id].nhb_rank ?? "N/A"
         }</strong></p>
       `;
     }

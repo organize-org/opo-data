@@ -41,7 +41,7 @@ stats:
       Lifeshare Transplant Donor Services of Oklahoma, Gift of Life, Southwest
       Transplant Alliance, LifeGift, LifeNet. Note: hospital-based OPOs do not
       have separate 990s, so unless this information has been made publicly
-      available by the OPO, it is not listed"
+      available by the OPO, it is not listed."
   board:
     title: "Board Compensation:[6](#sources-board)"
     source: TODO GET CONTENT
@@ -50,15 +50,17 @@ opoHeadings:
     title: Ethnicity
   death:
     title: Potential viable donors based on CALC methodology*[7](#sources-death)
-    caption: CALC stands for “cause, age, and location consistent deaths.” This methodology counts inpatient deaths among persons age <75 from causes consistent with donation.  
+    caption:  CALC stands for “cause, age, and location consistent deaths.”
+      This methodology is used by CMS to count inpatient deaths among persons age
+      <75 from causes consistent with donation.
   donors:
     title:  Actual Donors[8](#sources-donors)
     source: TODO GET CONTENT
   recovery:
-    title: Recovery Rate[9](#sources-recovery)
+    title: Procurement Rate[9](#sources-procurement)
     source: TODO GET CONTENT
   rank:
-    title: Recovery Rate Ranking[2](#sources-rank)
+    title: Procurement Rate Ranking[2](#sources-rank)
 stateHeadings:
   name:
     title: OPO Name
