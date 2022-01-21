@@ -4,7 +4,7 @@ stats:
     source: Tier (2019) via [CMS](https://qcor.cms.gov/main.jsp), data most recently
       available (2019). OPO names are listed as they are by CMS.
   rank: 
-    title: OPO Rank (of 58)[2](#sources-rank)
+    title: OPO Rank (of XX)[2](#sources-rank)
     source: TODO GET CONTENT
   shadow:
     title: Preventable Deaths (2019)[3](#sources-shadow)
@@ -21,7 +21,7 @@ stats:
       and
       [here.](https://oversight.house.gov/sites/democrats.oversight.house.gov/files/2021-05-27.RK%20KP%20to%20Ferreira-NDN%20re%20Expenses.pdf)
   ceo:
-    title: "CEO & Compensation:[5](#sources-ceo)"
+    title: "CEO & Compensation (2019):[5](#sources-ceo)"
     source: "Average CEO compensation via each OPO's most recently listed 990 (as of
       6/1/21). 2019: Donor Network Arizona, OneLegacy, Donor Network West, Donor
       Alliance, LifeChoice Donor Services, New England Organ Bank, Washington
@@ -43,7 +43,7 @@ stats:
       have separate 990s, so unless this information has been made publicly
       available by the OPO, it is not listed."
   board:
-    title: "Board Compensation:[6](#sources-board)"
+    title: "Board Compensation (2019):[6](#sources-board)"
     source: TODO GET CONTENT
 opoHeadings:
   ethnicity:

@@ -63,4 +63,6 @@ export const formatMoney = num => {
 export const formatName = ({ abbreviation, name }, { includeAbbreviation = true } = {}) =>
   `${name}${includeAbbreviation ? ` (${abbreviation.toLocaleUpperCase()})` : ''}`;
 
-export const formatOPORank = opoDate => 99;
+export const formatOPORank = ({ rank }) => !isNaN(rank) ? rank : 'N/A';
+export const getRankedOPOCount = ( opoDataMap ) => Object.values(opoDataMap)
+  .filter(opo => !isNaN(opo.rank)).length;

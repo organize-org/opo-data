@@ -10,6 +10,7 @@ import useDataMaps from "../../hooks/useDataMaps";
 import * as styles from "./map.module.css";
 import useGeoJson from "../../hooks/useGeoJson";
 import Legend, { BLACK_DONOR_DISPARITY_FILL, CONGRESSIONAL_INVESTIGATION_FILL, OPO_PERFORMANCE_TIER_FILL } from "./legend";
+import { getRankedOPOCount } from "../../utils/utils";
 
 export default function MainMap({ mapView }) {
   
@@ -216,10 +217,10 @@ const getToolTipContent = (view, id, stateDataMap, opoDataMap) => {
 
     if (view === "blackProcurementDisparity") {
       return `
-        <p>Organ Recovery Rate: <strong>${
+        <p>Organ Procurement Rate: <strong>${
           opoDataMap[id].nhb_recovery ?? "N/A"
         }</strong></p>
-        <p> Recovery Ranking (out of 54 OPOs reporting): <strong>${
+        <p> Procurement Ranking (out of ${getRankedOPOCount(opoDataMap)} OPOs reporting): <strong>${
           opoDataMap[id].nhb_rank ?? "N/A"
         }</strong></p>
       `;

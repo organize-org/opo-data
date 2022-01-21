@@ -13,6 +13,7 @@ import {
   formatOPORank,
   formatNumber,
   formatMoney,
+  getRankedOPOCount,
 } from "../../utils/utils";
 
 import News from '../../images/icons/news.svg';
@@ -88,16 +89,16 @@ export default function Opo({ opo }) {
           <h2 className={styles.title}>{formatName(opoData)}</h2>
         </Row>
         <Row className={styles.region}>
-          <span>
-            Region: <strong>{opoData.states}</strong>
-          </span>
-          <div className={styles.navToOpo}>
+          <Col>
+            Region: <strong>{opoData.states} {opoData.states} {opoData.states}</strong>
+          </Col>
+          <Col xs={7}>
             <SelectState
               label={"See OPO performance for:"}
               link={opoData.name}
               opo={true}
             />
-          </div>
+          </Col>
         </Row>
         <Row className={styles.mapStats}>
           <Row className={styles.map}>
@@ -126,7 +127,7 @@ export default function Opo({ opo }) {
             <Row className={styles.statsHeading}>
               <Col>
                 <h3>
-                  <ReactMarkdown>{stats.rank.title}</ReactMarkdown>
+                  <ReactMarkdown>{stats.rank.title.replace(/XX/, getRankedOPOCount(opoDataMap))}</ReactMarkdown>
                 </h3>
               </Col>
               <Col>
@@ -209,7 +210,7 @@ export default function Opo({ opo }) {
           {opoHeadlines?.length 
             ? (
               <>
-                <h3>News and investigations for {opoData.name}</h3>
+                <h3>News and notes</h3>
                 <Row>
                   <ul>
                     {opoHeadlines.map(({ note }, i) => (
@@ -235,7 +236,7 @@ export default function Opo({ opo }) {
               <OpoTable
                 headings={opoHeadings}
                 opos={ethnicityData}
-                title={`${opoData.name} Recovery Performance data by ethnicity (2019)`}
+                title={`${opoData.name} procurement performance data by ethnicity (2019)`}
               />
             )}
           </Row>
@@ -244,7 +245,7 @@ export default function Opo({ opo }) {
               <OpoTable
                 headings={stateHeadings}
                 opos={inStateOpos}
-                title={`OPO Performance comparison in this state`}
+                title={`OPO performance comparison in this state`}
               />
             )}
           </Row>

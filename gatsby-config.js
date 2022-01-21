@@ -132,6 +132,16 @@ module.exports = {
                           { label: "Value", name: "value", widget: "markdown" },
                         ],
                       },
+                      { 
+                        label: "Map content",
+                        name: "mapContent",
+                        widget: "object",
+                        fields: [
+                          { label: "OPO performance disparity map", name: "opoPerformance", widget: "markdown" },
+                          { label: "Black procurement disparity map", name: "blackProcurementDisparity", widget: "markdown" },
+                          { label: "Under congressional investigation map", name: "congressionalInvestigation", widget: "markdown" }
+                        ]
+                      },
                       {
                         label: "Quote",
                         name: "quote",
