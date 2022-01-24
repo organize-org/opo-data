@@ -90,7 +90,7 @@ export default function Opo({ opo }) {
         </Row>
         <Row className={styles.region}>
           <Col>
-            Region: <strong>{opoData.states} {opoData.states} {opoData.states}</strong>
+            Region: <strong>{opoData.states}</strong>
           </Col>
           <Col xs={7}>
             <SelectState
