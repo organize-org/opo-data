@@ -68,7 +68,7 @@ hr {
 .opoLabel {
   box-shadow: none !important;
   background: #000000bf !important;
-  color: #ffffff;
+  color: #ffffff !important;
   padding: 4px;
   border: none !important;
   font-size: 10px;

@@ -221,7 +221,7 @@ const getToolTipContent = (view, id, stateDataMap, opoDataMap) => {
           opoDataMap[id].nhb_recovery ?? "N/A"
         }</strong></p>
         <p> Procurement Ranking (out of ${getRankedOPOCount(opoDataMap)} OPOs reporting): <strong>${
-          opoDataMap[id].nhb_rank ?? "N/A"
+          opoDataMap[id].rank ?? "N/A"
         }</strong></p>
       `;
     }
