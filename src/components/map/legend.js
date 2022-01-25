@@ -82,7 +82,7 @@ export const BLACK_DONOR_DISPARITY_FILL = {
     compare: (val) => val >= 13 && val < 15.5,
     fill: "#F9DA84"
   },
-  ">= 15.5": {
+  "≥ 15.5": {
     compare: (val) => val >= 15.5,
     fill: "#FFFEBB"
   }
