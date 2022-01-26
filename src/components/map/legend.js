@@ -9,7 +9,7 @@ export default function Legend({ mapView }) {
   let legendItems = OPO_PERFORMANCE_TIER_FILL;
 
   if (mapView === "congressionalInvestigation") {
-    legendHeader = "Under Congressional Investigation"
+    legendHeader = "Under House Oversight Investigation"
     legendItems = CONGRESSIONAL_INVESTIGATION_FILL;
   }
 

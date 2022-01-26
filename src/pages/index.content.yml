@@ -30,13 +30,13 @@ quote:
   image: ../images/quotes/mainPage.png
 equityEmbed:
   image: ../images/quotes/equity-home.jpg
-  heading: OPO REFORM IS AN URGENT EQUITY ISSUE
+  heading: OPO reform is an urgent equity issue
   description: Patients of color are less likely to receive organ transplants than
     white patients because of inferior OPO service.
   link: See more data
   mobileImage: ../images/quotes/equity-state.jpg
 video:
-  title: OVERSIGHT SUBCOMMITTEE BIPARTISAN HEARING ON NEEDED REFORMS IN ORGAN TRANSPLANT INDUSTRY
+  title: Oversight subcommittee holds bipartisan hearing on needed reforms in organ transplant industry
   description: On May 4, 2021, the House Oversight Committee held a bipartisan
     hearing about OPO performance failures as well as fraud, waste and abuse.
   youtube: TnKo8Q-Hemk
