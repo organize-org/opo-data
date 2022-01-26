@@ -10,23 +10,20 @@ import * as styles from "./layout.module.css";
 import Additional from '../../images/icons/additional.svg';
 
 export default function Layout({ crumbLabel, children, contentWithSources, social, className }) {
-  // Compose sources object from all provided content,
-  // taking only those items with `source` defined
-  const sourcesObj = (contentWithSources ?? []).reduce((withSources, contentObj) => {
-    Object.entries(contentObj).forEach(([key, val]) => {
-      if(!withSources[key] && val.source) {
-        withSources[key] = val
-      }
-    })  
-    return withSources;
-  }, {})
-
-  // sort based on the numerical footnote included in the content title
+  // Compose sources list from all provided content,
+  // taking all objects with `source` defined.
+  // Then sort based on numerical footnote included in the content title
   const footnoteRegex = /\[(\d+)\]\(#sources/;
-  const sources = Object.entries(sourcesObj)
-    .sort(([_aKey, aVal], [_bKey, bVal]) => {
-      const aNum = parseInt(aVal?.title?.match(footnoteRegex)?.[1])
-      const bNum = parseInt(bVal?.title?.match(footnoteRegex)?.[1])
+  const sources = (contentWithSources ?? [])
+    .reduce((withSources, contentObj) => {
+      return [
+        ...withSources,
+        ...Object.values(contentObj).filter(({ source }) => !!source)
+      ]
+    }, [])
+    .sort((a, b) => {
+      const aNum = parseInt(a?.title?.match(footnoteRegex)?.[1])
+      const bNum = parseInt(b?.title?.match(footnoteRegex)?.[1])
 
       if (aNum == undefined 
         || bNum == undefined 
@@ -54,9 +51,9 @@ export default function Layout({ crumbLabel, children, contentWithSources, socia
           <Row>
             <h2 className={styles.sectionHeader}> <Additional /> ADDITIONAL INFORMATION</h2>
             <ol>
-              {sources.map(([key, val]) => (
-                <li id={`sources-${key}`} key={`sources-${key}`}>
-                  <ReactMarkdown>{val.source}</ReactMarkdown>
+              {sources.map(({ source }, idx) => (
+                <li id={`sources-${idx + 1}`} key={`sources-${idx + 1}`}>
+                  <ReactMarkdown>{source}</ReactMarkdown>
                 </li>
               ))}
             </ol>

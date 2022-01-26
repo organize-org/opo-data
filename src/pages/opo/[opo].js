@@ -74,13 +74,16 @@ export default function Opo({ opo }) {
     };
     return [...acc, formattedData];
   }, []);
-  
 
+  // Only include state headings in sources if the state comparison 
+  // table will be displayed on the page (if inStateOpos.length > 0)
+  const contentSources = [stats, opoHeadings];
+  if (inStateOpos.length > 0) contentSources = contentSources.concat(stateHeadings);
   return (
     <Layout
       className="opoPage"
       crumbLabel={formatName(opoData)}
-      contentWithSources={[stats, opoHeadings, stateHeadings]}
+      contentWithSources={contentSources}
       social={true}
     >
       {/* OPO Name, top-level stats, select OPO menu, and map */}
