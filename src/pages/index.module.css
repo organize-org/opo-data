@@ -13,7 +13,7 @@
   font-size: 1.15rem;
   height: 60px;
   margin-top: 2rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
 }
 
 .topBar p {
@@ -29,7 +29,7 @@
 .topHeader {
   display: inline-flex;
   flex-wrap: nowrap;
-  margin-left: 2rem;
+  margin-left: 1rem;
   justify-content: flex-start;
   align-items: center;
 }
@@ -71,6 +71,7 @@ h2 svg {
 .mapIntroContent {
   font-size: 1rem;
   margin-left: 3rem;
+  margin-right: 3rem;
   padding-bottom: 1.5rem;
 }
 

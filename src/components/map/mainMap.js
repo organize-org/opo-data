@@ -2,15 +2,14 @@ import React from "react";
 import { Row } from "react-bootstrap";
 import { GeoJSON, MapContainer, ZoomControl } from "react-leaflet";
 import { navigate } from "gatsby";
-import bbox from "@turf/bbox";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
-
+import useGeoJson from "../../hooks/useGeoJson";
 import useDataMaps from "../../hooks/useDataMaps";
+import { getRankedOPOCount } from "../../utils/utils";
+
+import Legend, { BLACK_DONOR_DISPARITY_FILL, CONGRESSIONAL_INVESTIGATION_FILL, OPO_PERFORMANCE_TIER_FILL } from "./legend";
 
 import * as styles from "./map.module.css";
-import useGeoJson from "../../hooks/useGeoJson";
-import Legend, { BLACK_DONOR_DISPARITY_FILL, CONGRESSIONAL_INVESTIGATION_FILL, OPO_PERFORMANCE_TIER_FILL } from "./legend";
-import { getRankedOPOCount } from "../../utils/utils";
 
 export default function MainMap({ mapView }) {
   
@@ -51,8 +50,6 @@ export default function MainMap({ mapView }) {
       })),
   };
 
-  // use state geo data to generate bounding box
-  const [minX, minY, maxX, maxY] = bbox(stateGeoJson)
   return (
       <Row className={styles.map}>
         <div style={{width: '100%'}}>
@@ -62,18 +59,17 @@ export default function MainMap({ mapView }) {
             typeof window !== "undefined" && (
               <MapContainer
                 key={`${mapView}-map`}
-                bounds={[
-                  [minY, minX],
-                  [maxY, maxX],
-                ]}
                 scrollWheelZoom={false}
-                style={{height: "75vh",  backgroundColor: "#fff" }}
+                style={{height: "90vh",  backgroundColor: "#fff" }}
                 zoomControl={false}
                 dragging={windowWidth > 800}
-                className={styles.mapContainer}
+                // Point near the center of contiguous US (https://geohack.toolforge.org/geohack.php?pagename=Geographic_center_of_the_United_States&params=39_50_N_98_35_W_region:US-KS_type:landmark&title=Geographic+Center+of+the+Contiguous+United+States)
+                // but then shifted down a bit to force map higher and reduce whitespace at top
+                center={[37.833333, -98.583333]}
+                zoom={4.5}
+                zoomSnap={0.25}
               >
                 <ZoomControl position="bottomright" />
-
                 {/* Create layer for OPO polygons with fill based on map view */}
                 <GeoJSON
                   key="opo-fill-boundaries"
@@ -111,7 +107,7 @@ export default function MainMap({ mapView }) {
                       </div>`,
                       {
                         permanent: false,
-                        sticky: false,
+                        sticky: true,
                         offset: [10, 0],
                       }
                     )

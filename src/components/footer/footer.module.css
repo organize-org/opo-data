@@ -1,11 +1,35 @@
-.footer {
+.footerContainer {
   background-color: #f3f3f3;
-  align-items: center;
+}
+
+.footer {
+  margin: 3rem;
+}
+
+.footer h2 {
+  color: var(--opoRed);
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .footerContent {
+  margin-top: 3rem;
+} 
+
+.footerContent p:nth-child(2) {
+  margin-top: 2rem;
+}
+
+.footerIcons {
   align-items: center;
-  margin: auto 3rem;
+}
+
+.footerIcons a {
+  margin: 0 1rem;
+}
+
+.footerIcons a:first-child {
+  margin-left: 0;
 }
 
 .footerCopyright {
@@ -14,57 +38,6 @@
   margin-bottom: 3rem;
   margin-top: 1rem;
   margin-right: 3rem;
-}
-
-.header {
-  padding-right: 4rem;
-}
-
-.header p {
-  line-height: 1.6;
-  margin-left: 0;
-}
-
-.header h2 {
-  color: var(--opoRed);
-  font-weight: 800;
-  margin-left: 1rem;
-  margin-top: 3rem;
-  text-transform: uppercase;
-}
-
-.header img {
-  object-fit: contain !important;
-}
-
-.icon {
-  margin-bottom: 2rem;
-}
-
-.icon svg {
-  width: 2.5rem;
-}
-
-.research {
-  margin-top: 1rem;
-}
-
-.logosOne {
-  margin-bottom: 2.5rem;
-  justify-content: space-between;
-}
-
-.schmidt {
-  margin-right: 1rem;
-}
-
-.logosTwo {
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
-
-.bloom {
-  margin-right: 1rem;
 }
 
 @media (max-width: 900px) {
