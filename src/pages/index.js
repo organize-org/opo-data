@@ -58,7 +58,7 @@ export default function Dashboard({ data: { articleImages } }) {
           </ButtonGroup>
         </Col>
         <Col>
-          <SelectState opo={mapView  !== 'opo-performance'} />
+          <SelectState opo={mapView  !== 'opoPerformance'} />
         </Col>
       </Row>
       {/* Map content (specific to current map view) */}
