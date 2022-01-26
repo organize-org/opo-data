@@ -149,6 +149,12 @@ export default function ThumnailMap({
   );
 }
 
+/**
+ * Custom offsets to apply to OPO labels in state thumbnail maps to make them
+ *  a) visible within the bounded mini map 
+ *  b) distinct and clear WRT to their specific OPO geometry
+ */
+
 const OPO_LABEL_OFFSETS = {
   AK: {
     WALC: [-70, -60]
@@ -181,7 +187,8 @@ const OPO_LABEL_OFFSETS = {
     NEOR: [140, 0]
   },
   MA: {
-    MAOB: [50, -70],
+    MAOB: [120, -120],
+    CTOP: [0, -30]
   },
   MD: {
     MDPC: [10, -20],

@@ -23,6 +23,12 @@
   font-size: .875rem;
 }
 
+.breadcrumb li {
+  font-size: .875rem !important;
+  font-weight: 400 !important;
+  color: var(--opoBlack);
+}
+
 .sectionHeader {
   color: var(--opoRed);
   font-weight: bolder;

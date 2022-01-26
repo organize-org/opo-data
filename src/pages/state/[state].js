@@ -203,9 +203,7 @@ export default function State({ data: { statesGeoData }, state }) {
         {/* News & notes (if exists) */}
         {stateData?.notes?.length > 0 && (
           <Row className={styles.news}>
-            <Row>
-              <h3>OPO News and Notes in {stateData.name}</h3>
-            </Row>
+              <h3>OPO news and notes in {stateData.name}</h3>
             <Row>
               <ul>
                 {stateData.notes.map(({ note }, i) => (

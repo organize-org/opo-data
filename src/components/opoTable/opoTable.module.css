@@ -34,8 +34,9 @@
 }
 
 .tableCaption {
-  font-size: .875;
+  font-size: .875rem;
   line-height: 1.5;
+  font-weight: 400;
   margin-left: 0;
 }
 

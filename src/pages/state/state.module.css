@@ -48,7 +48,7 @@ h3 {
 
 .mapV2 {
   margin-left: 0;
-  margin-right: 1rem;
+  margin-right: .5rem;
 }
 
 .mapV2 > * {
@@ -57,7 +57,7 @@ h3 {
 }
 
 .stats {
-  margin-left: 1rem;
+  margin-left: .5rem;
   margin-right: 0;
   flex-direction: column;
   justify-content: center;
@@ -103,11 +103,6 @@ h3 {
   margin-top: 2rem;
   flex-direction: column;
   max-width: 80rem;
-}
-
-.news > * {
-  margin-left: 0;
-  margin-right: 0;
 }
 
 .serviceState {
@@ -189,6 +184,10 @@ h3 {
     flex-direction: column-reverse;
   }
 
+  .sectionHeader {
+    margin-left: 0rem;
+  }
+  
   .title h2 {
     flex-grow: 1;
     text-align: center;

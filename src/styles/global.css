@@ -82,7 +82,7 @@ a:hover {
 }
 
 .breadcrumb-item a:first-child {
-  color: var(--opoTeal);
+  color: var(--opoBlack);
 }
 
 li.breadcrumb-item.active::before {

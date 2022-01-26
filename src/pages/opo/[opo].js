@@ -92,7 +92,7 @@ export default function Opo({ opo }) {
           <Col>
             Region: <strong>{opoData.states}</strong>
           </Col>
-          <Col xs={7}>
+          <Col lg={7} xs={12}>
             <SelectState
               label={"See OPO performance for:"}
               link={opoData.name}

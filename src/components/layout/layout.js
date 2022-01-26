@@ -37,13 +37,15 @@ export default function Layout({ crumbLabel, children, contentWithSources, socia
   return (
     <Container fluid className={className}>
       <Navbar />
-      {crumbLabel ? (
-        <Breadcrumb className={styles.breadcrumb}>
-          <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-          <Breadcrumb.Item active>{crumbLabel}</Breadcrumb.Item>
-        </Breadcrumb>
-      ) : null}
-      {social ? <Social /> : null}
+      <Row>
+        {crumbLabel ? (
+          <Breadcrumb className={styles.breadcrumb}>
+            <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+            <Breadcrumb.Item active>{crumbLabel}</Breadcrumb.Item>
+          </Breadcrumb>
+        ) : null}
+        {social ? <Social /> : null}
+      </Row>
 
       {children}
       {sources?.length ? (
