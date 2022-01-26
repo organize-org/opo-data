@@ -17,7 +17,7 @@ export default function OpoTable({
   title,
 }) {
   const columns = useMemo(() => {
-    const createCol = ([accessor, heading], idx) => {
+    const createCol = ([accessor, heading]) => {
       const col = {
         Header: <ReactMarkdown>{heading.title}</ReactMarkdown>,
         accessor,
@@ -34,7 +34,20 @@ export default function OpoTable({
             </Link>
           ),
         };
-      } else if(accessor === "shadow") {
+      } else if (accessor === "states") {
+        return {
+          ...col,
+          Cell: props => {
+            const states = props.value.split(",");
+            return states.map((s, idx) => (
+              <>
+                <Link to={`state/${s}`}>{s}</Link>
+                {idx === states.length - 1 ? '' : ', '}
+              </>
+            ))
+          }
+        }
+      }else if(accessor === "shadow") {
         return {
           ...col,
           cellClass: styles.shadows,
@@ -59,6 +72,11 @@ export default function OpoTable({
             parseInt(a.values.death?.replace(/,/g, "")) -
             parseInt(b.values.death?.replace(/,/g, "")),
         };
+      } else if (accessor === "investigation") {
+        return {
+          ...col,
+         Cell: props => props === false ? 'No' : 'Yes'
+        }
       } else {
         return col;
       }

@@ -48,15 +48,15 @@ export default function Opo({ opo }) {
     takeaway.opo === opo.toUpperCase()
   );
 
-  const inStateOpos = Object.values(opoDataMap)
-    .filter(
-      opoFromMap =>
-        opoFromMap.statesWithRegions[opoData.states.split(" ")[0]] !== undefined
-    )
-    .map(opoFromMap => ({
-      ...opoFromMap,
-      region: opoFromMap.statesWithRegions[opoData.states.split(" ")[0]],
-    }));
+  // All states serviced by this OPO
+  const thisOPOStates = Object.keys(opoData.statesWithRegions);
+  // All opos servicing these same states (for comparison)
+  // TODO: if OPO services only one state, compare to OPOs servicing 
+  // bordering states (see [state].js line)
+  //   - All opos servicing bordering states if this OPO only services one
+
+  const comparisonOPOs = Object.values(opoDataMap)
+    .filter(opo => thisOPOStates.some(s => !!opo.statesWithRegions[s]))
 
   const ethnicityKeys = {
     nhw_: "Non-Hispanic White",
@@ -77,8 +77,10 @@ export default function Opo({ opo }) {
 
   // Only include state headings in sources if the state comparison 
   // table will be displayed on the page (if inStateOpos.length > 0)
-  const contentSources = [stats, opoHeadings];
-  if (inStateOpos.length > 0) contentSources = contentSources.concat(stateHeadings);
+  let contentSources = [stats, opoHeadings];
+  if (comparisonOPOs.length > 0) contentSources = contentSources.concat(stateHeadings);
+
+  console.log("comparison opos", comparisonOPOs);
   return (
     <Layout
       className="opoPage"
@@ -93,7 +95,17 @@ export default function Opo({ opo }) {
         </Row>
         <Row className={styles.region}>
           <Col>
-            Region: <strong>{opoData.states}</strong>
+            Region: <strong>
+              {Object.entries(opoData.statesWithRegions).map(
+                ([state, region], idx) => {
+                  const regionStr = !!region
+                    ? `${state}: ${region}`
+                    : state
+                  
+                  return `${regionStr}${idx === Object.keys(opoData.statesWithRegions).length - 1 ? '' : ', '}`;
+                }
+              )}
+            </strong>
           </Col>
           <Col lg={7} xs={12}>
             <SelectState
@@ -244,11 +256,11 @@ export default function Opo({ opo }) {
             )}
           </Row>
           <Row>
-            {inStateOpos.length > 0 && (
+            {comparisonOPOs.length > 0 && (
               <OpoTable
                 headings={stateHeadings}
-                opos={inStateOpos}
-                title={`OPO performance comparison in this state`}
+                opos={comparisonOPOs}
+                title={`OPO performance comparison`}
               />
             )}
           </Row>

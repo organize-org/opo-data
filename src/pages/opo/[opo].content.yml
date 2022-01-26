@@ -63,10 +63,10 @@ opoHeadings:
     title: Procurement Rate Ranking[10](#sources-10)
     source: TODO GET CONTENT
 stateHeadings:
+  states:
+    title: States
   name:
     title: OPO Name
-  region:
-    title: Region
   tier:
     title: Performance Tier (2019)[11](#sources-11)
     source: Tier (2019) via [CMS](https://qcor.cms.gov/main.jsp), data most recently

@@ -811,7 +811,7 @@ module.exports = {
                         collapsed: false,
                         fields: [
                           {
-                            label: "Name",
+                            label: "States",
                             name: "name",
                             widget: "object",
                             fields: [
@@ -833,8 +833,8 @@ module.exports = {
                             ]
                           },
                           {
-                            label: "Region",
-                            name: "region",
+                            label: "Name",
+                            name: "name",
                             widget: "object",
                             fields: [
                               {

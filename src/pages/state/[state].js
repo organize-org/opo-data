@@ -78,8 +78,7 @@ export default function State({ data: { statesGeoData }, state }) {
           ...filter,
           outOfStateOpos: [
             ...filter.outOfStateOpos,
-            // Add formatted state list
-            { ...opo, states: Object.keys(opo.statesWithRegions).join(", ") },
+            opo
           ],
         };
       } else {
@@ -188,17 +187,15 @@ export default function State({ data: { statesGeoData }, state }) {
         {/* OPOs servicing state */}
         <h2 className={styles.sectionHeader}>
           <News/>
-          OPOs IN THIS STATE
+          OPOS IN THIS STATE
         </h2>
         <Row className={styles.serviceTable}>
-          {inStateOpos.length > 0 && (
-            <OpoTable
+          <OpoTable
             // suppress state column in the in-state OPO table
-              headings={{...headings, states: null}}
-              opos={inStateOpos}
-              title={`OPOs Operating in ${stateData.name}`}
-            />
-          )}
+            headings={{...headings, states: null}}
+            opos={inStateOpos}
+            title={`OPOs Operating in ${stateData.name}`}
+          />
         </Row>
         {/* News & notes (if exists) */}
         {stateData?.notes?.length > 0 && (
