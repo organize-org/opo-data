@@ -60,16 +60,15 @@ export default function MainMap({ mapView }) {
               <MapContainer
                 key={`${mapView}-map`}
                 scrollWheelZoom={false}
-                style={{height: "90vh",  backgroundColor: "#fff" }}
+                style={{height: "80vh",  backgroundColor: "#fff" }}
                 zoomControl={false}
-                dragging={windowWidth > 800}
+                dragging={false}
                 // Point near the center of contiguous US (https://geohack.toolforge.org/geohack.php?pagename=Geographic_center_of_the_United_States&params=39_50_N_98_35_W_region:US-KS_type:landmark&title=Geographic+Center+of+the+Contiguous+United+States)
                 // but then shifted down a bit to force map higher and reduce whitespace at top
                 center={[37.833333, -98.583333]}
-                zoom={4.5}
+                zoom={4.25}
                 zoomSnap={0.25}
               >
-                <ZoomControl position="bottomright" />
                 {/* Create layer for OPO polygons with fill based on map view */}
                 <GeoJSON
                   key="opo-fill-boundaries"

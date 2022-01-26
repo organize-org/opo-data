@@ -64,10 +64,6 @@ h2 svg {
   text-transform: uppercase;
 }
 
-.thirdHeader {
-  margin-bottom: 4rem;
-}
-
 .mapIntroContent {
   font-size: 1rem;
   margin-left: 3rem;
@@ -84,6 +80,11 @@ h2 svg {
   font-weight: 700;
   text-align: center;
   margin: 0;
+}
+
+.statsHeaders {
+  margin: auto 3rem;
+  padding: .5rem;
 }
 
 .statsValues {
@@ -137,10 +138,6 @@ h2 svg {
 }
 
 @media (max-width: 700px) {
-  .topBar {
-    flex-direction: column-reverse;
-  }
-
   .topBar > * {
     flex-direction: row;
     flex-wrap: wrap;
@@ -155,13 +152,7 @@ h2 svg {
   .articlesSection {
     margin: 2rem 0 0 0;
   }
-  .statsSection {
-    margin-top: 0;
-    margin-bottom: 2rem;
-  }
-  .statsSection > * {
-    margin-top: 2rem;
-  }
+
   .videoSection {
     flex-direction: column;
     margin-top: 2rem;
@@ -170,6 +161,26 @@ h2 svg {
 }
 
 @media (max-width: 900px) {
+  .statsSection {
+    flex-direction: column;
+  }
+  .statsSection {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  .statsSection > h3 {
+    margin-top: 2rem;
+  }
+
+  .statsValues {
+    margin-top: .5rem;
+  }
+
+  .mapToggleButtons {
+    margin-top: 1rem;
+    align-items: center;
+  }
+
   .videoSection {
     flex-direction: column;
     margin-top: 2rem;

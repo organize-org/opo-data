@@ -51,29 +51,14 @@
     margin-bottom: 2rem;
   }
 
-  .logos {
+  .footerIcons {
     display: inline-flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin-top: 3rem;
-  }
-
-  .logosOne {
-    align-items: center;
-    margin-bottom: 0.5rem;
-    margin-right: 0.2rem;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
-
-  .logosTwo {
-    flex-wrap: wrap;
-  }
-
-  .logosTwo img {
-    height: initial;
   }
 
   .bloom {
     margin-right: 0.5rem;
+    margin-left: -1rem;
   }
 }

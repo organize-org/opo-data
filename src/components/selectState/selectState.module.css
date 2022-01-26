@@ -16,3 +16,10 @@ p {
   width: 20rem;
   z-index: 1002;
 }
+
+
+@media (max-width: 900px) {
+ .selectState {
+  margin-right: 0;
+ }
+}

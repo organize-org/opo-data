@@ -42,15 +42,15 @@ export default function Dashboard({ data: { articleImages } }) {
 
   return (
     <Layout className={styles.index}>
+      <Social />
       <Row className={styles.topBar}>
         <Col className={styles.topHeader} xs={12} md={8}>
           <h2> <Data />Data on U.S. Organ Procurement Organizations (OPO)</h2>
         </Col>
-        <Social />
       </Row>
 
       <Row className={styles.mapToggleButtons}>
-        <Col xs={7}>
+        <Col xs={12} lg={8}>
           <ButtonGroup>
             <Button variant="outline-secondary" className={styles.mapToggleButtons} active={mapView==='opoPerformance'} onClick={() => setMapView('opoPerformance')}>OPO Performance</Button>
             <Button variant="outline-secondary" className={styles.mapToggleButtons} active={mapView==='congressionalInvestigation'} onClick={() => setMapView('congressionalInvestigation')}>Under Congressional Investigation</Button>
@@ -67,13 +67,13 @@ export default function Dashboard({ data: { articleImages } }) {
       </Row>  
       <MainMap key={rerenderMap} mapView={mapView}/>
 
-      <Col className={styles.secondHeader} xs={10} md={6}>
+      <Col className={styles.secondHeader} xs={12} lg={6}>
         <h2><Performance />Cost of OPO Performance Failures</h2>
       </Col>
       <Row className={styles.statsSection}>
         {Object.values(stats).map(({ title, value }) => (
-          <Col className="mx-5" key={title}>
-            <Row className="h-50">
+          <Col className={styles.statsHeaders} key={title}>
+            <Row className="h-50 justify-content-center">
               <h3>
                 <ReactMarkdown>{title}</ReactMarkdown>
               </h3>
@@ -91,7 +91,7 @@ export default function Dashboard({ data: { articleImages } }) {
       </Row>
       <EquitySection />
       <Col
-        className={`${styles.thirdHeader} + ${styles.secondHeader}`}
+        className={styles.secondHeader}
         xs={10}
         md={5}
       >

@@ -29,14 +29,14 @@ export default function Footer() {
             <StaticImage
               src="../../images/logos/ArnoldVentures.png"
               alt="arnold logo"
-              height={40}
+              height={30}
             />
           </a>
           <a href="https://www.schmidtfutures.com">
             <StaticImage
               src="../../images/logos/SchmidtFutures.png"
               alt="schmidt logo"
-              height={80}
+              height={60}
             />
           </a>
           <a href="https://fas.org">
@@ -50,7 +50,7 @@ export default function Footer() {
             <StaticImage
               src="../../images/logos/bloomworks.png"
               alt="bloom logo"
-              height={40}
+              height={30}
               className={styles.bloom}
             />
           </a>
@@ -58,7 +58,7 @@ export default function Footer() {
             <StaticImage
               src="../../images/logos/organize.png"
               alt="organize logo"
-              height={40}
+              height={25}
             />
           </a>
         </Row>
