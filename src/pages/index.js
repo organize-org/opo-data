@@ -44,7 +44,7 @@ export default function Dashboard({ data: { articleImages } }) {
     <Layout className={styles.index}>
       <Social />
       <Row className={styles.topBar}>
-        <Col className={styles.topHeader} xs={12} md={8}>
+        <Col className={styles.topHeader}>
           <h2> <Data />Data on U.S. Organ Procurement Organizations (OPO)</h2>
         </Col>
       </Row>
@@ -72,13 +72,13 @@ export default function Dashboard({ data: { articleImages } }) {
       </Col>
       <Row className={styles.statsSection}>
         {Object.values(stats).map(({ title, value }) => (
-          <Col className={styles.statsHeaders} key={title}>
-            <Row className="h-50 justify-content-center">
+          <Col key={title}>
+            <Row  className={styles.statsHeaders}>
               <h3>
                 <ReactMarkdown>{title}</ReactMarkdown>
               </h3>
             </Row>
-            <Row className="justify-content-center">
+            <Row className="justify-content-center align-items-end">
               <ReactMarkdown className={styles.statsValues}>
                 {value}
               </ReactMarkdown>

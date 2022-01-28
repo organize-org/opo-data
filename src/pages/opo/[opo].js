@@ -80,7 +80,6 @@ export default function Opo({ opo }) {
   let contentSources = [stats, opoHeadings];
   if (comparisonOPOs.length > 0) contentSources = contentSources.concat(stateHeadings);
 
-  console.log("comparison opos", comparisonOPOs);
   return (
     <Layout
       className="opoPage"

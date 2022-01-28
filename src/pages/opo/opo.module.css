@@ -188,7 +188,7 @@ h3 {
   margin-right: 0;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .title {
     flex-direction: column-reverse;
   }
@@ -198,12 +198,17 @@ h3 {
     text-align: center;
   }
 
+  .sectionHeader {
+    margin-left: 0;
+  }
+
   .mapStats {
     flex-wrap: wrap;
   }
 
   .stats {
     margin-top: 2rem;
+    font-size: 1rem;
   }
 
   .headlines {
@@ -213,4 +218,14 @@ h3 {
   .region {
     flex-direction: column-reverse;
   }
+
+  .statsComp {
+    display: contents;
+  }
+
+  .statsComp p {
+    margin-left: 0;
+    
+  }
+
 }

@@ -1,4 +1,4 @@
-import React from "react";
+  import React from "react";
 import { Row } from "react-bootstrap";
 import { GeoJSON, MapContainer, ZoomControl } from "react-leaflet";
 import { navigate } from "gatsby";
@@ -54,6 +54,8 @@ export default function MainMap({ mapView }) {
       <Row className={styles.map}>
         <div style={{width: '100%'}}>
           <hr />
+          <Legend mapView={mapView} />
+
           {
             // Hack: [`window` dependency for Leaflet](https://www.gatsbyjs.com/docs/debugging-html-builds/#fixing-third-party-modules)
             typeof window !== "undefined" && (
@@ -66,7 +68,8 @@ export default function MainMap({ mapView }) {
                 // Point near the center of contiguous US (https://geohack.toolforge.org/geohack.php?pagename=Geographic_center_of_the_United_States&params=39_50_N_98_35_W_region:US-KS_type:landmark&title=Geographic+Center+of+the+Contiguous+United+States)
                 // but then shifted down a bit to force map higher and reduce whitespace at top
                 center={[37.833333, -98.583333]}
-                zoom={4.25}
+                // Shrink map in small (mobile) screens
+                zoom={windowWidth > 700 ? 4.25 :3}
                 zoomSnap={0.25}
               >
                 {/* Create layer for OPO polygons with fill based on map view */}
@@ -138,7 +141,6 @@ export default function MainMap({ mapView }) {
               </MapContainer>
             )
           }
-          <Legend mapView={mapView} />
           <hr />
         </div>
       </Row>

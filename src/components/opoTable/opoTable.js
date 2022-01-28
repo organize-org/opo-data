@@ -41,7 +41,7 @@ export default function OpoTable({
             const states = props.value.split(",");
             return states.map((s, idx) => (
               <>
-                <Link to={`state/${s}`}>{s}</Link>
+                <Link to={`/state/${s}`}>{s}</Link>
                 {idx === states.length - 1 ? '' : ', '}
               </>
             ))

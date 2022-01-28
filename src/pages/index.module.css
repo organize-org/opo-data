@@ -85,6 +85,8 @@ h2 svg {
 .statsHeaders {
   margin: auto 3rem;
   padding: .5rem;
+  height: 50%;
+  justify-content: center;
 }
 
 .statsValues {
@@ -160,7 +162,7 @@ h2 svg {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .statsSection {
     flex-direction: column;
   }
@@ -178,7 +180,7 @@ h2 svg {
 
   .mapToggleButtons {
     margin-top: 1rem;
-    align-items: center;
+    justify-content: center;
   }
 
   .videoSection {

@@ -16,6 +16,10 @@
   margin-top: 3rem;
 } 
 
+.footerContent p {
+  margin-left: 0rem
+}
+
 .footerContent p:nth-child(2) {
   margin-top: 2rem;
 }

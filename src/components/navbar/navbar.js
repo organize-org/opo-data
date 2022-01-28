@@ -22,7 +22,7 @@ export default function Navigation() {
             placeholder="none"
           />
           <section className={styles.logoText}>
-            <h1>OPODATA.ORG</h1>
+            <h1>OPOdata.org</h1>
           </section>
         </Nav.Link>
       </Navbar.Brand>

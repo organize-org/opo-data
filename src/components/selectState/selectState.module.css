@@ -18,8 +18,15 @@ p {
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
  .selectState {
   margin-right: 0;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 0;
+ }
+
+ .selectState p {
+   margin-left: 0;
  }
 }

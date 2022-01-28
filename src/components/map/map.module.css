@@ -102,6 +102,10 @@ hr {
     margin-bottom: 0.05rem;
   }
 
+  .legendItem {
+    margin-left: -1rem;
+  }
+
   .popout {
     max-width: 75%;
     padding: 1rem 2rem;
