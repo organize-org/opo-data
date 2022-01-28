@@ -7,6 +7,9 @@
   --opoTeal: #00768f;
 }
 
+.gatsby-image-wrapper {
+  transition: none !important;
+}
 *,
 *:before,
 *:after {

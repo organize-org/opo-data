@@ -32,6 +32,7 @@
   align-items: center;
   background-color: unset;
   margin-left: auto;
+  margin-right: 1rem;
 }
 
 .mobileTitleClose {
@@ -95,13 +96,7 @@
   text-decoration: underline;
 }
 
-@media (max-width: 1100px) {
-  .logoWithText > *:nth-child(1) {
-    display: none;
-  }
-}
-
-@media (max-width: 990px) {
+@media (max-width: 1200px) {
   .navCollapse {
     background-color: #000000;
   }
@@ -111,17 +106,10 @@
     margin-left: 1rem;
     font-size: 0.8rem;
   }
-}
-
-@media (max-width: 800px) {
   .logoWithText {
     margin: 0 !important;
     margin-right: 2rem;
     text-align: left;
-  }
-
-  .logoWithText > *:nth-child(1) {
-    display: none;
   }
 
   .logoText {
@@ -132,9 +120,7 @@
   .mobileTitle {
     background-color: unset;
   }
-}
 
-@media (min-width: 992px) {
   .mobileTitle h1 {
     display: none !important;
   }

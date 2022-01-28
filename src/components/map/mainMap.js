@@ -1,6 +1,6 @@
   import React from "react";
 import { Row } from "react-bootstrap";
-import { GeoJSON, MapContainer, ZoomControl } from "react-leaflet";
+import { GeoJSON, MapContainer } from "react-leaflet";
 import { navigate } from "gatsby";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import useGeoJson from "../../hooks/useGeoJson";
@@ -69,7 +69,7 @@ export default function MainMap({ mapView }) {
                 // but then shifted down a bit to force map higher and reduce whitespace at top
                 center={[37.833333, -98.583333]}
                 // Shrink map in small (mobile) screens
-                zoom={windowWidth > 700 ? 4.25 :3}
+                zoom={windowWidth > 1100 ? 4.25 :3}
                 zoomSnap={0.25}
               >
                 {/* Create layer for OPO polygons with fill based on map view */}

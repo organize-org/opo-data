@@ -138,8 +138,7 @@ h2 svg {
 .articlesSection p {
   margin: 1rem 0;
 }
-
-@media (max-width: 700px) {
+@media (max-width: 1200px) {
   .topBar > * {
     flex-direction: row;
     flex-wrap: wrap;
@@ -160,9 +159,7 @@ h2 svg {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
-}
 
-@media (max-width: 1200px) {
   .statsSection {
     flex-direction: column;
   }

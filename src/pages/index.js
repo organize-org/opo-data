@@ -38,7 +38,7 @@ export default function Dashboard({ data: { articleImages } }) {
   const [rerenderMap, setRerenderMap] = useState(0);
   useEffect(() => {
     if(rerenderMap === 0) setRerenderMap(r => r + 1);
-  })
+  }, [rerenderMap])
 
   return (
     <Layout className={styles.index}>

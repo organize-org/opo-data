@@ -20,9 +20,8 @@ ul li p {
 
 .title {
   color: var(--opoBlack);
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   margin: 2rem 0;
-  text-transform: uppercase;
 }
 
 .region {

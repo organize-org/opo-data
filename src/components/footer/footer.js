@@ -25,28 +25,28 @@ export default function Footer() {
           </p>
         </Row>
         <Row className={`${styles.footerContent} ${styles.footerIcons}`}>
-          <a href="https://www.arnoldventures.org">
+          <a className={styles.icon} href="https://www.arnoldventures.org">
             <StaticImage
               src="../../images/logos/ArnoldVentures.png"
               alt="arnold logo"
               height={30}
             />
           </a>
-          <a href="https://www.schmidtfutures.com">
+          <a className={`${styles.icon} ${styles.schmidt}`} href="https://www.schmidtfutures.com">
             <StaticImage
               src="../../images/logos/SchmidtFutures.png"
               alt="schmidt logo"
               height={60}
             />
           </a>
-          <a href="https://fas.org">
+          <a className={styles.icon} href="https://fas.org">
             <StaticImage
               src="../../images/logos/fas-logo.png"
               alt="fas logo"
               height={40}
             />
           </a>
-          <a href="https://bloomworks.digital">
+          <a className={styles.icon} href="https://bloomworks.digital">
             <StaticImage
               src="../../images/logos/bloomworks.png"
               alt="bloom logo"
@@ -54,7 +54,7 @@ export default function Footer() {
               className={styles.bloom}
             />
           </a>
-          <a href="https://www.organize.org">
+          <a className={styles.icon} href="https://www.organize.org">
             <StaticImage
               src="../../images/logos/organize.png"
               alt="organize logo"

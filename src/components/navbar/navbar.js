@@ -18,11 +18,12 @@ export default function Navigation() {
         <Nav.Link href="/" className={styles.logoWithText}>
           <StaticImage
             src="../../images/logo.png"
+            height={40}
             alt="logo"
             placeholder="none"
           />
           <section className={styles.logoText}>
-            <h1>OPOdata.org</h1>
+            <h1>OPODATA.ORG</h1>
           </section>
         </Nav.Link>
       </Navbar.Brand>
