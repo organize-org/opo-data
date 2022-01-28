@@ -2,6 +2,7 @@ import React from "react";
 import { navigate } from "gatsby";
 import { Col, Row } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
+import ReactPlayer from "react-player";
 
 import Layout from "../../components/layout/layout";
 import SelectState from "../../components/selectState/selectState";
@@ -38,7 +39,7 @@ export default function Opo({ opo }) {
   }
 
   const { notes } = stateContent;
-  const { opoHeadings, stateHeadings, stats, takeaways } = opoContent;
+  const { opoHeadings, stateHeadings, stats, takeaways, videos } = opoContent;
 
   const opoHeadlines = notes.filter(note =>
     note.tags?.includes(opo.toUpperCase())
@@ -46,6 +47,10 @@ export default function Opo({ opo }) {
 
   const opoTakeaways = takeaways.filter(takeaway => 
     takeaway.opo === opo.toUpperCase()
+  );
+
+  const opoVideos = videos?.filter(video => 
+    video.tags?.includes(opo.toUpperCase())
   );
 
   // All states serviced by this OPO
@@ -197,7 +202,7 @@ export default function Opo({ opo }) {
       </Row>
       <div className={styles.opoContent}>
         {/* Headlines about OPO */}
-        {(opoHeadlines?.length || opoTakeaways?.length)
+        {(opoHeadlines?.length || opoTakeaways?.length || opoVideos.length)
           ? <h2 className={styles.sectionHeader}>
               <News />
               ABOUT THIS OPO
@@ -237,6 +242,19 @@ export default function Opo({ opo }) {
               </>
             ): null
           }
+          {opoVideos?.length
+            ? opoVideos.map(({ link, title, description }, i) => (
+                <Row key={`opo-videos-${i}`} className={styles.video}>
+                  <ReactPlayer url={link} width={594} height={361} />
+                  <h4>{title}</h4>
+                  {description && (
+                    <ReactMarkdown className={styles.description}>
+                      {description}
+                    </ReactMarkdown>
+                  )}
+                </Row>
+              ))
+            : null}
         </Row>
         {(opoHeadlines?.length || opoTakeaways?.length)
           ? <hr />

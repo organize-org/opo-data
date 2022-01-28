@@ -684,6 +684,32 @@ module.exports = {
                               }
                             ]
                           },
+                          {
+                            label: "Videos",
+                            label_singular: "Video",
+                            name: "videos",
+                            summary: "{{fields.title}}",
+                            widget: "list",
+                            add_to_top: true,
+                            fields: [
+                              { label: "Link", name: "link", widget: "string" },
+                              { label: "Title", name: "title", widget: "string" },
+                              {
+                                label: "Description",
+                                name: "description",
+                                widget: "markdown",
+                                required: false,
+                              },
+                              {
+                                label: "Tags",
+                                name: "tags",
+                                widget: "select",
+                                multiple: true,
+                                collapsed: false,
+                                options: opoOptions,
+                              },
+                            ],
+                          },
                         ],
                       },
                       {
