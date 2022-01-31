@@ -1,32 +1,42 @@
-mapContent:
-  opoPerformance: The Centers for Medicare & Medicaid Services (CMS) ranks OPOs into 3 different tiers.
-    Rankings incorporate the number of donors and the number of organs transplanted.
-    The majority of the nation’s OPOs are failing to meet Tier 1 standards, leading to 
-    thousands of unnecessary deaths each year, which disproportionately harm patients of color.  
-    The map below shows the current ranking of U.S. OPOs by location, based on the most recent 
-    data available (2019). [Find more information here](https://www.cms.gov/newsroom/fact-sheets/organ-procurement-organization-opo-conditions-coverage-final-rule-revisions-outcome-measures-opos)
-  blackProcurementDisparity: Publicly available data shows a 10-fold difference around the country
-    in OPO procurement of organs from Black donors. Research also shows [differential treatment](https://www.healthaffairs.org/do/10.1377/forefront.20201211.229975/full/)
-    by OPOs towards families of Black and white donors. [Read the article from Axios covering this issue.](https://www.axios.com/organ-donation-recovery-worse-people-of-color-8d42a213-4ef7-48a3-85fb-dd15cfc4301b.html)
-  congressionalInvestigation: Both the House Oversight Committee and the Senate Finance
-    Committee have launched bipartisan investigations into the nation’s organ donation
-    contractors, calling acceleration of reforms an [“urgent health equity issue”.](https://www.finance.senate.gov/chairmans-news/bipartisan-bicameral-members-of-congress-commend-federal-efforts-to-reform-organ-donation-system-urge-acceleration-of-rules-impact-)
-      
-      - [Read the release from the House Oversight Committee](https://oversight.house.gov/news/press-releases/oversight-subcommittee-held-bipartisan-hearing-on-needed-reforms-in-organ)
-      
-      - [Read the release from the Senate Finance Committee](https://www.finance.senate.gov/chairmans-news/finance-committee-members-probe-us-organ-transplant-system)
 stats:
   - title: National organ transplant waiting list as of January 2022
     value: 106,608
-  - title: Number of Americans in 2021 who died each day because they didn’t get a needed transplant
+  - title: Number of Americans in 2021 who died each day because they didn’t get a
+      needed transplant
     value: "31"
   - title: Annual cost to Medicare of dialysis
     value: $36 billion
+mapContent:
+  opoPerformance: The Centers for Medicare & Medicaid Services (CMS) ranks OPOs
+    into 3 different tiers. Rankings incorporate the number of donors and the
+    number of organs transplanted. The majority of the nation’s OPOs are failing
+    to meet Tier 1 standards, leading to thousands of unnecessary deaths each
+    year, which disproportionately harm patients of color. The map below shows
+    the current ranking of U.S. OPOs by location, based on the most recent data
+    available (2019). [Find more information
+    here](https://www.cms.gov/newsroom/fact-sheets/organ-procurement-organization-opo-conditions-coverage-final-rule-revisions-outcome-measures-opos)
+  blackProcurementDisparity: Publicly available data shows a 10-fold difference
+    around the country in OPO procurement of organs from Black donors. Research
+    also shows [differential
+    treatment](https://www.healthaffairs.org/do/10.1377/forefront.20201211.229975/full/)
+    by OPOs towards families of Black and white donors. [Read the article from
+    Axios covering this
+    issue.](https://www.axios.com/organ-donation-recovery-worse-people-of-color-8d42a213-4ef7-48a3-85fb-dd15cfc4301b.html)
+  congressionalInvestigation: >-
+    Both the House Oversight Committee and the Senate Finance Committee have
+    launched bipartisan investigations into the nation’s organ donation
+    contractors, calling acceleration of reforms an [“urgent health equity
+    issue”.](https://www.finance.senate.gov/chairmans-news/bipartisan-bicameral-members-of-congress-commend-federal-efforts-to-reform-organ-donation-system-urge-acceleration-of-rules-impact-)
+
+    - [Read the release from the House Oversight Committee](https://oversight.house.gov/news/press-releases/oversight-subcommittee-held-bipartisan-hearing-on-needed-reforms-in-organ)
+
+    - [Read the release from the Senate Finance Committee](https://www.finance.senate.gov/chairmans-news/finance-committee-members-probe-us-organ-transplant-system)
 quote:
   quote: An astounding lack of accountability and oversight in the nation’s
     creaking, monopolistic organ transplant system is allowing hundreds of
     thousands of potential organ donations to fall through the cracks.
-  attribution: '— [New York Times editorial board](https://www.nytimes.com/2019/08/20/opinion/erika-zak-organ-donor.html)'
+  attribution: — [New York Times editorial
+    board](https://www.nytimes.com/2019/08/20/opinion/erika-zak-organ-donor.html)
   image: ../images/quotes/mainPage.jpg
 equityEmbed:
   image: ../images/quotes/equity-home.jpg
@@ -36,7 +46,8 @@ equityEmbed:
   link: See more data
   mobileImage: ../images/quotes/equity-state.jpg
 video:
-  title: Oversight subcommittee holds bipartisan hearing on needed reforms in organ transplant industry
+  title: House Oversight subcommittee held bipartisan hearing on urgently needed
+    reforms in organ transplant industry
   description: On May 4, 2021, the House Oversight Committee held a bipartisan
     hearing about OPO performance failures as well as fraud, waste and abuse.
   youtube: TnKo8Q-Hemk
@@ -55,8 +66,13 @@ articles:
     source: Health Affairs Blog
     link: https://www.healthaffairs.org/do/10.1377/hblog20201211.229975/full
     image: ../images/articles/editorial2.png
-  - title: America’s Transformative New Organ Donation Rule Goes into Effect Over Objections from Monopolistic Contractors
-    description: TODO GET CONTENT
+  - title: America’s Transformative New Organ Donation Rule Goes into Effect Over
+      Objections from Monopolistic Contractors
+    description: Public filings by organ procurement organizations and their
+      lobbyists indicate that lobbying expenditures have risen by nearly 500%
+      since 2017—in addition to other undisclosed influence spending on law
+      firms and public relations advisors—apparently designed to stop or weaken
+      the proposed changes.
     source: Project on Government Oversight (POGO)
     link: https://www.pogo.org/investigation/2021/04/americas-transformative-new-organ-donation-rule-goes-into-effect-over-objections-from-monopolistic-contractors/
     image: ../images/articles/pogo-organ-donation.jpg
