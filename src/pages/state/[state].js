@@ -1,4 +1,3 @@
-t
 import React from "react";
 import { graphql, navigate } from "gatsby";
 import { Col, Row } from "react-bootstrap";

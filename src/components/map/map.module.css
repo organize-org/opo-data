@@ -42,12 +42,12 @@ hr {
 }
 
 .tooltip {
-  width: 12rem;
+  width: 14rem;
   overflow-wrap: break-word;
   padding: 1rem;
 }
 .tooltip h4 {
-  font-size: 1.15rem;
+  font-size: 1rem;
   margin-top: 0;
   word-wrap: break-word;
   white-space: normal;

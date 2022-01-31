@@ -12,13 +12,13 @@ import Legend, { BLACK_DONOR_DISPARITY_FILL, CONGRESSIONAL_INVESTIGATION_FILL, O
 import * as styles from "./map.module.css";
 
 export default function MainMap({ mapView }) {
-  
+
   const windowWidth = useWindowDimensions().width;
 
   const [{ opoDataMap, stateDataMap }] = useDataMaps();
   const { dsaGeoData, statesGeoData } = useGeoJson();
-  
-  // compose state geoJson from state geo data 
+
+  // compose state geoJson from state geo data
   // and name property from state data map
   const stateGeoJson = {
     ...statesGeoData.childGeoJson,
@@ -32,8 +32,8 @@ export default function MainMap({ mapView }) {
       })),
   };
 
-  // compose OPO geoJson from DSA geo data 
-  // and performance tier, black donor rank, 
+  // compose OPO geoJson from DSA geo data
+  // and performance tier, black donor rank,
   // and congressional investigation flag from opo data map
   const opoGeoJson = {
     ...dsaGeoData.childGeoJson,
@@ -62,7 +62,7 @@ export default function MainMap({ mapView }) {
               <MapContainer
                 key={`${mapView}-map`}
                 scrollWheelZoom={false}
-                style={{height: "80vh",  backgroundColor: "#fff" }}
+                style={{height: "62vh",  backgroundColor: "#fff" }}
                 zoomControl={false}
                 dragging={false}
                 // Point near the center of contiguous US (https://geohack.toolforge.org/geohack.php?pagename=Geographic_center_of_the_United_States&params=39_50_N_98_35_W_region:US-KS_type:landmark&title=Geographic+Center+of+the+Contiguous+United+States)
@@ -130,7 +130,7 @@ export default function MainMap({ mapView }) {
                           }
                       )
                     ),
-                    mouseout: ({ target }) => target?.resetStyle()   
+                    mouseout: ({ target }) => target?.resetStyle()
                   }}
                   style={{
                     color: "white",
@@ -150,7 +150,7 @@ export default function MainMap({ mapView }) {
 /**
  * Get fill color for given feature based on map view
  */
-const getMapFill = (view, feature) => { 
+const getMapFill = (view, feature) => {
   if (view === "opoPerformance") {
     return getStateMapFill(feature);
   }
@@ -182,8 +182,8 @@ const getBlackDonorMapFill = (feature) => {
 }
 
 /**
- * For congressional investigation map view, fill is based on if the 
- * OPO is under congressional investigation 
+ * For congressional investigation map view, fill is based on if the
+ * OPO is under congressional investigation
  */
 const getCongressionalInvestigationFill = (feature) => {
   return Object.values(CONGRESSIONAL_INVESTIGATION_FILL)

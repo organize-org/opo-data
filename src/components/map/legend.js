@@ -59,42 +59,42 @@ export const OPO_PERFORMANCE_TIER_FILL = {
 
 export const BLACK_DONOR_DISPARITY_FILL = {
   "N/A": {
-    compare: (val) => val === null || val === undefined,
-    fill: "#C4C4C4"
+    compare: val => val === null || val === undefined,
+    fill: "#EBEBEB",
   },
   "< 7.5": {
-    compare: (val) => val < 7.5,
-    fill: "#D43C37"
+    compare: val => val < 7.5,
+    fill: "#D43C37",
   },
   "7.5 - 9.4": {
-    compare: (val) => val >= 7.5 && val < 9.5,
-    fill: "#EA5B3B"
+    compare: val => val >= 7.5 && val < 9.5,
+    fill: "#fc8d59",
   },
   "9.5 - 11.4": {
-    compare: (val) => val >= 9.5 && val < 11.5,
-    fill:"#EF924F"
+    compare: val => val >= 9.5 && val < 11.5,
+    fill: "#fee090",
   },
   "11.5 - 12.9": {
-    compare: (val) => val >= 11.5 && val < 13,
-    fill: "#F4B55F",
+    compare: val => val >= 11.5 && val < 13,
+    fill: "#e0f3f8",
   },
   "13.0 - 15.4": {
-    compare: (val) => val >= 13 && val < 15.5,
-    fill: "#F9DA84"
+    compare: val => val >= 13 && val < 15.5,
+    fill: "#91bfdb",
   },
   "≥ 15.5": {
-    compare: (val) => val >= 15.5,
-    fill: "#FFFEBB"
-  }
-}
+    compare: val => val >= 15.5,
+    fill: "#4575b4",
+  },
+};
 
 export const CONGRESSIONAL_INVESTIGATION_FILL = {
-  "Yes": {
-    compare: (val) => !!val,
-    fill: "#D43C37"
+  Yes: {
+    compare: val => !!val,
+    fill: "#D43C37",
   },
-  "No": {
-    compare: (val) => !val,
-    fill: "#C4C4C4"
-  }
-}
+  No: {
+    compare: val => !val,
+    fill: "#EBEBEB",
+  },
+};
