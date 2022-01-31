@@ -1,0 +1,240 @@
+ul li p {
+  margin-left: 1rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  background-color: var(--opoWhiteSmoke);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+}
+
+.hero > * {
+  max-width: 80rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.video {
+  margin-top: 1rem;
+  flex-direction: column;
+  margin-left: .5rem;
+}
+
+.description {
+  margin-bottom: 4.25rem;
+}
+
+.title {
+  color: var(--opoBlack);
+  font-size: 2.5rem;
+  margin: 2rem 0;
+}
+
+.region {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sectionHeader {
+  color: var(--opoRed);
+  font-weight: bolder;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+
+.mapStats {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.map {
+  margin-left: 0;
+  margin-right: .5rem;
+}
+
+.map > * {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.opoContent {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.opoContent hr {
+  padding: auto 0;
+}
+
+.stats {
+  margin-left: .5rem;
+  margin-right: 0;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+h3 {
+  text-transform: none !important;
+  margin-top: 1rem;
+}
+.stats h3 {
+  margin-top: 0;
+  font-size: .85rem;
+}
+
+.stats h3 p {
+  margin: 0;
+  line-height: 1.5rem;
+}
+
+.stats h3 a {
+  font-size: .5rem;
+  vertical-align: super;
+}
+
+.statsComp p a {
+  font-size: .75rem;
+  vertical-align: super;
+}
+
+.statsHeading > * {
+  align-self: flex-end;
+}
+
+.statsPopout {
+  height: 5rem;
+}
+
+.statsPopout p {
+  margin: 0;
+}
+
+.statsHeading,
+.statsPopout,
+.statsTier {
+  padding: 0 1rem;
+  text-align: left;
+}
+
+.statsTier {
+  flex-direction: column;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+.statsComp {
+  height: 2rem;
+  font-weight: 600;
+  margin: 0 1rem;
+}
+
+.statsDivider {
+  margin-bottom: 1rem;
+  border-top: 1px solid;
+  border-color: rgba(0,0,0,.1);
+}
+
+.statsComp .ceo,
+.statsComp .ceo p {
+  font-weight: 400;
+  display: inline;
+  margin-left: 0;
+  margin-right: .5rem;
+  color: var(--opoBlack);
+}
+
+.statsComp div {
+  padding-left: 0;
+}
+.statsTier .Passing {
+  color: #c4c4c4;
+}
+.statsTier .Underperforming {
+  color: #ffb042;
+}
+.statsTier .Failing {
+  color: #d43c37;
+}
+
+.statsPopout p, .statsPopout a {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.statsPopout svg {
+  height: 1rem;
+}
+
+.about {
+  max-width: 80rem;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.opoTables {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80rem;
+}
+
+.opoTables * {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media (max-width: 1200px) {
+  .title {
+    flex-direction: column-reverse;
+  }
+
+  .title h2 {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .sectionHeader {
+    margin-left: 0;
+  }
+
+  .mapStats {
+    flex-wrap: wrap;
+  }
+
+  .stats {
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
+
+  .headlines {
+    padding-left: 4rem;
+  }
+
+  .region {
+    flex-direction: column-reverse;
+  }
+
+  .statsComp {
+    display: contents;
+  }
+
+  .statsComp p {
+    margin-left: 0;
+    
+  }
+
+}

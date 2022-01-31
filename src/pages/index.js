@@ -1,28 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { graphql } from "gatsby";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, ButtonGroup, Button } from "react-bootstrap";
 import { ArrowRight } from "react-bootstrap-icons";
 import ReactMarkdown from "react-markdown";
 import ReactPlayer from "react-player";
-import Select from "react-select";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-import EquitySection from "../components/equitySection/equitySection";
 import Layout from "../components/layout/layout";
-import Map from "../components/map/map";
+import SelectState from "../components/selectState/selectState";
+import EquitySection from "../components/equitySection/equitySection";
+import MainMap from "../components/map/mainMap";
 import Social from "../components/social/social";
 import QuoteWithImage from "../components/quoteWithImage/quoteWithImage";
-import useDataMaps from "../hooks/useDataMaps";
+
+import News from '../images/icons/news.svg';
+import Data from '../images/icons/data.svg';
+import Performance from '../images/icons/performance.svg';
 
 import * as styles from "./index.module.css";
 import content from "./index.content.yml";
 
-export default function Dashboard({ data: { articleImages, quoteImage } }) {
-  const [{ stateDataMap }] = useDataMaps();
-
-  const [popoutAbbreviation, setPopoutAbbrevation] = useState(null);
-
-  const { articles, stats, quote, video, sources } = content;
+export default function Dashboard({ data: { articleImages } }) {
+  const { mapContent, articles, stats, quote, video } = content;
   const articleImgsByPath = articleImages?.edges?.reduce(
     (imgMap, { node }) => ({
       ...imgMap,
@@ -31,48 +30,55 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
     {}
   );
 
+  const [mapView, setMapView] = useState('opoPerformance');
+
+  // For whatever reason on initial load the map is not rendered correctly
+  // (something to do with the map container not rendering on initial load, so map is incorrectly sized)
+  // Quick hack fix is force map to re-render by using a counter state obj as component key
+  const [rerenderMap, setRerenderMap] = useState(0);
+  useEffect(() => {
+    if(rerenderMap === 0) setRerenderMap(r => r + 1);
+  }, [rerenderMap])
+
   return (
-    <Layout sources={sources}>
+    <Layout className={styles.index}>
+      <Social />
       <Row className={styles.topBar}>
-        <Col>
-          <p>View state data</p>
-          <Select
-            className={styles.topBarSelect}
-            value={
-              popoutAbbreviation
-                ? {
-                    value: popoutAbbreviation,
-                    label: stateDataMap[popoutAbbreviation].name,
-                  }
-                : null
-            }
-            onChange={({ value }) => setPopoutAbbrevation(value)}
-            options={Object.entries(stateDataMap)
-              .sort()
-              .map(([key, { name }]) => ({
-                value: key,
-                label: name,
-              }))}
-            placeholder="Select state"
-          />
+        <Col className={styles.topHeader}>
+          <h2> <Data />Data on U.S. Organ Procurement Organizations (OPO)</h2>
         </Col>
-        <Social />
       </Row>
-      <Map
-        interactive={true}
-        legend={true}
-        popoutAbbreviation={popoutAbbreviation}
-        setPopoutAbbrevation={setPopoutAbbrevation}
-      />
+
+      <Row className={styles.mapToggleButtons}>
+        <Col xs={12} lg={8}>
+          <ButtonGroup>
+            <Button variant="outline-secondary" className={styles.mapToggleButtons} active={mapView==='opoPerformance'} onClick={() => setMapView('opoPerformance')}>OPO Performance</Button>
+            <Button variant="outline-secondary" className={styles.mapToggleButtons} active={mapView==='congressionalInvestigation'} onClick={() => setMapView('congressionalInvestigation')}>Congressional Investigations</Button>
+            <Button variant="outline-secondary" className={styles.mapToggleButtons} active={mapView==='blackProcurementDisparity'} onClick={() => setMapView('blackProcurementDisparity')}>Black Procurement Disparities</Button>
+          </ButtonGroup>
+        </Col>
+        <Col>
+          <SelectState opo={mapView  !== 'opoPerformance'} />
+        </Col>
+      </Row>
+      {/* Map content (specific to current map view) */}
+      <Row className={styles.mapIntroContent}>
+        <ReactMarkdown>{mapContent[mapView]}</ReactMarkdown>
+      </Row>
+      <MainMap key={rerenderMap} mapView={mapView}/>
+
+      <Col className={styles.secondHeader} xs={12} lg={6}>
+        <h2><Performance />Cost of OPO Performance Failures</h2>
+      </Col>
       <Row className={styles.statsSection}>
         {Object.values(stats).map(({ title, value }) => (
-          <Col className="mx-5" key={title}>
-            <Row className="h-50">
+          <Col key={title}>
+            <Row  className={styles.statsHeaders}>
               <h3>
                 <ReactMarkdown>{title}</ReactMarkdown>
               </h3>
             </Row>
-            <Row className="justify-content-center">
+            <Row className="justify-content-center align-items-end">
               <ReactMarkdown className={styles.statsValues}>
                 {value}
               </ReactMarkdown>
@@ -84,6 +90,13 @@ export default function Dashboard({ data: { articleImages, quoteImage } }) {
         <QuoteWithImage quote={quote} />
       </Row>
       <EquitySection />
+      <Col
+        className={styles.secondHeader}
+        xs={10}
+        md={5}
+      >
+        <h2><News />Organ donation in the news</h2>
+      </Col>
       <Row className={styles.videoSection}>
         <Col>
           <h3>{video.title}</h3>
@@ -137,7 +150,7 @@ export const query = graphql`
         node {
           relativePath
           childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+            gatsbyImageData(placeholder: BLURRED, height: 240, formats: [AUTO, WEBP, AVIF])
           }
         }
       }

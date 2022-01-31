@@ -1,68 +1,121 @@
 import React, { useMemo } from "react";
-import { Container, Row, Table } from "react-bootstrap";
+import { Link } from "gatsby";
+import { Row, Table } from "react-bootstrap";
 import { useTable, useSortBy } from "react-table";
 import ReactMarkdown from "react-markdown";
 
 import ChevronUp from "../../images/icons/chevron-up.svg";
 import ChevronDown from "../../images/icons/chevron-down.svg";
 import ChevronDownGrey from "../../images/icons/chevron-down-grey.svg";
-import Tier from "../tier/tier";
 
 import * as styles from "./opoTable.module.css";
+import { LegendItem, OPO_PERFORMANCE_TIER_FILL } from "../map/legend";
 
-export default function OpoTable({ headings, inState = true, opos, title }) {
+export default function OpoTable({
+  headings,
+  opos,
+  title,
+}) {
   const columns = useMemo(() => {
-    const cols = inState
-      ? ["name", "region", "tier", "donors", "shadow", "investigation"]
-      : ["states", "name", "tier", "donors", "shadow"];
-
-    const createCol = accessor => {
+    const createCol = ([accessor, heading]) => {
       const col = {
-        Header: <ReactMarkdown>{headings[accessor]}</ReactMarkdown>,
+        Header: <ReactMarkdown>{heading.title}</ReactMarkdown>,
         accessor,
       };
-      if (accessor === "donors" || accessor === "investigation") {
+
+      if (accessor === "name") {
         return {
           ...col,
-          cellClass: "text-center",
+          Cell: props => (
+            <Link
+              to={`/opo/${opos.find(opo => opo.name === props.value)?.abbreviation}`}
+            >
+              {props.value} ({opos.find(opo => opo.name === props.value)?.abbreviation})
+            </Link>
+          ),
         };
-      } else if (accessor === "shadow") {
+      } else if (accessor === "states") {
+        return {
+          ...col,
+          Cell: props => {
+            const states = props.value.split(",");
+            return states.map((s, idx) => (
+              <>
+                <Link to={`/state/${s}`}>{s}</Link>
+                {idx === states.length - 1 ? '' : ', '}
+              </>
+            ))
+          }
+        }
+      }else if(accessor === "shadow") {
         return {
           ...col,
           cellClass: styles.shadows,
-          color: "red",
+          color: "red"  
         };
       } else if (accessor === "tier") {
         return {
           ...col,
           cellClass: styles.tierCol,
           Cell: props => (
-            <Container>
-              <Tier className={styles.tierCol} tier={props.value} />
-            </Container>
+            <LegendItem 
+              className={styles.tierCol}
+              text={props.value.split(" ")[1]}
+              background={OPO_PERFORMANCE_TIER_FILL[props.value.split(" ")[1]].fill}
+            />
           ),
+        };
+      } else if (accessor === "death") {
+        return {
+          ...col,
+          sortType: (a, b) =>
+            parseInt(a.values.death?.replace(/,/g, "")) -
+            parseInt(b.values.death?.replace(/,/g, "")),
         };
       } else {
         return col;
       }
     };
-    return cols.map(col => createCol(col));
-  }, [headings, inState]);
+
+    return Object.entries(headings)
+      .filter(([_, val]) => !!val)
+      .map((col, idx) => createCol(col, idx));
+  }, [headings, opos]);
+
+  const captions = Object.values(headings)
+  .filter(heading => !!heading?.caption)
+  .map(heading => heading.caption);
 
   const data = useMemo(() => {
     const formatNumber = (num, options) =>
-      !num || isNaN(num) ? "--" : num.toLocaleString("en-US", options);
+      typeof num === "number" ? num.toLocaleString("en-US", options) : '--';  
 
     return opos.map(
-      ({ donors, investigation, name, region, shadows, states, tier }) => {
+      ({
+        donors,
+        investigation,
+        name,
+        region,
+        shadows,
+        states,
+        tier,
+        death,
+        recovery,
+        ethnicity,
+        rank,
+      }) => {
         return {
           donors: formatNumber(donors),
-          investigation: investigation ? "Yes" : "--",
+          investigation: investigation ? "Yes" : "No",
           name: name,
           region: region,
           shadow: formatNumber(shadows),
           states: states,
           tier: tier,
+          ethnicity,
+          death: formatNumber(death),
+          recovery: formatNumber(recovery),
+          rank: formatNumber(rank),
         };
       }
     );
@@ -74,7 +127,13 @@ export default function OpoTable({ headings, inState = true, opos, title }) {
     headerGroups,
     rows,
     prepareRow,
-  } = useTable({ columns, data }, useSortBy);
+  } = useTable({ 
+    columns,
+    data,
+    initialState: {
+      sortBy: [{ id: columns[0].accessor }]
+    }
+   }, useSortBy);
 
   const table = (
     <Row className={styles.opoTable}>
@@ -128,6 +187,11 @@ export default function OpoTable({ headings, inState = true, opos, title }) {
           })}
         </tbody>
       </Table>
+      {captions?.length && (
+        captions.map(caption => (
+          <p className={styles.tableCaption}>* {caption}</p>
+        ))
+      )}
     </Row>
   );
 

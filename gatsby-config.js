@@ -96,13 +96,6 @@ module.exports = {
             })
           );
 
-          const sources = {
-            label: "Sources",
-            name: "sources",
-            widget: "list",
-            field: { label: "Source", name: "source", widget: "markdown" },
-          };
-
           return {
             backend: {
               name: "github",
@@ -139,6 +132,16 @@ module.exports = {
                           { label: "Value", name: "value", widget: "markdown" },
                         ],
                       },
+                      { 
+                        label: "Map content",
+                        name: "mapContent",
+                        widget: "object",
+                        fields: [
+                          { label: "OPO performance disparity map", name: "opoPerformance", widget: "markdown" },
+                          { label: "Black procurement disparity map", name: "blackProcurementDisparity", widget: "markdown" },
+                          { label: "Under congressional investigation map", name: "congressionalInvestigation", widget: "markdown" }
+                        ]
+                      },
                       {
                         label: "Quote",
                         name: "quote",
@@ -159,7 +162,6 @@ module.exports = {
                           },
                         ],
                       },
-                      sources,
                       {
                         label: "Equity Embed",
                         name: "equityEmbed",
@@ -258,17 +260,71 @@ module.exports = {
                           {
                             label: "Waitlist stat heading",
                             name: "waitlist",
-                            widget: "markdown",
+                            widget: "object",
+                            collapsed: true,
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Source",
+                                name: "source",
+                                widget: "markdown"
+                              }
+                            ]
                           },
                           {
                             label: "CEO comp stat heading",
                             name: "comp",
-                            widget: "markdown",
+                            widget: "object",
+                            collapsed: true,
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Source",
+                                name: "source",
+                                widget: "markdown"
+                              }
+                            ]
                           },
                           {
                             label: "Monthly dead stat heading",
                             name: "monthly",
-                            widget: "markdown",
+                            widget: "object",
+                            collapsed: true,
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Source",
+                                name: "source",
+                                widget: "markdown"
+                              }
+                            ]
                           },
                         ],
                       },
@@ -281,67 +337,163 @@ module.exports = {
                           {
                             label: "Name",
                             name: "name",
-                            widget: "markdown",
+                            widget: "object",
+                            collapsed: true,
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Source",
+                                name: "source",
+                                widget: "markdown"
+                              }
+                            ]
                           },
                           {
                             label: "Region",
                             name: "region",
-                            widget: "markdown",
+                            widget: "object",
+                            collapsed: true,
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Source",
+                                name: "source",
+                                widget: "markdown"
+                              }
+                            ]
                           },
                           {
                             label: "States",
                             name: "states",
-                            widget: "markdown",
+                            widget: "object",
+                            collapsed: true,
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Source",
+                                name: "source",
+                                widget: "markdown"
+                              }
+                            ]
                           },
                           {
                             label: "Tier",
                             name: "tier",
-                            widget: "markdown",
+                            widget: "object",
+                            collapsed: true,
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Source",
+                                name: "source",
+                                widget: "markdown"
+                              }
+                            ]
                           },
                           {
                             label: "Donors Needed",
                             name: "donors",
-                            widget: "markdown",
+                            widget: "object",
+                            collapsed: true,
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Source",
+                                name: "source",
+                                widget: "markdown"
+                              }
+                            ]
                           },
                           {
                             label: "Shadow Deaths",
                             name: "shadow",
-                            widget: "markdown",
+                            widget: "object",
+                            collapsed: true,
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Source",
+                                name: "source",
+                                widget: "markdown"
+                              }
+                            ]
                           },
                           {
                             label: "Under Investigation",
                             name: "investigation",
-                            widget: "markdown",
-                          },
-                        ],
-                      },
-                      sources,
-                      {
-                        label: "Equity Embed",
-                        name: "equityEmbed",
-                        widget: "object",
-                        fields: [
-                          {
-                            label: "Image",
-                            name: "image",
-                            allow_multiple: false,
-                            media_folder: "../../images/quotes",
-                            widget: "image",
-                          },
-                          {
-                            label: "Heading",
-                            name: "heading",
-                            widget: "string",
-                          },
-                          {
-                            label: "Description",
-                            name: "description",
-                            widget: "markdown",
-                          },
-                          {
-                            label: "Link Text",
-                            name: "link",
-                            widget: "string",
+                            widget: "object",
+                            collapsed: true,
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Source",
+                                name: "source",
+                                widget: "markdown"
+                              }
+                            ]
                           },
                         ],
                       },
@@ -397,6 +549,473 @@ module.exports = {
                           },
                         ],
                       },
+                    ],
+                  },
+                  {
+                    label: "Opo Page",
+                    name: "opo",
+                    file: "src/pages/opo/[opo].content.yml",
+                    fields: [
+                      {
+                        label: "Stat Headings",
+                        name: "stats",
+                        widget: "object",
+                        collapsed: false,
+                        fields: [
+                          {
+                            label: "Performance tier heading",
+                            name: "tier",
+                            widget: "object",
+                            collapsed: true,
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Source",
+                                name: "source",
+                                widget: "markdown"
+                              }
+                            ]
+                          },
+                          {
+                            label: "Rank heading",
+                            name: "rank",
+                            widget: "object",
+                            collapsed: true,
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Source",
+                                name: "source",
+                                widget: "markdown"
+                              }
+                            ]
+                          },
+                          {
+                            label: "Shadow deaths heading",
+                            name: "shadow",
+                            widget: "object",
+                            collapsed: true,
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Source",
+                                name: "source",
+                                widget: "markdown"
+                              }
+                            ]
+                          },
+                          {
+                            label: "Investigation heading",
+                            name: "investigation",
+                            widget: "object",
+                            collapsed: true,
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Source",
+                                name: "source",
+                                widget: "markdown"
+                              }
+                            ]
+                          },
+                          {
+                            label: "CEO & comp heading",
+                            name: "ceo",
+                            widget: "object",
+                            collapsed: true,
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Source",
+                                name: "source",
+                                widget: "markdown"
+                              }
+                            ]
+                          },
+                          {
+                            label: "Board compensation heading",
+                            name: "board",
+                            widget: "object",
+                            collapsed: true,
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Source",
+                                name: "source",
+                                widget: "markdown"
+                              }
+                            ]
+                          },
+                        ],
+                      },
+                      {
+                        label: "OPO Table headings",
+                        name: "opoHeadings",
+                        widget: "object",
+                        collapsed: false,
+                        fields: [
+                          {
+                            label: "Ethnicity",
+                            name: "ethnicity",
+                            widget: "object",
+                            collapsed: true,
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Source",
+                                name: "source",
+                                widget: "markdown"
+                              }
+                            ]
+                          },
+                          {
+                            label: "Potential Donors",
+                            name: "death",
+                            widget: "object",
+                            collapsed: true,
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Source",
+                                name: "source",
+                                widget: "markdown"
+                              }
+                            ]
+                          },
+                          {
+                            label: "Actual Donors",
+                            name: "donors",
+                            widget: "object",
+                            collapsed: true,
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Source",
+                                name: "source",
+                                widget: "markdown"
+                              }
+                            ]
+                          },
+                          {
+                            label: "Recovery Rate",
+                            name: "recovery",
+                            widget: "object",
+                            collapsed: true,
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Source",
+                                name: "source",
+                                widget: "markdown"
+                              }
+                            ]
+                          },
+                          {
+                            label: "Rank",
+                            name: "rank",
+                            widget: "object",
+                            collapsed: true,
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Source",
+                                name: "source",
+                                widget: "markdown"
+                              }
+                            ]
+                          },
+                        ],
+                      },
+                      {
+                        label: "State Table headings",
+                        name: "stateHeadings",
+                        widget: "object",
+                        collapsed: false,
+                        fields: [
+                          {
+                            label: "States",
+                            name: "states",
+                            widget: "object",
+                            collapsed: true,
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Source",
+                                name: "source",
+                                widget: "markdown"
+                              }
+                            ]
+                          },
+                          {
+                            label: "Name",
+                            name: "name",
+                            widget: "object",
+                            collapsed: true,
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Source",
+                                name: "source",
+                                widget: "markdown"
+                              }
+                            ]
+                          },
+                          {
+                            label: "Tier",
+                            name: "tier",
+                            widget: "object",
+                            collapsed: true,
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Source",
+                                name: "source",
+                                widget: "markdown"
+                              }
+                            ]
+                          },
+                          {
+                            label: "Donors Needed",
+                            name: "donors",
+                            widget: "object",
+                            collapsed: true,
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Source",
+                                name: "source",
+                                widget: "markdown"
+                              }
+                            ]
+                          },
+                          {
+                            label: "Shadow Deaths",
+                            name: "shadow",
+                            widget: "object",
+                            collapsed: true,
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Source",
+                                name: "source",
+                                widget: "markdown"
+                              }
+                            ]
+                          },
+                          {
+                            label: "Under Investigation",
+                            name: "investigation",
+                            widget: "object",
+                            collapsed: true,
+                            fields: [
+                              {
+                                label: "Title",
+                                name: "title",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Caption",
+                                name: "caption",
+                                widget: "markdown"
+                              },
+                              {
+                                label: "Source",
+                                name: "source",
+                                widget: "markdown"
+                              }
+                            ]
+                          },
+                        ],
+                      },
+                      {
+                        label: "Videos",
+                        label_singular: "Video",
+                        name: "videos",
+                        summary: "{{fields.title}}",
+                        widget: "list",
+                        add_to_top: true,
+                        fields: [
+                          { label: "Link", name: "link", widget: "string" },
+                          { label: "Title", name: "title", widget: "string" },
+                          {
+                            label: "Description",
+                            name: "description",
+                            widget: "markdown",
+                            required: false,
+                          },
+                          {
+                            label: "Tags",
+                            name: "tags",
+                            widget: "select",
+                            multiple: true,
+                            collapsed: false,
+                            options: opoOptions,
+                          },
+                        ],
+                      },
+                      {
+                        label: "Takeaways",
+                        label_singular: "Takeaways",
+                        name: "takeaways",
+                        summary: "{{fields.opo}}",
+                        widget: "list",
+                        add_to_top: true,
+                        collapsed: false,
+                        fields: [
+                          { label: "Body", name: "body", widget: "markdown" },
+                          {
+                            label: "OPO",
+                            name: "opo",
+                            widget: "select",
+                            multiple: false,
+                            options: [...opoOptions],
+                          },
+                        ],
+                      }
                     ],
                   },
                   {
@@ -531,7 +1150,6 @@ module.exports = {
                         name: "tweet",
                         widget: "string",
                       },
-                      sources,
                     ],
                   },
                   {

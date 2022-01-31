@@ -1,0 +1,97 @@
+stats:
+  tier: 
+    title: Performance Tier (2019)[1](#sources-1)
+    source: Tier (2019) via [CMS](https://qcor.cms.gov/main.jsp), data most recently
+      available (2019). OPO names are listed as they are by CMS.
+  rank: 
+    title: OPO Rank (of XX)[2](#sources-2)
+    source: TODO GET CONTENT
+  shadow:
+    title: Preventable Deaths (2019)[3](#sources-3)
+    source: “Preventable deaths” refer to those who die from the event of NOT receiving an organ that should have been available. These organs were not recovered presumably due to OPO performance issues, such as ineffective practices, transportation errors, or understaffing.
+    caption: “Preventable deaths” refer to those who die from the event of NOT receiving an organ that should have been available. These organs were not recovered presumably due to OPO performance issues, such as ineffective practices, transportation errors, or understaffing.
+  investigation:
+    title: Currently Under Congressional Investigation[4](#sources-4)
+    source: Currently Under Congressional investigation represents the 16 OPOs under investigation
+      by the House Committee on Oversight and Reform for “[poor performance,
+      waste, and mismanagement](https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)”
+      and/or “[fraud, waste and abuse](https://oversight.house.gov/news/press-releases/oversight-subcommittee-expands-investigation-into-fraud-waste-and-abuse-in-organ).”
+      See letters
+      [here](https://oversight.house.gov/sites/democrats.oversight.house.gov/files/OPO%20Letters.pdf)
+      and
+      [here.](https://oversight.house.gov/sites/democrats.oversight.house.gov/files/2021-05-27.RK%20KP%20to%20Ferreira-NDN%20re%20Expenses.pdf)
+  ceo:
+    title: "CEO & Compensation (2019):[5](#sources-5)"
+    source: "Average CEO compensation via each OPO's most recently listed 990 (as of
+      6/1/21). 2019: Donor Network Arizona, OneLegacy, Donor Network West, Donor
+      Alliance, LifeChoice Donor Services, New England Organ Bank, Washington
+      Regional Transplant Community, Iowa Donor Network, Gift of Hope Organ &
+      Tissue Donor Network, Indiana Donor Network, Lifelink of
+      Florida/Georgia/Puerto Rico, Midwest Transplant Network, Kentucky Organ
+      Donor Affiliates, The Living Legacy Foundation, Gift of Life Michigan,
+      Lifesource MN, Mid-America Transplant Services, Mississippi Organ Recovery
+      Agency, New Jersey Sharing Network, Nevada Donor Network, LiveOnNY,
+      ConnectLife, Lifeline of Ohio, LifeBanc, Life Connection of Ohio, LifeCenter
+      Organ Donor Network, Center for Organ Recovery and Education, We Are Sharing
+      Hope SC, Tennessee Donor Services, Mid-South Transplant Services, Texas
+      Organ Sharing Alliance, Intermountain Donor Services (DonorConnect),
+      LifeCenter Northwest, Versiti 2018: Arkansas Regional Organ Recovery Agency,
+      Legacy of Life Hawaii, Louisiana Organ Procurement Agency, Carolina Donor
+      Services, Nebraska Organ Recovery, Center for Donation and Transplant,
+      Lifeshare Transplant Donor Services of Oklahoma, Gift of Life, Southwest
+      Transplant Alliance, LifeGift, LifeNet. Note: hospital-based OPOs do not
+      have separate 990s, so unless this information has been made publicly
+      available by the OPO, it is not listed."
+  board:
+    title: "Board Compensation (2019):[6](#sources-6)"
+    source: TODO GET CONTENT
+opoHeadings:
+  ethnicity:
+    title: Ethnicity
+  death:
+    title: Potential viable donors based on CALC methodology*[7](#sources-7)
+    caption:  CALC stands for “cause, age, and location consistent deaths.”
+      This methodology is used by CMS to count inpatient deaths among persons age
+      <75 from causes consistent with donation.
+  donors:
+    title:  Actual Donors[8](#sources-8)
+    source: TODO GET CONTENT
+  recovery:
+    title: Procurement Rate[9](#sources-9)
+    source: TODO GET CONTENT
+  rank:
+    title: Procurement Rate Ranking[10](#sources-10)
+    source: TODO GET CONTENT
+stateHeadings:
+  states:
+    title: States
+  name:
+    title: OPO Name
+  tier:
+    title: Performance Tier (2019)[11](#sources-11)
+    source: Tier (2019) via [CMS](https://qcor.cms.gov/main.jsp), data most recently
+      available (2019). OPO names are listed as they are by CMS.
+  donors:
+    title: Donors Needed (2019)[12](#sources-12)
+    source:  Donors needed (2019) via [CMS](https://qcor.cms.gov/main.jsp) represents the
+      number of additional donors needed for OPO to reach Tier 1. Data most
+      recently available (2019)
+  investigation:
+    title: Under Congressional Investigation[13](#sources-13)
+    source: Currently Under Congressional investigation represents the 16 OPOs under investigation
+      by the House Committee on Oversight and Reform for “[poor performance,
+      waste, and mismanagement](https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)”
+      and/or “[fraud, waste and abuse](https://oversight.house.gov/news/press-releases/oversight-subcommittee-expands-investigation-into-fraud-waste-and-abuse-in-organ).”
+      See letters
+      [here](https://oversight.house.gov/sites/democrats.oversight.house.gov/files/OPO%20Letters.pdf)
+      and
+      [here.](https://oversight.house.gov/sites/democrats.oversight.house.gov/files/2021-05-27.RK%20KP%20to%20Ferreira-NDN%20re%20Expenses.pdf)
+  shadow: 
+    title: Preventable Deaths*(2019)[14](#sources-14)
+    caption: “Preventable deaths” refer to those who die from the event of NOT receiving an organ that should have been available. These organs were not recovered presumably due to OPO performance issues, such as ineffective practices, transportation errors, or understaffing.
+    source: “Preventable deaths” refer to those who die from the event of NOT receiving an organ that should have been available. These organs were not recovered presumably due to OPO performance issues, such as ineffective practices, transportation errors, or understaffing.
+takeaways:
+  - opo: MNOP
+    body: TODO GET TAKEAWAY CONTENT
+  - opo:  WUIW
+    body: TODO GET TAKEAWAY CONTENT

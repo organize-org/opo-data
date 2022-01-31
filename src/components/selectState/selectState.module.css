@@ -1,0 +1,31 @@
+.selectState {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+p {
+  line-height: 2;
+  margin: auto 2rem;
+}
+
+.selectInput {
+  width: 20rem;
+  z-index: 1002;
+}
+
+
+@media (max-width: 1200px) {
+ .selectState {
+  margin-right: 0;
+  justify-content: center;
+  margin-left: 0;
+ }
+
+ .selectState p {
+   margin-left: 0;
+ }
+}

@@ -1,29 +1,42 @@
 import React from "react";
+import { graphql, navigate } from "gatsby";
 import { Col, Row } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
 import ReactPlayer from "react-player";
-import { graphql, navigate } from "gatsby";
 import booleanIntersects from "@turf/boolean-intersects";
 
-import DemographicTable from "../../components/demographicTable/demographicTable";
-import EquitySection from "../../components/equitySection/equitySection";
 import Layout from "../../components/layout/layout";
-import Map from "../../components/map/map";
+import SelectState from "../../components/selectState/selectState";
 import OpoTable from "../../components/opoTable/opoTable";
-import Social from "../../components/social/social";
-import useDataMaps from "../../hooks/useDataMaps";
+import ThumbnailMap from "../../components/map/thumbnailMap";
+
+
+import News from '../../images/icons/news.svg';
+import Data from '../../images/icons/data.svg';
+
 import {
   findStateFeature,
-  formatStateName,
+  formatName,
   formatNumber,
 } from "../../utils/utils";
+import useDataMaps from "../../hooks/useDataMaps";
+import content from "./[state].content.yml";
+
 
 import * as styles from "./state.module.css";
-import content from "./[state].content.yml";
 
 export default function State({ data: { statesGeoData }, state }) {
   const [{ opoDataMap, stateDataMap }] = useDataMaps();
-  const { headings, notes, stats, videos, sources } = content;
+
+  // Find associated state data and feature by abbreviation, redirect if not found
+  const stateData = stateDataMap[state?.toLocaleUpperCase()];
+  if (!stateData) {
+    if (!state) return null;
+    navigate("/404");
+    return null;
+  }
+
+  const { headings, notes, stats, videos } = content;
 
   const notesByOpo = notes?.reduce(
     (notesMap, { note, tags }) => ({
@@ -36,13 +49,6 @@ export default function State({ data: { statesGeoData }, state }) {
     {}
   );
 
-  // Find associated state data and feature by abbreviation, redirect if not found
-  const stateData = stateDataMap[state?.toLocaleUpperCase()];
-  if (!stateData) {
-    if (!state) return null;
-    navigate("/404");
-    return null;
-  }
   stateData.feature = findStateFeature(statesGeoData, stateData.abbreviation);
 
   // Use Turf to find bordering states by their geojson polygon
@@ -73,8 +79,7 @@ export default function State({ data: { statesGeoData }, state }) {
           ...filter,
           outOfStateOpos: [
             ...filter.outOfStateOpos,
-            // Add formatted state list
-            { ...opo, states: Object.keys(opo.statesWithRegions).join(", ") },
+            opo
           ],
         };
       } else {
@@ -109,34 +114,61 @@ export default function State({ data: { statesGeoData }, state }) {
   );
 
   return (
-    <Layout crumbLabel={formatStateName(stateData)} sources={sources}>
-      <Row className={styles.title}>
-        <h2>{formatStateName(stateData)}</h2>
-        <Social />
-      </Row>
-      <Row className={styles.state}>
-        <Col className={styles.statsColumn}>
+    <Layout
+      crumbLabel={formatName(stateData, { includeAbbreviation: false})}
+      // sources must be in order they appear on the page
+      contentWithSources={[stats, headings]}
+      social={true}
+    >
+      {/* State name, top-level stats, select state menu, and map */}
+      <Row className={styles.hero}>
+        <Row>
+          <h2 className={styles.title}>{formatName(stateData, { includeAbbreviation: false })}</h2>
+        </Row>
+        <Row className={styles.serviceState}>
+          <span>
+            OPOs operating in {stateData.abbreviation}:{" "}
+            <strong>{inStateOpos.length ?? 0}</strong>
+          </span>
+          <div className={styles.navToState}>
+            <SelectState label={"See state data for:"} link={stateData.name} />
+          </div>
+        </Row>
+        <Row className={styles.mapStats}>
+          <Row className={styles.mapV2}>
+            <ThumbnailMap
+              key={state}
+              dimensions={{ height: "16rem", width: "24rem" }}
+              dataId={state}
+              view="state"
+            />
+          </Row>
           <Row className={styles.stats}>
             <Row className={styles.statsHeading}>
-              <Col>
+              <Col className="ml-3">
                 <h3>
-                  <ReactMarkdown>{stats.waitlist}</ReactMarkdown>
-                </h3>
-              </Col>
-              <Col>
-                <h3>
-                  <ReactMarkdown>{stats.comp}</ReactMarkdown>
+                  <ReactMarkdown>{stats.waitlist.title}</ReactMarkdown>
                 </h3>
               </Col>
               <Col>
                 <h3 className="red">
-                  <ReactMarkdown>{stats.monthly}</ReactMarkdown>
+                  <ReactMarkdown>{stats.monthly.title}</ReactMarkdown>
+                </h3>
+              </Col>
+              <Col>
+                <h3>
+                  <ReactMarkdown>{stats.comp.title}</ReactMarkdown>
                 </h3>
               </Col>
             </Row>
             <Row className={styles.statsPopout}>
-              <Col>
+              <Col className="ml-3">
                 <p>{formatNumber(stateData.popoutStats.waitlist)}</p>
+              </Col>
+              <Col>
+                <p className="red">
+                  {formatNumber(stateData.popoutStats.monthlyDead)}
+                </p>
               </Col>
               <Col>
                 <p>
@@ -148,102 +180,89 @@ export default function State({ data: { statesGeoData }, state }) {
                   })}
                 </p>
               </Col>
-              <Col>
-                <p className="red">
-                  {formatNumber(stateData.popoutStats.monthlyDead)}
-                </p>
-              </Col>
             </Row>
           </Row>
-          {inStateOpos.length > 0 && (
-            <OpoTable
-              headings={headings}
-              opos={inStateOpos}
-              title={`OPOS Servicing ${stateData.name}`}
-            />
-          )}
-          {stateData.notes.length ||
-          inStateOpos.some(({ notes }) => notes?.length) ? (
+        </Row>
+      </Row>
+      <div className={styles.stateContent}>
+        {/* OPOs servicing state */}
+        <h2 className={styles.sectionHeader}>
+          <News/>
+          OPOS IN THIS STATE
+        </h2>
+        <Row className={styles.serviceTable}>
+          <OpoTable
+            // suppress state column in the in-state OPO table
+            headings={{...headings, states: null}}
+            opos={inStateOpos}
+            title={`OPOs Operating in ${stateData.name}`}
+          />
+        </Row>
+        {/* News & notes (if exists) */}
+        {stateData?.notes?.length > 0 && (
+          <Row className={styles.news}>
+              <h3>OPO news and notes in {stateData.name}</h3>
             <Row>
-              <Row>
-                <h3>OPO News and Notes in {stateData.name}</h3>
-              </Row>
-              {stateData.notes.length ? (
-                <Row>
-                  <ul>
-                    {stateData.notes.map(({ note }, i) => (
-                      <li key={`statewide-note-${i}`}>
-                        <ReactMarkdown>{note}</ReactMarkdown>
-                      </li>
-                    ))}
-                  </ul>
-                </Row>
-              ) : null}
-              {inStateOpos
-                .filter(({ notes }) => notes?.length)
-                .map(({ name, notes }) => (
-                  <Row key={name}>
-                    <h4>{name}</h4>
-                    <ul>
-                      {notes?.map((note, i) => (
-                        <li key={`${name}-note-${i}`}>
-                          <ReactMarkdown>{note}</ReactMarkdown>
-                        </li>
-                      ))}
-                    </ul>
-                  </Row>
+              <ul>
+                {stateData.notes.map(({ note }, i) => (
+                  <li key={`statewide-note-${i}`}>
+                    <ReactMarkdown>{note}</ReactMarkdown>
+                  </li>
                 ))}
+              </ul>
             </Row>
-          ) : null}
-          <DemographicTable opos={inStateOpos} />
-          {outOfStateOpos.length > 0 && (
+          </Row>
+        )}
+        {/* Voices for reform (if exists) */}
+        {stateData.videos?.length || stateData.voicesForReform?.length ? (
+          <Row className={styles.voices}>
+            <Row>
+              <h3>Voices For Reform</h3>
+            </Row>
+            {stateData.voicesForReform?.length ? (
+              <Row>
+                <ul>
+                  {stateData.voicesForReform.map(({ note }, i) => (
+                    <li key={"vfr-notes-" + i}>
+                      <ReactMarkdown>{note}</ReactMarkdown>
+                    </li>
+                  ))}
+                </ul>
+              </Row>
+            ) : null}
+            {stateData.videos?.length
+              ? stateData.videos.map(({ link, title, description }, i) => (
+                  <Row key={`statewide-videos-${i}`} className={styles.video}>
+                    <ReactPlayer url={link} width={594} height={361} />
+                    <h4>{title}</h4>
+                    {description && (
+                      <ReactMarkdown className={styles.description}>
+                        {description}
+                      </ReactMarkdown>
+                    )}
+                  </Row>
+                ))
+              : null}
+          </Row>
+        ) : null}
+        {/* OPOs in neighboring states (if exists) */}
+        <hr />
+        <h2 className={styles.sectionHeader}> <Data /> STATE DATA</h2>
+        {outOfStateOpos.length > 0 && (
+          <Row className={styles.serviceTable}>
             <OpoTable
-              headings={headings}
-              inState={false}
+              // pull states column to front and supress region column
+              headings={{states: null, ...headings, region: null} }
               opos={outOfStateOpos}
               title="OPO Performance in Neighboring States"
+              captions={Object.values(headings)
+                .filter(heading => !!heading.caption)
+                .map(heading => heading.caption)
+              }
             />
-          )}
-        </Col>
-        <Col className={styles.mapSection}>
-          <Map
-            dimensions={{ height: "30rem", width: "100%" }}
-            state={stateData.abbreviation}
-          />
-          <EquitySection page="state" />
-          {stateData.videos?.length || stateData.voicesForReform?.length ? (
-            <Row className={styles.voices}>
-              <Row>
-                <h3>Voices For Reform</h3>
-              </Row>
-              {stateData.voicesForReform?.length ? (
-                <Row>
-                  <ul>
-                    {stateData.voicesForReform.map(({ note }, i) => (
-                      <li key={"vfr-notes-" + i}>
-                        <ReactMarkdown>{note}</ReactMarkdown>
-                      </li>
-                    ))}
-                  </ul>
-                </Row>
-              ) : null}
-              {stateData.videos?.length
-                ? stateData.videos.map(({ link, title, description }, i) => (
-                    <Row key={`statewide-videos-${i}`}>
-                      <ReactPlayer url={link} width={594} height={361} />
-                      <h4>{title}</h4>
-                      {description && (
-                        <ReactMarkdown className={styles.description}>
-                          {description}
-                        </ReactMarkdown>
-                      )}
-                    </Row>
-                  ))
-                : null}
-            </Row>
-          ) : null}
-        </Col>
-      </Row>
+          </Row>
+        )}
+      </div>
     </Layout>
   );
 }

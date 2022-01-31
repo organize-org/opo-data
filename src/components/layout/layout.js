@@ -1,88 +1,66 @@
 import React from "react";
-import { useStaticQuery, graphql, Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
+
 import { Breadcrumb, Container, Row } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
+import Social from "../../components/social/social";
+import Navbar from "../navbar/navbar";
+import Footer from "../footer/footer";
 
 import * as styles from "./layout.module.css";
+import Additional from '../../images/icons/additional.svg';
 
-export default function Layout({ crumbLabel, children, sources }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `
-  );
+export default function Layout({ crumbLabel, children, contentWithSources, social, className }) {
+  // Compose sources list from all provided content,
+  // taking all objects with `source` defined.
+  // Then sort based on numerical footnote included in the content title
+  const footnoteRegex = /\[(\d+)\]\(#sources/;
+  const sources = (contentWithSources ?? [])
+    .reduce((withSources, contentObj) => {
+      return [
+        ...withSources,
+        ...Object.values(contentObj).filter(({ source }) => !!source)
+      ]
+    }, [])
+    .sort((a, b) => {
+      const aNum = parseInt(a?.title?.match(footnoteRegex)?.[1])
+      const bNum = parseInt(b?.title?.match(footnoteRegex)?.[1])
+
+      if (aNum === undefined
+        || bNum === undefined
+        || aNum === bNum) return 0;
+      return aNum - bNum;
+    })
 
   return (
-    <Container fluid>
-      <Row className={styles.header}>
-        <Link to="/" className={styles.logoWithText}>
-          <StaticImage
-            src="../../images/logo.png"
-            alt="logo"
-            placeholder="none"
-          />
-          <div className={styles.logoText}>
-            <h1>{site.siteMetadata.title}</h1>
-            <h2>Performance Comparison</h2>
-          </div>
-        </Link>
-        <Link to="/faqs" className={styles.faqLink}>
-          <p>About Our Organ Donation System</p>
-        </Link>
+    <Container fluid className={className}>
+      <Navbar />
+      <Row>
+        {crumbLabel ? (
+          <Breadcrumb className={styles.breadcrumb}>
+            <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+            <Breadcrumb.Item active>{crumbLabel}</Breadcrumb.Item>
+          </Breadcrumb>
+        ) : null}
+        {social ? <Social /> : null}
       </Row>
-      {crumbLabel ? (
-        <Breadcrumb>
-          <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-          <Breadcrumb.Item active>{crumbLabel}</Breadcrumb.Item>
-        </Breadcrumb>
-      ) : null}
+
       {children}
       {sources?.length ? (
-        <Row className={styles.sources}>
-          <h3>Sources</h3>
-          <ol>
-            {Object.values(sources).map((source, index) => (
-              <li id={`sources-${index + 1}`} key={`sources-${index}`}>
-                <ReactMarkdown>{source}</ReactMarkdown>
-              </li>
-            ))}
-          </ol>
-        </Row>
+        <div className={styles.sources}>
+          <hr />
+          <Row>
+            <h2 className={styles.sectionHeader}> <Additional /> ADDITIONAL INFORMATION</h2>
+            <ol>
+              {sources.map(({ source }, idx) => (
+                <li id={`sources-${idx + 1}`} key={`sources-${idx + 1}`}>
+                  <ReactMarkdown>{source}</ReactMarkdown>
+                </li>
+              ))}
+            </ol>
+          </Row>
+        </div>
       ) : null}
-      <Row className={styles.footer}>
-        <p>
-          Research supported by Arnold Ventures and Schmidt Futures in
-          partnership with Organize and the Federation of American Scientists.
-        </p>
-        <StaticImage
-          src="../../images/logos/Arnold Ventures.png"
-          alt="Arnold Ventures"
-          height={35}
-        />
-        <StaticImage
-          src="../../images/logos/Schmidt Futures.png"
-          alt="Schmidt Futures"
-          height={35}
-        />
-        <StaticImage src="../../images/logos/fas.png" alt="FAS" height={35} />
-        <StaticImage
-          src="../../images/logos/bloomworks.png"
-          alt="Bloomworks"
-          height={35}
-        />
-        <StaticImage
-          src="../../images/logos/organize.png"
-          alt="Organize"
-          height={30}
-        />
-      </Row>
+      <Footer />
     </Container>
   );
 }

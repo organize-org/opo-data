@@ -7,6 +7,9 @@
   --opoTeal: #00768f;
 }
 
+.gatsby-image-wrapper {
+  transition: none !important;
+}
 *,
 *:before,
 *:after {
@@ -64,6 +67,10 @@ a:hover {
   color: var(--opoRed);
 }
 
+.blue {
+  background-color: #a6cee3;
+}
+
 .breadcrumb {
   background-color: inherit;
   margin-top: 2.125rem;
@@ -78,7 +85,7 @@ a:hover {
 }
 
 .breadcrumb-item a:first-child {
-  color: var(--opoTeal);
+  color: var(--opoBlack);
 }
 
 li.breadcrumb-item.active::before {

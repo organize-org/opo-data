@@ -21,6 +21,10 @@
   padding: 4rem;
 }
 
+.main .copy p {
+  margin-left: unset;
+}
+
 .state .copy {
   background-color: var(--opoWhiteSmoke);
   margin-top: 20rem;

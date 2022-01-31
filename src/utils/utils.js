@@ -1,7 +1,19 @@
 export const tierColors = {
-  "1 Passing": "#C4C4C4",
-  "2 Underperforming": "#FFB042",
-  "3 Failing": "#D43C37",
+  Passing: "#C4C4C4",
+  Underperforming: "#FFB042",
+  Failing: "#D43C37",
+};
+
+export const donorMapColors = nhb_rank => {
+
+  if (nhb_rank < 10 ) return "#4E1C19";
+  if (nhb_rank < 15) return "#89322B";
+  if (nhb_rank < 20) return "#D43C37";
+  if (nhb_rank < 25) return "#FFB042";
+  if (nhb_rank < 30) return "#F9D558";
+  if (nhb_rank > 35) return "#00768F";
+
+  return "7A7A7A";
 };
 
 export const racialDemographics = {
@@ -21,6 +33,12 @@ export const findStateFeature = (statesGeoData, abbrev) =>
         ({ properties: { abbreviation } }) => abbreviation === abbrev
       )
     : null;
+export const findOpoFeature = (dsaGeoJson, abbr) =>
+  abbr
+    ? dsaGeoJson?.childGeoJson?.features?.find(
+        ({ properties: { opo } }) => opo === abbr
+      )
+    : null;
 
 export const formatNumber = (num, options) =>
   !num || isNaN(num) ? "--" : num.toLocaleString("en-US", options);
@@ -33,5 +51,18 @@ export const formatPercent = percent =>
         minimumFractionDigits: 2,
       })}`;
 
-export const formatStateName = ({ abbreviation, name }) =>
-  `${name} (${abbreviation.toLocaleUpperCase()})`;
+export const formatMoney = num => {
+  return formatNumber(num, {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  });
+};
+
+export const formatName = ({ abbreviation, name }, { includeAbbreviation = true } = {}) =>
+  `${name}${includeAbbreviation ? ` (${abbreviation.toLocaleUpperCase()})` : ''}`;
+
+export const formatOPORank = ({ rank }) => !isNaN(rank) ? rank : 'N/A';
+export const getRankedOPOCount = ( opoDataMap ) => Object.values(opoDataMap)
+  .filter(opo => !isNaN(opo.rank)).length;
