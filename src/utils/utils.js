@@ -13,7 +13,7 @@ export const donorMapColors = nhb_rank => {
   if (nhb_rank < 30) return "#F9D558";
   if (nhb_rank > 35) return "#00768F";
 
-  return  "C4C4C4";
+  return "7A7A7A";
 };
 
 export const racialDemographics = {
