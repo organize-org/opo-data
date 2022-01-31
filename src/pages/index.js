@@ -6,12 +6,12 @@ import ReactMarkdown from "react-markdown";
 import ReactPlayer from "react-player";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-import EquitySection from "../components/equitySection/equitySection";
 import Layout from "../components/layout/layout";
+import SelectState from "../components/selectState/selectState";
+import EquitySection from "../components/equitySection/equitySection";
 import MainMap from "../components/map/mainMap";
 import Social from "../components/social/social";
 import QuoteWithImage from "../components/quoteWithImage/quoteWithImage";
-import SelectState from "../components/selectState/selectState";
 
 import News from '../images/icons/news.svg';
 import Data from '../images/icons/data.svg';
@@ -64,7 +64,7 @@ export default function Dashboard({ data: { articleImages } }) {
       {/* Map content (specific to current map view) */}
       <Row className={styles.mapIntroContent}>
         <ReactMarkdown>{mapContent[mapView]}</ReactMarkdown>
-      </Row>  
+      </Row>
       <MainMap key={rerenderMap} mapView={mapView}/>
 
       <Col className={styles.secondHeader} xs={12} lg={6}>

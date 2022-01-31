@@ -51,7 +51,6 @@ export default function Footer() {
               src="../../images/logos/bloomworks.png"
               alt="bloom logo"
               height={30}
-              className={styles.bloom}
             />
           </a>
           <a className={styles.icon} href="https://www.organize.org">

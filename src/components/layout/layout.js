@@ -25,8 +25,8 @@ export default function Layout({ crumbLabel, children, contentWithSources, socia
       const aNum = parseInt(a?.title?.match(footnoteRegex)?.[1])
       const bNum = parseInt(b?.title?.match(footnoteRegex)?.[1])
 
-      if (aNum == undefined 
-        || bNum == undefined 
+      if (aNum === undefined
+        || bNum === undefined
         || aNum === bNum) return 0;
       return aNum - bNum;
     })
