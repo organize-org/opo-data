@@ -53,7 +53,7 @@ export default function Dashboard({ data: { articleImages } }) {
         <Col xs={12} lg={8}>
           <ButtonGroup>
             <Button variant="outline-secondary" className={styles.mapToggleButtons} active={mapView==='opoPerformance'} onClick={() => setMapView('opoPerformance')}>OPO Performance</Button>
-            <Button variant="outline-secondary" className={styles.mapToggleButtons} active={mapView==='congressionalInvestigation'} onClick={() => setMapView('congressionalInvestigation')}>Under Congressional Investigation</Button>
+            <Button variant="outline-secondary" className={styles.mapToggleButtons} active={mapView==='congressionalInvestigation'} onClick={() => setMapView('congressionalInvestigation')}>Congressional Investigations</Button>
             <Button variant="outline-secondary" className={styles.mapToggleButtons} active={mapView==='blackProcurementDisparity'} onClick={() => setMapView('blackProcurementDisparity')}>Black Procurement Disparities</Button>
           </ButtonGroup>
         </Col>
