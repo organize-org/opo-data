@@ -261,6 +261,7 @@ module.exports = {
                             label: "Waitlist stat heading",
                             name: "waitlist",
                             widget: "object",
+                            collapsed: true,
                             fields: [
                               {
                                 label: "Title",
@@ -283,6 +284,7 @@ module.exports = {
                             label: "CEO comp stat heading",
                             name: "comp",
                             widget: "object",
+                            collapsed: true,
                             fields: [
                               {
                                 label: "Title",
@@ -305,6 +307,7 @@ module.exports = {
                             label: "Monthly dead stat heading",
                             name: "monthly",
                             widget: "object",
+                            collapsed: true,
                             fields: [
                               {
                                 label: "Title",
@@ -335,6 +338,7 @@ module.exports = {
                             label: "Name",
                             name: "name",
                             widget: "object",
+                            collapsed: true,
                             fields: [
                               {
                                 label: "Title",
@@ -357,6 +361,7 @@ module.exports = {
                             label: "Region",
                             name: "region",
                             widget: "object",
+                            collapsed: true,
                             fields: [
                               {
                                 label: "Title",
@@ -379,6 +384,7 @@ module.exports = {
                             label: "States",
                             name: "states",
                             widget: "object",
+                            collapsed: true,
                             fields: [
                               {
                                 label: "Title",
@@ -401,6 +407,7 @@ module.exports = {
                             label: "Tier",
                             name: "tier",
                             widget: "object",
+                            collapsed: true,
                             fields: [
                               {
                                 label: "Title",
@@ -423,6 +430,7 @@ module.exports = {
                             label: "Donors Needed",
                             name: "donors",
                             widget: "object",
+                            collapsed: true,
                             fields: [
                               {
                                 label: "Title",
@@ -445,6 +453,7 @@ module.exports = {
                             label: "Shadow Deaths",
                             name: "shadow",
                             widget: "object",
+                            collapsed: true,
                             fields: [
                               {
                                 label: "Title",
@@ -467,6 +476,7 @@ module.exports = {
                             label: "Under Investigation",
                             name: "investigation",
                             widget: "object",
+                            collapsed: true,
                             fields: [
                               {
                                 label: "Title",
@@ -556,6 +566,7 @@ module.exports = {
                             label: "Performance tier heading",
                             name: "tier",
                             widget: "object",
+                            collapsed: true,
                             fields: [
                               {
                                 label: "Title",
@@ -578,6 +589,7 @@ module.exports = {
                             label: "Rank heading",
                             name: "rank",
                             widget: "object",
+                            collapsed: true,
                             fields: [
                               {
                                 label: "Title",
@@ -600,6 +612,7 @@ module.exports = {
                             label: "Shadow deaths heading",
                             name: "shadow",
                             widget: "object",
+                            collapsed: true,
                             fields: [
                               {
                                 label: "Title",
@@ -622,6 +635,7 @@ module.exports = {
                             label: "Investigation heading",
                             name: "investigation",
                             widget: "object",
+                            collapsed: true,
                             fields: [
                               {
                                 label: "Title",
@@ -644,6 +658,7 @@ module.exports = {
                             label: "CEO & comp heading",
                             name: "ceo",
                             widget: "object",
+                            collapsed: true,
                             fields: [
                               {
                                 label: "Title",
@@ -666,6 +681,7 @@ module.exports = {
                             label: "Board compensation heading",
                             name: "board",
                             widget: "object",
+                            collapsed: true,
                             fields: [
                               {
                                 label: "Title",
@@ -684,32 +700,6 @@ module.exports = {
                               }
                             ]
                           },
-                          {
-                            label: "Videos",
-                            label_singular: "Video",
-                            name: "videos",
-                            summary: "{{fields.title}}",
-                            widget: "list",
-                            add_to_top: true,
-                            fields: [
-                              { label: "Link", name: "link", widget: "string" },
-                              { label: "Title", name: "title", widget: "string" },
-                              {
-                                label: "Description",
-                                name: "description",
-                                widget: "markdown",
-                                required: false,
-                              },
-                              {
-                                label: "Tags",
-                                name: "tags",
-                                widget: "select",
-                                multiple: true,
-                                collapsed: false,
-                                options: opoOptions,
-                              },
-                            ],
-                          },
                         ],
                       },
                       {
@@ -722,6 +712,7 @@ module.exports = {
                             label: "Ethnicity",
                             name: "ethnicity",
                             widget: "object",
+                            collapsed: true,
                             fields: [
                               {
                                 label: "Title",
@@ -744,6 +735,7 @@ module.exports = {
                             label: "Potential Donors",
                             name: "death",
                             widget: "object",
+                            collapsed: true,
                             fields: [
                               {
                                 label: "Title",
@@ -766,6 +758,7 @@ module.exports = {
                             label: "Actual Donors",
                             name: "donors",
                             widget: "object",
+                            collapsed: true,
                             fields: [
                               {
                                 label: "Title",
@@ -788,6 +781,7 @@ module.exports = {
                             label: "Recovery Rate",
                             name: "recovery",
                             widget: "object",
+                            collapsed: true,
                             fields: [
                               {
                                 label: "Title",
@@ -810,6 +804,7 @@ module.exports = {
                             label: "Rank",
                             name: "rank",
                             widget: "object",
+                            collapsed: true,
                             fields: [
                               {
                                 label: "Title",
@@ -838,8 +833,9 @@ module.exports = {
                         fields: [
                           {
                             label: "States",
-                            name: "name",
+                            name: "states",
                             widget: "object",
+                            collapsed: true,
                             fields: [
                               {
                                 label: "Title",
@@ -862,6 +858,7 @@ module.exports = {
                             label: "Name",
                             name: "name",
                             widget: "object",
+                            collapsed: true,
                             fields: [
                               {
                                 label: "Title",
@@ -884,6 +881,7 @@ module.exports = {
                             label: "Tier",
                             name: "tier",
                             widget: "object",
+                            collapsed: true,
                             fields: [
                               {
                                 label: "Title",
@@ -906,6 +904,7 @@ module.exports = {
                             label: "Donors Needed",
                             name: "donors",
                             widget: "object",
+                            collapsed: true,
                             fields: [
                               {
                                 label: "Title",
@@ -928,6 +927,7 @@ module.exports = {
                             label: "Shadow Deaths",
                             name: "shadow",
                             widget: "object",
+                            collapsed: true,
                             fields: [
                               {
                                 label: "Title",
@@ -950,6 +950,7 @@ module.exports = {
                             label: "Under Investigation",
                             name: "investigation",
                             widget: "object",
+                            collapsed: true,
                             fields: [
                               {
                                 label: "Title",
@@ -967,6 +968,32 @@ module.exports = {
                                 widget: "markdown"
                               }
                             ]
+                          },
+                        ],
+                      },
+                      {
+                        label: "Videos",
+                        label_singular: "Video",
+                        name: "videos",
+                        summary: "{{fields.title}}",
+                        widget: "list",
+                        add_to_top: true,
+                        fields: [
+                          { label: "Link", name: "link", widget: "string" },
+                          { label: "Title", name: "title", widget: "string" },
+                          {
+                            label: "Description",
+                            name: "description",
+                            widget: "markdown",
+                            required: false,
+                          },
+                          {
+                            label: "Tags",
+                            name: "tags",
+                            widget: "select",
+                            multiple: true,
+                            collapsed: false,
+                            options: opoOptions,
                           },
                         ],
                       },
