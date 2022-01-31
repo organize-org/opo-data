@@ -7,11 +7,11 @@ import ReactPlayer from "react-player";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/layout/layout";
+import SelectState from "../components/selectState/selectState";
 import EquitySection from "../components/equitySection/equitySection";
 import MainMap from "../components/map/mainMap";
 import Social from "../components/social/social";
 import QuoteWithImage from "../components/quoteWithImage/quoteWithImage";
-import SelectState from "../components/selectState/selectState";
 
 import News from '../images/icons/news.svg';
 import Data from '../images/icons/data.svg';

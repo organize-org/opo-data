@@ -24,8 +24,8 @@ export default function Legend({ mapView }) {
       </Row>
       <Row>
         {Object.entries(legendItems)
-          .map(([key, val]) => 
-            <LegendItem className={styles.legendItem} text={key} background={val.fill} />
+          .map(([key, val]) =>
+            <LegendItem key={key} className={styles.legendItem} text={key} background={val.fill} />
           )
         }
       </Row>
@@ -55,7 +55,7 @@ export const OPO_PERFORMANCE_TIER_FILL = {
   Passing: { fill: "#C4C4C4" },
   Underperforming:  { fill: "#FFB042" },
   Failing: { fill: "#D43C37" }
-} 
+}
 
 export const BLACK_DONOR_DISPARITY_FILL = {
   "N/A": {
@@ -72,7 +72,7 @@ export const BLACK_DONOR_DISPARITY_FILL = {
   },
   "9.5 - 11.4": {
     compare: (val) => val >= 9.5 && val < 11.5,
-    fill:"#EF924F" 
+    fill:"#EF924F"
   },
   "11.5 - 12.9": {
     compare: (val) => val >= 11.5 && val < 13,
@@ -89,12 +89,12 @@ export const BLACK_DONOR_DISPARITY_FILL = {
 }
 
 export const CONGRESSIONAL_INVESTIGATION_FILL = {
-  "Yes": { 
+  "Yes": {
     compare: (val) => !!val,
     fill: "#D43C37"
   },
-  "No": { 
+  "No": {
     compare: (val) => !val,
-    fill: "#C4C4C4" 
+    fill: "#C4C4C4"
   }
 }

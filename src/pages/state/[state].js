@@ -6,9 +6,10 @@ import ReactPlayer from "react-player";
 import booleanIntersects from "@turf/boolean-intersects";
 
 import Layout from "../../components/layout/layout";
-import ThumbnailMap from "../../components/map/thumbnailMap";
 import SelectState from "../../components/selectState/selectState";
 import OpoTable from "../../components/opoTable/opoTable";
+import ThumbnailMap from "../../components/map/thumbnailMap";
+
 
 import News from '../../images/icons/news.svg';
 import Data from '../../images/icons/data.svg';
