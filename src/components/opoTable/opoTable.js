@@ -72,11 +72,6 @@ export default function OpoTable({
             parseInt(a.values.death?.replace(/,/g, "")) -
             parseInt(b.values.death?.replace(/,/g, "")),
         };
-      } else if (accessor === "investigation") {
-        return {
-          ...col,
-         Cell: props => props === false ? 'No' : 'Yes'
-        }
       } else {
         return col;
       }
@@ -111,7 +106,7 @@ export default function OpoTable({
       }) => {
         return {
           donors: formatNumber(donors),
-          investigation: investigation ? "Yes" : "--",
+          investigation: investigation ? "Yes" : "No",
           name: name,
           region: region,
           shadow: formatNumber(shadows),
