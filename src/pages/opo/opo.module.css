@@ -1,3 +1,7 @@
+ul li p {
+  margin-left: 1rem;
+}
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -14,15 +18,33 @@
   margin-right: 0;
 }
 
+.video {
+  margin-top: 1rem;
+  flex-direction: column;
+  margin-left: .5rem;
+}
+
+.description {
+  margin-bottom: 4.25rem;
+}
+
 .title {
   color: var(--opoBlack);
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   margin: 2rem 0;
-  text-transform: uppercase;
 }
 
 .region {
   justify-content: space-between;
+  align-items: center;
+}
+
+.sectionHeader {
+  color: var(--opoRed);
+  font-weight: bolder;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
 }
 
 .mapStats {
@@ -36,7 +58,7 @@
 
 .map {
   margin-left: 0;
-  margin-right: 1rem;
+  margin-right: .5rem;
 }
 
 .map > * {
@@ -44,8 +66,17 @@
   margin-right: 0;
 }
 
+.opoContent {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.opoContent hr {
+  padding: auto 0;
+}
+
 .stats {
-  margin-left: 1rem;
+  margin-left: .5rem;
   margin-right: 0;
   flex-direction: column;
   justify-content: center;
@@ -55,11 +86,28 @@
   padding: 1rem;
 }
 
-.stats h4 {
-  margin-top: 0;
+h3 {
+  text-transform: none !important;
+  margin-top: 1rem;
 }
-.stats h4 p {
+.stats h3 {
+  margin-top: 0;
+  font-size: .85rem;
+}
+
+.stats h3 p {
   margin: 0;
+  line-height: 1.5rem;
+}
+
+.stats h3 a {
+  font-size: .5rem;
+  vertical-align: super;
+}
+
+.statsComp p a {
+  font-size: .75rem;
+  vertical-align: super;
 }
 
 .statsHeading > * {
@@ -91,17 +139,27 @@
 .statsComp {
   height: 2rem;
   font-weight: 600;
-  padding: 0 1rem;
+  margin: 0 1rem;
+}
+
+.statsDivider {
+  margin-bottom: 1rem;
+  border-top: 1px solid;
+  border-color: rgba(0,0,0,.1);
 }
 
 .statsComp .ceo,
 .statsComp .ceo p {
-  color: #c4c4c4;
   font-weight: 400;
   display: inline;
   margin-left: 0;
+  margin-right: .5rem;
+  color: var(--opoBlack);
 }
 
+.statsComp div {
+  padding-left: 0;
+}
 .statsTier .Passing {
   color: #c4c4c4;
 }
@@ -121,41 +179,25 @@
   height: 1rem;
 }
 
-.headlines {
+.about {
   max-width: 80rem;
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
 }
 
-.headlines h3 {
-  margin-left: 1rem;
-  margin-right: 1rem;
-  font-size: 1.7rem;
-  margin-top: 4rem;
-}
-
-.serviceTable,
-.ethnicityTable {
+.opoTables {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2rem;
   max-width: 80rem;
 }
 
-.serviceTable > *,
-.ethnicityTable > * {
+.opoTables * {
   margin-left: 0;
   margin-right: 0;
 }
 
-.serviceTable h3,
-.ethnicityTable h3 {
-  font-size: 1.7rem;
-  margin-bottom: 2rem;
-}
-
-@media (max-width: 700px) {
+@media (max-width: 1200px) {
   .title {
     flex-direction: column-reverse;
   }
@@ -165,7 +207,7 @@
     text-align: center;
   }
 
-  .navToOpo p {
+  .sectionHeader {
     margin-left: 0;
   }
 
@@ -175,9 +217,24 @@
 
   .stats {
     margin-top: 2rem;
+    font-size: 1rem;
   }
 
   .headlines {
     padding-left: 4rem;
   }
+
+  .region {
+    flex-direction: column-reverse;
+  }
+
+  .statsComp {
+    display: contents;
+  }
+
+  .statsComp p {
+    margin-left: 0;
+    
+  }
+
 }

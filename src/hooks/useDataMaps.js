@@ -12,7 +12,7 @@ export default function useDataMaps() {
               investigation
               investigation_url
               name
-              opo
+              abbreviation: opo
               nhw_donors
               nhb_donors
               h_donors
@@ -57,7 +57,7 @@ export default function useDataMaps() {
       opoDataMap: opoData?.nodes?.reduce(
         (opoDataMap, { data }) => ({
           ...opoDataMap,
-          [data.opo]: {
+          [data.abbreviation]: {
             ...data,
             // `states` field: newline-delineated state(s) with an optional `-`-delineated region.
             // Transform -> { [state]: region }. e.g. `states: 'OH - West\n'` -> `{ 'OH': 'West' }`.
@@ -70,6 +70,9 @@ export default function useDataMaps() {
                 [state]: region,
               };
             }, {}),
+            states:data.states.split("\n")
+              .map(swr => swr.split("-")[0].trim())
+              .join(", ") 
           },
         }),
         {}

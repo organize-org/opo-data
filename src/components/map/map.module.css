@@ -1,12 +1,11 @@
 .legend {
   background-color: white;
   border-radius: 4px;
-  height: 135px;
-  right: 50px;
-  padding: 1rem 1.5rem;
+  padding-left: 2rem;
+  margin-left: 3rem;
+  margin-bottom: 2rem;
   z-index: 1000;
 }
-
 
 .legend h3 {
   font-size: 1rem;
@@ -14,11 +13,19 @@
   text-transform: none;
 }
 
+.legend .legendItem:first-child {
+  margin-left: -1rem;
+}
+
 .legendItem {
-  font-size: 1rem !important;
+  font-size: 1rem;
   margin-bottom: 0.25rem;
-  margin-left: 1rem !important;
+  margin-left: 1rem;
   justify-content: center;
+}
+
+.legendItemText {
+  color: var(--opoBlack);
 }
 
 .map {
@@ -40,6 +47,7 @@ hr {
   padding: 1rem;
 }
 .tooltip h4 {
+  font-size: 1.15rem;
   margin-top: 0;
   word-wrap: break-word;
   white-space: normal;
@@ -63,7 +71,9 @@ hr {
 
 .opoLabel {
   box-shadow: none !important;
-  background: #ffffffbf !important;
+  background: #000000bf !important;
+  color: #ffffff !important;
+  padding: 4px;
   border: none !important;
   font-size: 10px;
   font-weight: 600;
@@ -90,6 +100,10 @@ hr {
 
   .legendTier {
     margin-bottom: 0.05rem;
+  }
+
+  .legendItem {
+    margin-left: -1rem;
   }
 
   .popout {

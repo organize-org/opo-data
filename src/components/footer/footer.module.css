@@ -1,55 +1,50 @@
-.footer {
+.footerContainer {
   background-color: #f3f3f3;
-  align-items: center;
 }
 
-.header {
-  margin-top: 5rem;
+.footer {
+  margin: 3rem;
 }
 
-.header h2 {
+.footer h2 {
   color: var(--opoRed);
   font-weight: 800;
-  margin-left: 1rem;
   text-transform: uppercase;
 }
 
-.header img {
-  object-fit: contain !important;
+.footerContent {
+  margin-top: 3rem;
+} 
+
+.footerContent p {
+  margin-left: 0rem
 }
 
-.icon {
-  margin-left: 2rem;
-  margin-bottom: 2rem;
+.footerContent p:nth-child(2) {
+  margin-top: 2rem;
 }
 
-.research {
+.footerIcons {
+  align-items: center;
+}
+
+.footerIcons a {
+  margin: 0 1rem;
+}
+
+.footerIcons a:first-child {
+  margin-left: 0;
+}
+
+.footerCopyright {
+  justify-content: right;
+  width: 100%;
+  margin-bottom: 3rem;
   margin-top: 1rem;
+  margin-right: 3rem;
 }
 
-.logos {
-  margin-right: 1rem;
-}
-
-.logosOne {
-  margin-bottom: 2.5rem;
-  justify-content: space-between;
-}
-
-.schmidt {
-  margin-right: 1rem;
-}
-
-.logosTwo {
-  flex-wrap: nowrap;
-  justify-content: space-between;
-}
-
-.bloom {
-  margin-right: 1rem;
-}
-
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .footer {
     flex-flow: column;
     height: unset;
@@ -60,29 +55,18 @@
     margin-bottom: 2rem;
   }
 
-  .logos {
-    display: inline-flex;
-    justify-content: space-evenly;
+  .footerIcons {
+    display: inline-grid;
+    justify-content: space-around;
     margin-top: 3rem;
   }
 
-  .logosOne {
-    align-items: center;
-    margin-bottom: 0.5rem;
-    margin-right: 0.2rem;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+  .footerIcons a {
+    margin-top: 3rem;
+    margin-left: 0;
   }
-
-  .logosTwo {
-    flex-wrap: wrap;
-  }
-
-  .logosTwo img {
-    height: initial;
-  }
-
-  .bloom {
-    margin-right: 0.5rem;
+  
+  .schmidt {
+    margin-left: -1rem !important;
   }
 }

@@ -33,6 +33,10 @@
   content: close-quote;
 }
 
+.quote .attribution a {
+  color: var(--opoWhiteSmoke);
+}
+
 @media (max-width: 700px) {
   .quote {
     padding: 2.5rem;

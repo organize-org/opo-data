@@ -8,13 +8,13 @@ export default function Legend({ mapView }) {
   let legendHeader = "OPO Performance Tier";
   let legendItems = OPO_PERFORMANCE_TIER_FILL;
 
-  if (mapView === "congressional-investigation") {
-    legendHeader = "Under Congressional Investigation"
+  if (mapView === "congressionalInvestigation") {
+    legendHeader = "Under House Oversight Investigation"
     legendItems = CONGRESSIONAL_INVESTIGATION_FILL;
   }
 
-  if (mapView === "black-procurement-disparity") {
-    legendHeader = " Donation Rate (2019)"
+  if (mapView === "blackProcurementDisparity") {
+    legendHeader = " Procurement Rate (2019)"
     legendItems = BLACK_DONOR_DISPARITY_FILL;
   }
   return (
@@ -46,7 +46,7 @@ export function LegendItem({className, background, text}) {
           }}
         ></div>
       </Col>
-      <Col className="my-auto px-0">{text}</Col>
+      <Col className={`my-auto px-0 ${styles.legendItemText}`}>{text}</Col>
     </Row>
   )
 }
@@ -55,46 +55,46 @@ export const OPO_PERFORMANCE_TIER_FILL = {
   Passing: { fill: "#C4C4C4" },
   Underperforming:  { fill: "#FFB042" },
   Failing: { fill: "#D43C37" }
-}
+} 
 
 export const BLACK_DONOR_DISPARITY_FILL = {
+  "N/A": {
+    compare: (val) => val === null || val === undefined,
+    fill: "#C4C4C4"
+  },
   "< 7.5": {
     compare: (val) => val < 7.5,
-    fill: "#4E1C19"
+    fill: "#D43C37"
   },
   "7.5 - 9.4": {
     compare: (val) => val >= 7.5 && val < 9.5,
-    fill: "#89322B"
+    fill: "#EA5B3B"
   },
   "9.5 - 11.4": {
     compare: (val) => val >= 9.5 && val < 11.5,
-    fill:"#D43C37" 
+    fill:"#EF924F" 
   },
   "11.5 - 12.9": {
     compare: (val) => val >= 11.5 && val < 13,
-    fill: "#FFB042",
+    fill: "#F4B55F",
   },
   "13.0 - 15.4": {
     compare: (val) => val >= 13 && val < 15.5,
-    fill: "#F9D558"
+    fill: "#F9DA84"
   },
-  ">= 15.5": {
+  "≥ 15.5": {
     compare: (val) => val >= 15.5,
-    fill: "#00768F"
-  },
-  "No Data": {
-    compare: (val) => val == undefined,
-    fill: "#C4C4C4"
+    fill: "#FFFEBB"
   }
 }
 
 export const CONGRESSIONAL_INVESTIGATION_FILL = {
   "Yes": { 
     compare: (val) => !!val,
-    fill: "#C4C4C4" 
+    fill: "#D43C37"
   },
   "No": { 
     compare: (val) => !val,
-    fill: "#D43C37"
+    fill: "#C4C4C4" 
   }
 }

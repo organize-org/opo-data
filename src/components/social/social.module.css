@@ -2,6 +2,7 @@
   display: flex;
   justify-content: flex-end;
   flex-wrap: nowrap;
+  margin-top: 1rem;
 }
 
 .social > * {
@@ -10,6 +11,7 @@
 
 .social p {
   line-height: 2;
+  font-size: 1rem;
   margin: auto 0 !important;
 }
 

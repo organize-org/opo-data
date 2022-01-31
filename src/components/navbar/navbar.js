@@ -3,33 +3,14 @@ import { Navbar, Nav } from "react-bootstrap";
 
 import { StaticImage } from "gatsby-plugin-image";
 
+import MobileMenu from '../../images/icons/mobile-menu.svg';
+import MobileX from '../../images/icons/mobile-x.svg';
+
 import * as styles from "./navbar.module.css";
 
 export default function Navigation() {
-  const hamburger = (
-    <StaticImage
-      src="../../images/icons/mobile-menu.png"
-      alt="hamburger"
-      className={styles.hamburger}
-    />
-  );
-  const close = (
-    <StaticImage
-      src="../../images/icons/mobile-x.png"
-      alt="close"
-      className={styles.close}
-    />
-  );
 
-  const [icon, setIcon] = useState(hamburger);
-
-  const toggle = () => {
-    if (icon.props.alt === "hamburger") {
-      setIcon(close);
-    } else {
-      setIcon(hamburger);
-    }
-  };
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   return (
     <Navbar expand="lg" variant="dark" className={styles.nav}>
@@ -37,6 +18,7 @@ export default function Navigation() {
         <Nav.Link href="/" className={styles.logoWithText}>
           <StaticImage
             src="../../images/logo.png"
+            height={40}
             alt="logo"
             placeholder="none"
           />
@@ -47,18 +29,18 @@ export default function Navigation() {
       </Navbar.Brand>
       <section
         className={
-          icon.props.alt === "hamburger"
-            ? styles.mobileTitle
-            : styles.mobileTitleClose
+          menuIsOpen
+            ? styles.mobileTitleClose
+            : styles.mobileTitle
         }
       >
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"
           className={styles.navToggle}
-          onClick={toggle}
+          onClick={() => setMenuIsOpen((isOpen) => !isOpen)}
         >
           <h1>Menu</h1>
-          {icon}
+          {menuIsOpen ? <MobileX alt="close" /> : <MobileMenu alt="expand" />}
         </Navbar.Toggle>
       </section>
       <Navbar.Collapse id="basic-navbar-nav" className={styles.navCollapse}>

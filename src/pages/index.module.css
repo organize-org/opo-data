@@ -1,3 +1,8 @@
+.index p {
+  margin: auto 0;
+  line-height: 1.6;
+}
+
 .rightArrow {
   margin-left: 5px;
 }
@@ -8,7 +13,7 @@
   font-size: 1.15rem;
   height: 60px;
   margin-top: 2rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
 }
 
 .topBar p {
@@ -24,7 +29,7 @@
 .topHeader {
   display: inline-flex;
   flex-wrap: nowrap;
-  margin-left: 2rem;
+  margin-left: 1rem;
   justify-content: flex-start;
   align-items: center;
 }
@@ -36,13 +41,15 @@
   text-transform: uppercase;
 }
 
-.topHeader img {
-  object-fit: contain !important;
+h2 svg {
+  color: var(--opoRed);
+  width: 2rem;
+  margin-right: .25rem;
+  margin-bottom: .2rem;
 }
 
 .secondHeader {
-  margin-left: 2rem;
-  margin-top: 12rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
   display: inline-flex;
   flex-wrap: nowrap;
@@ -53,21 +60,15 @@
 .secondHeader h2 {
   color: var(--opoRed);
   font-weight: 800;
-  margin-left: 1rem;
+  margin-left: 2rem;
   text-transform: uppercase;
-}
-
-.secondHeader img {
-  object-fit: contain !important;
-}
-
-.thirdHeader {
-  margin-bottom: 4rem;
 }
 
 .mapIntroContent {
   font-size: 1rem;
-  margin-left: 2rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  padding-bottom: 1.5rem;
 }
 
 .mapToggleButtons {
@@ -78,7 +79,14 @@
 .statsSection {
   font-weight: 700;
   text-align: center;
-  margin: 4rem 0;
+  margin: 0;
+}
+
+.statsHeaders {
+  margin: auto 3rem;
+  padding: .5rem;
+  height: 50%;
+  justify-content: center;
 }
 
 .statsValues {
@@ -130,12 +138,7 @@
 .articlesSection p {
   margin: 1rem 0;
 }
-
-@media (max-width: 700px) {
-  .topBar {
-    flex-direction: column-reverse;
-  }
-
+@media (max-width: 1200px) {
   .topBar > * {
     flex-direction: row;
     flex-wrap: wrap;
@@ -150,21 +153,33 @@
   .articlesSection {
     margin: 2rem 0 0 0;
   }
-  .statsSection {
-    margin-top: 0;
-    margin-bottom: 2rem;
-  }
-  .statsSection > * {
-    margin-top: 2rem;
-  }
+
   .videoSection {
     flex-direction: column;
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
-}
 
-@media (max-width: 900px) {
+  .statsSection {
+    flex-direction: column;
+  }
+  .statsSection {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  .statsSection > h3 {
+    margin-top: 2rem;
+  }
+
+  .statsValues {
+    margin-top: .5rem;
+  }
+
+  .mapToggleButtons {
+    margin-top: 1rem;
+    justify-content: center;
+  }
+
   .videoSection {
     flex-direction: column;
     margin-top: 2rem;

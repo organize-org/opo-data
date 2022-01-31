@@ -5,6 +5,7 @@ import { BgImage } from "gbimage-bridge";
 import useQuoteImages from "../../hooks/useQuoteImages";
 
 import * as styles from "./quoteWithImage.module.css";
+import ReactMarkdown from "react-markdown";
 
 export default function QuoteWithImage({
   quote: { attribution, image, quote },
@@ -25,7 +26,7 @@ export default function QuoteWithImage({
           <blockquote>{quote}</blockquote>
         </figure>
         <figcaption>
-          &mdash; <cite>{attribution}</cite>
+          <cite><ReactMarkdown className={styles.attribution}>{attribution}</ReactMarkdown></cite>
         </figcaption>
       </Col>
     </BgImage>

@@ -13,47 +13,45 @@ import { LegendItem, OPO_PERFORMANCE_TIER_FILL } from "../map/legend";
 
 export default function OpoTable({
   headings,
-  inState = true,
-  inOpo = false,
   opos,
   title,
 }) {
   const columns = useMemo(() => {
-    const cols = inState
-      ? ["name", "region", "tier", "donors", "shadow", "investigation"]
-      : inOpo
-      ? ["ethnicity", "death", "donors", "recovery", "rank"]
-      : ["states", "name", "tier", "donors", "shadow"];
-
-    const createCol = accessor => {
+    const createCol = ([accessor, heading]) => {
       const col = {
-        Header: <ReactMarkdown>{headings[accessor]}</ReactMarkdown>,
+        Header: <ReactMarkdown>{heading.title}</ReactMarkdown>,
         accessor,
       };
+
       if (accessor === "name") {
         return {
           ...col,
           Cell: props => (
             <Link
-              to={`/opo/${opos.find(opo => opo.name === props.value)?.opo}`}
+              to={`/opo/${opos.find(opo => opo.name === props.value)?.abbreviation}`}
             >
-              {props.value}
+              {props.value} ({opos.find(opo => opo.name === props.value)?.abbreviation})
             </Link>
           ),
         };
-      } else if (
-        (accessor === "donors" && !inOpo) ||
-        accessor === "investigation"
-      ) {
+      } else if (accessor === "states") {
         return {
           ...col,
-          cellClass: "text-center",
-        };
-      } else if (accessor === "shadow") {
+          Cell: props => {
+            const states = props.value.split(",");
+            return states.map((s, idx) => (
+              <>
+                <Link to={`/state/${s}`}>{s}</Link>
+                {idx === states.length - 1 ? '' : ', '}
+              </>
+            ))
+          }
+        }
+      }else if(accessor === "shadow") {
         return {
           ...col,
           cellClass: styles.shadows,
-          color: "red",
+          color: "red"  
         };
       } else if (accessor === "tier") {
         return {
@@ -74,16 +72,28 @@ export default function OpoTable({
             parseInt(a.values.death?.replace(/,/g, "")) -
             parseInt(b.values.death?.replace(/,/g, "")),
         };
+      } else if (accessor === "investigation") {
+        return {
+          ...col,
+         Cell: props => props === false ? 'No' : 'Yes'
+        }
       } else {
         return col;
       }
     };
-    return cols.map(col => createCol(col));
-  }, [headings, inState, opos, inOpo]);
+
+    return Object.entries(headings)
+      .filter(([_, val]) => !!val)
+      .map((col, idx) => createCol(col, idx));
+  }, [headings, opos]);
+
+  const captions = Object.values(headings)
+  .filter(heading => !!heading?.caption)
+  .map(heading => heading.caption);
 
   const data = useMemo(() => {
     const formatNumber = (num, options) =>
-      !num || isNaN(num) ? "--" : num.toLocaleString("en-US", options);
+      typeof num === "number" ? num.toLocaleString("en-US", options) : '--';  
 
     return opos.map(
       ({
@@ -108,7 +118,7 @@ export default function OpoTable({
           states: states,
           tier: tier,
           ethnicity,
-          death: death?.toLocaleString(),
+          death: formatNumber(death),
           recovery: formatNumber(recovery),
           rank: formatNumber(rank),
         };
@@ -122,7 +132,13 @@ export default function OpoTable({
     headerGroups,
     rows,
     prepareRow,
-  } = useTable({ columns, data }, useSortBy);
+  } = useTable({ 
+    columns,
+    data,
+    initialState: {
+      sortBy: [{ id: columns[0].accessor }]
+    }
+   }, useSortBy);
 
   const table = (
     <Row className={styles.opoTable}>
@@ -176,6 +192,11 @@ export default function OpoTable({
           })}
         </tbody>
       </Table>
+      {captions?.length && (
+        captions.map(caption => (
+          <p className={styles.tableCaption}>* {caption}</p>
+        ))
+      )}
     </Row>
   );
 

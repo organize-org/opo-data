@@ -7,6 +7,9 @@
   --opoTeal: #00768f;
 }
 
+.gatsby-image-wrapper {
+  transition: none !important;
+}
 *,
 *:before,
 *:after {
@@ -82,7 +85,7 @@ a:hover {
 }
 
 .breadcrumb-item a:first-child {
-  color: var(--opoTeal);
+  color: var(--opoBlack);
 }
 
 li.breadcrumb-item.active::before {
