@@ -1,6 +1,6 @@
 stats:
-  - title: National organ transplant waiting list as of January 2022
-    value: 106,608
+  - title: National organ transplant waiting list as of February 1, 2022
+    value: 106,557
   - title: Number of Americans in 2021 who died each day because they didn’t get a
       needed transplant
     value: "31"
@@ -15,9 +15,9 @@ mapContent:
     color. The map below shows the current ranking of U.S. OPOs by location,
     based on the most recent data available (2019). [Find more information
     here](https://www.cms.gov/newsroom/fact-sheets/organ-procurement-organization-opo-conditions-coverage-final-rule-revisions-outcome-measures-opos)
-  black-procurement-disparities: Publicly available data shows a 10-fold difference
-    around the country in OPO procurement of organs from Black donors. Research
-    also shows [differential
+  black-procurement-disparities: Publicly available data shows a 10-fold
+    difference around the country in OPO procurement of organs from Black
+    donors. Research also shows [differential
     treatment](https://www.healthaffairs.org/do/10.1377/forefront.20201211.229975/full/)
     by OPOs towards families of Black versus white donors. [Read the article
     from Axios covering this
@@ -38,6 +38,8 @@ mapContent:
     * [Read the release from the Senate Finance Committee](https://www.finance.senate.gov/chairmans-news/finance-committee-members-probe-us-organ-transplant-system)
 
     * [Read the bipartisan, bicameral letter calling for accelerating reforms](https://www.finance.senate.gov/chairmans-news/bipartisan-bicameral-members-of-congress-commend-federal-efforts-to-reform-organ-donation-system-urge-acceleration-of-rules-impact-)
+  black-procurement-disparity: " "
+  congressional-investigation: " "
 quote:
   quote: An astounding lack of accountability and oversight in the nation’s
     creaking, monopolistic organ transplant system is allowing hundreds of
