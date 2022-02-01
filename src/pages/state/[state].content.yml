@@ -173,6 +173,10 @@ videos:
       - WY
 notes:
   - voicesForReform: false
+    note: Test note
+    tags:
+      - WIDN
+  - voicesForReform: false
     note: '[Washington
       Post](https://www.washingtonpost.com/health/liver-transplant-lawsuit/2021/12/21/2443f904-61b9-11ec-bf70-58003351c627_story.html):
       "Lawsuit alleges bullying tactics by transplant executives in bid to
