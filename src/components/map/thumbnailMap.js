@@ -26,13 +26,13 @@ export default function ThumnailMap({
   {
     ...dsaGeoData?.childGeoJson,
     features: ((view === "state")
-      // state view: grab geoms for all opos that service this state 
+      // state view: grab geoms for all opos that service this state
       ? dsaGeoData?.childGeoJson?.features.filter(
         f =>
           opoDataMap[f.properties.abbreviation].statesWithRegions[
             dataId
           ] !== undefined
-      ) 
+      )
       // opo view: grab geom for this opo
       : [dsaGeoData?.childGeoJson?.features.find(({ properties: { abbreviation } }) => abbreviation === dataId)])
       // then augment all features with 'tier' property which is used to determine fill color
@@ -62,7 +62,7 @@ export default function ThumnailMap({
       })),
   };
 
-  
+
   const [minX, minY, maxX, maxY] = bbox(boundaryGeoJson);
 
   return (
@@ -83,7 +83,7 @@ export default function ThumnailMap({
               touchZoom={false}
               dragging={false}
               className={styles.mapContainer + " thumbnail"}
-            >               
+            >
               {/* Create layer for all state polygons with fill (to contextualize other geoms!) */}
               <GeoJSON
                 key={dataId + "state-fill"}
@@ -110,7 +110,7 @@ export default function ThumnailMap({
                   weight: 0.75,
                 })}
                 // Add permanent tool tip to act as OPO label
-                // TODO: These currently appear centered in the OPO polygon, 
+                // TODO: These currently appear centered in the OPO polygon,
                 // which does not always align with the state-derived bounding box
                 // and may appear very near the edge or not at all
                 onEachFeature={(_, layer) =>
@@ -126,7 +126,7 @@ export default function ThumnailMap({
                 }
                 eventHandlers={{
                   click: ({ propagatedFrom }) => {
-                    navigate(`/opo/${propagatedFrom?.feature?.properties?.abbreviation}`)
+                    navigate(`/opo/${propagatedFrom?.feature?.properties?.abbreviation.trim()}`)
                   }
                 }}
               />
@@ -151,7 +151,7 @@ export default function ThumnailMap({
 
 /**
  * Custom offsets to apply to OPO labels in state thumbnail maps to make them
- *  a) visible within the bounded mini map 
+ *  a) visible within the bounded mini map
  *  b) distinct and clear WRT to their specific OPO geometry
  */
 

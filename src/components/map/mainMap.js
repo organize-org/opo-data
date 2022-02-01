@@ -116,7 +116,7 @@ export default function MainMap({ mapView }) {
                   }
                   eventHandlers={{
                     click: ({ propagatedFrom }) => {
-                      navigate(`/${mapView === 'opoPerformance' ? 'state' : 'opo'}/${propagatedFrom?.feature?.properties?.abbreviation}`)
+                      navigate(`/${mapView === 'opoPerformance' ? 'state' : 'opo'}/${propagatedFrom?.feature?.properties?.abbreviation.trim()}`)
                     },
                     mouseover: (({ propagatedFrom, target }) => target
                       ?.setStyle(
