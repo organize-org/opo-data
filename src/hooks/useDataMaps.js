@@ -70,9 +70,10 @@ export default function useDataMaps() {
                 [state]: region,
               };
             }, {}),
-            states:data.states.split("\n")
+            states: data.states
+              .split("\n")
               .map(swr => swr.split("-")[0].trim())
-              .join(", ") 
+              .join(", "),
           },
         }),
         {}

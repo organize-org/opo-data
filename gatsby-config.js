@@ -132,15 +132,27 @@ module.exports = {
                           { label: "Value", name: "value", widget: "markdown" },
                         ],
                       },
-                      { 
+                      {
                         label: "Map content",
                         name: "mapContent",
                         widget: "object",
                         fields: [
-                          { label: "OPO performance disparity map", name: "opoPerformance", widget: "markdown" },
-                          { label: "Black procurement disparity map", name: "blackProcurementDisparity", widget: "markdown" },
-                          { label: "Under congressional investigation map", name: "congressionalInvestigation", widget: "markdown" }
-                        ]
+                          {
+                            label: "OPO performance disparity map",
+                            name: "opo-performance",
+                            widget: "markdown",
+                          },
+                          {
+                            label: "Black procurement disparity map",
+                            name: "black-procurement-disparity",
+                            widget: "markdown",
+                          },
+                          {
+                            label: "Under congressional investigation map",
+                            name: "congressional-investigation",
+                            widget: "markdown",
+                          },
+                        ],
                       },
                       {
                         label: "Quote",
@@ -228,6 +240,7 @@ module.exports = {
                             label: "Source",
                             name: "source",
                             widget: "string",
+                            required: false,
                           },
                           { label: "Title", name: "title", widget: "string" },
                           {
@@ -266,19 +279,21 @@ module.exports = {
                               {
                                 label: "Title",
                                 name: "title",
-                                widget: "markdown"
+                                widget: "markdown",
                               },
                               {
                                 label: "Caption",
                                 name: "caption",
-                                widget: "markdown"
+                                widget: "markdown",
+                                required: false,
                               },
                               {
                                 label: "Source",
                                 name: "source",
-                                widget: "markdown"
-                              }
-                            ]
+                                widget: "markdown",
+                                required: false,
+                              },
+                            ],
                           },
                           {
                             label: "CEO comp stat heading",
@@ -289,19 +304,21 @@ module.exports = {
                               {
                                 label: "Title",
                                 name: "title",
-                                widget: "markdown"
+                                widget: "markdown",
                               },
                               {
                                 label: "Caption",
                                 name: "caption",
-                                widget: "markdown"
+                                widget: "markdown",
+                                required: false,
                               },
                               {
                                 label: "Source",
                                 name: "source",
-                                widget: "markdown"
-                              }
-                            ]
+                                widget: "markdown",
+                                required: false,
+                              },
+                            ],
                           },
                           {
                             label: "Monthly dead stat heading",
@@ -312,19 +329,21 @@ module.exports = {
                               {
                                 label: "Title",
                                 name: "title",
-                                widget: "markdown"
+                                widget: "markdown",
                               },
                               {
                                 label: "Caption",
                                 name: "caption",
-                                widget: "markdown"
+                                widget: "markdown",
+                                required: false,
                               },
                               {
                                 label: "Source",
                                 name: "source",
-                                widget: "markdown"
-                              }
-                            ]
+                                widget: "markdown",
+                                required: false,
+                              },
+                            ],
                           },
                         ],
                       },
@@ -343,19 +362,21 @@ module.exports = {
                               {
                                 label: "Title",
                                 name: "title",
-                                widget: "markdown"
+                                widget: "markdown",
                               },
                               {
                                 label: "Caption",
                                 name: "caption",
-                                widget: "markdown"
+                                widget: "markdown",
+                                required: false,
                               },
                               {
                                 label: "Source",
                                 name: "source",
-                                widget: "markdown"
-                              }
-                            ]
+                                widget: "markdown",
+                                required: false,
+                              },
+                            ],
                           },
                           {
                             label: "Region",
@@ -366,19 +387,21 @@ module.exports = {
                               {
                                 label: "Title",
                                 name: "title",
-                                widget: "markdown"
+                                widget: "markdown",
                               },
                               {
                                 label: "Caption",
                                 name: "caption",
-                                widget: "markdown"
+                                widget: "markdown",
+                                required: false,
                               },
                               {
                                 label: "Source",
                                 name: "source",
-                                widget: "markdown"
-                              }
-                            ]
+                                widget: "markdown",
+                                required: false,
+                              },
+                            ],
                           },
                           {
                             label: "States",
@@ -389,19 +412,21 @@ module.exports = {
                               {
                                 label: "Title",
                                 name: "title",
-                                widget: "markdown"
+                                widget: "markdown",
                               },
                               {
                                 label: "Caption",
                                 name: "caption",
-                                widget: "markdown"
+                                widget: "markdown",
+                                required: false,
                               },
                               {
                                 label: "Source",
                                 name: "source",
-                                widget: "markdown"
-                              }
-                            ]
+                                widget: "markdown",
+                                required: false,
+                              },
+                            ],
                           },
                           {
                             label: "Tier",
@@ -412,19 +437,21 @@ module.exports = {
                               {
                                 label: "Title",
                                 name: "title",
-                                widget: "markdown"
+                                widget: "markdown",
                               },
                               {
                                 label: "Caption",
                                 name: "caption",
-                                widget: "markdown"
+                                widget: "markdown",
+                                required: false,
                               },
                               {
                                 label: "Source",
                                 name: "source",
-                                widget: "markdown"
-                              }
-                            ]
+                                widget: "markdown",
+                                required: false,
+                              },
+                            ],
                           },
                           {
                             label: "Donors Needed",
@@ -435,19 +462,21 @@ module.exports = {
                               {
                                 label: "Title",
                                 name: "title",
-                                widget: "markdown"
+                                widget: "markdown",
                               },
                               {
                                 label: "Caption",
                                 name: "caption",
-                                widget: "markdown"
+                                widget: "markdown",
+                                required: false,
                               },
                               {
                                 label: "Source",
                                 name: "source",
-                                widget: "markdown"
-                              }
-                            ]
+                                widget: "markdown",
+                                required: false,
+                              },
+                            ],
                           },
                           {
                             label: "Shadow Deaths",
@@ -458,19 +487,21 @@ module.exports = {
                               {
                                 label: "Title",
                                 name: "title",
-                                widget: "markdown"
+                                widget: "markdown",
                               },
                               {
                                 label: "Caption",
                                 name: "caption",
-                                widget: "markdown"
+                                widget: "markdown",
+                                required: false,
                               },
                               {
                                 label: "Source",
                                 name: "source",
-                                widget: "markdown"
-                              }
-                            ]
+                                widget: "markdown",
+                                required: false,
+                              },
+                            ],
                           },
                           {
                             label: "Under Investigation",
@@ -481,19 +512,21 @@ module.exports = {
                               {
                                 label: "Title",
                                 name: "title",
-                                widget: "markdown"
+                                widget: "markdown",
                               },
                               {
                                 label: "Caption",
                                 name: "caption",
-                                widget: "markdown"
+                                widget: "markdown",
+                                required: false,
                               },
                               {
                                 label: "Source",
                                 name: "source",
-                                widget: "markdown"
-                              }
-                            ]
+                                widget: "markdown",
+                                required: false,
+                              },
+                            ],
                           },
                         ],
                       },
@@ -571,19 +604,21 @@ module.exports = {
                               {
                                 label: "Title",
                                 name: "title",
-                                widget: "markdown"
+                                widget: "markdown",
                               },
                               {
                                 label: "Caption",
                                 name: "caption",
-                                widget: "markdown"
+                                widget: "markdown",
+                                required: false,
                               },
                               {
                                 label: "Source",
                                 name: "source",
-                                widget: "markdown"
-                              }
-                            ]
+                                widget: "markdown",
+                                required: false,
+                              },
+                            ],
                           },
                           {
                             label: "Rank heading",
@@ -594,19 +629,21 @@ module.exports = {
                               {
                                 label: "Title",
                                 name: "title",
-                                widget: "markdown"
+                                widget: "markdown",
                               },
                               {
                                 label: "Caption",
                                 name: "caption",
-                                widget: "markdown"
+                                widget: "markdown",
+                                required: false,
                               },
                               {
                                 label: "Source",
                                 name: "source",
-                                widget: "markdown"
-                              }
-                            ]
+                                widget: "markdown",
+                                required: false,
+                              },
+                            ],
                           },
                           {
                             label: "Shadow deaths heading",
@@ -617,19 +654,21 @@ module.exports = {
                               {
                                 label: "Title",
                                 name: "title",
-                                widget: "markdown"
+                                widget: "markdown",
                               },
                               {
                                 label: "Caption",
                                 name: "caption",
-                                widget: "markdown"
+                                widget: "markdown",
+                                required: false,
                               },
                               {
                                 label: "Source",
                                 name: "source",
-                                widget: "markdown"
-                              }
-                            ]
+                                widget: "markdown",
+                                required: false,
+                              },
+                            ],
                           },
                           {
                             label: "Investigation heading",
@@ -640,19 +679,21 @@ module.exports = {
                               {
                                 label: "Title",
                                 name: "title",
-                                widget: "markdown"
+                                widget: "markdown",
                               },
                               {
                                 label: "Caption",
                                 name: "caption",
-                                widget: "markdown"
+                                widget: "markdown",
+                                required: false,
                               },
                               {
                                 label: "Source",
                                 name: "source",
-                                widget: "markdown"
-                              }
-                            ]
+                                widget: "markdown",
+                                required: false,
+                              },
+                            ],
                           },
                           {
                             label: "CEO & comp heading",
@@ -663,19 +704,21 @@ module.exports = {
                               {
                                 label: "Title",
                                 name: "title",
-                                widget: "markdown"
+                                widget: "markdown",
                               },
                               {
                                 label: "Caption",
                                 name: "caption",
-                                widget: "markdown"
+                                widget: "markdown",
+                                required: false,
                               },
                               {
                                 label: "Source",
                                 name: "source",
-                                widget: "markdown"
-                              }
-                            ]
+                                widget: "markdown",
+                                required: false,
+                              },
+                            ],
                           },
                           {
                             label: "Board compensation heading",
@@ -686,19 +729,21 @@ module.exports = {
                               {
                                 label: "Title",
                                 name: "title",
-                                widget: "markdown"
+                                widget: "markdown",
                               },
                               {
                                 label: "Caption",
                                 name: "caption",
-                                widget: "markdown"
+                                widget: "markdown",
+                                required: false,
                               },
                               {
                                 label: "Source",
                                 name: "source",
-                                widget: "markdown"
-                              }
-                            ]
+                                widget: "markdown",
+                                required: false,
+                              },
+                            ],
                           },
                         ],
                       },
@@ -717,19 +762,21 @@ module.exports = {
                               {
                                 label: "Title",
                                 name: "title",
-                                widget: "markdown"
+                                widget: "markdown",
                               },
                               {
                                 label: "Caption",
                                 name: "caption",
-                                widget: "markdown"
+                                widget: "markdown",
+                                required: false,
                               },
                               {
                                 label: "Source",
                                 name: "source",
-                                widget: "markdown"
-                              }
-                            ]
+                                widget: "markdown",
+                                required: false,
+                              },
+                            ],
                           },
                           {
                             label: "Potential Donors",
@@ -740,19 +787,21 @@ module.exports = {
                               {
                                 label: "Title",
                                 name: "title",
-                                widget: "markdown"
+                                widget: "markdown",
                               },
                               {
                                 label: "Caption",
                                 name: "caption",
-                                widget: "markdown"
+                                widget: "markdown",
+                                required: false,
                               },
                               {
                                 label: "Source",
                                 name: "source",
-                                widget: "markdown"
-                              }
-                            ]
+                                widget: "markdown",
+                                required: false,
+                              },
+                            ],
                           },
                           {
                             label: "Actual Donors",
@@ -763,19 +812,21 @@ module.exports = {
                               {
                                 label: "Title",
                                 name: "title",
-                                widget: "markdown"
+                                widget: "markdown",
                               },
                               {
                                 label: "Caption",
                                 name: "caption",
-                                widget: "markdown"
+                                widget: "markdown",
+                                required: false,
                               },
                               {
                                 label: "Source",
                                 name: "source",
-                                widget: "markdown"
-                              }
-                            ]
+                                widget: "markdown",
+                                required: false,
+                              },
+                            ],
                           },
                           {
                             label: "Recovery Rate",
@@ -786,19 +837,21 @@ module.exports = {
                               {
                                 label: "Title",
                                 name: "title",
-                                widget: "markdown"
+                                widget: "markdown",
                               },
                               {
                                 label: "Caption",
                                 name: "caption",
-                                widget: "markdown"
+                                widget: "markdown",
+                                required: false,
                               },
                               {
                                 label: "Source",
                                 name: "source",
-                                widget: "markdown"
-                              }
-                            ]
+                                widget: "markdown",
+                                required: false,
+                              },
+                            ],
                           },
                           {
                             label: "Rank",
@@ -809,19 +862,21 @@ module.exports = {
                               {
                                 label: "Title",
                                 name: "title",
-                                widget: "markdown"
+                                widget: "markdown",
                               },
                               {
                                 label: "Caption",
                                 name: "caption",
-                                widget: "markdown"
+                                widget: "markdown",
+                                required: false,
                               },
                               {
                                 label: "Source",
                                 name: "source",
-                                widget: "markdown"
-                              }
-                            ]
+                                widget: "markdown",
+                                required: false,
+                              },
+                            ],
                           },
                         ],
                       },
@@ -840,19 +895,21 @@ module.exports = {
                               {
                                 label: "Title",
                                 name: "title",
-                                widget: "markdown"
+                                widget: "markdown",
                               },
                               {
                                 label: "Caption",
                                 name: "caption",
-                                widget: "markdown"
+                                widget: "markdown",
+                                required: false,
                               },
                               {
                                 label: "Source",
                                 name: "source",
-                                widget: "markdown"
-                              }
-                            ]
+                                widget: "markdown",
+                                required: false,
+                              },
+                            ],
                           },
                           {
                             label: "Name",
@@ -863,19 +920,21 @@ module.exports = {
                               {
                                 label: "Title",
                                 name: "title",
-                                widget: "markdown"
+                                widget: "markdown",
                               },
                               {
                                 label: "Caption",
                                 name: "caption",
-                                widget: "markdown"
+                                widget: "markdown",
+                                required: false,
                               },
                               {
                                 label: "Source",
                                 name: "source",
-                                widget: "markdown"
-                              }
-                            ]
+                                widget: "markdown",
+                                required: false,
+                              },
+                            ],
                           },
                           {
                             label: "Tier",
@@ -886,19 +945,21 @@ module.exports = {
                               {
                                 label: "Title",
                                 name: "title",
-                                widget: "markdown"
+                                widget: "markdown",
                               },
                               {
                                 label: "Caption",
                                 name: "caption",
-                                widget: "markdown"
+                                widget: "markdown",
+                                required: false,
                               },
                               {
                                 label: "Source",
                                 name: "source",
-                                widget: "markdown"
-                              }
-                            ]
+                                widget: "markdown",
+                                required: false,
+                              },
+                            ],
                           },
                           {
                             label: "Donors Needed",
@@ -909,19 +970,21 @@ module.exports = {
                               {
                                 label: "Title",
                                 name: "title",
-                                widget: "markdown"
+                                widget: "markdown",
                               },
                               {
                                 label: "Caption",
                                 name: "caption",
-                                widget: "markdown"
+                                widget: "markdown",
+                                required: false,
                               },
                               {
                                 label: "Source",
                                 name: "source",
-                                widget: "markdown"
-                              }
-                            ]
+                                widget: "markdown",
+                                required: false,
+                              },
+                            ],
                           },
                           {
                             label: "Shadow Deaths",
@@ -932,19 +995,21 @@ module.exports = {
                               {
                                 label: "Title",
                                 name: "title",
-                                widget: "markdown"
+                                widget: "markdown",
                               },
                               {
                                 label: "Caption",
                                 name: "caption",
-                                widget: "markdown"
+                                widget: "markdown",
+                                required: false,
                               },
                               {
                                 label: "Source",
                                 name: "source",
-                                widget: "markdown"
-                              }
-                            ]
+                                widget: "markdown",
+                                required: false,
+                              },
+                            ],
                           },
                           {
                             label: "Under Investigation",
@@ -955,19 +1020,21 @@ module.exports = {
                               {
                                 label: "Title",
                                 name: "title",
-                                widget: "markdown"
+                                widget: "markdown",
                               },
                               {
                                 label: "Caption",
                                 name: "caption",
-                                widget: "markdown"
+                                widget: "markdown",
+                                required: false,
                               },
                               {
                                 label: "Source",
                                 name: "source",
-                                widget: "markdown"
-                              }
-                            ]
+                                widget: "markdown",
+                                required: false,
+                              },
+                            ],
                           },
                         ],
                       },
@@ -994,6 +1061,7 @@ module.exports = {
                             multiple: true,
                             collapsed: false,
                             options: opoOptions,
+                            required: false,
                           },
                         ],
                       },
@@ -1015,7 +1083,7 @@ module.exports = {
                             options: [...opoOptions],
                           },
                         ],
-                      }
+                      },
                     ],
                   },
                   {

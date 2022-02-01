@@ -11,11 +11,7 @@ import ChevronDownGrey from "../../images/icons/chevron-down-grey.svg";
 import * as styles from "./opoTable.module.css";
 import { LegendItem, OPO_PERFORMANCE_TIER_FILL } from "../map/legend";
 
-export default function OpoTable({
-  headings,
-  opos,
-  title,
-}) {
+export default function OpoTable({ headings, opos, title }) {
   const columns = useMemo(() => {
     const createCol = ([accessor, heading]) => {
       const col = {
@@ -28,9 +24,12 @@ export default function OpoTable({
           ...col,
           Cell: props => (
             <Link
-              to={`/opo/${opos.find(opo => opo.name === props.value)?.abbreviation}`}
+              to={`/opo/${opos
+                .find(opo => opo.name === props.value)
+                ?.abbreviation.trim()}`}
             >
-              {props.value} ({opos.find(opo => opo.name === props.value)?.abbreviation})
+              {props.value} (
+              {opos.find(opo => opo.name === props.value)?.abbreviation})
             </Link>
           ),
         };
@@ -40,28 +39,30 @@ export default function OpoTable({
           Cell: props => {
             const states = props.value.split(",");
             return states.map((s, idx) => (
-              <>
-                <Link to={`/state/${s}`}>{s}</Link>
-                {idx === states.length - 1 ? '' : ', '}
-              </>
-            ))
-          }
-        }
-      }else if(accessor === "shadow") {
+              <React.Fragment key={s}>
+                <Link to={`/state/${s.trim()}`}>{s}</Link>
+                {idx === states.length - 1 ? "" : ", "}
+              </React.Fragment>
+            ));
+          },
+        };
+      } else if (accessor === "shadow") {
         return {
           ...col,
           cellClass: styles.shadows,
-          color: "red"  
+          color: "red",
         };
       } else if (accessor === "tier") {
         return {
           ...col,
           cellClass: styles.tierCol,
           Cell: props => (
-            <LegendItem 
+            <LegendItem
               className={styles.tierCol}
               text={props.value.split(" ")[1]}
-              background={OPO_PERFORMANCE_TIER_FILL[props.value.split(" ")[1]].fill}
+              background={
+                OPO_PERFORMANCE_TIER_FILL[props.value.split(" ")[1]].fill
+              }
             />
           ),
         };
@@ -83,12 +84,12 @@ export default function OpoTable({
   }, [headings, opos]);
 
   const captions = Object.values(headings)
-  .filter(heading => !!heading?.caption)
-  .map(heading => heading.caption);
+    .filter(heading => !!heading?.caption)
+    .map(heading => heading.caption);
 
   const data = useMemo(() => {
     const formatNumber = (num, options) =>
-      typeof num === "number" ? num.toLocaleString("en-US", options) : '--';  
+      typeof num === "number" ? num.toLocaleString("en-US", options) : "N/A";
 
     return opos.map(
       ({
@@ -127,13 +128,16 @@ export default function OpoTable({
     headerGroups,
     rows,
     prepareRow,
-  } = useTable({ 
-    columns,
-    data,
-    initialState: {
-      sortBy: [{ id: columns[0].accessor }]
-    }
-   }, useSortBy);
+  } = useTable(
+    {
+      columns,
+      data,
+      initialState: {
+        sortBy: [{ id: columns[0].accessor }],
+      },
+    },
+    useSortBy
+  );
 
   const table = (
     <Row className={styles.opoTable}>
@@ -187,11 +191,12 @@ export default function OpoTable({
           })}
         </tbody>
       </Table>
-      {captions?.length && (
+      {captions?.length &&
         captions.map(caption => (
-          <p className={styles.tableCaption}>* {caption}</p>
-        ))
-      )}
+          <p key={caption} className={styles.tableCaption}>
+            * {caption}
+          </p>
+        ))}
     </Row>
   );
 

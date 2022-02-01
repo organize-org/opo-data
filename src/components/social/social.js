@@ -23,7 +23,7 @@ export default function Social() {
     `
   );
 
-  const siteUrl = `${site.siteMetadata.url}${location.pathname}`;
+  const siteUrl = `${site.siteMetadata.url}${location.pathname}${location.hash ?? null}`;
   const encodedUrl = encodeURIComponent(siteUrl);
 
   function HoverIcon({ hoverColor, url }) {

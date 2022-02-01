@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { graphql } from "gatsby";
+import { graphql, navigate } from "gatsby";
 import { Row, Col, ButtonGroup, Button } from "react-bootstrap";
 import { ArrowRight } from "react-bootstrap-icons";
 import ReactMarkdown from "react-markdown";
@@ -13,14 +13,14 @@ import MainMap from "../components/map/mainMap";
 import Social from "../components/social/social";
 import QuoteWithImage from "../components/quoteWithImage/quoteWithImage";
 
-import News from '../images/icons/news.svg';
-import Data from '../images/icons/data.svg';
-import Performance from '../images/icons/performance.svg';
+import News from "../images/icons/news.svg";
+import Data from "../images/icons/data.svg";
+import Performance from "../images/icons/performance.svg";
 
 import * as styles from "./index.module.css";
 import content from "./index.content.yml";
 
-export default function Dashboard({ data: { articleImages } }) {
+export default function Dashboard({ location, data: { articleImages } }) {
   const { mapContent, articles, stats, quote, video } = content;
   const articleImgsByPath = articleImages?.edges?.reduce(
     (imgMap, { node }) => ({
@@ -30,50 +30,93 @@ export default function Dashboard({ data: { articleImages } }) {
     {}
   );
 
-  const [mapView, setMapView] = useState('opoPerformance');
+  const [mapView, setMapView] = useState(
+    location?.hash ? location.hash.substring(1) : "opo-performance"
+  );
+
+  useEffect(() => {
+    if (
+      ![
+        "",
+        "#opo-performance",
+        "#congressional-investigations",
+        "#black-procurement-disparities",
+      ].includes(location?.hash)
+    )
+      navigate("/");
+    setMapView(location?.hash ? location.hash.substring(1) : "opo-performance");
+  }, [location]);
 
   // For whatever reason on initial load the map is not rendered correctly
   // (something to do with the map container not rendering on initial load, so map is incorrectly sized)
   // Quick hack fix is force map to re-render by using a counter state obj as component key
   const [rerenderMap, setRerenderMap] = useState(0);
   useEffect(() => {
-    if(rerenderMap === 0) setRerenderMap(r => r + 1);
-  }, [rerenderMap])
+    if (rerenderMap === 0) setRerenderMap(r => r + 1);
+  }, [rerenderMap]);
 
   return (
     <Layout className={styles.index}>
       <Social />
       <Row className={styles.topBar}>
         <Col className={styles.topHeader}>
-          <h2> <Data />Data on U.S. Organ Procurement Organizations (OPO)</h2>
+          <h2>
+            {" "}
+            <Data />
+            Data on U.S. Organ Procurement Organizations (OPO)
+          </h2>
         </Col>
       </Row>
 
       <Row className={styles.mapToggleButtons}>
         <Col xs={12} lg={8}>
           <ButtonGroup>
-            <Button variant="outline-secondary" className={styles.mapToggleButtons} active={mapView==='opoPerformance'} onClick={() => setMapView('opoPerformance')}>OPO Performance</Button>
-            <Button variant="outline-secondary" className={styles.mapToggleButtons} active={mapView==='congressionalInvestigation'} onClick={() => setMapView('congressionalInvestigation')}>Congressional Investigations</Button>
-            <Button variant="outline-secondary" className={styles.mapToggleButtons} active={mapView==='blackProcurementDisparity'} onClick={() => setMapView('blackProcurementDisparity')}>Black Procurement Disparities</Button>
+            <Button
+              variant="outline-secondary"
+              className={styles.mapToggleButtons}
+              active={mapView === "opo-performance"}
+              onClick={() => navigate("/")}
+            >
+              OPO Performance
+            </Button>
+            <Button
+              variant="outline-secondary"
+              className={styles.mapToggleButtons}
+              active={mapView === "congressional-investigations"}
+              onClick={() => navigate("/#congressional-investigations")}
+            >
+              Congressional Investigations
+            </Button>
+            <Button
+              variant="outline-secondary"
+              className={styles.mapToggleButtons}
+              active={mapView === "black-procurement-disparities"}
+              onClick={() => navigate("/#black-procurement-disparities")}
+            >
+              Black Procurement Disparities
+            </Button>
           </ButtonGroup>
         </Col>
         <Col>
-          <SelectState opo={mapView  !== 'opoPerformance'} />
+          <SelectState opo={mapView !== "opo-performance"} />
         </Col>
       </Row>
       {/* Map content (specific to current map view) */}
       <Row className={styles.mapIntroContent}>
         <ReactMarkdown>{mapContent[mapView]}</ReactMarkdown>
       </Row>
-      <MainMap key={rerenderMap} mapView={mapView}/>
+      <MainMap key={rerenderMap} mapView={mapView} />
 
       <Col className={styles.secondHeader} xs={12} lg={6}>
-        <h2><Performance />Cost of OPO Performance Failures</h2>
+        <h2>
+          <Performance />
+          Cost of OPO Performance Failures
+        </h2>
       </Col>
       <Row className={styles.statsSection}>
         {Object.values(stats).map(({ title, value }) => (
           <Col key={title}>
-            <Row  className={styles.statsHeaders}>
+            <Row className={styles.statsHeaders}>
               <h3>
                 <ReactMarkdown>{title}</ReactMarkdown>
               </h3>
@@ -90,12 +133,11 @@ export default function Dashboard({ data: { articleImages } }) {
         <QuoteWithImage quote={quote} />
       </Row>
       <EquitySection />
-      <Col
-        className={styles.secondHeader}
-        xs={10}
-        md={5}
-      >
-        <h2><News />Organ donation in the news</h2>
+      <Col className={styles.secondHeader} xs={10} md={5}>
+        <h2>
+          <News />
+          Organ donation in the news
+        </h2>
       </Col>
       <Row className={styles.videoSection}>
         <Col>
@@ -150,7 +192,11 @@ export const query = graphql`
         node {
           relativePath
           childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, height: 240, formats: [AUTO, WEBP, AVIF])
+            gatsbyImageData(
+              placeholder: BLURRED
+              height: 240
+              formats: [AUTO, WEBP, AVIF]
+            )
           }
         }
       }

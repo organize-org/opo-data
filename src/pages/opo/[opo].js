@@ -8,7 +8,10 @@ import Layout from "../../components/layout/layout";
 import SelectState from "../../components/selectState/selectState";
 import OpoTable from "../../components/opoTable/opoTable";
 import ThumnailMap from "../../components/map/thumbnailMap";
-import { LegendItem, OPO_PERFORMANCE_TIER_FILL } from "../../components/map/legend";
+import {
+  LegendItem,
+  OPO_PERFORMANCE_TIER_FILL,
+} from "../../components/map/legend";
 import {
   formatName,
   formatOPORank,
@@ -17,8 +20,8 @@ import {
   getRankedOPOCount,
 } from "../../utils/utils";
 
-import News from '../../images/icons/news.svg';
-import Data from '../../images/icons/data.svg';
+import News from "../../images/icons/news.svg";
+import Data from "../../images/icons/data.svg";
 
 import useDataMaps from "../../hooks/useDataMaps";
 import stateContent from "../state/[state].content.yml";
@@ -26,7 +29,6 @@ import { BoxArrowUpRight } from "react-bootstrap-icons";
 import opoContent from "./[opo].content.yml";
 
 import * as styles from "./opo.module.css";
-
 
 export default function Opo({ opo }) {
   const [{ opoDataMap }] = useDataMaps();
@@ -45,23 +47,24 @@ export default function Opo({ opo }) {
     note.tags?.includes(opo.toUpperCase())
   );
 
-  const opoTakeaways = takeaways.filter(takeaway => 
-    takeaway.opo === opo.toUpperCase()
+  const opoTakeaways = takeaways.filter(
+    takeaway => takeaway.opo === opo.toUpperCase()
   );
 
-  const opoVideos = videos?.filter(video => 
+  const opoVideos = videos?.filter(video =>
     video.tags?.includes(opo.toUpperCase())
   );
 
   // All states serviced by this OPO
   const thisOPOStates = Object.keys(opoData.statesWithRegions);
   // All opos servicing these same states (for comparison)
-  // TODO: if OPO services only one state, compare to OPOs servicing 
+  // TODO: if OPO services only one state, compare to OPOs servicing
   // bordering states (see [state].js line)
   //   - All opos servicing bordering states if this OPO only services one
 
-  const comparisonOPOs = Object.values(opoDataMap)
-    .filter(opo => thisOPOStates.some(s => !!opo.statesWithRegions[s]))
+  const comparisonOPOs = Object.values(opoDataMap).filter(opo =>
+    thisOPOStates.some(s => !!opo.statesWithRegions[s])
+  );
 
   const ethnicityKeys = {
     nhw_: "Non-Hispanic White",
@@ -80,10 +83,11 @@ export default function Opo({ opo }) {
     return [...acc, formattedData];
   }, []);
 
-  // Only include state headings in sources if the state comparison 
+  // Only include state headings in sources if the state comparison
   // table will be displayed on the page (if inStateOpos.length > 0)
   let contentSources = [stats, opoHeadings];
-  if (comparisonOPOs.length > 0) contentSources = contentSources.concat(stateHeadings);
+  if (comparisonOPOs.length > 0)
+    contentSources = contentSources.concat(stateHeadings);
 
   return (
     <Layout
@@ -99,14 +103,17 @@ export default function Opo({ opo }) {
         </Row>
         <Row className={styles.region}>
           <Col>
-            Region: <strong>
+            Region:{" "}
+            <strong>
               {Object.entries(opoData.statesWithRegions).map(
                 ([state, region], idx) => {
-                  const regionStr = !!region
-                    ? `${state}: ${region}`
-                    : state
-                  
-                  return `${regionStr}${idx === Object.keys(opoData.statesWithRegions).length - 1 ? '' : ', '}`;
+                  const regionStr = !!region ? `${state}: ${region}` : state;
+
+                  return `${regionStr}${
+                    idx === Object.keys(opoData.statesWithRegions).length - 1
+                      ? ""
+                      : ", "
+                  }`;
                 }
               )}
             </strong>
@@ -138,7 +145,9 @@ export default function Opo({ opo }) {
               <Col>
                 <LegendItem
                   className={styles[opoData.tier.split(" ")[1]]}
-                  background={OPO_PERFORMANCE_TIER_FILL[opoData.tier.split(" ")[1]].fill}
+                  background={
+                    OPO_PERFORMANCE_TIER_FILL[opoData.tier.split(" ")[1]].fill
+                  }
                   text={`Tier ${opoData.tier.split(" ").join(" - ")}`}
                 />
               </Col>
@@ -146,7 +155,12 @@ export default function Opo({ opo }) {
             <Row className={styles.statsHeading}>
               <Col>
                 <h3>
-                  <ReactMarkdown>{stats.rank.title.replace(/XX/, getRankedOPOCount(opoDataMap))}</ReactMarkdown>
+                  <ReactMarkdown>
+                    {stats.rank.title.replace(
+                      /XX/,
+                      getRankedOPOCount(opoDataMap)
+                    )}
+                  </ReactMarkdown>
                 </h3>
               </Col>
               <Col>
@@ -168,10 +182,18 @@ export default function Opo({ opo }) {
                 <p className="red">{formatNumber(opoData.shadows)}</p>
               </Col>
               <Col>
-                  {!!opoData.investigation
-                    ? <a href={opoData.investigation_url} target="_blank" rel="noreferrer"> Yes <BoxArrowUpRight /> </a>
-                    : <p>No</p>
-                  }
+                {!!opoData.investigation ? (
+                  <a
+                    href={opoData.investigation_url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {" "}
+                    Yes <BoxArrowUpRight />{" "}
+                  </a>
+                ) : (
+                  <p>No</p>
+                )}
               </Col>
             </Row>
             <div className={styles.statsDivider}></div>
@@ -202,46 +224,41 @@ export default function Opo({ opo }) {
       </Row>
       <div className={styles.opoContent}>
         {/* Headlines about OPO */}
-        {(opoHeadlines?.length || opoTakeaways?.length || opoVideos.length)
-          ? <h2 className={styles.sectionHeader}>
-              <News />
-              ABOUT THIS OPO
-            </h2>
-          : null
-        }
+        {opoHeadlines?.length || opoTakeaways?.length || opoVideos.length ? (
+          <h2 className={styles.sectionHeader}>
+            <News />
+            ABOUT THIS OPO
+          </h2>
+        ) : null}
         <Row className={styles.about}>
-          {opoTakeaways?.length
-            ? (
-              <>
-                <h3>Key takeaways for {opoData.name}</h3>
-                <Row>
-                  <ul>
-                    {opoTakeaways.map(({ body }, i) => (
-                      <li key={`opo-takeaway-${i}`}>
-                        <ReactMarkdown>{body}</ReactMarkdown>
-                      </li>
-                    ))}
-                  </ul>
-                </Row>
-              </>
-            ): null
-          }
-          {opoHeadlines?.length 
-            ? (
-              <>
-                <h3>News and notes</h3>
-                <Row>
-                  <ul>
-                    {opoHeadlines.map(({ note }, i) => (
-                      <li key={`statewide-note-${i}`}>
-                        <ReactMarkdown>{note}</ReactMarkdown>
-                      </li>
-                    ))}
-                  </ul>
-                </Row>
-              </>
-            ): null
-          }
+          {opoTakeaways?.length ? (
+            <>
+              <h3>Key takeaways for {opoData.name}</h3>
+              <Row>
+                <ul>
+                  {opoTakeaways.map(({ body }, i) => (
+                    <li key={`opo-takeaway-${i}`}>
+                      <ReactMarkdown>{body}</ReactMarkdown>
+                    </li>
+                  ))}
+                </ul>
+              </Row>
+            </>
+          ) : null}
+          {opoHeadlines?.length ? (
+            <>
+              <h3>News and notes</h3>
+              <Row>
+                <ul>
+                  {opoHeadlines.map(({ note }, i) => (
+                    <li key={`statewide-note-${i}`}>
+                      <ReactMarkdown>{note}</ReactMarkdown>
+                    </li>
+                  ))}
+                </ul>
+              </Row>
+            </>
+          ) : null}
           {opoVideos?.length
             ? opoVideos.map(({ link, title, description }, i) => (
                 <Row key={`opo-videos-${i}`} className={styles.video}>
@@ -256,12 +273,12 @@ export default function Opo({ opo }) {
               ))
             : null}
         </Row>
-        {(opoHeadlines?.length || opoTakeaways?.length)
-          ? <hr />
-          : null
-        }
+        {opoHeadlines?.length || opoTakeaways?.length ? <hr /> : null}
         {/* Ethnicity data */}
-        <h2 className={styles.sectionHeader}> <Data /> OPO DATA</h2>
+        <h2 className={styles.sectionHeader}>
+          {" "}
+          <Data /> OPO DATA
+        </h2>
         <Row className={styles.opoTables}>
           <Row>
             {ethnicityData.length > 0 && (

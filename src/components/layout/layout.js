@@ -7,9 +7,15 @@ import Navbar from "../navbar/navbar";
 import Footer from "../footer/footer";
 
 import * as styles from "./layout.module.css";
-import Additional from '../../images/icons/additional.svg';
+import Additional from "../../images/icons/additional.svg";
 
-export default function Layout({ crumbLabel, children, contentWithSources, social, className }) {
+export default function Layout({
+  crumbLabel,
+  children,
+  contentWithSources,
+  social,
+  className,
+}) {
   // Compose sources list from all provided content,
   // taking all objects with `source` defined.
   // Then sort based on numerical footnote included in the content title
@@ -18,18 +24,16 @@ export default function Layout({ crumbLabel, children, contentWithSources, socia
     .reduce((withSources, contentObj) => {
       return [
         ...withSources,
-        ...Object.values(contentObj).filter(({ source }) => !!source)
-      ]
+        ...Object.values(contentObj).filter(({ source }) => !!source),
+      ];
     }, [])
     .sort((a, b) => {
-      const aNum = parseInt(a?.title?.match(footnoteRegex)?.[1])
-      const bNum = parseInt(b?.title?.match(footnoteRegex)?.[1])
+      const aNum = parseInt(a?.title?.match(footnoteRegex)?.[1]);
+      const bNum = parseInt(b?.title?.match(footnoteRegex)?.[1]);
 
-      if (aNum === undefined
-        || bNum === undefined
-        || aNum === bNum) return 0;
+      if (aNum === undefined || bNum === undefined || aNum === bNum) return 0;
       return aNum - bNum;
-    })
+    });
 
   return (
     <Container fluid className={className}>
@@ -49,7 +53,10 @@ export default function Layout({ crumbLabel, children, contentWithSources, socia
         <div className={styles.sources}>
           <hr />
           <Row>
-            <h2 className={styles.sectionHeader}> <Additional /> ADDITIONAL INFORMATION</h2>
+            <h2 className={styles.sectionHeader}>
+              {" "}
+              <Additional /> ADDITIONAL INFORMATION
+            </h2>
             <ol>
               {sources.map(({ source }, idx) => (
                 <li id={`sources-${idx + 1}`} key={`sources-${idx + 1}`}>

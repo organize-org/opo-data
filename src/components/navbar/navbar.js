@@ -3,13 +3,12 @@ import { Navbar, Nav } from "react-bootstrap";
 
 import { StaticImage } from "gatsby-plugin-image";
 
-import MobileMenu from '../../images/icons/mobile-menu.svg';
-import MobileX from '../../images/icons/mobile-x.svg';
+import MobileMenu from "../../images/icons/mobile-menu.svg";
+import MobileX from "../../images/icons/mobile-x.svg";
 
 import * as styles from "./navbar.module.css";
 
 export default function Navigation() {
-
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   return (
@@ -28,16 +27,12 @@ export default function Navigation() {
         </Nav.Link>
       </Navbar.Brand>
       <section
-        className={
-          menuIsOpen
-            ? styles.mobileTitleClose
-            : styles.mobileTitle
-        }
+        className={menuIsOpen ? styles.mobileTitleClose : styles.mobileTitle}
       >
         <Navbar.Toggle
           aria-controls="basic-navbar-nav"
           className={styles.navToggle}
-          onClick={() => setMenuIsOpen((isOpen) => !isOpen)}
+          onClick={() => setMenuIsOpen(isOpen => !isOpen)}
         >
           <h1>Menu</h1>
           {menuIsOpen ? <MobileX alt="close" /> : <MobileMenu alt="expand" />}

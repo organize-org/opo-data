@@ -10,18 +10,12 @@ import SelectState from "../../components/selectState/selectState";
 import OpoTable from "../../components/opoTable/opoTable";
 import ThumbnailMap from "../../components/map/thumbnailMap";
 
+import News from "../../images/icons/news.svg";
+import Data from "../../images/icons/data.svg";
 
-import News from '../../images/icons/news.svg';
-import Data from '../../images/icons/data.svg';
-
-import {
-  findStateFeature,
-  formatName,
-  formatNumber,
-} from "../../utils/utils";
+import { findStateFeature, formatName, formatNumber } from "../../utils/utils";
 import useDataMaps from "../../hooks/useDataMaps";
 import content from "./[state].content.yml";
-
 
 import * as styles from "./state.module.css";
 
@@ -77,10 +71,7 @@ export default function State({ data: { statesGeoData }, state }) {
         // Out of state (but nearby)
         return {
           ...filter,
-          outOfStateOpos: [
-            ...filter.outOfStateOpos,
-            opo
-          ],
+          outOfStateOpos: [...filter.outOfStateOpos, opo],
         };
       } else {
         // Else, not nearby
@@ -115,7 +106,7 @@ export default function State({ data: { statesGeoData }, state }) {
 
   return (
     <Layout
-      crumbLabel={formatName(stateData, { includeAbbreviation: false})}
+      crumbLabel={formatName(stateData, { includeAbbreviation: false })}
       // sources must be in order they appear on the page
       contentWithSources={[stats, headings]}
       social={true}
@@ -123,7 +114,9 @@ export default function State({ data: { statesGeoData }, state }) {
       {/* State name, top-level stats, select state menu, and map */}
       <Row className={styles.hero}>
         <Row>
-          <h2 className={styles.title}>{formatName(stateData, { includeAbbreviation: false })}</h2>
+          <h2 className={styles.title}>
+            {formatName(stateData, { includeAbbreviation: false })}
+          </h2>
         </Row>
         <Row className={styles.serviceState}>
           <span>
@@ -187,13 +180,13 @@ export default function State({ data: { statesGeoData }, state }) {
       <div className={styles.stateContent}>
         {/* OPOs servicing state */}
         <h2 className={styles.sectionHeader}>
-          <News/>
+          <News />
           OPOS IN THIS STATE
         </h2>
         <Row className={styles.serviceTable}>
           <OpoTable
             // suppress state column in the in-state OPO table
-            headings={{...headings, states: null}}
+            headings={{ ...headings, states: null }}
             opos={inStateOpos}
             title={`OPOs Operating in ${stateData.name}`}
           />
@@ -201,7 +194,7 @@ export default function State({ data: { statesGeoData }, state }) {
         {/* News & notes (if exists) */}
         {stateData?.notes?.length > 0 && (
           <Row className={styles.news}>
-              <h3>OPO news and notes in {stateData.name}</h3>
+            <h3>OPO news and notes in {stateData.name}</h3>
             <Row>
               <ul>
                 {stateData.notes.map(({ note }, i) => (
@@ -247,18 +240,20 @@ export default function State({ data: { statesGeoData }, state }) {
         ) : null}
         {/* OPOs in neighboring states (if exists) */}
         <hr />
-        <h2 className={styles.sectionHeader}> <Data /> STATE DATA</h2>
+        <h2 className={styles.sectionHeader}>
+          {" "}
+          <Data /> STATE DATA
+        </h2>
         {outOfStateOpos.length > 0 && (
           <Row className={styles.serviceTable}>
             <OpoTable
               // pull states column to front and supress region column
-              headings={{states: null, ...headings, region: null} }
+              headings={{ states: null, ...headings, region: null }}
               opos={outOfStateOpos}
               title="OPO Performance in Neighboring States"
               captions={Object.values(headings)
                 .filter(heading => !!heading.caption)
-                .map(heading => heading.caption)
-              }
+                .map(heading => heading.caption)}
             />
           </Row>
         )}
