@@ -182,7 +182,7 @@ const OPO_LABEL_OFFSETS = {
     CORS: [35, 120],
   },
   DC: {
-    DCTC: [250,-40]
+    DCTC: [250, -40],
   },
   DE: {
     PADV: [50, 120],
@@ -195,7 +195,7 @@ const OPO_LABEL_OFFSETS = {
     WALC: [350, -625],
   },
   IL: {
-    WIUW: [0, 50]
+    WIUW: [0, 50],
   },
   IN: {
     KYDA: [0, -30],
@@ -206,7 +206,7 @@ const OPO_LABEL_OFFSETS = {
   MA: {
     MAOB: [120, -120],
     CTOP: [0, -30],
-    NYAP: [75, 40]
+    NYAP: [75, 40],
   },
   MD: {
     MDPC: [10, -20],
@@ -233,7 +233,7 @@ const OPO_LABEL_OFFSETS = {
     PATF: [0, 20],
   },
   OH: {
-    KYDA: [65,-45]
+    KYDA: [65, -45],
   },
   PA: {
     PATF: [-100, 20],
