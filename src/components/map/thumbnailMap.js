@@ -83,7 +83,7 @@ export default function ThumnailMap({
               ]}
               scrollWheelZoom={false}
               style={{ ...dimensions, backgroundColor: "#fff" }}
-              // zoomControl={false}
+              zoomControl={false}
               touchZoom={false}
               // dragging={false}
               className={styles.mapContainer + " thumbnail"}
@@ -211,7 +211,7 @@ const OPO_LABEL_OFFSETS = {
     MNOP: [20, 0],
   },
   MT: {
-    WALC: [300, -650],
+    WALC: [450, -650],
   },
   ND: {
     MNOP: [-90, -60],
@@ -243,7 +243,7 @@ const OPO_LABEL_OFFSETS = {
   },
   WA: {
     ORUO: [50, -95],
-    WALC: [100, -1300],
+    WALC: [500, -1300],
   },
   WI: {
     MNOP: [40, 0],
