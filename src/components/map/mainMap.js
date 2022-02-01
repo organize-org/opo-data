@@ -164,11 +164,11 @@ const getMapFill = (view, feature) => {
     return getStateMapFill(feature);
   }
 
-  if (view === "blackProcurementDisparity") {
+  if (view === "black-procurement-disparity") {
     return getBlackDonorMapFill(feature);
   }
 
-  if (view === "congressionalInvestigation") {
+  if (view === "congressional-investigations") {
     return getCongressionalInvestigationFill(feature);
   }
 };
@@ -220,7 +220,7 @@ const getToolTipContent = (view, id, stateDataMap, opoDataMap) => {
       }</strong></p>`;
   }
 
-  if (view === "blackProcurementDisparity") {
+  if (view === "black-procurement-disparity") {
     return `
         <p>Organ Procurement Rate: <strong>${
           opoDataMap[id].nhb_recovery ?? "N/A"

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { graphql } from "gatsby";
+import { graphql, navigate } from "gatsby";
 import { Row, Col, ButtonGroup, Button } from "react-bootstrap";
 import { ArrowRight } from "react-bootstrap-icons";
 import ReactMarkdown from "react-markdown";
@@ -20,7 +20,7 @@ import Performance from "../images/icons/performance.svg";
 import * as styles from "./index.module.css";
 import content from "./index.content.yml";
 
-export default function Dashboard({ data: { articleImages } }) {
+export default function Dashboard({ location, data: { articleImages } }) {
   const { mapContent, articles, stats, quote, video } = content;
   const articleImgsByPath = articleImages?.edges?.reduce(
     (imgMap, { node }) => ({
@@ -30,7 +30,14 @@ export default function Dashboard({ data: { articleImages } }) {
     {}
   );
 
-  const [mapView, setMapView] = useState("opoPerformance");
+  const [mapView, setMapView] = useState(
+    location?.hash ? location.hash.substring(1) : "opoPerformance"
+  );
+
+  useEffect(() => {
+    setMapView(location?.hash ? location.hash.substring(1) : "opoPerformance");
+  }, [location]);
+
 
   // For whatever reason on initial load the map is not rendered correctly
   // (something to do with the map container not rendering on initial load, so map is incorrectly sized)
@@ -60,23 +67,23 @@ export default function Dashboard({ data: { articleImages } }) {
               variant="outline-secondary"
               className={styles.mapToggleButtons}
               active={mapView === "opoPerformance"}
-              onClick={() => setMapView("opoPerformance")}
+              onClick={() => navigate("/")}
             >
               OPO Performance
             </Button>
             <Button
               variant="outline-secondary"
               className={styles.mapToggleButtons}
-              active={mapView === "congressionalInvestigation"}
-              onClick={() => setMapView("congressionalInvestigation")}
+              active={mapView === "congressional-investigations"}
+              onClick={() => navigate("/#congressional-investigations")}
             >
               Congressional Investigations
             </Button>
             <Button
               variant="outline-secondary"
               className={styles.mapToggleButtons}
-              active={mapView === "blackProcurementDisparity"}
-              onClick={() => setMapView("blackProcurementDisparity")}
+              active={mapView === "black-procurement-disparity"}
+              onClick={() => navigate("/#black-procurement-disparity")}
             >
               Black Procurement Disparities
             </Button>

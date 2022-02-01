@@ -15,14 +15,14 @@ mapContent:
     color. The map below shows the current ranking of U.S. OPOs by location,
     based on the most recent data available (2019). [Find more information
     here](https://www.cms.gov/newsroom/fact-sheets/organ-procurement-organization-opo-conditions-coverage-final-rule-revisions-outcome-measures-opos)
-  blackProcurementDisparity: Publicly available data shows a 10-fold difference
+  black-procurement-disparity: Publicly available data shows a 10-fold difference
     around the country in OPO procurement of organs from Black donors. Research
     also shows [differential
     treatment](https://www.healthaffairs.org/do/10.1377/forefront.20201211.229975/full/)
     by OPOs towards families of Black versus white donors. [Read the article
     from Axios covering this
     issue.](https://www.axios.com/organ-donation-recovery-worse-people-of-color-8d42a213-4ef7-48a3-85fb-dd15cfc4301b.html)
-  congressionalInvestigation: >-
+  congressional-investigations: >-
     The House Oversight Committee is investigating 17 OPOs for “shocking
     mismanagement”, among other conflicts and abuses. In parallel, the Senate
     Finance Committee is also conducting a bipartisan investigation into the

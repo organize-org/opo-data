@@ -7,12 +7,12 @@ export default function Legend({ mapView }) {
   let legendHeader = "OPO Performance Tier";
   let legendItems = OPO_PERFORMANCE_TIER_FILL;
 
-  if (mapView === "congressionalInvestigation") {
+  if (mapView === "congressional-investigations") {
     legendHeader = "Under House Oversight Investigation";
     legendItems = CONGRESSIONAL_INVESTIGATION_FILL;
   }
 
-  if (mapView === "blackProcurementDisparity") {
+  if (mapView === "black-procurement-disparity") {
     legendHeader = " Procurement Rate (2019)";
     legendItems = BLACK_DONOR_DISPARITY_FILL;
   }
