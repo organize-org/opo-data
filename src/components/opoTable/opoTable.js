@@ -28,7 +28,7 @@ export default function OpoTable({
           ...col,
           Cell: props => (
             <Link
-              to={`/opo/${opos.find(opo => opo.name === props.value)?.abbreviation}`}
+              to={`/opo/${opos.find(opo => opo.name === props.value)?.abbreviation.trim()}`}
             >
               {props.value} ({opos.find(opo => opo.name === props.value)?.abbreviation})
             </Link>
@@ -41,7 +41,7 @@ export default function OpoTable({
             const states = props.value.split(",");
             return states.map((s, idx) => (
               <>
-                <Link to={`/state/${s}`}>{s}</Link>
+                <Link to={`/state/${s.trim()}`}>{s}</Link>
                 {idx === states.length - 1 ? '' : ', '}
               </>
             ))
@@ -51,14 +51,14 @@ export default function OpoTable({
         return {
           ...col,
           cellClass: styles.shadows,
-          color: "red"  
+          color: "red"
         };
       } else if (accessor === "tier") {
         return {
           ...col,
           cellClass: styles.tierCol,
           Cell: props => (
-            <LegendItem 
+            <LegendItem
               className={styles.tierCol}
               text={props.value.split(" ")[1]}
               background={OPO_PERFORMANCE_TIER_FILL[props.value.split(" ")[1]].fill}
@@ -88,7 +88,7 @@ export default function OpoTable({
 
   const data = useMemo(() => {
     const formatNumber = (num, options) =>
-      typeof num === "number" ? num.toLocaleString("en-US", options) : '--';  
+      typeof num === "number" ? num.toLocaleString("en-US", options) : '--';
 
     return opos.map(
       ({
@@ -127,7 +127,7 @@ export default function OpoTable({
     headerGroups,
     rows,
     prepareRow,
-  } = useTable({ 
+  } = useTable({
     columns,
     data,
     initialState: {
