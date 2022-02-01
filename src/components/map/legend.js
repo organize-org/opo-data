@@ -12,7 +12,7 @@ export default function Legend({ mapView }) {
     legendItems = CONGRESSIONAL_INVESTIGATION_FILL;
   }
 
-  if (mapView === "black-procurement-disparity") {
+  if (mapView === "black-procurement-disparities") {
     legendHeader = " Procurement Rate (2019)";
     legendItems = BLACK_DONOR_DISPARITY_FILL;
   }

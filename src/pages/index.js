@@ -31,13 +31,21 @@ export default function Dashboard({ location, data: { articleImages } }) {
   );
 
   const [mapView, setMapView] = useState(
-    location?.hash ? location.hash.substring(1) : "opoPerformance"
+    location?.hash ? location.hash.substring(1) : "opo-performance"
   );
 
   useEffect(() => {
-    setMapView(location?.hash ? location.hash.substring(1) : "opoPerformance");
+    if (
+      ![
+        "",
+        "#opo-performance",
+        "#congressional-investigations",
+        "#black-procurement-disparities",
+      ].includes(location?.hash)
+    )
+      navigate("/");
+    setMapView(location?.hash ? location.hash.substring(1) : "opo-performance");
   }, [location]);
-
 
   // For whatever reason on initial load the map is not rendered correctly
   // (something to do with the map container not rendering on initial load, so map is incorrectly sized)
@@ -66,7 +74,7 @@ export default function Dashboard({ location, data: { articleImages } }) {
             <Button
               variant="outline-secondary"
               className={styles.mapToggleButtons}
-              active={mapView === "opoPerformance"}
+              active={mapView === "opo-performance"}
               onClick={() => navigate("/")}
             >
               OPO Performance
@@ -82,15 +90,15 @@ export default function Dashboard({ location, data: { articleImages } }) {
             <Button
               variant="outline-secondary"
               className={styles.mapToggleButtons}
-              active={mapView === "black-procurement-disparity"}
-              onClick={() => navigate("/#black-procurement-disparity")}
+              active={mapView === "black-procurement-disparities"}
+              onClick={() => navigate("/#black-procurement-disparities")}
             >
               Black Procurement Disparities
             </Button>
           </ButtonGroup>
         </Col>
         <Col>
-          <SelectState opo={mapView !== "opoPerformance"} />
+          <SelectState opo={mapView !== "opo-performance"} />
         </Col>
       </Row>
       {/* Map content (specific to current map view) */}

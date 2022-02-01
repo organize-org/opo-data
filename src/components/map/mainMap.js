@@ -101,7 +101,7 @@ export default function MainMap({ mapView }) {
                   and add hover tool tip and click action */}
               <GeoJSON
                 key="boundary-and-tooltip"
-                data={mapView === "opoPerformance" ? stateGeoJson : opoGeoJson}
+                data={mapView === "opo-performance" ? stateGeoJson : opoGeoJson}
                 onEachFeature={(feature, layer) =>
                   layer.bindTooltip(
                     `<div class="${styles.tooltip}">
@@ -124,7 +124,7 @@ export default function MainMap({ mapView }) {
                   click: ({ propagatedFrom }) => {
                     navigate(
                       `/${
-                        mapView === "opoPerformance" ? "state" : "opo"
+                        mapView === "opo-performance" ? "state" : "opo"
                       }/${propagatedFrom?.feature?.properties?.abbreviation.trim()}`
                     );
                   },
@@ -160,11 +160,11 @@ export default function MainMap({ mapView }) {
  * Get fill color for given feature based on map view
  */
 const getMapFill = (view, feature) => {
-  if (view === "opoPerformance") {
+  if (view === "opo-performance") {
     return getStateMapFill(feature);
   }
 
-  if (view === "black-procurement-disparity") {
+  if (view === "black-procurement-disparities") {
     return getBlackDonorMapFill(feature);
   }
 
@@ -205,7 +205,7 @@ const getCongressionalInvestigationFill = feature => {
  * TODO: What should be in black donor and congressional review tool tip?
  */
 const getToolTipContent = (view, id, stateDataMap, opoDataMap) => {
-  if (view === "opoPerformance") {
+  if (view === "opo-performance") {
     return `
       <p>State waiting list: <strong>${
         stateDataMap[id].waitlist ?? "N/A"
@@ -220,7 +220,7 @@ const getToolTipContent = (view, id, stateDataMap, opoDataMap) => {
       }</strong></p>`;
   }
 
-  if (view === "black-procurement-disparity") {
+  if (view === "black-procurement-disparities") {
     return `
         <p>Organ Procurement Rate: <strong>${
           opoDataMap[id].nhb_recovery ?? "N/A"

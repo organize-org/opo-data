@@ -139,7 +139,7 @@ module.exports = {
                         fields: [
                           {
                             label: "OPO performance disparity map",
-                            name: "opoPerformance",
+                            name: "opo-performance",
                             widget: "markdown",
                           },
                           {
