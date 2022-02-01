@@ -209,10 +209,6 @@ notes:
       "ARORA’s top executive steps down amid federal organ donation reforms"'
     tags:
       - AROR
-  - voicesForReform: false
-    note: Failing (Tier 3) [in 2019](https://qcor.cms.gov/main.jsp)
-    tags:
-      - CAOP
   - voicesForReform: true
     note: "[Seth Karp and Greg
       Segal](https://www.thehastingscenter.org/new-regulation-for-organ-procure\
@@ -681,52 +677,6 @@ notes:
       $959,263"
     tags:
       - WIDN
-  - voicesForReform: false
-    note: "CEO compensation
-      ([2018](https://projects.propublica.org/nonprofits/display_990/760231238/\
-      02_2020_prefixes_76-81%2F760231238_201812_990_2020020617119321)):
-      $478,522"
-    tags:
-      - TXGC
-  - voicesForReform: false
-    note: "CEO compensation
-      ([2019](https://projects.propublica.org/nonprofits/display_990/741849716/\
-      10_2020_prefixes_68-74%2F741849716_201912_990_2020102117395103)):
-      $343,738"
-    tags:
-      - TXSA
-  - voicesForReform: false
-    note: Underperforming (Tier 2) [in
-      2019](https://qcor.cms.gov/main.jsp)[](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
-    tags:
-      - SCOP
-  - voicesForReform: false
-    note: "CEO compensation
-      ([2019](https://projects.propublica.org/nonprofits/display_990/570875658/\
-      01_2021_prefixes_54-58%2F570875658_201912_990_2021012117620744)):
-      $290,965"
-    tags:
-      - SCOP
-  - voicesForReform: false
-    note: Underperforming (Tier 2) [in
-      2019](https://qcor.cms.gov/main.jsp)[](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
-    tags:
-      - PRLL
-  - voicesForReform: false
-    note: "CEO compensation
-      ([2019](https://pdf.guidestar.org/PDF_Images/2020/592/193/2020-592193032-\
-      202101319349303525-9.pdf?_gl=1*tt6su*_ga*NDE3MTU5ODg3LjE2MjYyNjczMjQ.*_ga\
-      _0H865XH5JK*MTYyOTc0MzE3Ny4xMC4xLjE2Mjk3NDMyMDkuMA..*_ga_5W8PXYYGBX*MTYyO\
-      Tc0MzE3Ny4xMC4xLjE2Mjk3NDMyMDkuMA..&_ga=2.118075401.1837771540.1629743177\
-      -417159887.1626267324)): $648,021"
-    tags:
-      - PRLL
-  - voicesForReform: false
-    note: Underperforming (Tier
-      2)[](https://www.federalregister.gov/documents/2020/12/02/2020-26329/medicare-and-medicaid-programs-organ-procurement-organizations-conditions-for-coverage-revisions-to)
-      [in 2019](https://qcor.cms.gov/main.jsp)
-    tags:
-      - OKOP
   - voicesForReform: false
     note: "CEO compensation
       ([2018](https://projects.propublica.org/nonprofits/display_990/731281589/\
