@@ -79,9 +79,9 @@ export default function ThumnailMap({
               ]}
               scrollWheelZoom={false}
               style={{...dimensions,  backgroundColor: "#fff" }}
-              zoomControl={false}
+              // zoomControl={false}
               touchZoom={false}
-              dragging={false}
+              // dragging={false}
               className={styles.mapContainer + " thumbnail"}
             >
               {/* Create layer for all state polygons with fill (to contextualize other geoms!) */}
@@ -178,7 +178,7 @@ const OPO_LABEL_OFFSETS = {
   },
   ID: {
     UTOP: [0, -50],
-    WALC: [80, -650]
+    WALC: [350, -625]
   },
   IN: {
     KYDA: [0, -30]
