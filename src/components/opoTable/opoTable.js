@@ -39,10 +39,10 @@ export default function OpoTable({ headings, opos, title }) {
           Cell: props => {
             const states = props.value.split(",");
             return states.map((s, idx) => (
-              <>
+              <React.Fragment key={s}>
                 <Link to={`/state/${s.trim()}`}>{s}</Link>
                 {idx === states.length - 1 ? "" : ", "}
-              </>
+              </React.Fragment>
             ));
           },
         };
@@ -193,7 +193,9 @@ export default function OpoTable({ headings, opos, title }) {
       </Table>
       {captions?.length &&
         captions.map(caption => (
-          <p className={styles.tableCaption}>* {caption}</p>
+          <p key={caption} className={styles.tableCaption}>
+            * {caption}
+          </p>
         ))}
     </Row>
   );
