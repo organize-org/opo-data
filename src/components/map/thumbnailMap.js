@@ -206,6 +206,7 @@ const OPO_LABEL_OFFSETS = {
   MA: {
     MAOB: [120, -120],
     CTOP: [0, -30],
+    NYAP: [75, 40]
   },
   MD: {
     MDPC: [10, -20],
