@@ -194,6 +194,9 @@ const OPO_LABEL_OFFSETS = {
     UTOP: [0, -50],
     WALC: [350, -625],
   },
+  IL: {
+    WIUW: [0, 50]
+  },
   IN: {
     KYDA: [0, -30],
   },
