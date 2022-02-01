@@ -181,6 +181,9 @@ const OPO_LABEL_OFFSETS = {
   CO: {
     CORS: [35, 120],
   },
+  DC: {
+    DCTC: [250,-40]
+  },
   DE: {
     PADV: [50, 120],
   },
