@@ -232,6 +232,9 @@ const OPO_LABEL_OFFSETS = {
   NY: {
     PATF: [0, 20],
   },
+  OH: {
+    KYDA: [65,-45]
+  },
   PA: {
     PATF: [-100, 20],
   },
