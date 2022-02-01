@@ -85,7 +85,7 @@ export default function ThumnailMap({
               style={{ ...dimensions, backgroundColor: "#fff" }}
               zoomControl={false}
               touchZoom={false}
-              // dragging={false}
+              dragging={false}
               className={styles.mapContainer + " thumbnail"}
             >
               {/* Create layer for all state polygons with fill (to contextualize other geoms!) */}
