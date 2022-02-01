@@ -25,7 +25,7 @@
 .opoTable td {
   font-size: 1rem;
   border: none !important;
-  padding: 2rem .75rem !important;
+  padding: 2rem 0.75rem !important;
 }
 
 .opoTable tbody tr .shadows {
@@ -34,7 +34,7 @@
 }
 
 .tableCaption {
-  font-size: .875rem;
+  font-size: 0.875rem;
   line-height: 1.5;
   font-weight: 400;
   margin-left: 0;
@@ -76,7 +76,7 @@ th p {
 }
 
 .header a {
-  font-size: .6rem;
+  font-size: 0.6rem;
   vertical-align: super;
 }
 

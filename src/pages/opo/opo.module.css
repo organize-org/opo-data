@@ -21,7 +21,7 @@ ul li p {
 .video {
   margin-top: 1rem;
   flex-direction: column;
-  margin-left: .5rem;
+  margin-left: 0.5rem;
 }
 
 .description {
@@ -58,7 +58,7 @@ ul li p {
 
 .map {
   margin-left: 0;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .map > * {
@@ -76,7 +76,7 @@ ul li p {
 }
 
 .stats {
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   margin-right: 0;
   flex-direction: column;
   justify-content: center;
@@ -92,7 +92,7 @@ h3 {
 }
 .stats h3 {
   margin-top: 0;
-  font-size: .85rem;
+  font-size: 0.85rem;
 }
 
 .stats h3 p {
@@ -101,12 +101,12 @@ h3 {
 }
 
 .stats h3 a {
-  font-size: .5rem;
+  font-size: 0.5rem;
   vertical-align: super;
 }
 
 .statsComp p a {
-  font-size: .75rem;
+  font-size: 0.75rem;
   vertical-align: super;
 }
 
@@ -145,7 +145,7 @@ h3 {
 .statsDivider {
   margin-bottom: 1rem;
   border-top: 1px solid;
-  border-color: rgba(0,0,0,.1);
+  border-color: rgba(0, 0, 0, 0.1);
 }
 
 .statsComp .ceo,
@@ -153,7 +153,7 @@ h3 {
   font-weight: 400;
   display: inline;
   margin-left: 0;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
   color: var(--opoBlack);
 }
 
@@ -170,7 +170,8 @@ h3 {
   color: #d43c37;
 }
 
-.statsPopout p, .statsPopout a {
+.statsPopout p,
+.statsPopout a {
   font-size: 2rem;
   font-weight: 700;
 }
@@ -234,7 +235,5 @@ h3 {
 
   .statsComp p {
     margin-left: 0;
-    
   }
-
 }

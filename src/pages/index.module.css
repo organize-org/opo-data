@@ -44,8 +44,8 @@
 h2 svg {
   color: var(--opoRed);
   width: 2rem;
-  margin-right: .25rem;
-  margin-bottom: .2rem;
+  margin-right: 0.25rem;
+  margin-bottom: 0.2rem;
 }
 
 .secondHeader {
@@ -84,7 +84,7 @@ h2 svg {
 
 .statsHeaders {
   margin: auto 3rem;
-  padding: .5rem;
+  padding: 0.5rem;
   height: 50%;
   justify-content: center;
 }
@@ -172,7 +172,7 @@ h2 svg {
   }
 
   .statsValues {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
   }
 
   .mapToggleButtons {

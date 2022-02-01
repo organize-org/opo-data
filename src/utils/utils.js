@@ -5,8 +5,7 @@ export const tierColors = {
 };
 
 export const donorMapColors = nhb_rank => {
-
-  if (nhb_rank < 10 ) return "#4E1C19";
+  if (nhb_rank < 10) return "#4E1C19";
   if (nhb_rank < 15) return "#89322B";
   if (nhb_rank < 20) return "#D43C37";
   if (nhb_rank < 25) return "#FFB042";
@@ -41,11 +40,11 @@ export const findOpoFeature = (dsaGeoJson, abbr) =>
     : null;
 
 export const formatNumber = (num, options) =>
-  !num || isNaN(num) ? "--" : num.toLocaleString("en-US", options);
+  !num || isNaN(num) ? "N/A" : num.toLocaleString("en-US", options);
 
 export const formatPercent = percent =>
   !percent || isNaN(percent)
-    ? "--"
+    ? "N/A"
     : `${percent.toLocaleString("en-US", {
         style: "percent",
         minimumFractionDigits: 2,
@@ -60,9 +59,14 @@ export const formatMoney = num => {
   });
 };
 
-export const formatName = ({ abbreviation, name }, { includeAbbreviation = true } = {}) =>
-  `${name}${includeAbbreviation ? ` (${abbreviation.toLocaleUpperCase()})` : ''}`;
+export const formatName = (
+  { abbreviation, name },
+  { includeAbbreviation = true } = {}
+) =>
+  `${name}${
+    includeAbbreviation ? ` (${abbreviation.toLocaleUpperCase()})` : ""
+  }`;
 
-export const formatOPORank = ({ rank }) => !isNaN(rank) ? rank : 'N/A';
-export const getRankedOPOCount = ( opoDataMap ) => Object.values(opoDataMap)
-  .filter(opo => !isNaN(opo.rank)).length;
+export const formatOPORank = ({ rank }) => (!isNaN(rank) ? rank : "N/A");
+export const getRankedOPOCount = opoDataMap =>
+  Object.values(opoDataMap).filter(opo => !isNaN(opo.rank)).length;

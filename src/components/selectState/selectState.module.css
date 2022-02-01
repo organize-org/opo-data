@@ -17,15 +17,14 @@ p {
   z-index: 1002;
 }
 
-
 @media (max-width: 1200px) {
- .selectState {
-  margin-right: 0;
-  justify-content: center;
-  margin-left: 0;
- }
+  .selectState {
+    margin-right: 0;
+    justify-content: center;
+    margin-left: 0;
+  }
 
- .selectState p {
-   margin-left: 0;
- }
+  .selectState p {
+    margin-left: 0;
+  }
 }

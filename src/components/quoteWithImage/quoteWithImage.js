@@ -26,7 +26,11 @@ export default function QuoteWithImage({
           <blockquote>{quote}</blockquote>
         </figure>
         <figcaption>
-          <cite><ReactMarkdown className={styles.attribution}>{attribution}</ReactMarkdown></cite>
+          <cite>
+            <ReactMarkdown className={styles.attribution}>
+              {attribution}
+            </ReactMarkdown>
+          </cite>
         </figcaption>
       </Col>
     </BgImage>
