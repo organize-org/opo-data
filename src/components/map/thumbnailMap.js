@@ -168,7 +168,7 @@ export default function ThumnailMap({
 
 const OPO_LABEL_OFFSETS = {
   AK: {
-    WALC: [-70, -60],
+    WALC: [20, -130],
   },
   AR: {
     TXSB: [400, -100],
