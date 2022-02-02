@@ -173,6 +173,11 @@ videos:
       - WY
 notes:
   - voicesForReform: false
+    note: "[OPO CEO Matt Wadsworth](https://youtu.be/TnKo8Q-Hemk?t=3401) testifies
+      before House Oversight Committee"
+    tags:
+      - OHLC
+  - voicesForReform: false
     note: "[Jennifer
       Erickson](https://www.washingtonpost.com/opinions/i-want-a-journalist-to-\
       see-what-happens-to-my-organs-after-i-die-heres-why/2019/10/04/42c5e888-e\
@@ -317,13 +322,6 @@ notes:
     note: "[Dr. Jayme Locke, University of
       Alabama](https://www.healthaffairs.org/do/10.1377/hblog20201211.229975/fu\
       ll/) supporting OPO reform in Health Affairs"
-  - voicesForReform: true
-    tags:
-      - AL
-    note: "[OPO CEO Matthew
-      Wadsworth](https://blog.petrieflom.law.harvard.edu/2021/02/05/recent-orga\
-      n-procurement-organization-regulations-will-save-lives/) in Harvard
-      Petrie-Flom blog"
   - voicesForReform: true
     tags:
       - OH
