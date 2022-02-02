@@ -173,6 +173,11 @@ videos:
       - WY
 notes:
   - voicesForReform: false
+    note: "[Chairwoman Carolyn Maloney](https://youtu.be/TnKo8Q-Hemk?t=4421) in
+      House Oversight hearing"
+    tags:
+      - NYRT
+  - voicesForReform: false
     note: "[OPO CEO Matt Wadsworth](https://youtu.be/TnKo8Q-Hemk?t=3401) testifies
       before House Oversight Committee"
     tags:
