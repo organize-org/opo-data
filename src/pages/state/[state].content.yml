@@ -173,6 +173,18 @@ videos:
       - WY
 notes:
   - voicesForReform: false
+    note: ' Spent $392M on "tissue processing" and $22M on "organ procurement" in
+      2018'
+    tags:
+      - VATB
+  - voicesForReform: false
+    note: '[Washington
+      Post](https://www.washingtonpost.com/national/health-science/a-human-heart-was-left-on-a-plane-revealing-how-organs-move-around-the-country/2018/12/14/3aabe696-ffb7-11e8-862a-b6a6f3ce8199_story.html):
+      "A human heart was left on a plane, revealing how organs move around the
+      country"'
+    tags:
+      - VATB
+  - voicesForReform: false
     note: "[Chairwoman Carolyn Maloney](https://youtu.be/TnKo8Q-Hemk?t=4421) in
       House Oversight hearing"
     tags:
@@ -183,11 +195,10 @@ notes:
     tags:
       - OHLC
   - voicesForReform: false
-    note: "[Jennifer
-      Erickson](https://www.washingtonpost.com/opinions/i-want-a-journalist-to-\
-      see-what-happens-to-my-organs-after-i-die-heres-why/2019/10/04/42c5e888-e\
-      529-11e9-a331-2df12d56a80b_story.html): I want a journalist to see what
-      happens to my organs after I die. Here’s why"
+    note: 'Former Obama Staffer Jennifer Erickson in [Washington
+      Post](https://www.washingtonpost.com/opinions/i-want-a-journalist-to-see-what-happens-to-my-organs-after-i-die-heres-why/2019/10/04/42c5e888-e529-11e9-a331-2df12d56a80b_story.html):
+      "I want a journalist to see what happens to my organs after I die. Here’s
+      why"'
     tags:
       - VATB
   - voicesForReform: false
@@ -1309,16 +1320,6 @@ notes:
       - SCOP
     note: Included in [House Committee on Oversight and Reform
       investigation](https://oversight.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)
-  - voicesForReform: false
-    tags:
-      - VATB
-    note: 2018 [CEO
-      Salary](https://projects.propublica.org/nonprofits/display_990/521273592/02_2020_prefixes_47-52%2F521273592_201812_990_2020021817159635)
-      was $1.6 million
-  - note: Spent $392M on "tissue processing" and $22M on "organ procurement" in 2018
-    voicesForReform: false
-    tags:
-      - VATB
   - note: Board Chair paid $100,000 annually
     voicesForReform: false
     tags:
