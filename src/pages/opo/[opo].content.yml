@@ -62,15 +62,24 @@ opoHeadings:
     caption: CALC stands for “cause, age, and location consistent deaths.” This
       methodology is used by CMS to count inpatient deaths among persons age <75
       from causes consistent with donation.
+    source: CALC stands for “cause, age, and location consistent deaths.” This
+      methodology is used by CMS to count inpatient deaths among persons age <75
+      from causes consistent with donation.
   donors:
     title: Actual Donors[8](#sources-8)
-    source: TODO GET CONTENT
+    source: Goldberg et al, preprint, “Identifying Opportunities for improving the
+      organ supply through race-stratified data”, supplementary materials, table
+      I
   recovery:
     title: Procurement Rate[9](#sources-9)
-    source: TODO GET CONTENT.
+    source: Goldberg et al, preprint, “Identifying Opportunities for improving the
+      organ supply through race-stratified data”, supplementary materials, table
+      I
   rank:
     title: Procurement Rate Ranking[10](#sources-10)
-    source: TODO GET CONTENT
+    source: Goldberg et al, preprint, “Identifying Opportunities for improving the
+      organ supply through race-stratified data”, supplementary materials, table
+      I
 stateHeadings:
   states:
     title: States
