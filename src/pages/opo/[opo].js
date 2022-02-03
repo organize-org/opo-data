@@ -131,7 +131,7 @@ export default function Opo({ opo }) {
             <ThumnailMap
               key={opo}
               dimensions={{ height: "24rem", width: "24rem" }}
-              dataId={opo}
+              dataId={opo.toUpperCase()}
               view="opo"
             />
           </Row>
@@ -224,7 +224,7 @@ export default function Opo({ opo }) {
       </Row>
       <div className={styles.opoContent}>
         {/* Headlines about OPO */}
-        {opoHeadlines?.length || opoTakeaways?.length || opoVideos.length ? (
+        {opoHeadlines?.length || opoTakeaways?.length || opoVideos?.length ? (
           <h2 className={styles.sectionHeader}>
             <News />
             ABOUT THIS OPO
