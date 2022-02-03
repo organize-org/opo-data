@@ -124,16 +124,11 @@ stateHeadings:
       [here.](https://oversight.house.gov/sites/democrats.oversight.house.gov/files/2021-05-27.RK%20KP%20to%20Ferreira-NDN%20re%20Expenses.pdf)
   shadow:
     title: Preventable Deaths*(2019)[14](#sources-14)
-    caption: “Preventable deaths” refers to the number of organ transplants by which
-      an OPO failed to meet Tier 1 standards, according to CMS. Each missed
-      transplant results in a loss of life because an organ was not available.
-      Data was released by CMS in September 2021 based on most recently
-      available data from 2019.
-    source: “Preventable deaths” refers to the number of organ transplants by which
-      an OPO failed to meet Tier 1 standards, according to CMS. Each missed
-      transplant results in a loss of life because an organ was not available.
-      Data was released by CMS in September 2021 based on most recently
-      available data from 2019.
+    caption: ""
+    source: “Preventable deaths” refer to those who die from the event of NOT
+      receiving an organ that should have been available. These organs were not
+      recovered presumably due to OPO performance issues, such as ineffective
+      practices, transportation errors, or understaffing.
 takeaways:
   - opo: WUIW
     body: TODO GET TAKEAWAY CONTENT
