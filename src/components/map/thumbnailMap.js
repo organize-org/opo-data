@@ -40,8 +40,8 @@ export default function ThumnailMap({
       .map(f => ({
         ...f,
         properties: {
-          ...f.properties,
-          tier: opoDataMap[f.properties.abbreviation].tier,
+          ...f?.properties,
+          tier: opoDataMap[f?.properties.abbreviation]?.tier,
         },
       })),
   };
@@ -59,15 +59,25 @@ export default function ThumnailMap({
     ].map(f => ({
       ...f,
       properties: {
-        ...f.properties,
+        ...f?.properties,
         name: (view === "state" ? stateDataMap : opoDataMap)[
-          f.properties.abbreviation
-        ].name,
+          f?.properties?.abbreviation
+        ]?.name,
       },
     })),
   };
 
+    console.log("dimensions", dimensions);
+    console.log("dataId", dataId);
+    console.log("view", view);
+    console.log("fillGeoJson", fillGeoJson);
+    console.log("geoData", geoData);
+    console.log("boundaryGeoJson", boundaryGeoJson);
+
   const [minX, minY, maxX, maxY] = bbox(boundaryGeoJson);
+
+
+
 
   return (
     <Row className={styles.map}>
