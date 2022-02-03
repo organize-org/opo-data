@@ -906,6 +906,7 @@ notes:
     voicesForReform: false
     tags:
       - CA
+      - CAOP
   - note: "[HHS Office of the Inspector
       General](https://oig.hhs.gov/oas/reports/region9/90800033.pdf): “Review of
       OneLegacy’s Reported Fiscal Year 2006 Organ Acquisition Overhead Costs and
@@ -913,6 +914,7 @@ notes:
     voicesForReform: false
     tags:
       - CA
+      - CAOP
   - note: "[LA
       Times](https://www.latimes.com/business/la-fi-executives-coroners-body-pa\
       rt-harvesting-secret-20190408-story.html): “Executives coached coroners on
@@ -920,6 +922,7 @@ notes:
     voicesForReform: false
     tags:
       - CA
+      - CAOP
   - note: "[LA
       Times](https://www.latimes.com/business/la-fi-how-body-brokers-took-over-\
       county-morgue-20190408-story.html):
@@ -929,6 +932,7 @@ notes:
     voicesForReform: false
     tags:
       - CA
+      - CAOP
   - note: "[ABC 15
       Arizona](https://www.abc15.com/news/region-southeast-valley/mesa/mesa-fam\
       ily-pursues-legal-action-after-donor-network-of-arizona-wrongly-harvests-\
@@ -937,6 +941,7 @@ notes:
     voicesForReform: false
     tags:
       - AZ
+      - AZOB
   - note: "[HHS Office of Inspector
       General](https://oig.hhs.gov/oas/reports/region9/91102035.pdf): “Donor
       Network of Arizona Did Not Fully Comply With Medicare Requirements for
@@ -945,6 +950,7 @@ notes:
     voicesForReform: false
     tags:
       - AZ
+      - AZOB
   - note: "[Arizona
       Republic](https://www.azcentral.com/story/news/local/arizona-health/2019/\
       12/27/arizona-fares-better-than-most-for-organ-transplant-waiting-lists/4\
@@ -961,12 +967,14 @@ notes:
     voicesForReform: false
     tags:
       - AL
+      - ALOB
   - note: "[FBI](https://archives.fbi.gov/archives/birmingham/press-releases/2011/f\
       ormer-alabama-organ-center-executives-charged-with-fraud): “Former Alabama
       Organ Center Executives Charged with Fraud”"
     voicesForReform: false
     tags:
       - AL
+      - ALOB
   - note: "[Jennifer
       Erickson](https://www.washingtonpost.com/opinions/i-want-a-journalist-to-\
       see-what-happens-to-my-organs-after-i-die-heres-why/2019/10/04/42c5e888-e\
@@ -1052,6 +1060,7 @@ notes:
     voicesForReform: true
     tags:
       - OR
+      - ORUO
   - note: "[Oregon liver transplant patient Erika
       Zak](https://www.cnn.com/2019/08/17/health/erika-zak-liver-transplant-201\
       9-update/index.html)**[](https://www.cnn.com/2019/08/17/health/erika-zak-\
@@ -1111,6 +1120,7 @@ notes:
     voicesForReform: true
     tags:
       - NY
+      - NYRT
   - note: "[Senator Elizabeth
       Warren](https://www.warren.senate.gov/oversight/letters/senators-warren-a\
       nd-blumenthal-request-information-about-oversight-of-organ-procurement-or\
@@ -1244,6 +1254,7 @@ notes:
     voicesForReform: true
     tags:
       - CA
+      - CADN
   - note: "[Nobel Laureate Al Roth
       (Stanford)](https://www.statnews.com/2021/04/02/reforming-and-improving-o\
       rgan-transplant-systems-will-save-lives-taxpayer-dollars/) suggesting OPO
