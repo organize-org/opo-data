@@ -343,6 +343,7 @@ notes:
   - voicesForReform: true
     tags:
       - OH
+      - OHLC
     note: "[OPO CEO Matthew Wadsworth in
       Harvard](https://blog.petrieflom.law.harvard.edu/2021/02/05/recent-organ-\
       procurement-organization-regulations-will-save-lives/) Petrie-Flom blog"
@@ -376,6 +377,7 @@ notes:
   - voicesForReform: true
     tags:
       - IN
+      - ILIP
     note: "[Gift of Hope OPO
       Statement](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/\
       581bc3_cf8ab4dc8e6744419eee63c3deec8993.pdf) in support of House Oversight
@@ -390,6 +392,7 @@ notes:
   - voicesForReform: true
     tags:
       - FL
+      - FLFH
     note: "[Orlando OPO CEO Ginny
       McBride](https://morningconsult.com/opinions/organ-donation-can-save-more\
       -lives-through-reform/) supporting new OPO rule and calling for its
@@ -1382,12 +1385,6 @@ notes:
     voicesForReform: false
     tags:
       - CADN
-  - note: "[CEO published
-      support](https://morningconsult.com/opinions/organ-donation-can-save-more\
-      -lives-through-reform/) for new OPO rule"
-    voicesForReform: false
-    tags:
-      - FLFH
   - note: '[Owns
       $8M](https://projects.propublica.org/nonprofits/organizations/421414092/202011199349301261/full)
       "interest in net assets" of tissue processor Allosource'
