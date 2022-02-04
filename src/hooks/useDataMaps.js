@@ -34,6 +34,7 @@ export default function useDataMaps() {
               tier
               ceo
               board
+              rank
             }
           }
         }
