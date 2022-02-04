@@ -290,13 +290,13 @@ export default function Opo({ opo }) {
             )}
           </Row>
           <Row>
-            {comparisonOPOs.length > 0 && (
+            {comparisonOPOs.length > 0 ? (
               <OpoTable
                 headings={stateHeadings}
                 opos={comparisonOPOs}
                 title={`OPO performance comparison`}
               />
-            )}
+            ) : null}
           </Row>
         </Row>
       </div>

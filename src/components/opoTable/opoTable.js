@@ -191,12 +191,12 @@ export default function OpoTable({ headings, opos, title }) {
           })}
         </tbody>
       </Table>
-      {captions?.length &&
+      {captions?.length > 0 ?
         captions.map(caption => (
           <p key={caption} className={styles.tableCaption}>
             * {caption}
           </p>
-        ))}
+        )) : null }
     </Row>
   );
 
