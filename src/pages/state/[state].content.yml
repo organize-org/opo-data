@@ -170,6 +170,41 @@ videos:
       - WV
       - WY
 notes:
+  - voicesForReform: true
+    note: "[Rep. Cori
+      Bush](https://twitter.com/repkatieporter/status/1491889514406625289?s=21)
+      calls for acceleration of OPO reform and transparency"
+    tags:
+      - MO
+      - MOMA
+  - voicesForReform: true
+    note: "[Rep. Raja
+      Krishnamoorthi](https://twitter.com/repkatieporter/status/149188951440662\
+      5289?s=21) calls for acceleration of OPO reform and transparency"
+    tags:
+      - IL
+      - ILIP
+  - voicesForReform: true
+    note: "[Rep. Carolyn
+      Maloney](https://twitter.com/repkatieporter/status/1491889514406625289?s=\
+      21) calls for acceleration of OPO reform and transparency"
+    tags:
+      - NY
+      - NYRT
+  - voicesForReform: true
+    note: "[Rep. Ayanna
+      Pressley](https://twitter.com/repkatieporter/status/1491889514406625289?s\
+      =21) calls for acceleration of OPO reform and transparency"
+    tags:
+      - MA
+      - MAOB
+  - voicesForReform: true
+    note: "[Reps Katie Porter and Karen
+      Bass](https://twitter.com/repkatieporter/status/1491889514406625289?s=21)
+      call for acceleration of OPO reform and transparency"
+    tags:
+      - CA
+      - CAOP
   - voicesForReform: false
     note: '[LA
       Times](https://www.latimes.com/business/story/2019-10-13/body-parts-harvesting-hinders-coroner-autopsies):
@@ -1313,22 +1348,6 @@ notes:
     tags:
       - CA
       - CADN
-  - note: "[Rep. Karen
-      Bass](https://drive.google.com/file/d/1FJy3StR9TOdv-LlsXqU22P2QNeRjAJkB/v\
-      iew?usp=sharing) writing to HHS to encourage finalization of OPO reform
-      final rule"
-    voicesForReform: true
-    tags:
-      - CA
-      - CAOP
-  - note: "[Rep. Katie
-      Porter](https://drive.google.com/file/d/1FJy3StR9TOdv-LlsXqU22P2QNeRjAJkB\
-      /view?usp=sharing) writing to HHS to encourage finalization of OPO reform
-      final rule"
-    voicesForReform: true
-    tags:
-      - CA
-      - CAOP
   - note: "[San Francisco OPO CEO Janice
       Whaley](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
       bc3_2b0e0453d04b474cb26d7b7cd82da91d.pdf) supporting new OPO rule and
