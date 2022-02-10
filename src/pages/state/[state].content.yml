@@ -171,6 +171,19 @@ videos:
       - WY
 notes:
   - voicesForReform: false
+    note: OPO part of [Federation of American Scientists Organ Procurement
+      Organization Innovation
+      Cohort](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc3_2b0e0453d04b474cb26d7b7cd82da91d.pdf),
+      committed to making data publicly available (see [collaboration with
+      MIT](https://fas.org/press-release/opo-advance-data-public/))
+    tags:
+      - CADN
+      - NYRT
+      - MOMA
+      - FLFH
+      - OHLC
+      - LAOP
+  - voicesForReform: false
     note: "[Post
       Bulletin](https://www.postbulletin.com/newsmd/organ-failure-patients-of-c\
       olor-have-been-let-down-by-the-system): \"Organ failure: Patients of color
