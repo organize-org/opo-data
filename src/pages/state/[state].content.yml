@@ -171,6 +171,22 @@ videos:
       - WY
 notes:
   - voicesForReform: false
+    note: "[Post
+      Bulletin](https://www.postbulletin.com/newsmd/organ-failure-patients-of-c\
+      olor-have-been-let-down-by-the-system): \"Organ failure: Patients of color
+      have 'been let down by the system'\""
+    tags:
+      - MNOP
+      - MN
+  - voicesForReform: false
+    note: '[Post
+      Bulletin](https://www.postbulletin.com/newsmd/organ-failure-the-most-powerful-transplant-middleman-in-minnesota-is-under-federal-investigation):
+      "Organ failure: The most powerful transplant middleman in Minnesota is
+      under federal investigation"'
+    tags:
+      - MNOP
+      - MN
+  - voicesForReform: false
     note: ' Spent $392M on "tissue processing" and $22M on "organ procurement" in
       2018'
     tags:
@@ -182,6 +198,7 @@ notes:
       country"'
     tags:
       - VATB
+      - VA
   - voicesForReform: false
     note: "[Chairwoman Carolyn Maloney](https://youtu.be/TnKo8Q-Hemk?t=4421) in
       House Oversight hearing calling for open OPO data and UNOS reform"
