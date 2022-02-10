@@ -171,6 +171,14 @@ videos:
       - WY
 notes:
   - voicesForReform: false
+    note: '[LA
+      Times](https://www.latimes.com/business/story/2019-10-13/body-parts-harvesting-hinders-coroner-autopsies):
+      "In the rush to harvest body parts, death investigations have been
+      upended"'
+    tags:
+      - CA
+      - CAOP
+  - voicesForReform: false
     note: OPO part of [Federation of American Scientists Organ Procurement
       Organization Innovation
       Cohort](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc3_2b0e0453d04b474cb26d7b7cd82da91d.pdf),
@@ -465,6 +473,14 @@ notes:
       Caucus](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581\
       bc3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
       issuing of a rule to bring accountability and oversight to OPOs"
+  - note: "[LA
+      Times](https://www.latimes.com/business/la-fi-executives-coroners-body-pa\
+      rt-harvesting-secret-20190408-story.html): “Executives coached coroners on
+      how to keep body parts harvesting records secret”"
+    voicesForReform: false
+    tags:
+      - CA
+      - CAOP
   - voicesForReform: true
     tags:
       - WA
@@ -963,6 +979,16 @@ notes:
     voicesForReform: false
     tags:
       - FL
+  - note: "[LA
+      Times](https://www.latimes.com/business/la-fi-how-body-brokers-took-over-\
+      county-morgue-20190408-story.html):
+      [](https://www.latimes.com/business/la-fi-how-body-brokers-took-over-coun\
+      ty-morgue-20190408-story.html)“How organ and tissue donation companies
+      worked their way into the county morgue”"
+    voicesForReform: false
+    tags:
+      - CA
+      - CAOP
   - note: "[Project on Government
       Oversight](https://www.pogo.org/investigation/2020/10/heartless-organ-don\
       ation-contractors-lobby-against-a-popular-health-care-initiative-while-po\
@@ -977,24 +1003,6 @@ notes:
       General](https://oig.hhs.gov/oas/reports/region9/90800033.pdf): “Review of
       OneLegacy’s Reported Fiscal Year 2006 Organ Acquisition Overhead Costs and
       Administrative and General Costs”"
-    voicesForReform: false
-    tags:
-      - CA
-      - CAOP
-  - note: "[LA
-      Times](https://www.latimes.com/business/la-fi-executives-coroners-body-pa\
-      rt-harvesting-secret-20190408-story.html): “Executives coached coroners on
-      how to keep body parts harvesting records secret”"
-    voicesForReform: false
-    tags:
-      - CA
-      - CAOP
-  - note: "[LA
-      Times](https://www.latimes.com/business/la-fi-how-body-brokers-took-over-\
-      county-morgue-20190408-story.html):
-      [](https://www.latimes.com/business/la-fi-how-body-brokers-took-over-coun\
-      ty-morgue-20190408-story.html)“How organ and tissue donation companies
-      worked their way into the county morgue”"
     voicesForReform: false
     tags:
       - CA
