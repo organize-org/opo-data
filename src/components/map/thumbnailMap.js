@@ -67,17 +67,7 @@ export default function ThumnailMap({
     })),
   };
 
-    console.log("dimensions", dimensions);
-    console.log("dataId", dataId);
-    console.log("view", view);
-    console.log("fillGeoJson", fillGeoJson);
-    console.log("geoData", geoData);
-    console.log("boundaryGeoJson", boundaryGeoJson);
-
   const [minX, minY, maxX, maxY] = bbox(boundaryGeoJson);
-
-
-
 
   return (
     <Row className={styles.map}>
