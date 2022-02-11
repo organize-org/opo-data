@@ -170,10 +170,35 @@ videos:
       - WV
       - WY
 notes:
+  - voicesForReform: false
+    note: "[Axios](https://www.axios.com/organ-donation-recovery-worse-people-of-co\
+      lor-8d42a213-4ef7-48a3-85fb-dd15cfc4301b.html): “Organ donation recovery
+      rates, worse for people of color data show”"
+    tags:
+      - IA
+      - CA
+      - ORUO
+      - CAGS
+      - CAOP
+      - CASD
+      - OKOP
+      - IAOP
+      - WIUW
+      - AROR
+      - TNMS
+      - INOP
+      - NYFL
+      - FLMP
+      - SCOP
+      - NCNC
+      - VATB
+      - NYRT
+      - NJTO
   - voicesForReform: true
-    note: "[Rep. Cori
-      Bush](https://twitter.com/repkatieporter/status/1491889514406625289?s=21)
-      calls for acceleration of OPO reform and transparency"
+    note: "[](https://twitter.com/repkatieporter/status/1491889514406625289?s=21)[C\
+      hairowoman Carolyn
+      Maloney](https://twitter.com/repkatieporter/status/1491889514406625289?s=\
+      21) calls for acceleration of OPO reform and transparency"
     tags:
       - MO
       - MOMA
@@ -1418,9 +1443,9 @@ notes:
     voicesForReform: false
     tags:
       - TXSB
-  - note: "2017 CEO compensation:
-      $[2.5M](https://porter.house.gov/uploadedfiles/cms_hhs_opo_oversight_fina\
-      l_7.9.20.pdf)"
+  - note: "[Board Chair published
+      support](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/58\
+      1bc3_ad2bfdb091974d62bc52596e06f8d848.pdf) for OPO rule"
     voicesForReform: false
     tags:
       - PADV
