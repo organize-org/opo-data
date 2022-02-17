@@ -52,6 +52,11 @@ export default function useDataMaps() {
     `
   );
 
+  const a_count = opoData.nodes.filter(node => node.data.a_rank).length;
+  const h_count = opoData.nodes.filter(node => node.data.h_rank).length;
+  const nhw_count = opoData.nodes.filter(node => node.data.nhw_rank).length;
+  const nhb_count = opoData.nodes.filter(node => node.data.nhb_rank).length;
+
   return [
     {
       // OPO data by OPO code
@@ -60,6 +65,10 @@ export default function useDataMaps() {
           ...opoDataMap,
           [data.abbreviation]: {
             ...data,
+            a_rank: data?.a_rank ? `${data.a_rank} of ${a_count}` : "N/A",
+            h_rank: data?.h_rank ? `${data.h_rank} of ${h_count}` : "N/A",
+            nhw_rank: data?.nhw_rank ? `${data.nhw_rank} of ${nhw_count}` : "N/A",
+            nhb_rank: data?.nhb_rank ? `${data.nhb_rank} of ${nhb_count}` : "N/A",
             // `states` field: newline-delineated state(s) with an optional `-`-delineated region.
             // Transform -> { [state]: region }. e.g. `states: 'OH - West\n'` -> `{ 'OH': 'West' }`.
             statesWithRegions: data.states.split("\n").reduce((swrMap, swr) => {

@@ -116,7 +116,7 @@ export default function OpoTable({ headings, opos, title }) {
           ethnicity,
           death: formatNumber(death),
           recovery: formatNumber(recovery),
-          rank: formatNumber(rank),
+          rank: rank,
         };
       }
     );
