@@ -175,6 +175,13 @@ videos:
       - WY
 notes:
   - voicesForReform: false
+    note: '[Las Vegas
+      Review-Journal](https://www.reviewjournal.com/local/local-las-vegas/doctor-who-helped-create-nevada-organ-donor-service-has-doubts-about-program/):
+      "Doctor who helped create Nevada organ donor service has doubts about
+      program'
+    tags:
+      - NV
+  - voicesForReform: false
     note: "[Axios](https://www.axios.com/organ-donation-recovery-worse-people-of-co\
       lor-8d42a213-4ef7-48a3-85fb-dd15cfc4301b.html): “Organ donation recovery
       rates, worse for people of color data show”"
@@ -962,12 +969,10 @@ notes:
     voicesForReform: false
     tags:
       - NV
-  - note: "[Project on Government
-      Oversight](https://www.pogo.org/investigation/2020/10/heartless-organ-don\
-      ation-contractors-lobby-against-a-popular-health-care-initiative-while-po\
-      cketing-pandemic-relief-loans/): “Heartless: Organ Donation Contractors
-      Lobby Against a Popular Health Care Initiative While Pocketing Pandemic
-      Relief Loans”"
+  - note: "[Las Vegas
+      Review-Journal](https://www.reviewjournal.com/local/local-las-vegas/tissu\
+      e-donation-turns-into-nightmare-for-three-sisters/): “Tissue donation
+      turns into nightmare for three sisters”"
     voicesForReform: false
     tags:
       - NV
@@ -980,11 +985,10 @@ notes:
     tags:
       - NV
       - NVLV
-  - note: "[The Nevada
-      Independent](https://thenevadaindependent.com/article/nevada-donor-networ\
-      k-under-congressional-scrutiny-for-spending-says-it-has-complied-with-the\
-      -law): “Nevada Donor Network, under congressional scrutiny for spending,
-      says it has complied with the law”"
+  - note: "[Las Vegas
+      Review-Journal](https://www.reviewjournal.com/news/politics-and-governmen\
+      t/nevada-organ-donor-group-blasted-for-vgk-raiders-season-tickets-2348777\
+      /): “Nevada organ donor group blasted for VGK, Raiders season tickets”"
     voicesForReform: false
     tags:
       - NV
