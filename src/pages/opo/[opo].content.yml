@@ -61,8 +61,9 @@ stats:
       available by the OPO, it is not listed."
   board:
     title: Board Compensation:[6](#sources-6)
-    source: Board compensation via each OPO's most recently listed 990, as in cite
-      above.
+    source: OPOs who have board compensation listed on 990s, but for whom that
+      compensation relates to clinical services (not board compensation) include
+      Life Connection of Ohio.
 opoHeadings:
   ethnicity:
     title: Ethnicity
