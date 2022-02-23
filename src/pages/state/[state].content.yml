@@ -266,7 +266,7 @@ notes:
     note: "[Post
       Bulletin](https://www.postbulletin.com/newsmd/organ-failure-patients-of-c\
       olor-have-been-let-down-by-the-system): \"Organ failure: Patients of color
-      have 'been let down by the system'\""
+      have 'been let down by the system\""
     tags:
       - MNOP
       - MN
@@ -319,19 +319,18 @@ notes:
   - voicesForReform: true
     note: "[Representative Cori
       Bush](https://bush.house.gov/media/press-releases/congresswoman-cori-bush\
-      -calls-organ-procurement-organizations-stop-sitting) Calls on Organ
-      Procurement Organizations to “Stop Sitting on Massive Piles of Cash” and
-      Start Saving Lives"
+      -calls-organ-procurement-organizations-stop-sitting) calls on Organ
+      Procurement Organizations to “stop sitting on massive piles of cash” and
+      start saving lives"
     tags:
       - MO
-      - MOMA
   - voicesForReform: false
     note: "[Post
       Bulletin](https://www.postbulletin.com/newsmd/health-news/7252964-Organ-f\
       ailure-The-gatekeeper-of-Minnesotas-organ-transplant-system-is-underperfo\
-      rming.-It-may-be-costing-lives): Organ failure: The gatekeeper of
+      rming.-It-may-be-costing-lives): \"Organ failure: The gatekeeper of
       Minnesota's organ transplant system is underperforming. It may be costing
-      lives"
+      lives\""
     tags:
       - MN
       - MNOP
@@ -572,10 +571,10 @@ notes:
     tags:
       - SC
       - SCOP
-    note: "[Bakari
-      Sellers](https://www.cnn.com/2019/12/24/opinions/broken-organ-donation-sy\
-      stem-sellers/index.html): Dealing with a broken organ donation system
-      after my 4 month old had liver failure"
+    note: '[Bakari
+      Sellers](https://www.cnn.com/2019/12/24/opinions/broken-organ-donation-system-sellers/index.html):
+      "Dealing with a broken organ donation system after my 4 month old had
+      liver failure"'
   - voicesForReform: true
     note: "[Rep. Steven
       Horsford](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/5\
@@ -891,7 +890,7 @@ notes:
       Courier](https://www.postandcourier.com/health/he-died-when-he-got-the-wr\
       ong-lungs-it-wasnt-the-only-organ-error-in/article_c6a6e386-e704-11ea-91c\
       e-2783df6c6f2d.html): “He died when he got the wrong lungs. It wasn’t the
-      only organ error in SC that day.”"
+      only organ error in SC that day”"
     voicesForReform: false
     tags:
       - SC
@@ -1074,14 +1073,6 @@ notes:
     tags:
       - AZ
       - AZOB
-  - note: "[Arizona
-      Republic](https://www.azcentral.com/story/news/local/arizona-health/2019/\
-      12/27/arizona-fares-better-than-most-for-organ-transplant-waiting-lists/4\
-      017173002/): “Arizona fares better than most in challenging environment
-      for organ transplants”"
-    voicesForReform: false
-    tags:
-      - AZ
   - note: "[CBS
       News](https://www.cbsnews.com/news/whistleblower-threatened-with-being-cr\
       emated-alive-after-exposing-mortuary-kickback-scheme/): “Whistleblower
@@ -1252,8 +1243,7 @@ notes:
   - note: "[Senator Elizabeth
       Warren](https://www.warren.senate.gov/oversight/letters/senators-warren-a\
       nd-blumenthal-request-information-about-oversight-of-organ-procurement-or\
-      ganizations-opos) Requests Information About Oversight of Organ
-      Procurement Organizations (OPOs)"
+      ganizations-opos) requests information about oversight of OPOs"
     voicesForReform: true
     tags:
       - MA
@@ -1265,10 +1255,9 @@ notes:
     voicesForReform: true
     tags:
       - MA
-  - note: "[Harvard Law School Petrie-Flom
-      Center](https://blog.petrieflom.law.harvard.edu/2021/02/05/recent-organ-p\
-      rocurement-organization-regulations-will-save-lives/): Recent Organ
-      Procurement Organization Regulations Will Save Lives"
+  - note: '[Harvard Law School Petrie-Flom
+      Center](https://blog.petrieflom.law.harvard.edu/2021/02/05/recent-organ-procurement-organization-regulations-will-save-lives/):
+      "Recent Organ Procurement Organization Regulations Will Save Lives"'
     voicesForReform: true
     tags:
       - MA
