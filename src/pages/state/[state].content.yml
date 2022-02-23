@@ -520,11 +520,9 @@ notes:
   - voicesForReform: true
     tags:
       - DC
-    note: "[Washington Post editorial
-      board](https://www.washingtonpost.com/opinions/many-die-waiting-for-organ\
-      s-the-trump-administration-could-help/2020/07/31/77e3a102-dfd6-11e9-b199-\
-      f638bf2c340f_story.html)**:** Many die waiting for organs. The Trump
-      administration could help."
+    note: '[Washington Post editorial
+      board](https://www.washingtonpost.com/opinions/many-die-waiting-for-organs-the-trump-administration-could-help/2020/07/31/77e3a102-dfd6-11e9-b199-f638bf2c340f_story.html)**:**
+      "Many die waiting for organs. The Trump administration could help"'
   - voicesForReform: true
     tags:
       - CO
@@ -1087,11 +1085,10 @@ notes:
     tags:
       - AL
       - ALOB
-  - note: "[Jennifer
-      Erickson](https://www.washingtonpost.com/opinions/i-want-a-journalist-to-\
-      see-what-happens-to-my-organs-after-i-die-heres-why/2019/10/04/42c5e888-e\
-      529-11e9-a331-2df12d56a80b_story.html): I want a journalist to see what
-      happens to my organs after I die. Here’s why."
+  - note: '[Jennifer
+      Erickson](https://www.washingtonpost.com/opinions/i-want-a-journalist-to-see-what-happens-to-my-organs-after-i-die-heres-why/2019/10/04/42c5e888-e529-11e9-a331-2df12d56a80b_story.html):
+      "I want a journalist to see what happens to my organs after I die. Here’s
+      why."'
     voicesForReform: true
     tags:
       - DC
