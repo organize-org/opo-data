@@ -831,10 +831,10 @@ notes:
     voicesForReform: false
     tags:
       - VA
-  - note: "[HHS Office of the Inspector
+  - note: '[HHS Office of the Inspector
       General](https://oig.hhs.gov/oas/reports/region9/91102039.pdf):
       “LifeCenter Northwest Did Not Fully Comply with Medicare Requirements for
-      Reporting Organ Statistics in its Fiscal Year 2009 Medicare Cost Report"
+      Reporting Organ Statistics in its Fiscal Year 2009 Medicare Cost Report"'
     voicesForReform: false
     tags:
       - WA
@@ -1429,8 +1429,7 @@ notes:
       - NVLV
   - note: "[OIG](https://oig.hhs.gov/oas/reports/region9/91102035.pdf) found the OPO
       overstating organ procurement costs and not reporting proceeds from the
-      sale of research organs. 2019 CEO compensation increased by 17.6% from
-      2018"
+      sale of research organs. 2019 CEO compensation increased by 18% from 2018"
     voicesForReform: false
     tags:
       - AZOB
