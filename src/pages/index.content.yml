@@ -15,30 +15,7 @@ mapContent:
     color. The map below shows the current ranking of U.S. OPOs by location,
     based on the most recent data available (2019). [Find more information
     here](https://www.cms.gov/newsroom/fact-sheets/organ-procurement-organization-opo-conditions-coverage-final-rule-revisions-outcome-measures-opos)
-  black-procurement-disparities: Publicly available data shows a 10-fold
-    difference around the country in OPO procurement of organs from Black
-    donors. Research also shows [differential
-    treatment](https://www.healthaffairs.org/do/10.1377/forefront.20201211.229975/full/)
-    by OPOs towards families of Black versus white donors. [Read the article
-    from Axios covering this
-    issue.](https://www.axios.com/organ-donation-recovery-worse-people-of-color-8d42a213-4ef7-48a3-85fb-dd15cfc4301b.html)
-  congressional-investigations: >-
-    The House Oversight Committee is investigating 17 OPOs for “shocking
-    mismanagement”, among other conflicts and abuses. In parallel, the Senate
-    Finance Committee is also conducting a bipartisan investigation into the
-    federal contractor UNOS for “the inadequacy of UNOS’ oversight of OPOs”
-    despite “lapses in patient safety, misuse of taxpayer dollars, and tens of
-    thousands of organs going unrecovered.” Bipartisan leaders of both House
-    Oversight and Senate Finance have called to accelerate reforms as an “urgent
-    health equity issue.”
-
-
-    * [Read the release from the House Oversight Committee](https://oversight.house.gov/news/press-releases/oversight-subcommittee-held-bipartisan-hearing-on-needed-reforms-in-organ)
-
-    * [Read the release from the Senate Finance Committee](https://www.finance.senate.gov/chairmans-news/finance-committee-members-probe-us-organ-transplant-system)
-
-    * [Read the bipartisan, bicameral letter calling for accelerating reforms](https://www.finance.senate.gov/chairmans-news/bipartisan-bicameral-members-of-congress-commend-federal-efforts-to-reform-organ-donation-system-urge-acceleration-of-rules-impact-)
-  black-procurement-disparity: 'Publicly available data shows a 10-fold difference
+  black-procurement-disparities: 'Publicly available data shows a 10-fold difference
     around the country in OPO procurement of organs from Black donors. Research
     also shows [differential
     treatment](https://www.healthaffairs.org/do/10.1377/forefront.20201211.229975/full/) by
@@ -46,7 +23,7 @@ mapContent:
     Axios](https://www.axios.com/organ-donation-recovery-worse-people-of-color-8d42a213-4ef7-48a3-85fb-dd15cfc4301b.html):
     "Fewer Black donors correlates to fewer Black recipients, which has led to
     more Black dying on the organ transplant waitlist.”'
-  congressional-investigation: >-
+  congressional-investigations: >-
     The House Oversight Committee is investigating 17 OPOs for “shocking
     mismanagement”, among other conflicts and abuses. In parallel, the Senate
     Finance Committee is also conducting a bipartisan investigation into the
