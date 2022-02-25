@@ -174,10 +174,11 @@ videos:
       - WY
 notes:
   - voicesForReform: true
-    note: "Rep. Hank Johnson on LifeLink and inequity at [House Oversight
-      hearing](https://www.congress.gov/117/chrg/CHRG-117hhrg44569/CHRG-117hhrg\
-      44569.pdf): “OPOs are failing people of color at every step of this
-      process and the numbers show it.”"
+    note: "[Rep. Hank
+      Johnson](https://www.congress.gov/117/chrg/CHRG-117hhrg44569/CHRG-117hhrg\
+      44569.pdf) on LifeLink and inequity at House Oversight hearing: “OPOs are
+      failing people of color at every step of this process and the numbers show
+      it.”"
     tags:
       - GA
       - GALL
@@ -1367,11 +1368,9 @@ notes:
   - voicesForReform: false
     tags:
       - FLMP
-    note: Subject of investigative reporting for quality control issues and
-      workplace violence (see [Washington
-      Post](https://www.washingtonpost.com/national/health-science/behind-the-failure-of-the-first-us-uterine-transplant/2019/02/13/6345f018-07c0-11e9-85b6-41c0fe0c5b8f_story.html)
-      and [Miami
-      Herald](https://www.miamiherald.com/news/health-care/article47968670.html))
+    note: '[Pittsburgh
+      Tribune-Review](https://archive.triblive.com/local/pittsburgh-allegheny/gift-of-life-worth-millions-to-donation-organizations/):
+      "Gift of life worth millions to donation organizations"'
   - voicesForReform: false
     tags:
       - FLWC
