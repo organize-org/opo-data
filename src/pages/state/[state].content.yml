@@ -173,6 +173,14 @@ videos:
       - WV
       - WY
 notes:
+  - voicesForReform: true
+    note: "Rep. Hank Johnson on LifeLink and inequity at [House Oversight
+      hearing](https://www.congress.gov/117/chrg/CHRG-117hhrg44569/CHRG-117hhrg\
+      44569.pdf): “OPOs are failing people of color at every step of this
+      process and the numbers show it.”"
+    tags:
+      - GA
+      - GALL
   - voicesForReform: false
     note: '[Las Vegas
       Review-Journal](https://www.reviewjournal.com/local/local-las-vegas/doctor-who-helped-create-nevada-organ-donor-service-has-doubts-about-program/):
