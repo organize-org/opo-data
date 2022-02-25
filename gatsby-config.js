@@ -144,12 +144,12 @@ module.exports = {
                           },
                           {
                             label: "Black procurement disparity map",
-                            name: "black-procurement-disparity",
+                            name: "black-procurement-disparities",
                             widget: "markdown",
                           },
                           {
                             label: "Under congressional investigation map",
-                            name: "congressional-investigation",
+                            name: "congressional-investigations",
                             widget: "markdown",
                           },
                         ],
