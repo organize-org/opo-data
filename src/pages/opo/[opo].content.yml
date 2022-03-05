@@ -71,7 +71,10 @@ opoHeadings:
     title: Potential viable donors based on CALC methodology*[7](#sources-7)
     caption: CALC stands for “cause, age, and location consistent deaths.” This
       methodology is used by CMS to count inpatient deaths among persons age <75
-      from causes consistent with donation.
+      from causes consistent with donation. N/A indicates the sample size of
+      CALC-eligible donors was too small to be included. Where CALC-eligible
+      donors not available, actual donors, procurement rate, and rank for that
+      ethnicity is not available.
     source: CALC stands for “cause, age, and location consistent deaths.” This
       methodology is used by CMS to count inpatient deaths among persons age <75
       from causes consistent with donation.
@@ -81,18 +84,27 @@ opoHeadings:
       organ supply through race-stratified data”, supplementary materials, table
       I. Available
       [here](https://www.medrxiv.org/content/10.1101/2021.10.24.21265203v1.supplementary-material).
+      N/A indicates the sample size of CALC-eligible donors was too small to be
+      included. Where CALC-eligible donors not available, actual donors,
+      procurement rate, and rank for that ethnicity is not available.
   recovery:
     title: Procurement Rate*[9](#sources-9)
     source: Goldberg et al, preprint, “Identifying Opportunities for improving the
       organ supply through race-stratified data”, supplementary materials, table
       I. Available
       [here](https://www.medrxiv.org/content/10.1101/2021.10.24.21265203v1.supplementary-material).
+      N/A indicates the sample size of CALC-eligible donors was too small to be
+      included. Where CALC-eligible donors not available, actual donors,
+      procurement rate, and rank for that ethnicity is not available.
   rank:
     title: Rank*[10](#sources-10)
     source: Goldberg et al, preprint, “Identifying Opportunities for improving the
       organ supply through race-stratified data”, supplementary materials, table
       I. Available
       [here](https://www.medrxiv.org/content/10.1101/2021.10.24.21265203v1.supplementary-material).
+      N/A indicates the sample size of CALC-eligible donors was too small to be
+      included. Where CALC-eligible donors not available, actual donors,
+      procurement rate, and rank for that ethnicity is not available.
 stateHeadings:
   states:
     title: States
