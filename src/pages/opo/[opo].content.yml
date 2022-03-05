@@ -76,19 +76,19 @@ opoHeadings:
       methodology is used by CMS to count inpatient deaths among persons age <75
       from causes consistent with donation.
   donors:
-    title: Actual Donors[8](#sources-8)
+    title: Actual Donors*[8](#sources-8)
     source: Goldberg et al, preprint, “Identifying Opportunities for improving the
       organ supply through race-stratified data”, supplementary materials, table
       I. Available
       [here](https://www.medrxiv.org/content/10.1101/2021.10.24.21265203v1.supplementary-material).
   recovery:
-    title: Procurement Rate[9](#sources-9)
+    title: Procurement Rate*[9](#sources-9)
     source: Goldberg et al, preprint, “Identifying Opportunities for improving the
       organ supply through race-stratified data”, supplementary materials, table
       I. Available
       [here](https://www.medrxiv.org/content/10.1101/2021.10.24.21265203v1.supplementary-material).
   rank:
-    title: Rank[10](#sources-10)
+    title: Rank*[10](#sources-10)
     source: Goldberg et al, preprint, “Identifying Opportunities for improving the
       organ supply through race-stratified data”, supplementary materials, table
       I. Available
