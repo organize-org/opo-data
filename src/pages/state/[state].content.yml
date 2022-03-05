@@ -275,6 +275,8 @@ notes:
     tags:
       - MNOP
       - MN
+      - ND
+      - SD
   - voicesForReform: false
     note: '[Post
       Bulletin](https://www.postbulletin.com/newsmd/organ-failure-the-most-powerful-transplant-middleman-in-minnesota-is-under-federal-investigation):
@@ -283,6 +285,8 @@ notes:
     tags:
       - MNOP
       - MN
+      - ND
+      - SD
   - voicesForReform: false
     note: ' Spent $392M on "tissue processing" and $22M on "organ procurement" in
       2018'
@@ -339,6 +343,8 @@ notes:
     tags:
       - MN
       - MNOP
+      - ND
+      - SD
   - voicesForReform: false
     note: '[Daily
       Record](https://www.dailyrecord.us/new-cms-reports-shows-arora-s-organ-donation-rate-is-worst-in-the-nation):
@@ -420,7 +426,7 @@ notes:
     note: "[Minneapolis Star Tribune editorial
       board](http://www.startribune.com/too-many-americans-die-while-waiting-fo\
       r-gift-of-life/563241112/): \"Too many Americans die while waiting for
-      'gift of life\""
+      'gift of life'\""
   - voicesForReform: true
     tags:
       - IA
