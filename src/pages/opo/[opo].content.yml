@@ -111,15 +111,15 @@ stateHeadings:
   name:
     title: OPO Name
   tier:
-    title: Performance Tier (2019)[11](#sources-11)
-    source: Tier (2019) via [CMS](https://qcor.cms.gov/main.jsp), data most recently
-      available (2019). OPO names are listed as they are by CMS.
+    title: Performance Tier (2020)[11](#sources-11)
+    source: Tier (2020) via [CMS](https://qcor.cms.gov/main.jsp), data most recently
+      available (2020). OPO names are listed as they are by CMS.
   donors:
-    title: Donors Needed (2019)[12](#sources-12)
+    title: Donors Needed (2020)[12](#sources-12)
     source: Donors needed represents the number of additional donors needed for OPO
       to reach Tier 1 according to [CMS](https://qcor.cms.gov/main.jsp). Data
-      was released by CMS in September 2021 based on most recently available
-      data from 2019.
+      was released by CMS in April 2022 based on most recently available data
+      from 2020.
   investigation:
     title: Under Congressional Investigation[13](#sources-13)
     source: Currently Under Congressional investigation represents the 17 OPOs under
