@@ -13,7 +13,7 @@ export default function Legend({ mapView }) {
   }
 
   if (mapView === "black-procurement-disparities") {
-    legendHeader = " Procurement Rate (2019)";
+    legendHeader = " Procurement Rate (2019) — note: 2020 data will be updated as it becomes available";
     legendItems = BLACK_DONOR_DISPARITY_FILL;
   }
   return (
