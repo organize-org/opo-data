@@ -285,7 +285,7 @@ export default function Opo({ opo }) {
               <OpoTable
                 headings={opoHeadings}
                 opos={ethnicityData}
-                title={`${opoData.name} procurement performance data by ethnicity (2019)`}
+                title={`${opoData.name} procurement performance data by ethnicity (2019) — note: 2020 data will be updated as it becomes available`}
               />
             )}
           </Row>
