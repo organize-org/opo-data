@@ -177,6 +177,17 @@ videos:
       - WV
       - WY
 notes:
+  - voicesForReform: false
+    note: "[Post
+      Bulletin](https://www.postbulletin.com/newsmd/federal-reviewers-downgrade\
+      -regional-organ-donor-group-lifesource-to-failing-in-2022-rankings):
+      \"Regional organ donation group LifeSource downgraded to 'failing' in
+      federal rankings\""
+    tags:
+      - MN
+      - SD
+      - ND
+      - MNOP
   - voicesForReform: true
     note: '[STAT
       News](https://www.statnews.com/2022/04/07/organ-procurement-system-failing-people-of-color/):
