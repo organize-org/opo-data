@@ -177,6 +177,16 @@ videos:
       - WV
       - WY
 notes:
+  - voicesForReform: true
+    note: "[MedPage
+      Today](https://www.medpagetoday.com/opinion/second-opinions/98363):
+      'Shocking Mismanagement' in Our Organ Donation System Is Causing Needless
+      Death\""
+    tags:
+      - VA
+      - MA
+      - NY
+      - CA
   - voicesForReform: false
     note: "[Post
       Bulletin](https://www.postbulletin.com/newsmd/federal-reviewers-downgrade\
