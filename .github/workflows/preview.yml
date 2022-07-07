@@ -17,9 +17,7 @@ jobs:
           description: Preparing deploy preview
           context: Deploy Preview URL
       - name: Install
-        run: |
-          node -v
-          npm ci
+        run: npm ci
       - name: Build
         env:
           AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
