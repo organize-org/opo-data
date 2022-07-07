@@ -10,10 +10,12 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 16.0.0
           cache: 'npm'
       - name: Install
-        run: npm ci
+        run:
+          node -v
+          npm ci
       - name: Sync bucket
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
