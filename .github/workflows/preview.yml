@@ -17,7 +17,7 @@ jobs:
           description: Preparing deploy preview
           context: Deploy Preview URL
       - name: Install
-        run:
+        run: |
           node -v
           npm ci
       - name: Build

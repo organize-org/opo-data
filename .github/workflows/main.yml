@@ -13,9 +13,7 @@ jobs:
           node-version: 16.0.0
           cache: 'npm'
       - name: Install
-        run:
-          node -v
-          npm ci
+        run: npm ci
       - name: Sync bucket
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
