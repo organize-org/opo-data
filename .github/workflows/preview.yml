@@ -5,13 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Cache npm
-        uses: actions/cache@v1
+      - uses: actions/setup-node@v3
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          node-version: 16.14.2
+          cache: 'npm'
       - name: Set deployment status
         uses: pbrandone/create-status-action@master
         with:
