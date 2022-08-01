@@ -179,6 +179,31 @@ videos:
       - WY
 notes:
   - voicesForReform: true
+    note: "[Senator Chuck
+      Grassley](https://www.nwestiowa.com/opinion/grassley-donation-of-organs-i\
+      s-matter-of-life-and-death/article_fbd70300-c287-11ec-984c-ef16416270a1.h\
+      tml): Donation of organs is matter of life and death"
+    tags:
+      - IAOP
+      - IA
+  - voicesForReform: true
+    note: "[Rep. Cindy
+      Axne](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc\
+      3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
+      issuing of a rule to bring accountability and oversight to OPOs"
+    tags:
+      - IAOP
+      - IA
+  - voicesForReform: true
+    note: "[Michael
+      Kutcher](https://www.desmoinesregister.com/story/opinion/columnists/iowa-\
+      view/2021/11/01/organ-procurement-organizations-inefficiency-investigatio\
+      ns-opos/6180541001/): Organ procurement organizations are struggling with
+      inefficiency, as investigations show"
+    tags:
+      - IAOP
+      - IA
+  - voicesForReform: true
     tags:
       - NC
     note: '[Dr. Adam
@@ -467,30 +492,6 @@ notes:
       board](http://www.startribune.com/too-many-americans-die-while-waiting-fo\
       r-gift-of-life/563241112/): \"Too many Americans die while waiting for
       'gift of life'\""
-  - voicesForReform: true
-    tags:
-      - IA
-      - IAOP
-    note: "[Senator Chuck
-      Grassley](https://www.finance.senate.gov/ranking-members-news/grassley-wy\
-      den-subpoena-the-united-network-for-organ-sharing-as-part-of-continued-in\
-      vestigation-into-us-organ-transplant-system) issues subpoena to the United
-      Network for Organ Sharing as part of continued investigation into U.S.
-      organ transplant system"
-  - voicesForReform: true
-    tags:
-      - IA
-      - IAOP
-    note: "[Rep. Cindy
-      Axne](https://58425eca-649a-42d4-b265-d1e1743b6c48.filesusr.com/ugd/581bc\
-      3_a34641941c3e4dad86c015f019ba2051.pdf) on letter to HHS urging the
-      issuing of a rule to bring accountability and oversight to OPOs"
-  - voicesForReform: true
-    tags:
-      - IA
-    note: "[Iowa heart transplant recipient Michael
-      Kutcher](https://twitter.com/oversightdems/status/1388204146969427971?s=1\
-      0)"
   - voicesForReform: true
     tags:
       - AL
