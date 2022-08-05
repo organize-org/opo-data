@@ -178,6 +178,13 @@ videos:
       - WV
       - WY
 notes:
+  - voicesForReform: false
+    note: "[Orlando
+      Sentinel](https://www.orlandosentinel.com/health/os-ne-health-senate-unos\
+      -adventhealth-20220803-ekl3fo7ohzhkze7dtnwf5jqv6u-story.html): “Organ
+      Transplant System ‘has failed many’, AdventHealth leader says"
+    tags:
+      - FL
   - voicesForReform: true
     note: "[Chairman Ron
       Wyden](https://www.finance.senate.gov/imo/media/doc/Wyden%20Statement%20a\
