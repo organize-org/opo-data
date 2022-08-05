@@ -718,6 +718,12 @@ notes:
       - GA
       - GALL
   - voicesForReform: true
+    note: "[Georgia transplant recipient and patient advocate Calvin
+      Henry](https://www.finance.senate.gov/imo/media/doc/SenateFinanceCmte_832\
+      022_HenryCalvin_v2.pdf) testimony to Senate Finance Committee"
+    tags:
+      - GA
+  - voicesForReform: true
     note: "[Senator Richard
       Blumenthal](https://www.warren.senate.gov/oversight/letters/senators-warr\
       en-and-blumenthal-request-information-about-oversight-of-organ-procuremen\
@@ -889,7 +895,6 @@ notes:
       - WY
       - MO
       - CT
-      - GA
       - MI
       - MS
       - NV
@@ -927,7 +932,6 @@ notes:
       - WY
       - MO
       - CT
-      - GA
       - MI
       - MS
       - NV
