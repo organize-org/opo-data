@@ -74,6 +74,15 @@ headings:
       an OPO failed to meet Tier 1 standards, according to CMS. Each missed
       transplant results in a loss of life because an organ was not available.
 videos:
+  - link: https://youtu.be/yxD0eYalmQI?t=6000
+    title: Senator Bob Casey in Senate Finance hearing
+    tags:
+      - PA
+  - title: Dr. Jayme Locke testifies before Senate Finance Committee
+    description: ""
+    link: https://youtu.be/yxD0eYalmQI?t=2131
+    tags:
+      - AL
   - title: "‘What Case Could You Make?’: Bill Cassidy Hammers Executive Over Organ
       Transplant System"
     link: https://www.youtube.com/watch?v=S9NKj5FhNZg
@@ -145,12 +154,6 @@ videos:
   - link: https://youtu.be/TnKo8Q-Hemk?t=6352
     title: Rep. Katie Porter at House Oversight Committee Hearing
     tags:
-      - CA
-    description: ""
-  - title: Patient advocates including Alonzo Mourning, Samantha Bee, and Jenna Zak
-    link: https://www.youtube.com/watch?v=21PFXgvxSVQ
-    tags:
-      - AL
       - AK
       - AR
       - AZ
@@ -173,7 +176,43 @@ videos:
       - NM
       - NV
       - OK
-      - PA
+      - PR
+      - RI
+      - SC
+      - SD
+      - UT
+      - VA
+      - VT
+      - WA
+      - WI
+      - WV
+      - WY
+    description: ""
+  - title: Patient advocates including Alonzo Mourning, Samantha Bee, and Jenna Zak
+    link: https://www.youtube.com/watch?v=21PFXgvxSVQ
+    tags:
+      - AK
+      - AR
+      - AZ
+      - CO
+      - CT
+      - DE
+      - HI
+      - ID
+      - MD
+      - ME
+      - MI
+      - MN
+      - MS
+      - MT
+      - NC
+      - ND
+      - NE
+      - NH
+      - NJ
+      - NM
+      - NV
+      - OK
       - PR
       - RI
       - SC
@@ -186,6 +225,11 @@ videos:
       - WV
       - WY
 notes:
+  - voicesForReform: true
+    note: "[Senator Todd Young](https://youtu.be/yxD0eYalmQI?t=4285) in Senate
+      Finance hearing on OPTN"
+    tags:
+      - IN
   - voicesForReform: false
     note: "[Orlando
       Sentinel](https://www.orlandosentinel.com/health/os-ne-health-senate-unos\
