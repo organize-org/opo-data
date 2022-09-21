@@ -193,6 +193,13 @@ videos:
       - WY
       - KS
 notes:
+  - voicesForReform: true
+    note: "[S﻿enator Jerry
+      Moran](https://www.moran.senate.gov/public/index.cfm/editorials?id=2CF0B8\
+      F4-F2D4-4FA3-9704-68BE9816891B): Competition Needed to Address a Flawed
+      Organ Donation System"
+    tags:
+      - KS
   - voicesForReform: false
     note: "[AdventHealth](https://www.adventhealth.com/business/adventhealth-centra\
       l-florida-media-resources/news/organ-transplant-system-topic-adventhealth\
