@@ -75,6 +75,10 @@ headings:
       an OPO failed to meet Tier 1 standards, according to CMS. Each missed
       transplant results in a loss of life because an organ was not available.
 videos:
+  - title: Senator Ben Cardin in Senate Finance Hearing
+    link: https://youtu.be/yxD0eYalmQI?t=3170
+    tags:
+      - MD
   - link: https://youtu.be/yxD0eYalmQI?t=6000
     title: Senator Bob Casey in Senate Finance hearing
     tags:
@@ -120,8 +124,8 @@ videos:
     tags:
       - OR
     description: ""
-  - title: OPO CEO Matt Wadsworth testifies before House Oversight Committee
-    link: https://youtu.be/TnKo8Q-Hemk?t=3401
+  - title: Senator Rob Portman in Senate Finance Hearing
+    link: https://youtu.be/yxD0eYalmQI?t=3557
     tags:
       - OH
   - link: https://youtu.be/TnKo8Q-Hemk?t=4421
@@ -155,7 +159,38 @@ videos:
   - link: https://youtu.be/TnKo8Q-Hemk?t=6352
     title: Rep. Katie Porter at House Oversight Committee Hearing
     tags:
-      - CA
+      - AK
+      - AR
+      - AZ
+      - CO
+      - CT
+      - DE
+      - HI
+      - ID
+      - ME
+      - MI
+      - MN
+      - MS
+      - MT
+      - NC
+      - ND
+      - NE
+      - NH
+      - NJ
+      - NM
+      - OK
+      - PR
+      - RI
+      - SC
+      - SD
+      - UT
+      - VA
+      - VT
+      - WA
+      - WI
+      - WV
+      - WY
+      - KS
     description: ""
   - title: Patient advocates including Alonzo Mourning, Samantha Bee, and Jenna Zak
     link: https://www.youtube.com/watch?v=21PFXgvxSVQ
@@ -168,7 +203,6 @@ videos:
       - DE
       - HI
       - ID
-      - MD
       - ME
       - MI
       - MN
