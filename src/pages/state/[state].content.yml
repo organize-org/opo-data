@@ -3,10 +3,10 @@ stats:
     title: State Waiting List[1](#sources-1)
     source: State waiting list via [OPTN state
       data](https://optn.transplant.hrsa.gov/data/view-data-reports/state-data/)
-      (as of 09/01/22). Alaska, Idaho, Montana, and Wyoming do not have
+      (as of 10/01/22). Alaska, Idaho, Montana, and Wyoming do not have
       transplant centers, so they do not have a state waiting list; patients are
       listed in the state in which their transplant center is based, which is
-      not necessarily their state of residence
+      not necessarily their state of residence.
   monthly:
     title: Deaths on state waiting list each month[2](#sources-2)
     source: "Number of people on state waiting list who die each month waiting for
