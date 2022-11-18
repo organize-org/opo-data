@@ -316,11 +316,10 @@ notes:
       - NY
       - CA
   - voicesForReform: false
-    note: "[Post
-      Bulletin](https://www.postbulletin.com/newsmd/federal-reviewers-downgrade\
-      -regional-organ-donor-group-lifesource-to-failing-in-2022-rankings):
-      \"Regional organ donation group LifeSource downgraded to 'failing' in
-      federal rankings\""
+    note: '[Post
+      Bulletin](https://www.postbulletin.com/newsmd/federal-reviewers-downgrade-regional-organ-donor-group-lifesource-to-failing-in-2022-rankings):
+      "Regional organ donation group LifeSource downgraded to "failing" in
+      federal rankings"'
     tags:
       - MN
       - SD
