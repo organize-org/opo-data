@@ -228,6 +228,13 @@ videos:
       - WY
       - KS
 notes:
+  - voicesForReform: true
+    note: '[S﻿enator Cory
+      Booker](https://www.booker.senate.gov/news/press/booker-jones-lead-colleagues-in-urging-hhs-cms-and-hrsa-to-improve-opo-performance-and-increase-access-to-organ-transplantations):
+      "Booker, Jones Lead Colleagues in Urging HHS, CMS, and HRSA to Improve OPO
+      Performance and Increase Access to Organ Transplantations"'
+    tags:
+      - NJ
   - voicesForReform: false
     note: >-
       [C﻿BS
