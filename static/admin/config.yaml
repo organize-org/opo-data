@@ -1,0 +1,108 @@
+backend:
+  name: github
+  repo: Bloom-Works/opo-dashboard
+  branch: main
+
+local_backend: true
+
+media_folder: src/images
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - label: Main Page
+        name: index
+        file: src/pages/index.content.yml
+        fields:
+          - label: Stats
+            name: stats
+            widget: list
+            allow_add: false
+            collapsed: false
+            max: 3
+            fields:
+              - { label: Title, name: title, widget: markdown }
+              - { label: Value, name: value, widget: markdown }
+          - label: Map content
+            name: mapContent
+            widget: object
+            fields:
+              - label: OPO performance disparity map
+                name: opo-performance
+                widget: markdown
+              - label: Black procurement disparity map
+                name: black-procurement-disparities
+                widget: markdown
+              - label: Under congressional investigation
+                name: congressional-investigations
+                widget: markdown
+          - label: Quote
+            name: quote
+            widget: object
+            fields:
+              - { label: Quote, name: quote, widget: string }
+              - label: Attribution
+                name: attribution
+                widget: string
+              - label: Image
+                name: image
+                allow_multiple: false
+                media_folder: ../images/quotes
+                widget: image
+          - label: Equity Embed
+            name: equityEmbed
+            widget: object
+            fields:
+              - label: Image
+                name: image
+                allow_multiple: false
+                media_folder: ../images/quotes
+                widget: image
+              - label: Mobile Image
+                name: mobileImage
+                allow_multiple: false
+                media_folder: ../images/quotes
+                widget: image
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Description
+                name: description
+                widget: markdown
+              - label: Link Text
+                name: link
+                widget: string
+          - label: Video
+            name: video
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - label: Description
+                name: description
+                widget: text
+              - label: Youtube Code
+                name: youtube
+                widget: string
+          - label: Articles
+            name: articles
+            widget: list
+            allow_add: true
+            collapsed: false
+            fields:
+              - { label: Link, name: link, widget: string }
+              - label: Source
+                name: source
+                widget: string
+                required: false
+              - { label: Title, name: title, widget: string }
+              - label: Description
+                name: description
+                widget: text
+              - label: Tags
+                name: tags
+                widget: select
+                multiple: true
+                collapsed: false
+                options:
+                  - { label: Yes, value: true }
+                  - { label: No, value: false }
