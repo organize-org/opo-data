@@ -67,8 +67,12 @@ export default function useDataMaps() {
             ...data,
             a_rank: data?.a_rank ? `${data.a_rank} of ${a_count}` : "N/A",
             h_rank: data?.h_rank ? `${data.h_rank} of ${h_count}` : "N/A",
-            nhw_rank: data?.nhw_rank ? `${data.nhw_rank} of ${nhw_count}` : "N/A",
-            nhb_rank: data?.nhb_rank ? `${data.nhb_rank} of ${nhb_count}` : "N/A",
+            nhw_rank: data?.nhw_rank
+              ? `${data.nhw_rank} of ${nhw_count}`
+              : "N/A",
+            nhb_rank: data?.nhb_rank
+              ? `${data.nhb_rank} of ${nhb_count}`
+              : "N/A",
             // `states` field: newline-delineated state(s) with an optional `-`-delineated region.
             // Transform -> { [state]: region }. e.g. `states: 'OH - West\n'` -> `{ 'OH': 'West' }`.
             statesWithRegions: data.states.split("\n").reduce((swrMap, swr) => {
