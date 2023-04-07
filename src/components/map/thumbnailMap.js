@@ -136,7 +136,7 @@ export default function ThumnailMap({
                 eventHandlers={{
                   click: ({ propagatedFrom }) => {
                     navigate(
-                      `/opo/${propagatedFrom?.feature?.properties?.abbreviation.trim()}`
+                      `/opo/${propagatedFrom?._source?.feature?.properties?.abbreviation.trim()}`
                     );
                   },
                 }}
