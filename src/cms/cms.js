@@ -63,7 +63,7 @@ csv().fromString(rawOpoData.default.toString())
                 label: "Pages",
                 files: [
                   {
-                    label: "FOOBAR Main Page",
+                    label: "Main Page",
                     name: "index",
                     file: "src/pages/index.content.yml",
                     fields: [
