@@ -4,48 +4,44 @@ export default function useDataMaps() {
   const { opoData, statesData } = useStaticQuery(
     graphql`
       query {
-        opoData: allAirtable(filter: { table: { eq: "OPOs" } }) {
+        opoData: allOposCsv {
           nodes {
-            data {
-              compensation
-              donors
-              investigation
-              investigation_url
-              name
-              abbreviation: opo
-              nhw_donors
-              nhb_donors
-              h_donors
-              a_donors
-              nhw_recovery
-              nhb_recovery
-              h_recovery
-              a_recovery
-              nhw_death
-              nhb_death
-              h_death
-              a_death
-              nhw_rank
-              nhb_rank
-              h_rank
-              a_rank
-              shadows
-              states
-              tier
-              ceo
-              board
-              rank
-            }
+            compensation
+            donors
+            investigation
+            investigation_url
+            name
+            abbreviation: opo
+            nhw_donors
+            nhb_donors
+            h_donors
+            a_donors
+            nhw_recovery
+            nhb_recovery
+            h_recovery
+            a_recovery
+            nhw_death
+            nhb_death
+            h_death
+            a_death
+            nhw_rank
+            nhb_rank
+            h_rank
+            a_rank
+            shadows
+            states
+            tier
+            ceo
+            board
+            rank
           }
         }
-        statesData: allAirtable(filter: { table: { eq: "States" } }) {
+        statesData: allStatesCsv {
           nodes {
-            data {
-              abbreviation
-              monthly
-              name
-              waitlist
-            }
+            abbreviation
+            monthly
+            name
+            waitlist
           }
         }
       }

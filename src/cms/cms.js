@@ -115,6 +115,14 @@ const stateOptions = [
   "WY",
 ];
 
+const OPO_PERFORMANCE_TIER = [ 
+  "1 (Passing)",
+  "2 (Underperforming)",
+  "3 (Failing)"
+];
+
+console.log("foo")
+
 init({
   config: {
     backend: {
@@ -126,12 +134,27 @@ init({
     load_config_file: false,
     media_folder: "src/images",
     collections: [
+      { 
+        name: "data",
+        label: "Data",
+        files: [
+          {
+            name: "data", 
+            label: "Data",
+            file: "src/data/data.yaml",
+            fields: [
+              { label: "opos", name: "OPOs data file (csv)", widget: "file", allow_multiple: false, choose_url: false, default: "/src/data/opos.csv"},
+              { label: "states", name: "States data file (csv)", widget: "file", allow_multiple: false, choose_url: false, default: "/src/data/states.csv"}
+            ]
+          }
+        ]
+      },
       {
         name: "pages",
         label: "Pages",
         files: [
           {
-            label: "Main Page",
+            label: "FOOBAR Main Page",
             name: "index",
             file: "src/pages/index.content.yml",
             fields: [
