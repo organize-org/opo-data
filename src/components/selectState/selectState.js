@@ -7,7 +7,7 @@ import useDataMaps from "../../hooks/useDataMaps";
 import * as styles from "./selectState.module.css";
 
 export default function SelectState({ label, link = false, opo = false }) {
-  const [{ stateDataMap, opoDataMap }] = useDataMaps();
+  const { stateDataMap, opoDataMap } = useDataMaps();
 
   const sortFunc = opo
     ? (entryA, entryB) => {

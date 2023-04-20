@@ -20,7 +20,7 @@ import content from "./[state].content.yml";
 import * as styles from "./state.module.css";
 
 export default function State({ data: { statesGeoData }, state }) {
-  const [{ opoDataMap, stateDataMap }] = useDataMaps();
+  const { opoDataMap, stateDataMap } = useDataMaps();
 
   // Find associated state data and feature by abbreviation, redirect if not found
   const stateData = stateDataMap[state?.toLocaleUpperCase()];
