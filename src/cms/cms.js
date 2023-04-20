@@ -141,7 +141,7 @@ init({
           {
             name: "data", 
             label: "Data",
-            file: "src/data/data.yaml",
+            file: "src/data/data_files.yaml",
             fields: [
               { label: "opos", name: "OPOs data file (csv)", widget: "file", allow_multiple: false, choose_url: false, default: "/src/data/opos.csv"},
               { label: "states", name: "States data file (csv)", widget: "file", allow_multiple: false, choose_url: false, default: "/src/data/states.csv"}
