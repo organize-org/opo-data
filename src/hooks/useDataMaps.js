@@ -11,7 +11,7 @@ export default function useDataMaps() {
             investigation
             investigation_url
             name
-            abbreviation: opo
+            opo
             nhw_donors
             nhb_donors
             h_donors
@@ -48,10 +48,10 @@ export default function useDataMaps() {
     `
   );
 
-  const a_count = opoData.nodes.filter(node => node.data.a_rank).length;
-  const h_count = opoData.nodes.filter(node => node.data.h_rank).length;
-  const nhw_count = opoData.nodes.filter(node => node.data.nhw_rank).length;
-  const nhb_count = opoData.nodes.filter(node => node.data.nhb_rank).length;
+  const a_count = opoData.nodes.filter(node => node.a_rank).length;
+  const h_count = opoData.nodes.filter(node => node.h_rank).length;
+  const nhw_count = opoData.nodes.filter(node => node.nhw_rank).length;
+  const nhb_count = opoData.nodes.filter(node => node.nhb_rank).length;
 
   return [
     {
@@ -59,7 +59,7 @@ export default function useDataMaps() {
       opoDataMap: opoData?.nodes?.reduce(
         (opoDataMap, { data }) => ({
           ...opoDataMap,
-          [data.abbreviation]: {
+          [data.opo]: {
             ...data,
             a_rank: data?.a_rank ? `${data.a_rank} of ${a_count}` : "N/A",
             h_rank: data?.h_rank ? `${data.h_rank} of ${h_count}` : "N/A",
