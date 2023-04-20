@@ -119,7 +119,7 @@ init({
   config: {
     backend: {
       name: "github",
-      repo: "Bloom-Works/opo-dashboard",
+      repo: "Bloom-Works/opo-data",
       branch: "main",
     },
     local_backend: true,
