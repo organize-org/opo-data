@@ -37,8 +37,8 @@ csv().fromString(rawOpoData.default.toString())
                     file: "src/data/data_files.yaml",
                     fields: [
                       { 
-                        label: "opos",
-                        name: "OPOs data file (csv)",
+                        label: "OPOs data file (csv)",
+                        name: "opos",
                         widget: "file",
                         allow_multiple: false,
                         choose_url: false,
@@ -46,8 +46,8 @@ csv().fromString(rawOpoData.default.toString())
                         pattern: ["opos.csv", "File must be named 'opos.csv'"]
                       },
                       { 
-                        label: "states",
-                        name: "States data file (csv)", 
+                        label: "States data file (csv)",
+                        name: "states", 
                         widget: "file",
                         allow_multiple: false,
                         choose_url: false,
