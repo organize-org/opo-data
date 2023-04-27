@@ -15,7 +15,7 @@ export default function ThumnailMap({
   dataId, // state or OPO abbr (e.g. AZ or ALOB)
   view, // "state" or "opo"
 }) {
-  const [{ opoDataMap, stateDataMap }] = useDataMaps();
+  const { opoDataMap, stateDataMap } = useDataMaps();
   const { dsaGeoData, statesGeoData } = useGeoJson();
 
   // compose fill OPO geoJson with appropriately filtered

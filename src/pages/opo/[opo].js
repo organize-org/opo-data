@@ -31,7 +31,7 @@ import opoContent from "./[opo].content.yml";
 import * as styles from "./opo.module.css";
 
 export default function Opo({ opo }) {
-  const [{ opoDataMap }] = useDataMaps();
+  const { opoDataMap } = useDataMaps();
 
   const opoData = opoDataMap[opo?.toLocaleUpperCase()];
   if (!opoData) {

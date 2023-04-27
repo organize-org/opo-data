@@ -43,22 +43,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-airtable`,
-      options: {
-        apiKey: process.env.AIRTABLE_API_KEY,
-        tables: [
-          {
-            baseId: `appu0SGuPMX4CH7xz`,
-            tableName: `OPOs`,
-          },
-          {
-            baseId: `appu0SGuPMX4CH7xz`,
-            tableName: `States`,
-          },
-        ],
-      },
-    },
-    {
       resolve: `gatsby-plugin-netlify-cms`,
       options: {
         manualInit: true,

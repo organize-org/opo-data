@@ -18,7 +18,7 @@ import * as styles from "./map.module.css";
 export default function MainMap({ mapView }) {
   const windowWidth = useWindowDimensions().width;
 
-  const [{ opoDataMap, stateDataMap }] = useDataMaps();
+  const { opoDataMap, stateDataMap } = useDataMaps();
   const { dsaGeoData, statesGeoData } = useGeoJson();
 
   // compose state geoJson from state geo data
