@@ -114,11 +114,11 @@ stateHeadings:
     source: Tier (2020) via [CMS](https://qcor.cms.gov/main.jsp), data most recently
       available (2020). OPO names are listed as they are by CMS.
   donors:
-    title: Donors Needed (2020)[12](#sources-12)
+    title: Donors Needed (2021)[12](#sources-12)
     source: Donors needed represents the number of additional donors needed for OPO
       to reach Tier 1 according to [CMS](https://qcor.cms.gov/main.jsp). Data
-      was released by CMS in April 2022 based on most recently available data
-      from 2020.
+      was released by CMS in April 2023 based on most recently available data
+      from 2021.
   investigation:
     title: Under Congressional Investigation[13](#sources-13)
     source: Currently Under Congressional investigation represents the 17 OPOs under
@@ -132,7 +132,7 @@ stateHeadings:
       and
       [here.](https://oversightdemocrats.house.gov/sites/democrats.oversight.house.gov/files/2020-12-23.RK%20KP%20to%20Miller-AOPO%20re%20OPOs.pdf)
   shadow:
-    title: Preventable Deaths*(2020)[14](#sources-14)
+    title: Preventable Deaths*(2021)[14](#sources-14)
     caption: ""
     source: “Preventable deaths” refers to the number of organ transplants by which
       an OPO failed to meet Tier 1 standards, according to CMS. Each missed
