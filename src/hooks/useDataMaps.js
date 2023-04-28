@@ -68,7 +68,7 @@ export default function useDataMaps() {
           : "N/A",
         // `states` field: newline-delineated state(s) with an optional `-`-delineated region.
         // Transform -> { [state]: region }. e.g. `states: 'OH - West\n'` -> `{ 'OH': 'West' }`.
-        statesWithRegions: data.states.split("\n").reduce((swrMap, swr) => {
+        statesWithRegions: data.states.split(";").reduce((swrMap, swr) => {
           const [state, region = ""] = swr
             .split("-")
             .map(sor => sor.trim());
