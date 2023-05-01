@@ -60934,16 +60934,7 @@
               [-73.49688, 42.04968],
               [-73.48731, 42.04964]
             ]
-          ]
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": { "opo": "CTOP" },
-      "geometry": {
-        "type": "MultiPolygon",
-        "coordinates": [
+          ],
           [
             [
               [-72.13572, 42.03025],
