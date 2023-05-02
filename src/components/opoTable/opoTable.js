@@ -89,7 +89,7 @@ export default function OpoTable({ headings, opos, title }) {
 
   const data = useMemo(() => {
     const formatNumber = (num, options) =>
-      typeof num === "number" ? num.toLocaleString("en-US", options) : "N/A";
+      typeof num === "number" && !isNaN(num) ? num.toLocaleString("en-US", options) : "N/A";
 
     return opos.map(
       ({
