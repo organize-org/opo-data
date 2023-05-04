@@ -61,7 +61,7 @@ export const OPO_PERFORMANCE_TIER_FILL = {
 
 export const BLACK_DONOR_DISPARITY_FILL = {
   "N/A": {
-    compare: val => val === null || val === undefined,
+    compare: val => val === null || val === undefined || isNaN(val),
     fill: "#EBEBEB",
   },
   "< 7.5": {
