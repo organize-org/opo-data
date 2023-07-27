@@ -20,7 +20,7 @@ csv().fromString(rawOpoData.default.toString())
           config: {
             backend: {
               name: "github",
-              repo: "Bloom-Works/opo-data",
+              repo: "organize-org/opo-data",
               branch: "main",
             },
             local_backend: true,

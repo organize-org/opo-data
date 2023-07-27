@@ -3,7 +3,7 @@ import { Col, Row } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
 import { Link } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
-// import { BgImage } from "gbimage-bridge";
+import { BgImage } from "gbimage-bridge";
 import useQuoteImages from "../../hooks/useQuoteImages";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 
@@ -23,39 +23,36 @@ export default function EquitySection({ page = "main" }) {
 
   return (
     <>
-    
+      {(width < 800 && page === "main") ||
+        (page === "state" && (
+          <Row
+            className={page === "main" ? styles.mainHeader : styles.stateHeader}
+          >
+            <h3>{heading}</h3>
+          </Row>
+        ))}
+      <Row className={styles[page]}>
+        <Col>
+          <BgImage
+            className={styles.background}
+            image={getImage(
+              quoteImagesByPath[
+                page !== "main"
+                  ? image.slice(3, image.length)
+                  : width < 800
+                  ? mobileImage
+                  : image
+              ],
+            )}
+          >
+            <div className={styles.copy}>
+              {width > 800 && page === "main" && <h3>{heading}</h3>}
+              <ReactMarkdown>{description}</ReactMarkdown>
+              <Link to="/equity">{link}</Link>
+            </div>
+          </BgImage>
+        </Col>
+      </Row>
     </>
   );
 }
-
-
-// {(width < 800 && page === "main") ||
-// (page === "state" && (
-//   <Row
-//     className={page === "main" ? styles.mainHeader : styles.stateHeader}
-//   >
-//     <h3>{heading}</h3>
-//   </Row>
-// ))}
-// <Row className={styles[page]}>
-// <Col>
-//   {/* <BgImage
-//     className={styles.background}
-//     image={getImage(
-//       quoteImagesByPath[
-//         page !== "main"
-//           ? image.slice(3, image.length)
-//           : width < 800
-//           ? mobileImage
-//           : image
-//       ]
-//     )}
-//   >
-//     <div className={styles.copy}>
-//       {width > 800 && page === "main" && <h3>{heading}</h3>}
-//       <ReactMarkdown>{description}</ReactMarkdown>
-//       <Link to="/equity">{link}</Link>
-//     </div>
-//   </BgImage> */}
-// </Col>
-// </Row>
