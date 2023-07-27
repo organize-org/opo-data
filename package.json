@@ -16,7 +16,6 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests!\" && exit 1",
     "deploy": "npm run -n \"-r dotenv/config\" && npm run build && gatsby-plugin-s3 deploy --yes && aws cloudfront create-invalidation --distribution-id E2UTM47Q9DCJI6 --paths \"/*\"",
-    "deploy-bloom": "AWS_PROFILE=bloom npm run deploy"
   },
   "dependencies": {
     "@turf/bbox": "^6.5.0",

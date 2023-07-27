@@ -55,13 +55,6 @@ export default function Footer() {
               height={40}
             />
           </a>
-          <a className={styles.icon} href="https://bloomworks.digital">
-            <StaticImage
-              src="../../images/logos/bloomworks.png"
-              alt="bloom logo"
-              height={30}
-            />
-          </a>
           <a className={styles.icon} href="https://www.organize.org">
             <StaticImage
               src="../../images/logos/organize.png"
