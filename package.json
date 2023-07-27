@@ -13,9 +13,7 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests!\" && exit 1",
-    "deploy": "npm run -n \"-r dotenv/config\" && npm run build && gatsby-plugin-s3 deploy --yes && aws cloudfront create-invalidation --distribution-id E2UTM47Q9DCJI6 --paths \"/*\"",
+    "clean": "gatsby clean"
   },
   "dependencies": {
     "@turf/bbox": "^6.5.0",
