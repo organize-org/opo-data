@@ -42,7 +42,7 @@ export default function EquitySection({ page = "main" }) {
                   : width < 800
                   ? mobileImage
                   : image
-              ]
+              ],
             )}
           >
             <div className={styles.copy}>

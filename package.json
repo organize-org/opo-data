@@ -1,5 +1,5 @@
 {
-  "name": "opo-dashboard",
+  "name": "opo-data",
   "private": false,
   "description": "A tabular and geospatial dashboard for Organ Procurement Organization (OPO) metrics",
   "version": "0.1.0",
@@ -13,38 +13,35 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests!\" && exit 1",
-    "deploy": "npm run -n \"-r dotenv/config\" && npm run build && gatsby-plugin-s3 deploy --yes && aws cloudfront create-invalidation --distribution-id E2UTM47Q9DCJI6 --paths \"/*\"",
-    "deploy-bloom": "AWS_PROFILE=bloom npm run deploy"
+    "clean": "gatsby clean"
   },
   "dependencies": {
     "@turf/bbox": "^6.5.0",
     "@turf/boolean-intersects": "^6.4.0",
     "bootstrap": "^4.6.0",
     "copy-to-clipboard": "^3.3.1",
-    "gatsby": "^5.8.0",
+    "gatsby": "^5.11.0",
     "gatsby-background-image": "^1.6.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
-    "gatsby-plugin-google-gtag": "^5.8.0",
-    "gatsby-plugin-image": "^3.8.0",
+    "gatsby-plugin-google-gtag": "^5.11.0",
+    "gatsby-plugin-image": "^3.11.0",
     "gatsby-plugin-netlify": "^5.1.0",
-    "gatsby-plugin-netlify-cms": "^7.9.0",
+    "gatsby-plugin-netlify-cms": "^7.11.0",
     "gatsby-plugin-netlify-identity-widget": "^1.1.1",
     "gatsby-plugin-react-leaflet": "^4.0.3",
     "gatsby-plugin-react-svg": "^3.3.0",
-    "gatsby-plugin-sharp": "^5.8.0",
-    "gatsby-source-filesystem": "^5.8.0",
-    "gatsby-transformer-csv": "^5.9.0",
+    "gatsby-plugin-sharp": "^5.11.0",
+    "gatsby-source-filesystem": "^5.11.0",
+    "gatsby-transformer-csv": "^5.11.0",
     "gatsby-transformer-geojson": "^1.0.2",
-    "gatsby-transformer-sharp": "^5.8.0",
+    "gatsby-transformer-sharp": "^5.11.0",
     "gbimage-bridge": "^0.2.2",
     "leaflet": "^1.9.3",
     "netlify-cms-app": "^2.15.72",
-    "react": "^18.0.0",
-    "react-bootstrap": "^2.7.2",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.8.0",
     "react-bootstrap-icons": "^1.10.3",
-    "react-dom": "^18.0.0",
+    "react-dom": "^18.2.0",
     "react-leaflet": "^4.2.1",
     "react-markdown": "^8.0.6",
     "react-player": "^2.12.0",
@@ -61,13 +58,6 @@
     "husky": "^6.0.0",
     "prettier": "2.2.1",
     "pretty-quick": "^3.1.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Bloom-Works/opo-dashboard"
-  },
-  "bugs": {
-    "url": "https://github.com/Bloom-Works/opo-dashboard"
   },
   "husky": {
     "hooks": {
