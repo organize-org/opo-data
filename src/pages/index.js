@@ -27,11 +27,11 @@ export default function Dashboard({ location, data: { articleImages } }) {
       ...imgMap,
       [`../${node.relativePath}`]: node,
     }),
-    {}
+    {},
   );
 
   const [mapView, setMapView] = useState(
-    location?.hash ? location.hash.substring(1) : "opo-performance"
+    location?.hash ? location.hash.substring(1) : "opo-performance",
   );
 
   useEffect(() => {
@@ -39,8 +39,9 @@ export default function Dashboard({ location, data: { articleImages } }) {
       ![
         "",
         "#opo-performance",
-        "#congressional-investigations",
+        "#house-investigations",
         "#black-procurement-disparities",
+        "#senate-investigations",
       ].includes(location?.hash)
     )
       navigate("/");
@@ -82,11 +83,20 @@ export default function Dashboard({ location, data: { articleImages } }) {
             <Button
               variant="outline-secondary"
               className={styles.mapToggleButtons}
-              active={mapView === "congressional-investigations"}
-              onClick={() => navigate("/#congressional-investigations")}
+              active={mapView === "house-investigations"}
+              onClick={() => navigate("/#house-investigations")}
             >
-              Congressional Investigations
+              House Investigations
             </Button>
+            <Button
+              variant="outline-secondary"
+              className={styles.mapToggleButtons}
+              active={mapView === "senate-investigations"}
+              onClick={() => navigate("/#senate-investigations")}
+            >
+              Sentate Investigations
+            </Button>
+
             <Button
               variant="outline-secondary"
               className={styles.mapToggleButtons}

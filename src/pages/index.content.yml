@@ -1,7 +1,8 @@
 stats:
   - title: National organ transplant waiting list as of September 6, 2023
     value: 103,272
-  - title: Number of Americans in 2021 who died each day because they didn’t get a
+  - title:
+      Number of Americans in 2021 who died each day because they didn’t get a
       needed transplant
     value: "31"
   - title: Annual cost to Medicare of dialysis
@@ -23,7 +24,7 @@ mapContent:
     Axios](https://www.axios.com/organ-donation-recovery-worse-people-of-color-8d42a213-4ef7-48a3-85fb-dd15cfc4301b.html):
     "Fewer Black donors correlates to fewer Black recipients, which has led to
     more Black dying on the organ transplant waitlist."'
-  congressional-investigations: >-
+  house-investigations: >-
     The House Oversight Committee is investigating 17 OPOs for “shocking
     mismanagement”, among other conflicts and abuses. In parallel, the Senate
     Finance Committee is also conducting a bipartisan investigation into the
@@ -49,7 +50,8 @@ quote:
 equityEmbed:
   image: ../images/quotes/equity-home.jpg
   heading: OPO reform is an urgent equity issue
-  description: Patients of color are less likely to receive organ transplants than
+  description:
+    Patients of color are less likely to receive organ transplants than
     white patients because of inferior OPO service.
   link: See more data
   mobileImage: ../images/quotes/equity-state.jpg
@@ -62,7 +64,8 @@ video:
   youtube: https://youtu.be/yxD0eYalmQI
 articles:
   - title: They Survived Covid. Now They Need New Lungs.
-    description: He survived Covid-19, but his lungs were ravaged. After months of
+    description:
+      He survived Covid-19, but his lungs were ravaged. After months of
       deep sedation, he is delirious, his muscles atrophied. And this
       61-year-old still cannot breathe on his own.
     source: NYT
@@ -75,7 +78,8 @@ articles:
     source: Health Affairs Blog
     link: https://www.healthaffairs.org/do/10.1377/hblog20201211.229975/full
     image: ../images/articles/editorial2.png
-  - title: America’s Transformative New Organ Donation Rule Goes into Effect Over
+  - title:
+      America’s Transformative New Organ Donation Rule Goes into Effect Over
       Objections from Monopolistic Contractors
     description: Public filings by organ procurement organizations and their
       lobbyists indicate that lobbying expenditures have risen by nearly 500%

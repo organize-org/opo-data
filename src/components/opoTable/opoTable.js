@@ -89,12 +89,15 @@ export default function OpoTable({ headings, opos, title }) {
 
   const data = useMemo(() => {
     const formatNumber = (num, options) =>
-      typeof num === "number" && !isNaN(num) ? num.toLocaleString("en-US", options) : "N/A";
+      typeof num === "number" && !isNaN(num)
+        ? num.toLocaleString("en-US", options)
+        : "N/A";
 
     return opos.map(
       ({
         donors,
         investigation,
+        investigation_senate,
         name,
         region,
         shadows,
@@ -108,6 +111,7 @@ export default function OpoTable({ headings, opos, title }) {
         return {
           donors: formatNumber(donors),
           investigation: investigation ? "Yes" : "No",
+          investigation_senate: investigation_senate ? "Yes" : "No",
           name: name,
           region: region,
           shadow: formatNumber(shadows),
@@ -118,26 +122,21 @@ export default function OpoTable({ headings, opos, title }) {
           recovery: formatNumber(recovery),
           rank: rank,
         };
-      }
+      },
     );
   }, [opos]);
 
-  const {
-    getTableProps,
-    getTableBodyProps,
-    headerGroups,
-    rows,
-    prepareRow,
-  } = useTable(
-    {
-      columns,
-      data,
-      initialState: {
-        sortBy: [{ id: columns[0].accessor }],
+  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
+    useTable(
+      {
+        columns,
+        data,
+        initialState: {
+          sortBy: [{ id: columns[0].accessor }],
+        },
       },
-    },
-    useSortBy
-  );
+      useSortBy,
+    );
 
   const table = (
     <Row className={styles.opoTable}>
@@ -191,12 +190,13 @@ export default function OpoTable({ headings, opos, title }) {
           })}
         </tbody>
       </Table>
-      {captions?.length > 0 ?
-        captions.map(caption => (
-          <p key={caption} className={styles.tableCaption}>
-            * {caption}
-          </p>
-        )) : null }
+      {captions?.length > 0
+        ? captions.map(caption => (
+            <p key={caption} className={styles.tableCaption}>
+              * {caption}
+            </p>
+          ))
+        : null}
     </Row>
   );
 
