@@ -240,14 +240,10 @@ const getToolTipContent = (view, id, stateDataMap, opoDataMap) => {
       `;
   }
 
-  if (view === "senate-investigations") {
-    return `
-    <p>Currently Under Senate Investigation: <strong>${
-      !!opoDataMap[id].investigation_senate ? "Yes" : "No"
-    }</strong></p>
-  `;
-  }
   return `
+  <p>Currently Under Senate Investigation: <strong>${
+    !!opoDataMap[id].investigation_senate ? "Yes" : "No"
+  }</strong></p>
       <p>Currently Under House Investigation: <strong>${
         !!opoDataMap[id].investigation ? "Yes" : "No"
       }</strong></p>

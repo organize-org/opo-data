@@ -44,15 +44,15 @@ export default function Opo({ opo }) {
   const { opoHeadings, stateHeadings, stats, takeaways, videos } = opoContent;
 
   const opoHeadlines = notes.filter(note =>
-    note.tags?.includes(opo.toUpperCase())
+    note.tags?.includes(opo.toUpperCase()),
   );
 
   const opoTakeaways = takeaways.filter(
-    takeaway => takeaway.opo === opo.toUpperCase()
+    takeaway => takeaway.opo === opo.toUpperCase(),
   );
 
   const opoVideos = videos?.filter(video =>
-    video.tags?.includes(opo.toUpperCase())
+    video.tags?.includes(opo.toUpperCase()),
   );
 
   // All states serviced by this OPO
@@ -63,7 +63,7 @@ export default function Opo({ opo }) {
   //   - All opos servicing bordering states if this OPO only services one
 
   const comparisonOPOs = Object.values(opoDataMap).filter(opo =>
-    thisOPOStates.some(s => !!opo.statesWithRegions[s])
+    thisOPOStates.some(s => !!opo.statesWithRegions[s]),
   );
 
   const ethnicityKeys = {
@@ -114,7 +114,7 @@ export default function Opo({ opo }) {
                       ? ""
                       : ", "
                   }`;
-                }
+                },
               )}
             </strong>
           </Col>
@@ -158,7 +158,7 @@ export default function Opo({ opo }) {
                   <ReactMarkdown>
                     {stats.rank.title.replace(
                       /XX/,
-                      getRankedOPOCount(opoDataMap)
+                      getRankedOPOCount(opoDataMap),
                     )}
                   </ReactMarkdown>
                 </h3>
@@ -171,6 +171,13 @@ export default function Opo({ opo }) {
               <Col>
                 <h3>
                   <ReactMarkdown>{stats.investigation.title}</ReactMarkdown>
+                </h3>
+              </Col>
+              <Col>
+                <h3>
+                  <ReactMarkdown>
+                    {stats.investigation_senate.title}
+                  </ReactMarkdown>
                 </h3>
               </Col>
             </Row>
@@ -191,6 +198,23 @@ export default function Opo({ opo }) {
                     {" "}
                     Yes <BoxArrowUpRight />{" "}
                   </a>
+                ) : (
+                  <p>No</p>
+                )}
+              </Col>
+              <Col>
+                {!!opoData.investigation_senate ? (
+                  <>
+                    {/* <a
+                    href={opoData.investigation_url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {" "}
+                    Yes <BoxArrowUpRight />{" "}
+                  </a> */}
+                    <p>Yes</p>
+                  </>
                 ) : (
                   <p>No</p>
                 )}
