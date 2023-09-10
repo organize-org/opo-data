@@ -1,6 +1,6 @@
 import React from "react";
 import { navigate } from "gatsby";
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, Table } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
 import ReactPlayer from "react-player";
 
@@ -152,7 +152,7 @@ export default function Opo({ opo }) {
                 />
               </Col>
             </Row>
-            <table className={styles.statsTable}>
+            <Table responsive className={styles.statsTable}>
               <thead>
                 <tr>
                   <th>
@@ -217,8 +217,7 @@ export default function Opo({ opo }) {
                   </td>
                 </tr>
               </tbody>
-            </table>
-
+            </Table>
             <div className={styles.statsDivider}></div>
             <Row className={styles.statsComp}>
               <Col>
