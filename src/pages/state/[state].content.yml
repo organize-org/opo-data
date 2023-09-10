@@ -9,7 +9,8 @@ stats:
       not necessarily their state of residence.
   monthly:
     title: Deaths on state waiting list each month[2](#sources-2)
-    source: "Number of people on state waiting list who die each month waiting for
+    source:
+      "Number of people on state waiting list who die each month waiting for
       an organ: 2021 deaths via [OPTN state
       data](https://optn.transplant.hrsa.gov/data/view-data-reports/state-data/)
       (patients who died on waiting list + patients who died who were listed as
@@ -17,7 +18,8 @@ stats:
       on April 25, 2023."
   comp:
     title: Average CEO Compensation[3](#sources-3)
-    source: "Average CEO compensation via each OPO's most recently listed 990 (as of
+    source:
+      "Average CEO compensation via each OPO's most recently listed 990 (as of
       6/15/22). 2022: Lifelink of Florida/Georgia/Puerto Rico, Live On Nebraska.
       2021: Arkansas Regional Organ Recovery, Center for Organ Recovery and
       Education, Donor Alliance, Donor Network of Arizona, Donor Network West,
@@ -42,16 +44,19 @@ headings:
     title: States
   tier:
     title: Tier (2021)[4](#sources-4)
-    source: Tier (2021) via [CMS](https://qcor.cms.gov/main.jsp), data most recently
+    source:
+      Tier (2021) via [CMS](https://qcor.cms.gov/main.jsp), data most recently
       available (2021). OPO names are listed as they are by CMS.
   donors:
     title: Donors Needed (2021)[5](#sources-5)
-    source: Donors needed (2021) via [CMS](https://qcor.cms.gov/main.jsp) represents
+    source:
+      Donors needed (2021) via [CMS](https://qcor.cms.gov/main.jsp) represents
       the number of additional donors needed for OPO to reach Tier 1. Data most
       recently available (2021).
   investigation:
     title: Currently Under Congressional Investigation[6](#sources-6)
-    source: Currently Under Congressional investigation represents the 16 OPOs under
+    source:
+      Currently Under Congressional investigation represents the 16 OPOs under
       investigation by the House Committee on Oversight and Reform for “[poor
       performance, waste, and
       mismanagement](https://oversightdemocrats.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)”
@@ -63,10 +68,12 @@ headings:
       [here.](https://oversightdemocrats.house.gov/sites/democrats.oversight.house.gov/files/OPO%20Letters.pdf)
   shadow:
     title: Preventable Deaths (2021)*[7](#sources-7)
-    source: “Preventable deaths” refers to the number of organ transplants by which
+    source:
+      “Preventable deaths” refers to the number of organ transplants by which
       an OPO failed to meet Tier 1 standards, according to CMS. Each missed
       transplant results in a loss of life because an organ was not available.
-    caption: “Preventable deaths” refers to the number of organ transplants by which
+    caption:
+      “Preventable deaths” refers to the number of organ transplants by which
       an OPO failed to meet Tier 1 standards, according to CMS. Each missed
       transplant results in a loss of life because an organ was not available.
 videos:
@@ -83,7 +90,8 @@ videos:
     link: https://youtu.be/yxD0eYalmQI?t=2131
     tags:
       - AL
-  - title: "‘What Case Could You Make?’: Bill Cassidy Hammers Executive Over Organ
+  - title:
+      "‘What Case Could You Make?’: Bill Cassidy Hammers Executive Over Organ
       Transplant System"
     link: https://www.youtube.com/watch?v=S9NKj5FhNZg
     tags:
@@ -113,7 +121,8 @@ videos:
     title: Dr. Seth Karp (Vanderbilt) testifies before House Oversight Committee
     tags:
       - TN
-  - title: Senate Finance Chairman Ron Wyden at Confirmation Hearing for Secretary
+  - title:
+      Senate Finance Chairman Ron Wyden at Confirmation Hearing for Secretary
       Becerra
     link: https://www.youtube.com/watch?v=nwCUK63RfOY
     tags:
@@ -219,7 +228,8 @@ notes:
       - SD
       - ND
   - voicesForReform: false
-    note: '[W﻿BUR](https://www.wbur.org/news/2023/05/04/congress-new-england-organ-donor-organization):
+    note:
+      '[W﻿BUR](https://www.wbur.org/news/2023/05/04/congress-new-england-organ-donor-organization):
       "Major organ center in Waltham flagged over low donation numbers"'
     tags:
       - MAOB
@@ -269,7 +279,8 @@ notes:
     tags:
       - KS
   - voicesForReform: false
-    note: "[AdventHealth](https://www.adventhealth.com/business/adventhealth-centra\
+    note:
+      "[AdventHealth](https://www.adventhealth.com/business/adventhealth-centra\
       l-florida-media-resources/news/organ-transplant-system-topic-adventhealth\
       -experts-testimony): Organ transplant system the topic of AdventHealth
       expert’s testimony"
@@ -326,10 +337,10 @@ notes:
       Brown](https://www.charlotteobserver.com/opinion/article263579258.html):
       "NC is failing organ donors and those who need transplants"'
   - voicesForReform: true
-    note: "[MedPage
+    note: '[MedPage
       Today](https://www.medpagetoday.com/opinion/second-opinions/98363):
-      'Shocking Mismanagement' in Our Organ Donation System Is Causing Needless
-      Death\""
+      ''Shocking Mismanagement'' in Our Organ Donation System Is Causing Needless
+      Death"'
     tags:
       - VA
       - MA
@@ -373,7 +384,8 @@ notes:
     tags:
       - NV
   - voicesForReform: false
-    note: "[Axios](https://www.axios.com/organ-donation-recovery-worse-people-of-co\
+    note:
+      "[Axios](https://www.axios.com/organ-donation-recovery-worse-people-of-co\
       lor-8d42a213-4ef7-48a3-85fb-dd15cfc4301b.html): “Organ donation recovery
       rates, worse for people of color data show”"
     tags:
@@ -397,7 +409,8 @@ notes:
       - NYRT
       - NJTO
   - voicesForReform: true
-    note: "[](https://twitter.com/repkatieporter/status/1491889514406625289?s=21)[C\
+    note:
+      "[](https://twitter.com/repkatieporter/status/1491889514406625289?s=21)[C\
       hairwoman Carolyn
       Maloney](https://twitter.com/repkatieporter/status/1491889514406625289?s=\
       21) calls for acceleration of OPO reform and transparency"
@@ -468,7 +481,8 @@ notes:
       - ND
       - SD
   - voicesForReform: false
-    note: ' Spent $392M on "tissue processing" and $22M on "organ procurement" in
+    note:
+      ' Spent $392M on "tissue processing" and $22M on "organ procurement" in
       2018'
     tags:
       - VATB
@@ -486,7 +500,8 @@ notes:
     tags:
       - NYRT
   - voicesForReform: false
-    note: "[OPO CEO Matt Wadsworth](https://youtu.be/TnKo8Q-Hemk?t=3401) testifies
+    note:
+      "[OPO CEO Matt Wadsworth](https://youtu.be/TnKo8Q-Hemk?t=3401) testifies
       before House Oversight Committee"
     tags:
       - OHLC
@@ -1025,7 +1040,8 @@ notes:
     voicesForReform: false
     tags:
       - VA
-  - note: "[Medscape](https://www.medpagetoday.com/surgery/transplantation/92446):
+  - note:
+      "[Medscape](https://www.medpagetoday.com/surgery/transplantation/92446):
       “Lawmakers Lambast Organ Procurement Lobbyists”"
     voicesForReform: false
     tags:
@@ -1259,7 +1275,8 @@ notes:
     tags:
       - AL
       - ALOB
-  - note: "[FBI](https://archives.fbi.gov/archives/birmingham/press-releases/2011/f\
+  - note:
+      "[FBI](https://archives.fbi.gov/archives/birmingham/press-releases/2011/f\
       ormer-alabama-organ-center-executives-charged-with-fraud): “Former Alabama
       Organ Center Executives Charged with Fraud”"
     voicesForReform: false
@@ -1346,31 +1363,24 @@ notes:
     tags:
       - OR
       - ORUO
-  - note: "[Dr. Esther Choo](https://twitter.com/choo_ek/status/1321536322725502976)
+  - note:
+      "[Dr. Esther Choo](https://twitter.com/choo_ek/status/1321536322725502976)
       (Oregon Health & Sciences University)**:** “Our organ procurement process
       lacks oversight to ensure it is safe, equitable, and well functioning.”"
     voicesForReform: true
     tags:
       - OR
-  - note: "[Oregon Public
-      Broadcasting](https://www.opb.org/news/article/oregon-transplant-system-o\
-      rganization-health-department-proposed-trump-rules/): “Oregon’s
-      Organization For Procuring Transplant Organs Fails Under Proposed Rules”"
+  - note: "[Oregon Public Broadcasting](https://www.opb.org/news/article/oregon-transplant-system-organization-health-department-proposed-trump-rules/): “Oregon’s Organization For Procuring Transplant Organs Fails Under Proposed Rules”"
     voicesForReform: true
     tags:
       - OR
       - ORUO
-  - note: "[Oregon Public Broadcasting](https://www.opb.org/article/2023/09/09/oregon-patients-lawmakers-cite-problems-us-organ-donation-system/#:~:text=Sept.%209%2C%202023%206%20a.m.): "Oregon patients, lawmakers see 'horrors' in US organ-donation sytem""
-    voicesForReform: true 
+  - note: '[Oregon Public Broadcasting](https://www.opb.org/article/2023/09/09/oregon-patients-lawmakers-cite-problems-us-organ-donation-system/#:~:text=Sept.%209%2C%202023%206%20a.m.): "Oregon patients, lawmakers see ''horrors'' in US organ-donation system"'
+    voicesForReform: true
     tags:
-    - OR
-    - ORUO
-  - note: "[Oregon liver transplant patient Erika
-      Zak](https://www.cnn.com/2019/08/17/health/erika-zak-liver-transplant-201\
-      9-update/index.html)**[](https://www.cnn.com/2019/08/17/health/erika-zak-\
-      liver-transplant-2019-update/index.html):** “‘Mommy can’t do this for much
-      longer’: Waiting for a liver transplant, she prepares her family for the
-      worst”"
+      - OR
+      - ORUO
+  - note: "[Oregon liver transplant patient Erika Zak](https://www.cnn.com/2019/08/17/health/erika-zak-liver-transplant-2019-update/index.html): “‘Mommy can’t do this for much longer’: Waiting for a liver transplant, she prepares her family for the worst”"
     voicesForReform: true
     tags:
       - OR
@@ -1573,7 +1583,8 @@ notes:
       - GALL
       - FLWC
       - PRLL
-    note: Parent company LifeLink Foundation has $117M in assets, paid Board Chair
+    note:
+      Parent company LifeLink Foundation has $117M in assets, paid Board Chair
       $750,000 in 2017
   - voicesForReform: false
     tags:
@@ -1644,7 +1655,8 @@ notes:
     voicesForReform: false
     tags:
       - NVLV
-  - note: "[OIG](https://oig.hhs.gov/oas/reports/region9/91102035.pdf) found the OPO
+  - note:
+      "[OIG](https://oig.hhs.gov/oas/reports/region9/91102035.pdf) found the OPO
       overstating organ procurement costs and not reporting proceeds from the
       sale of research organs. 2019 CEO compensation increased by 18% from 2018"
     voicesForReform: false
