@@ -6,7 +6,7 @@ stats:
       April 2023 based on most recently available data from 2021. OPO names are
       listed as by CMS.
   rank:
-    title: OPO Rank of 56 (2021)[2](#sources-2)
+    title: OPO Rank of 56 (2021) [(2)](#sources-2)
     source:
       OPOs ranked by CMS Standardized Transplant Rate. 2021 data released by
       CMS April 2023. (See [CMS Quality Certification and Oversight
@@ -18,7 +18,7 @@ stats:
       final
       rule](https://www.cms.gov/files/document/112020-opo-final-rule-cms-3380-f.pdf).)
   shadow:
-    title: Preventable Deaths (2021)[3](#sources-3)
+    title: Preventable Deaths (2021) [(3)](#sources-3)
     source:
       “Preventable deaths” refers to the number of organ transplants by which
       an OPO failed to meet Tier 1 standards, according to CMS. Each missed
@@ -28,7 +28,7 @@ stats:
       an OPO failed to meet Tier 1 standards, according to CMS. Each missed
       transplant results in a loss of life because an organ was not available.
   investigation:
-    title: Currently Under House Investigation[4](#sources-4)
+    title: Currently Under House Investigation [(4)](#sources-4)
     source: Currently Under House investigation represents the 17 OPOs under
       investigation by the House Committee on Oversight and Reform for “[poor
       performance, waste, and
@@ -40,7 +40,7 @@ stats:
       and
       [here.](https://oversightdemocrats.house.gov/sites/democrats.oversight.house.gov/files/OPO%20Letters.pdf)
   investigation_senate:
-    title: Currently Under Senate Investigation[4]
+    title: Currently Under Senate Investigation
     source: Currently Under Senate
   ceo:
     title: CEO & Compensation:[5](#sources-5)
