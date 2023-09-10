@@ -7,13 +7,19 @@ export default function Legend({ mapView }) {
   let legendHeader = "OPO Performance Tier";
   let legendItems = OPO_PERFORMANCE_TIER_FILL;
 
-  if (mapView === "congressional-investigations") {
+  if (mapView === "house-investigations") {
     legendHeader = "Under House Oversight Investigation";
-    legendItems = CONGRESSIONAL_INVESTIGATION_FILL;
+    legendItems = HOUSE_INVESTIGATION_FILL;
+  }
+
+  if (mapView === "senate-investigations") {
+    legendHeader = "Under Senate Oversight Investigation";
+    legendItems = SENATE_INVESTIGATION_FILL;
   }
 
   if (mapView === "black-procurement-disparities") {
-    legendHeader = " Procurement Rate (2019) — note: 2020 data will be updated as it becomes available";
+    legendHeader =
+      " Procurement Rate (2019) — note: 2020 data will be updated as it becomes available";
     legendItems = BLACK_DONOR_DISPARITY_FILL;
   }
   return (
@@ -48,7 +54,12 @@ export function LegendItem({ className, background, text }) {
           }}
         ></div>
       </Col>
-      <Col className={`my-auto px-0 ${styles.legendItemText}`}>{text}</Col>
+      <Col
+        className={`my-auto px-0 ${styles.legendItemText}`}
+        style={{ minWidth: "100px" }}
+      >
+        {text}
+      </Col>
     </Row>
   );
 }
@@ -90,7 +101,18 @@ export const BLACK_DONOR_DISPARITY_FILL = {
   },
 };
 
-export const CONGRESSIONAL_INVESTIGATION_FILL = {
+export const HOUSE_INVESTIGATION_FILL = {
+  Yes: {
+    compare: val => !!val,
+    fill: "#D43C37",
+  },
+  No: {
+    compare: val => !val,
+    fill: "#EBEBEB",
+  },
+};
+
+export const SENATE_INVESTIGATION_FILL = {
   Yes: {
     compare: val => !!val,
     fill: "#D43C37",

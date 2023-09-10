@@ -1,7 +1,8 @@
 stats:
   - title: National organ transplant waiting list as of September 6, 2023
     value: 103,272
-  - title: Number of Americans in 2021 who died each day because they didn’t get a
+  - title:
+      Number of Americans in 2021 who died each day because they didn’t get a
       needed transplant
     value: "31"
   - title: Annual cost to Medicare of dialysis
@@ -23,22 +24,35 @@ mapContent:
     Axios](https://www.axios.com/organ-donation-recovery-worse-people-of-color-8d42a213-4ef7-48a3-85fb-dd15cfc4301b.html):
     "Fewer Black donors correlates to fewer Black recipients, which has led to
     more Black dying on the organ transplant waitlist."'
-  congressional-investigations: >-
-    The House Oversight Committee is investigating 17 OPOs for “shocking
-    mismanagement”, among other conflicts and abuses. In parallel, the Senate
-    Finance Committee is also conducting a bipartisan investigation into the
-    federal contractor UNOS for “the inadequacy of UNOS’ oversight of OPOs”
-    despite “lapses in patient safety, misuse of taxpayer dollars, and tens of
-    thousands of organs going unrecovered.” Bipartisan leaders of both House
-    Oversight and Senate Finance have called to accelerate reforms as an “urgent
-    health equity issue.”
+  house-investigations: >-
+    In 2020, the House Oversight Committee launched an investigation into 16 OPOs for “shocking mismanagement”, 
+    among other conflicts and abuses, and, in 2021, expanded its investigation into the Nevada Donor Network for 
+    “fraud, waste and abuse”, as well as potential conflicts of interest from industry in a study from the 
+    National Academies of Sciences, Engineering and Medicine (NASEM).
 
 
-    * [Read the release from the House Oversight Committee](https://oversightdemocrats.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)
+    *  [Read the release from the House Oversight Committee launching its investigation into OPOs](https://oversightdemocrats.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)
 
-    * [Read the release from the Senate Finance Committee](https://www.finance.senate.gov/chairmans-news/finance-committee-members-probe-us-organ-transplant-system)
+    *  [Read the release from the House Oversight Committee expanding its investigation into the Nevada Donor Network](https://oversightdemocrats.house.gov/news/press-releases/oversight-subcommittee-expands-investigation-into-fraud-waste-and-abuse-in-organ)
 
-    * [Read the bipartisan, bicameral letter calling for accelerating reforms](https://www.finance.senate.gov/chairmans-news/bipartisan-bicameral-members-of-congress-commend-federal-efforts-to-reform-organ-donation-system-urge-acceleration-of-rules-impact-)
+    *  [Read the release from the House Oversight Committee investigating undisclosed conflicts of interests among members of the NASEM organ donation study](https://oversightdemocrats.house.gov/news/press-releases/chair-krishnamoorthi-and-rep-porter-request-documents-regarding-potential)
+
+  senate-investigations: >-
+    The Senate Finance Committee is more than three years into  a bipartisan investigation into the federal contractor 
+    UNOS for “the inadequacy of UNOS’ oversight of OPOs” despite “lapses in patient safety, misuse of taxpayer dollars, 
+    and tens of thousands of organs going unrecovered.” The Senate Finance Committee is also investigating many OPOs 
+    directly for potentially fraudulent practices related to pancreas recovery, as well as into undisclosed financial 
+    conflicts of interest among OPO executives.
+
+
+    * [Read the release from the Senate Finance Committee launching its investigation into UNOS](https://www.finance.senate.gov/chairmans-news/finance-committee-members-probe-us-organ-transplant-system)
+
+    * [Read the release from the Senate Finance Committee investigating undisclosed conflicts of interests among members of the NASEM organ donation study](https://www.grassley.senate.gov/news/news-releases/grassley-wyden-cardin-young-raise-conflict-of-interest-concerns-related-to-national-academies-report-on-organ-donation-system)
+
+    * [Read the release from the Senate Finance Committee investigating 10 OPOs for potentially fraudulent practices related to pancreas recovery](https://www.finance.senate.gov/chairmans-news/wyden-grassley-cardin-young-raise-alarm-over-dramatic-increase-in-pancreata-procurement-)
+
+    * [Read the release from the Senate Finance Committee investigating 8 OPOs for undisclosed financial conflicts among their executives](https://www.grassley.senate.gov/news/news-releases/grassley-and-fellow-finance-committee-colleagues-investigate-organ-donation-system-for-potential-self-dealing-and-financial-conflicts-of-interest)
+
 quote:
   quote: An astounding lack of accountability and oversight in the nation’s
     creaking, monopolistic organ transplant system is allowing hundreds of
@@ -49,7 +63,8 @@ quote:
 equityEmbed:
   image: ../images/quotes/equity-home.jpg
   heading: OPO reform is an urgent equity issue
-  description: Patients of color are less likely to receive organ transplants than
+  description:
+    Patients of color are less likely to receive organ transplants than
     white patients because of inferior OPO service.
   link: See more data
   mobileImage: ../images/quotes/equity-state.jpg
@@ -62,7 +77,8 @@ video:
   youtube: https://youtu.be/yxD0eYalmQI
 articles:
   - title: They Survived Covid. Now They Need New Lungs.
-    description: He survived Covid-19, but his lungs were ravaged. After months of
+    description:
+      He survived Covid-19, but his lungs were ravaged. After months of
       deep sedation, he is delirious, his muscles atrophied. And this
       61-year-old still cannot breathe on his own.
     source: NYT
@@ -75,7 +91,8 @@ articles:
     source: Health Affairs Blog
     link: https://www.healthaffairs.org/do/10.1377/hblog20201211.229975/full
     image: ../images/articles/editorial2.png
-  - title: America’s Transformative New Organ Donation Rule Goes into Effect Over
+  - title:
+      America’s Transformative New Organ Donation Rule Goes into Effect Over
       Objections from Monopolistic Contractors
     description: Public filings by organ procurement organizations and their
       lobbyists indicate that lobbying expenditures have risen by nearly 500%

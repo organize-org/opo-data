@@ -9,8 +9,9 @@ import { getRankedOPOCount } from "../../utils/utils";
 
 import Legend, {
   BLACK_DONOR_DISPARITY_FILL,
-  CONGRESSIONAL_INVESTIGATION_FILL,
+  HOUSE_INVESTIGATION_FILL,
   OPO_PERFORMANCE_TIER_FILL,
+  SENATE_INVESTIGATION_FILL,
 } from "./legend";
 
 import * as styles from "./map.module.css";
@@ -47,6 +48,8 @@ export default function MainMap({ mapView }) {
         tier: opoDataMap[f.properties.abbreviation].tier,
         rate: opoDataMap[f.properties.abbreviation].nhb_recovery,
         investigation: opoDataMap[f.properties.abbreviation].investigation,
+        investigation_senate:
+          opoDataMap[f.properties.abbreviation].investigation_senate,
       },
     })),
   };
@@ -110,14 +113,14 @@ export default function MainMap({ mapView }) {
                           mapView,
                           feature.properties.abbreviation,
                           stateDataMap,
-                          opoDataMap
+                          opoDataMap,
                         )}
                       </div>`,
                     {
                       permanent: false,
                       sticky: true,
                       offset: [10, 0],
-                    }
+                    },
                   )
                 }
                 eventHandlers={{
@@ -125,7 +128,7 @@ export default function MainMap({ mapView }) {
                     navigate(
                       `/${
                         mapView === "opo-performance" ? "state" : "opo"
-                      }/${propagatedFrom?.feature?.properties?.abbreviation.trim()}`
+                      }/${propagatedFrom?.feature?.properties?.abbreviation.trim()}`,
                     );
                   },
                   mouseover: ({ propagatedFrom, target }) =>
@@ -137,7 +140,7 @@ export default function MainMap({ mapView }) {
                           fillColor: "black",
                           fillOpacity: 0.2,
                           weight: 4,
-                        }
+                        },
                     ),
                   mouseout: ({ target }) => target?.resetStyle(),
                 }}
@@ -168,8 +171,14 @@ const getMapFill = (view, feature) => {
     return getBlackDonorMapFill(feature);
   }
 
-  if (view === "congressional-investigations") {
+  if (view === "house-investigations") {
     return getCongressionalInvestigationFill(feature);
+  }
+
+  if (view === "senate-investigations") {
+    return Object.values(SENATE_INVESTIGATION_FILL).find(({ compare }) =>
+      compare(feature.properties.investigation_senate),
+    ).fill;
   }
 };
 
@@ -186,7 +195,7 @@ const getStateMapFill = feature => {
  */
 const getBlackDonorMapFill = feature => {
   return Object.values(BLACK_DONOR_DISPARITY_FILL).find(({ compare }) =>
-    compare(feature.properties.rate)
+    compare(feature.properties.rate),
   ).fill;
 };
 
@@ -195,8 +204,8 @@ const getBlackDonorMapFill = feature => {
  * OPO is under congressional investigation
  */
 const getCongressionalInvestigationFill = feature => {
-  return Object.values(CONGRESSIONAL_INVESTIGATION_FILL).find(({ compare }) =>
-    compare(feature.properties.investigation)
+  return Object.values(HOUSE_INVESTIGATION_FILL).find(({ compare }) =>
+    compare(feature.properties.investigation),
   ).fill;
 };
 
@@ -212,7 +221,7 @@ const getToolTipContent = (view, id, stateDataMap, opoDataMap) => {
       }</strong></p>
       <p>OPOs operating in: <strong>${
         Object.values(opoDataMap).filter(
-          ({ statesWithRegions }) => statesWithRegions[id] !== undefined
+          ({ statesWithRegions }) => statesWithRegions[id] !== undefined,
         ).length ?? "N/A"
       }</strong></p>
       <p>People dying every month waiting for an organ: <strong>${
@@ -226,13 +235,16 @@ const getToolTipContent = (view, id, stateDataMap, opoDataMap) => {
           opoDataMap[id].nhb_recovery ?? "N/A"
         }</strong></p>
         <p> Procurement Ranking (out of ${getRankedOPOCount(
-          opoDataMap
+          opoDataMap,
         )} OPOs reporting): <strong>${opoDataMap[id].rank ?? "N/A"}</strong></p>
       `;
   }
 
   return `
-      <p>Currently Under Congressional Investigation: <strong>${
+  <p>Currently Under Senate Investigation: <strong>${
+    !!opoDataMap[id].investigation_senate ? "Yes" : "No"
+  }</strong></p>
+      <p>Currently Under House Investigation: <strong>${
         !!opoDataMap[id].investigation ? "Yes" : "No"
       }</strong></p>
     `;

@@ -1,6 +1,6 @@
 import React from "react";
 import { navigate } from "gatsby";
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, Table } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
 import ReactPlayer from "react-player";
 
@@ -44,15 +44,15 @@ export default function Opo({ opo }) {
   const { opoHeadings, stateHeadings, stats, takeaways, videos } = opoContent;
 
   const opoHeadlines = notes.filter(note =>
-    note.tags?.includes(opo.toUpperCase())
+    note.tags?.includes(opo.toUpperCase()),
   );
 
   const opoTakeaways = takeaways.filter(
-    takeaway => takeaway.opo === opo.toUpperCase()
+    takeaway => takeaway.opo === opo.toUpperCase(),
   );
 
   const opoVideos = videos?.filter(video =>
-    video.tags?.includes(opo.toUpperCase())
+    video.tags?.includes(opo.toUpperCase()),
   );
 
   // All states serviced by this OPO
@@ -63,7 +63,7 @@ export default function Opo({ opo }) {
   //   - All opos servicing bordering states if this OPO only services one
 
   const comparisonOPOs = Object.values(opoDataMap).filter(opo =>
-    thisOPOStates.some(s => !!opo.statesWithRegions[s])
+    thisOPOStates.some(s => !!opo.statesWithRegions[s]),
   );
 
   const ethnicityKeys = {
@@ -114,7 +114,7 @@ export default function Opo({ opo }) {
                       ? ""
                       : ", "
                   }`;
-                }
+                },
               )}
             </strong>
           </Col>
@@ -152,50 +152,72 @@ export default function Opo({ opo }) {
                 />
               </Col>
             </Row>
-            <Row className={styles.statsHeading}>
-              <Col>
-                <h3>
-                  <ReactMarkdown>
-                    {stats.rank.title.replace(
-                      /XX/,
-                      getRankedOPOCount(opoDataMap)
+            <Table responsive className={styles.statsTable}>
+              <thead>
+                <tr>
+                  <th>
+                    <ReactMarkdown>
+                      {stats.rank.title.replace(
+                        /XX/,
+                        getRankedOPOCount(opoDataMap),
+                      )}
+                    </ReactMarkdown>
+                  </th>
+                  <th className="red">
+                    <ReactMarkdown>{stats.shadow.title}</ReactMarkdown>
+                  </th>
+                  <th>
+                    <ReactMarkdown>{stats.investigation.title}</ReactMarkdown>
+                  </th>
+                  <th>
+                    <ReactMarkdown>
+                      {stats.investigation_senate.title}
+                    </ReactMarkdown>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className={styles.statsPopout}>
+                    <p>{formatOPORank(opoData)}</p>
+                  </td>
+                  <td className={styles.statsPopout}>
+                    <p className="red">{formatNumber(opoData.shadows)}</p>
+                  </td>
+                  <td className={styles.statsPopout}>
+                    {!!opoData.investigation ? (
+                      <a
+                        href={opoData.investigation_url}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {" "}
+                        Yes <BoxArrowUpRight />{" "}
+                      </a>
+                    ) : (
+                      <p>No</p>
                     )}
-                  </ReactMarkdown>
-                </h3>
-              </Col>
-              <Col>
-                <h3 className="red">
-                  <ReactMarkdown>{stats.shadow.title}</ReactMarkdown>
-                </h3>
-              </Col>
-              <Col>
-                <h3>
-                  <ReactMarkdown>{stats.investigation.title}</ReactMarkdown>
-                </h3>
-              </Col>
-            </Row>
-            <Row className={styles.statsPopout}>
-              <Col>
-                <p>{formatOPORank(opoData)}</p>
-              </Col>
-              <Col>
-                <p className="red">{formatNumber(opoData.shadows)}</p>
-              </Col>
-              <Col>
-                {!!opoData.investigation ? (
-                  <a
-                    href={opoData.investigation_url}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {" "}
-                    Yes <BoxArrowUpRight />{" "}
-                  </a>
-                ) : (
-                  <p>No</p>
-                )}
-              </Col>
-            </Row>
+                  </td>
+                  <td className={styles.statsPopout}>
+                    {opoData.investigation_senate ? (
+                      opoData.investigation_senate_url ? (
+                        <a
+                          href={opoData.investigation_senate_url}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          Yes <BoxArrowUpRight />
+                        </a>
+                      ) : (
+                        <p>Yes</p>
+                      )
+                    ) : (
+                      <p>No</p>
+                    )}
+                  </td>
+                </tr>
+              </tbody>
+            </Table>
             <div className={styles.statsDivider}></div>
             <Row className={styles.statsComp}>
               <Col>

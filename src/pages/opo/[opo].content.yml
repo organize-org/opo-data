@@ -1,12 +1,14 @@
 stats:
   tier:
     title: Performance Tier (2021)[1](#sources-1)
-    source: Tier rating via [CMS](https://qcor.cms.gov/main.jsp), was released in
+    source:
+      Tier rating via [CMS](https://qcor.cms.gov/main.jsp), was released in
       April 2023 based on most recently available data from 2021. OPO names are
       listed as by CMS.
   rank:
-    title: OPO Rank of 56 (2021)[2](#sources-2)
-    source: OPOs ranked by CMS Standardized Transplant Rate. 2021 data released by
+    title: OPO Rank of 56 (2021) [(2)](#sources-2)
+    source:
+      OPOs ranked by CMS Standardized Transplant Rate. 2021 data released by
       CMS April 2023. (See [CMS Quality Certification and Oversight
       Reports](https://qcor.cms.gov/main.jsp), linked to OPO Public Performance
       Report on left.) Legacy of Life (Hawaii) is excluded from CMS organ
@@ -16,16 +18,18 @@ stats:
       final
       rule](https://www.cms.gov/files/document/112020-opo-final-rule-cms-3380-f.pdf).)
   shadow:
-    title: Preventable Deaths (2021)[3](#sources-3)
-    source: “Preventable deaths” refers to the number of organ transplants by which
+    title: Preventable Deaths (2021) [(3)](#sources-3)
+    source:
+      “Preventable deaths” refers to the number of organ transplants by which
       an OPO failed to meet Tier 1 standards, according to CMS. Each missed
       transplant results in a loss of life because an organ was not available.
-    caption: “Preventable deaths” refers to the number of organ transplants by which
+    caption:
+      “Preventable deaths” refers to the number of organ transplants by which
       an OPO failed to meet Tier 1 standards, according to CMS. Each missed
       transplant results in a loss of life because an organ was not available.
   investigation:
-    title: Currently Under Congressional Investigation[4](#sources-4)
-    source: Currently Under Congressional investigation represents the 17 OPOs under
+    title: Currently Under House Investigation [(4)](#sources-4)
+    source: Currently Under House investigation represents the 17 OPOs under
       investigation by the House Committee on Oversight and Reform for “[poor
       performance, waste, and
       mismanagement](https://oversightdemocrats.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)”
@@ -35,9 +39,13 @@ stats:
       [here](https://oversightdemocrats.house.gov/sites/democrats.oversight.house.gov/files/2020-12-23.RK%20KP%20to%20Miller-AOPO%20re%20OPOs.pdf)
       and
       [here.](https://oversightdemocrats.house.gov/sites/democrats.oversight.house.gov/files/OPO%20Letters.pdf)
+  investigation_senate:
+    title: Currently Under Senate Investigation
+    source: Currently Under Senate
   ceo:
     title: CEO & Compensation:[5](#sources-5)
-    source: "Average CEO compensation via each OPO's most recently listed 990 (as of
+    source:
+      "Average CEO compensation via each OPO's most recently listed 990 (as of
       6/15/22). 2022: Lifelink of Florida/Georgia/Puerto Rico, Live On Nebraska.
       2021: Arkansas Regional Organ Recovery, Center for Organ Recovery and
       Education, Donor Alliance, Donor Network of Arizona, Donor Network West,
@@ -74,7 +82,8 @@ opoHeadings:
       from causes consistent with donation.
   donors:
     title: Actual Donors*[8](#sources-8)
-    source: Goldberg et al, preprint, “Identifying Opportunities for improving the
+    source:
+      Goldberg et al, preprint, “Identifying Opportunities for improving the
       organ supply through race-stratified data”, supplementary materials, table
       I. Available
       [here](https://www.medrxiv.org/content/10.1101/2021.10.24.21265203v1.supplementary-material).
@@ -83,7 +92,8 @@ opoHeadings:
       procurement rate, and rank for that ethnicity is not available.
   recovery:
     title: Procurement Rate*[9](#sources-9)
-    source: Goldberg et al, preprint, “Identifying Opportunities for improving the
+    source:
+      Goldberg et al, preprint, “Identifying Opportunities for improving the
       organ supply through race-stratified data”, supplementary materials, table
       I. Available
       [here](https://www.medrxiv.org/content/10.1101/2021.10.24.21265203v1.supplementary-material).
@@ -92,7 +102,8 @@ opoHeadings:
       procurement rate, and rank for that ethnicity is not available.
   rank:
     title: Rank*[10](#sources-10)
-    source: Goldberg et al., preprint, “Identifying Opportunities for improving the
+    source:
+      Goldberg et al., preprint, “Identifying Opportunities for improving the
       organ supply through race-stratified data”, supplementary materials, table
       I. Available
       [here](https://www.medrxiv.org/content/10.1101/2021.10.24.21265203v1.supplementary-material).
@@ -106,17 +117,19 @@ stateHeadings:
     title: OPO Name
   tier:
     title: Performance Tier (2021)[11](#sources-11)
-    source: Tier (2020) via [CMS](https://qcor.cms.gov/main.jsp), data most recently
+    source:
+      Tier (2020) via [CMS](https://qcor.cms.gov/main.jsp), data most recently
       available (2020). OPO names are listed as they are by CMS.
   donors:
     title: Donors Needed (2021)[12](#sources-12)
-    source: Donors needed represents the number of additional donors needed for OPO
+    source:
+      Donors needed represents the number of additional donors needed for OPO
       to reach Tier 1 according to [CMS](https://qcor.cms.gov/main.jsp). Data
       was released by CMS in April 2023 based on most recently available data
       from 2021.
   investigation:
-    title: Under Congressional Investigation[13](#sources-13)
-    source: Currently Under Congressional investigation represents the 17 OPOs under
+    title: Under House Investigation[13](#sources-13)
+    source: Currently Under House investigation represents the 17 OPOs under
       investigation by the House Committee on Oversight and Reform for “[poor
       performance, waste, and
       mismanagement](https://oversightdemocrats.house.gov/news/press-releases/oversight-subcommittee-launches-investigation-into-poor-performance-waste-and)”
@@ -129,7 +142,8 @@ stateHeadings:
   shadow:
     title: Preventable Deaths*(2021)[14](#sources-14)
     caption: ""
-    source: “Preventable deaths” refers to the number of organ transplants by which
+    source:
+      “Preventable deaths” refers to the number of organ transplants by which
       an OPO failed to meet Tier 1 standards, according to CMS. Each missed
       transplant results in a loss of life because an organ was not available.
 takeaways:
