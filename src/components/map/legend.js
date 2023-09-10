@@ -54,7 +54,12 @@ export function LegendItem({ className, background, text }) {
           }}
         ></div>
       </Col>
-      <Col className={`my-auto px-0 ${styles.legendItemText}`}>{text}</Col>
+      <Col
+        className={`my-auto px-0 ${styles.legendItemText}`}
+        style={{ minWidth: "100px" }}
+      >
+        {text}
+      </Col>
     </Row>
   );
 }
