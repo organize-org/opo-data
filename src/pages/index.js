@@ -94,7 +94,7 @@ export default function Dashboard({ location, data: { articleImages } }) {
               active={mapView === "senate-investigations"}
               onClick={() => navigate("/#senate-investigations")}
             >
-              Sentate Investigations
+              Senate Investigations
             </Button>
 
             <Button
