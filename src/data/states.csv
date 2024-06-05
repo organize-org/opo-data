@@ -1,53 +1,53 @@
 ﻿abbreviation,name,waitlist,monthly
 AK,Alaska,,
-AL,Alabama,1165,13
-AR,Arkansas,215,3
-AZ,Arizona,1667,16
-CA,California,20126,169
-CO,Colorado,1253,18
-CT,Connecticut,1076,10
-DC,District of Columbia,1347,12
-DE,Delaware,161,1
-FL,Florida,5263,48
-GA,Georgia,2853,41
-HI,Hawaii,313,3
-IA,Iowa,604,4
+AL,Alabama,1173,13
+AR,Arkansas,233,3
+AZ,Arizona,1678,16
+CA,California,20053,169
+CO,Colorado,1240,18
+CT,Connecticut,1094,10
+DC,District of Columbia,1325,12
+DE,Delaware,158,1
+FL,Florida,5340,48
+GA,Georgia,2878,41
+HI,Hawaii,304,3
+IA,Iowa,608,4
 ID,Idaho,,
-IL,Illinois,3980,28
-IN,Indiana,1271,11
-KS,Kansas,468,3
-KY,Kentucky,1015,11
-LA,Louisiana,1947,17
-MA,Massachusetts,4218,37
-MD,Maryland,2201,23
-ME,Maine,268,1
-MI,Michigan,2498,22
-MN,Minnesota,2140,21
-MO,Missouri,2033,16
+IL,Illinois,4010,28
+IN,Indiana,1270,11
+KS,Kansas,473,3
+KY,Kentucky,1013,11
+LA,Louisiana,1929,17
+MA,Massachusetts,4168,37
+MD,Maryland,2180,23
+ME,Maine,264,1
+MI,Michigan,2500,22
+MN,Minnesota,2142,21
+MO,Missouri,2022,16
 MS,Mississippi,505,9
 MT,Montana,,
-NC,North Carolina,3730,25
+NC,North Carolina,3783,25
 ND,North Dakota,107,1
-NE,Nebraska,398,4
-NH,New Hampshire,174,1
-NJ,New Jersey,2458,20
-NM,New Mexico,417,5
-NV,Nevada,305,2
-NY,New York,8013,69
-OH,Ohio,2502,27
-OK,Oklahoma,742,5
-OR,Oregon,802,7
-PA,Pennsylvania,6595,63
-PR,Puerto Rico,386,2
-RI,Rhode Island,300,2
-SC,South Carolina,1678,12
-SD,South Dakota,388,4
-TN,Tennessee,2860,37
-TX,Texas,10243,111
-UT,Utah,903,5
-VA,Virginia,2996,18
-VT,Vermont,81,1
-WA,Washington,1468,12
-WI,Wisconsin,1475,15
-WV,West Virginia,137,2
+NE,Nebraska,397,4
+NH,New Hampshire,179,1
+NJ,New Jersey,2430,20
+NM,New Mexico,430,5
+NV,Nevada,304,2
+NY,New York,7945,69
+OH,Ohio,2508,27
+OK,Oklahoma,747,5
+OR,Oregon,818,7
+PA,Pennsylvania,6543,63
+PR,Puerto Rico,391,2
+RI,Rhode Island,297,2
+SC,South Carolina,1699,12
+SD,South Dakota,402,4
+TN,Tennessee,2892,37
+TX,Texas,10289,111
+UT,Utah,905,5
+VA,Virginia,3012,18
+VT,Vermont,85,1
+WA,Washington,1461,12
+WI,Wisconsin,1472,15
+WV,West Virginia,139,2
 WY,Wyoming,,
