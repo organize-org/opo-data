@@ -186,10 +186,9 @@ videos:
       - WY
       - KS
 notes:
-- voicesForReform: false
-    note: '[House Ways and Means Committee:](https://waysandmeans.house.gov/2025/09/03/chairmen-smith-schweikert-launch-investigation-into-tax-exempt-organ-procurement-organization-network-for-hope-following-alarming-patient-safety-report/) "Chairmen
-      Smith, Schweikert Launch Investigation into Tax Exempt Organ Procurement Organization
-      Network for Hope Following Alarming Patient Safety Report"'
+- notes:
+  - voicesForReform: false
+    note: "[House Ways and Means Committee:](https://waysandmeans.house.gov/2025/09/03/chairmen-smith-schweikert-launch-investigation-into-tax-exempt-organ-procurement-organization-network-for-hope-following-alarming-patient-safety-report/) \"Chairmen Smith, Schweikert Launch Investigation into Tax Exempt Organ Procurement Organization Network for Hope Following Alarming Patient Safety Report\""
     tags:
       - KY
       - KYDA
