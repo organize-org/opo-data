@@ -186,6 +186,11 @@ videos:
       - WY
       - KS
 notes:
+voicesForReform: false
+    note: "[Blaze:](https://www.theblaze.com/news/new-jersey-ag-investigates-group-accused-of-trying-to-harvest-organs-from-patient-showing-signs-of-life) New Jersey AG investigates group accused of trying to harvest organs from patient showing signs of life"
+    tags:
+      - NJ
+      - NJTO
   - voicesForReform: false
     note: "[CNN:](https://edition.cnn.com/2025/09/11/health/organ-donor-surgery-kff-health-news) A surgical team was about to harvest this man’s organs — until his doctor intervened"
     tags:
