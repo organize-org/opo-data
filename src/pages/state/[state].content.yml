@@ -186,7 +186,7 @@ videos:
       - WY
       - KS
 notes:
-voicesForReform: false
+  - voicesForReform: false
     note: "[Blaze:](https://www.theblaze.com/news/new-jersey-ag-investigates-group-accused-of-trying-to-harvest-organs-from-patient-showing-signs-of-life) New Jersey AG investigates group accused of trying to harvest organs from patient showing signs of life"
     tags:
       - NJ
