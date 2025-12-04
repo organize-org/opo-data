@@ -10,9 +10,9 @@ export const donorMapColors = nhb_rank => {
   if (nhb_rank < 20) return "#D43C37";
   if (nhb_rank < 25) return "#FFB042";
   if (nhb_rank < 30) return "#F9D558";
-  if (nhb_rank > 35) return "#00768F";
+  if (nhb_rank >= 30) return "#00768F";
 
-  return "7A7A7A";
+  return "#7A7A7A";
 };
 
 export const racialDemographics = {
@@ -23,7 +23,7 @@ export const racialDemographics = {
   race_perf_hispanic: "Hispanic",
   race_perf_islander: "Pacific Islander",
   race_perf_multiracial: "Multiracial",
-  race_perf_unkown: "Unknown",
+  race_perf_unknown: "Unknown",
 };
 
 export const findStateFeature = (statesGeoData, abbrev) =>
