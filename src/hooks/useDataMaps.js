@@ -71,7 +71,7 @@ export default function useDataMaps() {
         h_recovery: parseInt(data.h_recovery),
         a_recovery: parseInt(data.a_recovery),
         nhw_death: parseInt(data.nhw_death),
-        nhb_death: parseInt(data.nhb_rank),
+        nhb_death: parseInt(data.nhb_death),
         h_death: parseInt(data.h_death),
         a_death: parseInt(data.a_death),
         a_rank: data?.a_rank ? `${data.a_rank} of ${a_count}` : "N/A",
