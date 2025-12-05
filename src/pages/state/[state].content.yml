@@ -187,7 +187,22 @@ videos:
       - KS
 notes:
   - voicesForReform: false
-    note: "[CNN:](https://edition.cnn.com/2025/09/11/health/organ-donor-surgery-kff-health-news) A surgical team was about to harvest this man’s organs — until his doctor intervened"
+    note: '[Blaze:](https://www.theblaze.com/news/new-jersey-ag-investigates-group-accused-of-trying-to-harvest-organs-from-patient-showing-signs-of-life) New Jersey AG investigates group accused of trying to harvest organs from patient showing signs of life'
+    tags:
+      - NJ
+      - NJTO
+  - voicesForReform: false
+    note: '[The Philadelphia Inquirer:](https://www.inquirer.com/health/new-jersey-organ-tissue-sharing-network-accusations-20251120.html) A New Jersey organ donation nonprofit is accused of ordering an organ recovery to go forward after a patient ‘reanimated’'
+    tags:
+      - NJ
+      - NJTO
+  - voicesForReform: false
+    note: '[Washington Post:](https://www.washingtonpost.com/health/2025/11/19/organ-transplant-patient-harvest-investigation/) Patient showed signs of life during organ harvest in N.J., House members allege'
+    tags:
+      - NJ
+      - NJTO
+  - voicesForReform: false
+    note: '[CNN:](https://edition.cnn.com/2025/09/11/health/organ-donor-surgery-kff-health-news) A surgical team was about to harvest this man’s organs — until his doctor intervened'
     tags:
       - MO
       - MOMA
