@@ -186,6 +186,10 @@ videos:
       - WY
       - KS
 notes:
+  - voicesForReform: true
+    note: '[Neil Steinberg:](https://chicago.suntimes.com/columnists/2025/12/28/rich-foreigners-american-organ-transplant-system) Rich overseas medical tourists rig American organ transplant system'
+    tags:
+      - IL
   - voicesForReform: false
     note: '[Blaze:](https://www.theblaze.com/news/new-jersey-ag-investigates-group-accused-of-trying-to-harvest-organs-from-patient-showing-signs-of-life) New Jersey AG investigates group accused of trying to harvest organs from patient showing signs of life'
     tags:
